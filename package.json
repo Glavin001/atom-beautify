@@ -1,5 +1,5 @@
 {
-  "name": "atom-beautify",
+  "name": "beautify",
   "version": "0.0.0",
   "description": "Beautify HTML, CSS and Javascript in Atom",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "url": "https://github.com/donaldpipowitch"
   },
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.50.0"
   },
   "dependencies": {},
   "devDependencies": {
