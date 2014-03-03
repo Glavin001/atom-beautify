@@ -1,6 +1,6 @@
 {
   "name": "atom-beautify",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Beautify HTML, CSS and Javascript in Atom",
   "license": "MIT",
   "repository": "https://github.com/donaldpipowitch/atom-beautify",
