@@ -1,22 +1,21 @@
 {
-  "name": "beautify",
+  "name": "atom-beautify",
+  "main": "./lib/atom-beautify",
   "version": "0.0.0",
+  "private": true,
   "description": "Beautify HTML, CSS and Javascript in Atom",
-  "license": "MIT",
+  "activationEvents": ["beautify"],
   "repository": "https://github.com/donaldpipowitch/atom-beautify",
-  "activationEvents": [
-    "beautify"
-  ],
+  "license": "MIT",
   "author": {
     "name": "Donald Pipowitch",
     "email": "pipo@senaeh.de",
     "url": "https://github.com/donaldpipowitch"
   },
   "engines": {
-    "atom": ">=0.50.0"
+    "atom": ">0.50.0"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "js-beautify": "~1.4.2"
   }
 }

@@ -1,0 +1,14 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.workspace .editor:not(.mini)':
+    'Enable atom-beautify': 'beautify'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Beautify'
+      'command': 'beautify'
+    ]
+  }
+]
