@@ -1,10 +1,12 @@
 {
   "name": "atom-beautify",
   "main": "./lib/atom-beautify",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "Beautify HTML, CSS and Javascript in Atom",
-  "activationEvents": ["beautify"],
+  "activationEvents": [
+    "beautify"
+  ],
   "repository": "https://github.com/donaldpipowitch/atom-beautify",
   "license": "MIT",
   "author": {
