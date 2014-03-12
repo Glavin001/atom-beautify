@@ -10,6 +10,8 @@ Open the Command Palette, and type `Beautify`. This will beautify JS, HTML or CS
 
 You can also type `ctrl-alt-b` as a shortcut or click `Packages > Beautify` in the menu.
 
+You can also choose to beautify on every file save.
+
 ## License
 
 MIT © [Donald Pipowitch](https://github.com/donaldpipowitch)
