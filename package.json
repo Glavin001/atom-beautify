@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./lib/atom-beautify",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "description": "Beautify HTML, CSS and Javascript in Atom",
   "repository": "https://github.com/donaldpipowitch/atom-beautify",
@@ -15,7 +15,10 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "config-chain": "^1.1.8",
+    "emissary": "^1.0.0",
+    "extend": "^1.2.1",
     "js-beautify": "~1.4.2",
-    "emissary": "^1.0.0"
+    "nopt": "^2.2.1"
   }
 }
