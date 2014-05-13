@@ -1,3 +1,8 @@
+# v0.2.3 (2014-05-13)
+
+- support `.jsbeautifierrc` (thanks @karolyi)
+- fixed: reload on save (thanks @karolyi)
+
 # v0.2.2 (2014-03-18)
 
 - added experimental support for XML (thanks @mtanzi)
