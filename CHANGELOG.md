@@ -1,3 +1,11 @@
+# v0.2.6 (2014-05-15)
+- version bump
+- added `"jslint_happy": true` to own `.jsbeautifierrc`
+
+# v0.2.5 (2014-05-14)
+- fixed issue #7 (Place cursor back to edited place after beautifying)
+- fixed issue #8 (Ignore jsbeautify when editing .jsbeautifyrc in place)
+
 # v0.2.3 (2014-05-13)
 
 - support `.jsbeautifierrc` (thanks @karolyi)
