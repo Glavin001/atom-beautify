@@ -15,10 +15,10 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "config-chain": "^1.1.8",
     "emissary": "^1.0.0",
     "extend": "^1.2.1",
     "js-beautify": "~1.4.2",
-    "nopt": "^2.2.1"
+    "nopt": "^2.2.1",
+    "lodash": "2.4.1"
   }
 }
