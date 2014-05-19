@@ -12,6 +12,8 @@ You can also type `ctrl-alt-b` as a shortcut or click `Packages > Beautify` in t
 
 You can also choose to beautify on every file save.
 
+You can change the current config by either using `.jsbeautifyrc` for all files or a non-standard variante with settings for every file type. You can see examples of both way inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/examples)
+
 ## License
 
 MIT © [Donald Pipowitch](https://github.com/donaldpipowitch)
