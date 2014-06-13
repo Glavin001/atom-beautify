@@ -1,13 +1,13 @@
 # [atom-beautify](https://github.com/donaldpipowitch/atom-beautify)
 
-[Beautify](https://github.com/einars/js-beautify) HTML, CSS and JavaScript in Atom.
+[Beautify](https://github.com/einars/js-beautify) HTML (including Handlebars), CSS and JavaScript in Atom.
 
 *Attention*: A different package with a similar name exist. Maybe you want to visit this one: [Beautifier](https://atom.io/packages/atom-beautifier).
 
 ## Usage
 
 Open the [Command Palette](https://github.com/atom/command-palette), and type `Beautify`.
-This will beautify JS, HTML or CSS files.
+This will beautify JS, HTML (including Handlebars), or CSS files.
 XML is supported as an experimental feature.
 
 It will only beautify selected text, if a selection is found - if not, the whole file will be beautified.
@@ -31,6 +31,8 @@ Edit your `.jsbeautifyrc` file in any of the following locations:
 - Your User's Home directory
 
 You can see examples of both way inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
+
+*Comments are supported in `.jsbeautifyrc` thanks to [strip-json-comments](https://github.com/sindresorhus/strip-json-comments).*
 
 ## Contributing
 
