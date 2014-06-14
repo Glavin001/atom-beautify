@@ -106,8 +106,9 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 [See all contributors on GitHub](https://github.com/donaldpipowitch/atom-beautify/graphs/contributors).
 
-Please update the [CHANGELOG.md](https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md)
-file and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests).
+Please update the [CHANGELOG.md](https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md),
+add yourself as a contributor to the [package.json](https://github.com/donaldpipowitch/atom-beautify/blob/master/package.json),
+and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests).
 
 ## License
 
