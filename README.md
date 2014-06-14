@@ -5,15 +5,18 @@ HTML (including [Handlebars](http://handlebarsjs.com/)),
 CSS (including [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/))
 and JavaScript in Atom.
 
+Atom Package: https://atom.io/packages/atom-beautify
+
 ## Language Support
 
-- JavaScript
+- JavaScript and JSON
 - HTML, including
   - [Handlebars](http://handlebarsjs.com/)
-  - XML is supported as an *experimental feature*.
+  - XML
 - CSS, including
   - [Sass](http://sass-lang.com/)
   - [LESS](http://lesscss.org/)
+- SQL, special thanks to [pretty-data](https://github.com/vkiryukhin/pretty-data)
 
 ## Usage
 
@@ -89,6 +92,12 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
     "preserve_newlines": true,
     "max_preserve_newlines": 2,
     "jslint_happy": true
+  },
+  "sql": {
+    "indent_size": 4,
+    "indent_char": " ",
+    "indent_level": 0,
+    "indent_with_tabs": false
   }
 }
 ```
