@@ -19,7 +19,7 @@ Atom Package: https://atom.io/packages/atom-beautify
 - [x] SQL, special thanks to [pretty-data](https://github.com/vkiryukhin/pretty-data)
 - [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
   - Requires [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier) to be already installed.
-  - See below for setup details with `atom-beautify`
+  - [See `PHP` under `Advanced Language Setup` for setup details](https://github.com/donaldpipowitch/atom-beautify#php)
 
 ### Coming Soon
 
