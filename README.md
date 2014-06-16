@@ -9,14 +9,26 @@ Atom Package: https://atom.io/packages/atom-beautify
 
 ## Language Support
 
-- JavaScript and JSON
-- HTML, including
+- [x] JavaScript and JSON
+- [x] HTML, including
   - [Handlebars](http://handlebarsjs.com/)
   - XML
-- CSS, including
+- [x] CSS, including
   - [Sass](http://sass-lang.com/)
   - [LESS](http://lesscss.org/)
-- SQL, special thanks to [pretty-data](https://github.com/vkiryukhin/pretty-data)
+- [x] SQL, special thanks to [pretty-data](https://github.com/vkiryukhin/pretty-data)
+- [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
+  - Requires [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier) to be already installed.
+- [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
+  - Requires [autopep8](https://github.com/hhatto/autopep8) to be already installed.
+  - Beautifies to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
+- [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
+  - Requires [RBeautify](https://github.com/erniebrodeur/ruby-beautify)
+
+### Coming Soon
+
+- [ ] CoffeeScript, see https://github.com/donaldpipowitch/atom-beautify/issues/31
+
 
 ## Usage
 
@@ -37,6 +49,8 @@ You can also choose to beautify on every file save.
 
 Edit your `.jsbeautifyrc` file in any of the following locations:
 
+- Atom Package Settings  
+  `Atom` ➔ `Preferences` ➔ Search for `atom-beautify`
 - Same directory as current file
 - Project root  
 `atom-beautify` will recursively look up from the current file's directory to find `.jsbeautifyrc`.
@@ -101,6 +115,27 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
   }
 }
 ```
+
+## Advanced Language Setup
+
+### PHP
+
+To use with PHP we require [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier)
+and that you set the `Php beautifier path` in the package settings.
+
+#### Retrieve the path on Mac & Linux
+
+Run `which php_beautifier` in your Terminal.
+
+### Python
+
+To use with Python we require [autopep8](https://github.com/hhatto/autopep8)
+and that you set the `Python autopep8 path` in the package settings.
+
+#### Retrieve the path on Mac & Linux
+
+Run `which autopep8` in your Terminal.
+
 
 ## Contributing
 
