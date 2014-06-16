@@ -6,3 +6,8 @@ notifications:
     on_failure: change
 
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+
+before_install:
+  - gem install ruby-beautify
+  - pip install --upgrade autopep8
+  - pear install PHP_Beautifier
