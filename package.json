@@ -59,7 +59,8 @@
     "less",
     "sql",
     "php",
-    "python"
+    "python",
+    "ruby"
   ],
   "engines": {
     "atom": ">0.50.0"

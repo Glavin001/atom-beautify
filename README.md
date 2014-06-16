@@ -22,10 +22,11 @@ Atom Package: https://atom.io/packages/atom-beautify
 - [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
   - Requires [autopep8](https://github.com/hhatto/autopep8) to be already installed.
   - Beautifies to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
+- [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
+  - Requires [RBeautify](https://github.com/erniebrodeur/ruby-beautify)
 
 ### Coming Soon
 
-- [ ] Ruby, see https://github.com/donaldpipowitch/atom-beautify/issues/25
 - [ ] CoffeeScript, see https://github.com/donaldpipowitch/atom-beautify/issues/31
 
 
