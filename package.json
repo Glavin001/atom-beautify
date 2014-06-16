@@ -58,7 +58,8 @@
     "scss",
     "less",
     "sql",
-    "php"
+    "php",
+    "python"
   ],
   "engines": {
     "atom": ">0.50.0"

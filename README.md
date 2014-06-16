@@ -19,11 +19,12 @@ Atom Package: https://atom.io/packages/atom-beautify
 - [x] SQL, special thanks to [pretty-data](https://github.com/vkiryukhin/pretty-data)
 - [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
   - Requires [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier) to be already installed.
-  - [See `PHP` under `Advanced Language Setup` for setup details](https://github.com/donaldpipowitch/atom-beautify#php)
+- [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
+  - Requires [autopep8](https://github.com/hhatto/autopep8) to be already installed.
+  - Beautifies to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
 
 ### Coming Soon
 
-- [ ] Python, see https://github.com/donaldpipowitch/atom-beautify/issues/24
 - [ ] Ruby, see https://github.com/donaldpipowitch/atom-beautify/issues/25
 - [ ] CoffeeScript, see https://github.com/donaldpipowitch/atom-beautify/issues/31
 
@@ -124,6 +125,15 @@ and that you set the `Php beautifier path` in the package settings.
 #### Retrieve the path on Mac & Linux
 
 Run `which php_beautifier` in your Terminal.
+
+### Python
+
+To use with Python we require [autopep8](https://github.com/hhatto/autopep8)
+and that you set the `Python autopep8 path` in the package settings.
+
+#### Retrieve the path on Mac & Linux
+
+Run `which autopep8` in your Terminal.
 
 
 ## Contributing
