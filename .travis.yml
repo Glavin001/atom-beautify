@@ -12,7 +12,3 @@ before_install:
   - gem install ruby-beautify --verbose
   - brew install python
   - pip install --upgrade autopep8
-  - curl -O  http://pear.php.net/go-pear.phar
-  - sudo php -d detect_unicode=0 go-pear.phar
-  - export PATH="/usr/local/mysql/bin:$HOME/pear/bin:$PATH"
-  - pear install PHP_Beautifier
