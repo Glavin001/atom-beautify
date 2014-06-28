@@ -30,3 +30,8 @@
     indent_char: " "
     indent_level: 0
     indent_with_tabs: false
+  python:
+    indent_size: 4
+    #max_line_length: 79
+    #ignore:
+    #  - "E24"
