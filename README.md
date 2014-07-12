@@ -2,8 +2,8 @@
 
 > [Beautify](https://github.com/einars/js-beautify)
 HTML (including [Handlebars](http://handlebarsjs.com/)),
-CSS (including [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/))
-and JavaScript in Atom.
+CSS (including [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/)),
+JavaScript, and much more in Atom.
 
 Atom Package: https://atom.io/packages/atom-beautify
 
@@ -40,10 +40,29 @@ It will only beautify selected text, if a selection is found - if not, the whole
 
 You can also type `ctrl-alt-b` as a shortcut or click `Packages > Beautify` in the menu.
 
+#### Custom Keyboard Shortcuts
+
+See [Keymaps In-Depth](https://atom.io/docs/latest/advanced/keymaps) for more details.
+
+For example:
+
+```coffeescript
+'.editor': # Available from Editor only
+  'ctrl-alt-b': 'beautify'
+```
+
 ### Package Options
 
+- `beautifyOnSave`  
 You can also choose to beautify on every file save.
 
+- `googleAnalytics`  
+There is Google Analytics to track what languages
+are being used the most and other stats.
+Everything is anonymized and no personal information,
+such as source code, is sent to Google.
+See https://github.com/Glavin001/atom-beautify/issues/47
+for more details.
 
 ## Configuration
 
