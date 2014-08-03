@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./lib/atom-beautify",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": true,
   "description": "Beautify HTML, CSS and Javascript in Atom",
   "repository": {
