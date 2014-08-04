@@ -60,7 +60,8 @@
     "sql",
     "php",
     "python",
-    "ruby"
+    "ruby",
+    "coffeescript"
   ],
   "engines": {
     "atom": ">0.50.0"
@@ -75,7 +76,8 @@
     "temp": "^0.8.0",
     "prettydiff": "^1.0.23",
     "node-uuid": "^1.4.1",
-    "analytics-node": "^1.0.2"
+    "analytics-node": "^1.0.2",
+    "coffee-formatter": "git+https://github.com/Glavin001/Coffee-Formatter.git"
   },
   "activationEvents": [
     "beautify"

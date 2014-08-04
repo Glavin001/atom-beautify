@@ -24,11 +24,13 @@ Atom Package: https://atom.io/packages/atom-beautify
   - Beautifies to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
 - [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
   - Requires [RBeautify](https://github.com/erniebrodeur/ruby-beautify)
+- [x] [CoffeeScript](https://github.com/donaldpipowitch/atom-beautify/issues/31)
 
-### Coming Soon
+### Road Map
 
-- [ ] CoffeeScript, see https://github.com/donaldpipowitch/atom-beautify/issues/31
-
+- [ ] [TypeScript support](https://github.com/Glavin001/atom-beautify/issues/49)
+- [ ] [Java support](https://github.com/Glavin001/atom-beautify/issues/45)
+- [ ] [Perl support](https://github.com/Glavin001/atom-beautify/issues/33)
 
 ## Usage
 
