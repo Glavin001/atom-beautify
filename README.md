@@ -58,11 +58,13 @@ For example:
 - `beautifyOnSave`  
 You can also choose to beautify on every file save.
 
-- `googleAnalytics`  
-There is Google Analytics to track what languages
+- `analytics`  
+There is [Segment.io](https://segment.io/),
+which forwards the data to [Google Analytics](http://www.google.com/analytics/),
+to track what languages
 are being used the most and other stats.
 Everything is anonymized and no personal information,
-such as source code, is sent to Google.
+such as source code, is sent.
 See https://github.com/Glavin001/atom-beautify/issues/47
 for more details.
 
