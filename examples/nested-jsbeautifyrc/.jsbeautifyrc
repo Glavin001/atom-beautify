@@ -35,3 +35,7 @@
     #max_line_length: 79
     #ignore:
     #  - "E24"
+  java:
+    indent_class: true
+    indent_with_tabs: 0
+    indent_size: 1

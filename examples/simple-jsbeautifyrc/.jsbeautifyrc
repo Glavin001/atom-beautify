@@ -8,6 +8,5 @@
   "max_preserve_newlines": 2,
   "jslint_happy": true,
   "indent_handlebars": true,
-  "object": {},
-  "configPath": "uncrustify.cfg"
+  "object": {}  
 }
