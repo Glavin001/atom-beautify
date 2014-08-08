@@ -1,11 +1,20 @@
 # [atom-beautify](https://github.com/donaldpipowitch/atom-beautify)
 
+[![Gitter chat](https://badges.gitter.im/Glavin001/atom-beautify.png)](https://gitter.im/Glavin001/atom-beautify)
+
 > [Beautify](https://github.com/einars/js-beautify)
 HTML (including [Handlebars](http://handlebarsjs.com/)),
 CSS (including [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/)),
 JavaScript, and much more in Atom.
 
 Atom Package: https://atom.io/packages/atom-beautify
+
+```bash
+apm install atom-beautify
+```
+
+Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
+
 
 ## Language Support
 
@@ -25,12 +34,30 @@ Atom Package: https://atom.io/packages/atom-beautify
 - [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
   - Requires [RBeautify](https://github.com/erniebrodeur/ruby-beautify)
 - [x] [CoffeeScript](https://github.com/donaldpipowitch/atom-beautify/issues/31)
+- [x] [Java](https://github.com/Glavin001/atom-beautify/issues/45)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [C](https://github.com/Glavin001/atom-beautify/issues/57)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [C++](https://github.com/Glavin001/atom-beautify/issues/57)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [C#](https://github.com/Glavin001/atom-beautify/issues/57)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [Objective-C](https://github.com/Glavin001/atom-beautify/issues/57)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [D](https://github.com/Glavin001/atom-beautify/issues/57)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [Pawn](https://github.com/Glavin001/atom-beautify/issues/57)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [Vala](https://github.com/Glavin001/atom-beautify/issues/57)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 
 ### Road Map
 
-- [ ] [TypeScript support](https://github.com/Glavin001/atom-beautify/issues/49)
-- [ ] [Java support](https://github.com/Glavin001/atom-beautify/issues/45)
-- [ ] [Perl support](https://github.com/Glavin001/atom-beautify/issues/33)
+#### Language support
+
+- [ ] [TypeScript](https://github.com/Glavin001/atom-beautify/issues/49)
+- [ ] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
+
 
 ## Usage
 

@@ -3,7 +3,7 @@
   "main": "./lib/atom-beautify",
   "version": "0.5.2",
   "private": true,
-  "description": "Beautify HTML, CSS and Javascript in Atom",
+  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, and SQL in Atom",
   "repository": {
     "type": "git",
     "url": "https://github.com/Glavin001/atom-beautify"
@@ -61,7 +61,18 @@
     "php",
     "python",
     "ruby",
-    "coffeescript"
+    "coffeescript",
+    "c",
+    "c++",
+    "cpp",
+    "objective-c",
+    "c-sharp",
+    "c#",
+    "uncrustify",
+    "java",
+    "pawn",
+    "vala",
+    "d"
   ],
   "engines": {
     "atom": ">0.50.0"
