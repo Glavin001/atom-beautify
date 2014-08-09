@@ -89,8 +89,5 @@
     "node-uuid": "^1.4.1",
     "analytics-node": "^1.0.2",
     "coffee-formatter": "git+https://github.com/Glavin001/Coffee-Formatter.git"
-  },
-  "activationEvents": [
-    "beautify"
-  ]
+  }
 }
