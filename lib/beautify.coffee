@@ -1,5 +1,18 @@
 # global atom
 
+"use strict"
+plugin = module.exports
+fs = require("fs")
+path = require("path")
+_ = require("lodash")
+strip = require("strip-json-comments")
+yaml = require("js-yaml")
+beautifier = require("./language-options")
+languages = beautifier.languages
+defaultLanguageOptions = beautifier.defaultLanguageOptions
+MessageView = require "./message-view"
+findFileResults = {}
+
 # CLI
 getUserHome = ->
   process.env.HOME or process.env.HOMEPATH or process.env.USERPROFILE
@@ -22,17 +35,22 @@ getCursors = (editor) ->
     ]
     idx++
   posArray
+
 setCursors = (editor, posArray) ->
   idx = 0
-
-  while idx < posArray.length
+  len = posArray.length
+  # console.log "setCursors: #{posArray}"
+  while idx < len
+    # console.log idx
     bufferPosition = posArray[idx]
+    idx++
+    # console.log bufferPosition
     if idx is 0
       editor.setCursorBufferPosition bufferPosition
       continue
     editor.addCursorAtBufferPosition bufferPosition
-    idx++
   return
+
 verifyExists = (fullPath) ->
   (if fs.existsSync(fullPath) then fullPath else null)
 
@@ -46,7 +64,7 @@ Searches for a file with a specified name starting with
 or hits the root.
 
 @param {string} name filename to search for (e.g. .jshintrc)
-@param {string} dir  directory to start search from (default:
+@param {string} dir directory to start search from (default:
 current working directory)
 
 @returns {string} normalized filename
@@ -54,7 +72,7 @@ current working directory)
 findFile = (name, dir) ->
   dir = dir or process.cwd()
   filename = path.normalize(path.join(dir, name))
-  return findFileResults[filename]  if findFileResults[filename] isnt `undefined`
+  return findFileResults[filename] if findFileResults[filename] isnt `undefined`
   parent = path.resolve(dir, "../")
   if verifyExists(filename)
     findFileResults[filename] = filename
@@ -69,8 +87,8 @@ Tries to find a configuration file in either project directory
 or in the home directory. Configuration files are named
 '.jsbeautifyrc'.
 
-@param {string} config   name of the configuration file
-@param {string} file     path to the file to be linted
+@param {string} config name of the configuration file
+@param {string} file path to the file to be linted
 @returns {string} a path to the config file
 ###
 findConfig = (config, file) ->
@@ -78,8 +96,8 @@ findConfig = (config, file) ->
   envs = getUserHome()
   home = path.normalize(path.join(envs, config))
   proj = findFile(config, dir)
-  return proj  if proj
-  return home  if verifyExists(home)
+  return proj if proj
+  return home if verifyExists(home)
   null
 getConfigOptionsFromSettings = (langs) ->
   config = atom.config.getSettings()["atom-beautify"]
@@ -116,7 +134,7 @@ beautify = ->
 
     # Verify that startPath is a string
     startPath = (if (typeof startPath is "string") then startPath else "")
-    return {}  unless startPath
+    return {} unless startPath
 
     # Get the path to the config file
     configPath = findConfig(".jsbeautifyrc", startPath)
@@ -155,23 +173,36 @@ beautify = ->
 
   # Asynchronously and callback-style
   beautifyCompleted = (text) ->
+    # console.log 'beautifyCompleted'
     if oldText isnt text
+      # console.log "Replacing current editor's text with new text"
       posArray = getCursors(editor)
+      # console.log "posArray: #{posArray}"
       origScrollTop = editor.getScrollTop()
+      # console.log "origScrollTop: #{origScrollTop}"
       if isSelection
-        editor.setTextInBufferRange editor.getSelectedBufferRange(), text
+        selectedBufferRange = editor.getSelectedBufferRange()
+        # console.log "selectedBufferRange: #{selectedBufferRange}"
+        editor.setTextInBufferRange selectedBufferRange, text
       else
+        # console.log "setText"
         editor.setText text
+      # console.log "setCursors"
       setCursors editor, posArray
-
+      # console.log "Done setCursors"
       # Let the scrollTop setting run after all the save related stuff is run,
       # otherwise setScrollTop is not working, probably because the cursor
       # addition happens asynchronously
       setTimeout (->
+        # console.log "setScrollTop"
         editor.setScrollTop origScrollTop
         return
       ), 0
+    else
+      # console.log "Already Beautiful!"
     return
+
+  # console.log 'Beautify time!'
   text = undefined
   editor = atom.workspace.getActiveEditor()
   isSelection = !!editor.getSelectedText()
@@ -197,9 +228,11 @@ beautify = ->
     homeOptions
     projectOptions
   ]
+  grammarName = editor.getGrammar().name
 
   # Finally, beautify!
-  beautifier.beautify text, editor.getGrammar().name, allOptions, beautifyCompleted
+  beautifier.beautify text, grammarName, allOptions, beautifyCompleted
+
   return
 handleSaveEvent = ->
   atom.workspace.eachEditor (editor) ->
@@ -212,67 +245,8 @@ handleSaveEvent = ->
 
   return
 
-"use strict"
-plugin = module.exports
-fs = require("fs")
-path = require("path")
-_ = require("lodash")
-strip = require("strip-json-comments")
-yaml = require("js-yaml")
-beautifier = require("./language-options")
-languages = beautifier.languages
-defaultLanguageOptions = beautifier.defaultLanguageOptions
-knownOpts =
-  indent_size: Number
-  indent_char: String
-  indent_level: Number
-  indent_with_tabs: Boolean
-  indent_handlebars: Boolean
-  preserve_newlines: Boolean
-  max_preserve_newlines: Number
-  space_in_paren: Boolean
-  jslint_happy: Boolean
-  brace_style: [
-    "collapse"
-    "expand"
-    "end-expand"
-    "expand-strict"
-  ]
-  break_chained_methods: Boolean
-  keep_array_indentation: Boolean
-  unescape_strings: Boolean
-  wrap_line_length: Number
-  e4x: Boolean
-  max_char: Number
-  unformatted: [
-    String
-    Array
-  ]
-  indent_inner_html: [Boolean]
-  indent_scripts: [
-    "keep"
-    "separate"
-    "normal"
-  ]
-  version: Boolean
-  help: Boolean
-  files: [
-    path
-    Array
-  ]
-  outfile: path
-  replace: Boolean
-  quiet: Boolean
-  type: [
-    "js"
-    "css"
-    "html"
-  ]
-  config: path
-
 Subscriber = require("emissary").Subscriber
 Subscriber.extend plugin
-findFileResults = {}
 plugin.configDefaults = _.merge(
   analytics: true
   beautifyOnSave: false
