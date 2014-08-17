@@ -10,7 +10,7 @@ yaml = require("js-yaml")
 beautifier = require("./language-options")
 languages = beautifier.languages
 defaultLanguageOptions = beautifier.defaultLanguageOptions
-MessageView = require "./message-view"
+#MessageView = require "./message-view"
 findFileResults = {}
 
 # CLI

@@ -82,7 +82,9 @@ module.exports =
 
     # SQL
     sql_indent_size: 2
-    sql_indent_char: " "
+    sql_keywords: "upper"
+    sql_identifiers: "lower"
+    sql_sqlformat_path: ""
 
     # PHP
     php_beautifier_path: ""
@@ -154,8 +156,7 @@ module.exports =
       when "Sass", "SCSS", "LESS"
         beautifyLESS text, self.getOptions("css", allOptions), beautifyCompleted
       when "SQL (Rails)", "SQL"
-        text = beautifySQL(text, self.getOptions("sql", allOptions))
-        beautifyCompleted text
+        beautifySQL text, self.getOptions("sql", allOptions), beautifyCompleted
       when "PHP"
         beautifyPHP text, self.getOptions("php", allOptions), beautifyCompleted
       when "Python"
