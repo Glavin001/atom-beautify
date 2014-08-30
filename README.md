@@ -25,7 +25,8 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] CSS, including
   - [Sass](http://sass-lang.com/)
   - [LESS](http://lesscss.org/)
-- [x] SQL, special thanks to [pretty-data](https://github.com/vkiryukhin/pretty-data)
+- [x] [SQL](https://github.com/Glavin001/atom-beautify/pull/67)
+  - Requires [python-sqlparse](https://github.com/andialbrecht/sqlparse)
 - [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
   - Requires [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier) to be already installed.
 - [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
