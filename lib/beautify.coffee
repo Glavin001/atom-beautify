@@ -24,28 +24,19 @@ getUserHome = ->
 getCursors = (editor) ->
   cursors = editor.getCursors()
   posArray = []
-  idx = 0
 
-  while idx < cursors.length
-    cursor = cursors[idx]
+  for cursor in cursors
     bufferPosition = cursor.getBufferPosition()
     posArray.push [
       bufferPosition.row
       bufferPosition.column
     ]
-    idx++
   posArray
 
 setCursors = (editor, posArray) ->
-  idx = 0
-  len = posArray.length
   # console.log "setCursors: #{posArray}"
-  while idx < len
-    # console.log idx
-    bufferPosition = posArray[idx]
-    idx++
-    # console.log bufferPosition
-    if idx is 0
+  for bufferPosition, i in posArray
+    if i is 0
       editor.setCursorBufferPosition bufferPosition
       continue
     editor.addCursorAtBufferPosition bufferPosition
