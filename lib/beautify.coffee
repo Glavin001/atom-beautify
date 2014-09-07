@@ -24,7 +24,6 @@ getUserHome = ->
 getCursors = (editor) ->
   cursors = editor.getCursors()
   posArray = []
-
   for cursor in cursors
     bufferPosition = cursor.getBufferPosition()
     posArray.push [
@@ -93,40 +92,31 @@ findConfig = (config, file) ->
 getConfigOptionsFromSettings = (langs) ->
   config = atom.config.getSettings()["atom-beautify"]
   options = {}
-
   # console.log(langs, config);
-
   # Iterate over keys of the settings
   _.every _.keys(config), (k) ->
-
     # Check if keys start with a language
     p = k.split("_")[0]
     idx = _.indexOf(langs, p)
-
     # console.log(k, p, idx);
     if idx >= 0
-
       # Remove the language prefix and nest in options
       lang = langs[idx]
       opt = k.replace(new RegExp("^" + lang + "_"), "")
       options[lang] = options[lang] or {}
       options[lang][opt] = config[k]
-
     # console.log(lang, opt);
     true
-
-
   # console.log(options);
   options
-beautify = ->
 
+beautify = ->
+  forceEntireFile = atom.config.get("atom-beautify.beautifyEntireFileOnSave")
   # Look for .jsbeautifierrc in file and home path, check env variables
   getConfig = (startPath) ->
-
     # Verify that startPath is a string
     startPath = (if (typeof startPath is "string") then startPath else "")
     return {} unless startPath
-
     # Get the path to the config file
     configPath = findConfig(".jsbeautifyrc", startPath)
     externalOptions = undefined
@@ -171,7 +161,7 @@ beautify = ->
       # console.log "posArray: #{posArray}"
       origScrollTop = editor.getScrollTop()
       # console.log "origScrollTop: #{origScrollTop}"
-      if isSelection
+      if not forceEntireFile and isSelection
         selectedBufferRange = editor.getSelectedBufferRange()
         # console.log "selectedBufferRange: #{selectedBufferRange}"
         editor.setTextInBufferRange selectedBufferRange, text
@@ -192,7 +182,6 @@ beautify = ->
     else
       # console.log "Already Beautiful!"
     return
-
   # console.log 'Beautify time!'
   text = undefined
   editor = atom.workspace.getActiveEditor()
@@ -208,7 +197,7 @@ beautify = ->
   editedFilePath = editor.getPath()
   projectOptions = getConfig(editedFilePath)
   homeOptions = getConfig(getUserHome())
-  if isSelection
+  if not forceEntireFile and isSelection
     text = editor.getSelectedText()
   else
     text = editor.getText()
@@ -220,11 +209,10 @@ beautify = ->
     projectOptions
   ]
   grammarName = editor.getGrammar().name
-
   # Finally, beautify!
   beautifier.beautify text, grammarName, allOptions, beautifyCompleted
-
   return
+
 handleSaveEvent = ->
   atom.workspace.eachEditor (editor) ->
     buffer = editor.getBuffer()
@@ -233,7 +221,6 @@ handleSaveEvent = ->
       events = "will-be-saved"
       plugin.subscribe buffer, events, beautify
     return
-
   return
 
 Subscriber = require("emissary").Subscriber
@@ -241,6 +228,7 @@ Subscriber.extend plugin
 plugin.configDefaults = _.merge(
   analytics: true
   beautifyOnSave: false
+  beautifyEntireFileOnSave: true
 , defaultLanguageOptions)
 plugin.activate = ->
   handleSaveEvent()
