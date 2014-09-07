@@ -1,15 +1,17 @@
 # global atom
 
 "use strict"
+# Dependencies
 plugin = module.exports
-fs = require("fs")
-path = require("path")
 _ = require("lodash")
-strip = require("strip-json-comments")
-yaml = require("js-yaml")
 beautifier = require("./language-options")
 languages = beautifier.languages
 defaultLanguageOptions = beautifier.defaultLanguageOptions
+# Lazy loaded dependencies
+fs = null
+path = null
+strip = null
+yaml = null
 #MessageView = require "./message-view"
 findFileResults = {}
 
@@ -42,6 +44,7 @@ setCursors = (editor, posArray) ->
   return
 
 verifyExists = (fullPath) ->
+  fs ?= require("fs")
   (if fs.existsSync(fullPath) then fullPath else null)
 
 # Storage for memoized results from find file
@@ -60,6 +63,7 @@ current working directory)
 @returns {string} normalized filename
 ###
 findFile = (name, dir) ->
+  path ?= require("path")
   dir = dir or process.cwd()
   filename = path.normalize(path.join(dir, name))
   return findFileResults[filename] if findFileResults[filename] isnt `undefined`
@@ -82,6 +86,7 @@ or in the home directory. Configuration files are named
 @returns {string} a path to the config file
 ###
 findConfig = (config, file) ->
+  path ?= require("path")
   dir = path.dirname(path.resolve(file))
   envs = getUserHome()
   home = path.normalize(path.join(envs, config))
@@ -121,6 +126,7 @@ beautify = ->
     configPath = findConfig(".jsbeautifyrc", startPath)
     externalOptions = undefined
     if configPath
+      fs ?= require("fs")
       contents = fs.readFileSync(configPath,
         encoding: "utf8"
       )
@@ -128,12 +134,14 @@ beautify = ->
         externalOptions = {}
       else
         try
+          strip ?= require("strip-json-comments")
           externalOptions = JSON.parse(strip(contents))
         catch e
           console.log "Failed parsing config as JSON: " + configPath
 
           # Attempt as YAML
           try
+            yaml ?= require("js-yaml")
             externalOptions = yaml.safeLoad(contents)
           catch e
             console.log "Failed parsing config as YAML: " + configPath
