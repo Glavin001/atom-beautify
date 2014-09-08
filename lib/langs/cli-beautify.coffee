@@ -42,7 +42,7 @@ module.exports = (getCmd, isStdout) ->
                     # by calling the external files that would usually
                     # change the $PATH variable on user login.
                     $path = "[ -f ~/.bash_profile ] && source ~/.bash_profile;"
-                    $path += "[ -f ~/.bash_rc ] && source ~/.bash_rc;"
+                    $path += "[ -f ~/.bashrc ] && source ~/.bashrc;"
 
                     # See http://stackoverflow.com/a/638980/2578205
                     # for checking if file exists in Bash
