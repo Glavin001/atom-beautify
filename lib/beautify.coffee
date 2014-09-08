@@ -12,6 +12,7 @@ fs = null
 path = null
 strip = null
 yaml = null
+LoadingView = null
 #MessageView = require "./message-view"
 findFileResults = {}
 
@@ -44,7 +45,7 @@ setCursors = (editor, posArray) ->
   return
 
 verifyExists = (fullPath) ->
-  fs ?= require("fs")
+  fs ? = require("fs")
   (if fs.existsSync(fullPath) then fullPath else null)
 
 # Storage for memoized results from find file
@@ -63,7 +64,7 @@ current working directory)
 @returns {string} normalized filename
 ###
 findFile = (name, dir) ->
-  path ?= require("path")
+  path ? = require("path")
   dir = dir or process.cwd()
   filename = path.normalize(path.join(dir, name))
   return findFileResults[filename] if findFileResults[filename] isnt `undefined`
@@ -86,7 +87,7 @@ or in the home directory. Configuration files are named
 @returns {string} a path to the config file
 ###
 findConfig = (config, file) ->
-  path ?= require("path")
+  path ? = require("path")
   dir = path.dirname(path.resolve(file))
   envs = getUserHome()
   home = path.normalize(path.join(envs, config))
@@ -116,6 +117,9 @@ getConfigOptionsFromSettings = (langs) ->
   options
 
 beautify = ->
+  LoadingView ? = require "./loading-view"
+  @loadingView ? = new LoadingView()
+  @loadingView.show()
   forceEntireFile = atom.config.get("atom-beautify.beautifyEntireFileOnSave")
   # Look for .jsbeautifierrc in file and home path, check env variables
   getConfig = (startPath) ->
@@ -126,7 +130,7 @@ beautify = ->
     configPath = findConfig(".jsbeautifyrc", startPath)
     externalOptions = undefined
     if configPath
-      fs ?= require("fs")
+      fs ? = require("fs")
       contents = fs.readFileSync(configPath,
         encoding: "utf8"
       )
@@ -134,14 +138,14 @@ beautify = ->
         externalOptions = {}
       else
         try
-          strip ?= require("strip-json-comments")
+          strip ? = require("strip-json-comments")
           externalOptions = JSON.parse(strip(contents))
         catch e
           console.log "Failed parsing config as JSON: " + configPath
 
           # Attempt as YAML
           try
-            yaml ?= require("js-yaml")
+            yaml ? = require("js-yaml")
             externalOptions = yaml.safeLoad(contents)
           catch e
             console.log "Failed parsing config as YAML: " + configPath
@@ -149,9 +153,7 @@ beautify = ->
     else
       externalOptions = {}
     externalOptions
-
   # Get the path to the config file
-
   # All of the options
   # Listed in order from default (base) to the one with the highest priority
   # Left = Default, Right = Will override the left.
@@ -159,9 +161,8 @@ beautify = ->
   #
   # User's Home path
   # Project path
-
   # Asynchronously and callback-style
-  beautifyCompleted = (text) ->
+  beautifyCompleted = (text) =>
     # console.log 'beautifyCompleted'
     if oldText isnt text
       # console.log "Replacing current editor's text with new text"
@@ -187,8 +188,9 @@ beautify = ->
         editor.setScrollTop origScrollTop
         return
       ), 0
-    else
+    # else
       # console.log "Already Beautiful!"
+    @loadingView.hide()
     return
   # console.log 'Beautify time!'
   text = undefined
@@ -200,7 +202,6 @@ beautify = ->
     indent_size: (if softTabs then tabLength else 1)
     indent_char: (if softTabs then " " else "\t")
     indent_with_tabs: not softTabs
-
   configOptions = getConfigOptionsFromSettings(languages)
   editedFilePath = editor.getPath()
   projectOptions = getConfig(editedFilePath)
