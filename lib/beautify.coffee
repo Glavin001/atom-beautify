@@ -123,7 +123,7 @@ beautify = ->
   PlainMessageView ?= require('atom-message-panel').PlainMessageView
   LoadingView ?= require "./loading-view"
   @messagePanel ?= new MessagePanelView title: 'Atom Beautify'
-  @messagePanel.attach();
+  @messagePanel.attach() ;
   @loadingView ?= new LoadingView()
   @loadingView.show()
   forceEntireFile = atom.config.get("atom-beautify.beautifyEntireFileOnSave")
@@ -232,16 +232,16 @@ beautify = ->
     @messagePanel.add(new PlainMessageView({
       message: e.message,
       className: 'text-error'
-    }));
+    } )) ;
   return
 
-handleSaveEvent = ->
-  atom.workspace.eachEditor (editor) ->
+handleSaveEvent = =>
+  atom.workspace.eachEditor (editor) =>
     buffer = editor.getBuffer()
     plugin.unsubscribe buffer
     if atom.config.get("atom-beautify.beautifyOnSave")
       events = "will-be-saved"
-      plugin.subscribe buffer, events, beautify
+      plugin.subscribe buffer, events, beautify.bind(@)
     return
   return
 
