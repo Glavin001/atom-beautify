@@ -16,6 +16,7 @@ beautifyRuby = null
 beautifyLESS = null
 beautifyCoffeeScript = null
 uncrustifyBeautifier = null
+beautifyHTMLERB = null
 
 # Misc
 Analytics = require("analytics-node")
@@ -149,6 +150,9 @@ module.exports =
         beautifyHTML ?= require("js-beautify").html
         text = beautifyHTML(text, self.getOptions("html", allOptions))
         beautifyCompleted text
+      when "HTML (Ruby - ERB)"
+        beautifyHTMLERB ?= require("./langs/html-erb-beautify")
+        beautifyHTMLERB text, self.getOptions("html", allOptions), beautifyCompleted
       when "CSS"
         beautifyCSS ?= require("js-beautify").css
         text = beautifyCSS(text, self.getOptions("css", allOptions))

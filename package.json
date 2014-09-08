@@ -72,7 +72,8 @@
     "java",
     "pawn",
     "vala",
-    "d"
+    "d",
+    "erb"
   ],
   "engines": {
     "atom": ">0.50.0"
