@@ -213,13 +213,11 @@ module.exports =
 
     # Check if Analytics is enabled
     if atom.config.get("atom-beautify.analytics")
-
       # Setup Analytics
       analytics = new Analytics(analyticsWriteKey)
       unless atom.config.get("atom-beautify._analyticsUserId")
         uuid = require("node-uuid")
         atom.config.set "atom-beautify._analyticsUserId", uuid.v4()
-
       # Setup Analytics User Id
       userId = atom.config.get("atom-beautify._analyticsUserId")
       analytics.identify userId: userId
@@ -233,7 +231,9 @@ module.exports =
           options: allOptions
           label: grammar
           category: version
-
+    #
+    if unsupportedGrammar
+      throw new Error("Unsupported language for grammar '#{grammar}'.")
     return
 
   getOptions: (selection, allOptions) ->

@@ -13,6 +13,8 @@ path = null
 strip = null
 yaml = null
 LoadingView = null
+MessagePanelView = null
+PlainMessageView = null
 #MessageView = require "./message-view"
 findFileResults = {}
 
@@ -45,7 +47,7 @@ setCursors = (editor, posArray) ->
   return
 
 verifyExists = (fullPath) ->
-  fs ? = require("fs")
+  fs ?= require("fs")
   (if fs.existsSync(fullPath) then fullPath else null)
 
 # Storage for memoized results from find file
@@ -64,7 +66,7 @@ current working directory)
 @returns {string} normalized filename
 ###
 findFile = (name, dir) ->
-  path ? = require("path")
+  path ?= require("path")
   dir = dir or process.cwd()
   filename = path.normalize(path.join(dir, name))
   return findFileResults[filename] if findFileResults[filename] isnt `undefined`
@@ -87,7 +89,7 @@ or in the home directory. Configuration files are named
 @returns {string} a path to the config file
 ###
 findConfig = (config, file) ->
-  path ? = require("path")
+  path ?= require("path")
   dir = path.dirname(path.resolve(file))
   envs = getUserHome()
   home = path.normalize(path.join(envs, config))
@@ -117,8 +119,12 @@ getConfigOptionsFromSettings = (langs) ->
   options
 
 beautify = ->
-  LoadingView ? = require "./loading-view"
-  @loadingView ? = new LoadingView()
+  MessagePanelView ?= require('atom-message-panel').MessagePanelView
+  PlainMessageView ?= require('atom-message-panel').PlainMessageView
+  LoadingView ?= require "./loading-view"
+  @messagePanel ?= new MessagePanelView title: 'Atom Beautify'
+  @messagePanel.attach();
+  @loadingView ?= new LoadingView()
   @loadingView.show()
   forceEntireFile = atom.config.get("atom-beautify.beautifyEntireFileOnSave")
   # Look for .jsbeautifierrc in file and home path, check env variables
@@ -130,7 +136,7 @@ beautify = ->
     configPath = findConfig(".jsbeautifyrc", startPath)
     externalOptions = undefined
     if configPath
-      fs ? = require("fs")
+      fs ?= require("fs")
       contents = fs.readFileSync(configPath,
         encoding: "utf8"
       )
@@ -138,14 +144,13 @@ beautify = ->
         externalOptions = {}
       else
         try
-          strip ? = require("strip-json-comments")
+          strip ?= require("strip-json-comments")
           externalOptions = JSON.parse(strip(contents))
         catch e
           console.log "Failed parsing config as JSON: " + configPath
-
           # Attempt as YAML
           try
-            yaml ? = require("js-yaml")
+            yaml ?= require("js-yaml")
             externalOptions = yaml.safeLoad(contents)
           catch e
             console.log "Failed parsing config as YAML: " + configPath
@@ -219,7 +224,15 @@ beautify = ->
   ]
   grammarName = editor.getGrammar().name
   # Finally, beautify!
-  beautifier.beautify text, grammarName, allOptions, beautifyCompleted
+  try
+    beautifier.beautify text, grammarName, allOptions, beautifyCompleted
+  catch e
+    console.log(e)
+    @loadingView.hide()
+    @messagePanel.add(new PlainMessageView({
+      message: e.message,
+      className: 'text-error'
+    }));
   return
 
 handleSaveEvent = ->
