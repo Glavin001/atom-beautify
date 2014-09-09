@@ -1,3 +1,6 @@
+# v0.10.0 (2014-08-09)
+- [Closes #68. Support editorconfig files.](https://github.com/Glavin001/atom-beautify/commit/baf3e49b97c5366829f021d843f3b6beb7d92a8c)
+
 # v0.9.0 (2014-08-09)
 - [Closes #37. Support upwards recursive .jsbeautifyrc fallback.](https://github.com/Glavin001/atom-beautify/commit/738deace29fbcc981e96599bd9cd55f4010e4106)
 
