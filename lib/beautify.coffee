@@ -62,10 +62,11 @@ or hits the root.
 @param {string} name filename to search for (e.g. .jshintrc)
 @param {string} dir directory to start search from (default:
 current working directory)
+@param {boolean} upwards should recurse upwards on failure? (default: true)
 
 @returns {string} normalized filename
 ###
-findFile = (name, dir) ->
+findFile = (name, dir, upwards=true) ->
   path ?= require("path")
   dir = dir or process.cwd()
   filename = path.normalize(path.join(dir, name))
@@ -77,7 +78,10 @@ findFile = (name, dir) ->
   if dir is parent
     findFileResults[filename] = null
     return null
-  findFile name, parent
+  if upwards
+    findFile name, parent
+  else
+    return null
 
 ###
 Tries to find a configuration file in either project directory
@@ -86,14 +90,16 @@ or in the home directory. Configuration files are named
 
 @param {string} config name of the configuration file
 @param {string} file path to the file to be linted
+@param {boolean} upwards should recurse upwards on failure? (default: true)
+
 @returns {string} a path to the config file
 ###
-findConfig = (config, file) ->
+findConfig = (config, file, upwards=true) ->
   path ?= require("path")
   dir = path.dirname(path.resolve(file))
   envs = getUserHome()
   home = path.normalize(path.join(envs, config))
-  proj = findFile(config, dir)
+  proj = findFile(config, dir, upwards)
   return proj if proj
   return home if verifyExists(home)
   null
@@ -119,6 +125,7 @@ getConfigOptionsFromSettings = (langs) ->
   options
 
 beautify = ->
+  path ?= require("path")
   MessagePanelView ?= require('atom-message-panel').MessagePanelView
   PlainMessageView ?= require('atom-message-panel').PlainMessageView
   LoadingView ?= require "./loading-view"
@@ -128,12 +135,12 @@ beautify = ->
   @loadingView.show()
   forceEntireFile = atom.config.get("atom-beautify.beautifyEntireFileOnSave")
   # Look for .jsbeautifierrc in file and home path, check env variables
-  getConfig = (startPath) ->
+  getConfig = (startPath, upwards=true) ->
     # Verify that startPath is a string
     startPath = (if (typeof startPath is "string") then startPath else "")
     return {} unless startPath
     # Get the path to the config file
-    configPath = findConfig(".jsbeautifyrc", startPath)
+    configPath = findConfig(".jsbeautifyrc", startPath, upwards)
     externalOptions = undefined
     if configPath
       fs ?= require("fs")
@@ -198,8 +205,10 @@ beautify = ->
     @loadingView.hide()
     return
   # console.log 'Beautify time!'
-  text = undefined
+
+  # Get current editor
   editor = atom.workspace.getActiveEditor()
+  # Get current Atom editor configuration
   isSelection = !!editor.getSelectedText()
   softTabs = editor.softTabs
   tabLength = editor.getTabLength()
@@ -208,20 +217,51 @@ beautify = ->
     indent_char: (if softTabs then " " else "\t")
     indent_with_tabs: not softTabs
   configOptions = getConfigOptionsFromSettings(languages)
+
+  # Get editor path and configurations for paths
   editedFilePath = editor.getPath()
-  projectOptions = getConfig(editedFilePath)
-  homeOptions = getConfig(getUserHome())
+
+  # Get configuration in User's Home directory
+  userHome = getUserHome()
+  # FAKEFILENAME forces `path` to treat as file path and it's parent directory
+  # is the userHome. See implementation of findConfig
+  # and how path.dirname(DIRECTORY) returns the parent directory of DIRECTORY
+  homeOptions = getConfig(path.join(userHome,"FAKEFILENAME"), false)
+
+  # TODO: See issue #68. EditorConfig options
+  editorConfigOptions = {};
+
+  # Get all options in configuration files from this directory upwards to root
+  projectOptions = []
+  p = path.dirname(editedFilePath)
+  # Check if p is root (top directory)
+  while p isnt "/"
+    # Get config for p
+    pf = path.join(p, "FAKEFILENAME")
+    pc = getConfig(pf, false)
+    # Add config for p to project's config options
+    projectOptions.push(pc)
+    # console.log p, pc
+    # Move upwards
+    p = path.resolve(p,"../")
+
+  # Combine all options together
+  allOptions = [
+    editorOptions
+    configOptions
+    homeOptions
+    editorConfigOptions
+  ]
+  allOptions = allOptions.concat(projectOptions)
+
+  # Get current editor's text
+  text = undefined
   if not forceEntireFile and isSelection
     text = editor.getSelectedText()
   else
     text = editor.getText()
   oldText = text
-  allOptions = [
-    editorOptions
-    configOptions
-    homeOptions
-    projectOptions
-  ]
+  # Get Grammar
   grammarName = editor.getGrammar().name
   # Finally, beautify!
   try
