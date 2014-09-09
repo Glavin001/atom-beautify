@@ -73,7 +73,8 @@
     "pawn",
     "vala",
     "d",
-    "erb"
+    "erb",
+    "editorconfig"
   ],
   "engines": {
     "atom": ">0.50.0"
@@ -90,6 +91,7 @@
     "node-uuid": "^1.4.1",
     "analytics-node": "^1.0.2",
     "coffee-formatter": "git+https://github.com/Glavin001/Coffee-Formatter.git",
-    "atom-message-panel": "^1.1.1"
+    "atom-message-panel": "^1.1.1",
+    "editorconfig": "^0.11.4"
   }
 }

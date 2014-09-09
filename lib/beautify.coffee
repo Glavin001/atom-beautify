@@ -15,6 +15,7 @@ yaml = null
 LoadingView = null
 MessagePanelView = null
 PlainMessageView = null
+editorconfig = null
 #MessageView = require "./message-view"
 findFileResults = {}
 
@@ -228,8 +229,20 @@ beautify = ->
   # and how path.dirname(DIRECTORY) returns the parent directory of DIRECTORY
   homeOptions = getConfig(path.join(userHome,"FAKEFILENAME"), false)
 
-  # TODO: See issue #68. EditorConfig options
-  editorConfigOptions = {};
+  # Handle EditorConfig options
+  # http://editorconfig.org/
+  editorconfig ?= require('editorconfig');
+  editorConfigOptions = editorconfig.parse(editedFilePath);
+  # Transform EditorConfig to Atom Beautify's config structure and naming
+  if editorConfigOptions.indent_style is 'space'
+    editorConfigOptions.indent_char = " "
+    # if (editorConfigOptions.indent_size)
+    #   editorConfigOptions.indent_size = config.indent_size
+  else if editorConfigOptions.indent_style is 'tab'
+    editorConfigOptions.indent_char = "\t"
+    editorConfigOptions.indent_with_tabs = true
+    if (editorConfigOptions.tab_width)
+        editorConfigOptions.indent_size = config.tab_width
 
   # Get all options in configuration files from this directory upwards to root
   projectOptions = []
