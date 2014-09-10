@@ -1,3 +1,6 @@
+# v0.10.1 (2014-08-10)
+- [Fixes #68. Fix error when beautifying file that is "untitled".](https://github.com/Glavin001/atom-beautify/commit/2cd3bef6e0d6493d85dd85796ad67e0305e7ffc9)
+
 # v0.10.0 (2014-08-09)
 - [Closes #68. Support editorconfig files.](https://github.com/Glavin001/atom-beautify/commit/baf3e49b97c5366829f021d843f3b6beb7d92a8c)
 
