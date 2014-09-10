@@ -130,11 +130,19 @@ beautify = ->
   MessagePanelView ?= require('atom-message-panel').MessagePanelView
   PlainMessageView ?= require('atom-message-panel').PlainMessageView
   LoadingView ?= require "./loading-view"
-  @messagePanel ?= new MessagePanelView title: 'Atom Beautify'
-  @messagePanel.attach() ;
+  @messagePanel ?= new MessagePanelView title: 'Atom Beautify Error Messages'
   @loadingView ?= new LoadingView()
   @loadingView.show()
   forceEntireFile = atom.config.get("atom-beautify.beautifyEntireFileOnSave")
+  # Show error
+  showError = (e) =>
+      # console.log(e)
+      @loadingView.hide()
+      @messagePanel.attach()
+      @messagePanel.add(new PlainMessageView({
+        message: e.message,
+        className: 'text-error'
+      }))
   # Look for .jsbeautifierrc in file and home path, check env variables
   getConfig = (startPath, upwards=true) ->
     # Verify that startPath is a string
@@ -177,7 +185,9 @@ beautify = ->
   # Asynchronously and callback-style
   beautifyCompleted = (text) =>
     # console.log 'beautifyCompleted'
-    if oldText isnt text
+    if text instanceof Error
+      showError(text)
+    else if oldText isnt text
       # console.log "Replacing current editor's text with new text"
       posArray = getCursors(editor)
       # console.log "posArray: #{posArray}"
@@ -284,12 +294,7 @@ beautify = ->
   try
     beautifier.beautify text, grammarName, allOptions, beautifyCompleted
   catch e
-    console.log(e)
-    @loadingView.hide()
-    @messagePanel.add(new PlainMessageView({
-      message: e.message,
-      className: 'text-error'
-    } )) ;
+    showError(e)
   return
 
 handleSaveEvent = =>

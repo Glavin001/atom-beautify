@@ -21,14 +21,11 @@ module.exports = (getCmd, isStdout) ->
               outputPath = temp.path()
               deleteOutputFile = ->
                 temp.cleanup()
-
                 # Delete the output path
                 fs.unlink outputPath, (err) ->
                   console.log "Deleting output file", err  if err
                   return
-
                 return
-
 
               # Process the command
               processCmd = (cmd) ->
@@ -72,11 +69,13 @@ module.exports = (getCmd, isStdout) ->
 
                     else
                       console.log "Beautifcation Error: ", err
+                      callback err
                       deleteOutputFile()
                     return
 
                 else
                   console.log "Beautify CLI command not valid."
+                  callback(new Error("Beautify CLI command not valid."))
                 return
 
 
