@@ -1,3 +1,6 @@
+# v0.10.2 (2014-08-10)
+- [Fixes #85. Add support for Windows for upwards recursive .jsbeautifyrc (see #37)](https://github.com/Glavin001/atom-beautify/commit/490cd7ee051926f3c143bc0b9873fa1bc7cd9828)
+
 # v0.10.1 (2014-08-10)
 - [Fixes #68. Fix error when beautifying file that is "untitled".](https://github.com/Glavin001/atom-beautify/commit/2cd3bef6e0d6493d85dd85796ad67e0305e7ffc9)
 
