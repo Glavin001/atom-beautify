@@ -249,7 +249,7 @@ beautify = ->
     projectOptions = []
     p = path.dirname(editedFilePath)
     # Check if p is root (top directory)
-    while p isnt "/"
+    while p isnt path.resolve(p,"../")
       # Get config for p
       pf = path.join(p, "FAKEFILENAME")
       pc = getConfig(pf, false)
