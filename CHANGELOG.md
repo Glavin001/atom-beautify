@@ -1,3 +1,6 @@
+# v0.10.3 (2014-08-10)
+- [Closes #84. Improve the error message panel to only appear on new error](https://github.com/Glavin001/atom-beautify/commit/31b217859e714767c5784f5613149304ddd4b9ad)
+
 # v0.10.2 (2014-08-10)
 - [Fixes #85. Add support for Windows for upwards recursive .jsbeautifyrc (see #37)](https://github.com/Glavin001/atom-beautify/commit/490cd7ee051926f3c143bc0b9873fa1bc7cd9828)
 
