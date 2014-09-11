@@ -113,6 +113,8 @@ Edit your `.jsbeautifyrc` file in any of the following locations:
 
 See examples of both way inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
 
+Option table is available at the [js-beautify repo](https://github.com/beautify-web/js-beautify#options).
+
 ### Simple
 
 See [examples/simple-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/simple-jsbeautifyrc/.jsbeautifyrc).
