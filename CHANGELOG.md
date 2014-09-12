@@ -1,3 +1,6 @@
+# v0.10.4 (2014-08-12)
+- [Fix support for editorconfig with indent style = 'tab'](https://github.com/Glavin001/atom-beautify/commit/7c56d84385e91798556ed534e1dfc4129a107d4b)
+
 # v0.10.3 (2014-08-10)
 - [Closes #84. Improve the error message panel to only appear on new error](https://github.com/Glavin001/atom-beautify/commit/31b217859e714767c5784f5613149304ddd4b9ad)
 
