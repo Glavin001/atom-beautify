@@ -253,7 +253,7 @@ beautify = ->
       editorConfigOptions.indent_char = "\t"
       editorConfigOptions.indent_with_tabs = true
       if (editorConfigOptions.tab_width)
-          editorConfigOptions.indent_size = config.tab_width
+          editorConfigOptions.indent_size = editorConfigOptions.tab_width
 
     # Get all options in configuration files from this directory upwards to root
     projectOptions = []
