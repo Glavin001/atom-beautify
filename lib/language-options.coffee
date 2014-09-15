@@ -100,32 +100,36 @@ module.exports =
     ruby_rbeautify_path: ""
 
     # C
+    c_uncrustifyPath: ""
     c_configPath: ""
 
     # C++
+    cpp_uncrustifyPath: ""
     cpp_configPath: ""
 
     # Objective-C
+    objectivec_uncrustifyPath: ""
     objectivec_configPath: ""
 
     # C#
+    cs_uncrustifyPath: ""
     cs_configPath: ""
 
-    # Objective-C
+    # D
+    d_uncrustifyPath: ""
     d_configPath: ""
 
     # Java
+    java_uncrustifyPath: ""
     java_configPath: ""
 
     # Pawn
+    pawn_uncrustifyPath: ""
     pawn_configPath: ""
 
     # VALA
+    vala_uncrustifyPath: ""
     vala_configPath: ""
-
-    # Uncrustify
-    uncrustifyPath: ""
-
 
   # jshint ignore: end
 

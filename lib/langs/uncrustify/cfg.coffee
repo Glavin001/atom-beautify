@@ -4,6 +4,7 @@ Requires http://pear.php.net/package/PHP_Beautifier
 "use strict"
 fs = require("fs")
 temp = require("temp").track()
+possibleOptions = require "./possible-options.json"
 module.exports = (options, cb) ->
   text = ""
 
@@ -35,20 +36,24 @@ module.exports = (options, cb) ->
   # jshint ignore: end
   # Remove misc
   delete options.languageOverride
-
   delete options.configPath
-
 
   # Iterate over each property and write to configuration file
   for k of options
-    v = options[k]
-    vs = v
-    if typeof vs is "boolean"
-      if vs is true
-        vs = "True"
-      else
-        vs = "False"
-    text += k + " = " + vs + "\n"
+    # Remove all non-possible options
+    isPossible = possibleOptions.indexOf(k) isnt -1
+    if isPossible
+      v = options[k]
+      vs = v
+      if typeof vs is "boolean"
+        if vs is true
+          vs = "True"
+        else
+          vs = "False"
+      text += k + " = " + vs + "\n"
+    else
+      # console.log("removing #{k} option")
+      delete options[k]
 
   # Create temp input file
   temp.open

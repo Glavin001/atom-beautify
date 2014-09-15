@@ -120,7 +120,7 @@ getConfigOptionsFromSettings = (langs) ->
       opt = k.replace(new RegExp("^" + lang + "_"), "")
       options[lang] = options[lang] or {}
       options[lang][opt] = config[k]
-    # console.log(lang, opt);
+      # console.log(lang, opt);
     true
   # console.log(options);
   options
