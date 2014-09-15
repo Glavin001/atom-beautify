@@ -1,3 +1,6 @@
+# v0.11.0 (2014-08-15)
+- [Closes #91. Add configuration option for custom Uncrustify path](https://github.com/Glavin001/atom-beautify/commit/fefb25bf380c846222ec9f288c869d4765e03b2a)
+
 # v0.10.4 (2014-08-12)
 - [Fix support for editorconfig with indent style = 'tab'](https://github.com/Glavin001/atom-beautify/commit/7c56d84385e91798556ed534e1dfc4129a107d4b)
 
