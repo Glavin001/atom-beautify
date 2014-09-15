@@ -124,7 +124,7 @@ module.exports =
     vala_configPath: ""
 
     # Uncrustify
-    uncrustifyPath:""
+    uncrustifyPath: ""
 
 
   # jshint ignore: end

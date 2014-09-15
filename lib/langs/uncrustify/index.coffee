@@ -20,7 +20,7 @@ getCmd = (inputPath, outputPath, options, cb) ->
   configPath = options.configPath
   lang = options.languageOverride or "C"
   pathToCommand = atom.config.get("atom-beautify.uncrustifyPath")
-  console.log(pathToCommand)
+  # console.log(pathToCommand)
   unless configPath
 
     # No custom config path
