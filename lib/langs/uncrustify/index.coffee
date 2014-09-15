@@ -9,7 +9,7 @@ getCmd = (inputPath, outputPath, options, cb) ->
     # console.log(configPath);
     if pathToCommand
 
-      # Use absolute path
+      # Use path given by user
       cmd = pathToCommand + " -c \"" + configPath + "\" -f \"" + inputPath + "\" -o \"" + outputPath + "\" -l \"" + lang + "\""
     else
 
