@@ -17,6 +17,7 @@ beautifyLESS = null
 beautifyCoffeeScript = null
 uncrustifyBeautifier = null
 beautifyHTMLERB = null
+beautifyMarkdown = null
 
 # Misc
 Analytics = require("analytics-node")
@@ -40,6 +41,7 @@ module.exports =
     "c"
     "cpp"
     "cs"
+    "markdown"
     "objectivec"
     "java"
     "d"
@@ -86,6 +88,9 @@ module.exports =
     sql_keywords: "upper"
     sql_identifiers: "lower"
     sql_sqlformat_path: ""
+    
+    # Markdown
+    markdown_pandoc_path: ""
 
     # PHP
     php_beautifier_path: ""
@@ -179,6 +184,9 @@ module.exports =
       when "Ruby"
         beautifyRuby ?= require("./langs/ruby-beautify")
         beautifyRuby text, self.getOptions("ruby", allOptions), beautifyCompleted
+      when "GitHub Markdown"
+        beautifyMarkdown ?= require("./langs/markdown-beautify")
+        beautifyMarkdown text, self.getOptions("markdown", allOptions), beautifyCompleted
       when "C"
         options = self.getOptions("c", allOptions)
         options.languageOverride = "C"
@@ -273,7 +281,7 @@ module.exports =
         # console.log(selection, currOptions[selection]);
         _.merge collectedConfig, currOptions[selection]
       extend result, collectedConfig
-    , {})
+    , {} )
     # TODO: Clean.
     # There is a bug in nopt
     # See https://github.com/npm/nopt/issues/38#issuecomment-45971505

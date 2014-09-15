@@ -191,6 +191,11 @@ and that you set the `Python autopep8 path` in the package settings.
 
 Run `which autopep8` in your Terminal.
 
+### Markdown
+
+To use with Markdown we require [pandoc](http://johnmacfarlane.net/pandoc/)
+and you set the `Markdown Pandoc path` in the package settings.
+
 
 ## Contributing
 
