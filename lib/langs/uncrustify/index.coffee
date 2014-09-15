@@ -7,7 +7,7 @@ getCmd = (inputPath, outputPath, options, cb) ->
   done = (configPath) ->
 
     # console.log(configPath);
-    if path
+    if pathToCommand
 
       # Use absolute path
       cmd = pathToCommand + " -c \"" + configPath + "\" -f \"" + inputPath + "\" -o \"" + outputPath + "\" -l \"" + lang + "\""
@@ -15,12 +15,12 @@ getCmd = (inputPath, outputPath, options, cb) ->
 
       # Use command available in $PATH
       cmd = "uncrustify -c \"" + configPath + "\" -f \"" + inputPath + "\" -o \"" + outputPath + "\" -l \"" + lang + "\""
-    console.log(cmd);
+    # console.log(cmd);
     cb cmd
   configPath = options.configPath
   lang = options.languageOverride or "C"
   pathToCommand = atom.config.get("atom-beautify.uncrustifyPath")
-  console.log(pathToCommand)
+  # console.log(pathToCommand)
   unless configPath
 
     # No custom config path
