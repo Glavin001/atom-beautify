@@ -1,3 +1,6 @@
+# v0.11.1 (2014-08-16)
+-[Closes #96. Update Pretty-Diff dependency to ^1.2.4](https://github.com/Glavin001/atom-beautify/commit/80e1c03885688b6615e142dc347b4c7e10d27694)
+
 # v0.11.0 (2014-08-15)
 - [Closes #91. Add configuration option for custom Uncrustify path](https://github.com/Glavin001/atom-beautify/commit/fefb25bf380c846222ec9f288c869d4765e03b2a)
 
