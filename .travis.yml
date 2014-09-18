@@ -12,3 +12,4 @@ before_install:
   - gem install ruby-beautify --verbose
   - brew install python
   - pip install --upgrade autopep8
+  - cabal install pandoc

@@ -17,29 +17,23 @@
     "email": "glavin.wiechert@gmail.com",
     "url": "https://github.com/Glavin001"
   },
-  "contributors": [
-    {
-      "name": "Donald Pipowitch",
-      "email": "pipo@senaeh.de",
-      "url": "https://github.com/donaldpipowitch"
-    },
-    {
-      "name": "László Károlyi",
-      "url": "https://github.com/karolyi"
-    },
-    {
-      "name": "Marco Tanzi",
-      "url": "https://github.com/mtanzi"
-    },
-    {
-      "name": "gvn lazar suntop",
-      "url": "https://github.com/gvn"
-    },
-    {
-      "name": "Vadim K.",
-      "url": "https://github.com/vadirn"
-    }
-  ],
+  "contributors": [{
+    "name": "Donald Pipowitch",
+    "email": "pipo@senaeh.de",
+    "url": "https://github.com/donaldpipowitch"
+  }, {
+    "name": "László Károlyi",
+    "url": "https://github.com/karolyi"
+  }, {
+    "name": "Marco Tanzi",
+    "url": "https://github.com/mtanzi"
+  }, {
+    "name": "gvn lazar suntop",
+    "url": "https://github.com/gvn"
+  }, {
+    "name": "Vadim K.",
+    "url": "https://github.com/vadirn"
+  }],
   "keywords": [
     "atom",
     "beautify",
@@ -58,6 +52,7 @@
     "scss",
     "less",
     "sql",
+    "markdown",
     "php",
     "python",
     "ruby",
