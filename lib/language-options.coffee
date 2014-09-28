@@ -88,7 +88,7 @@ module.exports =
     sql_keywords: "upper"
     sql_identifiers: "lower"
     sql_sqlformat_path: ""
-    
+
     # Markdown
     markdown_pandoc_path: ""
 
@@ -252,7 +252,10 @@ module.exports =
           category: version
     #
     if unsupportedGrammar
-      throw new Error("Unsupported language for grammar '#{grammar}'.")
+      if atom.config.get("atom-beautify.muteUnsupportedLanguageErrors")
+        return beautifyCompleted(null)
+      else
+        throw new Error("Unsupported language for grammar '#{grammar}'.")
     return
 
   getOptions: (selection, allOptions) ->

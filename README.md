@@ -85,10 +85,23 @@ For example:
 
 ### Package Options
 
-- `beautifyOnSave`  
+- `beautifyOnSave`  (Default *false*)
 You can also choose to beautify on every file save.
 
-- `analytics`  
+- `beautifyEntireFileOnSave` (Default *true*)
+Beautification will normally only beautify your selected text.
+However, when beautification occurs on save then it will
+be forced to beautify the entire file's contents,
+not just selected text.
+
+- `muteUnsupportedLanguageErrors` (Default *false*)
+Mute only *unsupported language* errors.
+
+- `muteAllErrors` (Default *false*)
+Do not show the *Atom Beautify Error Messages* panel
+for any of the errors occurring while beautifying.
+
+- `analytics`  (Default *true*)
 There is [Segment.io](https://segment.io/),
 which forwards the data to [Google Analytics](http://www.google.com/analytics/),
 to track what languages
