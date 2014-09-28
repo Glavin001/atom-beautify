@@ -7,11 +7,9 @@ getCmd = (inputPath, outputPath, options) ->
   # jshint ignore: line
   optionsStr = "--max-line-length " + options.max_line_length + " --indent-size " + options.indent_size + " --ignore " + options.ignore.join(",") # jshint ignore: line
   if path
-
     # Use absolute path
-    "python \"" + path + "\" \"" + inputPath + "\" " + optionsStr
+    "#{path} \"#{inputPath}\" #{optionsStr}"
   else
-
     # Use command available in $PATH
     "autopep8 \"" + inputPath + "\" " + optionsStr
 "use strict"
