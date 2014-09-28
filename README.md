@@ -1,6 +1,8 @@
 # [atom-beautify](https://github.com/donaldpipowitch/atom-beautify)
 
 [![Gitter chat](https://badges.gitter.im/Glavin001/atom-beautify.png)](https://gitter.im/Glavin001/atom-beautify)
+[![Issue Stats](http://issuestats.com/github/glavin001/atom-beautify/badge/pr?style=flat)](http://issuestats.com/github/glavin001/atom-beautify)
+[![Issue Stats](http://issuestats.com/github/glavin001/atom-beautify/badge/issue?style=flat)](http://issuestats.com/github/glavin001/atom-beautify)
 
 > [Beautify](https://github.com/einars/js-beautify)
 HTML (including [Handlebars](http://handlebarsjs.com/)),
