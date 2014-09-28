@@ -1,5 +1,7 @@
-# v0.13.0 (2014-09-28)
+# v0.13.1 (2014-09-28)
+- [Fixes #102. Fix error when beautifying Python using custom autopep8 path](https://github.com/Glavin001/atom-beautify/commit/7e828be19961bd29bf0615f9b0ca71b608191a94)
 
+# v0.13.0 (2014-09-28)
 - [Closes #105. Add options to mute errors.](https://github.com/Glavin001/atom-beautify/commit/79fcdd9111fffc883305cb1b00b2f23806192952)
 
 >New package options:
