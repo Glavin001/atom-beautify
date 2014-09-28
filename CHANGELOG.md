@@ -1,28 +1,36 @@
-# v0.12.0 (2014-08-18)
+# v0.13.0 (2014-09-28)
+
+- [Closes #105. Add options to mute errors.](https://github.com/Glavin001/atom-beautify/commit/79fcdd9111fffc883305cb1b00b2f23806192952)
+
+>New package options:
+- muteUnsupportedLanguageErrors
+- muteAllErrors
+
+# v0.12.0 (2014-09-18)
 - [Closes #93. Implement normalizing markdown through pandoc](https://github.com/Glavin001/atom-beautify/commit/ad662271c14f3ff4440d933b2c1c0ce6caf5b53b)
 
-# v0.11.1 (2014-08-16)
+# v0.11.1 (2014-09-16)
 - [Closes #96. Update Pretty-Diff dependency to ^1.2.4](https://github.com/Glavin001/atom-beautify/commit/80e1c03885688b6615e142dc347b4c7e10d27694)
 
-# v0.11.0 (2014-08-15)
+# v0.11.0 (2014-09-15)
 - [Closes #91. Add configuration option for custom Uncrustify path](https://github.com/Glavin001/atom-beautify/commit/fefb25bf380c846222ec9f288c869d4765e03b2a)
 
-# v0.10.4 (2014-08-12)
+# v0.10.4 (2014-09-12)
 - [Fix support for editorconfig with indent style = 'tab'](https://github.com/Glavin001/atom-beautify/commit/7c56d84385e91798556ed534e1dfc4129a107d4b)
 
-# v0.10.3 (2014-08-10)
+# v0.10.3 (2014-09-10)
 - [Closes #84. Improve the error message panel to only appear on new error](https://github.com/Glavin001/atom-beautify/commit/31b217859e714767c5784f5613149304ddd4b9ad)
 
-# v0.10.2 (2014-08-10)
+# v0.10.2 (2014-09-10)
 - [Fixes #85. Add support for Windows for upwards recursive .jsbeautifyrc (see #37)](https://github.com/Glavin001/atom-beautify/commit/490cd7ee051926f3c143bc0b9873fa1bc7cd9828)
 
-# v0.10.1 (2014-08-10)
+# v0.10.1 (2014-09-10)
 - [Fixes #68. Fix error when beautifying file that is "untitled".](https://github.com/Glavin001/atom-beautify/commit/2cd3bef6e0d6493d85dd85796ad67e0305e7ffc9)
 
-# v0.10.0 (2014-08-09)
+# v0.10.0 (2014-09-09)
 - [Closes #68. Support editorconfig files.](https://github.com/Glavin001/atom-beautify/commit/baf3e49b97c5366829f021d843f3b6beb7d92a8c)
 
-# v0.9.0 (2014-08-09)
+# v0.9.0 (2014-09-09)
 - [Closes #37. Support upwards recursive .jsbeautifyrc fallback.](https://github.com/Glavin001/atom-beautify/commit/738deace29fbcc981e96599bd9cd55f4010e4106)
 
 >Priority hierarchy:
@@ -33,32 +41,32 @@
 - Project options (from closest .jsbeautifyrc file to the beautified
   editor's file to root, "/")
 
-# v0.8.1 (2014-08-09)
+# v0.8.1 (2014-09-09)
 - [Fixes #70. Update Pretty-Diff dep. from ^1.0.23 to ^1.2.1](https://github.com/Glavin001/atom-beautify/commit/c6a4101893a1ac91df58df02f033000bc36ea637)
 
-# v0.8.0 (2014-08-09)
+# v0.8.0 (2014-09-09)
 - [Closes #80. Add HTML Embedded Ruby (ERB) support.](https://github.com/Glavin001/atom-beautify/commit/6652e7f703575ed5666825d47cc05d6e48cb37cf)
 
-# v0.7.1 (2014-08-09)
+# v0.7.1 (2014-09-09)
 - [Fix typo from `.bash_rc` to `.bashrc` for cli-beautify](https://github.com/Glavin001/atom-beautify/commit/d595ea7479a89cad58200613c4893927428be034)
 
-# v0.7.1 (2014-08-09)
+# v0.7.1 (2014-09-09)
 - [Fixes #81. Beautify on Save now retains `this` scope when beautifying](https://github.com/Glavin001/atom-beautify/commit/516c35623888634a3ffcca845fed6b962749fbf2)
 
-# v0.7.0 (2014-08-08)
+# v0.7.0 (2014-09-08)
 - [See #77. Add example of broken SCSS case.](https://github.com/Glavin001/atom-beautify/commit/4f5c75c5e3a5a934a7c36094e60d15022df0e564)
 - [See #71. Add example JS file using reserved words to test #71](https://github.com/Glavin001/atom-beautify/commit/1130b58114cba90828aa2d37de42b800d15ae081)
 - [See #56. Work on MessageView UI.](https://github.com/Glavin001/atom-beautify/commit/05ee8f22b3b975a52d2fbbe998d4c49fbe9ae274)
 - [See #56. Add "Beautification in progress" view.](https://github.com/Glavin001/atom-beautify/commit/6b2b306b9daf6a1594cefd357ce0d9c8ce3f7155)
 - [See #56. Add Atom-Message-Panel to display Unsupported Language messages](https://github.com/Glavin001/atom-beautify/commit/ffa2249c3e87d217cc544a71e23e389f97d978d7)
 
-# v0.6.5 (2014-08-08)
+# v0.6.5 (2014-09-08)
 - [Fixes #76. Add package option "Beautify Entire File On Save"](https://github.com/Glavin001/atom-beautify/commit/528c7dc281bc85c4132ce0cadf3740c04c3cc6e8)
 - [Closes #78. Improve startup performance.](https://github.com/Glavin001/atom-beautify/commit/9c1965dec6233205639fd342daf20ab4b145ced6)
 - [See #61. Add LESS example with Mixins to test.](https://github.com/Glavin001/atom-beautify/commit/7dbff2cbc1959ca4630f44e9a6755807e34c0c85)
 - [See #56. Start implementing of Message View.](https://github.com/Glavin001/atom-beautify/commit/0804cade1f09a8436f69e572c7bd5f725742db41)
 
-# v0.6.4 (2014-08-04)
+# v0.6.4 (2014-09-04)
 - [Fixes #73. Prevent extra cursor appearing at end of file](https://github.com/Glavin001/atom-beautify/commit/e599387d2025ab53e4db009d597816e23783850d)
 
 # v0.6.3 (2014-08-30)
