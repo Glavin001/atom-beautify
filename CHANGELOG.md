@@ -1,3 +1,6 @@
+# v0.13.2 (2014-09-28)
+- [Fixes #96. Fix support for Alphasort option for LESS/SCSS properties](https://github.com/Glavin001/atom-beautify/commit/ccc8802f36fe15c4f29abffcd974cb0c7d1acdad)
+
 # v0.13.1 (2014-09-28)
 - [Fixes #102. Fix error when beautifying Python using custom autopep8 path](https://github.com/Glavin001/atom-beautify/commit/7e828be19961bd29bf0615f9b0ca71b608191a94)
 
