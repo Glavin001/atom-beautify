@@ -160,7 +160,10 @@ module.exports =
       when "Handlebars"
         # jshint ignore: start
         allOptions.push indent_handlebars: true # Force jsbeautify to indent_handlebars
-      # jshint ignore: end
+        # jshint ignore: end
+        beautifyHTML ?= require("js-beautify").html
+        text = beautifyHTML(text, self.getOptions("html", allOptions))
+        beautifyCompleted text
       when "HTML (Liquid)", "HTML", "XML"
         beautifyHTML ?= require("js-beautify").html
         text = beautifyHTML(text, self.getOptions("html", allOptions))
