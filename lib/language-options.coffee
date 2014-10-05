@@ -18,9 +18,12 @@ beautifyCoffeeScript = null
 uncrustifyBeautifier = null
 beautifyHTMLERB = null
 beautifyMarkdown = null
+Analytics = null
 
 # Misc
-Analytics = require("analytics-node")
+{allowUnsafeEval} = require 'loophole'
+allowUnsafeEval ->
+  Analytics = require("analytics-node")
 pkg = require("../package.json")
 
 # Analytics
