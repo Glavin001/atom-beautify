@@ -57,12 +57,12 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 - [x] [Vala](https://github.com/Glavin001/atom-beautify/issues/57)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [TypeScript](https://github.com/Glavin001/atom-beautify/issues/49)
 
 ### Road Map
 
 #### Language support
 
-- [ ] [TypeScript](https://github.com/Glavin001/atom-beautify/issues/49)
 - [ ] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
 
 
