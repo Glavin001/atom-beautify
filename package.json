@@ -3,7 +3,7 @@
   "main": "./lib/beautify",
   "version": "0.13.4",
   "private": true,
-  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, and SQL in Atom",
+  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
   "repository": {
     "type": "git",
     "url": "https://github.com/Glavin001/atom-beautify"
@@ -63,6 +63,7 @@
     "python",
     "ruby",
     "coffeescript",
+    "typescript",
     "c",
     "c++",
     "cpp",
@@ -94,6 +95,7 @@
     "coffee-formatter": "git+https://github.com/Glavin001/Coffee-Formatter.git",
     "atom-message-panel": "^1.1.1",
     "editorconfig": "^0.11.4",
-    "loophole": "^1.0.0"
+    "loophole": "^1.0.0",
+    "typescript-formatter": "~0.1.4"
   }
 }
