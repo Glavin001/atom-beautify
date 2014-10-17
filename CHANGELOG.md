@@ -1,3 +1,12 @@
+# v0.14.0 (2014-10-16)
+- [Closes #49. Add TypeScript support](https://github.com/Glavin001/atom-beautify/commit/dcc9e2d3b58767578006ffacaca198da69fa3832)
+
+# v0.13.4 (2014-10-05)
+- [Fixes #110. Fixes Handlebars missing beautification](https://github.com/Glavin001/atom-beautify/commit/120315f90d5a0bbdade2728472926f965150e7c1)
+
+# v0.13.3 (2014-10-05)
+- [Resolve Unsafe-Eval error for Atom >=0.128.0](https://github.com/Glavin001/atom-beautify/commit/fbc58a648d3ccd845548d556f3dd1e046075bf04)
+
 # v0.13.2 (2014-09-28)
 - [Fixes #96. Fix support for Alphasort option for LESS/SCSS properties](https://github.com/Glavin001/atom-beautify/commit/ccc8802f36fe15c4f29abffcd974cb0c7d1acdad)
 
