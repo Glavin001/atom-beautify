@@ -9,7 +9,7 @@ languages = beautifier.languages
 defaultLanguageOptions = beautifier.defaultLanguageOptions
 # Lazy loaded dependencies
 fs = null
-path = null
+path = require("path")
 strip = null
 yaml = null
 LoadingView = null
@@ -310,7 +310,7 @@ handleSaveEvent = =>
     return
   return
 
-Subscriber = require("emissary").Subscriber
+{Subscriber} = require path.join(atom.packages.resourcePath, 'node_modules', 'emissary')
 Subscriber.extend plugin
 plugin.configDefaults = _.merge(
   analytics: true
