@@ -1,7 +1,10 @@
-# v0.15.0 (2014-10-16)
+# v0.15.1 (2014-10-26)
+- [Fixes #103. BeautifyEntireFileOnSave only applies when saving](https://github.com/Glavin001/atom-beautify/commit/dda313fbfe47f9d273e06e8e380f2e4c311c1b84)
+
+# v0.15.0 (2014-10-26)
 - [Closes #123. Add Mustache support.](https://github.com/Glavin001/atom-beautify/commit/ecbbbaec2942ed95461e2c103d23bd3665edab2e)
 
-# v0.14.1 (2014-10-16)
+# v0.14.1 (2014-10-21)
 - [Closes #127. Increase startup time by using ActivationEvents](https://github.com/Glavin001/atom-beautify/commit/c0ee2bed96499ac71ea1266ccb227e9b3581c935)
 
 # v0.14.0 (2014-10-16)
