@@ -23,6 +23,7 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] JavaScript and JSON
 - [x] HTML, including
   - [x] [Handlebars](http://handlebarsjs.com/)
+  - [x] [Mustache](http://mustache.github.io)
   - [x] [Embedded Ruby (ERB)](https://github.com/Glavin001/atom-beautify/issues/80)
     - Requires [htmlbeautifier](https://github.com/threedaymonk/htmlbeautifier)
   - [x] XML

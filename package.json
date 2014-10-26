@@ -49,6 +49,7 @@
     "pretty",
     "html",
     "handlebars",
+    "mustache",
     "xml",
     "css",
     "javascript",

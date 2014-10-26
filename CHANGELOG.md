@@ -1,3 +1,9 @@
+# v0.15.0 (2014-10-16)
+- [Closes #123. Add Mustache support.](https://github.com/Glavin001/atom-beautify/commit/ecbbbaec2942ed95461e2c103d23bd3665edab2e)
+
+# v0.14.1 (2014-10-16)
+- [Closes #127. Increase startup time by using ActivationEvents](https://github.com/Glavin001/atom-beautify/commit/c0ee2bed96499ac71ea1266ccb227e9b3581c935)
+
 # v0.14.0 (2014-10-16)
 - [Closes #49. Add TypeScript support](https://github.com/Glavin001/atom-beautify/commit/dcc9e2d3b58767578006ffacaca198da69fa3832)
 
