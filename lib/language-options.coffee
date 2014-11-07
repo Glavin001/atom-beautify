@@ -170,7 +170,7 @@ module.exports =
         beautifyHTML ?= require("js-beautify").html
         text = beautifyHTML(text, self.getOptions("html", allOptions))
         beautifyCompleted text
-      when "HTML (Ruby - ERB)"
+      when "HTML (Ruby - ERB)", "HTML (Rails)"
         beautifyHTMLERB ?= require("./langs/html-erb-beautify")
         beautifyHTMLERB text, self.getOptions("html", allOptions), beautifyCompleted
       when "CSS"
@@ -189,7 +189,7 @@ module.exports =
       when "Python"
         beautifyPython ?= require("./langs/python-beautify")
         beautifyPython text, self.getOptions("python", allOptions), beautifyCompleted
-      when "Ruby"
+      when "Ruby", "Ruby on Rails"
         beautifyRuby ?= require("./langs/ruby-beautify")
         beautifyRuby text, self.getOptions("ruby", allOptions), beautifyCompleted
       when "GitHub Markdown"
