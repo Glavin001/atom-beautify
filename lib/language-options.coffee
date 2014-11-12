@@ -10,6 +10,7 @@ beautifyJS = null
 beautifyHTML = null
 beautifyCSS = null
 beautifySQL = null
+beautifyPerl = null
 beautifyPHP = null
 beautifyPython = null
 beautifyRuby = null
@@ -38,6 +39,7 @@ module.exports =
     "html"
     "css"
     "sql"
+    "perl"
     "php"
     "python"
     "ruby"
@@ -96,6 +98,10 @@ module.exports =
 
     # Markdown
     markdown_pandoc_path: ""
+
+    # Perl
+    perl_perltidy_path: "perltidy"
+    perl_perltidy_profile: ""
 
     # PHP
     php_beautifier_path: ""
@@ -183,6 +189,9 @@ module.exports =
       when "SQL (Rails)", "SQL"
         beautifySQL ?= require("./langs/sql-beautify")
         beautifySQL text, self.getOptions("sql", allOptions), beautifyCompleted
+      when "Perl"
+        beautifyPerl ?= require("./langs/perl-beautify")
+        beautifyPerl text, self.getOptions("perl", allOptions), beautifyCompleted
       when "PHP"
         beautifyPHP ?= require("./langs/php-beautify")
         beautifyPHP text, self.getOptions("php", allOptions), beautifyCompleted
