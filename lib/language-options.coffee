@@ -155,6 +155,8 @@ module.exports =
     # Beautify!
     unsupportedGrammar = false
     options = undefined
+    if atom.config.get("atom-beautify.disabledLanguages").indexOf(grammar) > - 1
+      return
     switch grammar
       # Treat JSON as JavaScript, because it will support comments.
       # And Glavin001 has tested JSON beauifying with beautifyJS.
