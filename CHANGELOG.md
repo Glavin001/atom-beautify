@@ -1,3 +1,7 @@
+# v0.16.0 (2014-11-16)
+- [Fixes #140. Update js-beautify dependency to 1.5.4.](https://github.com/Glavin001/atom-beautify/commit/428ebe44f9d542f5082807b2fbdabf7282160ec7)
+- [Perl support (using perltidy) (see Glavin001/atom-beautify#33)](https://github.com/Glavin001/atom-beautify/commit/f64d2bae2012e004f7e3b5bb6bc6ffdc1d59fded)
+
 # v0.15.1 (2014-10-26)
 - [Fixes #103. BeautifyEntireFileOnSave only applies when saving](https://github.com/Glavin001/atom-beautify/commit/dda313fbfe47f9d273e06e8e380f2e4c311c1b84)
 
