@@ -93,6 +93,11 @@ However, when beautification occurs on save then it will
 be forced to beautify the entire file's contents,
 not just selected text.
 
+- `disabledLanguages` (Default *empty array*)
+An array of Grammar names to disable beautification for.
+Note: If using the Atom's Package Settings then an array is
+represented as comma-separated string.
+
 - `muteUnsupportedLanguageErrors` (Default *false*)
 Mute only *unsupported language* errors.
 
