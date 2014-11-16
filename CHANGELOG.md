@@ -1,3 +1,7 @@
+# v0.17.0 (2014-11-16)
+- [Add support for HTML (Rails) and Ruby on Rails grammar](https://github.com/Glavin001/atom-beautify/commit/ba7d9ce799b4284a77dd22fc4139d01fdee08b18)
+- [disable beautification of specific languages](https://github.com/Glavin001/atom-beautify/commit/f0ed7ac5ad5e54d8f653fd8aba23aaf53ed42fc6)
+
 # v0.16.0 (2014-11-16)
 - [Fixes #140. Update js-beautify dependency to 1.5.4.](https://github.com/Glavin001/atom-beautify/commit/428ebe44f9d542f5082807b2fbdabf7282160ec7)
 - [Perl support (using perltidy) (see Glavin001/atom-beautify#33)](https://github.com/Glavin001/atom-beautify/commit/f64d2bae2012e004f7e3b5bb6bc6ffdc1d59fded)
