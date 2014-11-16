@@ -34,6 +34,7 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
   - Requires [python-sqlparse](https://github.com/andialbrecht/sqlparse)
 - [x] [Markdown](https://github.com/Glavin001/atom-beautify/issues/93#issuecomment-55642483)
   - Requires [Pandoc](http://johnmacfarlane.net/pandoc/) to be already installed
+- [X] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
 - [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
   - Requires [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier) to be already installed.
 - [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
@@ -59,13 +60,6 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] [Vala](https://github.com/Glavin001/atom-beautify/issues/57)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 - [x] [TypeScript](https://github.com/Glavin001/atom-beautify/issues/49)
-
-### Road Map
-
-#### Language support
-
-- [ ] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
-
 
 ## Usage
 
