@@ -318,6 +318,7 @@ plugin.configDefaults = _.merge(
   beautifyEntireFileOnSave: true
   muteUnsupportedLanguageErrors: false
   muteAllErrors: false
+  disabledLanguages: []
 , defaultLanguageOptions)
 plugin.activate = ->
   handleSaveEvent()
