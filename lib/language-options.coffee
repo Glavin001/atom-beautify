@@ -105,6 +105,8 @@ module.exports =
 
     # PHP
     php_beautifier_path: ""
+    php_filters: ""
+    php_directory_filters: ""
 
     # Python
     python_autopep8_path: ""
