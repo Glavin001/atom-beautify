@@ -41,7 +41,7 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
   - Requires [autopep8](https://github.com/hhatto/autopep8) to be already installed.
   - Beautifies to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
 - [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
-  - Requires [RBeautify](https://github.com/erniebrodeur/ruby-beautify)
+  - Requires [Ruby Beautify](https://github.com/erniebrodeur/ruby-beautify)
 - [x] [CoffeeScript](https://github.com/donaldpipowitch/atom-beautify/issues/31)
 - [x] [Java](https://github.com/Glavin001/atom-beautify/issues/45)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
