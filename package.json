@@ -93,7 +93,7 @@
     "prettydiff": "^1.2.4",
     "node-uuid": "^1.4.1",
     "analytics-node": "^1.0.2",
-    "coffee-formatter": "git+https://github.com/Glavin001/Coffee-Formatter.git",
+    "coffee-formatter": "^0.1.0",
     "atom-message-panel": "^1.1.1",
     "editorconfig": "^0.11.4",
     "loophole": "^1.0.0",
