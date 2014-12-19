@@ -105,7 +105,7 @@ findConfig = (config, file, upwards=true) ->
   return home if verifyExists(home)
   null
 getConfigOptionsFromSettings = (langs) ->
-  config = atom.config.getSettings()["atom-beautify"]
+  config = atom.config.get('atom-beautify')
   options = {}
   # console.log(langs, config);
   # Iterate over keys of the settings
