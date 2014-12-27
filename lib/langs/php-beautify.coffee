@@ -6,12 +6,19 @@ getCmd = (inputPath, outputPath, options) ->
   filters = options.filters
   directoryFilters = options.directory_filters # jshint ignore: line
 
+  cmd = "--input \"#{inputPath}\" --output \"#{outputPath}\""
+
+  if filters
+    cmd += " --filters \"#{filters}\""
+  if directoryFilters
+    cmd += " --directory_filters \"#{directoryFilters}\""
+
   if phpBeautifierPath
     # Use absolute path
-    "php \"#{phpBeautifierPath}\" --input \"#{inputPath}\" --output \"#{outputPath}\" --filters \"#{filters}\" --directory_filters \"#{directoryFilters}\""
+    "php \"#{phpBeautifierPath}\" #{cmd}"
   else
     # Use command available in $PATH
-    "php_beautifier --input \"#{inputPath}\" --output \"#{outputPath}\" --filters \"#{filters}\" --directory_filters \"#{directoryFilters}\""
+    "php_beautifier #{cmd}"
 
 "use strict"
 cliBeautify = require("./cli-beautify")
