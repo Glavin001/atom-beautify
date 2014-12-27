@@ -1,3 +1,13 @@
+# v0.17.3 (2014-12-27)
+- [Fixes #148. Fix PHP for when filters are not set.](https://github.com/Glavin001/atom-beautify/commit/9b38dc3badb062ba8212c126b13d6965a8ce9276)
+- [Get Atom User settings instead of only default settings](https://github.com/Glavin001/atom-beautify/commit/3499c111200cb2e7f6374622f7bb86c91c7820c1)
+
+# v0.17.2 (2014-12-14)
+- [Fixes #135. Switch from Git to npm Coffee-Formatter dependency.](https://github.com/Glavin001/atom-beautify/commit/ff4a5a3a716a642b9c426a3b41f76094a372132e)
+
+# v0.17.1 (2014-11-19)
+- [Closes #107. Add PHP options for filters and directory_filters](https://github.com/Glavin001/atom-beautify/commit/c6c6d95a3e62e7453d732f2bab7619464bc5b875)
+
 # v0.17.0 (2014-11-16)
 - [Add support for HTML (Rails) and Ruby on Rails grammar](https://github.com/Glavin001/atom-beautify/commit/ba7d9ce799b4284a77dd22fc4139d01fdee08b18)
 - [disable beautification of specific languages](https://github.com/Glavin001/atom-beautify/commit/f0ed7ac5ad5e54d8f653fd8aba23aaf53ed42fc6)
