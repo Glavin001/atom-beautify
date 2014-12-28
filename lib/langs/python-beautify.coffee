@@ -5,13 +5,19 @@ getCmd = (inputPath, outputPath, options) ->
   path = options.autopep8_path # jshint ignore: line
   # jshint ignore: line
   # jshint ignore: line
-  optionsStr = "--max-line-length " + options.max_line_length + " --indent-size " + options.indent_size + " --ignore " + options.ignore.join(",") # jshint ignore: line
+  optionsStr = ""
+  if options.max_line_length?
+    optionsStr += "--max-line-length #{options.max_line_length}"
+  if options.indent_size?
+    optionsStr += " --indent-size #{options.indent_size}"
+  if options.ignore?
+    optionsStr += " --ignore " + options.ignore.join(",") # jshint ignore: line
   if path
     # Use absolute path
     "#{path} \"#{inputPath}\" #{optionsStr}"
   else
     # Use command available in $PATH
-    "autopep8 \"" + inputPath + "\" " + optionsStr
+    "autopep8 \"#{inputPath}\" #{optionsStr}"
 "use strict"
 cliBeautify = require("./cli-beautify")
 isStdout = true
