@@ -20,4 +20,5 @@ before_install:
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
   # PHP
-  - pear install PHP_Beautifier-beta
+#  - pear install PHP_Beautifier-beta
+
