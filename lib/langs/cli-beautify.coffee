@@ -29,7 +29,8 @@ module.exports = (getCmd, isStdout) ->
 
               # Process the command
               processCmd = (cmd) ->
-                if cmd
+                if typeof cmd is "string"
+
                   config = env: process.env
                   isWin = /^win/.test(process.platform)
                   unless isWin
@@ -68,20 +69,32 @@ module.exports = (getCmd, isStdout) ->
                           return
 
                     else
-                      console.log "Beautifcation Error: ", err
+                      console.error "Beautifcation Error: ", err
                       callback err
                       deleteOutputFile()
                     return
 
+                # Check if there's an error
+                else if cmd instanceof Error
+                  return callback(cmd)
                 else
-                  console.log "Beautify CLI command not valid."
-                  callback(new Error("Beautify CLI command not valid."))
-                return
+                  console.error "CLI Beautifier command not valid."
+                  return callback(new Error("CLI Beautifier command not valid."+
+                    " Invalid command '#{cmd}'."))
 
 
               # Get the command
-              cmd = getCmd(info.path, outputPath, options, processCmd) # jshint ignore: line
-              processCmd cmd  if typeof cmd is "string"
+              try
+                cmd = getCmd(info.path, outputPath, options, processCmd) # jshint ignore: line
+              catch e
+                return callback(e)
+
+              if typeof cmd is "string"
+                processCmd cmd
+              # Check if there's an error
+              else if cmd instanceof Error
+                return callback(cmd)
+
             return
 
           return
