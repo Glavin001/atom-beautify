@@ -4,6 +4,7 @@ languages = beautifier.languages
 defaultLanguageOptions = beautifier.defaultLanguageOptions
 fs = require "fs"
 path = require "path"
+options = require "../lib/options"
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -31,15 +32,15 @@ describe "BeautifyLanguages", ->
 
   ###
   Directory structure:
-  - examples
-    - config1
-      - lang1
-        - original
-          - 1-test.ext
-        - expected
-          - 1-test.ext
-      - lang2
-    - config2
+   - examples
+     - config1
+       - lang1
+         - original
+           - 1 - test.ext
+         - expected
+           - 1 - test.ext
+       - lang2
+     - config2
   ###
 
   # All Configurations
@@ -84,8 +85,12 @@ describe "BeautifyLanguages", ->
                     do (testFileName) ->
                       ext = path.extname(testFileName)
                       testName = path.basename(testFileName, ext)
+                      # If prefixed with underscore (_) then this is a hidden test
+                      if testFileName[0] is '_'
+                        # Do not show this test
+                        return
                       # Confirm this is a test
-                      it "#{testName}", ->
+                      it "#{testName} #{testFileName}", ->
 
                         # Generate paths to test files
                         originalTestPath = path.resolve(originalDir, testFileName)
@@ -95,7 +100,7 @@ describe "BeautifyLanguages", ->
                         # Check if there is a matching expected test resut
                         if not fs.existsSync(expectedTestPath)
                           throw new Error("No matching expected test result found for '#{testName}' " +
-                                       "at '#{expectedTestPath}'. Creating it from original.")
+                                       "at '#{expectedTestPath}'.")
                           # err = fs.writeFileSync(expectedTestPath, originalContents)
                           # throw err if err
                         # Get contents of expected test file
@@ -106,18 +111,15 @@ describe "BeautifyLanguages", ->
                         # expect(grammar).toEqual("test")
                         grammarName = grammar.name
 
-                        editorOptions =
-                          indent_size: 4
-                          indent_char: " "
-                          indent_with_tabs: false
-
-                        allOptions = [editorOptions]
+                        allOptions = options.getOptionsForPath(originalTestPath)
 
                         beautifyCompleted = false
                         completionFun = (text) ->
                           if text instanceof Error
                             return beautifyCompleted = text # text == Error
                           expect(typeof text).toEqual "string"
+                          if text isnt expectedContents
+                            console.warn(allOptions, text, expectedContents)
                           expect(text).toEqual expectedContents
                           beautifyCompleted = true
 
