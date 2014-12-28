@@ -6,6 +6,10 @@
 
 getCmd = (inputPath, outputPath, options) ->
   # console.debug "[perl-beautify] options: " + JSON.stringify(options)
+  if not options.perltidy_path?
+    return new Error("'Perl Perltidy Path' not set!" +
+      " Please set this in the Atom Beautify package settings.")
+
   args = [
     '"' + options.perltidy_path + '"'
     '--standard-output'
