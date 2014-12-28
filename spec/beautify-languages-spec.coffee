@@ -111,6 +111,7 @@ describe "BeautifyLanguages", ->
                         # expect(grammar).toEqual("test")
                         grammarName = grammar.name
 
+                        # Get the options
                         allOptions = options.getOptionsForPath(originalTestPath)
 
                         beautifyCompleted = false

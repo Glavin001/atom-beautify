@@ -73,8 +73,8 @@ module.exports =
     return proj if proj
     return home if @verifyExists(home)
     null
-  getConfigOptionsFromSettings: (langs) ->
-    config = atom.config.get('atom-beautify')
+  getConfigOptionsFromSettings: (langs, config) ->
+    config ?= atom.config.get('atom-beautify')
     options = {}
     # console.log(langs, config);
     # Iterate over keys of the settings
@@ -140,9 +140,12 @@ module.exports =
         indent_size: (if softTabs then tabLength else 1)
         indent_char: (if softTabs then " " else "\t")
         indent_with_tabs: not softTabs
-
-    # From Package Settings
-    configOptions = @getConfigOptionsFromSettings(languages)
+      # From Package Settings
+      configOptions = @getConfigOptionsFromSettings(languages)
+    else
+      # Without editor
+      # Use default options for Atom editor
+      configOptions = @getConfigOptionsFromSettings(languages, defaultLanguageOptions)
 
     # Get configuration in User's Home directory
     userHome = @getUserHome()
