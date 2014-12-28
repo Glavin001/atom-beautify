@@ -20,26 +20,26 @@ echo "Downloading package dependencies..."
 atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm update
 
 echo "Download package Atom dependencies..."
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-c
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-coffee-script
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-css
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-html
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-java
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-javascript
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-json
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-less
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-mustache
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-objective-c
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-perl
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-php
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-python
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-ruby
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-sass
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-sql
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-c
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-coffee-script
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-css
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-html
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-java
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-javascript
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-json
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-less
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-mustache
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-objective-c
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-perl
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-php
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-python
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-ruby
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-sass
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-sql
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-xml
+# atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-gfm
 atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-typescript
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-xml
 atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-csharp
-atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm install language-gfm
 
 echo "Running specs..."
 ATOM_PATH=./atom atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm test --path atom/Atom.app/Contents/Resources/app/atom.sh
