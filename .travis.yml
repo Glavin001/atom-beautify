@@ -5,7 +5,7 @@ notifications:
     on_success: never
     on_failure: change
 
-script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+script: sh build-package.sh
 
 before_install:
   # Update Homebrew
@@ -21,25 +21,3 @@ before_install:
   - brew install uncrustify
   # PHP
 #  - pear install PHP_Beautifier-beta
-
-  # Atom dependencies
-  - apm install language-c
-  - apm install language-coffee-script
-  - apm install language-css
-  - apm install language-html
-  - apm install language-java
-  - apm install language-javascript
-  - apm install language-json
-  - apm install language-less
-  - apm install language-mustache
-  - apm install language-objective-c
-  - apm install language-perl
-  - apm install language-php
-  - apm install language-python
-  - apm install language-ruby
-  - apm install language-sass
-  - apm install language-sql
-  - apm install language-typescript
-  - apm install language-xml
-  - apm install language-csharp
-  - apm install language-gfm
