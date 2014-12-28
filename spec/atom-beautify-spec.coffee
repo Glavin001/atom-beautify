@@ -1,4 +1,4 @@
-AtomBeautify = require '../lib/atom-beautify'
+Beautify = require '../lib/beautify'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
