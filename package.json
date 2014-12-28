@@ -101,6 +101,7 @@
     "typescript-formatter": "~0.1.4"
   },
   "activationEvents": [
+    "beautify",
     "beautify:editor",
     "beautify:file",
     "core:save",

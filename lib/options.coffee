@@ -115,13 +115,13 @@ module.exports =
           strip ?= require("strip-json-comments")
           externalOptions = JSON.parse(strip(contents))
         catch e
-          console.log "Failed parsing config as JSON: " + configPath
+          # console.log "Failed parsing config as JSON: " + configPath
           # Attempt as YAML
           try
             yaml ?= require("js-yaml")
             externalOptions = yaml.safeLoad(contents)
           catch e
-            console.log "Failed parsing config as YAML: " + configPath
+            console.log "Failed parsing config as YAML and JSON: " + configPath
             externalOptions = {}
     else
       externalOptions = {}

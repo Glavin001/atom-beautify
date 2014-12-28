@@ -29,3 +29,5 @@ before_install:
   - brew install uncrustify
   # PHP
 #  - pear install PHP_Beautifier-beta
+  # CoffeeScript
+  - npm install coffee-formatter

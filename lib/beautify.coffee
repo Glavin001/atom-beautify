@@ -364,5 +364,6 @@ plugin.configDefaults = _.merge(
 plugin.activate = ->
   handleSaveEvent()
   plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
+  atom.workspaceView.command "beautify", beautify
   atom.workspaceView.command "beautify:editor", beautify
   atom.workspaceView.command "beautify:file", beautifyFile
