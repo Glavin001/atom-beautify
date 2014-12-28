@@ -16,7 +16,7 @@ before_install:
   - brew install python
   - pip install --upgrade autopep8
   # Markdown language support
-#  - cabal install pandoc
+  - brew install pandoc
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
   # PHP
