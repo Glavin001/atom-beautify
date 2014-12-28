@@ -7,6 +7,7 @@ _ = require("lodash")
 beautifier = require("./language-options")
 languages = beautifier.languages
 defaultLanguageOptions = beautifier.defaultLanguageOptions
+options = require "./options"
 # Lazy loaded dependencies
 fs = null
 path = require("path")
@@ -16,6 +17,8 @@ LoadingView = null
 MessagePanelView = null
 PlainMessageView = null
 editorconfig = null
+$ = null
+
 #MessageView = require "./message-view"
 findFileResults = {}
 
@@ -300,6 +303,44 @@ beautify = ({onSave})->
     showError(e)
   return
 
+beautifyFile = (event)->
+  # console.log('beautifyFile', arguments)
+  entry = event.target
+  # console.log('entry', entry)
+  return unless entry
+  $ ?= (require "space-pen").$
+  $entry = $(entry)
+  if $entry.prop("tagName") is "LI"
+    $entry = $("span.name", $entry)
+  # console.log($entry)
+  filePath = $entry.data('path')
+  # console.log('filePath', filePath)
+  # Get contents of file
+  fs ?= require "fs"
+  fs.readFile(filePath, (err, data) ->
+    throw error if err
+    input = data?.toString()
+    grammar = atom.grammars.selectGrammar(filePath, input)
+    grammarName = grammar.name
+    # Get the options
+    allOptions = options.getOptionsForPath(filePath)
+    # Beautify File
+    completionFun = (output) ->
+      if output instanceof Error
+        throw output # output == Error
+      else if typeof output is "string"
+        fs.writeFile(filePath, output, (err) ->
+            throw err if err
+        )
+      else
+        console.log(output)
+    try
+      beautifier.beautify input, grammarName, allOptions, completionFun
+    catch e
+      console.error(e)
+
+  )
+
 handleSaveEvent = =>
   atom.workspace.eachEditor (editor) =>
     buffer = editor.getBuffer()
@@ -323,4 +364,5 @@ plugin.configDefaults = _.merge(
 plugin.activate = ->
   handleSaveEvent()
   plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
-  atom.workspaceView.command "beautify", beautify
+  atom.workspaceView.command "beautify:editor", beautify
+  atom.workspaceView.command "beautify:file", beautifyFile

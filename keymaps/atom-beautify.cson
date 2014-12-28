@@ -8,4 +8,4 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
 '.workspace .editor:not(.mini)':
-  'ctrl-alt-b': 'beautify'
+  'ctrl-alt-b': 'beautify:editor'
