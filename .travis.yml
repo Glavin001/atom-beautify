@@ -8,8 +8,16 @@ notifications:
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
 
 before_install:
+  # Update Homebrew
   - brew update
+  # Ruby language support
   - gem install ruby-beautify --verbose
+  # Python language support
   - brew install python
   - pip install --upgrade autopep8
-  - cabal install pandoc
+  # Markdown language support
+#  - cabal install pandoc
+  # Java, C, C++, C#, Objective-C, D, Pawn, Vala
+  - brew install uncrustify
+  # PHP
+  - pear install PHP_Beautifier-beta
