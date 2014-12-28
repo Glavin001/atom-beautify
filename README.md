@@ -1,5 +1,6 @@
 # [atom-beautify](https://github.com/donaldpipowitch/atom-beautify)
 
+[![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify)
 [![Gitter chat](https://badges.gitter.im/Glavin001/atom-beautify.png)](https://gitter.im/Glavin001/atom-beautify)
 [![Issue Stats](http://issuestats.com/github/glavin001/atom-beautify/badge/pr?style=flat)](http://issuestats.com/github/glavin001/atom-beautify)
 [![Issue Stats](http://issuestats.com/github/glavin001/atom-beautify/badge/issue?style=flat)](http://issuestats.com/github/glavin001/atom-beautify)
