@@ -85,7 +85,7 @@
   "dependencies": {
     "analytics-node": "^1.0.2",
     "atom-message-panel": "^1.1.1",
-    "coffee-formatter": "^0.1.0",
+    "coffee-formatter": "^0.1.1",
     "editorconfig": "^0.11.4",
     "emissary": "^1.0.0",
     "extend": "^1.2.1",
