@@ -84,6 +84,7 @@
   },
   "dependencies": {
     "analytics-node": "^1.0.2",
+    "async": "^0.9.0",
     "atom-message-panel": "^1.1.1",
     "coffee-formatter": "^0.1.1",
     "editorconfig": "^0.11.4",
@@ -93,6 +94,7 @@
     "js-yaml": "^3.0.2",
     "lodash": "2.4.1",
     "loophole": "^1.0.0",
+    "node-dir": "^0.1.6",
     "node-uuid": "^1.4.1",
     "prettydiff": "^1.6.13",
     "space-pen": "^4.3.0",
@@ -102,8 +104,9 @@
   },
   "activationEvents": [
     "beautify",
-    "beautify:editor",
-    "beautify:file",
+    "beautify:beautify-editor",
+    "beautify:beautify-file",
+    "beautify:beautify-directory",
     "core:save",
     "core:save-as"
   ]

@@ -1,0 +1,18 @@
+.icon-file-text,.icon-file-directory {
+
+  // While beautifying / in progress
+  &.beautifying:before {
+    // font-family: "Octicons Regular";
+    // font-size: medium;
+    // text-align: center;
+    // content: "\f09e"; // Octicon-hourglass
+
+    background-image: url("images/octocat-spinner-128.gif");
+    // Animated spinner
+    background-repeat: no-repeat;
+    background-size: contain;
+    // Image should fit to size of container, font-size
+    content: "";
+    // Clear original icon content
+  }
+}

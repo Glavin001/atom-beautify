@@ -79,8 +79,8 @@ See [Keymaps In-Depth](https://atom.io/docs/latest/advanced/keymaps) for more de
 For example:
 
 ```coffeescript
-'.editor': # Available from Editor only
-  'ctrl-alt-b': 'beautify'
+'.editor':
+  'ctrl-alt-b': 'beautify:beautify-editor'
 ```
 
 ### Package Options

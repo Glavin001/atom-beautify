@@ -13,6 +13,8 @@ fs = null
 path = require("path")
 strip = null
 yaml = null
+async = null
+dir = null # Node-Dir
 LoadingView = null
 MessagePanelView = null
 PlainMessageView = null
@@ -44,7 +46,7 @@ setCursors = (editor, posArray) ->
     editor.addCursorAtBufferPosition bufferPosition
   return
 
-beautify = ({onSave})->
+beautify = ({onSave}) ->
   path ?= require("path")
   MessagePanelView ?= require('atom-message-panel').MessagePanelView
   PlainMessageView ?= require('atom-message-panel').PlainMessageView
@@ -133,22 +135,20 @@ beautify = ({onSave})->
     showError(e)
   return
 
-beautifyFile = (event)->
-  # console.log('beautifyFile', arguments)
-  entry = event.target
-  # console.log('entry', entry)
-  return unless entry
-  $ ?= (require "space-pen").$
-  $entry = $(entry)
-  if $entry.prop("tagName") is "LI"
-    $entry = $("span.name", $entry)
-  # console.log($entry)
-  filePath = $entry.data('path')
-  # console.log('filePath', filePath)
+beautifyFilePath = (filePath, callback) ->
+  # Show in progress indicate on file's tree-view entry
+  $ ?= require("space-pen").$
+  $el = $(".icon-file-text[data-path=\"#{filePath}\"]")
+  $el.addClass('beautifying')
+  # Cleanup and return callback function
+  cb = (err, result) ->
+    $el = $(".icon-file-text[data-path=\"#{filePath}\"]")
+    $el.removeClass('beautifying')
+    return callback(err, result)
   # Get contents of file
   fs ?= require "fs"
   fs.readFile(filePath, (err, data) ->
-    throw error if err
+    return cb(err) if err
     input = data?.toString()
     grammar = atom.grammars.selectGrammar(filePath, input)
     grammarName = grammar.name
@@ -157,19 +157,51 @@ beautifyFile = (event)->
     # Beautify File
     completionFun = (output) ->
       if output instanceof Error
-        throw output # output == Error
+        return cb(output, null) # output == Error
       else if typeof output is "string"
         fs.writeFile(filePath, output, (err) ->
-            throw err if err
+            return cb(err) if err
+            return cb(null, output)
         )
       else
-        console.log(output)
+        return cb(new Error("Unknown beautification result #{output}."), output)
     try
       beautifier.beautify input, grammarName, allOptions, completionFun
     catch e
-      console.error(e)
-
+      return cb(e)
   )
+
+beautifyFile = ({target}) ->
+  filePath = target.dataset.path
+  return unless filePath
+  beautifyFilePath(filePath, (err, result) ->
+      return console.error('beautifyFile error', err, result) if err
+      # console.log("Beautify File #{filePath} complete with result: ", result)
+  )
+  return
+
+beautifyDirectory = ({target}) ->
+  dirPath = target.dataset.path
+  return unless dirPath
+  # Show in progress indicate on directory's tree-view entry
+  $ ?= require("space-pen").$
+  $el = $(".icon-file-directory[data-path=\"#{dirPath}\"]")
+  $el.addClass('beautifying')
+  # Process Directory
+  dir ?= require "node-dir"
+  async ?= require "async"
+  dir.files(dirPath, (err, files) ->
+    return console.error('beautifyDirectory error', err) if err
+    async.each(files, (filePath, callback) ->
+      # Ignore errors
+      beautifyFilePath(filePath, -> callback())
+    , (err) ->
+      $el = $(".icon-file-directory[data-path=\"#{dirPath}\"]")
+      $el.removeClass('beautifying')
+      # console.log('Completed beautifying directory!', dirPath)
+    )
+  )
+  return
 
 handleSaveEvent = =>
   atom.workspace.eachEditor (editor) =>
@@ -194,6 +226,6 @@ plugin.configDefaults = _.merge(
 plugin.activate = ->
   handleSaveEvent()
   plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
-  atom.workspaceView.command "beautify", beautify
-  atom.workspaceView.command "beautify:editor", beautify
-  atom.workspaceView.command "beautify:file", beautifyFile
+  atom.commands.add "atom-workspace", "beautify:beautify-editor", beautify
+  atom.commands.add ".tree-view .file .name", "beautify:beautify-file", beautifyFile
+  atom.commands.add ".tree-view .directory .name", "beautify:beautify-directory", beautifyDirectory
