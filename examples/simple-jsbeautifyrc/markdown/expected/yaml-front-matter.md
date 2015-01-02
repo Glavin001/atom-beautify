@@ -10,7 +10,7 @@ pets:
   - dog
   - bat
 match: !<tag:yaml.org,2002:js/regexp> /pattern/gmi
-run: !<tag:yaml.org,2002:js/function> "function () {\n  \n  \n   \n\n\n}"
+run: !<tag:yaml.org,2002:js/function> "function () {\n   \n}"
 ---
 
 -   item

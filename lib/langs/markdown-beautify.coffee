@@ -1,7 +1,6 @@
 ###
 Requires http: //johnmacfarlane.net/pandoc/
 ###
-yamlFront = null
 fs = null
 yaml = null
 allowUnsafeNewFunction = null
@@ -26,13 +25,13 @@ getCmd = (inputPath, outputPath, options, cb) ->
       return cb(err) if err
 
       # Parse with YAML front Matter
-      yamlFront ?= require "yaml-front-matter"
+      yaml ?= require "yaml-front-matter"
       # console.log('Parse YAML Front Matter')
       allowUnsafeNewFunction ?= require("loophole").allowUnsafeNewFunction
       results = null
       try
         allowUnsafeNewFunction ->
-          results = yamlFront.loadFront(contents)
+          results = yaml.loadFront(contents)
       catch e
         return cb(e)
       newContents = results.__content # jshint ignore: line
@@ -47,10 +46,11 @@ getCmd = (inputPath, outputPath, options, cb) ->
         completionCallback = (output, callback) ->
           # console.log('Completion callback!')
           try
-            yaml ?= require "js-yaml"
             # Pre-pend YAML Front Matter to top of Markdown output
             front = yaml.dump(results)
-            output = "---\n#{front}---\n\n#{output}"
+            # Check if there is valid `front` to prepend
+            if front isnt "{}\n"
+              output = "---\n#{front}---\n\n#{output}"
             # console.log('final output!', output)
             return callback(output)
           catch e

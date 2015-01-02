@@ -52,7 +52,6 @@
     "emissary": "^1.0.0",
     "extend": "^1.2.1",
     "js-beautify": "^1.5.4",
-    "js-yaml": "^3.0.2",
     "lodash": "2.4.1",
     "loophole": "^1.0.0",
     "node-dir": "^0.1.6",
