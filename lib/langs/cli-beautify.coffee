@@ -23,12 +23,19 @@ module.exports = (getCmd, isStdout) ->
                 temp.cleanup()
                 # Delete the output path
                 fs.unlink outputPath, (err) ->
-                  console.log "Deleting output file", err  if err
+                  # console.log "Deleting output file", err if err
                   return
                 return
 
               # Process the command
-              processCmd = (cmd) ->
+              processCmd = (cmd, optCallback) ->
+                if optCallback? and typeof optCallback is "function"
+                  # console.log('Optional Callback found')
+                  cb = callback # Save callback for later
+                  callback = (output) -> # Wrap callback (cb) with optCallback
+                    # console.log('Callback called!', output)
+                    optCallback(output, cb)
+
                 if typeof cmd is "string"
 
                   config = env: process.env

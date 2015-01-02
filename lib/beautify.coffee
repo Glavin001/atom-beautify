@@ -81,30 +81,33 @@ beautify = ({onSave}) ->
       # Do nothing, is undefined
     else if text instanceof Error
       showError(text)
-    else if oldText isnt text
-      # console.log "Replacing current editor's text with new text"
-      posArray = getCursors(editor)
-      # console.log "posArray: #{posArray}"
-      origScrollTop = editor.getScrollTop()
-      # console.log "origScrollTop: #{origScrollTop}"
-      if not forceEntireFile and isSelection
-        selectedBufferRange = editor.getSelectedBufferRange()
-        # console.log "selectedBufferRange: #{selectedBufferRange}"
-        editor.setTextInBufferRange selectedBufferRange, text
-      else
-        # console.log "setText"
-        editor.setText text
-      # console.log "setCursors"
-      setCursors editor, posArray
-      # console.log "Done setCursors"
-      # Let the scrollTop setting run after all the save related stuff is run,
-      # otherwise setScrollTop is not working, probably because the cursor
-      # addition happens asynchronously
-      setTimeout (->
-        # console.log "setScrollTop"
-        editor.setScrollTop origScrollTop
-        return
-      ), 0
+    else if typeof text is "string"
+      if oldText isnt text
+        # console.log "Replacing current editor's text with new text"
+        posArray = getCursors(editor)
+        # console.log "posArray: #{posArray}"
+        origScrollTop = editor.getScrollTop()
+        # console.log "origScrollTop: #{origScrollTop}"
+        if not forceEntireFile and isSelection
+          selectedBufferRange = editor.getSelectedBufferRange()
+          # console.log "selectedBufferRange: #{selectedBufferRange}"
+          editor.setTextInBufferRange selectedBufferRange, text
+        else
+          # console.log "setText"
+          editor.setText text
+        # console.log "setCursors"
+        setCursors editor, posArray
+        # console.log "Done setCursors"
+        # Let the scrollTop setting run after all the save related stuff is run,
+        # otherwise setScrollTop is not working, probably because the cursor
+        # addition happens asynchronously
+        setTimeout (->
+          # console.log "setScrollTop"
+          editor.setScrollTop origScrollTop
+          return
+        ), 0
+    else
+      @showError(new Error("Unsupported beautification result '#{text}'."))
     # else
       # console.log "Already Beautiful!"
     @loadingView.hide()

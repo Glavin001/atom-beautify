@@ -40,6 +40,38 @@
       "url": "https://github.com/vadirn"
     }
   ],
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "analytics-node": "^1.0.2",
+    "async": "^0.9.0",
+    "atom-message-panel": "^1.1.1",
+    "coffee-formatter": "^0.1.1",
+    "editorconfig": "^0.11.4",
+    "emissary": "^1.0.0",
+    "extend": "^1.2.1",
+    "js-beautify": "^1.5.4",
+    "js-yaml": "^3.0.2",
+    "lodash": "2.4.1",
+    "loophole": "^1.0.0",
+    "node-dir": "^0.1.6",
+    "node-uuid": "^1.4.1",
+    "prettydiff": "^1.6.13",
+    "space-pen": "^4.3.0",
+    "strip-json-comments": "^0.1.3",
+    "temp": "^0.8.0",
+    "typescript-formatter": "~0.1.4",
+    "yaml-front-matter": "^3.2.3"
+  },
+  "activationEvents": [
+    "beautify",
+    "beautify:beautify-editor",
+    "beautify:beautify-file",
+    "beautify:beautify-directory",
+    "core:save",
+    "core:save-as"
+  ],
   "keywords": [
     "atom",
     "beautify",
@@ -78,36 +110,5 @@
     "d",
     "erb",
     "editorconfig"
-  ],
-  "engines": {
-    "atom": ">0.50.0"
-  },
-  "dependencies": {
-    "analytics-node": "^1.0.2",
-    "async": "^0.9.0",
-    "atom-message-panel": "^1.1.1",
-    "coffee-formatter": "^0.1.1",
-    "editorconfig": "^0.11.4",
-    "emissary": "^1.0.0",
-    "extend": "^1.2.1",
-    "js-beautify": "^1.5.4",
-    "js-yaml": "^3.0.2",
-    "lodash": "2.4.1",
-    "loophole": "^1.0.0",
-    "node-dir": "^0.1.6",
-    "node-uuid": "^1.4.1",
-    "prettydiff": "^1.6.13",
-    "space-pen": "^4.3.0",
-    "strip-json-comments": "^0.1.3",
-    "temp": "^0.8.0",
-    "typescript-formatter": "~0.1.4"
-  },
-  "activationEvents": [
-    "beautify",
-    "beautify:beautify-editor",
-    "beautify:beautify-file",
-    "beautify:beautify-directory",
-    "core:save",
-    "core:save-as"
   ]
 }

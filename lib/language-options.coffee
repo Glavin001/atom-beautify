@@ -98,6 +98,7 @@ module.exports =
 
     # Markdown
     markdown_pandoc_path: ""
+    markdown_yaml_front_matter: true
 
     # Perl
     perl_perltidy_path: "perltidy"
