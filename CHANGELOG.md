@@ -1,3 +1,10 @@
+
+# v0.20.2 (2015-01-02)
+- [Fixes #171. Fix typo for CSS indent_char](https://github.com/Glavin001/atom-beautify/commit/c4c847948d5f88eb44b672d3471ceb92b126b5e3)
+
+# v0.20.1 (2015-01-02)
+- [Fixes #169. Remove JS-Yaml and use YAML-Front-Matter, resolving conflict](https://github.com/Glavin001/atom-beautify/commit/f280469e77a8e6d1014e18c2c0ba717e9b15743e)
+
 # v0.20.0 (2015-01-02)
 - [Closes #169. Add YAML Front Matter support to Markdown beautification](https://github.com/Glavin001/atom-beautify/commit/e7a980045d769897011606aaa40e44db8de5ba6c)
 
