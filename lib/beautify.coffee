@@ -18,7 +18,6 @@ dir = null # Node-Dir
 LoadingView = null
 MessagePanelView = null
 PlainMessageView = null
-editorconfig = null
 $ = null
 #MessageView = require "./message-view"
 
