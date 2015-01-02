@@ -109,6 +109,9 @@
     "vala",
     "d",
     "erb",
-    "editorconfig"
+    "editorconfig",
+    "yaml",
+    "front matter",
+    "jekyll"
   ]
 }

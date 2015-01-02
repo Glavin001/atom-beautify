@@ -1,3 +1,6 @@
+# v0.20.0 (2015-01-02)
+- [Closes #169. Add YAML Front Matter support to Markdown beautification](https://github.com/Glavin001/atom-beautify/commit/e7a980045d769897011606aaa40e44db8de5ba6c)
+
 # v0.19.0 (2015-01-01)
 - [Closes #36. Add right-click beautification of directory (sub-files)](https://github.com/Glavin001/atom-beautify/commit/bd278968b4b54ee9586682252de6b320d302bcce)
 
