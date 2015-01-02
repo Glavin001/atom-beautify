@@ -80,7 +80,7 @@ module.exports =
 
     # CSS
     css_indent_size: 2
-    css_indent_Char: " "
+    css_indent_char: " "
 
     # HTML
     html_indent_inner_html: false
