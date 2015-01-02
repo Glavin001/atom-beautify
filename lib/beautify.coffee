@@ -116,6 +116,11 @@ beautify = ({onSave}) ->
 
   # Get current editor
   editor = atom.workspace.getActiveEditor()
+  # Check if there is an active editor
+  if not editor?
+    return @showError(new Error("Active Editor not found. "
+                "Please select a Text Editor first to beautify."))
+
   isSelection = !!editor.getSelectedText()
   # Get editor path and configurations for paths
   editedFilePath = editor.getPath()
