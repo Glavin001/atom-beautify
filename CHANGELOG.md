@@ -1,3 +1,6 @@
+# v0.19.0 (2015-01-01)
+- [Closes #36. Add right-click beautification of directory (sub-files)](https://github.com/Glavin001/atom-beautify/commit/bd278968b4b54ee9586682252de6b320d302bcce)
+
 # v0.18.0 (2015-01-01)
 - [Add Specs (Unit Tests) and Travis CI automated testing](https://github.com/Glavin001/atom-beautify/issues/18)
 - [Fixes #149. Update prettydiff to fix interpolated text vars in SCSS](https://github.com/Glavin001/atom-beautify/commit/dc1e720e908cbd60ae93316975c39628be105901)
