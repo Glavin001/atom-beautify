@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./lib/beautify",
-  "version": "0.20.2",
+  "version": "0.21.0",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
   "repository": {
@@ -64,17 +64,17 @@
     "yaml-front-matter": "^3.2.3"
   },
   "activationCommands": {
-      "atom-workspace": [
-          "beautify:beautify-editor",
-          "core:save",
-          "core:save-as"
-      ],
-      ".tree-view .file .name": [
-          "beautify:beautify-file"
-      ],
-      ".tree-view .directory .name": [
-          "beautify:beautify-directory"
-      ]
+    "atom-workspace": [
+      "beautify:beautify-editor",
+      "core:save",
+      "core:save-as"
+    ],
+    ".tree-view .file .name": [
+      "beautify:beautify-file"
+    ],
+    ".tree-view .directory .name": [
+      "beautify:beautify-directory"
+    ]
   },
   "keywords": [
     "atom",
