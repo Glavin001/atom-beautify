@@ -63,14 +63,19 @@
     "typescript-formatter": "~0.1.4",
     "yaml-front-matter": "^3.2.3"
   },
-  "activationEvents": [
-    "beautify",
-    "beautify:beautify-editor",
-    "beautify:beautify-file",
-    "beautify:beautify-directory",
-    "core:save",
-    "core:save-as"
-  ],
+  "activationCommands": {
+      "atom-workspace": [
+          "beautify:beautify-editor",
+          "core:save",
+          "core:save-as"
+      ],
+      ".tree-view .file .name": [
+          "beautify:beautify-file"
+      ],
+      ".tree-view .directory .name": [
+          "beautify:beautify-directory"
+      ]
+  },
   "keywords": [
     "atom",
     "beautify",

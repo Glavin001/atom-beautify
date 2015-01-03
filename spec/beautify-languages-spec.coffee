@@ -25,10 +25,28 @@ describe "BeautifyLanguages", ->
     ]
 
   beforeEach ->
+    # Install all of the languages
     for lang in allLanguages
       do (lang) ->
         waitsForPromise ->
           atom.packages.activatePackage("language-#{lang}")
+
+    # Activate package
+    waitsForPromise ->
+        activationPromise = atom.packages.activatePackage('atom-beautify')
+        # Force activate package
+        pack = atom.packages.getLoadedPackage("atom-beautify")
+        pack.activateNow()
+        # Return promise
+        return activationPromise
+
+    # Set Uncrustify config path
+    # uncrustifyConfigPath = path.resolve(__dirname, "../examples/nested-jsbeautifyrc/uncrustify.cfg")
+    # uncrustifyLangs = ["c", "cpp", "objectivec", "cs", "d", "java", "pawn", "vala"]
+    # for lang in uncrustifyLangs
+    #     do (lang) ->
+            # atom.config.set("atom-beautify.#{lang}_configPath", uncrustifyConfigPath)
+            # expect(atom.config.get("atom-beautify.#{lang}_configPath")).toEqual("TEST")
 
   ###
   Directory structure:

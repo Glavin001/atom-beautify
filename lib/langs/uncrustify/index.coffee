@@ -30,9 +30,12 @@ getCmd = (inputPath, outputPath, options, cb) ->
   else
     # Has custom config path
     editor = atom.workspace.getActiveEditor()
-    basePath = path.dirname(editor.getPath())
-    # console.log(basePath);
-    configPath = path.resolve(basePath, configPath)
-    done configPath
+    if editor?
+        basePath = path.dirname(editor.getPath())
+        # console.log(basePath);
+        configPath = path.resolve(basePath, configPath)
+        done configPath
+    else
+        cb(new Error("No Uncrustify Config Path set! Please configure Uncrustify with Atom Beautify."))
   return
 module.exports = cliBeautify(getCmd)
