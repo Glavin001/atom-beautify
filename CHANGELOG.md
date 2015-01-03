@@ -1,3 +1,10 @@
+# v0.21.0 (2015-01-03)
+- [Closes #172, #146. Update to new Atom Config API.](https://github.com/Glavin001/atom-beautify/commit/eb1471d23b1c2b704b8b3afa17462b4e73bc20f9)
+
+>What's new:
+- Add settings descriptions
+- Update options for js-beautify (JS, CSS, HTML)
+- Update Spec to support new changes
 
 # v0.20.2 (2015-01-02)
 - [Fixes #171. Fix typo for CSS indent_char](https://github.com/Glavin001/atom-beautify/commit/c4c847948d5f88eb44b672d3471ceb92b126b5e3)
