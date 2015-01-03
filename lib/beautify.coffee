@@ -106,7 +106,7 @@ beautify = ({onSave}) ->
           return
         ), 0
     else
-      @showError(new Error("Unsupported beautification result '#{text}'."))
+      showError(new Error("Unsupported beautification result '#{text}'."))
     # else
       # console.log "Already Beautiful!"
     @loadingView.hide()
@@ -117,7 +117,7 @@ beautify = ({onSave}) ->
   editor = atom.workspace.getActiveEditor()
   # Check if there is an active editor
   if not editor?
-    return @showError(new Error("Active Editor not found. "
+    return showError(new Error("Active Editor not found. "
                 "Please select a Text Editor first to beautify."))
 
   isSelection = !!editor.getSelectedText()
