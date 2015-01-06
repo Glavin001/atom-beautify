@@ -1,3 +1,6 @@
+# v0.21.1 (2015-01-06)
+- [Fixes #177. Update keybinding to beautify:beautify-editor](https://github.com/Glavin001/atom-beautify/commit/5aaeae4cc77b4805a4a41df42fe8708f5495f963)
+
 # v0.21.0 (2015-01-03)
 - [Closes #172, #146. Update to new Atom Config API.](https://github.com/Glavin001/atom-beautify/commit/eb1471d23b1c2b704b8b3afa17462b4e73bc20f9)
 
