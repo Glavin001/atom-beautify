@@ -1,6 +1,6 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
-  '.workspace .editor:not(.mini)':
+  'atom-workspace atom-text-editor:not(.mini)':
     'Enable atom-beautify': 'beautify:beautify-editor'
   '.tree-view .file > .name':
     'Beautify File': 'beautify:beautify-file'

@@ -61,7 +61,8 @@
     "strip-json-comments": "^0.1.3",
     "temp": "^0.8.0",
     "typescript-formatter": "~0.1.4",
-    "yaml-front-matter": "^3.2.3"
+    "yaml-front-matter": "^3.2.3",
+    "atom-space-pen-views": "^2.0.3"
   },
   "activationCommands": {
     "atom-workspace": [
