@@ -422,7 +422,7 @@ module.exports =
         text = beautifyCSS(text, self.getOptions("css", allOptions))
         beautifyCompleted text
       when "Sass", "SCSS", "LESS"
-        beautifyLESS ?= require("./langs/less-beautify")
+        beautifyLESS ?= require("./langs/css-prettydiff-beautify")
         beautifyLESS text, self.getOptions("css", allOptions), beautifyCompleted
       when "SQL (Rails)", "SQL"
         beautifySQL ?= require("./langs/sql-beautify")
