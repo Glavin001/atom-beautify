@@ -114,7 +114,7 @@ beautify = ({onSave}) ->
   # console.log 'Beautify time!'
 
   # Get current editor
-  editor = atom.workspace.getActiveEditor()
+  editor = atom.workspace.getActiveTextEditor()
   # Check if there is an active editor
   if not editor?
     return showError(new Error("Active Editor not found. "
@@ -211,7 +211,7 @@ beautifyDirectory = ({target}) ->
   return
 
 handleSaveEvent = =>
-  atom.workspace.eachEditor (editor) =>
+  atom.workspace.observeTextEditors (editor) =>
     buffer = editor.getBuffer()
     plugin.unsubscribe buffer
     if atom.config.get("atom-beautify.beautifyOnSave")

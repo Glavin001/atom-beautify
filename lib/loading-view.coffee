@@ -1,4 +1,5 @@
-{View} = require "atom"
+{View} = require 'space-pen'
+{TextEditorView} = require 'atom-space-pen-views'
 
 module.exports =
 class LoadingView extends View
@@ -35,4 +36,4 @@ class LoadingView extends View
 
   show: =>
     if not @.hasParent()
-      atom.workspaceView.appendToTop @
+      atom.workspace.addTopPanel(item: @)
