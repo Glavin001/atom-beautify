@@ -1,10 +1,11 @@
 class Example
 {
 
-    Example()
-    : member(0)
-{}
+Example()
+        : member(0)
+{
+}
 
-    int member;
+int member;
 
 };
