@@ -1,3 +1,8 @@
+# v0.21.2 (2015-02-08)
+- [Fixes #181 and fixes #180. Clean up LESS/SCSS Unit Tests and update Prettydiff](https://github.com/Glavin001/atom-beautify/commit/a50c5a3c4c884a2eddec7e36c1723eeef97c3758)
+- [Updates to Atoms new API](https://github.com/Glavin001/atom-beautify/commit/d24a454ef7b011c7d4d63b7ba1757b8d0a0ced28)
+- [Updating selectors to new Atom API](https://github.com/Glavin001/atom-beautify/commit/d2ad4ccbfeec55fb3656e6aed64b88ddefa8a27d)
+
 # v0.21.1 (2015-01-06)
 - [Fixes #177. Update keybinding to beautify:beautify-editor](https://github.com/Glavin001/atom-beautify/commit/5aaeae4cc77b4805a4a41df42fe8708f5495f963)
 
