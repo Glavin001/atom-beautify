@@ -13,6 +13,9 @@ notifications:
 
 script: sh build-package.sh
 
+env:
+    - APM_TEST_PACKAGES="language-typescript language-csharp"
+
 before_install:
   # Update Homebrew
   - brew update
