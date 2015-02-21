@@ -28,6 +28,8 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
   - [x] [Embedded Ruby (ERB)](https://github.com/Glavin001/atom-beautify/issues/80)
     - Requires [htmlbeautifier](https://github.com/threedaymonk/htmlbeautifier)
   - [x] XML
+  - [x] [Marko](https://github.com/raptorjs/marko)
+    - Requires [language-marko](https://github.com/raptorjs/atom-language-marko)
 - [x] CSS, including
   - [Sass](http://sass-lang.com/)
   - [LESS](http://lesscss.org/)
