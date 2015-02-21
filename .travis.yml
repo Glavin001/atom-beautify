@@ -14,7 +14,7 @@ notifications:
 script: sh build-package.sh
 
 env:
-    - APM_TEST_PACKAGES="language-typescript language-csharp"
+    - APM_TEST_PACKAGES="language-typescript language-csharp language-marko"
 
 before_install:
   # Update Homebrew

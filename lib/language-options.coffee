@@ -410,7 +410,7 @@ module.exports =
         beautifyHTML ?= require("js-beautify").html
         text = beautifyHTML(text, self.getOptions("html", allOptions))
         beautifyCompleted text
-      when "HTML (Liquid)", "HTML", "XML"
+      when "HTML (Liquid)", "HTML", "XML", "Marko"
         beautifyHTML ?= require("js-beautify").html
         text = beautifyHTML(text, self.getOptions("html", allOptions))
         beautifyCompleted text

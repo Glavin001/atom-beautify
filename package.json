@@ -117,6 +117,7 @@
     "editorconfig",
     "yaml",
     "front matter",
-    "jekyll"
+    "jekyll",
+    "marko"
   ]
 }
