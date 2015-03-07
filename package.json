@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./lib/beautify",
-  "version": "0.21.3",
+  "version": "0.21.4",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
   "repository": {
@@ -38,6 +38,10 @@
     {
       "name": "Vadim K.",
       "url": "https://github.com/vadirn"
+    },
+    {
+      "name": "Filipe Silva",
+      "url": "https://github.com/filipesilva"
     }
   ],
   "engines": {
@@ -51,7 +55,7 @@
     "editorconfig": "^0.11.4",
     "emissary": "^1.0.0",
     "extend": "^1.2.1",
-    "js-beautify": "^1.5.4",
+    "js-beautify": "^1.5.5",
     "lodash": "2.4.1",
     "loophole": "^1.0.0",
     "node-dir": "^0.1.6",
