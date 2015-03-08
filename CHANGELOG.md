@@ -1,5 +1,5 @@
 # v0.21.4 (2015-03-07)
-- Update options for js-beautify (HTML wrap-attributes, wrap-attributes-indent-size)
+- [Update options for js-beautify (HTML wrap-attributes, wrap-attributes-indent-size)](https://github.com/filipesilva/atom-beautify/commit/fdd1668c20d2e2f7a5e7bd0c1459638309e6f130)
 
 # v0.21.3 (2015-02-08)
 - [Fixes #181 and fixes #180. Clean up LESS/SCSS Unit Tests and update Prettydiff](https://github.com/Glavin001/atom-beautify/commit/a50c5a3c4c884a2eddec7e36c1723eeef97c3758)
