@@ -5,6 +5,7 @@ module.exports = (text, options, callback) ->
     source: text
     lang: "css"
     mode: "beautify"
+    preserve: options.preserve_newlines
     inchar: options.indent_character
     insize: options.indent_size
     alphasort: options.alphasort || false
