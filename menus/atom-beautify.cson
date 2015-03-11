@@ -4,8 +4,8 @@
     'Enable atom-beautify': 'beautify:beautify-editor'
   '.tree-view .file > .name':
     'Beautify File': 'beautify:beautify-file'
-  '.tree-view .directory > .header > .name':
-    'Beautify Directory': 'beautify:beautify-directory'
+#  '.tree-view .directory > .header > .name':
+#    'Beautify Directory': 'beautify:beautify-directory'
 
 'menu': [
   {
