@@ -168,6 +168,11 @@ module.exports =
         description: "Add a newline between CSS rules"
 
     # HTML
+    html_htmlbeautifier_path:
+        title: "htmlbeautifier path"
+        type: 'string'
+        default: ""
+        description: "Path to the `htmlbeautifier` CLI executable"
     html_indent_inner_html:
         type: 'boolean'
         default: false
