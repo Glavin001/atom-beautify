@@ -213,6 +213,13 @@ beautifyDirectory = ({target}) ->
 
 debug = () ->
 
+    # Get current editor
+    editor = atom.workspace.getActiveTextEditor()
+    # Check if there is an active editor
+    if not editor?
+        return confirm("Active Editor not found.\n"+
+                    "Please select a Text Editor first to beautify.")
+
     return unless confirm('Are you ready to debug Atom Beautify?\n\n'+
         'Warning: This will change your current clipboard contents.')
 
@@ -243,12 +250,6 @@ debug = () ->
     addHeader(2, "Original file to be beautified")
 
     # Original file
-    # Get current editor
-    editor = atom.workspace.getActiveTextEditor()
-    # Check if there is an active editor
-    if not editor?
-        return showError(new Error("Active Editor not found.\n"
-                    "Please select a Text Editor first to beautify."))
 
     # Get editor path and configurations for paths
     filePath = editor.getPath()
