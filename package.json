@@ -62,7 +62,7 @@
     "loophole": "^1.0.0",
     "node-dir": "^0.1.6",
     "node-uuid": "^1.4.1",
-    "prettydiff": "^1.8.8",
+    "prettydiff": "^1.11.0",
     "space-pen": "^4.3.0",
     "strip-json-comments": "^0.1.3",
     "temp": "^0.8.0",
