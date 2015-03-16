@@ -71,6 +71,7 @@
   "activationCommands": {
     "atom-workspace": [
       "beautify:beautify-editor",
+      "beautify:debug",
       "core:save",
       "core:save-as"
     ],
