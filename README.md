@@ -18,6 +18,19 @@ apm install atom-beautify
 
 Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 
+## Donations [![donate](http://img.shields.io/gratipay/Glavin001.svg)](https://gratipay.com/Glavin001/)
+
+Looking at the list of issues on Atom Beautify, at the time of writing this, there are 51 open and 155 closed.
+I see and strongly feel that Atom Beautify needs a more love than I currently have allocated time to give it, after work, school, and family.
+
+I am now accepting donations to support the development of Atom Beautify.
+Being the [sole maintainer of Atom Beautify, I](https://github.com/Glavin001) thank you very much for any support and for using Atom Beautify.
+
+These donations will help me continue with my contributions to the community while providing me with some much needed financial support for living expenses and my education.
+
+You can donate at https://gratipay.com/Glavin001/
+
+Thank you. [Glavin Wiechert](https://github.com/Glavin001)
 
 ## Language Support
 
