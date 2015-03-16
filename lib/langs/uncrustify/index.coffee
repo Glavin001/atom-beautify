@@ -5,12 +5,15 @@ Requires http://uncrustify.sourceforge.net/
 cliBeautify = require("../cli-beautify")
 cfg = require("./cfg")
 path = require("path")
+expandHomeDir = require('expand-home-dir')
 getCmd = (inputPath, outputPath, options, cb) ->
   uncrustifyPath = options.uncrustifyPath
   # console.log('Uncrustify options:', options);
   # console.log("Uncrustify path: #{uncrustifyPath}")
   # Complete callback
   done = (configPath) ->
+    # Expand Home Directory in Config Path
+    configPath = expandHomeDir(configPath)
     # console.log(configPath);
     if uncrustifyPath
       # Use path given by user
