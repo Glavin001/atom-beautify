@@ -12,7 +12,7 @@ getCmd = (inputPath, outputPath, options) ->
   if level
     levelOption = " --level=#{level} "
   if fixers
-    fixerOption = " --fixers=#{fixers}"
+    fixerOption = " --fixers=#{fixers} "
 
   cmd = "#{levelOption} #{fixerOption} \"#{inputPath}\") || (mv \"#{inputPath}\" \"#{outputPath}\")"
 
