@@ -2,7 +2,7 @@
 Requires https://github.com/FriendsOfPHP/PHP-CS-Fixer
 ###
 getCmd = (inputPath, outputPath, options) ->
-  phpCsFixerPath = options.beautifier_path # jshint ignore: line
+  phpCsFixerPath = options.cs_fixer_path # jshint ignore: line
   fixers = options.fixers
   level = options.level # jshint ignore: line
 

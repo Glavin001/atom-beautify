@@ -52,7 +52,7 @@ Thank you. [Glavin Wiechert](https://github.com/Glavin001)
   - Requires [Pandoc](http://johnmacfarlane.net/pandoc/) to be already installed
 - [X] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
 - [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
-  - Requires [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier) to be already installed.
+  - Requires [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to be already installed.
 - [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
   - Requires [autopep8](https://github.com/hhatto/autopep8) to be already installed.
   - Beautifies to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
@@ -208,12 +208,12 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 ### PHP
 
-To use with PHP we require [PHP_Beautifier](http://pear.php.net/package/PHP_Beautifier)
-and that you set the `Php beautifier path` in the package settings.
+To use with PHP we require [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+and that you set the `Php cs fixer path` in the package settings.
 
 #### Retrieve the path on Mac & Linux
 
-Run `which php_beautifier` in your Terminal.
+Run `which php-cs-fixer` in your Terminal.
 
 ### Python
 

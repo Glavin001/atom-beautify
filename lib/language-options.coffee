@@ -272,7 +272,7 @@ module.exports =
         description: "Specify a configuration file which will override the default name of .perltidyrc"
 
     # PHP
-    php_beautifier_path:
+    php_cs_fixer_path:
         type: 'string'
         default: ""
         description: "Path to the `php-cs-fixer` CLI executable"
