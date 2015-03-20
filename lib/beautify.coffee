@@ -358,6 +358,6 @@ plugin.activate = ->
   handleSaveEvent()
   plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
   atom.commands.add "atom-workspace", "beautify:beautify-editor", beautify
-  atom.commands.add "atom-workspace", "beautify:debug", debug
+  atom.commands.add "atom-workspace", "beautify:help-debug-editor", debug
   atom.commands.add ".tree-view .file .name", "beautify:beautify-file", beautifyFile
   atom.commands.add ".tree-view .directory .name", "beautify:beautify-directory", beautifyDirectory

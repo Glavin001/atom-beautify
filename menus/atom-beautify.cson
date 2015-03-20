@@ -2,7 +2,7 @@
 'context-menu':
   'atom-workspace atom-text-editor:not(.mini)':
     'Beautify editor contents': 'beautify:beautify-editor'
-    'Debug Atom Beautify': 'beautify:debug'
+    'Debug Atom Beautify': 'beautify:help-debug-editor'
   '.tree-view .file > .name':
     'Beautify File': 'beautify:beautify-file'
 #  '.tree-view .directory > .header > .name':
@@ -20,7 +20,7 @@
               }
               {
                 'label': 'Debug'
-                'command': 'beautify:debug'
+                'command': 'beautify:help-debug-editor'
               }
           ]
       ]
