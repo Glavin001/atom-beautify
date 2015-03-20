@@ -279,18 +279,18 @@ module.exports =
         description: "Specify a configuration file which will override the default name of .perltidyrc"
 
     # PHP
-    php_beautifier_path:
+    php_cs_fixer_path:
         type: 'string'
         default: ""
-        description: "Path to the `PHP_Beautifier` CLI executable"
-    php_filters:
+        description: "Path to the `php-cs-fixer` CLI executable"
+    php_fixers:
         type: 'string'
         default: ""
-        description: "Add filter(s). i.e. \"Filter1(setting1=value1,setting2=value2) Filter2()\""
-    php_directory_filters:
+        description: "Add fixer(s). i.e. linefeed,-short_tag,indentation"
+    php_level:
         type: 'string'
         default: ""
-        description: "Include dirs for filters"
+        description: "By default, all PSR-2 fixers and some additional ones are run."
 
     # Python
     python_autopep8_path:
