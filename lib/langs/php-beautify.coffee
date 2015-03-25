@@ -14,7 +14,10 @@ getCmd = (inputPath, outputPath, options) ->
   if fixers
     fixerOption = " --fixers=#{fixers} "
 
-  cmd = "#{levelOption} #{fixerOption} \"#{inputPath}\") || (mv \"#{inputPath}\" \"#{outputPath}\")"
+  if process.platform == 'win32'
+    cmd = "#{levelOption} #{fixerOption} \"#{inputPath}\") & move \"#{inputPath}\" \"#{outputPath}\""
+  else
+    cmd = "#{levelOption} #{fixerOption} \"#{inputPath}\") || (mv \"#{inputPath}\" \"#{outputPath}\")"
 
   if phpCsFixerPath
     # Use absolute path
