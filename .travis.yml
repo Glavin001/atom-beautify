@@ -34,6 +34,7 @@ before_install:
   - brew install uncrustify
   # PHP
   - brew tap homebrew/homebrew-php
+  - brew install php56
   - brew install php-cs-fixer
   # CoffeeScript
   - npm install coffee-formatter
