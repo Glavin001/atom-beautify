@@ -19,6 +19,8 @@ env:
 before_install:
   # Update Homebrew
   - brew update
+  - brew tap homebrew/dupes
+  - brew tap homebrew/versions
   # Ruby language support
   - gem install ruby-beautify --verbose
   # Python language support
@@ -31,6 +33,7 @@ before_install:
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
   # PHP
+  - brew tap homebrew/homebrew-php
   - brew install php-cs-fixer
   # CoffeeScript
   - npm install coffee-formatter
