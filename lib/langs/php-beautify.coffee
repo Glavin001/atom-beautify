@@ -21,7 +21,7 @@ getCmd = (inputPath, outputPath, options) ->
 
   if phpCsFixerPath
     # Use absolute path
-    "(php \"#{phpCsFixerPath}\" fix #{cmd}"
+    "(\"#{phpCsFixerPath}\" fix #{cmd}"
   else
     # Use command available in $PATH
     "(php-cs-fixer fix #{cmd}"
