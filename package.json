@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./lib/beautify",
-  "version": "0.23.2",
+  "version": "0.23.3",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
   "repository": {
