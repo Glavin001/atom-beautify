@@ -314,11 +314,10 @@ module.exports =
         description: "do not fix these errors/warnings"
 
     # Ruby
-    ruby_rbeautify_path:
+    ruby_rubocop_path:
         type: 'string'
-        default: ""
-        description: "Path to the `rbeautify` CLI executable"
-
+        default: "rubocop"
+        description: "Path to the `rubocop` CLI executable"
     # C
     c_uncrustifyPath:
         type: 'string'

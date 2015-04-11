@@ -1,17 +1,14 @@
 ###
-Requires https://github.com/erniebrodeur/ruby-beautify
+Requires https://github.com/bbatsov/rubocop
 ###
+
 getCmd = (inputPath, outputPath, options) ->
-  path = options.rbeautify_path # jshint ignore: line
-  if path
+  rubocop_path = options.rubocop_path || "rubocop" # jshint ignore: line
 
-    # Use absolute path
-    "ruby \"" + path + "\" \"" + inputPath + "\""
-  else
+  rubocop_path + " -a '" + inputPath  + "'; cp '" +
+    inputPath + "' '" + outputPath + "'"
 
-    # Use command available in $PATH
-    "rbeautify \"" + inputPath + "\""
 "use strict"
+
 cliBeautify = require("./cli-beautify")
-isStdout = true
-module.exports = cliBeautify(getCmd, isStdout)
+module.exports = cliBeautify(getCmd)
