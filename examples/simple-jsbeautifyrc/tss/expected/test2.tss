@@ -1,0 +1,31 @@
+".container": {
+  backgroundImage: 'images/bgbg-builder.png',
+  width: 1024,
+  height: 752,
+  top: 0,
+  left: 0
+},
+"#blackArrow": {
+  touchEnabled: false,
+  backgroundImage: 'images/arrow-builder.png',
+  width: 15,
+  height: 10,
+  top: 128,
+  left: 165,
+  pos0: {
+    left: 165,
+    duration: 200
+  },
+  pos1: {
+    left: 301,
+    duration: 200
+  },
+  pos2: {
+    left: 437,
+    duration: 200
+  },
+  pos3: {
+    left: 573,
+    duration: 200
+  }
+},

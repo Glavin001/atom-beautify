@@ -1,0 +1,97 @@
+"Window": {
+  exitOnClose: true,
+  backgroundColor: "#fff",
+  title: "Kochgut"
+}
+
+"Label": {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#555",
+  touchEnabled: false
+}
+
+"Button": {
+  backgroundColor: "#03a9f4",
+  color: "#fff",
+  borderRadius: 2
+}
+
+"#menu": {
+  backgroundImage: "/images/bg.png"
+}
+
+".button": {
+  backgroundColor: "#03a9f4",
+  color: "#fff",
+  borderRadius: 2,
+  width: Ti.UI.SIZE,
+  height: 48,
+  top: 16,
+  bottom: 16
+}
+
+".lbl_button": {
+  left: 20,
+  right: 20,
+  color: "#fff"
+}
+
+".headline": {
+  color: "#aaa",
+  left: 16,
+  height: 48,
+  font: {
+    fontWeight: "bold"
+  }
+}
+
+".grid": {
+  left: 2,
+  right: 2,
+  layout: "horizontal",
+  height: Ti.UI.SIZE
+}
+
+".card [platform=tablet]": {
+  width: "33%",
+  height: 150,
+  bottom: 2
+}
+
+".card": {
+  width: "50%",
+  height: 150,
+  bottom: 2
+}
+
+".padding": {
+  right: 2,
+  left: 0,
+  top: 0,
+  bottom: 0,
+  backgroundImage: "/images/essen.jpg"
+}
+".card_overlay": {
+  bottom: 0,
+  left: 0,
+  right: 0,
+  height: 48
+}
+
+".card_overlay_bg": {
+  left: 0,
+  right: 0,
+  bottom: 0,
+  top: 0,
+  backgroundColor: "#000",
+  opacity: 0.3
+}
+
+".card_lbl": {
+  color: "#fff",
+  left: 16,
+  font: {
+    fontSize: 16
+  }
+}

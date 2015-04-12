@@ -21,7 +21,7 @@ describe "BeautifyLanguages", ->
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql",
-    "typescript", "xml", "csharp", "gfm", "marko"
+    "typescript", "xml", "csharp", "gfm", "marko", "tss"
     ]
 
   beforeEach ->

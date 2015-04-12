@@ -20,6 +20,7 @@ uncrustifyBeautifier = null
 beautifyHTMLERB = null
 beautifyMarkdown = null
 beautifyTypeScript = null
+beautifyTSS = null
 Analytics = null
 
 # Misc
@@ -446,6 +447,9 @@ module.exports =
       when "Sass", "SCSS", "LESS"
         beautifyLESS ?= require("./langs/css-prettydiff-beautify")
         beautifyLESS text, self.getOptions("css", allOptions), beautifyCompleted
+      when "TSS"
+        beautifyTSS ?= require("./langs/tss-prettydiff-beautify")
+        beautifyTSS text, self.getOptions("css", allOptions), beautifyCompleted
       when "SQL (Rails)", "SQL"
         beautifySQL ?= require("./langs/sql-beautify")
         beautifySQL text, self.getOptions("sql", allOptions), beautifyCompleted
