@@ -10,12 +10,12 @@ getCmd = (inputPath, outputPath, options, cb) ->
   pandocPath = options.pandoc_path # jshint ignore: line
   yamlFrontMatter = options.yaml_front_matter # jshint ignore: line
   cmd = ""
-  if pandocPath?
-    # Use absolute path
-    cmd = pandocPath + optionsStr
-  else
+  if not pandocPath
     # Use command available in $PATH
     cmd = "pandoc" + optionsStr
+  else
+    # Use absolute path
+    cmd = pandocPath + optionsStr
 
   if yamlFrontMatter?
     # console.log("YAML Front Matter!")
