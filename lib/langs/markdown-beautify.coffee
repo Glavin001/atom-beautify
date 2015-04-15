@@ -7,7 +7,7 @@ allowUnsafeNewFunction = null
 
 getCmd = (inputPath, outputPath, options, cb) ->
   optionsStr = " --read markdown --write markdown --output \"" + outputPath + "\" \"" + inputPath + "\""
-  pandocPath = options.markdown_beautifier_path # jshint ignore: line
+  pandocPath = options.pandoc_path # jshint ignore: line
   yamlFrontMatter = options.yaml_front_matter # jshint ignore: line
   cmd = ""
   if pandocPath?
