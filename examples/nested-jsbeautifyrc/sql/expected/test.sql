@@ -1,9 +1,14 @@
-SELECT ca.proj_id AS proj_id, ca.ca_name AS proj_name, ca.ca_date_start AS proj_start, ca.ca_date_end AS proj_end,
+SELECT ca.proj_id AS proj_id,
+       ca.ca_name AS proj_name,
+       ca.ca_date_start AS proj_start,
+       ca.ca_date_end AS proj_end,
+
   (SELECT count(*)
    FROM rotations r
    WHERE r.proj_id = proj_id
      AND r.r_status = 'R'
    GROUP BY r.proj_id) r_count,
+
   (SELECT count(*)
    FROM rotations r
    WHERE r.proj_id = proj_id
