@@ -21,6 +21,7 @@ beautifyHTMLERB = null
 beautifyMarkdown = null
 beautifyTypeScript = null
 beautifyTSS = null
+beautifyFortran = null
 Analytics = null
 
 # Misc
@@ -64,6 +65,7 @@ module.exports =
     "pawn"
     "vala"
     "typescript"
+    "fortran"
   ]
 
   # Default options per language
@@ -278,6 +280,17 @@ module.exports =
         type: 'string'
         default: ""
         description: "Specify a configuration file which will override the default name of .perltidyrc"
+
+    # Fortran
+    fortran_emacs_path:
+        type: 'string'
+        default: ""
+        description: "Path to the `emacs` executable"
+
+    fortran_emacs_script_path:
+        type: 'string'
+        default: ""
+        description: "Path to the emacs script"
 
     # PHP
     php_cs_fixer_path:
@@ -511,6 +524,9 @@ module.exports =
       when "TypeScript"
         beautifyTypeScript ?= require("./langs/typescript-beautify")
         beautifyTypeScript text, self.getOptions("js", allOptions), beautifyCompleted
+      when "Fortran - Modern"
+        beautifyFortran ?= require("./langs/fortran-beautify")
+        beautifyFortran text, self.getOptions("fortran", allOptions), beautifyCompleted
       else
         unsupportedGrammar = true
 
