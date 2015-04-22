@@ -1,5 +1,5 @@
 ###
-// Requires [f90ppr](http://www.ifremer.fr/ditigo/molagnon/fortran90/contenu.html)
+// Requires [emacs](https://www.gnu.org/software/emacs/)
 ###
 
 "use strict"
@@ -12,7 +12,7 @@ getCmd = (inputPath, outputPath, options, cb) ->
       " Please set this in the Atom Beautify package settings.")
 
   path = options.emacs_path
-  console.debug "[fortran-beautify] options: " + JSON.stringify(options)
+  #console.debug "[fortran-beautify] options: " + JSON.stringify(options)
 
   args = [
     '--batch'
@@ -26,10 +26,8 @@ getCmd = (inputPath, outputPath, options, cb) ->
   else
     cmd = "emacs " + args.join(' ')
 
-  console.debug "[fortran-beautify] cmd: " + cmd
-
+  #console.debug "[fortran-beautify] cmd: " + cmd
   fs.symlinkSync(inputPath, outputPath)
-
   return cmd
 
 cliBeautify = require("./cli-beautify")
