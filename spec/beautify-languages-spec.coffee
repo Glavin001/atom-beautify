@@ -3,6 +3,7 @@ Beautifiers = require "../src/beautifiers"
 beautifier = new Beautifiers()
 fs = require "fs"
 path = require "path"
+JsDiff = require('diff')
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -135,9 +136,18 @@ describe "BeautifyLanguages", ->
                           if text instanceof Error
                             return beautifyCompleted = text # text == Error
                           expect(typeof text).toEqual "string"
+                          # Check for beautification errors
                           if text isnt expectedContents
-                            console.warn(allOptions, text, expectedContents)
-                          expect(text).toEqual expectedContents
+                            #   console.warn(allOptions, text, expectedContents)
+                              fileName = originalTestPath
+                              oldStr=text
+                              newStr=expectedContents
+                              oldHeader="original"
+                              newHeader="expected"
+                              diff = JsDiff.createPatch(fileName, oldStr, newStr, oldHeader, newHeader)
+                              throw new Error("Beautifier output does not match expected output:\n"+diff)
+                              #expect(text).toEqual expectedContents
+                          # All done!
                           beautifyCompleted = true
 
                         runs ->

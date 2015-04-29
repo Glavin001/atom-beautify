@@ -54,6 +54,7 @@
     "atom-space-pen-views": "^2.0.3",
     "bluebird": "^2.9.25",
     "coffee-formatter": "^0.1.1",
+    "diff": "^1.3.2",
     "editorconfig": "^0.11.4",
     "emissary": "^1.0.0",
     "expand-home-dir": "0.0.2",
