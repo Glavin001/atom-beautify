@@ -16,6 +16,11 @@ script: sh build-package.sh
 env:
     - APM_TEST_PACKAGES="language-typescript language-marko language-tss"
 
+cache:
+    - pip
+    - directories:
+        - node_modules
+
 before_install:
   # Update Homebrew
   - brew update
