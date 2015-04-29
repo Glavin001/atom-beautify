@@ -39,9 +39,9 @@ before_install:
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
   # PHP
-  - brew tap homebrew/homebrew-php
-  - brew install php56
-  - echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini
-  - brew install php-cs-fixer
+  #- brew tap homebrew/homebrew-php
+  #- brew install php56
+  #- echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini
+  #- brew install php-cs-fixer
   # CoffeeScript
   - npm install coffee-formatter
