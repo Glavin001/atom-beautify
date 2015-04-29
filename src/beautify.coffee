@@ -5,10 +5,9 @@ pkg = require('../package.json')
 # Dependencies
 plugin = module.exports
 _ = require("lodash")
-beautifier = require("./language-options")
-languages = beautifier.languages
-defaultLanguageOptions = beautifier.defaultLanguageOptions
-options = require "./options"
+Beautifiers = require("./beautifiers")
+beautifier = new Beautifiers()
+defaultLanguageOptions = beautifier.options
 # Lazy loaded dependencies
 fs = null
 path = require("path")
@@ -20,7 +19,7 @@ LoadingView = null
 MessagePanelView = null
 PlainMessageView = null
 $ = null
-#MessageView = require "./message-view"
+#MessageView = require "./views/message-view"
 
 # function cleanOptions(data, types) {
 #   nopt.clean(data, types);
@@ -50,7 +49,7 @@ beautify = ({onSave}) ->
   path ?= require("path")
   MessagePanelView ?= require('atom-message-panel').MessagePanelView
   PlainMessageView ?= require('atom-message-panel').PlainMessageView
-  LoadingView ?= require "./loading-view"
+  LoadingView ?= require "./views/loading-view"
   @messagePanel ?= new MessagePanelView title: 'Atom Beautify Error Messages'
   @loadingView ?= new LoadingView()
   @loadingView.show()
@@ -125,7 +124,7 @@ beautify = ({onSave}) ->
   # Get editor path and configurations for paths
   editedFilePath = editor.getPath()
   # Get all options
-  allOptions = options.getOptionsForPath(editedFilePath, editor)
+  allOptions = beautifier.getOptionsForPath(editedFilePath, editor)
 
   # Get current editor's text
   text = undefined
@@ -138,7 +137,9 @@ beautify = ({onSave}) ->
   grammarName = editor.getGrammar().name
   # Finally, beautify!
   try
-    beautifier.beautify text, grammarName, allOptions, beautifyCompleted
+    beautifier.beautify(text, allOptions, grammarName, editedFilePath)
+    .then(beautifyCompleted)
+    .catch(beautifyCompleted)
   catch e
     showError(e)
   return
@@ -161,7 +162,7 @@ beautifyFilePath = (filePath, callback) ->
     grammar = atom.grammars.selectGrammar(filePath, input)
     grammarName = grammar.name
     # Get the options
-    allOptions = options.getOptionsForPath(filePath)
+    allOptions = beautifier.getOptionsForPath(filePath)
     # Beautify File
     completionFun = (output) ->
       if output instanceof Error
@@ -174,7 +175,9 @@ beautifyFilePath = (filePath, callback) ->
       else
         return cb(new Error("Unknown beautification result #{output}."), output)
     try
-      beautifier.beautify input, grammarName, allOptions, completionFun
+        beautifier.beautify(input, allOptions, grammarName, filePath)
+        .then(completionFun)
+        .catch(completionFun)
     catch e
       return cb(e)
   )
@@ -270,7 +273,7 @@ debug = () ->
 
     # Beautification Options
     # Get all options
-    allOptions = options.getOptionsForPath(filePath, editor)
+    allOptions = beautifier.getOptionsForPath(filePath, editor)
     [
       editorOptions
       configOptions
@@ -286,7 +289,7 @@ debug = () ->
         "Options from Atom Beautify package settings\n"+
         "```json\n#{JSON.stringify(configOptions, undefined, 4)}\n```")
     addInfo('Home Options', "\n"+
-        "Options from `#{path.resolve(options.getUserHome(), '.jsbeautifyrc')}`\n"+
+        "Options from `#{path.resolve(beautifier.getUserHome(), '.jsbeautifyrc')}`\n"+
         "```json\n#{JSON.stringify(homeOptions, undefined, 4)}\n```")
     addInfo('EditorConfig Options', "\n"+
         "Options from [EditorConfig](http://editorconfig.org/) file\n"+

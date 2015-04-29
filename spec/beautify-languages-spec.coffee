@@ -1,10 +1,8 @@
-Beautify = require '../lib/beautify'
-beautifier = require "../lib/language-options"
-languages = beautifier.languages
-defaultLanguageOptions = beautifier.defaultLanguageOptions
+# Beautify = require '../src/beautify'
+Beautifiers = require "../src/beautifiers"
+beautifier = new Beautifiers()
 fs = require "fs"
 path = require "path"
-options = require "../lib/options"
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -130,7 +128,7 @@ describe "BeautifyLanguages", ->
                         grammarName = grammar.name
 
                         # Get the options
-                        allOptions = options.getOptionsForPath(originalTestPath)
+                        allOptions = beautifier.getOptionsForPath(originalTestPath)
 
                         beautifyCompleted = false
                         completionFun = (text) ->
@@ -144,7 +142,9 @@ describe "BeautifyLanguages", ->
 
                         runs ->
                           try
-                            beautifier.beautify originalContents, grammarName, allOptions, completionFun
+                            beautifier.beautify(originalContents, allOptions, grammarName, testFileName)
+                            .then(completionFun)
+                            .catch(completionFun)
                           catch e
                             beautifyCompleted = e
 
