@@ -6,58 +6,25 @@ _ = require('lodash')
 module.exports = class PrettyDiff extends Beautifier
 
     options: {
+        # Apply these options first / globally, for all languages
+        _:
+            inchar: "indent_char"
+            insize: "indent_size"
+            alphasort: (options) ->
+                options.alphasort or false
+            preserve: (options) ->
+                if (options.preserve_newlines is true ) then \
+                    "all" else "none"
+        # Apply language-specific options
         CSV: true
         HTML: true
-        JavaScript:
-            inchar: "indent_char"
-            insize: "indent_size"
-            alphasort: (options) ->
-                options.alphasort or false
-            preserve: (options) ->
-                if (options.preserve_newlines is true ) then \
-                    "all" else "none"
-        CSS:
-            inchar: "indent_char"
-            insize: "indent_size"
-            alphasort: (options) ->
-                options.alphasort or false
-            preserve: (options) ->
-                if (options.preserve_newlines is true ) then \
-                    "all" else "none"
-        SCSS:
-            inchar: "indent_char"
-            insize: "indent_size"
-            alphasort: (options) ->
-                options.alphasort or false
-            preserve: (options) ->
-                if (options.preserve_newlines is true ) then \
-                    "all" else "none"
-        Sass:
-            inchar: "indent_char"
-            insize: "indent_size"
-            alphasort: (options) ->
-                options.alphasort or false
-            preserve: (options) ->
-                if (options.preserve_newlines is true ) then \
-                    "all" else "none"
+        JavaScript: true
+        CSS: true
+        SCSS: true
+        Sass: true
         JSON: true
-        TSS:
-            inchar: "indent_char"
-            insize: "indent_size"
-            alphasort: (options) ->
-                options.alphasort or false
-            preserve: (options) ->
-                if (options.preserve_newlines is true ) then \
-                    "all" else "none"
-        LESS: {
-            inchar: "indent_char"
-            insize: "indent_size"
-            alphasort: (options) ->
-                options.alphasort or false
-            preserve: (options) ->
-                if (options.preserve_newlines is true ) then \
-                    "all" else "none"
-        }
+        TSS: true
+        LESS: true
     }
 
     beautify: (text, language, options) ->

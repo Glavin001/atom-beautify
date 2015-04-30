@@ -183,7 +183,6 @@ module.exports = class Beautifier
     Constructor to setup beautifer
     ###
     constructor: () ->
-
         # Set supported languages
         @languages = _.keys(@options)
         # TODO: Remove default/catch all key, `_`

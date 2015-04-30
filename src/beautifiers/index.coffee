@@ -100,61 +100,76 @@ module.exports = class Beautifiers
             fileExtension = path.extname(filePath)
             languages = @languages.getLanguages({grammar, fileExtension})
 
-            # TODO: select appropriate language
-            language = languages[0]
-
-            # Beautify!
-            unsupportedGrammar = false
-            if atom.config.get("atom-beautify.disabledLanguages")?.indexOf(language) > - 1
-              return resolve(null)
-
-            # Options for Language
-            options = @getOptions(language.namespace, allOptions) || {}
-            # Support fallback for options
-            if language.fallback?
-                for fallback in language.fallback
-                    # Merge current options on top of fallback options
-                    options = _.merge(@getOptions(fallback, allOptions) || {}, options)
-
-            # Get Beautifiers
-            # console.log(grammar, language)
-            beautifiers = @getBeautifiers(language.name, options)
-            # console.log('beautifiers', beautifiers)
-
-            # Check if unsupported grammar
-            if beautifiers.length < 1
+            # Check if unsupported language
+            if languages.length < 1
                 unsupportedGrammar = true
             else
-                # TODO: select beautifier
-                beautifier = beautifiers[0]
+                # TODO: select appropriate language
+                language = languages[0]
 
-                # Transform options, if applicable
-                beautifierOptions = beautifier.options[language.name]
-                if typeof beautifierOptions is "boolean"
-                    if beautifierOptions isnt true
-                        # Disable options
-                        options = {}
-                else if typeof beautifierOptions is "object"
-                    # Transform the options
-                    transformedOptions = {}
-                    for field, op of beautifierOptions
-                        if typeof op is "string"
-                            # Rename
-                            transformedOptions[field] = options[op]
-                        else if typeof op is "function"
-                            # Transform
-                            transformedOptions[field] = op(options)
-                        else if typeof op is "boolean"
-                            # Enable/Disable
-                            if op is true
-                                transformedOptions[field] = options[field]
-                    # Replace old options with new transformed options
-                    options = transformedOptions
+                # Beautify!
+                unsupportedGrammar = false
+                if atom.config.get("atom-beautify.disabledLanguages")?.indexOf(language) > - 1
+                  return resolve(null)
+
+                # Options for Language
+                options = @getOptions(language.namespace, allOptions) || {}
+                # Support fallback for options
+                if language.fallback?
+                    for fallback in language.fallback
+                        # Merge current options on top of fallback options
+                        options = _.merge(@getOptions(fallback, allOptions) || {}, options)
+
+                # Get Beautifiers
+                # console.log(grammar, language)
+                beautifiers = @getBeautifiers(language.name, options)
+                # console.log('beautifiers', beautifiers)
+
+                # Check if unsupported language
+                if beautifiers.length < 1
+                    unsupportedGrammar = true
                 else
-                    console.warn("Unsupported Language options: ", beautifierOptions)
-                beautifier.beautify(text, language.name, options)
-                .then(resolve)
-                .catch(reject)
+                    # TODO: select beautifier
+                    beautifier = beautifiers[0]
+
+                    transformOptions = (beautifier, languageName, options) ->
+                        # Transform options, if applicable
+                        beautifierOptions = beautifier.options[languageName]
+                        if typeof beautifierOptions is "boolean"
+                            if beautifierOptions isnt true
+                                # Disable options
+                                options = {}
+                        else if typeof beautifierOptions is "object"
+                            # Transform the options
+                            transformedOptions = {}
+                            # Transform for fields
+                            for field, op of beautifierOptions
+                                if typeof op is "string"
+                                    # Rename
+                                    transformedOptions[field] = options[op]
+                                else if typeof op is "function"
+                                    # Transform
+                                    transformedOptions[field] = op(options)
+                                else if typeof op is "boolean"
+                                    # Enable/Disable
+                                    if op is true
+                                        transformedOptions[field] = options[field]
+                            # Replace old options with new transformed options
+                            options = transformedOptions
+                        else
+                            console.warn("Unsupported Language options: ", beautifierOptions)
+                        return options
+
+                    # Apply Beautifier / global option transformations
+                    if beautifier.options._?
+                        options = transformOptions(beautifier, "_", options)
+                    # Apply language-specific option transformations
+                    options = transformOptions(beautifier, language.name, options)
+
+                    # Beautify text with language options
+                    beautifier.beautify(text, language.name, options)
+                    .then(resolve)
+                    .catch(reject)
 
             # Check if Analytics is enabled
             if atom.config.get("atom-beautify.analytics")
@@ -181,7 +196,7 @@ module.exports = class Beautifiers
               if atom.config.get("atom-beautify.muteUnsupportedLanguageErrors")
                 return resolve(null)
               else
-                reject(new Error("Unsupported language for grammar '#{grammar}'."))
+                reject(new Error("Unsupported language for grammar '#{grammar}' with extension '#{fileExtension}'."))
 
         )
 
