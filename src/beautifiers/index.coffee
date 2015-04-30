@@ -95,8 +95,6 @@ module.exports = class Beautifiers
     # getBeautifiersForExtension: (extension) ->
 
     beautify: (text, allOptions, grammar, filePath) ->
-        # console.log(@)
-
         return new Promise((resolve, reject) =>
 
             # Get language
@@ -112,15 +110,12 @@ module.exports = class Beautifiers
               return resolve(null)
 
             # Options for Language
-            console.log('allOptions', allOptions)
             options = @getOptions(language.namespace, allOptions) || {}
             # Support fallback for options
             if language.fallback?
                 for fallback in language.fallback
                     # Merge current options on top of fallback options
-                    console.log(fallback)
                     options = _.merge(@getOptions(fallback, allOptions) || {}, options)
-            console.log('options', options)
 
             # Get Beautifiers
             # console.log(grammar, language)
@@ -136,7 +131,6 @@ module.exports = class Beautifiers
 
                 # Transform options, if applicable
                 beautifierOptions = beautifier.options[language.name]
-                console.log('beautifierOptions', beautifierOptions)
                 if typeof beautifierOptions is "boolean"
                     if beautifierOptions isnt true
                         # Disable options
@@ -158,8 +152,7 @@ module.exports = class Beautifiers
                     # Replace old options with new transformed options
                     options = transformedOptions
                 else
-                    console.warn("Unsupported Language options: ",beautifierOptions)
-                console.log('beautify!', beautifier, language, options)
+                    console.warn("Unsupported Language options: ", beautifierOptions)
                 beautifier.beautify(text, language.name, options)
                 .then(resolve)
                 .catch(reject)

@@ -52,16 +52,18 @@ module.exports = class Beautifier
     ###
     Create temporary file
     ###
-    tempFile: (name = "atom-beautify-temp", contents) ->
+    tempFile: (name = "atom-beautify-temp", contents = "") ->
         return new Promise((resolve, reject) ->
             # create temp file
             temp.open(name, (err, info) ->
-                # console.log(name, info)
+                console.log(name, err, info)
                 return reject(err) if err
-                fs.write(info.fd, contents) if contents?
-                fs.close(info.fd, (err) ->
+                fs.write(info.fd, contents, (err) ->
                     return reject(err) if err
-                    resolve(info.path)
+                    fs.close(info.fd, (err) ->
+                        return reject(err) if err
+                        resolve(info.path)
+                    )
                 )
             )
         )
@@ -76,48 +78,100 @@ module.exports = class Beautifier
         )
 
     ###
+    Get Shell Environment variables
+
+    Special thank you to @ioquatix
+    See https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63
+    ###
+    _envCache: null
+    _envCacheDate: null
+    _envCacheExpiry: 10000 # 10 seconds
+    getShellEnvironment: ->
+        return new @Promise((resolve, reject) =>
+            # Check Cache
+            if @_envCache? and @_envCacheDate?
+                # Check if Cache is old
+                if (new Date() - @_envCacheDate) < @_envCacheExpiry
+                    # Still fresh
+                    return resolve(@_envCache)
+
+            # Check if Windows
+            isWin = /^win/.test(process.platform)
+            if isWin
+                # Windows
+                # Use default
+                resolve(process.env)
+            else
+                # Mac & Linux
+                # I tried using ChildProcess.execFile but there is no way to set detached and
+                # this causes the child shell to lock up.
+                # This command runs an interactive login shell and
+                # executes the export command to get a list of environment variables.
+                # We then use these to run the script:
+                child = spawn process.env.SHELL, ['-ilc', 'env'],
+                  # This is essential for interactive shells, otherwise it never finishes:
+                  detached: true,
+                  # We don't care about stdin, stderr can go out the usual way:
+                  stdio: ['ignore', 'pipe', process.stderr]
+                # We buffer stdout:
+                buffer = ''
+                child.stdout.on 'data', (data) -> buffer += data
+                # When the process finishes, extract the environment variables and pass them to the callback:
+                child.on 'close', (code, signal) =>
+                    if code isnt 0
+                        return reject(new Error("Could not get Shell Environment. Exit code: "+code+", Signal: "+signal))
+                    environment = {}
+                    for definition in buffer.split('\n')
+                        [key, value] = definition.split('=', 2)
+                        environment[key] = value if key != ''
+                    # Cache Environment
+                    @_envCache = environment
+                    @_envCacheDate = new Date()
+                    resolve(environment)
+          )
+
+    ###
     Run command-line interface command
     ###
     run: (executable, args) ->
-        console.log('run', arguments)
-        # TODO: Get $PATH
         # Resolve executable
         Promise.resolve(executable)
-        .then((exe) ->
-            console.log('exe', exe)
+        .then((exe) =>
             # Flatten args first
             args = _.flatten(args)
-            console.log('flat args', args)
             # Resolve all args
             Promise.all(args)
-            .then((args) ->
-                return new Promise((resolve, reject) ->
-                    console.log('resolved args', args)
-                    # Remove null values
+            .then((args) =>
+                return new Promise((resolve, reject) =>
+                    # Remove undefined/null values
                     args = _.without(args, undefined)
                     args = _.without(args, null)
-                    console.log('args without undefined/null', args)
-                    # Spawn command
-                    stdout = ""
-                    stderr = ""
-                    options = {
-                        env: {
-                            PATH: "/Users/glavin/.rvm/gems/ruby-1.9.3-p551/bin:/Users/glavin/.rvm/gems/ruby-1.9.3-p551@global/bin:/Users/glavin/.rvm/rubies/ruby-1.9.3-p551/bin:/Users/glavin/.nvm/v0.10.32/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Developer/android-sdk-macosx/tools:/Developer/android-sdk-macosx/platform-tools:/Users/glavin/pear/bin:/Users/glavin/gocode/bin:/Users/glavin/.rvm/bin"
+                    # Get PATH and other environment variables
+                    @getShellEnvironment()
+                    .then((env) ->
+                        # Spawn command
+                        stdout = ""
+                        stderr = ""
+                        options = {
+                            env: env
                         }
-                    }
-                    console.log('spawn', exe, args)
-                    cmd = spawn(exe, args, options)
-                    # add a 'data' event listener for the spawn instance
-                    cmd.stdout.on('data', (data) -> stdout += data )
-                    cmd.stderr.on('data', (data) -> stderr += data )
-                    # when the spawn child process exits, check if there were any errors and close the writeable stream
-                    cmd.on('exit', (code) ->
-                        console.log('spawn done', code, stderr, stdout)
-                        # If return code is not 0 then error occured
-                        if code isnt 0
-                            reject(stderr)
-                        else
-                            resolve(stdout)
+                        # console.log('spawn', exe, args)
+                        cmd = spawn(exe, args, options)
+                        # add a 'data' event listener for the spawn instance
+                        cmd.stdout.on('data', (data) -> stdout += data )
+                        cmd.stderr.on('data', (data) -> stderr += data )
+                        # when the spawn child process exits, check if there were any errors and close the writeable stream
+                        cmd.on('exit', (code) ->
+                            # console.log('spawn done', code, stderr, stdout)
+                            # If return code is not 0 then error occured
+                            if code isnt 0
+                                reject(stderr)
+                            else
+                                resolve(stdout)
+                        )
+                        cmd.on('error', (err) ->
+                            reject(err)
+                        )
                     )
                 )
             )
