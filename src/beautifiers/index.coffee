@@ -101,20 +101,26 @@ module.exports = class Beautifiers
 
             # Get language
             fileExtension = path.extname(filePath)
-            languages = @languages.getLanguages(grammar, fileExtension)
+            languages = @languages.getLanguages({grammar, fileExtension})
 
             # TODO: select appropriate language
             language = languages[0]
 
-            # Options for Language
-            # TODO: support fallback for options
-            options = @getOptions(language.namespace, allOptions) || {}
-            console.log('options', options)
-
             # Beautify!
             unsupportedGrammar = false
-            if atom.config.get("atom-beautify.disabledLanguages")?.indexOf(grammar) > - 1
+            if atom.config.get("atom-beautify.disabledLanguages")?.indexOf(language) > - 1
               return resolve(null)
+
+            # Options for Language
+            console.log('allOptions', allOptions)
+            options = @getOptions(language.namespace, allOptions) || {}
+            # Support fallback for options
+            if language.fallback?
+                for fallback in language.fallback
+                    # Merge current options on top of fallback options
+                    console.log(fallback)
+                    options = _.merge(@getOptions(fallback, allOptions) || {}, options)
+            console.log('options', options)
 
             # Get Beautifiers
             # console.log(grammar, language)
@@ -127,6 +133,32 @@ module.exports = class Beautifiers
             else
                 # TODO: select beautifier
                 beautifier = beautifiers[0]
+
+                # Transform options, if applicable
+                beautifierOptions = beautifier.options[language.name]
+                console.log('beautifierOptions', beautifierOptions)
+                if typeof beautifierOptions is "boolean"
+                    if beautifierOptions isnt true
+                        # Disable options
+                        options = {}
+                else if typeof beautifierOptions is "object"
+                    # Transform the options
+                    transformedOptions = {}
+                    for field, op of beautifierOptions
+                        if typeof op is "string"
+                            # Rename
+                            transformedOptions[field] = options[op]
+                        else if typeof op is "function"
+                            # Transform
+                            transformedOptions[field] = op(options)
+                        else if typeof op is "boolean"
+                            # Enable/Disable
+                            if op is true
+                                transformedOptions[field] = options[field]
+                    # Replace old options with new transformed options
+                    options = transformedOptions
+                else
+                    console.warn("Unsupported Language options: ",beautifierOptions)
                 console.log('beautify!', beautifier, language, options)
                 beautifier.beautify(text, language.name, options)
                 .then(resolve)
@@ -360,7 +392,7 @@ module.exports = class Beautifiers
           # Check to see if config file uses nested object format to split up js/css/html options
           for key of currOptions
             # Check if is supported language
-            if _.indexOf(self.languages, key) >= 0 and typeof currOptions[key] is "object" # Check if nested object (more options in value)
+            if _.indexOf(self.languages.namespaces, key) >= 0 and typeof currOptions[key] is "object" # Check if nested object (more options in value)
               containsNested = true
               break # Found, break out of loop, no need to continue
           # console.log(containsNested, currOptions);

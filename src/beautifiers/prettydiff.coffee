@@ -8,12 +8,47 @@ module.exports = class PrettyDiff extends Beautifier
     options: {
         CSV: true
         HTML: true
-        JavaScript: true
-        CSS: true
-        SCSS: true
-        Sass: true
+        JavaScript:
+            inchar: "indent_char"
+            insize: "indent_size"
+            alphasort: (options) ->
+                options.alphasort or false
+            preserve: (options) ->
+                if (options.preserve_newlines is true ) then \
+                    "all" else "none"
+        CSS:
+            inchar: "indent_char"
+            insize: "indent_size"
+            alphasort: (options) ->
+                options.alphasort or false
+            preserve: (options) ->
+                if (options.preserve_newlines is true ) then \
+                    "all" else "none"
+        SCSS:
+            inchar: "indent_char"
+            insize: "indent_size"
+            alphasort: (options) ->
+                options.alphasort or false
+            preserve: (options) ->
+                if (options.preserve_newlines is true ) then \
+                    "all" else "none"
+        Sass:
+            inchar: "indent_char"
+            insize: "indent_size"
+            alphasort: (options) ->
+                options.alphasort or false
+            preserve: (options) ->
+                if (options.preserve_newlines is true ) then \
+                    "all" else "none"
         JSON: true
-        TSS: true
+        TSS:
+            inchar: "indent_char"
+            insize: "indent_size"
+            alphasort: (options) ->
+                options.alphasort or false
+            preserve: (options) ->
+                if (options.preserve_newlines is true ) then \
+                    "all" else "none"
         LESS: {
             inchar: "indent_char"
             insize: "indent_size"
@@ -40,7 +75,7 @@ module.exports = class PrettyDiff extends Beautifier
                     lang = "html"
                 when "JavaScript", "JSON", "JSX"
                     lang = "javascript"
-                when "CSS", "LESS", "SCSS", "SASS"
+                when "CSS", "LESS", "SCSS", "Sass"
                     lang = "css"
                 when "TSS"
                     lang = "tss"
@@ -57,6 +92,7 @@ module.exports = class PrettyDiff extends Beautifier
 
             # Merge args intos options
             _.merge(options, args)
+            console.log('prettydiff args', args, options)
 
             # Beautify
             output = prettydiff.api(options)

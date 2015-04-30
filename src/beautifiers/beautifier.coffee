@@ -84,14 +84,19 @@ module.exports = class Beautifier
         # Resolve executable
         Promise.resolve(executable)
         .then((exe) ->
+            console.log('exe', exe)
             # Flatten args first
             args = _.flatten(args)
+            console.log('flat args', args)
             # Resolve all args
             Promise.all(args)
             .then((args) ->
                 return new Promise((resolve, reject) ->
+                    console.log('resolved args', args)
                     # Remove null values
+                    args = _.without(args, undefined)
                     args = _.without(args, null)
+                    console.log('args without undefined/null', args)
                     # Spawn command
                     stdout = ""
                     stderr = ""
@@ -107,6 +112,7 @@ module.exports = class Beautifier
                     cmd.stderr.on('data', (data) -> stderr += data )
                     # when the spawn child process exits, check if there were any errors and close the writeable stream
                     cmd.on('exit', (code) ->
+                        console.log('spawn done', code, stderr, stdout)
                         # If return code is not 0 then error occured
                         if code isnt 0
                             reject(stderr)

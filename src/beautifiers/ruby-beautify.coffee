@@ -8,7 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class RubyBeautify extends Beautifier
 
     options: {
-        SQL: true
+        Ruby: true
     }
 
     cli: (options) ->

@@ -139,14 +139,13 @@ describe "BeautifyLanguages", ->
                           # Check for beautification errors
                           if text isnt expectedContents
                             #   console.warn(allOptions, text, expectedContents)
-                              fileName = originalTestPath
+                              fileName = expectedTestPath
                               oldStr=text
                               newStr=expectedContents
-                              oldHeader="original"
+                              oldHeader="beautified"
                               newHeader="expected"
                               diff = JsDiff.createPatch(fileName, oldStr, newStr, oldHeader, newHeader)
                               throw new Error("Beautifier output does not match expected output:\n"+diff)
-                              #expect(text).toEqual expectedContents
                           # All done!
                           beautifyCompleted = true
 
