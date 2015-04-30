@@ -42,16 +42,5 @@ module.exports = {
             default: "lower"
             description: "Change case of identifiers"
             enum: ["lower","upper","capitalize"]
-        sqlformat_path:
-            type: 'string'
-            default: ""
-            description: "Path to the `sqlformat` CLI executable"
-
-
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
 
 }

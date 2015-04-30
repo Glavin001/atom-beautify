@@ -15,14 +15,9 @@ module.exports = {
     Supported extensions
     ###
     extensions: [
-        "hbs"
+        "mustache"
     ]
 
     options: []
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
 
 }

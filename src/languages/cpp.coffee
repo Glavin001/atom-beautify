@@ -15,26 +15,22 @@ module.exports = {
     ###
     extensions: [
         "h"
+        "hh"
+        "cc"
         "cpp"
+        "cxx"
+        "C"
+        "c++"
+        "hpp"
+        "hxx"
+        "h++"
     ]
 
     options:
-        # C++
-        cpp_uncrustifyPath:
-            title: "C++ Uncrustify Path"
-            type: 'string'
-            default: ""
-            description: "Path to the `uncrustify` CLI executable"
-        cpp_configPath:
+        configPath:
             title: "C++ Config Path"
             type: 'string'
             default: ""
             description: "Path to uncrustify config file. i.e. uncrustify.cfg"
-
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
 
 }

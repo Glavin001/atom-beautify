@@ -67,7 +67,6 @@ module.exports = class Beautifiers
     Constructor
     ###
     constructor: ->
-        console.log(@)
         @beautifiers = _.map(@beautifierNames, (name) ->
             Beautifier = require("./#{name}")
             new Beautifier()

@@ -18,9 +18,4 @@ module.exports = {
         "json"
     ]
 
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
-
 }

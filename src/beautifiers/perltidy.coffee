@@ -18,7 +18,7 @@ module.exports = class PerlTidy extends Beautifier
           return options.perltidy_path
 
     beautify: (text, language, options) ->
-        @run(@cli(options), [
+        @run("perltidy", [
             '--standard-output'
             '--standard-error-output'
             '--quiet'

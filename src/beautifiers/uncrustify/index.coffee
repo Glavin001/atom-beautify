@@ -21,17 +21,8 @@ module.exports = class Uncrustify extends Beautifier
         Java: true
     }
 
-    cli: (options) ->
-        uncrustifyPath = options.uncrustifyPath
-        if uncrustifyPath
-            # Use path given by user
-            "\"#{uncrustifyPath}\""
-        else
-            # Use command available in $PATH
-            "uncrustify"
-
     beautify: (text, language, options) ->
-        console.log('uncrustify.beautify', language, options)
+        # console.log('uncrustify.beautify', language, options)
         return new @Promise((resolve, reject) =>
             configPath = options.configPath
             unless configPath
@@ -75,7 +66,7 @@ module.exports = class Uncrustify extends Beautifier
                 when "Java"
                     lang = "JAVA"
 
-            @run(@cli(options), [
+            @run("uncrustify", [
                     "-c"
                     configPath
                     "-f"

@@ -92,7 +92,6 @@ module.exports = class PrettyDiff extends Beautifier
 
             # Merge args intos options
             _.merge(options, args)
-            console.log('prettydiff args', args, options)
 
             # Beautify
             output = prettydiff.api(options)

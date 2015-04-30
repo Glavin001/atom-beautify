@@ -11,17 +11,8 @@ module.exports = class sqlformat extends Beautifier
         SQL: true
     }
 
-    cli: (options) ->
-        path = options.sqlformat_path
-        if path
-            # Use absolute path
-            "python \"#{path}\""
-        else
-            # Use command available in $PATH
-            "sqlformat"
-
     beautify: (text, language, options) ->
-        @run(@cli(options), [
+        @run("sqlformat", [
                 @tempFile("input", text)
                 "--reindent"
                 "--indent_width=#{options.indent_size}" if options.indent_size?

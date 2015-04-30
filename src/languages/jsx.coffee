@@ -18,9 +18,4 @@ module.exports = {
         "jsx"
     ]
 
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
-
 }

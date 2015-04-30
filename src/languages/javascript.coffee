@@ -105,9 +105,4 @@ module.exports = {
             default: false
             description: "End output with newline"
 
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
-
 }

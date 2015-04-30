@@ -18,9 +18,4 @@ module.exports = {
         "sass"
     ]
 
-    ###
-    Selected beautifier
-    ###
-    beautifier: "PrettyDiff"
-
 }

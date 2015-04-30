@@ -11,18 +11,8 @@ module.exports = class HTMLBeautifier extends Beautifier
         ERB: true
     }
 
-    cli: (options) ->
-        htmlBeautifierPath = options.htmlbeautifier_path # jshint ignore: line
-        #
-        if htmlBeautifierPath
-            # Use absolute path
-            htmlBeautifierPath
-        else
-            # Use command available in $PATH
-            "htmlbeautifier"
-
     beautify: (text, language, options) ->
-        @run(@cli(options), [
+        @run("htmlbeautifier", [
             '<'
             @tempFile("input", text)
             '>'

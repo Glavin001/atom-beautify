@@ -38,11 +38,6 @@ module.exports = class Beautifier
     languages: null
 
     ###
-    Filter beautifier
-    ###
-    filter: () ->
-
-    ###
     Show deprecation warning to user.
 
     TODO: implement this
@@ -56,7 +51,7 @@ module.exports = class Beautifier
         return new Promise((resolve, reject) ->
             # create temp file
             temp.open(name, (err, info) ->
-                console.log(name, err, info)
+                # console.log(name, err, info)
                 return reject(err) if err
                 fs.write(info.fd, contents, (err) ->
                     return reject(err) if err

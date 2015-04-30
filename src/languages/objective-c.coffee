@@ -16,27 +16,16 @@ module.exports = {
     Supported extensions
     ###
     extensions: [
-
+        "m"
+        "mm"
+        "h"
     ]
 
     options:
-        # Objective-C
-        objectivec_uncrustifyPath:
-            title: "Objective-C Uncrustify Path"
-            type: 'string'
-            default: ""
-            description: "Path to the `uncrustify` CLI executable"
-        objectivec_configPath:
+        configPath:
             title: "Objective-C Config Path"
             type: 'string'
             default: ""
             description: "Path to uncrustify config file. i.e. uncrustify.cfg"
-
-
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
 
 }

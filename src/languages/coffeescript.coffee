@@ -18,9 +18,4 @@ module.exports = {
         "coffee"
     ]
 
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
-
 }

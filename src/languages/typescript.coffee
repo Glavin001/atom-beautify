@@ -15,11 +15,7 @@ module.exports = {
     Supported extensions
     ###
     extensions: [
+        "ts"
     ]
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
 
 }

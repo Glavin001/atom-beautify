@@ -20,9 +20,4 @@ module.exports = {
 
     options: []
 
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
-
 }

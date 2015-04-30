@@ -51,10 +51,4 @@ module.exports = {
                 "Retain empty lines. "+
                 "Consecutive empty lines will be converted to a single empty line."
 
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
-
 }

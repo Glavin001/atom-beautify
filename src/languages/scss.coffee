@@ -18,9 +18,4 @@ module.exports = {
         "scss"
     ]
 
-    ###
-    Selected beautifier
-    ###
-    beautifier: "PrettyDiff"
-
 }

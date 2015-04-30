@@ -18,19 +18,9 @@ module.exports = {
     ]
 
     options:
-        # Java
-        java_uncrustifyPath:
-            type: 'string'
-            default: ""
-            description: "Path to the `uncrustify` CLI executable"
-        java_configPath:
+        configPath:
             type: 'string'
             default: ""
             description: "Path to uncrustify config file. i.e. uncrustify.cfg"
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
 
 }

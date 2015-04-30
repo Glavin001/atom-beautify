@@ -25,12 +25,6 @@ module.exports = {
     ]
 
     options:
-        # HTML
-        htmlbeautifier_path:
-            title: "htmlbeautifier path"
-            type: 'string'
-            default: ""
-            description: "Path to the `htmlbeautifier` CLI executable"
         indent_inner_html:
             type: 'boolean'
             default: false
@@ -87,11 +81,5 @@ module.exports = {
             type: 'boolean'
             default: false
             description: "End output with newline"
-
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "JS Beautifier"
 
 }

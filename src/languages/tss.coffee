@@ -15,11 +15,8 @@ module.exports = {
     ###
     Supported extensions
     ###
-    extensions: []
-
-    ###
-    Selected beautifier
-    ###
-    beautifier: "PrettyDiff"
+    extensions: [
+        "tss"
+    ]
 
 }
