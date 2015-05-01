@@ -84,7 +84,7 @@ module.exports = class Beautifiers
         langOptions = {}
         for lang in @languages.languages
             langOptions[lang.name] ?= {}
-            options = _.cloneDeep(langOptions[lang.name])
+            options = langOptions[lang.name]
             for field, op of lang.options
                 if not op.title?
                     op.title = _plus.uncamelcase(field).split('.')
@@ -143,6 +143,7 @@ module.exports = class Beautifiers
             lang = @languages.getLanguages(name:langName)?[0]
             # Use the namespace from language as key prefix
             prefix = lang.namespace
+            # console.log(langName, lang, prefix, ops)
             # Iterate over all language options and rename fields
             for field, op of ops
                 # Rename field
@@ -159,7 +160,7 @@ module.exports = class Beautifiers
             # console.log('language options', language, languageOptions, result)
             return _.reduce(languageOptions, ((result, optionDef, optionName) ->
                 # TODO: Add supported beautifiers to option description
-                # console.log('optionDef', optionDef)
+                # console.log('optionDef', optionDef, optionName)
                 if optionDef.beautifiers.length > 0
                     # optionDef.title = "#{optionDef.title} - Supported by #{optionDef.beautifiers.join(', ')}"
                     optionDef.description = "#{optionDef.description} (Supported by #{optionDef.beautifiers.join(', ')})"
