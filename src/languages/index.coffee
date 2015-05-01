@@ -24,7 +24,9 @@ module.exports = class Languages
     "coffeescript"
     "cpp"
     "css"
+    "csv"
     "d"
+    "ejs"
     "erb"
     "handlebars"
     "html"
@@ -44,10 +46,12 @@ module.exports = class Languages
     "ruby"
     "sass"
     "scss"
+    "spacebars"
     "sql"
     "tss"
     "typescript"
     "vala"
+    "xml"
   ]
 
   ###

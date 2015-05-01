@@ -9,7 +9,7 @@ expandHomeDir = require('expand-home-dir')
 _ = require('lodash')
 
 module.exports = class Uncrustify extends Beautifier
-
+    name: "Uncrustify"
     options: {
         C: true
         "C++": true

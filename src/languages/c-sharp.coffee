@@ -2,7 +2,6 @@ module.exports = {
 
     name: "C#"
     namespace: "cs"
-    fallback: []
 
     ###
     Supported Grammars
@@ -20,7 +19,7 @@ module.exports = {
 
     options:
         configPath:
-            title: "C# Config Path"
+            title: "Config Path"
             type: 'string'
             default: ""
             description: "Path to uncrustify config file. i.e. uncrustify.cfg"

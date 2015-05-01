@@ -7,6 +7,8 @@ Beautifier = require('./beautifier')
 
 module.exports = class autopep8 extends Beautifier
 
+    name: "autopep8"
+
     options: {
         Python: true
     }

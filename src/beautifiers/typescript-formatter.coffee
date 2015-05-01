@@ -2,7 +2,7 @@
 Beautifier = require('./beautifier')
 
 module.exports = class TypeScriptFormatter extends Beautifier
-
+    name: "TypeScript Formatter"
     options: {
         TypeScript: true
     }

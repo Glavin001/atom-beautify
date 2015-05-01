@@ -4,20 +4,25 @@ Beautifier = require('./beautifier')
 _ = require('lodash')
 
 module.exports = class PrettyDiff extends Beautifier
-
+    name: "Pretty Diff"
     options: {
         # Apply these options first / globally, for all languages
         _:
             inchar: "indent_char"
             insize: "indent_size"
-            alphasort: (options) ->
-                options.alphasort or false
-            preserve: (options) ->
-                if (options.preserve_newlines is true ) then \
+            alphasort: (alphasort) ->
+                alphasort or false
+            preserve: ['preserve_newlines', (preserve_newlines) ->
+                if (preserve_newlines is true ) then \
                     "all" else "none"
+            ]
         # Apply language-specific options
         CSV: true
+        ERB: true
+        EJS: true
         HTML: true
+        XML: true
+        Spacebars: true
         JavaScript: true
         CSS: true
         SCSS: true
@@ -36,7 +41,10 @@ module.exports = class PrettyDiff extends Beautifier
             switch language
                 when "CSV"
                     lang = "csv"
-                when "EJS Template", "ERB Template", "Handlebars", "JSTL", "Markup (non-specific)", "Mustache Template", "SGML", "Spacebars Template", "XML"
+                when "EJS", "ERB", \
+                "Handlebars", "Mustache", \
+                # "Markup", "JSTL", "SGML", \ # Currently unsupported
+                "Spacebars", "XML"
                     lang = "markup"
                 when "HTML"
                     lang = "html"
@@ -46,8 +54,8 @@ module.exports = class PrettyDiff extends Beautifier
                     lang = "css"
                 when "TSS"
                     lang = "tss"
-                when "Plain text"
-                    lang = "text"
+                # when "Plain text"
+                #     lang = "text"
                 else
                     lang = "auto"
 

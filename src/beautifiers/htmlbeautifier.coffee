@@ -6,7 +6,7 @@ Requires https://github.com/threedaymonk/htmlbeautifier
 Beautifier = require('./beautifier')
 
 module.exports = class HTMLBeautifier extends Beautifier
-
+    name: "HTML Beautifier"
     options: {
         ERB: true
     }

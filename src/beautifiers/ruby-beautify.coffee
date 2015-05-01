@@ -6,7 +6,8 @@ Requires https://github.com/erniebrodeur/ruby-beautify
 Beautifier = require('./beautifier')
 
 module.exports = class RubyBeautify extends Beautifier
-
+    name: "Ruby Beautify"
+    
     options: {
         Ruby: true
     }

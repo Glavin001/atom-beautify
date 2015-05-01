@@ -47,8 +47,7 @@ module.exports = {
         preserve_newlines:
             type: 'boolean'
             default: false
-            description: "(Only LESS/SASS/SCSS with Prettydiff) "+
-                "Retain empty lines. "+
+            description: "Retain empty lines. "+
                 "Consecutive empty lines will be converted to a single empty line."
 
 }

@@ -6,7 +6,8 @@ Requires https://github.com/FriendsOfPHP/PHP-CS-Fixer
 Beautifier = require('./beautifier')
 
 module.exports = class PHPCSFixer extends Beautifier
-
+    name: "PHP-CS-Fixer"
+    
     options: {
         PHP: true
     }

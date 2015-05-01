@@ -1,4 +1,5 @@
 _ = require('lodash')
+_plus = require('underscore-plus')
 Promise = require('bluebird')
 Languages = require('../languages/')
 path = require('path')
@@ -67,17 +68,113 @@ module.exports = class Beautifiers
     Constructor
     ###
     constructor: ->
+        # Load beautifiers
         @beautifiers = _.map(@beautifierNames, (name) ->
             Beautifier = require("./#{name}")
             new Beautifier()
         )
+        # Build options from @beautifiers and @languages
         @options = @buildOptionsForBeautifiers(@beautifiers)
 
     ###
 
     ###
     buildOptionsForBeautifiers: (beautifiers) ->
-        []
+        # Get all Options for Languages
+        langOptions = {}
+        for lang in @languages.languages
+            langOptions[lang.name] ?= {}
+            options = _.cloneDeep(langOptions[lang.name])
+            for field, op of lang.options
+                if not op.title?
+                    op.title = _plus.uncamelcase(field).split('.')
+                                    .map(_plus.capitalize).join(' ')
+                op.title = "#{lang.name} - #{op.title}"
+                # Init field for supported beautifiers
+                op.beautifiers = []
+                # Add option
+                options[field] = op
+
+        # Find supported beautifiers for each language
+        for beautifier in beautifiers
+            beautifierName = beautifier.name
+            # Iterate over supported languages
+            for languageName, options of beautifier.options
+                laOp = langOptions[languageName]
+                # Is a valid Language name
+                if typeof options is "boolean"
+                    # Enable / disable all options
+                    if options is true
+                        # Beautifier supports all options for this language
+                        if laOp
+                            # console.log('add supported beautifier', languageName, beautifierName)
+                            for field, op of laOp
+                                op.beautifiers.push(beautifierName)
+                        else
+                            console.warn("Could not find options for language: #{languageName}")
+                else if typeof options is "object"
+                    # Iterate over beautifier's options for this language
+                    for field, op of options
+                        if typeof op is "boolean"
+                            # Transformation
+                            if op is true
+                                laOp?[field]?.beautifiers.push(beautifierName)
+                        else if typeof op is "string"
+                            # Rename
+                            # console.log('support option with rename:', field, op, languageName, beautifierName, langOptions)
+                            laOp?[op]?.beautifiers.push(beautifierName)
+                        else if typeof op is "function"
+                            # Transformation
+                            laOp?[field]?.beautifiers.push(beautifierName)
+                        else if _.isArray(op)
+                            # Complex Function
+                            [fields..., fn] = op
+                            # Add beautifier support to all required fields
+                            for f in fields
+                                # Add beautifier to required field
+                                laOp?[f]?.beautifiers.push(beautifierName)
+                        else
+                            # Unsupported
+                            console.warn("Unsupported option:", beautifierName, languageName, field, op, langOptions)
+
+        # Prefix language's options with namespace
+        for langName, ops of langOptions
+            # Get language with name
+            lang = @languages.getLanguages(name:langName)?[0]
+            # Use the namespace from language as key prefix
+            prefix = lang.namespace
+            # Iterate over all language options and rename fields
+            for field, op of ops
+                # Rename field
+                delete ops[field]
+                ops["#{prefix}_#{field}"] = op
+
+        # Flatten Options per language to array of all options
+        allOptions = _.values(langOptions)
+        # console.log('allOptions', allOptions)
+        # Flatten array of objects to single object for options
+        flatOptions = _.reduce(allOptions, ((result, languageOptions, language) ->
+            # Iterate over fields (keys) in Language's Options
+            # and merge them into single result
+            # console.log('language options', language, languageOptions, result)
+            return _.reduce(languageOptions, ((result, optionDef, optionName) ->
+                # TODO: Add supported beautifiers to option description
+                # console.log('optionDef', optionDef)
+                if optionDef.beautifiers.length > 0
+                    # optionDef.title = "#{optionDef.title} - Supported by #{optionDef.beautifiers.join(', ')}"
+                    optionDef.description = "#{optionDef.description} (Supported by #{optionDef.beautifiers.join(', ')})"
+                else
+                    # optionDef.title = "(DEPRECATED) #{optionDef.title}"
+                    optionDef.description = "#{optionDef.description} (Not supported by any beautifiers)"
+                if result[optionName]?
+                    console.warn("Duplicate option detected: ", optionName, optionDef)
+                result[optionName] = optionDef
+                return result
+            ), result)
+        ), {})
+
+        # console.log('flatOptions', flatOptions)
+        return flatOptions
 
     ###
 
@@ -149,20 +246,26 @@ module.exports = class Beautifiers
                                     transformedOptions[field] = options[op]
                                 else if typeof op is "function"
                                     # Transform
-                                    transformedOptions[field] = op(options)
+                                    transformedOptions[field] = op(options[field])
                                 else if typeof op is "boolean"
                                     # Enable/Disable
                                     if op is true
                                         transformedOptions[field] = options[field]
+                                else if _.isArray(op)
+                                    # Complex function
+                                    [fields..., fn] = op
+                                    vals = _.map(fields, (f) ->
+                                        return options[f]
+                                    )
+                                    # Apply function
+                                    transformedOptions[field] = fn.apply(null, vals)
+
                             # Replace old options with new transformed options
                             options = transformedOptions
                         else
                             console.warn("Unsupported Language options: ", beautifierOptions)
                         return options
 
-                    # Apply Beautifier / global option transformations
-                    if beautifier.options._?
-                        options = transformOptions(beautifier, "_", options)
                     # Apply language-specific option transformations
                     options = transformOptions(beautifier, language.name, options)
 
@@ -186,10 +289,12 @@ module.exports = class Beautifiers
                 userId: atom.config.get("atom-beautify._analyticsUserId")
                 event: "Beautify"
                 properties:
+                  language: language.name
                   grammar: grammar
+                  extension: fileExtension
                   version: version
                   options: allOptions
-                  label: grammar
+                  label: language.name
                   category: version
             #
             if unsupportedGrammar

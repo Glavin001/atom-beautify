@@ -2,7 +2,8 @@
 Beautifier = require('./beautifier')
 
 module.exports = class JSBeautify extends Beautifier
-
+    name: "JS Beautify"
+    
     options: {
         HTML: true
         Handlebars: true

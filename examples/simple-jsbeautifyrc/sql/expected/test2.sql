@@ -1,4 +1,4 @@
-INSERT INTO client (host, description, created_at)
+INSERT INTO client (HOST, description, created_at)
 VALUES('hallpclnx',
        'My linux machine',
        CURRENT_TIMESTAMP);
@@ -25,7 +25,7 @@ VALUES(2,
        1);
 
 
-INSERT INTO client (host, description, created_at)
+INSERT INTO client (HOST, description, created_at)
 VALUES('shedpclnx',
        'My shed linux machine',
        CURRENT_TIMESTAMP);

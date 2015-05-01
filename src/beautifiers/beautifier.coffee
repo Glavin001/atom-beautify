@@ -26,6 +26,7 @@ module.exports = class Beautifier
     - <string:language>:<string:option_key>:<boolean:enabled>
     - <string:language>:<string:option_key>:<string:rename>
     - <string:language>:<string:option_key>:<function:transform>
+    - <string:language>:<string:option_key>:<array:mapper>
 
     ###
     options: {}
@@ -183,8 +184,24 @@ module.exports = class Beautifier
     Constructor to setup beautifer
     ###
     constructor: () ->
+        # Handle global options
+        if @options._?
+            globalOptions = @options._
+            delete @options._
+            # Only merge if globalOptions is an object
+            if typeof globalOptions is "object"
+                # Iterate over all supported languages
+                for lang, options of @options
+                    #
+                    if typeof options is "boolean"
+                        if options is true
+                            @options[lang] = globalOptions
+                    else if typeof options is "object"
+                        @options[lang] = _.merge(globalOptions, options)
+                    else
+                        console.warn("Unsupported options type #{typeof options} for language #{lang}: "+ options)
+        # console.log("Options for #{@name}:",@options)
         # Set supported languages
         @languages = _.keys(@options)
-        # TODO: Remove default/catch all key, `_`
 
 
