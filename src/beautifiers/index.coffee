@@ -82,9 +82,14 @@ module.exports = class Beautifiers
     buildOptionsForBeautifiers: (beautifiers) ->
         # Get all Options for Languages
         langOptions = {}
+        languages = {} # Hash map of languages with their names
         for lang in @languages.languages
             langOptions[lang.name] ?= {}
+            languages[lang.name] ?= lang
             options = langOptions[lang.name]
+            # Init field for supported beautifiers
+            lang.beautifiers = []
+            # Process all language options
             for field, op of lang.options
                 if not op.title?
                     op.title = _plus.uncamelcase(field).split('.')
@@ -108,6 +113,7 @@ module.exports = class Beautifiers
                         # Beautifier supports all options for this language
                         if laOp
                             # console.log('add supported beautifier', languageName, beautifierName)
+                            languages[languageName]?.beautifiers.push(beautifierName)
                             for field, op of laOp
                                 op.beautifiers.push(beautifierName)
                         else
@@ -118,18 +124,22 @@ module.exports = class Beautifiers
                         if typeof op is "boolean"
                             # Transformation
                             if op is true
+                                languages[languageName]?.beautifiers.push(beautifierName)
                                 laOp?[field]?.beautifiers.push(beautifierName)
                         else if typeof op is "string"
                             # Rename
                             # console.log('support option with rename:', field, op, languageName, beautifierName, langOptions)
+                            languages[languageName]?.beautifiers.push(beautifierName)
                             laOp?[op]?.beautifiers.push(beautifierName)
                         else if typeof op is "function"
                             # Transformation
+                            languages[languageName]?.beautifiers.push(beautifierName)
                             laOp?[field]?.beautifiers.push(beautifierName)
                         else if _.isArray(op)
                             # Complex Function
                             [fields..., fn] = op
                             # Add beautifier support to all required fields
+                            languages[languageName]?.beautifiers.push(beautifierName)
                             for f in fields
                                 # Add beautifier to required field
                                 laOp?[f]?.beautifiers.push(beautifierName)
@@ -140,7 +150,7 @@ module.exports = class Beautifiers
         # Prefix language's options with namespace
         for langName, ops of langOptions
             # Get language with name
-            lang = @languages.getLanguages(name:langName)?[0]
+            lang = languages[langName]
             # Use the namespace from language as key prefix
             prefix = lang.namespace
             # console.log(langName, lang, prefix, ops)
@@ -174,7 +184,33 @@ module.exports = class Beautifiers
             ), result)
         ), {})
 
-        # console.log('flatOptions', flatOptions)
+        # Generate Language configurations
+        langConfigs = {}
+        # Process all languages
+        for langName, lang of languages
+            name = lang.name
+            beautifiers = lang.beautifiers
+            langConfigs[name] = {
+                type: 'object'
+                properties:
+                    disabled:
+                        title: "Language Config - #{name} - Disable Beautifying Language"
+                        type: 'boolean'
+                        default: false
+                        description: "Disable #{name} Beautification"
+                    default_beautifier:
+                        title: "Language Config - #{name} - Default Beautifier"
+                        type: 'string'
+                        default: beautifiers[0]
+                        description: "Default Beautifier to be used for #{name}"
+                        enum: _.uniq(beautifiers)
+            }
+        # Add Language configurations
+        flatOptions.languages = {
+              type: 'object'
+              properties: langConfigs
+        }
+
         return flatOptions
 
     ###
@@ -186,10 +222,6 @@ module.exports = class Beautifiers
             # console.log('beautifier',beautifier, language)
             _.contains(beautifier.languages, language)
         )
-
-    # getBeautifiersForGrammar: (grammar) ->
-    #
-    # getBeautifiersForExtension: (extension) ->
 
     beautify: (text, allOptions, grammar, filePath) ->
         return new Promise((resolve, reject) =>
@@ -205,9 +237,13 @@ module.exports = class Beautifiers
                 # TODO: select appropriate language
                 language = languages[0]
 
+                # Get language config
+                langConfig = atom.config.get("atom-beautify.languages")?[language.name]
+
                 # Beautify!
                 unsupportedGrammar = false
-                if atom.config.get("atom-beautify.disabledLanguages")?.indexOf(language) > - 1
+                # Check if Language is disabled
+                if langConfig?.disabled
                   return resolve(null)
 
                 # Options for Language
@@ -218,7 +254,7 @@ module.exports = class Beautifiers
                         # Merge current options on top of fallback options
                         options = _.merge(@getOptions(fallback, allOptions) || {}, options)
 
-                # Get Beautifiers
+                # Get Beautifier
                 # console.log(grammar, language)
                 beautifiers = @getBeautifiers(language.name, options)
                 # console.log('beautifiers', beautifiers)
@@ -227,8 +263,12 @@ module.exports = class Beautifiers
                 if beautifiers.length < 1
                     unsupportedGrammar = true
                 else
-                    # TODO: select beautifier
-                    beautifier = beautifiers[0]
+                    # Select beautifier from language config preferences
+                    preferredBeautifierName = langConfig.default_beautifier
+                    beautifier = _.find(beautifiers, (beautifier) ->
+                        beautifier.name is preferredBeautifierName
+                    ) or beautifiers[0]
+                    # console.log('beautifier', beautifier.name, beautifiers)
 
                     transformOptions = (beautifier, languageName, options) ->
                         # Transform options, if applicable

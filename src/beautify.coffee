@@ -350,12 +350,6 @@ plugin.config = _.merge(
     type: 'boolean'
     default: false
     description: "Do not show any/all errors when they occur"
-  disabledLanguages:
-    type: 'array'
-    default: []
-    items:
-      type: 'string'
-    description: "An array of languages/grammars to disable Beautification for"
 , defaultLanguageOptions)
 plugin.activate = ->
   handleSaveEvent()

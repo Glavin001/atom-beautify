@@ -23,6 +23,7 @@ module.exports = class PrettyDiff extends Beautifier
         HTML: true
         XML: true
         Spacebars: true
+        JSX: true
         JavaScript: true
         CSS: true
         SCSS: true
