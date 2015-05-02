@@ -185,32 +185,27 @@ module.exports = class Beautifiers
         ), {})
 
         # Generate Language configurations
-        langConfigs = {}
-        # Process all languages
+        # console.log('languages', languages)
         for langName, lang of languages
+            # console.log(langName, lang)
             name = lang.name
             beautifiers = lang.beautifiers
-            langConfigs[name] = {
-                type: 'object'
-                properties:
-                    disabled:
-                        title: "Language Config - #{name} - Disable Beautifying Language"
-                        type: 'boolean'
-                        default: false
-                        description: "Disable #{name} Beautification"
-                    default_beautifier:
-                        title: "Language Config - #{name} - Default Beautifier"
-                        type: 'string'
-                        default: beautifiers[0]
-                        description: "Default Beautifier to be used for #{name}"
-                        enum: _.uniq(beautifiers)
+            optionName = "language_#{lang.namespace}"
+            # Add Language configurations
+            flatOptions["#{optionName}_disabled"] = {
+                title: "Language Config - #{name} - Disable Beautifying Language"
+                type: 'boolean'
+                default: false
+                description: "Disable #{name} Beautification"
             }
-        # Add Language configurations
-        flatOptions.languages = {
-              type: 'object'
-              properties: langConfigs
-        }
-
+            flatOptions["#{optionName}_default_beautifier"] = {
+                title: "Language Config - #{name} - Default Beautifier"
+                type: 'string'
+                default: beautifiers[0]
+                description: "Default Beautifier to be used for #{name}"
+                enum: _.uniq(beautifiers)
+            }
+        # console.log('flatOptions', flatOptions)
         return flatOptions
 
     ###
@@ -238,12 +233,13 @@ module.exports = class Beautifiers
                 language = languages[0]
 
                 # Get language config
-                langConfig = atom.config.get("atom-beautify.languages")?[language.name]
+                langDisabled = atom.config.get("atom-beautify.language_#{language.namespace}_disabled")
+                preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
 
                 # Beautify!
                 unsupportedGrammar = false
                 # Check if Language is disabled
-                if langConfig?.disabled
+                if langDisabled
                   return resolve(null)
 
                 # Options for Language
@@ -264,7 +260,6 @@ module.exports = class Beautifiers
                     unsupportedGrammar = true
                 else
                     # Select beautifier from language config preferences
-                    preferredBeautifierName = langConfig.default_beautifier
                     beautifier = _.find(beautifiers, (beautifier) ->
                         beautifier.name is preferredBeautifierName
                     ) or beautifiers[0]
