@@ -39,6 +39,7 @@ module.exports = class Beautifiers
         'perltidy'
         'php-cs-fixer'
         'prettydiff'
+        'rubocop'
         'ruby-beautify'
         'sqlformat'
         'tidy-markdown'

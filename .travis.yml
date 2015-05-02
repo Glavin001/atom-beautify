@@ -28,7 +28,8 @@ before_install:
   - brew tap homebrew/dupes
   - brew tap homebrew/versions
   # Ruby language support
-  - gem install ruby-beautify --verbose
+  # - gem install ruby-beautify --verbose
+  - gem install rubocop
   # Python language support
   - brew install python
   - pip install --upgrade autopep8
