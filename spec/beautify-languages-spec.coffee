@@ -146,7 +146,7 @@ describe "BeautifyLanguages", ->
                               oldHeader="beautified"
                               newHeader="expected"
                               diff = JsDiff.createPatch(fileName, oldStr, newStr, oldHeader, newHeader)
-                              throw new Error("Beautifier output does not match expected output:\n"+diff)
+                              expect(text).toEqual(expectedContents, "Beautifier output does not match expected output:\n"+diff)
                           # All done!
                           beautifyCompleted = true
 
