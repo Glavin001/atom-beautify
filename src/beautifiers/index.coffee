@@ -34,6 +34,7 @@ module.exports = class Beautifiers
         'uncrustify'
         'autopep8'
         'coffee-formatter'
+        'coffee-fmt'
         'htmlbeautifier'
         'csscomb'
         'gofmt'

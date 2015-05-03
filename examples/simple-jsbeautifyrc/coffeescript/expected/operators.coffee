@@ -1,2 +1,2 @@
 value %%= 4000
-value != true
+value isnt true

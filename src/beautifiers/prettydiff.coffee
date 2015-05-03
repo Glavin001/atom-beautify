@@ -1,7 +1,5 @@
 "use strict"
-prettydiff = require("prettydiff")
 Beautifier = require('./beautifier')
-_ = require('lodash')
 
 module.exports = class PrettyDiff extends Beautifier
     name: "Pretty Diff"
@@ -36,6 +34,8 @@ module.exports = class PrettyDiff extends Beautifier
     beautify: (text, language, options) ->
 
         return new @Promise((resolve, reject) ->
+            prettydiff = require("prettydiff")
+            _ = require('lodash')
 
             # Select Prettydiff language
             lang = "auto"

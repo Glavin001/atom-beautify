@@ -18,4 +18,6 @@ module.exports = {
         "coffee"
     ]
 
+    defaultBeautifier: "coffee-fmt"
+
 }
