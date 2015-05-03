@@ -39,6 +39,13 @@ module.exports = class Beautifier
     languages: null
 
     ###
+    Beautify text
+
+    Override this method in subclasses
+    ###
+    beautify: null
+
+    ###
     Show deprecation warning to user.
     ###
     deprecate: (warning) ->
@@ -48,14 +55,14 @@ module.exports = class Beautifier
     Create temporary file
     ###
     tempFile: (name = "atom-beautify-temp", contents = "") ->
-        return new Promise((resolve, reject) ->
+        return new Promise((resolve, reject) =>
             # create temp file
-            temp.open(name, (err, info) ->
-                # console.log(name, err, info)
+            temp.open(name, (err, info) =>
+                @debug('tempFile', name, err, info)
                 return reject(err) if err
-                fs.write(info.fd, contents, (err) ->
+                fs.write(info.fd, contents, (err) =>
                     return reject(err) if err
-                    fs.close(info.fd, (err) ->
+                    fs.close(info.fd, (err) =>
                         return reject(err) if err
                         resolve(info.path)
                     )
@@ -143,29 +150,29 @@ module.exports = class Beautifier
                     args = _.without(args, null)
                     # Get PATH and other environment variables
                     @getShellEnvironment()
-                    .then((env) ->
+                    .then((env) =>
                         # Spawn command
                         stdout = ""
                         stderr = ""
                         options = {
                             env: env
                         }
-                        console.log('spawn', exe, args)
+                        @debug('spawn', exe, args)
                         cmd = spawn(exe, args, options)
                         # add a 'data' event listener for the spawn instance
                         cmd.stdout.on('data', (data) -> stdout += data )
                         cmd.stderr.on('data', (data) -> stderr += data )
                         # when the spawn child process exits, check if there were any errors and close the writeable stream
-                        cmd.on('exit', (returnCode) ->
-                            console.log('spawn done', returnCode, stderr, stdout)
+                        cmd.on('exit', (returnCode) =>
+                            @debug('spawn done', returnCode, stderr, stdout)
                             # If return code is not 0 then error occured
                             if not ignoreReturnCode and returnCode isnt 0
                                 reject(stderr)
                             else
                                 resolve(stdout)
                         )
-                        cmd.on('error', (err) ->
-                            # console.log('error', err)
+                        cmd.on('error', (err) =>
+                            @debug('error', err)
                             reject(err)
                         )
                     )
@@ -174,16 +181,53 @@ module.exports = class Beautifier
         )
 
     ###
-    Beautify text
-
-    Override this method in subclasses
+    Methods to copy over from Winston's Logger
     ###
-    beautify: null
+    _loggerMethods: ['silly','debug','verbose','info','warn','error']
+    ###
+    Logger instance
+    ###
+    logger: null
+    ###
+    Initialize and configure Logger
+    ###
+    setupLogger: ->
+        winston = require('winston')
+        # Create Transport with Writable Stream
+        # See http://stackoverflow.com/a/21583831/2578205
+        stream = require('stream')
+        writable = new stream.Writable({
+            write: (chunk, encoding, next) ->
+                console.log(chunk.toString())
+                next()
+        })
+        transport = new (winston.transports.File)({
+            name: @name
+            level: 'warn'
+            timestamp: true
+            prettyPrint: true
+            colorize: true
+            stream: writable
+            json: false
+        })
+        # Initialize logger
+        @logger = new (winston.Logger)({
+            # Configure transports
+            transports: [
+                transport
+            ]
+        })
+        # Merge logger methods into beautifier class
+        for method in @_loggerMethods
+            @[method] = @logger[method]
+        @verbose("Beautifier logger has been initialized.")
 
     ###
     Constructor to setup beautifer
     ###
     constructor: () ->
+        # Setup logger
+        @setupLogger()
         # Handle global options
         if @options._?
             globalOptions = @options._
@@ -199,8 +243,8 @@ module.exports = class Beautifier
                     else if typeof options is "object"
                         @options[lang] = _.merge(globalOptions, options)
                     else
-                        console.warn("Unsupported options type #{typeof options} for language #{lang}: "+ options)
-        # console.log("Options for #{@name}:",@options)
+                        @warn("Unsupported options type #{typeof options} for language #{lang}: "+ options)
+        @verbose("Options for #{@name}:", @options)
         # Set supported languages
         @languages = _.keys(@options)
 

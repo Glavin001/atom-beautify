@@ -73,6 +73,7 @@
     "tidy-markdown": "^0.3.2",
     "typescript-formatter": "~0.1.4",
     "underscore-plus": "^1.6.6",
+    "winston": "^1.0.0",
     "yaml-front-matter": "^3.2.3"
   },
   "activationCommands": {

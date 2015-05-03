@@ -13,7 +13,7 @@ module.exports = class PHPCSFixer extends Beautifier
     }
 
     beautify: (text, language, options) ->
-        console.log('php-cs-fixer', options)
+        @debug('php-cs-fixer', options)
         @run("php-cs-fixer", [
             "fix"
             "--level=#{options.level}" if options.level
