@@ -1,14 +1,14 @@
 <?php
 
-$hello = "world";
+$hello = 'world';
 
 if (!isset($_SESSION)) {
     session_start();
 }
-require_once "sql.req.php";
+require_once 'sql.req.php';
 
 // friend requests
-$q = $mysqli->query("");
+$q = $mysqli->query('');
 $num = $q->num_rows;
 echo '<a href="notifications.php">';
 if ($num>0) {
@@ -19,7 +19,7 @@ if ($num>0) {
 echo '</a>';
 
 // new messages
-$q = $mysqli->query("");
+$q = $mysqli->query('');
 $num = $q->num_rows;
 echo '<a href="messages.php">';
 if ($num>0) {
