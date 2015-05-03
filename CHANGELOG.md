@@ -1,3 +1,13 @@
+# v0.25.0 (2015-05-02)
+- [Add new internal Beautifier API.](https://github.com/Glavin001/atom-beautify/issues/282)
+- [Switch to using Tidy-Markdown instead of Pandoc for Markdown beautification](https://github.com/Glavin001/atom-beautify/issues/292)
+    - Improve YAML Front-Matter support in Markdown. See [#261][]
+- [Add Rubocop beautifier for Ruby beautification](https://github.com/Glavin001/atom-beautify/pull/275)
+- [Use Pretty Diff for XML Beautification](https://github.com/Glavin001/atom-beautify/issues/197)
+- [Add EJS beautification support using Pretty Diff](https://github.com/Glavin001/atom-beautify/issues/136)
+    - [Angular Template support by using EJS language beautifier, Pretty Diff](https://github.com/Glavin001/atom-beautify/issues/179)
+- [Add Spacebars beautification support using Pretty Diff](https://github.com/Glavin001/atom-beautify/issues/217)
+
 # v0.24.1 (2015-04-19)
 - [Fix incorrect name for pandoc path option](https://github.com/Glavin001/atom-beautify/commit/2fe815e47cf8c95d099ee0f17b2c4d83dc8dd2ce)
 - [Updates context-menu to use new api](https://github.com/Glavin001/atom-beautify/commit/6810805e3e290342a1060aca12c646724fc1694d)
