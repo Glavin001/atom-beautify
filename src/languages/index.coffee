@@ -28,6 +28,7 @@ module.exports = class Languages
     "d"
     "ejs"
     "erb"
+    "go"
     "handlebars"
     "html"
     "java"

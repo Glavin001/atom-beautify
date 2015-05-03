@@ -39,6 +39,8 @@ before_install:
   - brew install pandoc
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
+  # Golang
+  - brew install go
   # PHP
   # - brew tap homebrew/homebrew-php
   # - brew gist-logs php56

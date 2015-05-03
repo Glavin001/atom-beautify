@@ -129,6 +129,8 @@
     "yaml",
     "front matter",
     "jekyll",
-    "marko"
+    "marko",
+    "go",
+    "golang"
   ]
 }

@@ -44,6 +44,7 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
   - Requires [Ruby Beautify](https://github.com/erniebrodeur/ruby-beautify)
 - [x] [CoffeeScript](https://github.com/donaldpipowitch/atom-beautify/issues/31)
+- [x] [Golang](https://github.com/Glavin001/atom-beautify/issues/176)
 - [x] [Java](https://github.com/Glavin001/atom-beautify/issues/45)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 - [x] [C](https://github.com/Glavin001/atom-beautify/issues/57)

@@ -36,6 +36,7 @@ module.exports = class Beautifiers
         'coffee-formatter'
         'htmlbeautifier'
         'csscomb'
+        'gofmt'
         'js-beautify'
         'perltidy'
         'php-cs-fixer'
@@ -332,12 +333,12 @@ module.exports = class Beautifiers
                 userId: atom.config.get("atom-beautify._analyticsUserId")
                 event: "Beautify"
                 properties:
-                  language: language.name
+                  language: language?.name
                   grammar: grammar
                   extension: fileExtension
                   version: version
                   options: allOptions
-                  label: language.name
+                  label: language?.name
                   category: version
             #
             if unsupportedGrammar
