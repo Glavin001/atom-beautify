@@ -35,16 +35,14 @@ before_install:
   - pip install --upgrade autopep8
   # SQL language support
   - pip install --upgrade sqlparse
-  # Markdown language support
-  - brew install pandoc
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
   # PHP
   - brew tap homebrew/homebrew-php
-  - brew install php56
-  - brew gist-logs php56
+  - brew install php56 || true
+  - brew gist-logs php56 || true
   - echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini
-  - brew install php-cs-fixer
-  - brew gist-logs php-cs-fixer
+  - brew install php-cs-fixer || true
+  - brew gist-logs php-cs-fixer || true
   # CoffeeScript
   - npm install coffee-formatter
