@@ -4,7 +4,7 @@ Beautifier = require('./beautifier')
 module.exports = class TidyMarkdown extends Beautifier
     name: "Tidy Markdown"
     options: {
-        Markdown: true
+        Markdown: false
     }
 
     beautify: (text, language, options) ->
