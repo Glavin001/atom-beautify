@@ -18,4 +18,6 @@ module.exports = {
         "scss"
     ]
 
+    defaultBeautifier: "Pretty Diff"
+
 }

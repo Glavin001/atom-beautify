@@ -35,6 +35,7 @@ module.exports = class Beautifiers
         'autopep8'
         'coffee-formatter'
         'htmlbeautifier'
+        'csscomb'
         'js-beautify'
         'perltidy'
         'php-cs-fixer'
@@ -110,14 +111,17 @@ module.exports = class Beautifiers
                 # Is a valid Language name
                 if typeof options is "boolean"
                     # Enable / disable all options
+                    # Add Beautifier support to Language
+                    languages[languageName]?.beautifiers.push(beautifierName)
+                    # Check for beautifier's options support
                     if options is true
                         # Beautifier supports all options for this language
                         if laOp
                             # console.log('add supported beautifier', languageName, beautifierName)
-                            languages[languageName]?.beautifiers.push(beautifierName)
                             for field, op of laOp
                                 op.beautifiers.push(beautifierName)
                         else
+                            # Supports language but no options specifically
                             console.warn("Could not find options for language: #{languageName}")
                 else if typeof options is "object"
                     # Iterate over beautifier's options for this language
@@ -202,7 +206,7 @@ module.exports = class Beautifiers
             flatOptions["#{optionName}_default_beautifier"] = {
                 title: "Language Config - #{name} - Default Beautifier"
                 type: 'string'
-                default: beautifiers[0]
+                default: lang.defaultBeautifier ? beautifiers[0]
                 description: "Default Beautifier to be used for #{name}"
                 enum: _.uniq(beautifiers)
             }
@@ -270,9 +274,11 @@ module.exports = class Beautifiers
                         # Transform options, if applicable
                         beautifierOptions = beautifier.options[languageName]
                         if typeof beautifierOptions is "boolean"
-                            if beautifierOptions isnt true
-                                # Disable options
-                                options = {}
+                            # Language is supported by beautifier
+                            # If true then all options are directly supported
+                            # If falsy then pass all options to beautifier,
+                            #   although no options are directly supported.
+                            return options
                         else if typeof beautifierOptions is "object"
                             # Transform the options
                             transformedOptions = {}
@@ -298,10 +304,10 @@ module.exports = class Beautifiers
                                     transformedOptions[field] = fn.apply(null, vals)
 
                             # Replace old options with new transformed options
-                            options = transformedOptions
+                            return transformedOptions
                         else
                             console.warn("Unsupported Language options: ", beautifierOptions)
-                        return options
+                            return options
 
                     # Apply language-specific option transformations
                     options = transformOptions(beautifier, language.name, options)

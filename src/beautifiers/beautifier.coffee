@@ -157,7 +157,7 @@ module.exports = class Beautifier
                         cmd.stderr.on('data', (data) -> stderr += data )
                         # when the spawn child process exits, check if there were any errors and close the writeable stream
                         cmd.on('exit', (code) ->
-                            console.log('spawn done', code, stderr, stdout)
+                            # console.log('spawn done', code, stderr, stdout)
                             # If return code is not 0 then error occured
                             # if code isnt 0
                             #     reject(stderr)
@@ -165,7 +165,7 @@ module.exports = class Beautifier
                             resolve(stdout)
                         )
                         cmd.on('error', (err) ->
-                            console.log('error', err)
+                            # console.log('error', err)
                             reject(err)
                         )
                     )

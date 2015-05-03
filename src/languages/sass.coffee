@@ -18,4 +18,6 @@ module.exports = {
         "sass"
     ]
 
+    defaultBeautifier: "Pretty Diff"
+
 }

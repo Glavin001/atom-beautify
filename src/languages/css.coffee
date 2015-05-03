@@ -24,6 +24,8 @@ module.exports = {
         "css"
     ]
 
+    defaultBeautifier: "JS Beautify"
+
     options:
         # CSS
         indent_size:

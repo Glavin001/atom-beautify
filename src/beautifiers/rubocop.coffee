@@ -18,6 +18,6 @@ module.exports = class Rubocop extends Beautifier
                 tempFile = @tempFile("temp", text)
             ])
             .then(=>
-                console.log('rubocop', arguments, tempFile)
+                # console.log('rubocop', arguments, tempFile)
                 @readFile(tempFile)
             )

@@ -18,4 +18,6 @@ module.exports = {
         'less'
     ]
 
+    defaultBeautifier: "Pretty Diff"
+
 }
