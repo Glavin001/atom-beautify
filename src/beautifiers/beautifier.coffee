@@ -128,7 +128,7 @@ module.exports = class Beautifier
     ###
     Run command-line interface command
     ###
-    run: (executable, args) ->
+    run: (executable, args, {ignoreReturnCode} = {}) ->
         # Resolve executable
         Promise.resolve(executable)
         .then((exe) =>
@@ -156,13 +156,13 @@ module.exports = class Beautifier
                         cmd.stdout.on('data', (data) -> stdout += data )
                         cmd.stderr.on('data', (data) -> stderr += data )
                         # when the spawn child process exits, check if there were any errors and close the writeable stream
-                        cmd.on('exit', (code) ->
-                            # console.log('spawn done', code, stderr, stdout)
+                        cmd.on('exit', (returnCode) ->
+                            console.log('spawn done', returnCode, stderr, stdout)
                             # If return code is not 0 then error occured
-                            # if code isnt 0
-                            #     reject(stderr)
-                            # else
-                            resolve(stdout)
+                            if not ignoreReturnCode and returnCode isnt 0
+                                reject(stderr)
+                            else
+                                resolve(stdout)
                         )
                         cmd.on('error', (err) ->
                             # console.log('error', err)
