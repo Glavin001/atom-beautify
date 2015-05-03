@@ -1,7 +1,20 @@
+# v0.26.0 (2015-05-03)
+- Closes [#176](https://github.com/Glavin001/atom-beautify/issues/176). Add [gofmt](http://golang.org/cmd/gofmt/) beautifier for Go language
+- Closes [#192](https://github.com/Glavin001/atom-beautify/issues/192). Add [coffee-fmt](https://github.com/sterpe/coffee-fmt) beautifier for CoffeeScript language
+- Closes [#209](https://github.com/Glavin001/atom-beautify/issues/209). Add [CSScomb](http://csscomb.com/) beautifier for CSS/LESS/SCSS/Sass languages.
+> To switch from `JS Beautify` (CSS) or `Pretty Diff` (SCSS/Sass/LESS) to
+using `CSScomb`, you will go into Atom Beautify package settings and
+find the option for `Language Config -<Your Desired Language: CSS, etc>- Default Beautifier` and select `CSScomb`.
+>
+>CSScomb looks for a `.csscomb.json` file in your Atom's first project
+directory. If it does not find one, or if importing it fails, it will
+fallback to `csscomb` predefined configuration.
+
+
 # v0.25.0 (2015-05-02)
 - [Add new internal Beautifier API.](https://github.com/Glavin001/atom-beautify/issues/282)
 - [Switch to using Tidy-Markdown instead of Pandoc for Markdown beautification](https://github.com/Glavin001/atom-beautify/issues/292)
-    - Improve YAML Front-Matter support in Markdown. See [#261][]
+    - Improve YAML Front-Matter support in Markdown. See [#261](https://github.com/Glavin001/atom-beautify/issues/261)
 - [Add Rubocop beautifier for Ruby beautification](https://github.com/Glavin001/atom-beautify/pull/275)
 - [Use Pretty Diff for XML Beautification](https://github.com/Glavin001/atom-beautify/issues/197)
 - [Add EJS beautification support using Pretty Diff](https://github.com/Glavin001/atom-beautify/issues/136)
