@@ -134,8 +134,9 @@ describe "BeautifyLanguages", ->
 
                         beautifyCompleted = false
                         completionFun = (text) ->
-                          if text instanceof Error
-                            return beautifyCompleted = text # text == Error
+                          expect(text instanceof Error).not.toEqual(true, text)
+                        #   if text instanceof Error
+                        #     return beautifyCompleted = text # text == Error
                           expect(typeof text).toEqual "string"
                           # Check for beautification errors
                           if text isnt expectedContents

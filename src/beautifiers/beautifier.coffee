@@ -150,7 +150,7 @@ module.exports = class Beautifier
                         options = {
                             env: env
                         }
-                        # console.log('spawn', exe, args)
+                        console.log('spawn', exe, args)
                         cmd = spawn(exe, args, options)
                         # add a 'data' event listener for the spawn instance
                         cmd.stdout.on('data', (data) -> stdout += data )
