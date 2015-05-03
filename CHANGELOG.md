@@ -1,3 +1,7 @@
+# v0.24.1 (2015-04-19)
+- [Fix incorrect name for pandoc path option](https://github.com/Glavin001/atom-beautify/commit/2fe815e47cf8c95d099ee0f17b2c4d83dc8dd2ce)
+- [Updates context-menu to use new api](https://github.com/Glavin001/atom-beautify/commit/6810805e3e290342a1060aca12c646724fc1694d)
+
 # v0.24.0 (2015-04-07)
 - Temporarily disable failing PHP tests
 - Add Titanium style Sheets (TSS) support. See [#122][] and [#238][]
