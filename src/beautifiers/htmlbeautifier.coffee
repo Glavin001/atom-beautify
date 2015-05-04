@@ -13,11 +13,8 @@ module.exports = class HTMLBeautifier extends Beautifier
 
     beautify: (text, language, options) ->
         @run("htmlbeautifier", [
-            '<'
-            @tempFile("input", text)
-            '>'
-            outputFile = @tempFile("output")
+            tempFile = @tempFile("temp", text)
             ])
             .then(=>
-                @readFile(outputFile)
+                @readFile(tempFile)
             )
