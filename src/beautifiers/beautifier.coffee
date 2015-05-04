@@ -181,10 +181,6 @@ module.exports = class Beautifier
         )
 
     ###
-    Methods to copy over from Winston's Logger
-    ###
-    _loggerMethods: ['silly','debug','verbose','info','warn','error']
-    ###
     Logger instance
     ###
     logger: null
@@ -192,34 +188,12 @@ module.exports = class Beautifier
     Initialize and configure Logger
     ###
     setupLogger: ->
-        winston = require('winston')
-        # Create Transport with Writable Stream
-        # See http://stackoverflow.com/a/21583831/2578205
-        stream = require('stream')
-        writable = new stream.Writable({
-            write: (chunk, encoding, next) ->
-                console.log(chunk.toString())
-                next()
-        })
-        transport = new (winston.transports.File)({
-            name: @name
-            level: 'warn'
-            timestamp: true
-            prettyPrint: true
-            colorize: true
-            stream: writable
-            json: false
-        })
-        # Initialize logger
-        @logger = new (winston.Logger)({
-            # Configure transports
-            transports: [
-                transport
-            ]
-        })
+        @logger = require('../logger')(__filename)
+        # console.log(@logger)
         # Merge logger methods into beautifier class
-        for method in @_loggerMethods
-            @[method] = @logger[method]
+        for key, method of @logger
+            # console.log(key, method)
+            @[key] = method
         @verbose("Beautifier logger has been initialized.")
 
     ###

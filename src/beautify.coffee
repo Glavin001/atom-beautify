@@ -16,10 +16,7 @@ yaml = null
 async = null
 dir = null # Node-Dir
 LoadingView = null
-MessagePanelView = null
-PlainMessageView = null
 $ = null
-#MessageView = require "./views/message-view"
 
 # function cleanOptions(data, types) {
 #   nopt.clean(data, types);
@@ -47,23 +44,19 @@ setCursors = (editor, posArray) ->
 
 beautify = ({onSave}) ->
   path ?= require("path")
-  MessagePanelView ?= require('atom-message-panel').MessagePanelView
-  PlainMessageView ?= require('atom-message-panel').PlainMessageView
   LoadingView ?= require "./views/loading-view"
-  @messagePanel ?= new MessagePanelView title: 'Atom Beautify Error Messages'
   @loadingView ?= new LoadingView()
   @loadingView.show()
   forceEntireFile = onSave && atom.config.get("atom-beautify.beautifyEntireFileOnSave")
   # Show error
-  showError = (e) =>
+  showError = (error) =>
       @loadingView.hide()
       if not atom.config.get("atom-beautify.muteAllErrors")
         # console.log(e)
-        @messagePanel.attach()
-        @messagePanel.add(new PlainMessageView({
-          message: e.message,
-          className: 'text-error'
-        }))
+        stack = error.stack
+        detail = error.message
+        atom.notifications?.addFatalError(error.message, {
+            stack, detail, dismissable: true })
 
   # Get the path to the config file
   # All of the options
@@ -264,10 +257,11 @@ debug = () ->
     # Grammar
     addInfo('Original File Grammar', grammarName)
 
-    # Contents
     # Get current editor's text
     text = editor.getText()
-    addInfo('Original File Contents', "\n```#{grammarName}\n#{text}\n```")
+    # Contents
+    codeBlockSyntax = grammarName.toLowerCase().split(' ')[0]
+    addInfo('Original File Contents', "\n```#{codeBlockSyntax}\n#{text}\n```")
 
     addHeader(2, "Beautification options")
 
@@ -298,20 +292,37 @@ debug = () ->
         "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
         "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
 
+    logs = ""
+    logger = require('./logger')(__filename)
+    subscription = logger.onLogging((msg) ->
+        # console.log('logging', msg)
+        logs += msg
+    )
 
-    addHeader(2, "Logs")
+    cb = (result) ->
+        subscription.dispose()
 
-    # Error logs
-    addInfo('Error logs', '*Not yet supported*')
+        addHeader(2, "Results")
+        # Logs
+        addInfo('Beautified File Contents', "\n```#{codeBlockSyntax}\n#{result}\n```")
+        addInfo('Logs', "\n```\n#{logs}\n```")
 
-    # Save to clipboard
-    atom.clipboard.write(debugInfo)
+        # Save to clipboard
+        atom.clipboard.write(debugInfo)
 
-    confirm('Atom Beautify debugging information is now in your clipboard.\n'+
-    'You can now paste this into an Issue you are reporting here\n'+
-    'https://github.com/Glavin001/atom-beautify/issues/ \n\n'+
-    'Warning: Be sure to look over the debug info before you send it,
-    to ensure you are not sharing undesirable private information.')
+        confirm('Atom Beautify debugging information is now in your clipboard.\n'+
+        'You can now paste this into an Issue you are reporting here\n'+
+        'https://github.com/Glavin001/atom-beautify/issues/ \n\n'+
+        'Warning: Be sure to look over the debug info before you send it,
+        to ensure you are not sharing undesirable private information.')
+
+    try
+        beautifier.beautify(text, allOptions, grammarName, filePath)
+        .then(cb)
+        .catch(cb)
+    catch e
+      return cb(e)
+
 
 handleSaveEvent = =>
   atom.workspace.observeTextEditors (editor) =>

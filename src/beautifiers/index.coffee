@@ -3,6 +3,7 @@ _plus = require('underscore-plus')
 Promise = require('bluebird')
 Languages = require('../languages/')
 path = require('path')
+logger = require('../logger')(__filename)
 
 # Lazy loaded dependencies
 extend = null
@@ -119,12 +120,12 @@ module.exports = class Beautifiers
                     if options is true
                         # Beautifier supports all options for this language
                         if laOp
-                            # console.log('add supported beautifier', languageName, beautifierName)
+                            # logger.verbose('add supported beautifier', languageName, beautifierName)
                             for field, op of laOp
                                 op.beautifiers.push(beautifierName)
                         else
                             # Supports language but no options specifically
-                            console.warn("Could not find options for language: #{languageName}")
+                            logger.warn("Could not find options for language: #{languageName}")
                 else if typeof options is "object"
                     # Iterate over beautifier's options for this language
                     for field, op of options
@@ -135,7 +136,7 @@ module.exports = class Beautifiers
                                 laOp?[field]?.beautifiers.push(beautifierName)
                         else if typeof op is "string"
                             # Rename
-                            # console.log('support option with rename:', field, op, languageName, beautifierName, langOptions)
+                            # logger.verbose('support option with rename:', field, op, languageName, beautifierName, langOptions)
                             languages[languageName]?.beautifiers.push(beautifierName)
                             laOp?[op]?.beautifiers.push(beautifierName)
                         else if typeof op is "function"
@@ -152,7 +153,7 @@ module.exports = class Beautifiers
                                 laOp?[f]?.beautifiers.push(beautifierName)
                         else
                             # Unsupported
-                            console.warn("Unsupported option:", beautifierName, languageName, field, op, langOptions)
+                            logger.warn("Unsupported option:", beautifierName, languageName, field, op, langOptions)
 
         # Prefix language's options with namespace
         for langName, ops of langOptions
@@ -160,7 +161,7 @@ module.exports = class Beautifiers
             lang = languages[langName]
             # Use the namespace from language as key prefix
             prefix = lang.namespace
-            # console.log(langName, lang, prefix, ops)
+            # logger.verbose(langName, lang, prefix, ops)
             # Iterate over all language options and rename fields
             for field, op of ops
                 # Rename field
@@ -169,15 +170,15 @@ module.exports = class Beautifiers
 
         # Flatten Options per language to array of all options
         allOptions = _.values(langOptions)
-        # console.log('allOptions', allOptions)
+        # logger.verbose('allOptions', allOptions)
         # Flatten array of objects to single object for options
         flatOptions = _.reduce(allOptions, ((result, languageOptions, language) ->
             # Iterate over fields (keys) in Language's Options
             # and merge them into single result
-            # console.log('language options', language, languageOptions, result)
+            # logger.verbose('language options', language, languageOptions, result)
             return _.reduce(languageOptions, ((result, optionDef, optionName) ->
                 # TODO: Add supported beautifiers to option description
-                # console.log('optionDef', optionDef, optionName)
+                # logger.verbose('optionDef', optionDef, optionName)
                 if optionDef.beautifiers.length > 0
                     # optionDef.title = "#{optionDef.title} - Supported by #{optionDef.beautifiers.join(', ')}"
                     optionDef.description = "#{optionDef.description} (Supported by #{optionDef.beautifiers.join(', ')})"
@@ -185,16 +186,16 @@ module.exports = class Beautifiers
                     # optionDef.title = "(DEPRECATED) #{optionDef.title}"
                     optionDef.description = "#{optionDef.description} (Not supported by any beautifiers)"
                 if result[optionName]?
-                    console.warn("Duplicate option detected: ", optionName, optionDef)
+                    logger.warn("Duplicate option detected: ", optionName, optionDef)
                 result[optionName] = optionDef
                 return result
             ), result)
         ), {})
 
         # Generate Language configurations
-        # console.log('languages', languages)
+        # logger.verbose('languages', languages)
         for langName, lang of languages
-            # console.log(langName, lang)
+            # logger.verbose(langName, lang)
             name = lang.name
             beautifiers = lang.beautifiers
             optionName = "language_#{lang.namespace}"
@@ -212,21 +213,22 @@ module.exports = class Beautifiers
                 description: "Default Beautifier to be used for #{name}"
                 enum: _.uniq(beautifiers)
             }
-        # console.log('flatOptions', flatOptions)
+        # logger.verbose('flatOptions', flatOptions)
         return flatOptions
 
     ###
 
     ###
     getBeautifiers: (language, options) ->
-        # console.log(@beautifiers)
+        # logger.verbose(@beautifiers)
         _.filter(@beautifiers, (beautifier) ->
-            # console.log('beautifier',beautifier, language)
+            # logger.verbose('beautifier',beautifier, language)
             _.contains(beautifier.languages, language)
         )
 
     beautify: (text, allOptions, grammar, filePath) ->
         return new Promise((resolve, reject) =>
+            logger.info('beautify', text, allOptions, grammar, filePath)
 
             # Get language
             fileExtension = path.extname(filePath)
@@ -258,9 +260,9 @@ module.exports = class Beautifiers
                         options = _.merge(@getOptions(fallback, allOptions) || {}, options)
 
                 # Get Beautifier
-                # console.log(grammar, language)
+                logger.verbose(grammar, language)
                 beautifiers = @getBeautifiers(language.name, options)
-                # console.log('beautifiers', beautifiers)
+                # logger.verbose('beautifiers', beautifiers)
 
                 # Check if unsupported language
                 if beautifiers.length < 1
@@ -270,7 +272,7 @@ module.exports = class Beautifiers
                     beautifier = _.find(beautifiers, (beautifier) ->
                         beautifier.name is preferredBeautifierName
                     ) or beautifiers[0]
-                    # console.log('beautifier', beautifier.name, beautifiers)
+                    logger.verbose('beautifier', beautifier.name, beautifiers)
 
                     transformOptions = (beautifier, languageName, options) ->
                         # Transform options, if applicable
@@ -308,7 +310,7 @@ module.exports = class Beautifiers
                             # Replace old options with new transformed options
                             return transformedOptions
                         else
-                            console.warn("Unsupported Language options: ", beautifierOptions)
+                            logger.warn("Unsupported Language options: ", beautifierOptions)
                             return options
 
                     # Apply language-specific option transformations
@@ -416,22 +418,22 @@ module.exports = class Beautifiers
     getConfigOptionsFromSettings: (langs) ->
       config = atom.config.get('atom-beautify')
       options = {}
-      # console.log(langs, config);
+      # logger.verbose(langs, config);
       # Iterate over keys of the settings
       _.every _.keys(config), (k) ->
         # Check if keys start with a language
         p = k.split("_")[0]
         idx = _.indexOf(langs, p)
-        # console.log(k, p, idx);
+        # logger.verbose(k, p, idx);
         if idx >= 0
           # Remove the language prefix and nest in options
           lang = langs[idx]
           opt = k.replace(new RegExp("^" + lang + "_"), "")
           options[lang] = options[lang] or {}
           options[lang][opt] = config[k]
-          # console.log(lang, opt);
+          # logger.verbose(lang, opt);
         true
-      # console.log(options);
+      # logger.verbose(options);
       options
 
 
@@ -455,13 +457,13 @@ module.exports = class Beautifiers
             strip ?= require("strip-json-comments")
             externalOptions = JSON.parse(strip(contents))
           catch e
-            # console.log "Failed parsing config as JSON: " + configPath
+            # logger.verbose "Failed parsing config as JSON: " + configPath
             # Attempt as YAML
             try
               yaml ?= require("yaml-front-matter")
               externalOptions = yaml.safeLoad(contents)
             catch e
-              console.log "Failed parsing config as YAML and JSON: " + configPath
+              logger.verbose "Failed parsing config as YAML and JSON: " + configPath
               externalOptions = {}
       else
         externalOptions = {}
@@ -518,7 +520,7 @@ module.exports = class Beautifiers
           pc = @getConfig(pf, false)
           # Add config for p to project's config options
           projectOptions.push(pc)
-          # console.log p, pc
+          # logger.verbose p, pc
           # Move upwards
           p = path.resolve(p,"../")
       else
@@ -533,14 +535,14 @@ module.exports = class Beautifiers
         editorConfigOptions
       ]
       allOptions = allOptions.concat(projectOptions)
-      # console.log(allOptions)
+      # logger.verbose(allOptions)
       return allOptions
 
     getOptions: (selection, allOptions) ->
         self = this
         _ ?= require("lodash")
         extend ?= require("extend")
-        # console.log(selection, allOptions);
+        # logger.verbose(selection, allOptions);
         # Reduce all options into correctly merged options.
         options = _.reduce(allOptions, (result, currOptions) ->
           containsNested = false
@@ -552,21 +554,21 @@ module.exports = class Beautifiers
             if _.indexOf(self.languages.namespaces, key) >= 0 and typeof currOptions[key] is "object" # Check if nested object (more options in value)
               containsNested = true
               break # Found, break out of loop, no need to continue
-          # console.log(containsNested, currOptions);
+          # logger.verbose(containsNested, currOptions);
           # Create a flat object of config options if nested format was used
           unless containsNested
             _.merge collectedConfig, currOptions
           else
             # Merge with selected options
             # where `selection` could be `html`, `js`, 'css', etc
-            # console.log(selection, currOptions[selection]);
+            # logger.verbose(selection, currOptions[selection]);
             _.merge collectedConfig, currOptions[selection]
           extend result, collectedConfig
         , {} )
         # TODO: Clean.
         # There is a bug in nopt
         # See https://github.com/npm/nopt/issues/38#issuecomment-45971505
-        # console.log('pre-clean', JSON.stringify(options));
+        # logger.verbose('pre-clean', JSON.stringify(options));
         #options = cleanOptions(options, knownOpts);
-        #console.log('post-clean', JSON.stringify(options));
+        #logger.verbose('post-clean', JSON.stringify(options));
         options
