@@ -1,5 +1,7 @@
 language: objective-c
 
+osx_image: beta-xcode6.2
+
 notifications:
   webhooks:
     urls:
