@@ -217,6 +217,13 @@ module.exports = class Beautifiers
         return flatOptions
 
     ###
+    From https://github.com/atom/notifications/blob/01779ade79e7196f1603b8c1fa31716aa4a33911/lib/notification-issue.coffee#L130
+    ###
+    encodeURI: (str) ->
+        str = encodeURI(str)
+        str.replace(/#/g, '%23').replace(/;/g, '%3B')
+
+    ###
 
     ###
     getBeautifiers: (language, options) ->
@@ -226,6 +233,9 @@ module.exports = class Beautifiers
             _.contains(beautifier.languages, language)
         )
 
+    ###
+
+    ###
     beautify: (text, allOptions, grammar, filePath) ->
         return new Promise((resolve, reject) =>
             logger.info('beautify', text, allOptions, grammar, filePath)
@@ -348,8 +358,32 @@ module.exports = class Beautifiers
               if atom.config.get("atom-beautify.muteUnsupportedLanguageErrors")
                 return resolve(null)
               else
-                reject(new Error("Unsupported language for grammar '#{grammar}' with extension '#{fileExtension}'."))
-
+                repoBugsUrl = pkg.bugs.url
+                # issueTitle = "Add support for language with grammar '#{grammar}' and extension '#{fileExtension}'"
+                # issueBody = """
+                # ### About My Installation
+                # **Atom Version**: #{atom.getVersion()}
+                # **Atom Beautify Version**: #{pkg.version}
+                # **Platform**: #{process.platform}
+                #
+                # ### Example input file:
+                # ```#{fileExtension}
+                # #{text}
+                # ```
+                #
+                # """
+                # requestLanguageUrl = "#{repoBugsUrl}/new?title=#{@encodeURI(issueTitle)}&body=#{@encodeURI(issueBody)}"
+                # detail = "If you would like to request this language be supported please create an issue by clicking <a href=\"#{requestLanguageUrl}\">request new language support</a>."
+                title = "Atom Beautify could not find a supported beautifier for this file"
+                detail = """
+                Atom Beautify could not determine a supported beautifier to handle this file with grammar \"#{grammar}\" and extension \"#{fileExtension}\". \
+                If you would like to request support for this file and it's language, please create an issue for Atom Beautify at #{repoBugsUrl}
+                """
+                atom?.notifications.addWarning(title, {
+                    detail
+                    dismissable: true
+                })
+                return resolve(null)
         )
 
     findFileResults: {}
