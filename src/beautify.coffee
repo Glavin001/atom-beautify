@@ -43,6 +43,9 @@ setCursors = (editor, posArray) ->
   return
 
 beautify = ({onSave}) ->
+  # Verify if beautify on save
+  return if onSave and atom.config.get("atom-beautify.beautifyOnSave") is false
+  # Continue beautifying
   path ?= require("path")
   LoadingView ?= require "./views/loading-view"
   @loadingView ?= new LoadingView()
@@ -327,12 +330,8 @@ debug = () ->
 handleSaveEvent = =>
   atom.workspace.observeTextEditors (editor) =>
     buffer = editor.getBuffer()
-    plugin.unsubscribe buffer
-    if atom.config.get("atom-beautify.beautifyOnSave")
-      events = "will-be-saved"
-      plugin.subscribe buffer, events, beautify.bind(@, {onSave:true})
-    return
-  return
+    disposable = buffer.onWillSave(beautify.bind(@, {onSave:true}))
+    plugin.subscribe disposable
 
 {Subscriber} = require path.join(atom.packages.resourcePath, 'node_modules', 'emissary')
 Subscriber.extend plugin
