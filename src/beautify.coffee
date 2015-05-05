@@ -58,7 +58,7 @@ beautify = ({onSave}) ->
         # console.log(e)
         stack = error.stack
         detail = error.message
-        atom.notifications?.addFatalError(error.message, {
+        atom.notifications?.addError(error.message, {
             stack, detail, dismissable: true })
 
   # Get the path to the config file
