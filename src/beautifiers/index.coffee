@@ -213,6 +213,13 @@ module.exports = class Beautifiers
                 description: "Default Beautifier to be used for #{name}"
                 enum: _.uniq(beautifiers)
             }
+            flatOptions["#{optionName}_beautify_on_save"] = {
+                title: "Language Config - #{name} - Beautify On Save"
+                type: 'boolean'
+                default: false
+                description: "Automatically beautify #{name} files on save"
+            }
+
         # logger.verbose('flatOptions', flatOptions)
         return flatOptions
 
@@ -236,7 +243,7 @@ module.exports = class Beautifiers
     ###
 
     ###
-    beautify: (text, allOptions, grammar, filePath) ->
+    beautify: (text, allOptions, grammar, filePath, {onSave}={}) ->
         return new Promise((resolve, reject) =>
             logger.info('beautify', text, allOptions, grammar, filePath)
 
@@ -247,19 +254,35 @@ module.exports = class Beautifiers
             # Check if unsupported language
             if languages.length < 1
                 unsupportedGrammar = true
+
+                # Check if on save
+                if onSave
+                    # Ignore this, as it was just a general file save, and
+                    # not intended to be beautified
+                    return resolve(null)
+
             else
                 # TODO: select appropriate language
                 language = languages[0]
 
                 # Get language config
                 langDisabled = atom.config.get("atom-beautify.language_#{language.namespace}_disabled")
-                preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
 
                 # Beautify!
                 unsupportedGrammar = false
                 # Check if Language is disabled
                 if langDisabled
                   return resolve(null)
+
+                # Get more language config
+                preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
+                beautifyOnSave = atom.config.get("atom-beautify.language_#{language.namespace}_beautify_on_save")
+                legacyBeautifyOnSave = atom.config.get("atom-beautify.beautifyOnSave")
+
+                # Verify if beautifying on save
+                if onSave and not (beautifyOnSave or legacyBeautifyOnSave)
+                    # Saving, and beautify on save is disabled
+                    return resolve(null)
 
                 # Options for Language
                 options = @getOptions(language.namespace, allOptions) || {}

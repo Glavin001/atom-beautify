@@ -43,8 +43,21 @@ setCursors = (editor, posArray) ->
   return
 
 beautify = ({onSave}) ->
-  # Verify if beautify on save
-  return if onSave and atom.config.get("atom-beautify.beautifyOnSave") is false
+  # Deprecation warning for beautify on save
+  if atom.config.get("atom-beautify.beautifyOnSave") is true
+      detail = """See issue https://github.com/Glavin001/atom-beautify/issues/308
+
+      To stop seeing this message:
+      - Uncheck (disable) the deprecated \"Beautify On Save\" option
+
+      To enable Beautify on Save for a particular language:
+      - Go to Atom Beautify's package settings
+      - Find option for \"Language Config - <Your Language> - Beautify On Save\"
+      - Check (enable) Beautify On Save option for that particular language
+
+      """
+      atom?.notifications.addWarning("The option \"atom-beautify.beautifyOnSave\" has been deprecated", {detail, dismissable: true})
+
   # Continue beautifying
   path ?= require("path")
   LoadingView ?= require "./views/loading-view"
@@ -133,7 +146,7 @@ beautify = ({onSave}) ->
   grammarName = editor.getGrammar().name
   # Finally, beautify!
   try
-    beautifier.beautify(text, allOptions, grammarName, editedFilePath)
+    beautifier.beautify(text, allOptions, grammarName, editedFilePath, onSave:onSave)
     .then(beautifyCompleted)
     .catch(beautifyCompleted)
   catch e
@@ -350,6 +363,7 @@ plugin.config = _.merge(
       description: 'Set the level for the logger'
       enum: ['verbose','debug','info','warn','error']
   beautifyOnSave:
+    title: "DEPRECATED: Beautfy On Save"
     type: 'boolean'
     default: false
     description: "Beautify active editor on save"
