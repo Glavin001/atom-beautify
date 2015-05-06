@@ -81,7 +81,7 @@ For example:
 
 ```coffeescript
 '.editor':
-  'ctrl-alt-b': 'beautify:beautify-editor'
+  'ctrl-alt-b': 'atom-beautify:beautify-editor'
 ```
 
 ### Package Options

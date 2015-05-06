@@ -79,16 +79,17 @@
   },
   "activationCommands": {
     "atom-workspace": [
-      "beautify:help-debug-editor",
+      "atom-beautify:help-debug-editor",
+      "atom-beautify:beautify-editor",
       "beautify:beautify-editor",
       "core:save",
       "core:save-as"
     ],
     ".tree-view .file .name": [
-      "beautify:beautify-file"
+      "atom-beautify:beautify-file"
     ],
     ".tree-view .directory .name": [
-      "beautify:beautify-directory"
+      "atom-beautify:beautify-directory"
     ]
   },
   "keywords": [

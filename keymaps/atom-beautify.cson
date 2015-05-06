@@ -8,4 +8,4 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
 'atom-text-editor':
-  'ctrl-alt-b': 'beautify:beautify-editor'
+  'ctrl-alt-b': 'atom-beautify:beautify-editor'
