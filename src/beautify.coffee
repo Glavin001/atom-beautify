@@ -344,6 +344,11 @@ plugin.config = _.merge(
     type: 'string'
     default: ""
     description: "Unique identifier for this user for tracking usage analytics"
+  _loggerLevel:
+      type: 'string'
+      default: 'warn'
+      description: 'Set the level for the logger'
+      enum: ['verbose','debug','info','warn','error']
   beautifyOnSave:
     type: 'boolean'
     default: false

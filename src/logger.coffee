@@ -12,10 +12,23 @@ module.exports = do ->
     writable = new stream.Writable({
         write: (chunk, encoding, next) ->
             msg = chunk.toString()
-            # console.log msg
+            # console.log(msg)
             emitter.emit('logging', msg)
             next()
     })
+
+    levels = {
+      silly: 0,
+      input: 1,
+      verbose: 2,
+      prompt: 3,
+      debug: 4,
+      info: 5,
+      data: 6,
+      help: 7,
+      warn: 8,
+      error: 9
+    }
 
     return (label) ->
         transport = new (winston.transports.File)({
@@ -34,6 +47,16 @@ module.exports = do ->
                 transport
             ]
         })
+        wlogger.on('logging', (transport, level, msg, meta)->
+            loggerLevel = atom.config.get('atom-beautify._loggerLevel')
+            # console.log('logging', loggerLevel, arguments)
+            loggerLevelNum = levels[loggerLevel]
+            levelNum = levels[level]
+            if loggerLevelNum <= levelNum
+                path = require('path')
+                label = path.basename(transport.label)
+                console.log("#{label} [#{level}]: #{msg}", meta)
+        )
         # Export logger methods
         loggerMethods = ['silly','debug','verbose','info','warn','error']
         logger = {}
