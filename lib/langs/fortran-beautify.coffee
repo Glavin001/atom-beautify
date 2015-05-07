@@ -5,24 +5,26 @@
 "use strict"
 fs = require("fs")
 temp = require("temp").track()
+path = require("path")
 
 getCmd = (inputPath, outputPath, options, cb) ->
-  if not options.emacs_script_path?
-    return new Error("'Emacs Script Path' not set!" +
-      " Please set this in the Atom Beautify package settings.")
-
-  path = options.emacs_path
   #console.debug "[fortran-beautify] options: " + JSON.stringify(options)
+
+  emacs_path = options.emacs_path
+  emacs_script_path = options.emacs_script_path
+
+  if not emacs_script_path
+    emacs_script_path = path.resolve(__dirname, "emacs/emacs-fortran-beautify.lisp")
 
   args = [
     '--batch'
-    "-l \"#{options.emacs_script_path}\""
+    "-l \"#{emacs_script_path}\""
     '-f f90-batch-indent-region'
     "\"#{inputPath}\""
   ]
 
-  if path
-    cmd = "python \"#{path}\" " + args.join(' ')
+  if emacs_path
+    cmd = "python \"#{emacs_path}\" " + args.join(' ')
   else
     cmd = "emacs " + args.join(' ')
 
