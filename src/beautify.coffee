@@ -343,7 +343,24 @@ debug = () ->
 handleSaveEvent = =>
   atom.workspace.observeTextEditors (editor) =>
     buffer = editor.getBuffer()
-    disposable = buffer.onWillSave(beautify.bind(@, {onSave:true}))
+    disposable = buffer.onDidSave(({path:filePath}) =>
+        path ?= require('path')
+        # Get Grammar
+        grammar = editor.getGrammar().name
+        # Get language
+        fileExtension = path.extname(filePath)
+        languages = beautifier.languages.getLanguages({grammar, fileExtension})
+        if languages.length < 1
+            return
+        # TODO: select appropriate language
+        language = languages[0]
+        # Get language config
+        beautifyOnSave = atom.config.get("atom-beautify.language_#{language.namespace}_beautify_on_save")
+        if beautifyOnSave
+            beautifyFilePath(filePath, ->
+                buffer.reload()
+            )
+    )
     plugin.subscribe disposable
 
 {Subscriber} = require path.join(atom.packages.resourcePath, 'node_modules', 'emissary')
