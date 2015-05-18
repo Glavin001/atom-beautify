@@ -9,6 +9,7 @@ module.exports = {
     ###
     grammars: [
         "JSX"
+        "JavaScript (JSX)"
     ]
 
     ###
