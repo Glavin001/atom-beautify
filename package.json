@@ -81,7 +81,6 @@
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
       "atom-beautify:beautify-editor",
-      "beautify:beautify-editor",
       "core:save",
       "core:save-as"
     ],

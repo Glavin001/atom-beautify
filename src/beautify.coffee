@@ -449,8 +449,3 @@ plugin.activate = ->
   atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
   atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
   atom.commands.add ".tree-view .directory .name", "atom-beautify:beautify-directory", beautifyDirectory
-
-
-  # Deprecated command
-  atom.commands.add "atom-workspace", "beautify:beautify-editor", ->
-    atom?.notifications.addWarning("The command \"beautify:beautify-editor\" has been removed and changed to \"atom-beautify:beautify-editor\".", dismissable : true)
