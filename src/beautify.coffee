@@ -43,7 +43,7 @@ setCursors = (editor, posArray) ->
     editor.addCursorAtBufferPosition bufferPosition
   return
 beautify = ({onSave}) ->
-
+  console.log('beautify!!!')
   # Deprecation warning for beautify on save
   if atom.config.get("atom-beautify.beautifyOnSave") is true
     detail = """See issue https://github.com/Glavin001/atom-beautify/issues/308

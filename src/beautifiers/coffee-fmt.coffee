@@ -1,7 +1,7 @@
 "use strict"
 Beautifier = require('./beautifier')
 
-module.exports = class PrettyDiff extends Beautifier
+module.exports = class CoffeeFmt extends Beautifier
     name: "coffee-fmt"
 
     options: {
@@ -14,13 +14,17 @@ module.exports = class PrettyDiff extends Beautifier
     }
 
     beautify: (text, language, options) ->
+        @verbose('beautify', language, options)
         return new @Promise((resolve, reject) ->
             # Add newLine option
             options.newLine = "\n"
             # Require
             fmt = require('coffee-fmt')
             # Format!
-            results = fmt.format(text, options)
-            # Return beautified CoffeeScript code
-            resolve(results)
+            try
+                results = fmt.format(text, options)
+                # Return beautified CoffeeScript code
+                resolve(results)
+            catch e
+                reject(e)
         )

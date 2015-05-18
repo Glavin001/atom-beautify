@@ -3,7 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class JSBeautify extends Beautifier
     name: "JS Beautify"
-    
+
     options: {
         HTML: true
         Handlebars: true
@@ -15,8 +15,8 @@ module.exports = class JSBeautify extends Beautifier
     }
 
     beautify: (text, language, options) ->
-
-        return new @Promise((resolve, reject) ->
+        @verbose("JS Beautify language #{language}")
+        return new @Promise((resolve, reject) =>
             try
                 switch language
                     when "JSON", "JavaScript"
@@ -33,12 +33,14 @@ module.exports = class JSBeautify extends Beautifier
                     when "HTML (Liquid)", "HTML", "XML", "Marko", "Web Form/Control (C#)", "Web Handler (C#)"
                       beautifyHTML = require("js-beautify").html
                       text = beautifyHTML(text, options)
+                      @debug("Beautified HTML: #{text}")
                       resolve text
                     when "CSS"
                       beautifyCSS = require("js-beautify").css
                       text = beautifyCSS(text, options)
                       resolve text
             catch err
+                @error("JS Beautify error: #{err}")
                 reject(err)
 
         )
