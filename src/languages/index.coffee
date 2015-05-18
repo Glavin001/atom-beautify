@@ -49,6 +49,7 @@ module.exports = class Languages
     "scss"
     "spacebars"
     "sql"
+    "swig"
     "tss"
     "typescript"
     "vala"

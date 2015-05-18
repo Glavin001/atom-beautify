@@ -16,7 +16,7 @@ notifications:
 script: sh build-package.sh
 
 env:
-    - APM_TEST_PACKAGES="language-typescript language-marko language-tss"
+    - APM_TEST_PACKAGES="language-typescript language-marko language-tss language-html-swig"
 
 cache:
     - pip

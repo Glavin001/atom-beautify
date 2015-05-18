@@ -21,7 +21,7 @@ describe "BeautifyLanguages", ->
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql",
     "typescript", "xml", "csharp", "gfm", "marko",
-    "tss", "go"
+    "tss", "go", "html-swig"
     ]
 
   beforeEach ->
@@ -134,6 +134,7 @@ describe "BeautifyLanguages", ->
 
                         beautifyCompleted = false
                         completionFun = (text) ->
+                        #   console.log(expectedTestPath, text) if ext is ".swig"
                           expect(text instanceof Error).not.toEqual(true, text)
                         #   if text instanceof Error
                         #     return beautifyCompleted = text # text == Error

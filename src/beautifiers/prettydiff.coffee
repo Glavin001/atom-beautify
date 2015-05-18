@@ -29,6 +29,7 @@ module.exports = class PrettyDiff extends Beautifier
         JSON: true
         TSS: true
         LESS: true
+        Swig: true
     }
 
     beautify: (text, language, options) ->
@@ -45,7 +46,7 @@ module.exports = class PrettyDiff extends Beautifier
                 when "EJS", "ERB", \
                 "Handlebars", "Mustache", \
                 # "Markup", "JSTL", "SGML", \ # Currently unsupported
-                "Spacebars", "XML"
+                "Spacebars", "XML", "Swig"
                     lang = "markup"
                 when "HTML"
                     lang = "html"
