@@ -53,7 +53,7 @@
     "atom-message-panel": "^1.2.4",
     "atom-space-pen-views": "^2.0.5",
     "bluebird": "^2.9.25",
-    "coffee-fmt": "0.7.0",
+    "coffee-fmt": "0.10.2",
     "coffee-formatter": "^0.1.2",
     "csscomb": "^3.0.4",
     "diff": "^1.4.0",

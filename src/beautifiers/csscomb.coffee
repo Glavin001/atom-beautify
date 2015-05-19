@@ -46,6 +46,6 @@ module.exports = class JSBeautify extends Beautifier
                 syntax: syntax
             })
             # console.log('processedCSS', processedCSS, syntax)
-            
+
             resolve(processedCSS)
         )

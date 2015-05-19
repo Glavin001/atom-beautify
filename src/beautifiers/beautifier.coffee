@@ -9,7 +9,7 @@ readFile = Promise.promisify(fs.readFile)
 module.exports = class Beautifier
 
     ###
-
+    
     ###
     Promise: Promise
 
@@ -111,10 +111,10 @@ module.exports = class Beautifier
                 # executes the export command to get a list of environment variables.
                 # We then use these to run the script:
                 child = spawn process.env.SHELL, ['-ilc', 'env'],
-                  # This is essential for interactive shells, otherwise it never finishes:
-                  detached: true,
-                  # We don't care about stdin, stderr can go out the usual way:
-                  stdio: ['ignore', 'pipe', process.stderr]
+                    # This is essential for interactive shells, otherwise it never finishes:
+                    detached: true,
+                    # We don't care about stdin, stderr can go out the usual way:
+                    stdio: ['ignore', 'pipe', process.stderr]
                 # We buffer stdout:
                 buffer = ''
                 child.stdout.on 'data', (data) -> buffer += data
@@ -130,7 +130,7 @@ module.exports = class Beautifier
                     @_envCache = environment
                     @_envCacheDate = new Date()
                     resolve(environment)
-          )
+            )
 
     ###
     Run command-line interface command
