@@ -34,7 +34,7 @@ module.exports = class PrettyDiff extends Beautifier
 
     beautify: (text, language, options) ->
 
-        return new @Promise((resolve, reject) ->
+        return new @Promise((resolve, reject) =>
             prettydiff = require("prettydiff")
             _ = require('lodash')
 
@@ -71,6 +71,7 @@ module.exports = class PrettyDiff extends Beautifier
             _.merge(options, args)
 
             # Beautify
+            @verbose('prettydiff', options)
             output = prettydiff.api(options)
             result = output[0]
 

@@ -288,9 +288,9 @@ module.exports = class Beautifiers
 
 
     beautify : (text, allOptions, grammar, filePath, {onSave} = {}) ->
-        return new Promise((resolve, reject)=>
+        return new Promise((resolve, reject) =>
             logger.info('beautify', text, allOptions, grammar, filePath)
-            console.log(allOptions)
+            logger.verbose(allOptions)
 
             # Get language
             fileExtension = path.extname(filePath)
@@ -339,29 +339,21 @@ module.exports = class Beautifiers
                     return resolve( null )
 
                 # Options for Language
-                options = @getOptions(language.namespace, allOptions) or {}
-
-                console.log(options)
-
-                # Support fallback for options
-                if language.fallback?
-                    for fallback in language.fallback
-
-                        # Merge current options on top of fallback options
-                        options = _.merge( @getOptions(fallback, allOptions) or {}, options)
+                options = @getOptions([language.namespace].concat(language.fallback or []), allOptions) or {}
 
                 # Get Beautifier
                 logger.verbose(grammar, language)
                 beautifiers = @getBeautifiers(language.name, options)
 
-                console.log(options)
-                # logger.verbose('beautifiers', beautifiers)
-                #
+                logger.verbose('options', options)
+                logger.verbose('beautifiers', beautifiers)
+
+                logger.verbose(language.name, filePath, options, allOptions)
+
                 # Check if unsupported language
                 if beautifiers.length < 1
                     unsupportedGrammar = true
                 else
-
                     # Select beautifier from language config preferences
                     beautifier = _.find(beautifiers, (beautifier) ->
                         beautifier.name is preferredBeautifierName
@@ -419,7 +411,6 @@ module.exports = class Beautifiers
 
                     # Apply language-specific option transformations
                     options = transformOptions(beautifier, language.name, options)
-
 
                     # Beautify text with language options
                     beautifier.beautify(text, language.name, options)
@@ -546,7 +537,7 @@ module.exports = class Beautifiers
         envs = @getUserHome()
         home = path.normalize(path.join(envs, config))
         proj = @findFile(config, dir, upwards)
-        console.log(dir, proj, home)
+        logger.verbose(dir, proj, home)
         return proj if proj
         return home if @verifyExists(home)
         null
@@ -650,6 +641,7 @@ module.exports = class Beautifiers
             editorconfig ?= require('editorconfig')
             editorConfigOptions = editorconfig.parse(editedFilePath)
 
+            logger.verbose('editorConfigOptions', editorConfigOptions)
 
             # Transform EditorConfig to Atom Beautify's config structure and naming
             if editorConfigOptions.indent_style is 'space'
@@ -675,10 +667,14 @@ module.exports = class Beautifiers
                 pf = path.join(p, "FAKEFILENAME")
                 pc = @getConfig(pf, false)
 
+                isNested = @isNestedOptions(pc)
+                unless isNested
+                    pc = {
+                        _default: pc
+                    }
 
                 # Add config for p to project's config options
                 projectOptions.push(pc)
-
 
                 # logger.verbose p, pc
                 # Move upwards
@@ -689,48 +685,72 @@ module.exports = class Beautifiers
 
         # Combine all options together
         allOptions = [
-            editorOptions
-            configOptions
-            homeOptions
+            {
+                _default:
+                    editorOptions
+            },
+            configOptions,
+            {
+                _default:
+                    homeOptions
+            },
             editorConfigOptions
         ]
+        # Reverse and add projectOptions to all options
+        projectOptions.reverse()
         allOptions = allOptions.concat(projectOptions)
-
 
         # logger.verbose(allOptions)
         return allOptions
-    getOptions : (selection, allOptions) ->
+
+    isNestedOptions : (currOptions) ->
+        containsNested = false
+        key = undefined
+
+        # Check if already nested under _default
+        if currOptions._default
+            return true
+
+        # Check to see if config file uses nested object format to split up js/css/html options
+        for key of currOptions
+
+            # Check if is supported language
+            if _.indexOf(@languages.namespaces, key) >= 0 and typeof currOptions[key] is "object" # Check if nested object (more options in value)
+                containsNested = true
+                break # Found, break out of loop, no need to continue
+
+        return containsNested
+
+    getOptions : (selections, allOptions) =>
         self = this
         _ ?= require("lodash")
         extend ?= require("extend")
 
+        logger.verbose(selections, allOptions)
 
         # logger.verbose(selection, allOptions);
         # Reduce all options into correctly merged options.
-        options = _.reduce(allOptions, (result, currOptions) ->
-            containsNested = false
-            collectedConfig = {}
-            key = undefined
-
-
-            # Check to see if config file uses nested object format to split up js/css/html options
-            for key of currOptions
-
-                # Check if is supported language
-                if _.indexOf(self.languages.namespaces, key) >= 0 and typeof currOptions[key] is "object" # Check if nested object (more options in value)
-                    containsNested = true
-                    break # Found, break out of loop, no need to continue
-
+        options = _.reduce(allOptions, (result, currOptions) =>
+            collectedConfig = currOptions._default or {}
+            containsNested = @isNestedOptions(currOptions)
+            logger.verbose(containsNested, currOptions)
             # logger.verbose(containsNested, currOptions);
+
             # Create a flat object of config options if nested format was used
             unless containsNested
-                _.merge collectedConfig, currOptions
-            else
+                # _.merge collectedConfig, currOptions
+                currOptions = {
+                    _default: currOptions
+                }
 
-                # Merge with selected options
-                # where `selection` could be `html`, `js`, 'css', etc
-                # logger.verbose(selection, currOptions[selection]);
+            # Merge with selected options
+            # where `selection` could be `html`, `js`, 'css', etc
+            for selection in selections
+                # Merge current options on top of fallback options
+                logger.verbose('options', selection, currOptions[selection]);
                 _.merge collectedConfig, currOptions[selection]
+                logger.verbose('options', selection, collectedConfig);
+
             extend result, collectedConfig
         , {})
 

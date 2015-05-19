@@ -37,6 +37,8 @@ describe "BeautifyLanguages", ->
         # Force activate package
         pack = atom.packages.getLoadedPackage("atom-beautify")
         pack.activateNow()
+        # Change logger level
+        # atom.config.set('atom-beautify._loggerLevel', 'verbose')
         # Return promise
         return activationPromise
 
@@ -134,7 +136,7 @@ describe "BeautifyLanguages", ->
 
                         beautifyCompleted = false
                         completionFun = (text) ->
-                        #   console.log(expectedTestPath, text) if ext is ".swig"
+                        #   logger.verbose(expectedTestPath, text) if ext is ".less"
                           expect(text instanceof Error).not.toEqual(true, text)
                         #   if text instanceof Error
                         #     return beautifyCompleted = text # text == Error
