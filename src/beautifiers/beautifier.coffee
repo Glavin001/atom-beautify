@@ -111,6 +111,9 @@ module.exports = class Beautifier
                 # executes the export command to get a list of environment variables.
                 # We then use these to run the script:
                 child = spawn process.env.SHELL, ['-ilc', 'env'],
+                  # Do not inherit env from the parent process (Atom) as this will mess with the 
+                  # environment from the shell.
+                  env: {},
                   # This is essential for interactive shells, otherwise it never finishes:
                   detached: true,
                   # We don't care about stdin, stderr can go out the usual way:
