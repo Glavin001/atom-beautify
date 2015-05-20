@@ -16,7 +16,8 @@ module.exports = {
     Supported extensions
     ###
     extensions: [
-        "jsx"
+        "jsx",
+        "js"
     ]
 
 }
