@@ -10,13 +10,13 @@ module.exports = class TypeScriptFormatter extends Beautifier
     beautify: (text, language, options) ->
         return new @Promise((resolve, reject) ->
 
-            TF = require("typescript-formatter/typescript-toolbox/lib/formatter")
-            opts = TF.createDefaultFormatCodeOptions()
+            format = require("typescript-formatter/lib/formatter")
 
+            opts = {}
             opts.TabSize = options.tab_width
             opts.IndentSize = options.indent_size
 
-            result = TF.applyFormatterToContent(text, opts)
+            result = format(text, opts)
             resolve result
 
         )
