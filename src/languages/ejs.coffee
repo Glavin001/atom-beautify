@@ -10,6 +10,7 @@ module.exports = {
     ###
     grammars: [
         "JavaScript Template"
+        "HTML (Angular)"
     ]
 
     ###
