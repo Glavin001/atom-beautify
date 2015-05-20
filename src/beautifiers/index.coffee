@@ -294,8 +294,10 @@ module.exports = class Beautifiers
 
             # Get language
             fileExtension = path.extname(filePath)
-            languages = @languages.getLanguages({grammar, fileExtension})
-
+            # Remove prefix "." (period) in fileExtension
+            fileExtension = fileExtension.substr(1)
+            languages = @languages.getLanguages({grammar, extension: fileExtension})
+            logger.verbose(languages, grammar, fileExtension)
 
             # Check if unsupported language
             if languages.length < 1
