@@ -30,6 +30,7 @@ module.exports = class PrettyDiff extends Beautifier
         TSS: true
         LESS: true
         Swig: true
+        Visualforce: true
     }
 
     beautify: (text, language, options) ->
@@ -43,21 +44,34 @@ module.exports = class PrettyDiff extends Beautifier
             switch language
                 when "CSV"
                     lang = "csv"
-                when "EJS", "ERB", \
-                "Handlebars", "Mustache", \
-                # "Markup", "JSTL", "SGML", \ # Currently unsupported
-                "Spacebars", "XML", "Swig"
+                when "EJS"
+                    lang = "ejs"
+                when "ERB"
+                    lang = "html_ruby"
+                when "Handlebars", "Mustache", "Spacebars"
+                    lang = "handlebars"
+                when "SGML", "Swig"
                     lang = "markup"
+                when "XML", "Visualforce"
+                    lang = "xml"
                 when "HTML"
                     lang = "html"
-                when "JavaScript", "JSON", "JSX"
+                when "JavaScript"
                     lang = "javascript"
-                when "CSS", "LESS", "SCSS", "Sass"
+                when "JSON"
+                    lang = "json"
+                when "JSX"
+                    lang = "jsx"
+                when "JSTL"
+                    lang = "jsp"
+                when "CSS"
                     lang = "css"
+                when "LESS"
+                    lang = "less"
+                when "SCSS", "Sass"
+                    lang = "scss"
                 when "TSS"
                     lang = "tss"
-                # when "Plain text"
-                #     lang = "text"
                 else
                     lang = "auto"
 

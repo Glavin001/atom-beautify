@@ -53,6 +53,7 @@ module.exports = class Languages
     "tss"
     "typescript"
     "vala"
+    "visualforce"
     "xml"
   ]
 
