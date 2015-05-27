@@ -288,195 +288,201 @@ module.exports = class Beautifiers
 
 
     beautify : (text, allOptions, grammar, filePath, {onSave} = {}) ->
-        return new Promise((resolve, reject) =>
-            logger.info('beautify', text, allOptions, grammar, filePath)
-            logger.verbose(allOptions)
+        return Promise.all(allOptions)
+        .then((allOptions) =>
+            return new Promise((resolve, reject) =>
+                logger.info('beautify', text, allOptions, grammar, filePath)
+                logger.verbose(allOptions)
 
-            # Get language
-            fileExtension = path.extname(filePath)
-            # Remove prefix "." (period) in fileExtension
-            fileExtension = fileExtension.substr(1)
-            languages = @languages.getLanguages({grammar, extension: fileExtension})
-            logger.verbose(languages, grammar, fileExtension)
-
-            # Check if unsupported language
-            if languages.length < 1
-                unsupportedGrammar = true
-
-
-                # Check if on save
-                if onSave
-
-                    # Ignore this, as it was just a general file save, and
-                    # not intended to be beautified
-                    return resolve( null )
-            else
-
-                # TODO: select appropriate language
-                language = languages[0]
-
-
-                # Get language config
-                langDisabled = atom.config.get("atom-beautify.language_#{language.namespace}_disabled")
-
-
-                # Beautify!
-                unsupportedGrammar = false
-
-
-                # Check if Language is disabled
-                if langDisabled
-                    return resolve( null )
-
-                # Get more language config
-                preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
-                beautifyOnSave = atom.config.get("atom-beautify.language_#{language.namespace}_beautify_on_save")
-                legacyBeautifyOnSave = atom.config.get("atom-beautify.beautifyOnSave")
-
-
-                # Verify if beautifying on save
-                if onSave and not (beautifyOnSave or legacyBeautifyOnSave)
-
-                    # Saving, and beautify on save is disabled
-                    return resolve( null )
-
-                # Options for Language
-                options = @getOptions([language.namespace].concat(language.fallback or []), allOptions) or {}
-
-                # Get Beautifier
-                logger.verbose(grammar, language)
-                beautifiers = @getBeautifiers(language.name, options)
-
-                logger.verbose('options', options)
-                logger.verbose('beautifiers', beautifiers)
-
-                logger.verbose(language.name, filePath, options, allOptions)
+                # Get language
+                fileExtension = path.extname(filePath)
+                # Remove prefix "." (period) in fileExtension
+                fileExtension = fileExtension.substr(1)
+                languages = @languages.getLanguages({grammar, extension: fileExtension})
+                logger.verbose(languages, grammar, fileExtension)
 
                 # Check if unsupported language
-                if beautifiers.length < 1
+                if languages.length < 1
                     unsupportedGrammar = true
+
+
+                    # Check if on save
+                    if onSave
+
+                        # Ignore this, as it was just a general file save, and
+                        # not intended to be beautified
+                        return resolve( null )
                 else
-                    # Select beautifier from language config preferences
-                    beautifier = _.find(beautifiers, (beautifier) ->
-                        beautifier.name is preferredBeautifierName
-                    ) or beautifiers[0]
-                    logger.verbose('beautifier', beautifier.name, beautifiers)
-                    transformOptions = (beautifier, languageName, options) ->
 
-                        # Transform options, if applicable
-                        beautifierOptions = beautifier.options[languageName]
-                        if typeof beautifierOptions is "boolean"
-
-                            # Language is supported by beautifier
-                            # If true then all options are directly supported
-                            # If falsy then pass all options to beautifier,
-                            # although no options are directly supported.
-                            return options
-                        else if typeof beautifierOptions is "object"
-
-                            # Transform the options
-                            transformedOptions = {}
+                    # TODO: select appropriate language
+                    language = languages[0]
 
 
-                            # Transform for fields
-                            for field, op of beautifierOptions
-                                if typeof op is "string"
-
-                                    # Rename
-                                    transformedOptions[field] = options[op]
-                                else if typeof op is "function"
-
-                                    # Transform
-                                    transformedOptions[field] = op(options[field])
-                                else if typeof op is "boolean"
-
-                                    # Enable/Disable
-                                    if op is true
-                                        transformedOptions[field] = options[field]
-                                else if _.isArray(op)
-
-                                    # Complex function
-                                    [fields..., fn] = op
-                                    vals = _.map(fields, (f) ->
-                                        return options[f]
-                                    )
+                    # Get language config
+                    langDisabled = atom.config.get("atom-beautify.language_#{language.namespace}_disabled")
 
 
-                                    # Apply function
-                                    transformedOptions[field] = fn.apply( null , vals)
-
-                            # Replace old options with new transformed options
-                            return transformedOptions
-                        else
-                            logger.warn("Unsupported Language options: ", beautifierOptions)
-                            return options
-
-                    # Apply language-specific option transformations
-                    options = transformOptions(beautifier, language.name, options)
-
-                    # Beautify text with language options
-                    beautifier.beautify(text, language.name, options)
-                    .then(resolve)
-                    .catch(reject)
-
-            # Check if Analytics is enabled
-            if atom.config.get("atom-beautify.analytics")
-
-                # Setup Analytics
-                analytics = new Analytics(analyticsWriteKey)
-                unless atom.config.get("atom-beautify._analyticsUserId")
-                    uuid = require("node-uuid")
-                    atom.config.set "atom-beautify._analyticsUserId", uuid.v4()
-
-                # Setup Analytics User Id
-                userId = atom.config.get("atom-beautify._analyticsUserId")
-                analytics.identify userId : userId
-                version = pkg.version
-                analytics.track
-                    userId : atom.config.get("atom-beautify._analyticsUserId")
-                    event : "Beautify"
-                    properties :
-                        language : language?.name
-                        grammar : grammar
-                        extension : fileExtension
-                        version : version
-                        options : allOptions
-                        label : language?.name
-                        category : version
-
-            if unsupportedGrammar
-                if atom.config.get("atom-beautify.muteUnsupportedLanguageErrors")
-                    return resolve( null )
-                else
-                    repoBugsUrl = pkg.bugs.url
+                    # Beautify!
+                    unsupportedGrammar = false
 
 
-                    # issueTitle = "Add support for language with grammar '
-                    # issueBody = """
-                    #
-                    # **Atom Version**:
-                    # **Atom Beautify Version**:
-                    # **Platform**:
-                    #
-                    # ```
-                    #
-                    # ```
-                    #
-                    # """
-                    # requestLanguageUrl = "
-                    # detail = "If you would like to request this language be supported please create an issue by clicking <a href=\"
-                    title = "Atom Beautify could not find a supported beautifier for this file"
-                    detail = """
-                             Atom Beautify could not determine a supported beautifier to handle this file with grammar \"#{grammar}\" and extension \"#{fileExtension}\". \
-                             If you would like to request support for this file and it's language, please create an issue for Atom Beautify at #{repoBugsUrl}
-                             """
+                    # Check if Language is disabled
+                    if langDisabled
+                        return resolve( null )
 
-                    atom?.notifications.addWarning(title, {
-                        detail
-                        dismissable : true
-                    })
-                    return resolve( null )
-                    )
+                    # Get more language config
+                    preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
+                    beautifyOnSave = atom.config.get("atom-beautify.language_#{language.namespace}_beautify_on_save")
+                    legacyBeautifyOnSave = atom.config.get("atom-beautify.beautifyOnSave")
+
+
+                    # Verify if beautifying on save
+                    if onSave and not (beautifyOnSave or legacyBeautifyOnSave)
+
+                        # Saving, and beautify on save is disabled
+                        return resolve( null )
+
+                    # Options for Language
+                    options = @getOptions([language.namespace].concat(language.fallback or []), allOptions) or {}
+
+                    # Get Beautifier
+                    logger.verbose(grammar, language)
+                    beautifiers = @getBeautifiers(language.name, options)
+
+                    logger.verbose('options', options)
+                    logger.verbose('beautifiers', beautifiers)
+
+                    logger.verbose(language.name, filePath, options, allOptions)
+
+                    # Check if unsupported language
+                    if beautifiers.length < 1
+                        unsupportedGrammar = true
+                    else
+                        # Select beautifier from language config preferences
+                        beautifier = _.find(beautifiers, (beautifier) ->
+                            beautifier.name is preferredBeautifierName
+                        ) or beautifiers[0]
+                        logger.verbose('beautifier', beautifier.name, beautifiers)
+                        transformOptions = (beautifier, languageName, options) ->
+
+                            # Transform options, if applicable
+                            beautifierOptions = beautifier.options[languageName]
+                            if typeof beautifierOptions is "boolean"
+
+                                # Language is supported by beautifier
+                                # If true then all options are directly supported
+                                # If falsy then pass all options to beautifier,
+                                # although no options are directly supported.
+                                return options
+                            else if typeof beautifierOptions is "object"
+
+                                # Transform the options
+                                transformedOptions = {}
+
+
+                                # Transform for fields
+                                for field, op of beautifierOptions
+                                    if typeof op is "string"
+
+                                        # Rename
+                                        transformedOptions[field] = options[op]
+                                    else if typeof op is "function"
+
+                                        # Transform
+                                        transformedOptions[field] = op(options[field])
+                                    else if typeof op is "boolean"
+
+                                        # Enable/Disable
+                                        if op is true
+                                            transformedOptions[field] = options[field]
+                                    else if _.isArray(op)
+
+                                        # Complex function
+                                        [fields..., fn] = op
+                                        vals = _.map(fields, (f) ->
+                                            return options[f]
+                                        )
+
+
+                                        # Apply function
+                                        transformedOptions[field] = fn.apply( null , vals)
+
+                                # Replace old options with new transformed options
+                                return transformedOptions
+                            else
+                                logger.warn("Unsupported Language options: ", beautifierOptions)
+                                return options
+
+                        # Apply language-specific option transformations
+                        options = transformOptions(beautifier, language.name, options)
+
+                        # Beautify text with language options
+                        beautifier.beautify(text, language.name, options)
+                        .then(resolve)
+                        .catch(reject)
+
+                # Check if Analytics is enabled
+                if atom.config.get("atom-beautify.analytics")
+
+                    # Setup Analytics
+                    analytics = new Analytics(analyticsWriteKey)
+                    unless atom.config.get("atom-beautify._analyticsUserId")
+                        uuid = require("node-uuid")
+                        atom.config.set "atom-beautify._analyticsUserId", uuid.v4()
+
+                    # Setup Analytics User Id
+                    userId = atom.config.get("atom-beautify._analyticsUserId")
+                    analytics.identify userId : userId
+                    version = pkg.version
+                    analytics.track
+                        userId : atom.config.get("atom-beautify._analyticsUserId")
+                        event : "Beautify"
+                        properties :
+                            language : language?.name
+                            grammar : grammar
+                            extension : fileExtension
+                            version : version
+                            options : allOptions
+                            label : language?.name
+                            category : version
+
+                if unsupportedGrammar
+                    if atom.config.get("atom-beautify.muteUnsupportedLanguageErrors")
+                        return resolve( null )
+                    else
+                        repoBugsUrl = pkg.bugs.url
+
+
+                        # issueTitle = "Add support for language with grammar '
+                        # issueBody = """
+                        #
+                        # **Atom Version**:
+                        # **Atom Beautify Version**:
+                        # **Platform**:
+                        #
+                        # ```
+                        #
+                        # ```
+                        #
+                        # """
+                        # requestLanguageUrl = "
+                        # detail = "If you would like to request this language be supported please create an issue by clicking <a href=\"
+                        title = "Atom Beautify could not find a supported beautifier for this file"
+                        detail = """
+                                 Atom Beautify could not determine a supported beautifier to handle this file with grammar \"#{grammar}\" and extension \"#{fileExtension}\". \
+                                 If you would like to request support for this file and it's language, please create an issue for Atom Beautify at #{repoBugsUrl}
+                                 """
+
+                        atom?.notifications.addWarning(title, {
+                            detail
+                            dismissable : true
+                        })
+                        return resolve( null )
+                        )
+
+            )
+
+
     findFileResults : {}
 
 
