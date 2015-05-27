@@ -45,7 +45,7 @@
     }
   ],
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
     "analytics-node": "^1.2.2",
