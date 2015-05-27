@@ -1,5 +1,4 @@
-{View} = require 'space-pen'
-{TextEditorView} = require 'atom-space-pen-views'
+{View, TextEditorView} = require 'atom-space-pen-views'
 
 module.exports =
 class LoadingView extends View

@@ -186,7 +186,7 @@ beautify = ({onSave}) ->
 beautifyFilePath = (filePath, callback) ->
 
     # Show in progress indicate on file's tree-view entry
-    $ ?= require("space-pen").$
+    $ ?= require("atom-space-pen-views").$
     $el = $(".icon-file-text[data-path=\"#{filePath}\"]")
     $el.addClass('beautifying')
 
@@ -243,7 +243,7 @@ beautifyDirectory = ({target}) ->
 
 
     # Show in progress indicate on directory's tree-view entry
-    $ ?= require("space-pen").$
+    $ ?= require("atom-space-pen-views").$
     $el = $(".icon-file-directory[data-path=\"#{dirPath}\"]")
     $el.addClass('beautifying')
 
