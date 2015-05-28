@@ -1,0 +1,18 @@
+version: "{build}"
+os: Windows Server 2012 R2
+
+test: off
+deploy: off
+
+init:
+  - cmd: rd /s /q %CHOCOLATEYINSTALL%
+  - ps: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+
+install:
+  - cinst atom
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - "%LOCALAPPDATA%/atom/bin/apm install"
+
+build_script:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - "%LOCALAPPDATA%/atom/bin/apm test --one --path %LOCALAPPDATA%/atom/bin/atom.cmd"
