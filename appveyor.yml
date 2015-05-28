@@ -11,11 +11,25 @@ init:
 install:
   - cinst atom -y
   - cd %APPVEYOR_BUILD_FOLDER%
-  - "%LOCALAPPDATA%/atom/bin/apm install"
+  # Add Atom's bin (apm, etc) to PATH
+  - SET PATH=%LOCALAPPDATA%\atom\bin;%PATH%
+  - apm install
+  # Install CLI beautifiers
+  # Python
+  - cinst python2 -y
+  - cinst easy.install -y
+  - cinst pip -y
+  # autopep8
+  - pip install --upgrade autopep8
+  # Ruby & Gem
+  - cinst ruby -y
+  - gem install rubocop
+  # PHP
+  - cinst php -y
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
   # Install languages to Atom
-  - "%LOCALAPPDATA%/atom/bin/apm install language-typescript language-marko language-tss language-html-swig"
+  - apm install language-typescript language-marko language-tss language-html-swig
   # Run tests on package
-  - "%LOCALAPPDATA%/atom/bin/apm test --one --path %LOCALAPPDATA%/atom/bin/atom.cmd"
+  - apm test --one --path %LOCALAPPDATA%/atom/bin/atom.cmd
