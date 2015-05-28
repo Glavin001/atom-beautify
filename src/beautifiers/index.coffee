@@ -648,20 +648,28 @@ module.exports = class Beautifiers
             # http://editorconfig.org/
             editorconfig ?= require('editorconfig')
             editorConfigOptions = editorconfig.parse(editedFilePath)
+            .then((editorConfigOptions) =>
 
-            logger.verbose('editorConfigOptions', editorConfigOptions)
+                logger.verbose('editorConfigOptions', editorConfigOptions)
 
-            # Transform EditorConfig to Atom Beautify's config structure and naming
-            if editorConfigOptions.indent_style is 'space'
-                editorConfigOptions.indent_char = " "
+                # Transform EditorConfig to Atom Beautify's config structure and naming
+                if editorConfigOptions.indent_style is 'space'
+                    editorConfigOptions.indent_char = " "
 
-            # if (editorConfigOptions.indent_size)
-            # editorConfigOptions.indent_size = config.indent_size
-            else if editorConfigOptions.indent_style is 'tab'
-                editorConfigOptions.indent_char = "\t"
-                editorConfigOptions.indent_with_tabs = true
-                if (editorConfigOptions.tab_width)
-                    editorConfigOptions.indent_size = editorConfigOptions.tab_width
+                # if (editorConfigOptions.indent_size)
+                # editorConfigOptions.indent_size = config.indent_size
+                else if editorConfigOptions.indent_style is 'tab'
+                    editorConfigOptions.indent_char = "\t"
+                    editorConfigOptions.indent_with_tabs = true
+                    if (editorConfigOptions.tab_width)
+                        editorConfigOptions.indent_size = editorConfigOptions.tab_width
+
+                # Nest options under _default namespace
+                return {
+                    _default:
+                        editorConfigOptions
+                    }
+            )
 
             # Get all options in configuration files from this directory upwards to root
             projectOptions = []
