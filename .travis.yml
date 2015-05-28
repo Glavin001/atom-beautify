@@ -2,6 +2,9 @@ language: objective-c
 
 osx_image: beta-xcode6.2
 
+git:
+  depth: 10
+
 notifications:
   webhooks:
     urls:
