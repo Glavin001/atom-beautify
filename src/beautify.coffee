@@ -9,6 +9,7 @@ Beautifiers = require("./beautifiers")
 beautifier = new Beautifiers()
 defaultLanguageOptions = beautifier.options
 logger = require('./logger')(__filename)
+Promise = require('bluebird')
 
 # Lazy loaded dependencies
 fs = null
@@ -333,58 +334,64 @@ debug = () ->
     # Beautification Options
     # Get all options
     allOptions = beautifier.getOptionsForPath(filePath, editor)
-    [
-        editorOptions
-        configOptions
-        homeOptions
-        editorConfigOptions
-    ] = allOptions
-    projectOptions = allOptions[4..]
-    addInfo('Editor Options', "\n" +
-    "Options from Atom Editor settings\n" +
-    "```json\n#{JSON.stringify(editorOptions, undefined, 4)}\n```")
-    addInfo('Config Options', "\n" +
-    "Options from Atom Beautify package settings\n" +
-    "```json\n#{JSON.stringify(configOptions, undefined, 4)}\n```")
-    addInfo('Home Options', "\n" +
-    "Options from `#{path.resolve(beautifier.getUserHome(), '.jsbeautifyrc')}`\n" +
-    "```json\n#{JSON.stringify(homeOptions, undefined, 4)}\n```")
-    addInfo('EditorConfig Options', "\n" +
-    "Options from [EditorConfig](http://editorconfig.org/) file\n" +
-    "```json\n#{JSON.stringify(editorConfigOptions, undefined, 4)}\n```")
-    addInfo('Project Options', "\n" +
-    "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
-    "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
-    logs = ""
-    subscription = logger.onLogging((msg) ->
+    # Resolve options with promises
+    Promise.all(allOptions)
+    .then((allOptions) =>
+        # Extract options
+        [
+            editorOptions
+            configOptions
+            homeOptions
+            editorConfigOptions
+        ] = allOptions
+        projectOptions = allOptions[4..]
 
-        # console.log('logging', msg)
-        logs += msg
-    )
-    cb = (result) ->
-        subscription.dispose()
-        addHeader(2, "Results")
+        # Show options
+        addInfo('Editor Options', "\n" +
+        "Options from Atom Editor settings\n" +
+        "```json\n#{JSON.stringify(editorOptions, undefined, 4)}\n```")
+        addInfo('Config Options', "\n" +
+        "Options from Atom Beautify package settings\n" +
+        "```json\n#{JSON.stringify(configOptions, undefined, 4)}\n```")
+        addInfo('Home Options', "\n" +
+        "Options from `#{path.resolve(beautifier.getUserHome(), '.jsbeautifyrc')}`\n" +
+        "```json\n#{JSON.stringify(homeOptions, undefined, 4)}\n```")
+        addInfo('EditorConfig Options', "\n" +
+        "Options from [EditorConfig](http://editorconfig.org/) file\n" +
+        "```json\n#{JSON.stringify(editorConfigOptions, undefined, 4)}\n```")
+        addInfo('Project Options', "\n" +
+        "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
+        "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
+        logs = ""
+        subscription = logger.onLogging((msg) ->
 
-
-        # Logs
-        addInfo('Beautified File Contents', "\n```#{codeBlockSyntax}\n#{result}\n```")
-        addInfo('Logs', "\n```\n#{logs}\n```")
-
-
-        # Save to clipboard
-        atom.clipboard.write(debugInfo)
-        confirm('Atom Beautify debugging information is now in your clipboard.\n' +
-        'You can now paste this into an Issue you are reporting here\n' +
-        'https://github.com/Glavin001/atom-beautify/issues/ \n\n' +
-        'Warning: Be sure to look over the debug info before you send it,
-        to ensure you are not sharing undesirable private information.'
+            # console.log('logging', msg)
+            logs += msg
         )
-    try
-        beautifier.beautify(text, allOptions, grammarName, filePath)
-        .then(cb)
-        .catch(cb)
-    catch e
-        return cb(e)
+        cb = (result) ->
+            subscription.dispose()
+            addHeader(2, "Results")
+
+            # Logs
+            addInfo('Beautified File Contents', "\n```#{codeBlockSyntax}\n#{result}\n```")
+            addInfo('Logs', "\n```\n#{logs}\n```")
+
+            # Save to clipboard
+            atom.clipboard.write(debugInfo)
+            confirm('Atom Beautify debugging information is now in your clipboard.\n' +
+            'You can now paste this into an Issue you are reporting here\n' +
+            'https://github.com/Glavin001/atom-beautify/issues/ \n\n' +
+            'Warning: Be sure to look over the debug info before you send it,
+            to ensure you are not sharing undesirable private information.'
+            )
+        try
+            beautifier.beautify(text, allOptions, grammarName, filePath)
+            .then(cb)
+            .catch(cb)
+        catch e
+            return cb(e)
+    )
+
 handleSaveEvent = =>
     atom.workspace.observeTextEditors (editor) =>
         buffer = editor.getBuffer()
