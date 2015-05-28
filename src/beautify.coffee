@@ -8,6 +8,7 @@ _ = require("lodash")
 Beautifiers = require("./beautifiers")
 beautifier = new Beautifiers()
 defaultLanguageOptions = beautifier.options
+logger = require('./logger')(__filename)
 
 # Lazy loaded dependencies
 fs = null
@@ -355,7 +356,6 @@ debug = () ->
     "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
     "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
     logs = ""
-    logger = require('./logger')(__filename)
     subscription = logger.onLogging((msg) ->
 
         # console.log('logging', msg)
@@ -392,18 +392,28 @@ handleSaveEvent = =>
             path ?= require('path')
             # Get Grammar
             grammar = editor.getGrammar().name
-            # Get language
+            # Get file extension
             fileExtension = path.extname(filePath)
-            languages = beautifier.languages.getLanguages({grammar, fileExtension})
+            # Remove prefix "." (period) in fileExtension
+            fileExtension = fileExtension.substr(1)
+            # Get language
+            languages = beautifier.languages.getLanguages({grammar, extension: fileExtension})
             if languages.length < 1
                 return
             # TODO: select appropriate language
             language = languages[0]
             # Get language config
-            beautifyOnSave = atom.config.get("atom-beautify.language_#{language.namespace}_beautify_on_save")
+            key = "atom-beautify.language_#{language.namespace}_beautify_on_save"
+            beautifyOnSave = atom.config.get(key)
+            logger.verbose('save editor positions', key, beautifyOnSave)
             if beautifyOnSave
+                posArray = getCursors(editor)
+                origScrollTop = editor.getScrollTop()
                 beautifyFilePath(filePath, ->
                     buffer.reload()
+                    logger.verbose('restore editor positions', posArray,origScrollTop)
+                    setCursors(editor, posArray)
+                    editor.setScrollTop(origScrollTop)
                 )
             )
         plugin.subscribe disposable
