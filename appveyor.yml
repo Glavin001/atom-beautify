@@ -9,7 +9,7 @@ init:
   - ps: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 install:
-  - cinst atom
+  - cinst atom -y
   - cd %APPVEYOR_BUILD_FOLDER%
   - "%LOCALAPPDATA%/atom/bin/apm install"
 
