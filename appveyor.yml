@@ -15,4 +15,7 @@ install:
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
+  # Install languages to Atom
+  - "%LOCALAPPDATA%/atom/bin/apm install language-typescript language-marko language-tss language-html-swig"
+  # Run tests on package
   - "%LOCALAPPDATA%/atom/bin/apm test --one --path %LOCALAPPDATA%/atom/bin/atom.cmd"
