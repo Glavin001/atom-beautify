@@ -162,6 +162,24 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+###  Fortran - Emacs path 
+
+**Key**: `fortran_emacs_path`
+
+**Type**: `string`
+
+**Description**:
+
+Path to the &#x60;emacs&#x60; executable (Supported by Fortran Beautifier)
+###  Fortran - Emacs script path 
+
+**Key**: `fortran_emacs_script_path`
+
+**Type**: `string`
+
+**Description**:
+
+Path to the emacs script (Supported by Fortran Beautifier)
 ###  HTML - Indent inner html 
 
 **Key**: `html_indent_inner_html`
@@ -924,6 +942,37 @@ Default Beautifier to be used for Go
 **Description**:
 
 Automatically beautify Go files on save
+###  Language Config - Fortran - Disable Beautifying Language 
+
+**Key**: `language_fortran_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Fortran Beautification
+###  Language Config - Fortran - Default Beautifier 
+
+**Key**: `language_fortran_default_beautifier`
+
+**Default**: `Fortran Beautifier`
+
+**Type**: `string`
+
+**Enum**:  `Fortran Beautifier` 
+
+**Description**:
+
+Default Beautifier to be used for Fortran
+###  Language Config - Fortran - Beautify On Save 
+
+**Key**: `language_fortran_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Fortran files on save
 ###  Language Config - Handlebars - Disable Beautifying Language 
 
 **Key**: `language_handlebars_disabled`
