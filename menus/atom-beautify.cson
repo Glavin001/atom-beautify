@@ -1,14 +1,14 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
   'atom-workspace atom-text-editor:not(.mini)': [
-    {label: 'Beautify editor contents', command: 'beautify:beautify-editor'}
-    {label: 'Debug Atom Beautify', command: 'beautify:help-debug-editor'}
+    {label: 'Beautify editor contents', command: 'atom-beautify:beautify-editor'}
+    {label: 'Debug Atom Beautify', command: 'atom-beautify:help-debug-editor'}
   ]
   '.tree-view .file > .name': [
-    {label: 'Beautify File', command: 'beautify:beautify-file'}
+    {label: 'Beautify File', command: 'atom-beautify:beautify-file'}
   ]
 #  '.tree-view .directory > .header > .name': [
-#    {label: 'Beautify Directory', command: 'beautify:beautify-directory'}
+#    {label: 'Beautify Directory', command: 'atom-beautify:beautify-directory'}
 #  ]
 
 'menu': [
@@ -19,11 +19,11 @@
         'submenu': [
               {
                 'label': 'Beautify'
-                'command': 'beautify:beautify-editor'
+                'command': 'atom-beautify:beautify-editor'
               }
               {
                 'label': 'Debug'
-                'command': 'beautify:help-debug-editor'
+                'command': 'atom-beautify:help-debug-editor'
               }
           ]
       ]

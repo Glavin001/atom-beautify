@@ -1,5 +1,10 @@
 language: objective-c
 
+osx_image: beta-xcode6.2
+
+git:
+  depth: 10
+
 notifications:
   webhooks:
     urls:
@@ -14,7 +19,13 @@ notifications:
 script: sh build-package.sh
 
 env:
-    - APM_TEST_PACKAGES="language-typescript language-marko language-tss"
+    - APM_TEST_PACKAGES="language-typescript language-marko language-tss language-html-swig"
+
+cache:
+    - pip
+    - directories:
+        - node_modules
+        - $HOME/.atom
 
 before_install:
   # Update Homebrew
@@ -22,20 +33,22 @@ before_install:
   - brew tap homebrew/dupes
   - brew tap homebrew/versions
   # Ruby language support
-  - gem install ruby-beautify --verbose
+  # - gem install ruby-beautify --verbose
+  - gem install rubocop
+  - gem install htmlbeautifier
   # Python language support
   - brew install python
   - pip install --upgrade autopep8
   # SQL language support
   - pip install --upgrade sqlparse
-  # Markdown language support
-  - brew install pandoc
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
   # PHP
   - brew tap homebrew/homebrew-php
-  - brew install php56
+  - brew install php56 || true
+  - brew gist-logs php56 || true
   - echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini
-  - brew install php-cs-fixer
+  - brew install php-cs-fixer || true
+  - brew gist-logs php-cs-fixer || true
   # CoffeeScript
   - npm install coffee-formatter

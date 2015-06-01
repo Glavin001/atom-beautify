@@ -1,27 +1,8 @@
 ---
-
-title: This is a title!
-
-name: Derek Worthen
-age: young
-contact:
-email: email@domain.com
-address: some location
-pets:
-- cat
-- dog
-- bat
-match: !!js/regexp /pattern/gim
-run: !!js/function function() { }
-
-
-
+layout:          default
+title:        this is my title
+description:     this is my description
 ---
 
-- item
--  item
--   item
-
-1. one
-2.  two
-2.   three
+ test
+   ing

@@ -1,9 +1,8 @@
 # [atom-beautify](https://github.com/donaldpipowitch/atom-beautify)
 
 [![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify)
-[![Gitter chat](https://badges.gitter.im/Glavin001/atom-beautify.svg)](https://gitter.im/Glavin001/atom-beautify)
-[![Issue Stats](http://issuestats.com/github/glavin001/atom-beautify/badge/pr?style=flat)](http://issuestats.com/github/glavin001/atom-beautify)
-[![Issue Stats](http://issuestats.com/github/glavin001/atom-beautify/badge/issue?style=flat)](http://issuestats.com/github/glavin001/atom-beautify)
+[![Gitter chat](https://img.shields.io/badge/gitter-Glavin001%2Fatom--beautify-1dce73.svg)](https://gitter.im/Glavin001/atom-beautify)
+[![donate](http://img.shields.io/gratipay/Glavin001.svg)](https://gratipay.com/Glavin001/)
 
 > [Beautify](https://github.com/einars/js-beautify)
 HTML (including [Handlebars](http://handlebarsjs.com/)),
@@ -17,20 +16,6 @@ apm install atom-beautify
 ```
 
 Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
-
-## Donations [![donate](http://img.shields.io/gratipay/Glavin001.svg)](https://gratipay.com/Glavin001/)
-
-Looking at the list of issues on Atom Beautify, at the time of writing this, there are 51 open and 155 closed.
-I see and strongly feel that Atom Beautify needs a more love than I currently have allocated time to give it, after work, school, and family.
-
-I am now accepting donations to support the development of Atom Beautify.
-Being the [sole maintainer of Atom Beautify, I](https://github.com/Glavin001) thank you very much for any support and for using Atom Beautify.
-
-These donations will help me continue with my contributions to the community while providing me with some much needed financial support for living expenses and my education.
-
-You can donate at https://gratipay.com/Glavin001/
-
-Thank you. [Glavin Wiechert](https://github.com/Glavin001)
 
 ## Language Support
 
@@ -48,9 +33,9 @@ Thank you. [Glavin Wiechert](https://github.com/Glavin001)
   - [LESS](http://lesscss.org/)
 - [x] [SQL](https://github.com/Glavin001/atom-beautify/pull/67)
   - Requires [python-sqlparse](https://github.com/andialbrecht/sqlparse)
-- [x] [Markdown](https://github.com/Glavin001/atom-beautify/issues/93#issuecomment-55642483)
-  - Requires [Pandoc](http://johnmacfarlane.net/pandoc/) to be already installed
-- [X] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
+- [x] [Markdown](https://github.com/Glavin001/atom-beautify/issues/292)
+- [x] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
+  - Requires [perltidy](http://perltidy.sourceforge.net/)
 - [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
   - Requires [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to be already installed.
 - [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
@@ -59,6 +44,7 @@ Thank you. [Glavin Wiechert](https://github.com/Glavin001)
 - [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
   - Requires [Ruby Beautify](https://github.com/erniebrodeur/ruby-beautify)
 - [x] [CoffeeScript](https://github.com/donaldpipowitch/atom-beautify/issues/31)
+- [x] [Golang](https://github.com/Glavin001/atom-beautify/issues/176)
 - [x] [Java](https://github.com/Glavin001/atom-beautify/issues/45)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 - [x] [C](https://github.com/Glavin001/atom-beautify/issues/57)
@@ -83,7 +69,7 @@ Thank you. [Glavin Wiechert](https://github.com/Glavin001)
 
 Open the [Command Palette](https://github.com/atom/command-palette), and type `Beautify`.
 
-It will only beautify selected text, if a selection is found - if not, the whole file will be beautified.
+It will only beautify selected text if a selection is found -- if not, the whole file will be beautified.
 
 ### Shortcut
 
@@ -97,10 +83,14 @@ For example:
 
 ```coffeescript
 '.editor':
-  'ctrl-alt-b': 'beautify:beautify-editor'
+  'ctrl-alt-b': 'atom-beautify:beautify-editor'
 ```
 
 ### Package Options
+
+Each language and its beautifier's options are fully documented in the Atom
+Beautify package settings panel. There are far too many to document them all
+here. Here are a few key options that you may use:
 
 - `beautifyOnSave`  (Default *false*)
 You can also choose to beautify on every file save.
@@ -111,11 +101,6 @@ However, when beautification occurs on save then it will
 be forced to beautify the entire file's contents,
 not just selected text.
 
-- `disabledLanguages` (Default *empty array*)
-An array of Grammar names to disable beautification for.
-Note: If using the Atom's Package Settings then an array is
-represented as comma-separated string.
-
 - `muteUnsupportedLanguageErrors` (Default *false*)
 Mute only *unsupported language* errors.
 
@@ -124,14 +109,11 @@ Do not show the *Atom Beautify Error Messages* panel
 for any of the errors occurring while beautifying.
 
 - `analytics`  (Default *true*)
-There is [Segment.io](https://segment.io/),
-which forwards the data to [Google Analytics](http://www.google.com/analytics/),
-to track what languages
-are being used the most and other stats.
-Everything is anonymized and no personal information,
-such as source code, is sent.
-See https://github.com/Glavin001/atom-beautify/issues/47
-for more details.
+There is [Segment.io](https://segment.io/) which forwards data to [Google
+Analytics](http://www.google.com/analytics/) to track what languages are being
+used the most, as well as other stats. Everything is anonymized and no personal
+information, such as source code, is sent.
+See https://github.com/Glavin001/atom-beautify/issues/47 for more details.
 
 ## Configuration
 
@@ -142,13 +124,13 @@ Edit your `.jsbeautifyrc` file in any of the following locations:
 - Same directory as current file
 - Project root  
 `atom-beautify` will recursively look up from the current file's directory to find `.jsbeautifyrc`.
-- Your User's Home directory
+- Your user's home directory
 
 **Note**: *Comments are supported in `.jsbeautifyrc` thanks to [strip-json-comments](https://github.com/sindresorhus/strip-json-comments).*
 
-See examples of both way inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
+See examples of both ways inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
 
-Option table is available at the [js-beautify repo](https://github.com/beautify-web/js-beautify#options).
+An option table is available at the [js-beautify repo](https://github.com/beautify-web/js-beautify#options).
 
 ### Simple
 
@@ -206,32 +188,6 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 }
 ```
 
-## Advanced Language Setup
-
-### PHP
-
-To use with PHP we require [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
-and that you set the `Php cs fixer path` in the package settings.
-
-#### Retrieve the path on Mac & Linux
-
-Run `which php-cs-fixer` in your Terminal.
-
-### Python
-
-To use with Python we require [autopep8](https://github.com/hhatto/autopep8)
-and that you set the `Python autopep8 path` in the package settings.
-
-#### Retrieve the path on Mac & Linux
-
-Run `which autopep8` in your Terminal.
-
-### Markdown
-
-To use with Markdown we require [pandoc](http://johnmacfarlane.net/pandoc/)
-and you set the `Markdown Pandoc path` in the package settings.
-
-
 ## Contributing
 
 [See all contributors on GitHub](https://github.com/donaldpipowitch/atom-beautify/graphs/contributors).
@@ -242,4 +198,4 @@ and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pul
 
 ## License
 
-[MIT](https://github.com/donaldpipowitch/atom-beautify/blob/master/LICENSE.md) © [Donald Pipowitch](https://github.com/donaldpipowitch)
+[MIT](https://github.com/donaldpipowitch/atom-beautify/blob/master/LICENSE.md) © [Glavin Wiechert](https://github.com/Glavin001)

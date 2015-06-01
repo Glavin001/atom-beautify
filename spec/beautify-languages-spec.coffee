@@ -1,10 +1,9 @@
-Beautify = require '../lib/beautify'
-beautifier = require "../lib/language-options"
-languages = beautifier.languages
-defaultLanguageOptions = beautifier.defaultLanguageOptions
+# Beautify = require '../src/beautify'
+Beautifiers = require "../src/beautifiers"
+beautifier = new Beautifiers()
 fs = require "fs"
 path = require "path"
-options = require "../lib/options"
+JsDiff = require('diff')
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -21,7 +20,8 @@ describe "BeautifyLanguages", ->
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql",
-    "typescript", "xml", "csharp", "gfm", "marko", "tss"
+    "typescript", "xml", "csharp", "gfm", "marko",
+    "tss", "go", "html-swig"
     ]
 
   beforeEach ->
@@ -37,6 +37,8 @@ describe "BeautifyLanguages", ->
         # Force activate package
         pack = atom.packages.getLoadedPackage("atom-beautify")
         pack.activateNow()
+        # Change logger level
+        # atom.config.set('atom-beautify._loggerLevel', 'verbose')
         # Return promise
         return activationPromise
 
@@ -130,21 +132,39 @@ describe "BeautifyLanguages", ->
                         grammarName = grammar.name
 
                         # Get the options
-                        allOptions = options.getOptionsForPath(originalTestPath)
+                        allOptions = beautifier.getOptionsForPath(originalTestPath)
 
                         beautifyCompleted = false
                         completionFun = (text) ->
-                          if text instanceof Error
-                            return beautifyCompleted = text # text == Error
-                          expect(typeof text).toEqual "string"
+                        #   logger.verbose(expectedTestPath, text) if ext is ".less"
+                          expect(text instanceof Error).not.toEqual(true, text)
+                          return beautifyCompleted = true if text instanceof Error
+                        #   if text instanceof Error
+                        #     return beautifyCompleted = text # text == Error
+
+                          expect(text).not.toEqual(null, "Language or Beautifier not found")
+                          return beautifyCompleted = true if text is null
+
+                          expect(typeof text).toEqual("string", "Text: #{text}")
+                          return beautifyCompleted = true if typeof text is "string"
+                          # Check for beautification errors
                           if text isnt expectedContents
-                            console.warn(allOptions, text, expectedContents)
-                          expect(text).toEqual expectedContents
+                            #   console.warn(allOptions, text, expectedContents)
+                              fileName = expectedTestPath
+                              oldStr=text
+                              newStr=expectedContents
+                              oldHeader="beautified"
+                              newHeader="expected"
+                              diff = JsDiff.createPatch(fileName, oldStr, newStr, oldHeader, newHeader)
+                              expect(text).toEqual(expectedContents, "Beautifier output does not match expected output:\n"+diff)
+                          # All done!
                           beautifyCompleted = true
 
                         runs ->
                           try
-                            beautifier.beautify originalContents, grammarName, allOptions, completionFun
+                            beautifier.beautify(originalContents, allOptions, grammarName, testFileName)
+                            .then(completionFun)
+                            .catch(completionFun)
                           catch e
                             beautifyCompleted = e
 

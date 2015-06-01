@@ -1,3 +1,30 @@
+# v0.26.0 (2015-05-03)
+- Closes [#176](https://github.com/Glavin001/atom-beautify/issues/176). Add [gofmt](http://golang.org/cmd/gofmt/) beautifier for Go language
+- Closes [#192](https://github.com/Glavin001/atom-beautify/issues/192). Add [coffee-fmt](https://github.com/sterpe/coffee-fmt) beautifier for CoffeeScript language
+- Closes [#209](https://github.com/Glavin001/atom-beautify/issues/209). Add [CSScomb](http://csscomb.com/) beautifier for CSS/LESS/SCSS/Sass languages.
+> To switch from `JS Beautify` (CSS) or `Pretty Diff` (SCSS/Sass/LESS) to
+using `CSScomb`, you will go into Atom Beautify package settings and
+find the option for `Language Config -<Your Desired Language: CSS, etc>- Default Beautifier` and select `CSScomb`.
+>
+>CSScomb looks for a `.csscomb.json` file in your Atom's first project
+directory. If it does not find one, or if importing it fails, it will
+fallback to `csscomb` predefined configuration.
+
+
+# v0.25.0 (2015-05-02)
+- [Add new internal Beautifier API.](https://github.com/Glavin001/atom-beautify/issues/282)
+- [Switch to using Tidy-Markdown instead of Pandoc for Markdown beautification](https://github.com/Glavin001/atom-beautify/issues/292)
+    - Improve YAML Front-Matter support in Markdown. See [#261](https://github.com/Glavin001/atom-beautify/issues/261)
+- [Add Rubocop beautifier for Ruby beautification](https://github.com/Glavin001/atom-beautify/pull/275)
+- [Use Pretty Diff for XML Beautification](https://github.com/Glavin001/atom-beautify/issues/197)
+- [Add EJS beautification support using Pretty Diff](https://github.com/Glavin001/atom-beautify/issues/136)
+    - [Angular Template support by using EJS language beautifier, Pretty Diff](https://github.com/Glavin001/atom-beautify/issues/179)
+- [Add Spacebars beautification support using Pretty Diff](https://github.com/Glavin001/atom-beautify/issues/217)
+
+# v0.24.1 (2015-04-19)
+- [Fix incorrect name for pandoc path option](https://github.com/Glavin001/atom-beautify/commit/2fe815e47cf8c95d099ee0f17b2c4d83dc8dd2ce)
+- [Updates context-menu to use new api](https://github.com/Glavin001/atom-beautify/commit/6810805e3e290342a1060aca12c646724fc1694d)
+
 # v0.24.0 (2015-04-07)
 - Temporarily disable failing PHP tests
 - Add Titanium style Sheets (TSS) support. See [#122][] and [#238][]
