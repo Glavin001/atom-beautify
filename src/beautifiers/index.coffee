@@ -39,6 +39,7 @@ module.exports = class Beautifiers
         'htmlbeautifier'
         'csscomb'
         'gofmt'
+        'fortran-emacs-beautify'
         'js-beautify'
         'perltidy'
         'php-cs-fixer'
