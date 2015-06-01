@@ -29,7 +29,7 @@ module.exports = class Beautifiers
     ###
       List of beautifier names
 
-      To register a beautifier add it's name here
+      To register a beautifier add its name here
     ###
     beautifierNames : [
         'uncrustify'
@@ -470,7 +470,7 @@ module.exports = class Beautifiers
                         title = "Atom Beautify could not find a supported beautifier for this file"
                         detail = """
                                  Atom Beautify could not determine a supported beautifier to handle this file with grammar \"#{grammar}\" and extension \"#{fileExtension}\". \
-                                 If you would like to request support for this file and it's language, please create an issue for Atom Beautify at #{repoBugsUrl}
+                                 If you would like to request support for this file and its language, please create an issue for Atom Beautify at #{repoBugsUrl}
                                  """
 
                         atom?.notifications.addWarning(title, {
@@ -638,7 +638,7 @@ module.exports = class Beautifiers
         userHome = @getUserHome()
 
 
-        # FAKEFILENAME forces `path` to treat as file path and it's parent directory
+        # FAKEFILENAME forces `path` to treat as file path and its parent directory
         # is the userHome. See implementation of findConfig
         # and how path.dirname(DIRECTORY) returns the parent directory of DIRECTORY
         homeOptions = @getConfig(path.join(userHome, "FAKEFILENAME"), false)
