@@ -9,13 +9,12 @@ module.exports = do ->
     # See http://stackoverflow.com/a/21583831/2578205
     winston = require('winston')
     stream = require('stream')
-    writable = new stream.Writable({
-        write: (chunk, encoding, next) ->
+    writable = new stream.Writable()
+    writable._write = (chunk, encoding, next) ->
             msg = chunk.toString()
             # console.log(msg)
             emitter.emit('logging', msg)
             next()
-    })
 
     levels = {
         silly: 0,
@@ -48,7 +47,7 @@ module.exports = do ->
             ]
         })
         wlogger.on('logging', (transport, level, msg, meta)->
-            loggerLevel = atom.config.get('atom-beautify._loggerLevel')
+            loggerLevel = atom?.config.get('atom-beautify._loggerLevel') ? "warn"
             # console.log('logging', loggerLevel, arguments)
             loggerLevelNum = levels[loggerLevel]
             levelNum = levels[level]
