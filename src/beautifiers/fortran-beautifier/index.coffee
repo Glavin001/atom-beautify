@@ -3,7 +3,7 @@ Requires https://www.gnu.org/software/emacs/
 ###
 
 "use strict"
-Beautifier = require('./beautifier')
+Beautifier = require('../beautifier')
 path = require("path")
 
 module.exports = class FortranBeautifier extends Beautifier
@@ -16,13 +16,11 @@ module.exports = class FortranBeautifier extends Beautifier
     beautify: (text, language, options) ->
         @debug('fortran-beautifier', options)
 
-        console.debug 'fortran-beautifier' + options
-
         emacs_path = options.emacs_path
         emacs_script_path = options.emacs_script_path
 
         if not emacs_script_path
-            emacs_script_path = path.resolve(__dirname, "emacs/emacs-fortran-beautify.lisp")
+            emacs_script_path = path.resolve(__dirname, "emacs-fortran-formating-script.lisp")
 
         @debug('fortran-beautifier', 'emacs script path: ' + emacs_script_path)
 
@@ -43,8 +41,6 @@ module.exports = class FortranBeautifier extends Beautifier
                     @readFile(tempFile)
                 )
         else
-            @debug('fortran-beautifier', "running emacs with args " + args)
-
             @run("emacs", args, {ignoreReturnCode: true})
                 .then(=>
                     @readFile(tempFile)
