@@ -1,5 +1,5 @@
 ###
-Requires https://github.com/FriendsOfPHP/PHP-CS-Fixer
+Requires https://www.gnu.org/software/emacs/
 ###
 
 "use strict"
