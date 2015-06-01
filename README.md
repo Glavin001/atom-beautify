@@ -57,6 +57,8 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 - [x] [D](https://github.com/Glavin001/atom-beautify/issues/57)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+- [x] [Fortran](https://github.com/Glavin001/atom-beautify/issues/300)
+  - Requires [GNU Emacs](http://www.gnu.org/software/emacs/)
 - [x] [Pawn](https://github.com/Glavin001/atom-beautify/issues/57)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 - [x] [Vala](https://github.com/Glavin001/atom-beautify/issues/57)
