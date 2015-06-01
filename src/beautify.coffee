@@ -426,38 +426,7 @@ handleSaveEvent = =>
         plugin.subscribe disposable
 {Subscriber} = require path.join(atom.packages.resourcePath, 'node_modules', 'emissary')
 Subscriber.extend plugin
-plugin.config = _.merge(
-    analytics :
-        type : 'boolean'
-        default : true
-        description : "Automatically send usage information (NEVER CODE) to Google Analytics"
-    _analyticsUserId :
-        type : 'string'
-        default : ""
-        description : "Unique identifier for this user for tracking usage analytics"
-    _loggerLevel :
-        type : 'string'
-        default : 'warn'
-        description : 'Set the level for the logger'
-        enum : ['verbose', 'debug', 'info', 'warn', 'error']
-    beautifyOnSave :
-        title : "DEPRECATED: Beautfy On Save"
-        type : 'boolean'
-        default : false
-        description : "Beautify active editor on save"
-    beautifyEntireFileOnSave :
-        type : 'boolean'
-        default : true
-        description : "When beautifying on save, use the entire file, even if there is selected text in the editor"
-    muteUnsupportedLanguageErrors :
-        type : 'boolean'
-        default : false
-        description : "Do not show \"Unsupported Language\" errors when they occur"
-    muteAllErrors :
-        type : 'boolean'
-        default : false
-        description : "Do not show any/all errors when they occur"
-, defaultLanguageOptions)
+plugin.config = _.merge(require('./config.coffee'), defaultLanguageOptions)
 plugin.activate = ->
     handleSaveEvent()
     plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)

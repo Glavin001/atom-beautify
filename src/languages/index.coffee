@@ -6,13 +6,6 @@ Language Support and default options.
 _ = require('lodash')
 extend = null
 
-# Get Atom defaults
-tabLength = atom.config.get('editor.tabLength')
-softTabs = atom.config.get('editor.softTabs')
-defaultIndentSize = (if softTabs then tabLength else 1)
-defaultIndentChar = (if softTabs then " " else "\t")
-defaultIndentWithTabs = not softTabs
-
 #
 module.exports = class Languages
 

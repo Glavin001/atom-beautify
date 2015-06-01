@@ -86,35 +86,6 @@ For example:
   'ctrl-alt-b': 'atom-beautify:beautify-editor'
 ```
 
-### Package Options
-
-Each language and its beautifier's options are fully documented in the Atom
-Beautify package settings panel. There are far too many to document them all
-here. Here are a few key options that you may use:
-
-- `beautifyOnSave`  (Default *false*)
-You can also choose to beautify on every file save.
-
-- `beautifyEntireFileOnSave` (Default *true*)
-Beautification will normally only beautify your selected text.
-However, when beautification occurs on save then it will
-be forced to beautify the entire file's contents,
-not just selected text.
-
-- `muteUnsupportedLanguageErrors` (Default *false*)
-Mute only *unsupported language* errors.
-
-- `muteAllErrors` (Default *false*)
-Do not show the *Atom Beautify Error Messages* panel
-for any of the errors occurring while beautifying.
-
-- `analytics`  (Default *true*)
-There is [Segment.io](https://segment.io/) which forwards data to [Google
-Analytics](http://www.google.com/analytics/) to track what languages are being
-used the most, as well as other stats. Everything is anonymized and no personal
-information, such as source code, is sent.
-See https://github.com/Glavin001/atom-beautify/issues/47 for more details.
-
 ## Configuration
 
 Edit your `.jsbeautifyrc` file in any of the following locations:
@@ -130,7 +101,7 @@ Edit your `.jsbeautifyrc` file in any of the following locations:
 
 See examples of both ways inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
 
-An option table is available at the [js-beautify repo](https://github.com/beautify-web/js-beautify#options).
+See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
 
 ### Simple
 
