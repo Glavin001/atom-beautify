@@ -1,23 +1,23 @@
 # Options
 
-Automatically generated documentation for language and beautifier options.
+Automatically generated documentation for Atom Beautify's options.
 
-## Supported Options
+## Package Options
 
-{{#each options}}
-### {{title}} (`{{@key}}`)
-{{#if default}}
+Configurable options for Atom Beautify.
 
-**Default**: `{{default}}`
-{{/if}}
+---
 
-**Type**: `{{type}}`
-{{#if enum}}  
+{{#each packageOptions}}
+{{> option}}
+{{/each}}
 
-**Enum**: {{#each enum}} `{{this}}` {{/each}}
-{{/if}}
+## Language Options
 
-#### Description
-{{description}}
+Supported options for each language.
 
+---
+
+{{#each languageOptions}}
+{{> option}}
 {{/each}}

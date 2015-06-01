@@ -7,16 +7,22 @@ fs = require('fs')
 
 console.log('Generating options...')
 beautifier = new Beautifiers()
-defaultLanguageOptions = beautifier.options
+languageOptions = beautifier.options
+packageOptions = require('../src/config.coffee')
 
 console.log('Loading options template...')
-templatePath = __dirname + '/options-template.md'
+optionsTemplatePath = __dirname + '/options-template.md'
+optionTemplatePath = __dirname + '/option-template.md'
 optionsPath = __dirname + '/options.md'
-source = fs.readFileSync(templatePath).toString()
+optionsTemplate = fs.readFileSync(optionsTemplatePath).toString()
+optionTemplate = fs.readFileSync(optionTemplatePath).toString()
+
 console.log('Building documentation from template and options...')
-template = Handlebars.compile(source)
+Handlebars.registerPartial('option', optionTemplate)
+template = Handlebars.compile(optionsTemplate)
 context = {
-    options: defaultLanguageOptions
+    packageOptions: packageOptions
+    languageOptions: languageOptions
 }
 result = template(context)
 
