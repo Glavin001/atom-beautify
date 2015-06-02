@@ -91,7 +91,7 @@ install:
   - "SET PATH=C:\\tools\\php;%PATH%"
   - where php
   # Composer
-  - choco install composer
+  - cinst composer -y
   # PHP-CS-Fixer
   - php composer.phar global require fabpot/php-cs-fixer
   - where php-cs-fixer
