@@ -86,6 +86,8 @@ install:
 
   # PHP
   - cinst php -y
+  - ps: "ls \"C:\\tools\\php\""
+  - "SET PATH=C:\\tools\\php;%PATH%"
   - where php
   # Composer
   - php -r "readfile('https://getcomposer.org/installer');" | php
