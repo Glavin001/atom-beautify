@@ -86,15 +86,15 @@ install:
   - where htmlbeautifier
 
   # PHP
-  - cinst php -y
-  - ps: "ls \"C:\\tools\\php\""
-  - "SET PATH=C:\\tools\\php;%PATH%"
-  - where php
-  # Composer
-  - cinst composer -y
-  # PHP-CS-Fixer
-  - php composer.phar global require fabpot/php-cs-fixer
-  - where php-cs-fixer
+  # - cinst php -y
+  # - ps: "ls \"C:\\tools\\php\""
+  # - "SET PATH=C:\\tools\\php;%PATH%"
+  # - where php
+  # # Composer
+  # - cinst composer -y
+  # # PHP-CS-Fixer
+  # - php composer.phar global require fabpot/php-cs-fixer
+  # - where php-cs-fixer
 
   # emacs
   - cinst emacs -y
