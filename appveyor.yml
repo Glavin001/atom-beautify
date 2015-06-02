@@ -91,10 +91,9 @@ install:
   - "SET PATH=C:\\tools\\php;%PATH%"
   - where php
   # Composer
-  - php -r "readfile('https://getcomposer.org/installer');" | php
-  - echo @php "%~dp0composer.phar" %*>composer.bat
+  - choco install composer
   # PHP-CS-Fixer
-  - ./composer.phar global require fabpot/php-cs-fixer
+  - php composer.phar global require fabpot/php-cs-fixer
   - where php-cs-fixer
 
   # emacs
