@@ -25,12 +25,14 @@ describe "BeautifyLanguages", ->
     ]
   # All Atom packages that Atom Beautify is dependent on
   dependentPackages = [
+      'autocomplete-plus'
+      'linter'
       'atom-typescript'
   ]
   # Add language packages to dependentPackages
   for lang in allLanguages
     do (lang) ->
-        dependentPackages.push("language-#{lang}")
+      dependentPackages.push("language-#{lang}")
 
   beforeEach ->
     # Install all of the languages
