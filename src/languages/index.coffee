@@ -46,6 +46,7 @@ module.exports = class Languages
     "sql"
     "swig"
     "tss"
+    "twig"
     "typescript"
     "vala"
     "visualforce"

@@ -28,6 +28,7 @@ module.exports = class PrettyDiff extends Beautifier
         Sass: true
         JSON: true
         TSS: true
+        Twig: true
         LESS: true
         Swig: true
         Visualforce: true
@@ -44,7 +45,7 @@ module.exports = class PrettyDiff extends Beautifier
             switch language
                 when "CSV"
                     lang = "csv"
-                when "EJS"
+                when "EJS", "Twig"
                     lang = "ejs"
                 when "ERB"
                     lang = "html_ruby"
