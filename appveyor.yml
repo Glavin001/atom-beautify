@@ -77,10 +77,28 @@ install:
 
   # Ruby & Gem
   - cinst ruby -y
+  - "SET PATH=C:\\Ruby193\\bin;%PATH%"
+  # Rubocop
   - gem install rubocop
-  
+  - where rubocop
+  # HTMLBeautifier
+  - gem install htmlbeautifier
+  - where htmlbeautifier
+
   # PHP
-  - cinst php -y
+  # - cinst php -y
+  # - ps: "ls \"C:\\tools\\php\""
+  # - "SET PATH=C:\\tools\\php;%PATH%"
+  # - where php
+  # # Composer
+  # - cinst composer -y
+  # # PHP-CS-Fixer
+  # - php composer.phar global require fabpot/php-cs-fixer
+  # - where php-cs-fixer
+
+  # emacs
+  - cinst emacs -y
+  - where emacs
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
