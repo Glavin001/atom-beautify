@@ -586,6 +586,15 @@ Indentation size/length (Supported by autopep8)
 **Description**:
 
 do not fix these errors/warnings (Supported by autopep8)
+###  Rust - Rustfmt path 
+
+**Key**: `rust_rustfmt_path`
+
+**Type**: `string`
+
+**Description**:
+
+Path to rustfmt program (Supported by rustfmt)
 ###  SQL - Indent size 
 
 **Key**: `sql_indent_size`
@@ -1469,6 +1478,37 @@ Default Beautifier to be used for Ruby
 **Description**:
 
 Automatically beautify Ruby files on save
+###  Language Config - Rust - Disable Beautifying Language 
+
+**Key**: `language_rust_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Rust Beautification
+###  Language Config - Rust - Default Beautifier 
+
+**Key**: `language_rust_default_beautifier`
+
+**Default**: `rustfmt`
+
+**Type**: `string`
+
+**Enum**:  `rustfmt` 
+
+**Description**:
+
+Default Beautifier to be used for Rust
+###  Language Config - Rust - Beautify On Save 
+
+**Key**: `language_rust_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Rust files on save
 ###  Language Config - Sass - Disable Beautifying Language 
 
 **Key**: `language_sass_disabled`

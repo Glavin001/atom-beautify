@@ -39,6 +39,7 @@ module.exports = class Languages
     "php"
     "python"
     "ruby"
+    "rust"
     "sass"
     "scss"
     "spacebars"

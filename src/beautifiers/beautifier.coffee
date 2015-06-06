@@ -9,7 +9,7 @@ readFile = Promise.promisify(fs.readFile)
 module.exports = class Beautifier
 
     ###
-    
+
     ###
     Promise: Promise
 

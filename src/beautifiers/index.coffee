@@ -46,6 +46,7 @@ module.exports = class Beautifiers
         'prettydiff'
         'rubocop'
         'ruby-beautify'
+        'rustfmt'
         'sqlformat'
         'tidy-markdown'
         'typescript-formatter'
