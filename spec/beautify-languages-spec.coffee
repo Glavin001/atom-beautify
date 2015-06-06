@@ -20,16 +20,24 @@ describe "BeautifyLanguages", ->
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql",
-    "typescript", "xml", "csharp", "gfm", "marko",
+    "xml", "csharp", "gfm", "marko",
     "tss", "go", "html-swig"
     ]
+  # All Atom packages that Atom Beautify is dependent on
+  dependentPackages = [
+      'atom-typescript'
+  ]
+  # Add language packages to dependentPackages
+  for lang in allLanguages
+    do (lang) ->
+        dependentPackages.push("language-#{lang}")
 
   beforeEach ->
     # Install all of the languages
-    for lang in allLanguages
-      do (lang) ->
+    for packageName in dependentPackages
+      do (packageName) ->
         waitsForPromise ->
-          atom.packages.activatePackage("language-#{lang}")
+          atom.packages.activatePackage(packageName)
 
     # Activate package
     waitsForPromise ->
