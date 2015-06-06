@@ -24,7 +24,14 @@ module.exports = class PHPCSFixer extends Beautifier
                 "--level=#{options.level}" if options.level
                 "--fixers=#{options.fixers}" if options.fixers
                 tempFile = @tempFile("temp", text)
-                ], {ignoreReturnCode: true})
+                ], {
+                    ignoreReturnCode: true
+                    help: {
+                        link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+                        program: "php-cs-fixer.phar"
+                        pathOption: "PHP - CS Fixer Path"
+                    }
+                })
                 .then(=>
                     @readFile(tempFile)
                 )
@@ -34,7 +41,14 @@ module.exports = class PHPCSFixer extends Beautifier
                 "--level=#{options.level}" if options.level
                 "--fixers=#{options.fixers}" if options.fixers
                 tempFile = @tempFile("temp", text)
-                ], {ignoreReturnCode: true})
+                ], {
+                    ignoreReturnCode: true
+                    help: {
+                        link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+                        program: "php-cs-fixer.phar"
+                        pathOption: "PHP - CS Fixer Path"
+                    }
+                })
                 .then(=>
                     @readFile(tempFile)
                 )

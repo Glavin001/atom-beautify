@@ -19,6 +19,7 @@ module.exports = {
 
     options:
         cs_fixer_path:
+            title: "PHP-CS-Fixer Path"
             type: 'string'
             default: ""
             description: "Path to the `php-cs-fixer` CLI executable"

@@ -526,7 +526,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 **Description**:
 
 Specify a configuration file which will override the default name of .perltidyrc (Supported by Perltidy)
-###  PHP - Cs fixer path 
+###  PHP - PHP-CS-Fixer Path 
 
 **Key**: `php_cs_fixer_path`
 
