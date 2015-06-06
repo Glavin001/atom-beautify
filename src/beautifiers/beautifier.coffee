@@ -135,7 +135,7 @@ module.exports = class Beautifier
     ###
     Run command-line interface command
     ###
-    run: (executable, args, {ignoreReturnCode} = {}) ->
+    run: (executable, args, {ignoreReturnCode, help} = {}) ->
         # Resolve executable
         Promise.resolve(executable)
         .then((exe) =>
@@ -173,7 +173,30 @@ module.exports = class Beautifier
                         )
                         cmd.on('error', (err) =>
                             @debug('error', err)
-                            reject(err)
+                            # Check if error is ENOENT (command could not be found)
+                            if err.code is 'ENOENT' or err.errno is 'ENOENT'
+                                # Create new improved error
+                                # notify user that it may not be installed or in path
+                                message = "Could not find '#{exe}'. The program may not be installed."
+                                er = new Error(message) # +(if help then "\n\n#{help}" else "")
+                                if help?
+                                    if typeof help is "object"
+                                        helpStr = "See #{help.link} for program installation instructions.\n"
+                                        helpStr += "You can configure Atom Beautify with the absolute path \
+                                            to '#{help.program or exe}' by setting '#{help.pathOption}' in \
+                                            the Atom Beautify package settings.\n" if help.pathOption
+                                        helpStr += help.additional if help.additional
+                                        er.description = helpStr
+                                    else #if typeof help is "string"
+                                        er.description = help
+                                er.code = 'CommandNotFound'
+                                er.errno = er.code
+                                er.syscall = 'beautifier::run'
+                                er.file = exe
+                                reject(er)
+                            else
+                                # continue as normal error
+                                reject(err)
                         )
                     )
                 )

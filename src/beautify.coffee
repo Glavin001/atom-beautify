@@ -76,7 +76,7 @@ beautify = ({onSave}) ->
 
             # console.log(e)
             stack = error.stack
-            detail = error.message
+            detail = error.description or error.message
             atom.notifications?.addError(error.message, {
                 stack, detail, dismissable : true})
 
