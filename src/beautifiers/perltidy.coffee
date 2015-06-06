@@ -25,4 +25,6 @@ module.exports = class PerlTidy extends Beautifier
             '--quiet'
             "--profile=#{options.perltidy_profile}" if options.perltidy_profile?
             @tempFile("input", text)
-            ])
+            ], help: {
+                link: "http://perltidy.sourceforge.net/"
+            })

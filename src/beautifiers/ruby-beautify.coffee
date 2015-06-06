@@ -16,4 +16,6 @@ module.exports = class RubyBeautify extends Beautifier
         @deprecate("Ruby-Beautify has been deprecated in favour of Rubocop beautifier.")
         @run("rbeautify", [
             @tempFile("input", text)
-            ])
+            ], help: {
+                link: "https://github.com/erniebrodeur/ruby-beautify"
+            })

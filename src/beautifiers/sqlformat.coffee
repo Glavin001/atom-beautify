@@ -19,4 +19,6 @@ module.exports = class sqlformat extends Beautifier
             "--indent_width=#{options.indent_size}" if options.indent_size?
             "--keywords=#{options.keywords}" if options.keywords?
             "--identifiers=#{options.identifiers}" if options.identifiers?
-            ])
+            ], help: {
+                link: "https://github.com/andialbrecht/sqlparse"
+            })

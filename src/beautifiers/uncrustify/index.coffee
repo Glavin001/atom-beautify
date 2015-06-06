@@ -75,7 +75,9 @@ module.exports = class Uncrustify extends Beautifier
                     outputFile = @tempFile("output", text)
                     "-l"
                     lang
-                ])
+                ], help: {
+                    link: "http://sourceforge.net/projects/uncrustify/"
+                })
                 .then(=>
                     @readFile(outputFile)
                 )
