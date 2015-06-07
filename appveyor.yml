@@ -85,6 +85,10 @@ install:
   - gem install htmlbeautifier
   - where htmlbeautifier
 
+  # emacs
+  - cinst emacs -y
+  - where emacs
+
   # PHP
   # - cinst php -y
   # - ps: "ls \"C:\\tools\\php\""
@@ -96,13 +100,19 @@ install:
   # - php composer.phar global require fabpot/php-cs-fixer
   # - where php-cs-fixer
 
-  # emacs
-  - cinst emacs -y
-  - where emacs
+  - echo %PATH%
+
 
 build_script:
+
   - cd %APPVEYOR_BUILD_FOLDER%
   # Install languages to Atom
   - apm install linter atom-typescript language-marko language-tss language-html-swig
+  # Show current PATH
+  - echo %PATH%
+  - SET PATH=%LOCALAPPDATA%\atom\bin;%PATH%
+  - SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
+  - SET PATH=C:\\Ruby193\\bin;%PATH%
+  - echo %PATH%
   # Run tests on package
   - apm test --one --path %LOCALAPPDATA%/atom/bin/atom.cmd
