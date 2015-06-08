@@ -9,6 +9,13 @@ console.log('Generating options...')
 beautifier = new Beautifiers()
 languageOptions = beautifier.options
 packageOptions = require('../src/config.coffee')
+# Build options by Beautifier
+beautifierOptions = {}
+for optionName, optionDef of languageOptions
+    beautifiers = optionDef.beautifiers ? []
+    for beautifierName in beautifiers
+        beautifierOptions[beautifierName] ?= {}
+        beautifierOptions[beautifierName][optionName] = optionDef
 
 console.log('Loading options template...')
 optionsTemplatePath = __dirname + '/options-template.md'
@@ -23,6 +30,7 @@ template = Handlebars.compile(optionsTemplate)
 context = {
     packageOptions: packageOptions
     languageOptions: languageOptions
+    beautifierOptions: beautifierOptions
 }
 result = template(context)
 

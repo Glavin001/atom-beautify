@@ -8,7 +8,7 @@ Configurable options for Atom Beautify.
 
 ---
 
-###  `analytics` 
+####  `analytics` 
 
 **Key**: `analytics`
 
@@ -19,7 +19,7 @@ Configurable options for Atom Beautify.
 **Description**:
 
 There is [Segment.io](https://segment.io/) which forwards data to [Google Analytics](http://www.google.com/analytics/) to track what languages are being used the most, as well as other stats. Everything is anonymized and no personal information, such as source code, is sent. See https://github.com/Glavin001/atom-beautify/issues/47 for more details.
-###  `_analyticsUserId` 
+####  `_analyticsUserId` 
 
 **Key**: `_analyticsUserId`
 
@@ -28,7 +28,7 @@ There is [Segment.io](https://segment.io/) which forwards data to [Google Analyt
 **Description**:
 
 Unique identifier for this user for tracking usage analytics
-###  `_loggerLevel` 
+####  `_loggerLevel` 
 
 **Key**: `_loggerLevel`
 
@@ -41,7 +41,7 @@ Unique identifier for this user for tracking usage analytics
 **Description**:
 
 Set the level for the logger
-###  `beautifyEntireFileOnSave` 
+####  `beautifyEntireFileOnSave` 
 
 **Key**: `beautifyEntireFileOnSave`
 
@@ -52,7 +52,7 @@ Set the level for the logger
 **Description**:
 
 When beautifying on save, use the entire file, even if there is selected text in the editor
-###  `muteUnsupportedLanguageErrors` 
+####  `muteUnsupportedLanguageErrors` 
 
 **Key**: `muteUnsupportedLanguageErrors`
 
@@ -61,7 +61,7 @@ When beautifying on save, use the entire file, even if there is selected text in
 **Description**:
 
 Do not show &quot;Unsupported Language&quot; errors when they occur
-###  `muteAllErrors` 
+####  `muteAllErrors` 
 
 **Key**: `muteAllErrors`
 
@@ -77,34 +77,40 @@ Supported options for each language.
 
 ---
 
-###  C# - Config Path 
+####  C# - Config Path 
 
 **Key**: `cs_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  C - Config Path 
+####  C - Config Path 
 
 **Key**: `c_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  C++ - Config Path 
+####  C++ - Config Path 
 
 **Key**: `cpp_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  CSS - Indent size 
+####  CSS - Indent size 
 
 **Key**: `css_indent_size`
 
@@ -112,10 +118,12 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Indentation size/length (Supported by JS Beautify, Pretty Diff)
-###  CSS - Indent char 
+####  CSS - Indent char 
 
 **Key**: `css_indent_char`
 
@@ -123,46 +131,56 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Indentation character (Supported by JS Beautify, Pretty Diff)
-###  CSS - Selector separator newline 
+####  CSS - Selector separator newline 
 
 **Key**: `css_selector_separator_newline`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Add a newline between multiple selectors (Supported by JS Beautify)
-###  CSS - Newline between rules 
+####  CSS - Newline between rules 
 
 **Key**: `css_newline_between_rules`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
-###  CSS - Preserve newlines 
+####  CSS - Preserve newlines 
 
 **Key**: `css_preserve_newlines`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Retain empty lines. Consecutive empty lines will be converted to a single empty line. (Supported by JS Beautify, Pretty Diff)
-###  CSS - Wrap line length 
+####  CSS - Wrap line length 
 
 **Key**: `css_wrap_line_length`
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, Pretty Diff)
-###  CSS - Indent comments 
+####  CSS - Indent comments 
 
 **Key**: `css_indent_comments`
 
@@ -170,19 +188,23 @@ Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, P
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `Pretty Diff` 
+
 **Description**:
 
 Determines whether comments should be indented. (Supported by Pretty Diff)
-###  CSS - Force indentation 
+####  CSS - Force indentation 
 
 **Key**: `css_force_indentation`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `Pretty Diff` 
+
 **Description**:
 
 if indentation should be forcefully applied tomarkup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
-###  CSS - Convert quotes 
+####  CSS - Convert quotes 
 
 **Key**: `css_convert_quotes`
 
@@ -192,55 +214,67 @@ if indentation should be forcefully applied tomarkup even if it disruptively add
 
 **Enum**:  `none`  `double`  `single` 
 
+**Supported Beautifiers**:  `Pretty Diff` 
+
 **Description**:
 
 Convert the quote characters delimiting strings from either double or single quotes to the other. (Supported by Pretty Diff)
-###  CSS - Align assignments 
+####  CSS - Align assignments 
 
 **Key**: `css_align_assignments`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `Pretty Diff` 
+
 **Description**:
 
 If lists of assignments or properties should be vertically aligned for faster and easier reading. (Supported by Pretty Diff)
-###  D - Config Path 
+####  D - Config Path 
 
 **Key**: `d_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  Fortran - Emacs path 
+####  Fortran - Emacs path 
 
 **Key**: `fortran_emacs_path`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Fortran Beautifier` 
+
 **Description**:
 
 Path to the &#x60;emacs&#x60; executable (Supported by Fortran Beautifier)
-###  Fortran - Emacs script path 
+####  Fortran - Emacs script path 
 
 **Key**: `fortran_emacs_script_path`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Fortran Beautifier` 
+
 **Description**:
 
 Path to the emacs script (Supported by Fortran Beautifier)
-###  HTML - Indent inner html 
+####  HTML - Indent inner html 
 
 **Key**: `html_indent_inner_html`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Indent &lt;head&gt; and &lt;body&gt; sections. (Supported by JS Beautify)
-###  HTML - Indent size 
+####  HTML - Indent size 
 
 **Key**: `html_indent_size`
 
@@ -248,10 +282,12 @@ Indent &lt;head&gt; and &lt;body&gt; sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Indentation size/length (Supported by JS Beautify, Pretty Diff)
-###  HTML - Indent char 
+####  HTML - Indent char 
 
 **Key**: `html_indent_char`
 
@@ -259,10 +295,12 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Indentation character (Supported by JS Beautify, Pretty Diff)
-###  HTML - Brace style 
+####  HTML - Brace style 
 
 **Key**: `html_brace_style`
 
@@ -272,10 +310,12 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Enum**:  `collapse`  `expand`  `end-expand`  `none` 
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 [collapse|expand|end-expand|none] (Supported by JS Beautify)
-###  HTML - Indent scripts 
+####  HTML - Indent scripts 
 
 **Key**: `html_indent_scripts`
 
@@ -285,10 +325,12 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Enum**:  `keep`  `separate`  `normal` 
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 [keep|separate|normal] (Supported by JS Beautify)
-###  HTML - Wrap line length 
+####  HTML - Wrap line length 
 
 **Key**: `html_wrap_line_length`
 
@@ -296,10 +338,12 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
-###  HTML - Wrap attributes 
+####  HTML - Wrap attributes 
 
 **Key**: `html_wrap_attributes`
 
@@ -309,10 +353,12 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 **Enum**:  `auto`  `force` 
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
-###  HTML - Wrap attributes indent size 
+####  HTML - Wrap attributes indent size 
 
 **Key**: `html_wrap_attributes_indent_size`
 
@@ -320,10 +366,12 @@ Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Indent wrapped attributes to after N characters (Supported by JS Beautify)
-###  HTML - Preserve newlines 
+####  HTML - Preserve newlines 
 
 **Key**: `html_preserve_newlines`
 
@@ -331,10 +379,12 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
-###  HTML - Max preserve newlines 
+####  HTML - Max preserve newlines 
 
 **Key**: `html_max_preserve_newlines`
 
@@ -342,10 +392,12 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
-###  HTML - Unformatted 
+####  HTML - Unformatted 
 
 **Key**: `html_unformatted`
 
@@ -353,28 +405,34 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `array`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
-###  HTML - End with newline 
+####  HTML - End with newline 
 
 **Key**: `html_end_with_newline`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 End output with newline (Supported by JS Beautify)
-###  Java - Config Path 
+####  Java - Config Path 
 
 **Key**: `java_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  JavaScript - Indent size 
+####  JavaScript - Indent size 
 
 **Key**: `js_indent_size`
 
@@ -382,10 +440,12 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Indentation size/length (Supported by JS Beautify, Pretty Diff)
-###  JavaScript - Indent char 
+####  JavaScript - Indent char 
 
 **Key**: `js_indent_char`
 
@@ -393,28 +453,34 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Indentation character (Supported by JS Beautify, Pretty Diff)
-###  JavaScript - Indent level 
+####  JavaScript - Indent level 
 
 **Key**: `js_indent_level`
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Initial indentation level (Supported by JS Beautify)
-###  JavaScript - Indent with tabs 
+####  JavaScript - Indent with tabs 
 
 **Key**: `js_indent_with_tabs`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Indentation uses tabs, overrides &#x60;Indent Size&#x60; and &#x60;Indent Char&#x60; (Supported by JS Beautify)
-###  JavaScript - Preserve newlines 
+####  JavaScript - Preserve newlines 
 
 **Key**: `js_preserve_newlines`
 
@@ -422,10 +488,12 @@ Indentation uses tabs, overrides &#x60;Indent Size&#x60; and &#x60;Indent Char&#
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
-###  JavaScript - Max preserve newlines 
+####  JavaScript - Max preserve newlines 
 
 **Key**: `js_max_preserve_newlines`
 
@@ -433,37 +501,45 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
-###  JavaScript - Space in paren 
+####  JavaScript - Space in paren 
 
 **Key**: `js_space_in_paren`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify)
-###  JavaScript - Jslint happy 
+####  JavaScript - Jslint happy 
 
 **Key**: `js_jslint_happy`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Enable jslint-stricter mode (Supported by JS Beautify)
-###  JavaScript - Space after anon function 
+####  JavaScript - Space after anon function 
 
 **Key**: `js_space_after_anon_function`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify)
-###  JavaScript - Brace style 
+####  JavaScript - Brace style 
 
 **Key**: `js_brace_style`
 
@@ -473,37 +549,45 @@ Add a space before an anonymous function&#x27;s parens, ie. function () (Support
 
 **Enum**:  `collapse`  `expand`  `end-expand`  `none` 
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 [collapse|expand|end-expand|none] (Supported by JS Beautify)
-###  JavaScript - Break chained methods 
+####  JavaScript - Break chained methods 
 
 **Key**: `js_break_chained_methods`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Break chained method calls across subsequent lines (Supported by JS Beautify)
-###  JavaScript - Keep array indentation 
+####  JavaScript - Keep array indentation 
 
 **Key**: `js_keep_array_indentation`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Preserve array indentation (Supported by JS Beautify)
-###  JavaScript - Keep function indentation 
+####  JavaScript - Keep function indentation 
 
 **Key**: `js_keep_function_indentation`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
  (Supported by JS Beautify)
-###  JavaScript - Space before conditional 
+####  JavaScript - Space before conditional 
 
 **Key**: `js_space_before_conditional`
 
@@ -511,100 +595,122 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
  (Supported by JS Beautify)
-###  JavaScript - Eval code 
+####  JavaScript - Eval code 
 
 **Key**: `js_eval_code`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
  (Supported by JS Beautify)
-###  JavaScript - Unescape strings 
+####  JavaScript - Unescape strings 
 
 **Key**: `js_unescape_strings`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 Decode printable characters encoded in xNN notation (Supported by JS Beautify)
-###  JavaScript - Wrap line length 
+####  JavaScript - Wrap line length 
 
 **Key**: `js_wrap_line_length`
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
 Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pretty Diff)
-###  JavaScript - End with newline 
+####  JavaScript - End with newline 
 
 **Key**: `js_end_with_newline`
 
 **Type**: `boolean`
 
+**Supported Beautifiers**:  `JS Beautify` 
+
 **Description**:
 
 End output with newline (Supported by JS Beautify)
-###  Objective-C - Config Path 
+####  Objective-C - Config Path 
 
 **Key**: `objectivec_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  Pawn - Config Path 
+####  Pawn - Config Path 
 
 **Key**: `pawn_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  Perl - Perltidy profile 
+####  Perl - Perltidy profile 
 
 **Key**: `perl_perltidy_profile`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Perltidy` 
+
 **Description**:
 
 Specify a configuration file which will override the default name of .perltidyrc (Supported by Perltidy)
-###  PHP - PHP-CS-Fixer Path 
+####  PHP - PHP-CS-Fixer Path 
 
 **Key**: `php_cs_fixer_path`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `PHP-CS-Fixer` 
+
 **Description**:
 
 Path to the &#x60;php-cs-fixer&#x60; CLI executable (Supported by PHP-CS-Fixer)
-###  PHP - Fixers 
+####  PHP - Fixers 
 
 **Key**: `php_fixers`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `PHP-CS-Fixer` 
+
 **Description**:
 
 Add fixer(s). i.e. linefeed,-short_tag,indentation (Supported by PHP-CS-Fixer)
-###  PHP - Level 
+####  PHP - Level 
 
 **Key**: `php_level`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `PHP-CS-Fixer` 
+
 **Description**:
 
 By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP-CS-Fixer)
-###  Python - Max line length 
+####  Python - Max line length 
 
 **Key**: `python_max_line_length`
 
@@ -612,10 +718,12 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `autopep8` 
+
 **Description**:
 
 set maximum allowed line length (Supported by autopep8)
-###  Python - Indent size 
+####  Python - Indent size 
 
 **Key**: `python_indent_size`
 
@@ -623,10 +731,12 @@ set maximum allowed line length (Supported by autopep8)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `autopep8` 
+
 **Description**:
 
 Indentation size/length (Supported by autopep8)
-###  Python - Ignore 
+####  Python - Ignore 
 
 **Key**: `python_ignore`
 
@@ -634,19 +744,23 @@ Indentation size/length (Supported by autopep8)
 
 **Type**: `array`
 
+**Supported Beautifiers**:  `autopep8` 
+
 **Description**:
 
 do not fix these errors/warnings (Supported by autopep8)
-###  Rust - Rustfmt path 
+####  Rust - Rustfmt path 
 
 **Key**: `rust_rustfmt_path`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `rustfmt` 
+
 **Description**:
 
 Path to rustfmt program (Supported by rustfmt)
-###  SQL - Indent size 
+####  SQL - Indent size 
 
 **Key**: `sql_indent_size`
 
@@ -654,10 +768,12 @@ Path to rustfmt program (Supported by rustfmt)
 
 **Type**: `integer`
 
+**Supported Beautifiers**:  `sqlformat` 
+
 **Description**:
 
 Indentation size/length (Supported by sqlformat)
-###  SQL - Keywords 
+####  SQL - Keywords 
 
 **Key**: `sql_keywords`
 
@@ -667,10 +783,12 @@ Indentation size/length (Supported by sqlformat)
 
 **Enum**:  `lower`  `upper`  `capitalize` 
 
+**Supported Beautifiers**:  `sqlformat` 
+
 **Description**:
 
 Change case of keywords (Supported by sqlformat)
-###  SQL - Identifiers 
+####  SQL - Identifiers 
 
 **Key**: `sql_identifiers`
 
@@ -680,19 +798,23 @@ Change case of keywords (Supported by sqlformat)
 
 **Enum**:  `lower`  `upper`  `capitalize` 
 
+**Supported Beautifiers**:  `sqlformat` 
+
 **Description**:
 
 Change case of identifiers (Supported by sqlformat)
-###  Vala - Config Path 
+####  Vala - Config Path 
 
 **Key**: `vala_configPath`
 
 **Type**: `string`
 
+**Supported Beautifiers**:  `Uncrustify` 
+
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
-###  Language Config - C# - Disable Beautifying Language 
+####  Language Config - C# - Disable Beautifying Language 
 
 **Key**: `language_cs_disabled`
 
@@ -701,7 +823,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 **Description**:
 
 Disable C# Beautification
-###  Language Config - C# - Default Beautifier 
+####  Language Config - C# - Default Beautifier 
 
 **Key**: `language_cs_default_beautifier`
 
@@ -714,7 +836,7 @@ Disable C# Beautification
 **Description**:
 
 Default Beautifier to be used for C#
-###  Language Config - C# - Beautify On Save 
+####  Language Config - C# - Beautify On Save 
 
 **Key**: `language_cs_beautify_on_save`
 
@@ -723,7 +845,7 @@ Default Beautifier to be used for C#
 **Description**:
 
 Automatically beautify C# files on save
-###  Language Config - C - Disable Beautifying Language 
+####  Language Config - C - Disable Beautifying Language 
 
 **Key**: `language_c_disabled`
 
@@ -732,7 +854,7 @@ Automatically beautify C# files on save
 **Description**:
 
 Disable C Beautification
-###  Language Config - C - Default Beautifier 
+####  Language Config - C - Default Beautifier 
 
 **Key**: `language_c_default_beautifier`
 
@@ -745,7 +867,7 @@ Disable C Beautification
 **Description**:
 
 Default Beautifier to be used for C
-###  Language Config - C - Beautify On Save 
+####  Language Config - C - Beautify On Save 
 
 **Key**: `language_c_beautify_on_save`
 
@@ -754,7 +876,7 @@ Default Beautifier to be used for C
 **Description**:
 
 Automatically beautify C files on save
-###  Language Config - CoffeeScript - Disable Beautifying Language 
+####  Language Config - CoffeeScript - Disable Beautifying Language 
 
 **Key**: `language_coffeescript_disabled`
 
@@ -763,7 +885,7 @@ Automatically beautify C files on save
 **Description**:
 
 Disable CoffeeScript Beautification
-###  Language Config - CoffeeScript - Default Beautifier 
+####  Language Config - CoffeeScript - Default Beautifier 
 
 **Key**: `language_coffeescript_default_beautifier`
 
@@ -776,7 +898,7 @@ Disable CoffeeScript Beautification
 **Description**:
 
 Default Beautifier to be used for CoffeeScript
-###  Language Config - CoffeeScript - Beautify On Save 
+####  Language Config - CoffeeScript - Beautify On Save 
 
 **Key**: `language_coffeescript_beautify_on_save`
 
@@ -785,7 +907,7 @@ Default Beautifier to be used for CoffeeScript
 **Description**:
 
 Automatically beautify CoffeeScript files on save
-###  Language Config - C++ - Disable Beautifying Language 
+####  Language Config - C++ - Disable Beautifying Language 
 
 **Key**: `language_cpp_disabled`
 
@@ -794,7 +916,7 @@ Automatically beautify CoffeeScript files on save
 **Description**:
 
 Disable C++ Beautification
-###  Language Config - C++ - Default Beautifier 
+####  Language Config - C++ - Default Beautifier 
 
 **Key**: `language_cpp_default_beautifier`
 
@@ -807,7 +929,7 @@ Disable C++ Beautification
 **Description**:
 
 Default Beautifier to be used for C++
-###  Language Config - C++ - Beautify On Save 
+####  Language Config - C++ - Beautify On Save 
 
 **Key**: `language_cpp_beautify_on_save`
 
@@ -816,7 +938,7 @@ Default Beautifier to be used for C++
 **Description**:
 
 Automatically beautify C++ files on save
-###  Language Config - CSS - Disable Beautifying Language 
+####  Language Config - CSS - Disable Beautifying Language 
 
 **Key**: `language_css_disabled`
 
@@ -825,7 +947,7 @@ Automatically beautify C++ files on save
 **Description**:
 
 Disable CSS Beautification
-###  Language Config - CSS - Default Beautifier 
+####  Language Config - CSS - Default Beautifier 
 
 **Key**: `language_css_default_beautifier`
 
@@ -838,7 +960,7 @@ Disable CSS Beautification
 **Description**:
 
 Default Beautifier to be used for CSS
-###  Language Config - CSS - Beautify On Save 
+####  Language Config - CSS - Beautify On Save 
 
 **Key**: `language_css_beautify_on_save`
 
@@ -847,7 +969,7 @@ Default Beautifier to be used for CSS
 **Description**:
 
 Automatically beautify CSS files on save
-###  Language Config - CSV - Disable Beautifying Language 
+####  Language Config - CSV - Disable Beautifying Language 
 
 **Key**: `language_csv_disabled`
 
@@ -856,7 +978,7 @@ Automatically beautify CSS files on save
 **Description**:
 
 Disable CSV Beautification
-###  Language Config - CSV - Default Beautifier 
+####  Language Config - CSV - Default Beautifier 
 
 **Key**: `language_csv_default_beautifier`
 
@@ -869,7 +991,7 @@ Disable CSV Beautification
 **Description**:
 
 Default Beautifier to be used for CSV
-###  Language Config - CSV - Beautify On Save 
+####  Language Config - CSV - Beautify On Save 
 
 **Key**: `language_csv_beautify_on_save`
 
@@ -878,7 +1000,7 @@ Default Beautifier to be used for CSV
 **Description**:
 
 Automatically beautify CSV files on save
-###  Language Config - D - Disable Beautifying Language 
+####  Language Config - D - Disable Beautifying Language 
 
 **Key**: `language_d_disabled`
 
@@ -887,7 +1009,7 @@ Automatically beautify CSV files on save
 **Description**:
 
 Disable D Beautification
-###  Language Config - D - Default Beautifier 
+####  Language Config - D - Default Beautifier 
 
 **Key**: `language_d_default_beautifier`
 
@@ -900,7 +1022,7 @@ Disable D Beautification
 **Description**:
 
 Default Beautifier to be used for D
-###  Language Config - D - Beautify On Save 
+####  Language Config - D - Beautify On Save 
 
 **Key**: `language_d_beautify_on_save`
 
@@ -909,7 +1031,7 @@ Default Beautifier to be used for D
 **Description**:
 
 Automatically beautify D files on save
-###  Language Config - EJS - Disable Beautifying Language 
+####  Language Config - EJS - Disable Beautifying Language 
 
 **Key**: `language_ejs_disabled`
 
@@ -918,7 +1040,7 @@ Automatically beautify D files on save
 **Description**:
 
 Disable EJS Beautification
-###  Language Config - EJS - Default Beautifier 
+####  Language Config - EJS - Default Beautifier 
 
 **Key**: `language_ejs_default_beautifier`
 
@@ -931,7 +1053,7 @@ Disable EJS Beautification
 **Description**:
 
 Default Beautifier to be used for EJS
-###  Language Config - EJS - Beautify On Save 
+####  Language Config - EJS - Beautify On Save 
 
 **Key**: `language_ejs_beautify_on_save`
 
@@ -940,7 +1062,7 @@ Default Beautifier to be used for EJS
 **Description**:
 
 Automatically beautify EJS files on save
-###  Language Config - ERB - Disable Beautifying Language 
+####  Language Config - ERB - Disable Beautifying Language 
 
 **Key**: `language_erb_disabled`
 
@@ -949,7 +1071,7 @@ Automatically beautify EJS files on save
 **Description**:
 
 Disable ERB Beautification
-###  Language Config - ERB - Default Beautifier 
+####  Language Config - ERB - Default Beautifier 
 
 **Key**: `language_erb_default_beautifier`
 
@@ -962,7 +1084,7 @@ Disable ERB Beautification
 **Description**:
 
 Default Beautifier to be used for ERB
-###  Language Config - ERB - Beautify On Save 
+####  Language Config - ERB - Beautify On Save 
 
 **Key**: `language_erb_beautify_on_save`
 
@@ -971,7 +1093,7 @@ Default Beautifier to be used for ERB
 **Description**:
 
 Automatically beautify ERB files on save
-###  Language Config - Go - Disable Beautifying Language 
+####  Language Config - Go - Disable Beautifying Language 
 
 **Key**: `language_go_disabled`
 
@@ -980,7 +1102,7 @@ Automatically beautify ERB files on save
 **Description**:
 
 Disable Go Beautification
-###  Language Config - Go - Default Beautifier 
+####  Language Config - Go - Default Beautifier 
 
 **Key**: `language_go_default_beautifier`
 
@@ -993,7 +1115,7 @@ Disable Go Beautification
 **Description**:
 
 Default Beautifier to be used for Go
-###  Language Config - Go - Beautify On Save 
+####  Language Config - Go - Beautify On Save 
 
 **Key**: `language_go_beautify_on_save`
 
@@ -1002,7 +1124,7 @@ Default Beautifier to be used for Go
 **Description**:
 
 Automatically beautify Go files on save
-###  Language Config - Fortran - Disable Beautifying Language 
+####  Language Config - Fortran - Disable Beautifying Language 
 
 **Key**: `language_fortran_disabled`
 
@@ -1011,7 +1133,7 @@ Automatically beautify Go files on save
 **Description**:
 
 Disable Fortran Beautification
-###  Language Config - Fortran - Default Beautifier 
+####  Language Config - Fortran - Default Beautifier 
 
 **Key**: `language_fortran_default_beautifier`
 
@@ -1024,7 +1146,7 @@ Disable Fortran Beautification
 **Description**:
 
 Default Beautifier to be used for Fortran
-###  Language Config - Fortran - Beautify On Save 
+####  Language Config - Fortran - Beautify On Save 
 
 **Key**: `language_fortran_beautify_on_save`
 
@@ -1033,7 +1155,7 @@ Default Beautifier to be used for Fortran
 **Description**:
 
 Automatically beautify Fortran files on save
-###  Language Config - Handlebars - Disable Beautifying Language 
+####  Language Config - Handlebars - Disable Beautifying Language 
 
 **Key**: `language_handlebars_disabled`
 
@@ -1042,7 +1164,7 @@ Automatically beautify Fortran files on save
 **Description**:
 
 Disable Handlebars Beautification
-###  Language Config - Handlebars - Default Beautifier 
+####  Language Config - Handlebars - Default Beautifier 
 
 **Key**: `language_handlebars_default_beautifier`
 
@@ -1055,7 +1177,7 @@ Disable Handlebars Beautification
 **Description**:
 
 Default Beautifier to be used for Handlebars
-###  Language Config - Handlebars - Beautify On Save 
+####  Language Config - Handlebars - Beautify On Save 
 
 **Key**: `language_handlebars_beautify_on_save`
 
@@ -1064,7 +1186,7 @@ Default Beautifier to be used for Handlebars
 **Description**:
 
 Automatically beautify Handlebars files on save
-###  Language Config - HTML - Disable Beautifying Language 
+####  Language Config - HTML - Disable Beautifying Language 
 
 **Key**: `language_html_disabled`
 
@@ -1073,7 +1195,7 @@ Automatically beautify Handlebars files on save
 **Description**:
 
 Disable HTML Beautification
-###  Language Config - HTML - Default Beautifier 
+####  Language Config - HTML - Default Beautifier 
 
 **Key**: `language_html_default_beautifier`
 
@@ -1086,7 +1208,7 @@ Disable HTML Beautification
 **Description**:
 
 Default Beautifier to be used for HTML
-###  Language Config - HTML - Beautify On Save 
+####  Language Config - HTML - Beautify On Save 
 
 **Key**: `language_html_beautify_on_save`
 
@@ -1095,7 +1217,7 @@ Default Beautifier to be used for HTML
 **Description**:
 
 Automatically beautify HTML files on save
-###  Language Config - Java - Disable Beautifying Language 
+####  Language Config - Java - Disable Beautifying Language 
 
 **Key**: `language_java_disabled`
 
@@ -1104,7 +1226,7 @@ Automatically beautify HTML files on save
 **Description**:
 
 Disable Java Beautification
-###  Language Config - Java - Default Beautifier 
+####  Language Config - Java - Default Beautifier 
 
 **Key**: `language_java_default_beautifier`
 
@@ -1117,7 +1239,7 @@ Disable Java Beautification
 **Description**:
 
 Default Beautifier to be used for Java
-###  Language Config - Java - Beautify On Save 
+####  Language Config - Java - Beautify On Save 
 
 **Key**: `language_java_beautify_on_save`
 
@@ -1126,7 +1248,7 @@ Default Beautifier to be used for Java
 **Description**:
 
 Automatically beautify Java files on save
-###  Language Config - JavaScript - Disable Beautifying Language 
+####  Language Config - JavaScript - Disable Beautifying Language 
 
 **Key**: `language_js_disabled`
 
@@ -1135,7 +1257,7 @@ Automatically beautify Java files on save
 **Description**:
 
 Disable JavaScript Beautification
-###  Language Config - JavaScript - Default Beautifier 
+####  Language Config - JavaScript - Default Beautifier 
 
 **Key**: `language_js_default_beautifier`
 
@@ -1148,7 +1270,7 @@ Disable JavaScript Beautification
 **Description**:
 
 Default Beautifier to be used for JavaScript
-###  Language Config - JavaScript - Beautify On Save 
+####  Language Config - JavaScript - Beautify On Save 
 
 **Key**: `language_js_beautify_on_save`
 
@@ -1157,7 +1279,7 @@ Default Beautifier to be used for JavaScript
 **Description**:
 
 Automatically beautify JavaScript files on save
-###  Language Config - JSON - Disable Beautifying Language 
+####  Language Config - JSON - Disable Beautifying Language 
 
 **Key**: `language_json_disabled`
 
@@ -1166,7 +1288,7 @@ Automatically beautify JavaScript files on save
 **Description**:
 
 Disable JSON Beautification
-###  Language Config - JSON - Default Beautifier 
+####  Language Config - JSON - Default Beautifier 
 
 **Key**: `language_json_default_beautifier`
 
@@ -1179,7 +1301,7 @@ Disable JSON Beautification
 **Description**:
 
 Default Beautifier to be used for JSON
-###  Language Config - JSON - Beautify On Save 
+####  Language Config - JSON - Beautify On Save 
 
 **Key**: `language_json_beautify_on_save`
 
@@ -1188,7 +1310,7 @@ Default Beautifier to be used for JSON
 **Description**:
 
 Automatically beautify JSON files on save
-###  Language Config - JSX - Disable Beautifying Language 
+####  Language Config - JSX - Disable Beautifying Language 
 
 **Key**: `language_jsx_disabled`
 
@@ -1197,7 +1319,7 @@ Automatically beautify JSON files on save
 **Description**:
 
 Disable JSX Beautification
-###  Language Config - JSX - Default Beautifier 
+####  Language Config - JSX - Default Beautifier 
 
 **Key**: `language_jsx_default_beautifier`
 
@@ -1210,7 +1332,7 @@ Disable JSX Beautification
 **Description**:
 
 Default Beautifier to be used for JSX
-###  Language Config - JSX - Beautify On Save 
+####  Language Config - JSX - Beautify On Save 
 
 **Key**: `language_jsx_beautify_on_save`
 
@@ -1219,7 +1341,7 @@ Default Beautifier to be used for JSX
 **Description**:
 
 Automatically beautify JSX files on save
-###  Language Config - LESS - Disable Beautifying Language 
+####  Language Config - LESS - Disable Beautifying Language 
 
 **Key**: `language_less_disabled`
 
@@ -1228,7 +1350,7 @@ Automatically beautify JSX files on save
 **Description**:
 
 Disable LESS Beautification
-###  Language Config - LESS - Default Beautifier 
+####  Language Config - LESS - Default Beautifier 
 
 **Key**: `language_less_default_beautifier`
 
@@ -1241,7 +1363,7 @@ Disable LESS Beautification
 **Description**:
 
 Default Beautifier to be used for LESS
-###  Language Config - LESS - Beautify On Save 
+####  Language Config - LESS - Beautify On Save 
 
 **Key**: `language_less_beautify_on_save`
 
@@ -1250,7 +1372,7 @@ Default Beautifier to be used for LESS
 **Description**:
 
 Automatically beautify LESS files on save
-###  Language Config - Markdown - Disable Beautifying Language 
+####  Language Config - Markdown - Disable Beautifying Language 
 
 **Key**: `language_markdown_disabled`
 
@@ -1259,7 +1381,7 @@ Automatically beautify LESS files on save
 **Description**:
 
 Disable Markdown Beautification
-###  Language Config - Markdown - Default Beautifier 
+####  Language Config - Markdown - Default Beautifier 
 
 **Key**: `language_markdown_default_beautifier`
 
@@ -1272,7 +1394,7 @@ Disable Markdown Beautification
 **Description**:
 
 Default Beautifier to be used for Markdown
-###  Language Config - Markdown - Beautify On Save 
+####  Language Config - Markdown - Beautify On Save 
 
 **Key**: `language_markdown_beautify_on_save`
 
@@ -1281,7 +1403,7 @@ Default Beautifier to be used for Markdown
 **Description**:
 
 Automatically beautify Markdown files on save
-###  Language Config - Marko - Disable Beautifying Language 
+####  Language Config - Marko - Disable Beautifying Language 
 
 **Key**: `language_marko_disabled`
 
@@ -1290,7 +1412,7 @@ Automatically beautify Markdown files on save
 **Description**:
 
 Disable Marko Beautification
-###  Language Config - Marko - Default Beautifier 
+####  Language Config - Marko - Default Beautifier 
 
 **Key**: `language_marko_default_beautifier`
 
@@ -1303,7 +1425,7 @@ Disable Marko Beautification
 **Description**:
 
 Default Beautifier to be used for Marko
-###  Language Config - Marko - Beautify On Save 
+####  Language Config - Marko - Beautify On Save 
 
 **Key**: `language_marko_beautify_on_save`
 
@@ -1312,7 +1434,7 @@ Default Beautifier to be used for Marko
 **Description**:
 
 Automatically beautify Marko files on save
-###  Language Config - Mustache - Disable Beautifying Language 
+####  Language Config - Mustache - Disable Beautifying Language 
 
 **Key**: `language_mustache_disabled`
 
@@ -1321,7 +1443,7 @@ Automatically beautify Marko files on save
 **Description**:
 
 Disable Mustache Beautification
-###  Language Config - Mustache - Default Beautifier 
+####  Language Config - Mustache - Default Beautifier 
 
 **Key**: `language_mustache_default_beautifier`
 
@@ -1334,7 +1456,7 @@ Disable Mustache Beautification
 **Description**:
 
 Default Beautifier to be used for Mustache
-###  Language Config - Mustache - Beautify On Save 
+####  Language Config - Mustache - Beautify On Save 
 
 **Key**: `language_mustache_beautify_on_save`
 
@@ -1343,7 +1465,7 @@ Default Beautifier to be used for Mustache
 **Description**:
 
 Automatically beautify Mustache files on save
-###  Language Config - Objective-C - Disable Beautifying Language 
+####  Language Config - Objective-C - Disable Beautifying Language 
 
 **Key**: `language_objectivec_disabled`
 
@@ -1352,7 +1474,7 @@ Automatically beautify Mustache files on save
 **Description**:
 
 Disable Objective-C Beautification
-###  Language Config - Objective-C - Default Beautifier 
+####  Language Config - Objective-C - Default Beautifier 
 
 **Key**: `language_objectivec_default_beautifier`
 
@@ -1365,7 +1487,7 @@ Disable Objective-C Beautification
 **Description**:
 
 Default Beautifier to be used for Objective-C
-###  Language Config - Objective-C - Beautify On Save 
+####  Language Config - Objective-C - Beautify On Save 
 
 **Key**: `language_objectivec_beautify_on_save`
 
@@ -1374,7 +1496,7 @@ Default Beautifier to be used for Objective-C
 **Description**:
 
 Automatically beautify Objective-C files on save
-###  Language Config - Pawn - Disable Beautifying Language 
+####  Language Config - Pawn - Disable Beautifying Language 
 
 **Key**: `language_pawn_disabled`
 
@@ -1383,7 +1505,7 @@ Automatically beautify Objective-C files on save
 **Description**:
 
 Disable Pawn Beautification
-###  Language Config - Pawn - Default Beautifier 
+####  Language Config - Pawn - Default Beautifier 
 
 **Key**: `language_pawn_default_beautifier`
 
@@ -1396,7 +1518,7 @@ Disable Pawn Beautification
 **Description**:
 
 Default Beautifier to be used for Pawn
-###  Language Config - Pawn - Beautify On Save 
+####  Language Config - Pawn - Beautify On Save 
 
 **Key**: `language_pawn_beautify_on_save`
 
@@ -1405,7 +1527,7 @@ Default Beautifier to be used for Pawn
 **Description**:
 
 Automatically beautify Pawn files on save
-###  Language Config - Perl - Disable Beautifying Language 
+####  Language Config - Perl - Disable Beautifying Language 
 
 **Key**: `language_perl_disabled`
 
@@ -1414,7 +1536,7 @@ Automatically beautify Pawn files on save
 **Description**:
 
 Disable Perl Beautification
-###  Language Config - Perl - Default Beautifier 
+####  Language Config - Perl - Default Beautifier 
 
 **Key**: `language_perl_default_beautifier`
 
@@ -1427,7 +1549,7 @@ Disable Perl Beautification
 **Description**:
 
 Default Beautifier to be used for Perl
-###  Language Config - Perl - Beautify On Save 
+####  Language Config - Perl - Beautify On Save 
 
 **Key**: `language_perl_beautify_on_save`
 
@@ -1436,7 +1558,7 @@ Default Beautifier to be used for Perl
 **Description**:
 
 Automatically beautify Perl files on save
-###  Language Config - PHP - Disable Beautifying Language 
+####  Language Config - PHP - Disable Beautifying Language 
 
 **Key**: `language_php_disabled`
 
@@ -1445,7 +1567,7 @@ Automatically beautify Perl files on save
 **Description**:
 
 Disable PHP Beautification
-###  Language Config - PHP - Default Beautifier 
+####  Language Config - PHP - Default Beautifier 
 
 **Key**: `language_php_default_beautifier`
 
@@ -1458,7 +1580,7 @@ Disable PHP Beautification
 **Description**:
 
 Default Beautifier to be used for PHP
-###  Language Config - PHP - Beautify On Save 
+####  Language Config - PHP - Beautify On Save 
 
 **Key**: `language_php_beautify_on_save`
 
@@ -1467,7 +1589,7 @@ Default Beautifier to be used for PHP
 **Description**:
 
 Automatically beautify PHP files on save
-###  Language Config - Python - Disable Beautifying Language 
+####  Language Config - Python - Disable Beautifying Language 
 
 **Key**: `language_python_disabled`
 
@@ -1476,7 +1598,7 @@ Automatically beautify PHP files on save
 **Description**:
 
 Disable Python Beautification
-###  Language Config - Python - Default Beautifier 
+####  Language Config - Python - Default Beautifier 
 
 **Key**: `language_python_default_beautifier`
 
@@ -1489,7 +1611,7 @@ Disable Python Beautification
 **Description**:
 
 Default Beautifier to be used for Python
-###  Language Config - Python - Beautify On Save 
+####  Language Config - Python - Beautify On Save 
 
 **Key**: `language_python_beautify_on_save`
 
@@ -1498,7 +1620,7 @@ Default Beautifier to be used for Python
 **Description**:
 
 Automatically beautify Python files on save
-###  Language Config - Ruby - Disable Beautifying Language 
+####  Language Config - Ruby - Disable Beautifying Language 
 
 **Key**: `language_ruby_disabled`
 
@@ -1507,7 +1629,7 @@ Automatically beautify Python files on save
 **Description**:
 
 Disable Ruby Beautification
-###  Language Config - Ruby - Default Beautifier 
+####  Language Config - Ruby - Default Beautifier 
 
 **Key**: `language_ruby_default_beautifier`
 
@@ -1520,7 +1642,7 @@ Disable Ruby Beautification
 **Description**:
 
 Default Beautifier to be used for Ruby
-###  Language Config - Ruby - Beautify On Save 
+####  Language Config - Ruby - Beautify On Save 
 
 **Key**: `language_ruby_beautify_on_save`
 
@@ -1529,7 +1651,7 @@ Default Beautifier to be used for Ruby
 **Description**:
 
 Automatically beautify Ruby files on save
-###  Language Config - Rust - Disable Beautifying Language 
+####  Language Config - Rust - Disable Beautifying Language 
 
 **Key**: `language_rust_disabled`
 
@@ -1538,7 +1660,7 @@ Automatically beautify Ruby files on save
 **Description**:
 
 Disable Rust Beautification
-###  Language Config - Rust - Default Beautifier 
+####  Language Config - Rust - Default Beautifier 
 
 **Key**: `language_rust_default_beautifier`
 
@@ -1551,7 +1673,7 @@ Disable Rust Beautification
 **Description**:
 
 Default Beautifier to be used for Rust
-###  Language Config - Rust - Beautify On Save 
+####  Language Config - Rust - Beautify On Save 
 
 **Key**: `language_rust_beautify_on_save`
 
@@ -1560,7 +1682,7 @@ Default Beautifier to be used for Rust
 **Description**:
 
 Automatically beautify Rust files on save
-###  Language Config - Sass - Disable Beautifying Language 
+####  Language Config - Sass - Disable Beautifying Language 
 
 **Key**: `language_sass_disabled`
 
@@ -1569,7 +1691,7 @@ Automatically beautify Rust files on save
 **Description**:
 
 Disable Sass Beautification
-###  Language Config - Sass - Default Beautifier 
+####  Language Config - Sass - Default Beautifier 
 
 **Key**: `language_sass_default_beautifier`
 
@@ -1582,7 +1704,7 @@ Disable Sass Beautification
 **Description**:
 
 Default Beautifier to be used for Sass
-###  Language Config - Sass - Beautify On Save 
+####  Language Config - Sass - Beautify On Save 
 
 **Key**: `language_sass_beautify_on_save`
 
@@ -1591,7 +1713,7 @@ Default Beautifier to be used for Sass
 **Description**:
 
 Automatically beautify Sass files on save
-###  Language Config - SCSS - Disable Beautifying Language 
+####  Language Config - SCSS - Disable Beautifying Language 
 
 **Key**: `language_scss_disabled`
 
@@ -1600,7 +1722,7 @@ Automatically beautify Sass files on save
 **Description**:
 
 Disable SCSS Beautification
-###  Language Config - SCSS - Default Beautifier 
+####  Language Config - SCSS - Default Beautifier 
 
 **Key**: `language_scss_default_beautifier`
 
@@ -1613,7 +1735,7 @@ Disable SCSS Beautification
 **Description**:
 
 Default Beautifier to be used for SCSS
-###  Language Config - SCSS - Beautify On Save 
+####  Language Config - SCSS - Beautify On Save 
 
 **Key**: `language_scss_beautify_on_save`
 
@@ -1622,7 +1744,7 @@ Default Beautifier to be used for SCSS
 **Description**:
 
 Automatically beautify SCSS files on save
-###  Language Config - Spacebars - Disable Beautifying Language 
+####  Language Config - Spacebars - Disable Beautifying Language 
 
 **Key**: `language_spacebars_disabled`
 
@@ -1631,7 +1753,7 @@ Automatically beautify SCSS files on save
 **Description**:
 
 Disable Spacebars Beautification
-###  Language Config - Spacebars - Default Beautifier 
+####  Language Config - Spacebars - Default Beautifier 
 
 **Key**: `language_spacebars_default_beautifier`
 
@@ -1644,7 +1766,7 @@ Disable Spacebars Beautification
 **Description**:
 
 Default Beautifier to be used for Spacebars
-###  Language Config - Spacebars - Beautify On Save 
+####  Language Config - Spacebars - Beautify On Save 
 
 **Key**: `language_spacebars_beautify_on_save`
 
@@ -1653,7 +1775,7 @@ Default Beautifier to be used for Spacebars
 **Description**:
 
 Automatically beautify Spacebars files on save
-###  Language Config - SQL - Disable Beautifying Language 
+####  Language Config - SQL - Disable Beautifying Language 
 
 **Key**: `language_sql_disabled`
 
@@ -1662,7 +1784,7 @@ Automatically beautify Spacebars files on save
 **Description**:
 
 Disable SQL Beautification
-###  Language Config - SQL - Default Beautifier 
+####  Language Config - SQL - Default Beautifier 
 
 **Key**: `language_sql_default_beautifier`
 
@@ -1675,7 +1797,7 @@ Disable SQL Beautification
 **Description**:
 
 Default Beautifier to be used for SQL
-###  Language Config - SQL - Beautify On Save 
+####  Language Config - SQL - Beautify On Save 
 
 **Key**: `language_sql_beautify_on_save`
 
@@ -1684,7 +1806,7 @@ Default Beautifier to be used for SQL
 **Description**:
 
 Automatically beautify SQL files on save
-###  Language Config - Swig - Disable Beautifying Language 
+####  Language Config - Swig - Disable Beautifying Language 
 
 **Key**: `language_swig_disabled`
 
@@ -1693,7 +1815,7 @@ Automatically beautify SQL files on save
 **Description**:
 
 Disable Swig Beautification
-###  Language Config - Swig - Default Beautifier 
+####  Language Config - Swig - Default Beautifier 
 
 **Key**: `language_swig_default_beautifier`
 
@@ -1706,7 +1828,7 @@ Disable Swig Beautification
 **Description**:
 
 Default Beautifier to be used for Swig
-###  Language Config - Swig - Beautify On Save 
+####  Language Config - Swig - Beautify On Save 
 
 **Key**: `language_swig_beautify_on_save`
 
@@ -1715,7 +1837,7 @@ Default Beautifier to be used for Swig
 **Description**:
 
 Automatically beautify Swig files on save
-###  Language Config - TSS - Disable Beautifying Language 
+####  Language Config - TSS - Disable Beautifying Language 
 
 **Key**: `language_tss_disabled`
 
@@ -1724,7 +1846,7 @@ Automatically beautify Swig files on save
 **Description**:
 
 Disable TSS Beautification
-###  Language Config - TSS - Default Beautifier 
+####  Language Config - TSS - Default Beautifier 
 
 **Key**: `language_tss_default_beautifier`
 
@@ -1737,7 +1859,7 @@ Disable TSS Beautification
 **Description**:
 
 Default Beautifier to be used for TSS
-###  Language Config - TSS - Beautify On Save 
+####  Language Config - TSS - Beautify On Save 
 
 **Key**: `language_tss_beautify_on_save`
 
@@ -1746,7 +1868,7 @@ Default Beautifier to be used for TSS
 **Description**:
 
 Automatically beautify TSS files on save
-###  Language Config - Twig - Disable Beautifying Language 
+####  Language Config - Twig - Disable Beautifying Language 
 
 **Key**: `language_twig_disabled`
 
@@ -1755,7 +1877,7 @@ Automatically beautify TSS files on save
 **Description**:
 
 Disable Twig Beautification
-###  Language Config - Twig - Default Beautifier 
+####  Language Config - Twig - Default Beautifier 
 
 **Key**: `language_twig_default_beautifier`
 
@@ -1768,7 +1890,7 @@ Disable Twig Beautification
 **Description**:
 
 Default Beautifier to be used for Twig
-###  Language Config - Twig - Beautify On Save 
+####  Language Config - Twig - Beautify On Save 
 
 **Key**: `language_twig_beautify_on_save`
 
@@ -1777,7 +1899,7 @@ Default Beautifier to be used for Twig
 **Description**:
 
 Automatically beautify Twig files on save
-###  Language Config - TypeScript - Disable Beautifying Language 
+####  Language Config - TypeScript - Disable Beautifying Language 
 
 **Key**: `language_typescript_disabled`
 
@@ -1786,7 +1908,7 @@ Automatically beautify Twig files on save
 **Description**:
 
 Disable TypeScript Beautification
-###  Language Config - TypeScript - Default Beautifier 
+####  Language Config - TypeScript - Default Beautifier 
 
 **Key**: `language_typescript_default_beautifier`
 
@@ -1799,7 +1921,7 @@ Disable TypeScript Beautification
 **Description**:
 
 Default Beautifier to be used for TypeScript
-###  Language Config - TypeScript - Beautify On Save 
+####  Language Config - TypeScript - Beautify On Save 
 
 **Key**: `language_typescript_beautify_on_save`
 
@@ -1808,7 +1930,7 @@ Default Beautifier to be used for TypeScript
 **Description**:
 
 Automatically beautify TypeScript files on save
-###  Language Config - Vala - Disable Beautifying Language 
+####  Language Config - Vala - Disable Beautifying Language 
 
 **Key**: `language_vala_disabled`
 
@@ -1817,7 +1939,7 @@ Automatically beautify TypeScript files on save
 **Description**:
 
 Disable Vala Beautification
-###  Language Config - Vala - Default Beautifier 
+####  Language Config - Vala - Default Beautifier 
 
 **Key**: `language_vala_default_beautifier`
 
@@ -1830,7 +1952,7 @@ Disable Vala Beautification
 **Description**:
 
 Default Beautifier to be used for Vala
-###  Language Config - Vala - Beautify On Save 
+####  Language Config - Vala - Beautify On Save 
 
 **Key**: `language_vala_beautify_on_save`
 
@@ -1839,7 +1961,7 @@ Default Beautifier to be used for Vala
 **Description**:
 
 Automatically beautify Vala files on save
-###  Language Config - Visualforce - Disable Beautifying Language 
+####  Language Config - Visualforce - Disable Beautifying Language 
 
 **Key**: `language_visualforce_disabled`
 
@@ -1848,7 +1970,7 @@ Automatically beautify Vala files on save
 **Description**:
 
 Disable Visualforce Beautification
-###  Language Config - Visualforce - Default Beautifier 
+####  Language Config - Visualforce - Default Beautifier 
 
 **Key**: `language_visualforce_default_beautifier`
 
@@ -1861,7 +1983,7 @@ Disable Visualforce Beautification
 **Description**:
 
 Default Beautifier to be used for Visualforce
-###  Language Config - Visualforce - Beautify On Save 
+####  Language Config - Visualforce - Beautify On Save 
 
 **Key**: `language_visualforce_beautify_on_save`
 
@@ -1870,7 +1992,7 @@ Default Beautifier to be used for Visualforce
 **Description**:
 
 Automatically beautify Visualforce files on save
-###  Language Config - XML - Disable Beautifying Language 
+####  Language Config - XML - Disable Beautifying Language 
 
 **Key**: `language_xml_disabled`
 
@@ -1879,7 +2001,7 @@ Automatically beautify Visualforce files on save
 **Description**:
 
 Disable XML Beautification
-###  Language Config - XML - Default Beautifier 
+####  Language Config - XML - Default Beautifier 
 
 **Key**: `language_xml_default_beautifier`
 
@@ -1892,7 +2014,7 @@ Disable XML Beautification
 **Description**:
 
 Default Beautifier to be used for XML
-###  Language Config - XML - Beautify On Save 
+####  Language Config - XML - Beautify On Save 
 
 **Key**: `language_xml_beautify_on_save`
 
@@ -1901,3 +2023,935 @@ Default Beautifier to be used for XML
 **Description**:
 
 Automatically beautify XML files on save
+
+## Beautifier Options
+
+Supported options for each beautifier.
+
+---
+
+### Uncrustify
+
+####  C# - Config Path 
+
+**Key**: `cs_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+####  C - Config Path 
+
+**Key**: `c_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+####  C++ - Config Path 
+
+**Key**: `cpp_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+####  D - Config Path 
+
+**Key**: `d_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+####  Java - Config Path 
+
+**Key**: `java_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+####  Objective-C - Config Path 
+
+**Key**: `objectivec_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+####  Pawn - Config Path 
+
+**Key**: `pawn_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+####  Vala - Config Path 
+
+**Key**: `vala_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Uncrustify` 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+
+### JS Beautify
+
+####  CSS - Indent size 
+
+**Key**: `css_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
+####  CSS - Indent char 
+
+**Key**: `css_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation character (Supported by JS Beautify, Pretty Diff)
+####  CSS - Selector separator newline 
+
+**Key**: `css_selector_separator_newline`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Add a newline between multiple selectors (Supported by JS Beautify)
+####  CSS - Newline between rules 
+
+**Key**: `css_newline_between_rules`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
+####  CSS - Preserve newlines 
+
+**Key**: `css_preserve_newlines`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Retain empty lines. Consecutive empty lines will be converted to a single empty line. (Supported by JS Beautify, Pretty Diff)
+####  CSS - Wrap line length 
+
+**Key**: `css_wrap_line_length`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, Pretty Diff)
+####  HTML - Indent inner html 
+
+**Key**: `html_indent_inner_html`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Indent &lt;head&gt; and &lt;body&gt; sections. (Supported by JS Beautify)
+####  HTML - Indent size 
+
+**Key**: `html_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
+####  HTML - Indent char 
+
+**Key**: `html_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation character (Supported by JS Beautify, Pretty Diff)
+####  HTML - Brace style 
+
+**Key**: `html_brace_style`
+
+**Default**: `collapse`
+
+**Type**: `string`
+
+**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+[collapse|expand|end-expand|none] (Supported by JS Beautify)
+####  HTML - Indent scripts 
+
+**Key**: `html_indent_scripts`
+
+**Default**: `normal`
+
+**Type**: `string`
+
+**Enum**:  `keep`  `separate`  `normal` 
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+[keep|separate|normal] (Supported by JS Beautify)
+####  HTML - Wrap line length 
+
+**Key**: `html_wrap_line_length`
+
+**Default**: `250`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
+####  HTML - Wrap attributes 
+
+**Key**: `html_wrap_attributes`
+
+**Default**: `auto`
+
+**Type**: `string`
+
+**Enum**:  `auto`  `force` 
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+####  HTML - Wrap attributes indent size 
+
+**Key**: `html_wrap_attributes_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Indent wrapped attributes to after N characters (Supported by JS Beautify)
+####  HTML - Preserve newlines 
+
+**Key**: `html_preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+####  HTML - Max preserve newlines 
+
+**Key**: `html_max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+####  HTML - Unformatted 
+
+**Key**: `html_unformatted`
+
+**Default**: `a,sub,sup,b,i,u`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+####  HTML - End with newline 
+
+**Key**: `html_end_with_newline`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+End output with newline (Supported by JS Beautify)
+####  JavaScript - Indent size 
+
+**Key**: `js_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - Indent char 
+
+**Key**: `js_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation character (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - Indent level 
+
+**Key**: `js_indent_level`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Initial indentation level (Supported by JS Beautify)
+####  JavaScript - Indent with tabs 
+
+**Key**: `js_indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Indentation uses tabs, overrides &#x60;Indent Size&#x60; and &#x60;Indent Char&#x60; (Supported by JS Beautify)
+####  JavaScript - Preserve newlines 
+
+**Key**: `js_preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - Max preserve newlines 
+
+**Key**: `js_max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+####  JavaScript - Space in paren 
+
+**Key**: `js_space_in_paren`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify)
+####  JavaScript - Jslint happy 
+
+**Key**: `js_jslint_happy`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Enable jslint-stricter mode (Supported by JS Beautify)
+####  JavaScript - Space after anon function 
+
+**Key**: `js_space_after_anon_function`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify)
+####  JavaScript - Brace style 
+
+**Key**: `js_brace_style`
+
+**Default**: `collapse`
+
+**Type**: `string`
+
+**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+[collapse|expand|end-expand|none] (Supported by JS Beautify)
+####  JavaScript - Break chained methods 
+
+**Key**: `js_break_chained_methods`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Break chained method calls across subsequent lines (Supported by JS Beautify)
+####  JavaScript - Keep array indentation 
+
+**Key**: `js_keep_array_indentation`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Preserve array indentation (Supported by JS Beautify)
+####  JavaScript - Keep function indentation 
+
+**Key**: `js_keep_function_indentation`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+ (Supported by JS Beautify)
+####  JavaScript - Space before conditional 
+
+**Key**: `js_space_before_conditional`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+ (Supported by JS Beautify)
+####  JavaScript - Eval code 
+
+**Key**: `js_eval_code`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+ (Supported by JS Beautify)
+####  JavaScript - Unescape strings 
+
+**Key**: `js_unescape_strings`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+Decode printable characters encoded in xNN notation (Supported by JS Beautify)
+####  JavaScript - Wrap line length 
+
+**Key**: `js_wrap_line_length`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - End with newline 
+
+**Key**: `js_end_with_newline`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify` 
+
+**Description**:
+
+End output with newline (Supported by JS Beautify)
+
+### Pretty Diff
+
+####  CSS - Indent size 
+
+**Key**: `css_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
+####  CSS - Indent char 
+
+**Key**: `css_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation character (Supported by JS Beautify, Pretty Diff)
+####  CSS - Newline between rules 
+
+**Key**: `css_newline_between_rules`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
+####  CSS - Preserve newlines 
+
+**Key**: `css_preserve_newlines`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Retain empty lines. Consecutive empty lines will be converted to a single empty line. (Supported by JS Beautify, Pretty Diff)
+####  CSS - Wrap line length 
+
+**Key**: `css_wrap_line_length`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, Pretty Diff)
+####  CSS - Indent comments 
+
+**Key**: `css_indent_comments`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `Pretty Diff` 
+
+**Description**:
+
+Determines whether comments should be indented. (Supported by Pretty Diff)
+####  CSS - Force indentation 
+
+**Key**: `css_force_indentation`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `Pretty Diff` 
+
+**Description**:
+
+if indentation should be forcefully applied tomarkup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
+####  CSS - Convert quotes 
+
+**Key**: `css_convert_quotes`
+
+**Default**: `none`
+
+**Type**: `string`
+
+**Enum**:  `none`  `double`  `single` 
+
+**Supported Beautifiers**:  `Pretty Diff` 
+
+**Description**:
+
+Convert the quote characters delimiting strings from either double or single quotes to the other. (Supported by Pretty Diff)
+####  CSS - Align assignments 
+
+**Key**: `css_align_assignments`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `Pretty Diff` 
+
+**Description**:
+
+If lists of assignments or properties should be vertically aligned for faster and easier reading. (Supported by Pretty Diff)
+####  HTML - Indent size 
+
+**Key**: `html_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
+####  HTML - Indent char 
+
+**Key**: `html_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation character (Supported by JS Beautify, Pretty Diff)
+####  HTML - Wrap line length 
+
+**Key**: `html_wrap_line_length`
+
+**Default**: `250`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
+####  HTML - Preserve newlines 
+
+**Key**: `html_preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - Indent size 
+
+**Key**: `js_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - Indent char 
+
+**Key**: `js_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Indentation character (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - Preserve newlines 
+
+**Key**: `js_preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+####  JavaScript - Wrap line length 
+
+**Key**: `js_wrap_line_length`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `JS Beautify`  `Pretty Diff` 
+
+**Description**:
+
+Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pretty Diff)
+
+### Fortran Beautifier
+
+####  Fortran - Emacs path 
+
+**Key**: `fortran_emacs_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Fortran Beautifier` 
+
+**Description**:
+
+Path to the &#x60;emacs&#x60; executable (Supported by Fortran Beautifier)
+####  Fortran - Emacs script path 
+
+**Key**: `fortran_emacs_script_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Fortran Beautifier` 
+
+**Description**:
+
+Path to the emacs script (Supported by Fortran Beautifier)
+
+### Perltidy
+
+####  Perl - Perltidy profile 
+
+**Key**: `perl_perltidy_profile`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `Perltidy` 
+
+**Description**:
+
+Specify a configuration file which will override the default name of .perltidyrc (Supported by Perltidy)
+
+### PHP-CS-Fixer
+
+####  PHP - PHP-CS-Fixer Path 
+
+**Key**: `php_cs_fixer_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `PHP-CS-Fixer` 
+
+**Description**:
+
+Path to the &#x60;php-cs-fixer&#x60; CLI executable (Supported by PHP-CS-Fixer)
+####  PHP - Fixers 
+
+**Key**: `php_fixers`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `PHP-CS-Fixer` 
+
+**Description**:
+
+Add fixer(s). i.e. linefeed,-short_tag,indentation (Supported by PHP-CS-Fixer)
+####  PHP - Level 
+
+**Key**: `php_level`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `PHP-CS-Fixer` 
+
+**Description**:
+
+By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP-CS-Fixer)
+
+### autopep8
+
+####  Python - Max line length 
+
+**Key**: `python_max_line_length`
+
+**Default**: `79`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `autopep8` 
+
+**Description**:
+
+set maximum allowed line length (Supported by autopep8)
+####  Python - Indent size 
+
+**Key**: `python_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `autopep8` 
+
+**Description**:
+
+Indentation size/length (Supported by autopep8)
+####  Python - Ignore 
+
+**Key**: `python_ignore`
+
+**Default**: `E24`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  `autopep8` 
+
+**Description**:
+
+do not fix these errors/warnings (Supported by autopep8)
+
+### rustfmt
+
+####  Rust - Rustfmt path 
+
+**Key**: `rust_rustfmt_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  `rustfmt` 
+
+**Description**:
+
+Path to rustfmt program (Supported by rustfmt)
+
+### sqlformat
+
+####  SQL - Indent size 
+
+**Key**: `sql_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  `sqlformat` 
+
+**Description**:
+
+Indentation size/length (Supported by sqlformat)
+####  SQL - Keywords 
+
+**Key**: `sql_keywords`
+
+**Default**: `upper`
+
+**Type**: `string`
+
+**Enum**:  `lower`  `upper`  `capitalize` 
+
+**Supported Beautifiers**:  `sqlformat` 
+
+**Description**:
+
+Change case of keywords (Supported by sqlformat)
+####  SQL - Identifiers 
+
+**Key**: `sql_identifiers`
+
+**Default**: `lower`
+
+**Type**: `string`
+
+**Enum**:  `lower`  `upper`  `capitalize` 
+
+**Supported Beautifiers**:  `sqlformat` 
+
+**Description**:
+
+Change case of identifiers (Supported by sqlformat)
+
