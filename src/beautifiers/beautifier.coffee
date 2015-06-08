@@ -5,11 +5,12 @@ temp = require("temp").track()
 exec = require("child_process").exec
 spawn = require("child_process").spawn
 readFile = Promise.promisify(fs.readFile)
+which = require('which')
 
 module.exports = class Beautifier
 
     ###
-
+    Promise
     ###
     Promise: Promise
 
@@ -133,75 +134,101 @@ module.exports = class Beautifier
             )
 
     ###
+    Like the unix which utility.
+
+    Finds the first instance of a specified executable in the PATH environment variable.
+    Does not cache the results,
+    so hash -r is not needed when the PATH changes.
+    See https://github.com/isaacs/node-which
+    ###
+    which: (exe, options = {}) ->
+        # Get PATH and other environment variables
+        @getShellEnvironment()
+        .then((env) ->
+            new Promise((resolve, reject) ->
+                options.path ?= env.PATH
+                which(exe, options, (err, path) ->
+                    resolve(exe) if err
+                    resolve(path)
+                )
+            )
+        )
+
+    ###
     Run command-line interface command
     ###
     run: (executable, args, {ignoreReturnCode, help} = {}) ->
-        # Resolve executable
-        Promise.resolve(executable)
-        .then((exe) =>
-            # Flatten args first
-            args = _.flatten(args)
-            # Resolve all args
-            Promise.all(args)
-            .then((args) =>
-                return new Promise((resolve, reject) =>
-                    # Remove undefined/null values
-                    args = _.without(args, undefined)
-                    args = _.without(args, null)
-                    # Get PATH and other environment variables
-                    @getShellEnvironment()
-                    .then((env) =>
-                        # Spawn command
-                        stdout = ""
-                        stderr = ""
-                        options = {
-                            env: env
-                        }
-                        @debug('spawn', exe, args)
-                        cmd = spawn(exe, args, options)
-                        # add a 'data' event listener for the spawn instance
-                        cmd.stdout.on('data', (data) -> stdout += data )
-                        cmd.stderr.on('data', (data) -> stderr += data )
-                        # when the spawn child process exits, check if there were any errors and close the writeable stream
-                        cmd.on('exit', (returnCode) =>
-                            @debug('spawn done', returnCode, stderr, stdout)
-                            # If return code is not 0 then error occured
-                            if not ignoreReturnCode and returnCode isnt 0
-                                reject(stderr)
-                            else
-                                resolve(stdout)
-                        )
-                        cmd.on('error', (err) =>
-                            @debug('error', err)
-                            # Check if error is ENOENT (command could not be found)
-                            if err.code is 'ENOENT' or err.errno is 'ENOENT'
-                                # Create new improved error
-                                # notify user that it may not be installed or in path
-                                message = "Could not find '#{exe}'. The program may not be installed."
-                                er = new Error(message) # +(if help then "\n\n#{help}" else "")
-                                if help?
-                                    if typeof help is "object"
-                                        helpStr = "See #{help.link} for program installation instructions.\n"
-                                        helpStr += "You can configure Atom Beautify with the absolute path \
-                                            to '#{help.program or exe}' by setting '#{help.pathOption}' in \
-                                            the Atom Beautify package settings.\n" if help.pathOption
-                                        helpStr += help.additional if help.additional
-                                        er.description = helpStr
-                                    else #if typeof help is "string"
-                                        er.description = help
-                                er.code = 'CommandNotFound'
-                                er.errno = er.code
-                                er.syscall = 'beautifier::run'
-                                er.file = exe
-                                reject(er)
-                            else
-                                # continue as normal error
-                                reject(err)
-                        )
+        # Flatten args first
+        args = _.flatten(args)
+        # Resolve executable and all args
+        Promise.all([executable, Promise.all(args)])
+        .then(([exeName, args]) =>
+            @debug('exeName, args:', exeName, args)
+            return new Promise((resolve, reject) =>
+                # Remove undefined/null values
+                args = _.without(args, undefined)
+                args = _.without(args, null)
+                # Get PATH and other environment variables
+                Promise.all([@getShellEnvironment(), @which(exeName)])
+                .then(([env, exePath]) =>
+                    @debug('exePath, env:', exePath, env)
+                    exe = exePath ? exeName
+                    # Spawn command
+                    stdout = ""
+                    stderr = ""
+                    options = {
+                        env: env
+                    }
+                    @debug('spawn', exe, args)
+                    cmd = spawn(exe, args, options)
+                    # add a 'data' event listener for the spawn instance
+                    cmd.stdout.on('data', (data) -> stdout += data )
+                    cmd.stderr.on('data', (data) -> stderr += data )
+                    # when the spawn child process exits,
+                    # check if there were any errors and
+                    # close the writeable stream
+                    cmd.on('exit', (returnCode) =>
+                        @debug('spawn done', returnCode, stderr, stdout)
+                        # If return code is not 0 then error occured
+                        if not ignoreReturnCode and returnCode isnt 0
+                            reject(stderr)
+                        else
+                            resolve(stdout)
+                    )
+                    cmd.on('error', (err) =>
+                        @debug('error', err)
+                        # Check if error is ENOENT
+                        # (command could not be found)
+                        if err.code is 'ENOENT' or err.errno is 'ENOENT'
+                            # Create new improved error
+                            # notify user that it may not be
+                            # installed or in path
+                            message = "Could not find '#{exe}'. \
+                                The program may not be installed."
+                            er = new Error(message)
+                            if help?
+                                if typeof help is "object"
+                                    helpStr = "See #{help.link} for program installation instructions.\n"
+                                    helpStr += "You can configure Atom Beautify with the absolute path \
+                                        to '#{help.program or exe}' by setting '#{help.pathOption}' in \
+                                        the Atom Beautify package settings.\n" if help.pathOption
+                                    helpStr += help.additional if help.additional
+                                    er.description = helpStr
+                                else #if typeof help is "string"
+                                    er.description = help
+                            er.code = 'CommandNotFound'
+                            er.errno = er.code
+                            er.syscall = 'beautifier::run'
+                            er.file = exe
+                            reject(er)
+                        else
+                            # continue as normal error
+                            reject(err)
                     )
                 )
             )
         )
+
 
     ###
     Logger instance
