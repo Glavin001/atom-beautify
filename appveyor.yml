@@ -95,8 +95,9 @@ install:
   - "SET PATH=C:\\tools\\php;%PATH%"
   - where php
   # PHP-CS-Fixer
-  - ps: iex ((new-object net.webclient).DownloadString('http://get.sensiolabs.org/php-cs-fixer.phar'))
-  - where php-cs-fixer.phar
+  - cinst curl -y # Use cURL to download file from URL
+  - curl http://get.sensiolabs.org/php-cs-fixer.phar -o php-cs-fixer
+  - "SET PATH=%cd%;%PATH%" # Add current working directory to PATH
   - where php-cs-fixer
 
 build_script:
