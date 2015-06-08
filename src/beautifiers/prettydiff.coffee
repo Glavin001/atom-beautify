@@ -8,12 +8,24 @@ module.exports = class PrettyDiff extends Beautifier
         _:
             inchar: "indent_char"
             insize: "indent_size"
-            alphasort: (alphasort) ->
-                alphasort or false
+            objsort: (objsort) ->
+                objsort or false
             preserve: ['preserve_newlines', (preserve_newlines) ->
                 if (preserve_newlines is true ) then \
                     "all" else "none"
             ]
+            cssinsertlines: "newline_between_rules"
+            comments: ["indent_comments", (indent_comments) ->
+                if (indent_comments is true) then \
+                    "indent" else "noindent"
+            ]
+            force: "force_indentation"
+            quoteConvert: "convert_quotes"
+            vertical: ['align_assignments', (align_assignments) ->
+                if (align_assignments is true ) then \
+                    "all" else "none"
+            ]
+            wrap: "wrap_line_length"
         # Apply language-specific options
         CSV: true
         ERB: true

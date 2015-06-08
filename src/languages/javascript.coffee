@@ -24,6 +24,8 @@ module.exports = {
         "js"
     ]
 
+    defaultBeautifier: "JS Beautify"
+
     ###
 
     ###

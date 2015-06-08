@@ -143,7 +143,7 @@ Add a newline between multiple selectors (Supported by JS Beautify)
 
 **Description**:
 
-Add a newline between CSS rules (Supported by JS Beautify)
+Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 ###  CSS - Preserve newlines 
 
 **Key**: `css_preserve_newlines`
@@ -153,6 +153,57 @@ Add a newline between CSS rules (Supported by JS Beautify)
 **Description**:
 
 Retain empty lines. Consecutive empty lines will be converted to a single empty line. (Supported by JS Beautify, Pretty Diff)
+###  CSS - Wrap line length 
+
+**Key**: `css_wrap_line_length`
+
+**Type**: `integer`
+
+**Description**:
+
+Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, Pretty Diff)
+###  CSS - Indent comments 
+
+**Key**: `css_indent_comments`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Description**:
+
+Determines whether comments should be indented. (Supported by Pretty Diff)
+###  CSS - Force indentation 
+
+**Key**: `css_force_indentation`
+
+**Type**: `boolean`
+
+**Description**:
+
+if indentation should be forcefully applied tomarkup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
+###  CSS - Convert quotes 
+
+**Key**: `css_convert_quotes`
+
+**Default**: `none`
+
+**Type**: `string`
+
+**Enum**:  `none`  `double`  `single` 
+
+**Description**:
+
+Convert the quote characters delimiting strings from either double or single quotes to the other. (Supported by Pretty Diff)
+###  CSS - Align assignments 
+
+**Key**: `css_align_assignments`
+
+**Type**: `boolean`
+
+**Description**:
+
+If lists of assignments or properties should be vertically aligned for faster and easier reading. (Supported by Pretty Diff)
 ###  D - Config Path 
 
 **Key**: `d_configPath`
@@ -247,7 +298,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Description**:
 
-Maximum characters per line (0 disables) (Supported by JS Beautify)
+Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 ###  HTML - Wrap attributes 
 
 **Key**: `html_wrap_attributes`
@@ -489,7 +540,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Description**:
 
-Wrap lines at next opportunity after N characters (Supported by JS Beautify)
+Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pretty Diff)
 ###  JavaScript - End with newline 
 
 **Key**: `js_end_with_newline`
@@ -1695,6 +1746,37 @@ Default Beautifier to be used for TSS
 **Description**:
 
 Automatically beautify TSS files on save
+###  Language Config - Twig - Disable Beautifying Language 
+
+**Key**: `language_twig_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Twig Beautification
+###  Language Config - Twig - Default Beautifier 
+
+**Key**: `language_twig_default_beautifier`
+
+**Default**: `Pretty Diff`
+
+**Type**: `string`
+
+**Enum**:  `Pretty Diff` 
+
+**Description**:
+
+Default Beautifier to be used for Twig
+###  Language Config - Twig - Beautify On Save 
+
+**Key**: `language_twig_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Twig files on save
 ###  Language Config - TypeScript - Disable Beautifying Language 
 
 **Key**: `language_typescript_disabled`

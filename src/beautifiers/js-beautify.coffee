@@ -11,7 +11,13 @@ module.exports = class JSBeautify extends Beautifier
         Marko: true
         JavaScript: true
         JSON: true
-        CSS: true
+        CSS:
+            indent_size: true
+            indent_char: true
+            selector_separator_newline: true
+            newline_between_rules: true
+            preserve_newlines: true
+            wrap_line_length: true
     }
 
     beautify: (text, language, options) ->
