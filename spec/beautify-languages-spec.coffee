@@ -47,8 +47,14 @@ describe "BeautifyLanguages", ->
         # Force activate package
         pack = atom.packages.getLoadedPackage("atom-beautify")
         pack.activateNow()
-        # Change logger level
-        # atom.config.set('atom-beautify._loggerLevel', 'verbose')
+        # Check if Windows
+        isWindows = process.platform is 'win32' or
+            process.env.OSTYPE is 'cygwin' or
+            process.env.OSTYPE is 'msys'
+        # Need more debugging on Windows
+        if isWindows
+            # Change logger level
+            atom.config.set('atom-beautify._loggerLevel', 'verbose')
         # Return promise
         return activationPromise
 
