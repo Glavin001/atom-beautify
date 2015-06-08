@@ -100,6 +100,13 @@ install:
   - "SET PATH=%cd%;%PATH%" # Add current working directory to PATH
   - where php-cs-fixer
 
+  # Uncrustify
+  - curl -L http://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.61/uncrustify-0.61.3-gf65394e-win32.zip/download > uncrustify.zip
+  - cinst 7zip.commandline -y
+  - 7za e uncrustify.zip -ouncrustify
+  - "SET PATH=%cd%\\uncrustify;%PATH%"
+  - where uncrustify
+
 build_script:
 
   - cd %APPVEYOR_BUILD_FOLDER%
