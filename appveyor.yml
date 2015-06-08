@@ -94,10 +94,9 @@ install:
   - ps: "ls \"C:\\tools\\php\""
   - "SET PATH=C:\\tools\\php;%PATH%"
   - where php
-  # Composer
-  - cinst composer -y
   # PHP-CS-Fixer
-  - php composer.phar global require fabpot/php-cs-fixer
+  - ps: iex ((new-object net.webclient).DownloadString('http://get.sensiolabs.org/php-cs-fixer.phar'))
+  - where php-cs-fixer.phar
   - where php-cs-fixer
 
 build_script:
