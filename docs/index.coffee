@@ -27,6 +27,20 @@ optionTemplate = fs.readFileSync(optionTemplatePath).toString()
 console.log('Building documentation from template and options...')
 Handlebars.registerPartial('option', optionTemplate)
 template = Handlebars.compile(optionsTemplate)
+
+linkifyTitle = (title) ->
+    title = title.toLowerCase()
+    p = title.split(/[\s,+#;,\/?:@&=+$]+/) # split into parts
+    sep = "-"
+    p.join(sep)
+
+Handlebars.registerHelper('linkify', (title, options) ->
+    return new Handlebars.SafeString(
+        "[#{options.fn(this)}](\##{linkifyTitle(title)})"
+    )
+)
+
+
 context = {
     packageOptions: packageOptions
     languageOptions: languageOptions
