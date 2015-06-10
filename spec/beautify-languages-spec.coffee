@@ -152,7 +152,18 @@ describe "BeautifyLanguages", ->
 
                         beautifyCompleted = false
                         completionFun = (text) ->
-                          console.log(text, expectedContents)
+                          # Replace Newlines
+                          text = text.replace(/(?:\r\n|\r|\n)/g, '⏎\n')
+                          expectedContents = expectedContents\
+                            .replace(/(?:\r\n|\r|\n)/g, '⏎\n')
+                          # Replace tabs
+                          text = text.replace(/(?:\t)/g, '↹')
+                          expectedContents = expectedContents\
+                            .replace(/(?:\t)/g, '↹')
+                          # Replace spaces
+                          text = text.replace(/(?:\ )/g, '␣')
+                          expectedContents = expectedContents\
+                            .replace(/(?:\ )/g, '␣')
                         #   logger.verbose(expectedTestPath, text) if ext is ".less"
                           expect(text instanceof Error).not.toEqual(true, text)
                           return beautifyCompleted = true if text instanceof Error
