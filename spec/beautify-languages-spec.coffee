@@ -150,6 +150,9 @@ describe "BeautifyLanguages", ->
                         # Get the options
                         allOptions = beautifier.getOptionsForPath(originalTestPath)
 
+                        # Get language
+                        language = beautifier.getLanguage(grammarName, testFileName)
+
                         beautifyCompleted = false
                         completionFun = (text) ->
                           # Replace Newlines
@@ -185,8 +188,9 @@ describe "BeautifyLanguages", ->
                               newHeader="expected"
                               diff = JsDiff.createPatch(fileName, oldStr, \
                                 newStr, oldHeader, newHeader)
-                              opts = beautifier.getOptions(allOptions, \
-                                grammarName, testFileName)
+                              # Get options
+                              opts = beautifier.getOptionsForLanguage(allOptions, language)
+                              # Show error message with debug information
                               expect(text).toEqual(expectedContents, \
                                 "Beautifier output does not match expected \
                                 output:\n#{diff}\n\n\
