@@ -55,6 +55,15 @@ beautifier.on('beautify::start', ->
 beautifier.on('beautify::end', ->
     loadingView?.hide()
 )
+# Show error
+showError = (error) =>
+    if not atom.config.get("atom-beautify.muteAllErrors")
+
+        # console.log(e)
+        stack = error.stack
+        detail = error.description or error.message
+        atom.notifications?.addError(error.message, {
+            stack, detail, dismissable : true})
 
 beautify = ({onSave}) ->
     # Deprecation warning for beautify on save
@@ -76,17 +85,6 @@ beautify = ({onSave}) ->
     # Continue beautifying
     path ?= require("path")
     forceEntireFile = onSave and atom.config.get("atom-beautify.beautifyEntireFileOnSave")
-
-
-    # Show error
-    showError = (error) =>
-        if not atom.config.get("atom-beautify.muteAllErrors")
-
-            # console.log(e)
-            stack = error.stack
-            detail = error.description or error.message
-            atom.notifications?.addError(error.message, {
-                stack, detail, dismissable : true})
 
     # Get the path to the config file
     # All of the options
@@ -199,7 +197,6 @@ beautifyFilePath = (filePath, callback) ->
     $el = $(".icon-file-text[data-path=\"#{filePath}\"]")
     $el.addClass('beautifying')
 
-
     # Cleanup and return callback function
     cb = (err, result) ->
         $el = $(".icon-file-text[data-path=\"#{filePath}\"]")
@@ -214,16 +211,17 @@ beautifyFilePath = (filePath, callback) ->
         grammar = atom.grammars.selectGrammar(filePath, input)
         grammarName = grammar.name
 
-
         # Get the options
         allOptions = beautifier.getOptionsForPath(filePath)
-
 
         # Beautify File
         completionFun = (output) ->
             if output instanceof Error
                 return cb(output, null ) # output == Error
             else if typeof output is "string"
+                # do not allow empty string
+                return cb(null, output) if output is ''
+                # save to file
                 fs.writeFile(filePath, output, (err) ->
                     return cb(err) if err
                     return cb( null , output)
@@ -241,36 +239,34 @@ beautifyFile = ({target}) ->
     filePath = target.dataset.path
     return unless filePath
     beautifyFilePath(filePath, (err, result) ->
-        return console.error('beautifyFile error', err, result) if err
-
-    # console.log("Beautify File
+        return showError(err) if err
+        # console.log("Beautify File
     )
     return
 beautifyDirectory = ({target}) ->
     dirPath = target.dataset.path
     return unless dirPath
 
+    return if atom?.confirm(message: "This will beautify all of the files found recursively in this directory, '#{dirPath}'. Do you want to continue?") isnt true
 
     # Show in progress indicate on directory's tree-view entry
     $ ?= require("atom-space-pen-views").$
     $el = $(".icon-file-directory[data-path=\"#{dirPath}\"]")
     $el.addClass('beautifying')
 
-
     # Process Directory
     dir ?= require "node-dir"
     async ?= require "async"
     dir.files(dirPath, (err, files) ->
-        return console.error('beautifyDirectory error', err) if err
-        async.each(files, (filePath, callback) ->
+        return showError(err) if err
 
+        async.each(files, (filePath, callback) ->
             # Ignore errors
             beautifyFilePath(filePath, -> callback())
         , (err) ->
             $el = $(".icon-file-directory[data-path=\"#{dirPath}\"]")
             $el.removeClass('beautifying')
-
-        # console.log('Completed beautifying directory!', dirPath)
+            # console.log('Completed beautifying directory!', dirPath)
         )
     )
     return
