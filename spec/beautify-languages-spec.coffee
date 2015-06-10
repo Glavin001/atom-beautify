@@ -27,7 +27,7 @@ describe "BeautifyLanguages", ->
   dependentPackages = [
       'autocomplete-plus'
       'linter'
-      'atom-typescript'
+    #   'atom-typescript' # it logs too much...
   ]
   # Add language packages to dependentPackages
   for lang in allLanguages

@@ -23,7 +23,7 @@ module.exports = class Rubocop extends Beautifier
                 "Width": options.indent_size
         }
         configStr = yaml.safeDump(config)
-        console.log("rubocop", config, configStr)
+        @debug("rubocop", config, configStr)
 
         @run("rubocop", [
             "--auto-correct"
@@ -33,8 +33,8 @@ module.exports = class Rubocop extends Beautifier
             .then(=>
                 # console.log('rubocop', arguments, tempFile)
                 @readFile(tempFile)
-                .then((text) ->
-                    console.log('rubocop', text)
-                    return text
-                )
+                # .then((text) ->
+                #     console.log('rubocop', text)
+                #     return text
+                # )
             )
