@@ -18,6 +18,7 @@
     indent_char: " "
     indent_size: 2
     preserve_newlines: true
+    # newline_between_rules: true
   js:
     indent_size: 2
     indent_char: " "

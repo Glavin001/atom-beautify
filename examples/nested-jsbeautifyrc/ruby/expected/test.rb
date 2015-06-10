@@ -2,7 +2,7 @@
 
 conn_hash = { hosts: [
 
-  { login: login, passcode: passcode, host: host, port: port }
+    { login: login, passcode: passcode, host: host, port: port }
 ],
               reliable: false, # Override default
               connect_headers: conn_hdrs
@@ -11,9 +11,9 @@ conn_hash = { hosts: [
 
 hash = { hosts: [
 
-  { login: user, passcode: password, host: 'noonehome', port: 2525 },
+    { login: user, passcode: password, host: 'noonehome', port: 2525 },
 
-  { login: user, passcode: password, host: host, port: port }
+    { login: user, passcode: password, host: host, port: port }
 
 ],
 

@@ -152,6 +152,7 @@ describe "BeautifyLanguages", ->
 
                         beautifyCompleted = false
                         completionFun = (text) ->
+                          console.log(text, expectedContents)
                         #   logger.verbose(expectedTestPath, text) if ext is ".less"
                           expect(text instanceof Error).not.toEqual(true, text)
                           return beautifyCompleted = true if text instanceof Error
@@ -162,7 +163,7 @@ describe "BeautifyLanguages", ->
                           return beautifyCompleted = true if text is null
 
                           expect(typeof text).toEqual("string", "Text: #{text}")
-                          return beautifyCompleted = true if typeof text is "string"
+                          return beautifyCompleted = true if typeof text isnt "string"
                           # Check for beautification errors
                           if text isnt expectedContents
                             #   console.warn(allOptions, text, expectedContents)
