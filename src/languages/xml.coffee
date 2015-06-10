@@ -19,6 +19,8 @@ module.exports = {
         'xml'
     ]
 
+    defaultBeautifier: "Pretty Diff"
+
     options: []
 
 }

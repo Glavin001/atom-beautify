@@ -6,6 +6,7 @@ module.exports = class JSBeautify extends Beautifier
 
     options: {
         HTML: true
+        XML: true
         Handlebars: true
         Mustache: true
         Marko: true
