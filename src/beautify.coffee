@@ -19,6 +19,7 @@ yaml = null
 async = null
 dir = null # Node-Dir
 LoadingView = null
+loadingView = null
 $ = null
 
 # function cleanOptions(data, types) {
@@ -44,6 +45,17 @@ setCursors = (editor, posArray) ->
             continue
         editor.addCursorAtBufferPosition bufferPosition
     return
+
+# Show beautification progress/loading view
+beautifier.on('beautify::start', ->
+    LoadingView ?= require "./views/loading-view"
+    loadingView ?= new LoadingView()
+    loadingView.show()
+)
+beautifier.on('beautify::end', ->
+    loadingView?.hide()
+)
+
 beautify = ({onSave}) ->
     # Deprecation warning for beautify on save
     if atom.config.get("atom-beautify.beautifyOnSave") is true
@@ -63,15 +75,11 @@ beautify = ({onSave}) ->
 
     # Continue beautifying
     path ?= require("path")
-    LoadingView ?= require "./views/loading-view"
-    @loadingView ?= new LoadingView()
-    @loadingView.show()
     forceEntireFile = onSave and atom.config.get("atom-beautify.beautifyEntireFileOnSave")
 
 
     # Show error
-    showError = (error)=>
-        @loadingView.hide()
+    showError = (error) =>
         if not atom.config.get("atom-beautify.muteAllErrors")
 
             # console.log(e)
@@ -140,7 +148,6 @@ beautify = ({onSave}) ->
 
         # else
         # console.log "Already Beautiful!"
-        @loadingView.hide()
         return
 
     # console.log 'Beautify time!'

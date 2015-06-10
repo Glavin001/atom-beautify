@@ -4,6 +4,7 @@ Promise = require('bluebird')
 Languages = require('../languages/')
 path = require('path')
 logger = require('../logger')(__filename)
+{EventEmitter} = require 'events'
 
 # Lazy loaded dependencies
 extend = null
@@ -25,7 +26,7 @@ analyticsWriteKey = "u3c26xkae8"
 ###
 Register all supported beautifiers
 ###
-module.exports = class Beautifiers
+module.exports = class Beautifiers extends EventEmitter
     ###
       List of beautifier names
 
@@ -419,9 +420,13 @@ module.exports = class Beautifiers
                         options = transformOptions(beautifier, language.name, options)
 
                         # Beautify text with language options
+                        @emit "beautify::start"
                         beautifier.beautify(text, language.name, options)
                         .then(resolve)
                         .catch(reject)
+                        .finally(=>
+                            @emit "beautify::end"
+                        )
 
                 # Check if Analytics is enabled
                 if atom.config.get("atom-beautify.analytics")
