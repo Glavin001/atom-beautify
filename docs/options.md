@@ -811,6 +811,20 @@ Indentation size/length (Supported by autopep8)
 
 do not fix these errors/warnings (Supported by autopep8)
 
+####  [Ruby - Indent size](#ruby---indent-size) 
+
+**Key**: `ruby_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+
+**Description**:
+
+Indentation size/length (Supported by Rubocop)
+
 ####  [Rust - Rustfmt path](#rust---rustfmt-path) 
 
 **Key**: `rust_rustfmt_path`
@@ -2191,7 +2205,7 @@ Disable XML Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff` 
 
 **Description**:
 
@@ -3147,6 +3161,23 @@ Indentation size/length (Supported by autopep8)
 **Description**:
 
 do not fix these errors/warnings (Supported by autopep8)
+
+
+### Rubocop
+
+####  [Ruby - Indent size](#ruby---indent-size) 
+
+**Key**: `ruby_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+
+**Description**:
+
+Indentation size/length (Supported by Rubocop)
 
 
 ### rustfmt
