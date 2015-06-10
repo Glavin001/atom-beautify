@@ -289,6 +289,22 @@ module.exports = class Beautifiers extends EventEmitter
             _.contains(beautifier.languages, language)
         )
 
+    getOptions : (allOptions, grammar, filePath) ->
+        # Get language
+        fileExtension = path.extname(filePath)
+        # Remove prefix "." (period) in fileExtension
+        fileExtension = fileExtension.substr(1)
+        languages = @languages.getLanguages({grammar, extension: fileExtension})
+        logger.verbose(languages, grammar, fileExtension)
+        # Check if unsupported language
+        if languages.length < 1
+            return null
+        else
+            # TODO: select appropriate language
+            language = languages[0]
+            # Options for Language
+            options = @getOptions([language.namespace]\
+                .concat(language.fallback or []), allOptions) or {}
 
     beautify : (text, allOptions, grammar, filePath, {onSave} = {}) ->
         return Promise.all(allOptions)

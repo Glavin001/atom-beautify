@@ -183,8 +183,15 @@ describe "BeautifyLanguages", ->
                               newStr=expectedContents
                               oldHeader="beautified"
                               newHeader="expected"
-                              diff = JsDiff.createPatch(fileName, oldStr, newStr, oldHeader, newHeader)
-                              expect(text).toEqual(expectedContents, "Beautifier output does not match expected output:\n"+diff)
+                              diff = JsDiff.createPatch(fileName, oldStr, \
+                                newStr, oldHeader, newHeader)
+                              opts = beautifier.getOptions(allOptions, \
+                                grammarName, testFileName)
+                              expect(text).toEqual(expectedContents, \
+                                "Beautifier output does not match expected \
+                                output:\n#{diff}\n\n\
+                                With options:\n\
+                                #{JSON.stringify(opts, undefined, 4)}")
                           # All done!
                           beautifyCompleted = true
 
