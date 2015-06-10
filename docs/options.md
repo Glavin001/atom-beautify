@@ -819,11 +819,27 @@ do not fix these errors/warnings (Supported by autopep8)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
 
 **Description**:
 
-Indentation size/length (Supported by Rubocop)
+Indentation size/length (Supported by Rubocop, Ruby Beautify)
+
+####  [Ruby - Indent char](#ruby---indent-char) 
+
+**Key**: `ruby_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Enum**:  ` `  `	` 
+
+**Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify) 
+
+**Description**:
+
+Indentation character (Supported by Ruby Beautify)
 
 ####  [Rust - Rustfmt path](#rust---rustfmt-path) 
 
@@ -3173,11 +3189,44 @@ do not fix these errors/warnings (Supported by autopep8)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
 
 **Description**:
 
-Indentation size/length (Supported by Rubocop)
+Indentation size/length (Supported by Rubocop, Ruby Beautify)
+
+
+### Ruby Beautify
+
+####  [Ruby - Indent size](#ruby---indent-size) 
+
+**Key**: `ruby_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
+
+**Description**:
+
+Indentation size/length (Supported by Rubocop, Ruby Beautify)
+
+####  [Ruby - Indent char](#ruby---indent-char) 
+
+**Key**: `ruby_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Enum**:  ` `  `	` 
+
+**Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify) 
+
+**Description**:
+
+Indentation character (Supported by Ruby Beautify)
 
 
 ### rustfmt

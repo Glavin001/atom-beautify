@@ -31,5 +31,11 @@ module.exports = {
             default: defaultIndentSize
             minimum: 0
             description: "Indentation size/length"
+        indent_char:
+            type: 'string'
+            default: defaultIndentChar
+            description: "Indentation character"
+            enum: [" ", "\t"]
+
 
 }

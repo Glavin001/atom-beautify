@@ -9,12 +9,15 @@ module.exports = class RubyBeautify extends Beautifier
     name: "Ruby Beautify"
 
     options: {
-        Ruby: false
+        Ruby:
+            indent_size: true
+            indent_char: true
     }
 
     beautify: (text, language, options) ->
-        @deprecate("Ruby-Beautify has been deprecated in favour of Rubocop beautifier.")
         @run("rbeautify", [
+            if options.indent_char is '\t' then "--tabs" else "--spaces"
+            "--indent_count", options.indent_count
             @tempFile("input", text)
             ], help: {
                 link: "https://github.com/erniebrodeur/ruby-beautify"
