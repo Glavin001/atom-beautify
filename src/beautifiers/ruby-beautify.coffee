@@ -9,7 +9,7 @@ module.exports = class RubyBeautify extends Beautifier
     name: "Ruby Beautify"
 
     options: {
-        Ruby: true
+        Ruby: false
     }
 
     beautify: (text, language, options) ->

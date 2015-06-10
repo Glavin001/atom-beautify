@@ -1,3 +1,10 @@
+# Get Atom defaults
+tabLength = atom?.config.get('editor.tabLength') ? 4
+softTabs = atom?.config.get('editor.softTabs') ? true
+defaultIndentSize = (if softTabs then tabLength else 1)
+defaultIndentChar = (if softTabs then " " else "\t")
+defaultIndentWithTabs = not softTabs
+
 module.exports = {
 
     name: "Ruby"
@@ -18,6 +25,11 @@ module.exports = {
         "rb"
     ]
 
-    options: []
+    options:
+        indent_size:
+            type: 'integer'
+            default: defaultIndentSize
+            minimum: 0
+            description: "Indentation size/length"
 
 }

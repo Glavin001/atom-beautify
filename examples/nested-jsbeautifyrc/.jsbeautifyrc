@@ -40,3 +40,5 @@
     indent_class: true
     indent_with_tabs: 0
     indent_size: 1
+  ruby:
+    indent_size: 4
