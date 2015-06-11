@@ -39,17 +39,21 @@ describe "PHP-CS-Fixer Beautifier", ->
                     fixers: ""
                     levels: ""
                 }
-                # Mock
-                beautifier.getShellEnvironment = -> Promise.resolve("")
+                # Mock PATH
+                beautifier.getShellEnvironment = -> Promise.resolve({
+                    PATH: ''
+                })
                 #
                 p = beautifier.beautify(text, language, options)
                 expect(p).not.toBe(null)
                 expect(p instanceof beautifier.Promise).toBe(true)
                 cb = (v) ->
-                    console.log(v)
+                    # console.log(v)
                     expect(v).not.toBe(null)
-                    expect(v instanceof Error).toBe(true)
-                    expect(v.code).toBe("CommandNotFound")
+                    expect(v instanceof Error).toBe(true, \
+                      "Expected #{v} to be instance of Error")
+                    expect(v.code).toBe("CommandNotFound", \
+                      "Expected to be CommandNotFound")
                     return v
                 p.then(cb, cb)
                 return p
