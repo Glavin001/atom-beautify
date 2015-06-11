@@ -81,6 +81,12 @@ module.exports = class Beautifier
         )
 
     ###
+    If platform is Windows
+    ###
+    isWindows: do ->
+        return /^win/.test(process.platform)
+
+    ###
     Get Shell Environment variables
 
     Special thank you to @ioquatix
@@ -99,8 +105,7 @@ module.exports = class Beautifier
                     return resolve(@_envCache)
 
             # Check if Windows
-            isWin = /^win/.test(process.platform)
-            if isWin
+            if @isWindows
                 # Windows
                 # Use default
                 resolve(process.env)
@@ -155,6 +160,70 @@ module.exports = class Beautifier
         )
 
     ###
+    Add help to error.description
+
+    Note: error.description is not officially used in JavaScript,
+    however it is used internally for Atom Beautify when displaying errors.
+    ###
+    commandNotFoundError: (exe, help) ->
+        # Create new improved error
+        # notify user that it may not be
+        # installed or in path
+        message = "Could not find '#{exe}'. \
+            The program may not be installed."
+        er = new Error(message)
+        er.code = 'CommandNotFound'
+        er.errno = er.code
+        er.syscall = 'beautifier::run'
+        er.file = exe
+        if help?
+            if typeof help is "object"
+                # Basic notice
+                helpStr = "See #{help.link} for program \
+                            installation instructions.\n"
+                # Help to configure Atom Beautify for program's path
+                helpStr += "You can configure Atom Beautify \
+                    with the absolute path \
+                    to '#{help.program or exe}' by setting \
+                    '#{help.pathOption}' in \
+                    the Atom Beautify package settings.\n" if help.pathOption
+                # Optional, additional help
+                helpStr += help.additional if help.additional
+                # Common Help
+                issueSearchLink =
+                  "https://github.com/Glavin001/atom-beautify/\
+                  search?q=#{exe}&type=Issues"
+                docsLink = "https://github.com/Glavin001/\
+                  atom-beautify/tree/master/docs"
+                helpStr += "Your program is properly installed if running \
+                            '#{if @isWindows then 'where.exe' \
+                            else 'which'} #{exe}' \
+                            in your #{if @isWindows then 'CMD prompt' \
+                            else 'Terminal'} \
+                            returns an absolute path to the executable. \
+                            If this does not work then you have not \
+                            installed the program correctly and so \
+                            Atom Beautify will not find the program. \
+                            Atom Beautify requires that the program be \
+                            found in your PATH environment variable. \n\
+                            Note that this is not an Atom Beautify issue \
+                            if beautification does not work and the above \
+                            command also does not work: this is expected \
+                            behaviour, since you have not properly installed \
+                            your program. Please properly setup the program \
+                            and search through existing Atom Beautify issues \
+                            before creating a new issue. \
+                            See #{issueSearchLink} for related Issues and \
+                            #{docsLink} for documentation. \
+                            If you are still unable to resolve this issue on \
+                            your own then please create a new issue and \
+                            ask for help.\n"
+                er.description = helpStr
+            else #if typeof help is "string"
+                er.description = help
+        return er
+
+    ###
     Run command-line interface command
     ###
     run: (executable, args, {ignoreReturnCode, help} = {}) ->
@@ -200,27 +269,7 @@ module.exports = class Beautifier
                         # Check if error is ENOENT
                         # (command could not be found)
                         if err.code is 'ENOENT' or err.errno is 'ENOENT'
-                            # Create new improved error
-                            # notify user that it may not be
-                            # installed or in path
-                            message = "Could not find '#{exe}'. \
-                                The program may not be installed."
-                            er = new Error(message)
-                            if help?
-                                if typeof help is "object"
-                                    helpStr = "See #{help.link} for program installation instructions.\n"
-                                    helpStr += "You can configure Atom Beautify with the absolute path \
-                                        to '#{help.program or exe}' by setting '#{help.pathOption}' in \
-                                        the Atom Beautify package settings.\n" if help.pathOption
-                                    helpStr += help.additional if help.additional
-                                    er.description = helpStr
-                                else #if typeof help is "string"
-                                    er.description = help
-                            er.code = 'CommandNotFound'
-                            er.errno = er.code
-                            er.syscall = 'beautifier::run'
-                            er.file = exe
-                            reject(er)
+                            reject(@commandNotFoundError(exeName, help))
                         else
                             # continue as normal error
                             reject(err)

@@ -62,6 +62,118 @@ describe "Atom-Beautify", ->
                         expect(v).not.toBe(null)
                         expect(v instanceof Error).toBe(true)
                         expect(v.code).toBe("CommandNotFound")
+                        expect(v.description).toBe(undefined, \
+                            'Error should not have a description.')
+                        return v
+                    p.then(cb, cb)
+                    return p
+
+            it "should error with help description \
+                when beautifier's program not found", ->
+                expect(beautifier).not.toBe(null)
+                expect(beautifier instanceof Beautifier).toBe(true)
+
+                waitsForPromise shouldReject: true, ->
+                    help = {
+                        link: "http://test.com"
+                        program: "test-program"
+                        pathOption: "Lang - Test Program Path"
+                    }
+                    p = beautifier.run("program", [], help: help)
+                    expect(p).not.toBe(null)
+                    expect(p instanceof beautifier.Promise).toBe(true)
+                    cb = (v) ->
+                        # console.log(v)
+                        expect(v).not.toBe(null)
+                        expect(v instanceof Error).toBe(true)
+                        expect(v.code).toBe("CommandNotFound")
+                        expect(v.description).not.toBe(null)
+                        expect(v.description.indexOf(help.link)).not.toBe(-1)
+                        expect(v.description.indexOf(help.program)).not.toBe(-1)
+                        expect(v.description
+                            .indexOf(help.pathOption)).not.toBe(-1, \
+                            "Error should have a description.")
+                        return v
+                    p.then(cb, cb)
+                    return p
+
+            it "should error with Windows-specific help description \
+                when beautifier's program not found", ->
+                expect(beautifier).not.toBe(null)
+                expect(beautifier instanceof Beautifier).toBe(true)
+
+                waitsForPromise shouldReject: true, ->
+                    help = {
+                        link: "http://test.com"
+                        program: "test-program"
+                        pathOption: "Lang - Test Program Path"
+                    }
+                    # Force to be Windows
+                    beautifier.isWindows = true
+                    terminal = 'CMD prompt'
+                    whichCmd = "where.exe"
+                    # Process
+                    p = beautifier.run("program", [], help: help)
+                    expect(p).not.toBe(null)
+                    expect(p instanceof beautifier.Promise).toBe(true)
+                    cb = (v) ->
+                        # console.log(v)
+                        expect(v).not.toBe(null)
+                        expect(v instanceof Error).toBe(true)
+                        expect(v.code).toBe("CommandNotFound")
+                        expect(v.description).not.toBe(null)
+                        expect(v.description.indexOf(help.link)).not.toBe(-1)
+                        expect(v.description.indexOf(help.program)).not.toBe(-1)
+                        expect(v.description
+                            .indexOf(help.pathOption)).not.toBe(-1, \
+                            "Error should have a description.")
+                        expect(v.description
+                            .indexOf(terminal)).not.toBe(-1, \
+                            "Error should have a description including \
+                            '#{terminal}' in message.")
+                        expect(v.description
+                            .indexOf(whichCmd)).not.toBe(-1, \
+                            "Error should have a description including \
+                            '#{whichCmd}' in message.")
+                        return v
+                    p.then(cb, cb)
+                    return p
+
+            it "should error with Mac/Linux-specific help description \
+                when beautifier's program not found", ->
+                expect(beautifier).not.toBe(null)
+                expect(beautifier instanceof Beautifier).toBe(true)
+
+                waitsForPromise shouldReject: true, ->
+                    help = {
+                        link: "http://test.com"
+                        program: "test-program"
+                        pathOption: "Lang - Test Program Path"
+                    }
+                    # Force to be Mac/Linux (not Windows)
+                    beautifier.isWindows = false
+                    terminal = "Terminal"
+                    whichCmd = "which"
+                    # Process
+                    p = beautifier.run("program", [], help: help)
+                    expect(p).not.toBe(null)
+                    expect(p instanceof beautifier.Promise).toBe(true)
+                    cb = (v) ->
+                        # console.log(v)
+                        expect(v).not.toBe(null)
+                        expect(v instanceof Error).toBe(true)
+                        expect(v.code).toBe("CommandNotFound")
+                        expect(v.description).not.toBe(null)
+                        expect(v.description.indexOf(help.link)).not.toBe(-1)
+                        expect(v.description.indexOf(help.program)).not.toBe(-1)
+                        expect(v.description
+                            .indexOf(terminal)).not.toBe(-1, \
+                            "Error should have a description including \
+                            '#{terminal}' in message.")
+                        expect(v.description
+                            .indexOf(whichCmd)).not.toBe(-1, \
+                            "Error should have a description including \
+                            '#{whichCmd}' in message.")
                         return v
                     p.then(cb, cb)
                     return p
