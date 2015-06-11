@@ -305,8 +305,8 @@ module.exports = class Beautifiers extends EventEmitter
 
     getOptionsForLanguage : (allOptions, language) ->
         # Options for Language
-        options = @getOptions([language.namespace]\
-            .concat(language.fallback or []), allOptions) or {}
+        selections = (language.fallback or []).concat([language.namespace])
+        options = @getOptions(selections, allOptions) or {}
 
     beautify : (text, allOptions, grammar, filePath, {onSave} = {}) ->
         return Promise.all(allOptions)
@@ -364,7 +364,7 @@ module.exports = class Beautifiers extends EventEmitter
                         return resolve( null )
 
                     # Options for Language
-                    options = @getOptions([language.namespace].concat(language.fallback or []), allOptions) or {}
+                    options = @getOptionsForLanguage(allOptions, language)
 
                     # Get Beautifier
                     logger.verbose(grammar, language)
@@ -767,7 +767,7 @@ module.exports = class Beautifiers extends EventEmitter
         _ ?= require("lodash")
         extend ?= require("extend")
 
-        logger.verbose(selections, allOptions)
+        logger.verbose('getOptions selections', selections, allOptions)
 
         # logger.verbose(selection, allOptions);
         # Reduce all options into correctly merged options.

@@ -47,13 +47,16 @@ module.exports = do ->
             ]
         })
         wlogger.on('logging', (transport, level, msg, meta)->
-            loggerLevel = atom?.config.get('atom-beautify._loggerLevel') ? "warn"
+            loggerLevel = atom?.config.get(\
+                'atom-beautify._loggerLevel') ? "warn"
             # console.log('logging', loggerLevel, arguments)
             loggerLevelNum = levels[loggerLevel]
             levelNum = levels[level]
             if loggerLevelNum <= levelNum
                 path = require('path')
-                label = path.basename(transport.label)
+                label = "#{path.dirname(transport.label)\
+                    .split(path.sep).reverse()[0]}\
+                    #{path.sep}#{path.basename(transport.label)}"
                 console.log("#{label} [#{level}]: #{msg}", meta)
         )
         # Export logger methods

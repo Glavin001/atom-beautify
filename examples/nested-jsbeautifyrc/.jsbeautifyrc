@@ -42,3 +42,5 @@
     indent_size: 1
   ruby:
     indent_size: 4
+  erb:
+    indent_size: 4

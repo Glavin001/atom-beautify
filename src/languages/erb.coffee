@@ -15,7 +15,11 @@ module.exports = {
     ###
     Supported extensions
     ###
-    extensions: []
+    extensions: [
+      'erb'
+    ]
+
+    defaultBeautifier: "Pretty Diff"
 
     options: []
 

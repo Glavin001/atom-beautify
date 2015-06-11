@@ -8,11 +8,14 @@ Beautifier = require('./beautifier')
 module.exports = class HTMLBeautifier extends Beautifier
     name: "HTML Beautifier"
     options: {
-        ERB: true
+        ERB:
+            indent_size: true
     }
 
     beautify: (text, language, options) ->
+        console.log('erb', options)
         @run("htmlbeautifier", [
+            "--tab-stops", options.indent_size
             tempFile = @tempFile("temp", text)
             ])
             .then(=>
