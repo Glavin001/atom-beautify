@@ -2,8 +2,7 @@ Promise = require("bluebird")
 _ = require('lodash')
 fs = require("fs")
 temp = require("temp").track()
-exec = require("child_process").exec
-spawn = require("child_process").spawn
+spawn = require('cross-spawn')
 readFile = Promise.promisify(fs.readFile)
 which = require('which')
 
