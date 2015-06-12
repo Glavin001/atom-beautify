@@ -78,7 +78,6 @@ install:
 
   # sqlformat
   - "%CMD_IN_ENV% pip install --upgrade sqlparse"
-  - where sqlparse
   - where sqlformat
 
   # Ruby & Gem
