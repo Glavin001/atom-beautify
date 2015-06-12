@@ -1,5 +1,6 @@
 PHPCSFixer = require "../src/beautifiers/php-cs-fixer"
 Beautifier = require "../src/beautifiers/beautifier"
+path = require 'path'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -27,62 +28,109 @@ describe "PHP-CS-Fixer Beautifier", ->
 
         beforeEach ->
             beautifier = new PHPCSFixer()
+            # console.log('new beautifier')
 
-        it "should error when beautifier's program not found", ->
-            expect(beautifier).not.toBe(null)
-            expect(beautifier instanceof Beautifier).toBe(true)
+        OSSpecificSpecs = ->
+            text = "<?php echo \"test\"; ?>"
 
-            waitsForPromise shouldReject: true, ->
-                text = ""
-                language = "PHP"
-                options = {
-                    fixers: ""
-                    levels: ""
-                }
-                # Mock PATH
-                beautifier.getShellEnvironment = -> Promise.resolve({
-                    PATH: ''
-                })
-                #
-                p = beautifier.beautify(text, language, options)
-                expect(p).not.toBe(null)
-                expect(p instanceof beautifier.Promise).toBe(true)
-                cb = (v) ->
-                    # console.log(v)
-                    expect(v).not.toBe(null)
-                    expect(v instanceof Error).toBe(true, \
-                      "Expected #{v} to be instance of Error")
-                    expect(v.code).toBe("CommandNotFound", \
-                      "Expected to be CommandNotFound")
-                    return v
-                p.then(cb, cb)
-                return p
+            it "should error when beautifier's program not found", ->
+                expect(beautifier).not.toBe(null)
+                expect(beautifier instanceof Beautifier).toBe(true)
 
-        # it "should error with help description \
-        #     when beautifier's program not found", ->
-        #     expect(beautifier).not.toBe(null)
-        #     expect(beautifier instanceof Beautifier).toBe(true)
-        #
-        #     waitsForPromise shouldReject: true, ->
-        #         help = {
-        #             link: "http://test.com"
-        #             program: "test-program"
-        #             pathOption: "Lang - Test Program Path"
-        #         }
-        #         p = beautifier.run("program", [], help: help)
-        #         expect(p).not.toBe(null)
-        #         expect(p instanceof beautifier.Promise).toBe(true)
-        #         cb = (v) ->
-        #             # console.log(v)
-        #             expect(v).not.toBe(null)
-        #             expect(v instanceof Error).toBe(true)
-        #             expect(v.code).toBe("CommandNotFound")
-        #             expect(v.description).not.toBe(null)
-        #             expect(v.description.indexOf(help.link)).not.toBe(-1)
-        #             expect(v.description.indexOf(help.program)).not.toBe(-1)
-        #             expect(v.description
-        #                 .indexOf(help.pathOption)).not.toBe(-1, \
-        #                 "Error should have a description.")
-        #             return v
-        #         p.then(cb, cb)
-        #         return p
+                waitsForPromise shouldReject: true, ->
+                    language = "PHP"
+                    options = {
+                        fixers: ""
+                        levels: ""
+                    }
+                    # Mock PATH
+                    beautifier.getShellEnvironment = -> Promise.resolve({
+                        PATH: ''
+                    })
+                    #
+                    p = beautifier.beautify(text, language, options)
+                    expect(p).not.toBe(null)
+                    expect(p instanceof beautifier.Promise).toBe(true)
+                    cb = (v) ->
+                        # console.log(v)
+                        expect(v).not.toBe(null)
+                        expect(v instanceof Error).toBe(true, \
+                          "Expected '#{v}' to be instance of Error")
+                        expect(v.code).toBe("CommandNotFound", \
+                          "Expected to be CommandNotFound")
+                        return v
+                    p.then(cb, cb)
+                    return p
+
+            failWhichProgram = (failingProgram) ->
+                it "should error when '#{failingProgram}' not found", ->
+                    expect(beautifier).not.toBe(null)
+                    expect(beautifier instanceof Beautifier).toBe(true)
+
+                    if not beautifier.isWindows and failingProgram is "php"
+                        # Only applicable on Windows
+                        return
+
+                    waitsForPromise shouldReject: true, ->
+                        language = "PHP"
+                        options = {
+                            fixers: ""
+                            levels: ""
+                        }
+                        cb = (v) ->
+                            # console.log('cb value', v)
+                            expect(v).not.toBe(null)
+                            expect(v instanceof Error).toBe(true, \
+                              "Expected '#{v}' to be instance of Error")
+                            expect(v.code).toBe("CommandNotFound", \
+                              "Expected to be CommandNotFound")
+                            expect(v.file).toBe(failingProgram)
+                            return v
+                        # which = beautifier.which.bind(beautifier)
+                        beautifier.which = (exe, options) ->
+                            return beautifier.Promise.resolve(null) \
+                                if not exe?
+                            if exe is failingProgram
+                                beautifier.Promise.resolve(failingProgram)
+                            else
+                                # which(exe, options)
+                                # console.log('fake exe path', exe)
+                                beautifier.Promise.resolve("/#{exe}")
+
+                        oldSpawn = beautifier.spawn.bind(beautifier)
+                        beautifier.spawn = (exe, args, options) ->
+                            # console.log('spawn', exe, args, options)
+                            if exe is failingProgram
+                                er = new Error('ENOENT')
+                                er.code = 'ENOENT'
+                                return beautifier.Promise.reject(er)
+                            else
+                                return beautifier.Promise.resolve({
+                                    returnCode: 0,
+                                    stdout: 'stdout',
+                                    stderr: ''
+                                  })
+                        p = beautifier.beautify(text, language, options)
+                        expect(p).not.toBe(null)
+                        expect(p instanceof beautifier.Promise).toBe(true)
+                        p.then(cb, cb)
+                        return p
+
+            failWhichProgram('php')
+            failWhichProgram('php-cs-fixer')
+
+        describe "Mac/Linux", ->
+
+            beforeEach ->
+                # console.log('mac/linx')
+                beautifier.isWindows = false
+
+            do OSSpecificSpecs
+
+        describe "Windows", ->
+
+            beforeEach ->
+                # console.log('windows')
+                beautifier.isWindows = true
+
+            do OSSpecificSpecs

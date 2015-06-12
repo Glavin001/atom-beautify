@@ -74,6 +74,7 @@ install:
   # pip will build them from source using the MSVC compiler matching the
   # target Python version and architecture
   - "%CMD_IN_ENV% pip install --upgrade autopep8"
+  - where autopep8
 
   # Ruby & Gem
   - cinst ruby -y
@@ -111,7 +112,7 @@ build_script:
 
   - cd %APPVEYOR_BUILD_FOLDER%
   # Install languages to Atom
-  - apm install linter atom-typescript language-marko language-tss language-html-swig
+  - apm install language-marko language-tss language-html-swig
   # Show current PATH
   - echo %PATH%
   # Run tests on package

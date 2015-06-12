@@ -19,15 +19,15 @@ module.exports = class PHPCSFixer extends Beautifier
         if isWin
             # Find php-cs-fixer.phar script
             @Promise.all([
-              @which(options.cs_fixer_path)
+              @which(options.cs_fixer_path) if options.cs_fixer_path
               @which('php-cs-fixer')
-              @which('php-cs-fixer.phar')
-            ]).then((paths...)=>
+            ]).then((paths) =>
                 @debug('php-cs-fixer paths', paths)
-                path = require('path')
-                # Get first valid path
-                phpCSFixerPath = _.find(paths, (p) -> path.isAbsolute(p) )
-                @debug('phpCSFixerPath', phpCSFixerPath)
+                _ = require('lodash')
+                # Get first valid, absolute path
+                phpCSFixerPath = _.find(paths, (p) -> p and p.charAt(0) is '/' )
+                @verbose('phpCSFixerPath', phpCSFixerPath)
+                @debug('phpCSFixerPath', phpCSFixerPath, paths)
                 # Check if PHP-CS-Fixer path was found
                 if phpCSFixerPath?
                     # Found PHP-CS-Fixer path
@@ -47,7 +47,8 @@ module.exports = class PHPCSFixer extends Beautifier
                             @readFile(tempFile)
                         )
                 else
-                    # could not find PHP-CS-Fixer path
+                    @verbose('php-cs-fixer not found!')
+                    # Could not find PHP-CS-Fixer path
                     @Promise.reject(@commandNotFoundError(
                         'php-cs-fixer'
                         {
