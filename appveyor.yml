@@ -88,8 +88,8 @@ install:
   - gem install rubocop
   - where rubocop
   # HTMLBeautifier
-  - gem install htmlbeautifier
-  - where htmlbeautifier
+  # - gem install htmlbeautifier
+  # - where htmlbeautifier
 
   # emacs
   - cinst emacs -y

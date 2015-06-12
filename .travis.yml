@@ -35,7 +35,7 @@ before_install:
   # Ruby language support
   # - gem install ruby-beautify --verbose
   - gem install rubocop
-  - gem install htmlbeautifier
+  # - gem install htmlbeautifier
   # Python language support
   - brew install python
   - pip install --upgrade autopep8
