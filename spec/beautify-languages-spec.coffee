@@ -156,6 +156,18 @@ describe "BeautifyLanguages", ->
 
                         beautifyCompleted = false
                         completionFun = (text) ->
+                          expect(text instanceof Error).not.toEqual(true, text)
+                          return beautifyCompleted = true if text instanceof Error
+                        #   logger.verbose(expectedTestPath, text) if ext is ".less"
+                        #   if text instanceof Error
+                        #     return beautifyCompleted = text # text == Error
+
+                          expect(text).not.toEqual(null, "Language or Beautifier not found")
+                          return beautifyCompleted = true if text is null
+
+                          expect(typeof text).toEqual("string", "Text: #{text}")
+                          return beautifyCompleted = true if typeof text isnt "string"
+
                           # Replace Newlines
                           text = text.replace(/(?:\r\n|\r|\n)/g, '⏎\n')
                           expectedContents = expectedContents\
@@ -168,17 +180,7 @@ describe "BeautifyLanguages", ->
                           text = text.replace(/(?:\ )/g, '␣')
                           expectedContents = expectedContents\
                             .replace(/(?:\ )/g, '␣')
-                        #   logger.verbose(expectedTestPath, text) if ext is ".less"
-                          expect(text instanceof Error).not.toEqual(true, text)
-                          return beautifyCompleted = true if text instanceof Error
-                        #   if text instanceof Error
-                        #     return beautifyCompleted = text # text == Error
 
-                          expect(text).not.toEqual(null, "Language or Beautifier not found")
-                          return beautifyCompleted = true if text is null
-
-                          expect(typeof text).toEqual("string", "Text: #{text}")
-                          return beautifyCompleted = true if typeof text isnt "string"
                           # Check for beautification errors
                           if text isnt expectedContents
                             # console.warn(allOptions, text, expectedContents)
