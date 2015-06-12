@@ -247,7 +247,11 @@ beautifyDirectory = ({target}) ->
     dirPath = target.dataset.path
     return unless dirPath
 
-    return if atom?.confirm(message: "This will beautify all of the files found recursively in this directory, '#{dirPath}'. Do you want to continue?") isnt true
+    return if atom?.confirm(
+      message: "This will beautify all of the files found \
+        recursively in this directory, '#{dirPath}'. \
+        Do you want to continue?",
+      buttons: ['Yes, continue!','No, cancel!']) isnt 0
 
     # Show in progress indicate on directory's tree-view entry
     $ ?= require("atom-space-pen-views").$
