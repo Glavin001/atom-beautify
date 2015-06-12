@@ -23,7 +23,7 @@ module.exports = class Uncrustify extends Beautifier
 
   beautify: (text, language, options) ->
     # console.log('uncrustify.beautify', language, options)
-    return new @Promise((resolve, reject) =>
+    return new @Promise((resolve, reject) ->
       configPath = options.configPath
       unless configPath
         # No custom config path
@@ -76,7 +76,7 @@ module.exports = class Uncrustify extends Beautifier
         "-l"
         lang
         ], help: {
-          link: "http://sourceforge.net/projects/uncrustify/"
+        link: "http://sourceforge.net/projects/uncrustify/"
         })
         .then(=>
           @readFile(outputFile)

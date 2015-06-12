@@ -76,10 +76,10 @@ module.exports = class Languages
   Get language for grammar and extension
   ###
   getLanguages: ({name, namespace, grammar, extension}) ->
-    #   console.log('getLanguages', name, namespace, grammar, extension, @languages)
-      _.union(
-        _.filter(@languages, (language) -> _.isEqual(language.name, name))
-        _.filter(@languages, (language) -> _.isEqual(language.namespace, namespace))
-        _.filter(@languages, (language) -> _.contains(language.grammars, grammar))
-        _.filter(@languages, (language) -> _.contains(language.extensions, extension))
-      )
+    # console.log('getLanguages', name, namespace, grammar, extension, @languages)
+    _.union(
+      _.filter(@languages, (language) -> _.isEqual(language.name, name))
+      _.filter(@languages, (language) -> _.isEqual(language.namespace, namespace))
+      _.filter(@languages, (language) -> _.contains(language.grammars, grammar))
+      _.filter(@languages, (language) -> _.contains(language.extensions, extension))
+    )

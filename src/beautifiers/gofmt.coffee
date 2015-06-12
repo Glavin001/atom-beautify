@@ -5,7 +5,7 @@ Requires http://golang.org/cmd/gofmt/
 "use strict"
 Beautifier = require('./beautifier')
 
-module.exports = class gofmt extends Beautifier
+module.exports = class Gofmt extends Beautifier
   name: "gofmt"
 
   options: {

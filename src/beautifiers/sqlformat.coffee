@@ -5,7 +5,7 @@ Requires https://github.com/andialbrecht/sqlparse
 "use strict"
 Beautifier = require('./beautifier')
 
-module.exports = class sqlformat extends Beautifier
+module.exports = class Sqlformat extends Beautifier
   name: "sqlformat"
 
   options: {
@@ -20,5 +20,5 @@ module.exports = class sqlformat extends Beautifier
       "--keywords=#{options.keywords}" if options.keywords?
       "--identifiers=#{options.identifiers}" if options.identifiers?
       ], help: {
-        link: "https://github.com/andialbrecht/sqlparse"
+      link: "https://github.com/andialbrecht/sqlparse"
       })

@@ -59,7 +59,7 @@ class MessageView extends View
   destroy: ->
 
   addMessage: (message) =>
-    @messages.push(message);
+    @messages.push(message)
     @refresh()
 
   clearMessages: =>
