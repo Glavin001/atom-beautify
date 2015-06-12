@@ -1,7 +1,7 @@
 {
   "indentation" : {
     "level" : "error",
-    "value" : 4
+    "value" : 2
   },
   "line_endings" : {
     "value" : "unix",

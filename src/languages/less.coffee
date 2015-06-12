@@ -1,23 +1,23 @@
 module.exports = {
 
-    name: "LESS"
-    namespace: "less"
-    fallback: ['css','scss','sass']
+  name: "LESS"
+  namespace: "less"
+  fallback: ['css','scss','sass']
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "LESS"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "LESS"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        'less'
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    'less'
+  ]
 
-    defaultBeautifier: "Pretty Diff"
+  defaultBeautifier: "Pretty Diff"
 
 }

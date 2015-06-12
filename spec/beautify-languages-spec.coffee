@@ -25,8 +25,8 @@ describe "BeautifyLanguages", ->
     ]
   # All Atom packages that Atom Beautify is dependent on
   dependentPackages = [
-      'autocomplete-plus'
-      'linter'
+    'autocomplete-plus'
+    # 'linter'
     #   'atom-typescript' # it logs too much...
   ]
   # Add language packages to dependentPackages
@@ -43,28 +43,28 @@ describe "BeautifyLanguages", ->
 
     # Activate package
     waitsForPromise ->
-        activationPromise = atom.packages.activatePackage('atom-beautify')
-        # Force activate package
-        pack = atom.packages.getLoadedPackage("atom-beautify")
-        pack.activateNow()
-        # Check if Windows
-        isWindows = process.platform is 'win32' or
-            process.env.OSTYPE is 'cygwin' or
-            process.env.OSTYPE is 'msys'
-        # Need more debugging on Windows
-        if isWindows
-            # Change logger level
-            atom.config.set('atom-beautify._loggerLevel', 'verbose')
-        # Return promise
-        return activationPromise
+      activationPromise = atom.packages.activatePackage('atom-beautify')
+      # Force activate package
+      pack = atom.packages.getLoadedPackage("atom-beautify")
+      pack.activateNow()
+      # Check if Windows
+      isWindows = process.platform is 'win32' or
+        process.env.OSTYPE is 'cygwin' or
+        process.env.OSTYPE is 'msys'
+      # Need more debugging on Windows
+      if isWindows
+        # Change logger level
+        atom.config.set('atom-beautify._loggerLevel', 'verbose')
+      # Return promise
+      return activationPromise
 
     # Set Uncrustify config path
     # uncrustifyConfigPath = path.resolve(__dirname, "../examples/nested-jsbeautifyrc/uncrustify.cfg")
     # uncrustifyLangs = ["c", "cpp", "objectivec", "cs", "d", "java", "pawn", "vala"]
     # for lang in uncrustifyLangs
     #     do (lang) ->
-            # atom.config.set("atom-beautify.#{lang}_configPath", uncrustifyConfigPath)
-            # expect(atom.config.get("atom-beautify.#{lang}_configPath")).toEqual("TEST")
+      # atom.config.set("atom-beautify.#{lang}_configPath", uncrustifyConfigPath)
+      # expect(atom.config.get("atom-beautify.#{lang}_configPath")).toEqual("TEST")
 
   ###
   Directory structure:
@@ -103,13 +103,13 @@ describe "BeautifyLanguages", ->
                 originalDir = path.resolve(testsDir, "original")
                 if not fs.existsSync(originalDir)
                   console.warn("Directory for test originals/inputs not found." +
-                               " Making it at #{originalDir}.")
+                    " Making it at #{originalDir}.")
                   fs.mkdirSync(originalDir)
                 # Expected
                 expectedDir = path.resolve(testsDir, "expected")
                 if not fs.existsSync(expectedDir)
                   console.warn("Directory for test expected/results not found." +
-                               "Making it at #{expectedDir}.")
+                    "Making it at #{expectedDir}.")
                   fs.mkdirSync(expectedDir)
 
                 # Language group tests
@@ -136,7 +136,7 @@ describe "BeautifyLanguages", ->
                         # Check if there is a matching expected test resut
                         if not fs.existsSync(expectedTestPath)
                           throw new Error("No matching expected test result found for '#{testName}' " +
-                                       "at '#{expectedTestPath}'.")
+                            "at '#{expectedTestPath}'.")
                           # err = fs.writeFileSync(expectedTestPath, originalContents)
                           # throw err if err
                         # Get contents of expected test file

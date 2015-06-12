@@ -1,27 +1,27 @@
 module.exports = {
 
-    name: "Rust"
-    namespace: "rust"
+  name: "Rust"
+  namespace: "rust"
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "Rust"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "Rust"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "rs"
-        "rlib"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "rs"
+    "rlib"
+  ]
 
-    options:
-        rustfmt_path:
-            type: 'string'
-            default: ""
-            description: "Path to rustfmt program"
+  options:
+    rustfmt_path:
+      type: 'string'
+      default: ""
+      description: "Path to rustfmt program"
 
 }

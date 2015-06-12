@@ -144,10 +144,12 @@
   ],
   "devDependencies": {
     "coffee-script": "^1.9.3",
+    "coffeelint": "^1.10.1",
     "handlebars": "^3.0.3"
   },
   "scripts": {
     "prepublish": "npm run docs",
-    "docs": "coffee docs/"
+    "docs": "coffee docs/",
+    "lint": "coffeelint src/"
   }
 }

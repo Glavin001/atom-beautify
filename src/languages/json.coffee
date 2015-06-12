@@ -1,21 +1,21 @@
 module.exports = {
 
-    name: "JSON"
-    namespace: "json"
-    fallback: ['js']
+  name: "JSON"
+  namespace: "json"
+  fallback: ['js']
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "JSON"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "JSON"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "json"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "json"
+  ]
 
 }

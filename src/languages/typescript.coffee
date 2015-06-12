@@ -1,21 +1,21 @@
 module.exports = {
 
-    name: "TypeScript"
-    namespace: "typescript"
-    fallback: ['js']
+  name: "TypeScript"
+  namespace: "typescript"
+  fallback: ['js']
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "TypeScript"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "TypeScript"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "ts"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "ts"
+  ]
 
 }

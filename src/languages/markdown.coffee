@@ -1,23 +1,23 @@
 module.exports = {
 
-    name: "Markdown"
-    namespace: "markdown"
+  name: "Markdown"
+  namespace: "markdown"
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "GitHub Markdown"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "GitHub Markdown"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "markdown"
-        "md"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "markdown"
+    "md"
+  ]
 
-    options: []
+  options: []
 
 }

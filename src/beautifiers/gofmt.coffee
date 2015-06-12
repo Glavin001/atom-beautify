@@ -6,13 +6,13 @@ Requires http://golang.org/cmd/gofmt/
 Beautifier = require('./beautifier')
 
 module.exports = class gofmt extends Beautifier
-    name: "gofmt"
+  name: "gofmt"
 
-    options: {
-        Go: true
-    }
+  options: {
+    Go: true
+  }
 
-    beautify: (text, language, options) ->
-        @run("gofmt", [
-            @tempFile("input", text)
-            ])
+  beautify: (text, language, options) ->
+    @run("gofmt", [
+      @tempFile("input", text)
+      ])

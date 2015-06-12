@@ -67,10 +67,10 @@ module.exports = class Languages
   Constructor
   ###
   constructor: ->
-      @languages = _.map(@languageNames, (name) ->
-          require("./#{name}")
-      )
-      @namespaces = _.map(@languages, (language) -> language.namespace)
+    @languages = _.map(@languageNames, (name) ->
+      require("./#{name}")
+    )
+    @namespaces = _.map(@languages, (language) -> language.namespace)
 
   ###
   Get language for grammar and extension
@@ -78,8 +78,8 @@ module.exports = class Languages
   getLanguages: ({name, namespace, grammar, extension}) ->
     #   console.log('getLanguages', name, namespace, grammar, extension, @languages)
       _.union(
-          _.filter(@languages, (language) -> _.isEqual(language.name, name))
-          _.filter(@languages, (language) -> _.isEqual(language.namespace, namespace))
-          _.filter(@languages, (language) -> _.contains(language.grammars, grammar))
-          _.filter(@languages, (language) -> _.contains(language.extensions, extension))
+        _.filter(@languages, (language) -> _.isEqual(language.name, name))
+        _.filter(@languages, (language) -> _.isEqual(language.namespace, namespace))
+        _.filter(@languages, (language) -> _.contains(language.grammars, grammar))
+        _.filter(@languages, (language) -> _.contains(language.extensions, extension))
       )

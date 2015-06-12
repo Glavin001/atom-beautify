@@ -7,41 +7,41 @@ Beautifier = require('../beautifier')
 path = require("path")
 
 module.exports = class FortranBeautifier extends Beautifier
-    name: "Fortran Beautifier"
+  name: "Fortran Beautifier"
 
-    options: {
-        Fortran: true
-    }
+  options: {
+    Fortran: true
+  }
 
-    beautify: (text, language, options) ->
-        @debug('fortran-beautifier', options)
+  beautify: (text, language, options) ->
+    @debug('fortran-beautifier', options)
 
-        emacs_path = options.emacs_path
-        emacs_script_path = options.emacs_script_path
+    emacs_path = options.emacs_path
+    emacs_script_path = options.emacs_script_path
 
-        if not emacs_script_path
-            emacs_script_path = path.resolve(__dirname, "emacs-fortran-formating-script.lisp")
+    if not emacs_script_path
+      emacs_script_path = path.resolve(__dirname, "emacs-fortran-formating-script.lisp")
 
-        @debug('fortran-beautifier', 'emacs script path: ' + emacs_script_path)
+    @debug('fortran-beautifier', 'emacs script path: ' + emacs_script_path)
 
-        args = [
-            '--batch'
-            '-l'
-            emacs_script_path
-            '-f'
-            'f90-batch-indent-region'
-            tempFile = @tempFile("temp", text)
-            ]
+    args = [
+      '--batch'
+      '-l'
+      emacs_script_path
+      '-f'
+      'f90-batch-indent-region'
+      tempFile = @tempFile("temp", text)
+      ]
 
-        if emacs_path
-            args.unshift("#{emacs_path}")
+    if emacs_path
+      args.unshift("#{emacs_path}")
 
-            @run("python", args, {ignoreReturnCode: true})
-                .then(=>
-                    @readFile(tempFile)
-                )
-        else
-            @run("emacs", args, {ignoreReturnCode: true})
-                .then(=>
-                    @readFile(tempFile)
-                )
+      @run("python", args, {ignoreReturnCode: true})
+        .then(=>
+          @readFile(tempFile)
+        )
+    else
+      @run("emacs", args, {ignoreReturnCode: true})
+        .then(=>
+          @readFile(tempFile)
+        )

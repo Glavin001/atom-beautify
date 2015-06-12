@@ -1,23 +1,23 @@
 module.exports = {
 
-    name: "EJS"
-    description: "Embedded JavaScript"
-    namespace: "ejs"
-    fallback: ['html', 'js']
+  name: "EJS"
+  description: "Embedded JavaScript"
+  namespace: "ejs"
+  fallback: ['html', 'js']
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "JavaScript Template"
-        "HTML (Angular)"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "JavaScript Template"
+    "HTML (Angular)"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: []
+  ###
+  Supported extensions
+  ###
+  extensions: []
 
-    options: []
+  options: []
 
 }

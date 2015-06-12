@@ -1,23 +1,23 @@
 module.exports = {
 
-    name: "Visualforce"
-    namespace: "visualforce"
-    fallback: ['html','xml']
+  name: "Visualforce"
+  namespace: "visualforce"
+  fallback: ['html','xml']
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "Visualforce"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "Visualforce"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "page"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "page"
+  ]
 
-    options: []
+  options: []
 
 }

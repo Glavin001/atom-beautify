@@ -7,21 +7,21 @@ Beautifier = require('./beautifier')
 
 module.exports = class rustfmt extends Beautifier
 
-    name: "rustfmt"
+  name: "rustfmt"
 
-    options: {
-        Rust: true
-    }
+  options: {
+    Rust: true
+  }
 
-    beautify: (text, language, options) ->
-        program = options.rustfmt_path or "rustfmt"
-        @run(program, [
-            tmpFile = @tempFile("tmp", text)
-            ], help: {
-                link: "https://github.com/nrc/rustfmt"
-                program: "rustfmt"
-                pathOption: "Rust - Rustfmt Path"
-            })
-            .then(=>
-                @readFile(tmpFile)
-            )
+  beautify: (text, language, options) ->
+    program = options.rustfmt_path or "rustfmt"
+    @run(program, [
+      tmpFile = @tempFile("tmp", text)
+      ], help: {
+        link: "https://github.com/nrc/rustfmt"
+        program: "rustfmt"
+        pathOption: "Rust - Rustfmt Path"
+      })
+      .then(=>
+        @readFile(tmpFile)
+      )

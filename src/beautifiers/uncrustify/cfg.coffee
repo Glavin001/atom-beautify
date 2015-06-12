@@ -65,11 +65,11 @@ module.exports = (options, cb) ->
       fs.write info.fd, text or "", (err) ->
 
         # console.log(err);
-        return cb(err)  if err
+        return cb(err) if err
         fs.close info.fd, (err) ->
 
           # console.log(err);
-          return cb(err)  if err
+          return cb(err) if err
           cb null, info.path
 
 

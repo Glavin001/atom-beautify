@@ -1,26 +1,26 @@
 module.exports = {
 
-    name: "XML"
-    description: "XML"
-    namespace: "xml"
-    fallback: ['html']
+  name: "XML"
+  description: "XML"
+  namespace: "xml"
+  fallback: ['html']
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "XML"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "XML"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        'xml'
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    'xml'
+  ]
 
-    defaultBeautifier: "Pretty Diff"
+  defaultBeautifier: "Pretty Diff"
 
-    options: []
+  options: []
 
 }
