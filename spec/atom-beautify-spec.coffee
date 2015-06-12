@@ -7,6 +7,11 @@ Beautifier = require "../src/beautifiers/beautifier"
 # To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 # or `fdescribe`). Remove the `f` to unfocus the block.
 
+# Check if Windows
+isWindows = process.platform is 'win32' or
+  process.env.OSTYPE is 'cygwin' or
+  process.env.OSTYPE is 'msys'
+
 describe "Atom-Beautify", ->
 
   beforeEach ->
@@ -139,41 +144,42 @@ describe "Atom-Beautify", ->
           p.then(cb, cb)
           return p
 
-      it "should error with Mac/Linux-specific help description \
-                when beautifier's program not found", ->
-        expect(beautifier).not.toBe(null)
-        expect(beautifier instanceof Beautifier).toBe(true)
+      unless isWindows
+        it "should error with Mac/Linux-specific help description \
+                  when beautifier's program not found", ->
+          expect(beautifier).not.toBe(null)
+          expect(beautifier instanceof Beautifier).toBe(true)
 
-        waitsForPromise shouldReject: true, ->
-          help = {
-            link: "http://test.com"
-            program: "test-program"
-            pathOption: "Lang - Test Program Path"
-          }
-          # Force to be Mac/Linux (not Windows)
-          beautifier.isWindows = false
-          terminal = "Terminal"
-          whichCmd = "which"
-          # Process
-          p = beautifier.run("program", [], help: help)
-          expect(p).not.toBe(null)
-          expect(p instanceof beautifier.Promise).toBe(true)
-          cb = (v) ->
-            # console.log(v)
-            expect(v).not.toBe(null)
-            expect(v instanceof Error).toBe(true)
-            expect(v.code).toBe("CommandNotFound")
-            expect(v.description).not.toBe(null)
-            expect(v.description.indexOf(help.link)).not.toBe(-1)
-            expect(v.description.indexOf(help.program)).not.toBe(-1)
-            expect(v.description
-              .indexOf(terminal)).not.toBe(-1, \
-              "Error should have a description including \
-                            '#{terminal}' in message.")
-            expect(v.description
-              .indexOf(whichCmd)).not.toBe(-1, \
-              "Error should have a description including \
-                            '#{whichCmd}' in message.")
-            return v
-          p.then(cb, cb)
-          return p
+          waitsForPromise shouldReject: true, ->
+            help = {
+              link: "http://test.com"
+              program: "test-program"
+              pathOption: "Lang - Test Program Path"
+            }
+            # Force to be Mac/Linux (not Windows)
+            beautifier.isWindows = false
+            terminal = "Terminal"
+            whichCmd = "which"
+            # Process
+            p = beautifier.run("program", [], help: help)
+            expect(p).not.toBe(null)
+            expect(p instanceof beautifier.Promise).toBe(true)
+            cb = (v) ->
+              # console.log(v)
+              expect(v).not.toBe(null)
+              expect(v instanceof Error).toBe(true)
+              expect(v.code).toBe("CommandNotFound")
+              expect(v.description).not.toBe(null)
+              expect(v.description.indexOf(help.link)).not.toBe(-1)
+              expect(v.description.indexOf(help.program)).not.toBe(-1)
+              expect(v.description
+                .indexOf(terminal)).not.toBe(-1, \
+                "Error should have a description including \
+                              '#{terminal}' in message.")
+              expect(v.description
+                .indexOf(whichCmd)).not.toBe(-1, \
+                "Error should have a description including \
+                              '#{whichCmd}' in message.")
+              return v
+            p.then(cb, cb)
+            return p

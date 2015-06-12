@@ -10,6 +10,11 @@ JsDiff = require('diff')
 # To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 # or `fdescribe`). Remove the `f` to unfocus the block.
 
+# Check if Windows
+isWindows = process.platform is 'win32' or
+  process.env.OSTYPE is 'cygwin' or
+  process.env.OSTYPE is 'msys'
+
 describe "BeautifyLanguages", ->
 
   optionsDir = path.resolve(__dirname, "../examples")
@@ -47,10 +52,6 @@ describe "BeautifyLanguages", ->
       # Force activate package
       pack = atom.packages.getLoadedPackage("atom-beautify")
       pack.activateNow()
-      # Check if Windows
-      isWindows = process.platform is 'win32' or
-        process.env.OSTYPE is 'cygwin' or
-        process.env.OSTYPE is 'msys'
       # Need more debugging on Windows
       if isWindows
         # Change logger level

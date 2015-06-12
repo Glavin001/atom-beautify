@@ -7,6 +7,11 @@ path = require 'path'
 # To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 # or `fdescribe`). Remove the `f` to unfocus the block.
 
+# Check if Windows
+isWindows = process.platform is 'win32' or
+  process.env.OSTYPE is 'cygwin' or
+  process.env.OSTYPE is 'msys'
+
 describe "PHP-CS-Fixer Beautifier", ->
 
   beforeEach ->
@@ -43,11 +48,13 @@ describe "PHP-CS-Fixer Beautifier", ->
             fixers: ""
             levels: ""
           }
-          # Mock PATH
-          beautifier.getShellEnvironment = -> Promise.resolve({
-            PATH: ''
-          })
-          #
+          # Mock spawn
+          beautifier.spawn = (exe, args, options) ->
+            # console.log('spawn', exe, args, options)
+            er = new Error('ENOENT')
+            er.code = 'ENOENT'
+            return beautifier.Promise.reject(er)
+          # Beautify
           p = beautifier.beautify(text, language, options)
           expect(p).not.toBe(null)
           expect(p instanceof beautifier.Promise).toBe(true)
@@ -119,13 +126,14 @@ describe "PHP-CS-Fixer Beautifier", ->
       failWhichProgram('php')
       failWhichProgram('php-cs-fixer')
 
-    describe "Mac/Linux", ->
+    unless isWindows
+      describe "Mac/Linux", ->
 
-      beforeEach ->
-        # console.log('mac/linx')
-        beautifier.isWindows = false
+        beforeEach ->
+          # console.log('mac/linx')
+          beautifier.isWindows = false
 
-      do OSSpecificSpecs
+        do OSSpecificSpecs
 
     describe "Windows", ->
 
