@@ -123,7 +123,7 @@ describe "PHP-CS-Fixer Beautifier", ->
             p.then(cb, cb)
             return p
 
-      failWhichProgram('php')
+      # failWhichProgram('php')
       failWhichProgram('php-cs-fixer')
 
     unless isWindows

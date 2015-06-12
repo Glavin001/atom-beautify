@@ -149,9 +149,13 @@ module.exports = class Beautifier
   which: (exe, options = {}) ->
     # Get PATH and other environment variables
     @getShellEnvironment()
-    .then((env) ->
-      new Promise((resolve, reject) ->
+    .then((env) =>
+      new Promise((resolve, reject) =>
         options.path ?= env.PATH
+        if @isWindows
+          # Trick node-which into including files
+          # with no extension as executables
+          options.pathExt ?= ";#{process.env.PATHEXT ? '.EXE'}"
         which(exe, options, (err, path) ->
           resolve(exe) if err
           resolve(path)
