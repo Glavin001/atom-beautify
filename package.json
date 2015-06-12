@@ -150,6 +150,6 @@
   "scripts": {
     "prepublish": "npm run docs",
     "docs": "coffee docs/",
-    "lint": "coffeelint src/"
+    "lint": "coffeelint src/ spec/"
   }
 }

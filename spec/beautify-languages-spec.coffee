@@ -181,22 +181,22 @@ describe "BeautifyLanguages", ->
                           return beautifyCompleted = true if typeof text isnt "string"
                           # Check for beautification errors
                           if text isnt expectedContents
-                            #   console.warn(allOptions, text, expectedContents)
-                              fileName = expectedTestPath
-                              oldStr=text
-                              newStr=expectedContents
-                              oldHeader="beautified"
-                              newHeader="expected"
-                              diff = JsDiff.createPatch(fileName, oldStr, \
-                                newStr, oldHeader, newHeader)
-                              # Get options
-                              opts = beautifier.getOptionsForLanguage(allOptions, language)
-                              # Show error message with debug information
-                              expect(text).toEqual(expectedContents, \
-                                "Beautifier output does not match expected \
-                                output:\n#{diff}\n\n\
-                                With options:\n\
-                                #{JSON.stringify(opts, undefined, 4)}")
+                            # console.warn(allOptions, text, expectedContents)
+                            fileName = expectedTestPath
+                            oldStr=text
+                            newStr=expectedContents
+                            oldHeader="beautified"
+                            newHeader="expected"
+                            diff = JsDiff.createPatch(fileName, oldStr, \
+                              newStr, oldHeader, newHeader)
+                            # Get options
+                            opts = beautifier.getOptionsForLanguage(allOptions, language)
+                            # Show error message with debug information
+                            expect(text).toEqual(expectedContents, \
+                              "Beautifier output does not match expected \
+                              output:\n#{diff}\n\n\
+                              With options:\n\
+                              #{JSON.stringify(opts, undefined, 4)}")
                           # All done!
                           beautifyCompleted = true
 

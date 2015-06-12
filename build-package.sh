@@ -26,9 +26,9 @@ if [ "$TEST_PACKAGES" != "none" ]; then
 fi
 
 if [ -f ./node_modules/.bin/coffeelint ]; then
-  if [ -d ./lib ]; then
+  if [ -d ./src ]; then
     echo "Linting package..."
-    ./node_modules/.bin/coffeelint lib
+    ./node_modules/.bin/coffeelint src
     rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
   fi
   if [ -d ./spec ]; then
