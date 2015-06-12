@@ -154,8 +154,9 @@ module.exports = class Beautifier
         options.path ?= env.PATH
         if @isWindows
           # Trick node-which into including files
-          # with no extension as executables
-          options.pathExt ?= ";#{process.env.PATHEXT ? '.EXE'}"
+          # with no extension as executables.
+          # Put empty extension last to allow for other real extensions first
+          options.pathExt ?= "#{process.env.PATHEXT ? '.EXE'};"
         which(exe, options, (err, path) ->
           resolve(exe) if err
           resolve(path)
