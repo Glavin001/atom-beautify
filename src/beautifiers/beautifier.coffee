@@ -251,10 +251,18 @@ module.exports = class Beautifier
             env: env
           }
           cmd = @spawn(exe, args, options)
-            .then(({returnCode, stdout, stderr}) ->
+            .then(({returnCode, stdout, stderr}) =>
+              @verbose('spawn result', returnCode, stdout, stderr)
               # If return code is not 0 then error occured
               if not ignoreReturnCode and returnCode isnt 0
-                reject(stderr)
+                err = new Error(stderr)
+                windowsProgramNotFoundMsg = 'is not recognized as an \
+                internal or external command'#, operable program or batch file.'
+                @verbose(stderr, windowsProgramNotFoundMsg)
+                if @isWindows and returnCode is 1 and \
+                stderr.indexOf(windowsProgramNotFoundMsg) isnt -1
+                  err = @commandNotFoundError(exeName, help)
+                reject(err)
               else
                 resolve(stdout)
             )
