@@ -215,4 +215,4 @@ describe "BeautifyLanguages", ->
                             throw beautifyCompleted
                           else
                             return beautifyCompleted
-                        , "Waiting for beautification to complete", 5000)
+                        , "Waiting for beautification to complete", 60000)
