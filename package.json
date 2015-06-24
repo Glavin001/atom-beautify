@@ -46,6 +46,10 @@
     {
       "name": "Ramón Cahenzli",
       "url": "https://github.com/psy-q"
+    },
+    {
+      "name": "Clemens Damke",
+      "url": "https://github.com/Cortys"
     }
   ],
   "engines": {
@@ -69,6 +73,7 @@
     "extend": "^2.0.1",
     "handlebars": "^3.0.3",
     "js-beautify": "^1.5.6",
+    "jscs": "^1.13.1",
     "lodash": "3.9.3",
     "loophole": "^1.0.0",
     "node-dir": "^0.1.8",
