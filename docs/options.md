@@ -577,11 +577,11 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify)
+Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify, Pretty Diff)
 
 ####  [JavaScript - Brace style](#javascript---brace-style) 
 
@@ -2701,11 +2701,11 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify)
+Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify, Pretty Diff)
 
 ####  [JavaScript - Brace style](#javascript---brace-style) 
 
@@ -3039,6 +3039,18 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 **Description**:
 
 Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+
+####  [JavaScript - Space after anon function](#javascript---space-after-anon-function) 
+
+**Key**: `js_space_after_anon_function`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify, Pretty Diff)
 
 ####  [JavaScript - Wrap line length](#javascript---wrap-line-length) 
 

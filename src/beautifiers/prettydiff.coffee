@@ -26,6 +26,7 @@ module.exports = class PrettyDiff extends Beautifier
           "all" else "none"
       ]
       wrap: "wrap_line_length"
+      space: "space_after_anon_function"
     # Apply language-specific options
     CSV: true
     ERB: true
