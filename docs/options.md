@@ -1197,7 +1197,7 @@ Disable ERB Beautification
 
 **Key**: `language_erb_default_beautifier`
 
-**Default**: `HTML Beautifier`
+**Default**: `Pretty Diff`
 
 **Type**: `string`
 

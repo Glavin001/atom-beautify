@@ -1,3 +1,5 @@
 <apex:page standardController="Contact">
+
   <apex:detail/>
+
 </apex:page>
