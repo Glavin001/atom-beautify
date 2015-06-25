@@ -20,7 +20,9 @@ module.exports = class Rubocop extends Beautifier
 
     configFile = path.join(atom.project.getPaths()[0], ".rubocop.yml")
 
-    unless fs.existsSync(configFile)
+    if fs.existsSync(configFile)
+      @debug("rubocop", config, fs.readFileSync(configFile, 'utf8'))
+    else
       yaml = require("yaml-front-matter")
       # Generate config file
       config = {
@@ -29,8 +31,8 @@ module.exports = class Rubocop extends Beautifier
       }
 
       configFile = @tempFile("rubocop-config", yaml.safeDump(config))
+      @debug("rubocop", config, configFile)
 
-    @debug("rubocop", config, fs.readFileSync(configFile, 'utf8'))
     @run("rubocop", [
       "--auto-correct"
       "--config", configFile
