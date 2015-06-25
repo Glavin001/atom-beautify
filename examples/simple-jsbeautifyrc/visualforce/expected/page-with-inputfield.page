@@ -1,6 +1,8 @@
 <apex:page standardController="Contact">
+
   <apex:sectionHeader subtitle="{!contact.account.name}" title="{!contact.firstname}"/>
-  <apex:form>
+
+  <apex:form >
     <apex:pageBlock title="Contact">
       <apex:pageBlockSection title="Editing">
         <apex:inputfield value="{!contact.firstname}"/>
@@ -11,4 +13,5 @@
       </apex:pageBlockSection>
     </apex:pageBlock>
   </apex:form>
+
 </apex:page>

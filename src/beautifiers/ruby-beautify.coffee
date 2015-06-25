@@ -17,7 +17,7 @@ module.exports = class RubyBeautify extends Beautifier
   beautify: (text, language, options) ->
     @run("rbeautify", [
       if options.indent_char is '\t' then "--tabs" else "--spaces"
-      "--indent_count", options.indent_count
+      "--indent_count", options.indent_size
       @tempFile("input", text)
       ], help: {
       link: "https://github.com/erniebrodeur/ruby-beautify"
