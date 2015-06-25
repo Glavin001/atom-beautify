@@ -311,28 +311,26 @@ debug = () ->
   # Get editor path and configurations for paths
   filePath = editor.getPath()
 
-
   # Path
   addInfo('Original File Path', "`#{filePath}`")
-
 
   # Get Grammar
   grammarName = editor.getGrammar().name
 
-
   # Grammar
   addInfo('Original File Grammar', grammarName)
 
+  # Language
+  language = beautifier.getLanguage(grammarName, filePath)
+  addInfo('Original File Language', language.name)
 
   # Get current editor's text
   text = editor.getText()
-
 
   # Contents
   codeBlockSyntax = grammarName.toLowerCase().split(' ')[0]
   addInfo('Original File Contents', "\n```#{codeBlockSyntax}\n#{text}\n```")
   addHeader(2, "Beautification options")
-
 
   # Beautification Options
   # Get all options
@@ -348,6 +346,8 @@ debug = () ->
         editorConfigOptions
     ] = allOptions
     projectOptions = allOptions[4..]
+
+    finalOptions = beautifier.getOptionsForLanguage(allOptions, language)
 
     # Show options
     addInfo('Editor Options', "\n" +
@@ -365,6 +365,15 @@ debug = () ->
     addInfo('Project Options', "\n" +
     "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
     "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
+    addInfo('Final Options', "\n" +
+    "Final combined options that are used\n" +
+    "```json\n#{JSON.stringify(finalOptions, undefined, 4)}\n```")
+    
+    addInfo('Package Settings', "\n" +
+    "The raw package settings options\n" +
+    "```json\n#{JSON.stringify(atom.config.get('atom-beautify'), undefined, 4)}\n```")
+
+    #
     logs = ""
     subscription = logger.onLogging((msg) ->
       # console.log('logging', msg)
