@@ -14,7 +14,7 @@ module.exports = class JSCSFixer extends Beautifier
 
   beautify: (text, language, options) ->
     @verbose("JSCS Fixer language #{language}")
-    return new @Promise((resolve, reject) ->
+    return new @Promise((resolve, reject) =>
       try
         if !checker?
           cliConfig = require 'jscs/lib/cli-config'
