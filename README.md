@@ -103,8 +103,6 @@ Edit your `.jsbeautifyrc` file in any of the following locations:
 
 See examples of both ways inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
 
-See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
-
 ### Simple
 
 See [examples/simple-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/simple-jsbeautifyrc/.jsbeautifyrc).
@@ -160,6 +158,11 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
   }
 }
 ```
+
+### Atom Beautify package settings
+
+Atom Beautify package might be widely customized with various options. To customize an option, open your Atom config (either `$ATOM_HOME/config.cson` or from within Atom `Edit -> Open Your Config`) and add appropriate `key: value` entry to the `atom-beautify`.
+See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
 
 ## Contributing
 
