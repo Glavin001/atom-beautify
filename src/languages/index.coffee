@@ -44,6 +44,7 @@ module.exports = class Languages
     "scss"
     "spacebars"
     "sql"
+    "svg"
     "swig"
     "tss"
     "twig"
