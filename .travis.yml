@@ -19,7 +19,7 @@ notifications:
 script: sh build-package.sh
 
 env:
-    - APM_TEST_PACKAGES="language-marko language-tss language-html-swig"
+    - APM_TEST_PACKAGES="language-marko language-tss language-html-swig language-svg"
 
 cache:
     - pip
