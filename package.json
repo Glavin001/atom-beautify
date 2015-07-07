@@ -146,7 +146,8 @@
     "jekyll",
     "marko",
     "go",
-    "golang"
+    "golang",
+    "svg"
   ],
   "devDependencies": {
     "coffee-script": "^1.9.3",
