@@ -1,3 +1,6 @@
+# v0.29.0
+- Closes [#447](https://github.com/Glavin001/atom-beautify/issues/447). Improved Handlebars language support
+
 # v0.26.0 (2015-05-03)
 - Closes [#176](https://github.com/Glavin001/atom-beautify/issues/176). Add [gofmt](http://golang.org/cmd/gofmt/) beautifier for Go language
 - Closes [#192](https://github.com/Glavin001/atom-beautify/issues/192). Add [coffee-fmt](https://github.com/sterpe/coffee-fmt) beautifier for CoffeeScript language
