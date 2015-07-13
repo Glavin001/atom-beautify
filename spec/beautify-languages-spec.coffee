@@ -24,7 +24,7 @@ describe "BeautifyLanguages", ->
     "c", "coffee-script", "css", "html",
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
-    "python", "ruby", "sass", "sql",
+    "python", "ruby", "sass", "sql", "svg",
     "xml", "csharp", "gfm", "marko",
     "tss", "go", "html-swig"
     ]
@@ -215,4 +215,4 @@ describe "BeautifyLanguages", ->
                             throw beautifyCompleted
                           else
                             return beautifyCompleted
-                        , "Waiting for beautification to complete", 5000)
+                        , "Waiting for beautification to complete", 60000)

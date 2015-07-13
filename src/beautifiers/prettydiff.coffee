@@ -26,12 +26,14 @@ module.exports = class PrettyDiff extends Beautifier
           "all" else "none"
       ]
       wrap: "wrap_line_length"
+      space: "space_after_anon_function"
     # Apply language-specific options
     CSV: true
     ERB: true
     EJS: true
     HTML: true
     XML: true
+    SVG: true
     Spacebars: true
     JSX: true
     JavaScript: true
@@ -65,7 +67,7 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "handlebars"
         when "SGML", "Swig"
           lang = "markup"
-        when "XML", "Visualforce"
+        when "XML", "Visualforce", "SVG"
           lang = "xml"
         when "HTML"
           lang = "html"

@@ -42,6 +42,7 @@ module.exports = class Beautifiers extends EventEmitter
     'gofmt'
     'fortran-beautifier'
     'js-beautify'
+    'jscs'
     'perltidy'
     'php-cs-fixer'
     'prettydiff'
@@ -312,7 +313,7 @@ module.exports = class Beautifiers extends EventEmitter
     return Promise.all(allOptions)
     .then((allOptions) =>
       return new Promise((resolve, reject) =>
-        logger.info('beautify', text, allOptions, grammar, filePath)
+        logger.info('beautify', text, allOptions, grammar, filePath, onSave)
         logger.verbose(allOptions)
 
         # Get language
@@ -326,18 +327,18 @@ module.exports = class Beautifiers extends EventEmitter
         if languages.length < 1
           unsupportedGrammar = true
 
+          logger.verbose('Unsupported language')
 
           # Check if on save
           if onSave
-
             # Ignore this, as it was just a general file save, and
             # not intended to be beautified
             return resolve( null )
         else
-
           # TODO: select appropriate language
           language = languages[0]
 
+          logger.verbose("Language #{language.name} supported")
 
           # Get language config
           langDisabled = atom.config.get("atom-beautify.language_#{language.namespace}_disabled")
@@ -349,6 +350,7 @@ module.exports = class Beautifiers extends EventEmitter
 
           # Check if Language is disabled
           if langDisabled
+            logger.verbose("Language #{language.name} is disabled")
             return resolve( null )
 
           # Get more language config
@@ -359,7 +361,7 @@ module.exports = class Beautifiers extends EventEmitter
 
           # Verify if beautifying on save
           if onSave and not (beautifyOnSave or legacyBeautifyOnSave)
-
+            logger.verbose("Beautify on save is disabled for language #{language.name}")
             # Saving, and beautify on save is disabled
             return resolve( null )
 
@@ -378,6 +380,7 @@ module.exports = class Beautifiers extends EventEmitter
           # Check if unsupported language
           if beautifiers.length < 1
             unsupportedGrammar = true
+            logger.verbose('Beautifier for language not found')
           else
             # Select beautifier from language config preferences
             beautifier = _.find(beautifiers, (beautifier) ->
