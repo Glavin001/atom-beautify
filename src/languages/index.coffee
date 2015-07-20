@@ -12,6 +12,7 @@ module.exports = class Languages
   # Supported unique configuration keys
   # Used for detecting nested configurations in .jsbeautifyrc
   languageNames: [
+    "arduino"
     "c-sharp"
     "c"
     "coffeescript"

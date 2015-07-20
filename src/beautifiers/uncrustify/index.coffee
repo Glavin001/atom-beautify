@@ -19,6 +19,7 @@ module.exports = class Uncrustify extends Beautifier
     Pawn: true
     Vala: true
     Java: true
+    Arduino: true
   }
 
   beautify: (text, language, options) ->
@@ -65,6 +66,8 @@ module.exports = class Uncrustify extends Beautifier
           lang = "VALA"
         when "Java"
           lang = "JAVA"
+        when "Arduino"
+          lang = "CPP"
 
       @run("uncrustify", [
         "-c"
