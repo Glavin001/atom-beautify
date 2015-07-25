@@ -26,7 +26,7 @@ module.exports = class PuppetFix extends Beautifier
       ], {
         ignoreReturnCode: true
         help: {
-            link: "http://puppet-lint.com/"
+          link: "http://puppet-lint.com/"
         }
       })
       .then(=>
