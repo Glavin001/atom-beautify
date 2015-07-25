@@ -46,6 +46,7 @@ module.exports = class Beautifiers extends EventEmitter
     'perltidy'
     'php-cs-fixer'
     'prettydiff'
+    'puppet-fix'
     'rubocop'
     'ruby-beautify'
     'rustfmt'
