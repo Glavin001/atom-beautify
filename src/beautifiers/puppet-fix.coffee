@@ -30,6 +30,5 @@ module.exports = class PuppetFix extends Beautifier
         }
       })
       .then(=>
-        console.log(@readFile(tempFile))
         @readFile(tempFile)
       )
