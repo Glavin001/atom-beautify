@@ -322,6 +322,26 @@ debug = () ->
 
   # Language
   language = beautifier.getLanguage(grammarName, filePath)
+
+  if not language?
+    # if the grammar is Null Grammar we probably should not be debugging it
+    title = "Atom Beautify is unable to identify a language"
+    detail = "Atom Beautify is unable to identify a language for provided grammar of: `#{grammarName}`. "
+    if grammarName == 'Null Grammar'
+      detail += "Please select a grammar before running Atom Beautify: Help Debug Editor."
+    else
+      detail += """
+                This very likely means that this grammar is not yet supported. If you would like to request \
+                support for this file and its language, please create an issue \
+                for Atom Beautify at #{pkg.bugs.url}
+                """
+    atom?.notifications.addWarning(title, {
+      detail
+      dismissable : true
+    })
+    # if we don't know the language stop trying to debug
+    return ""
+
   addInfo('Original File Language', language.name)
 
   # Get current editor's text
