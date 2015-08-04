@@ -29,9 +29,4 @@ module.exports = {
       default: defaultIndentChar
       minimum: 0
       description: "Indentation character"
-    debug_lexer:
-      type: 'boolean'
-      default: false
-      description: "Enable debug logs of the Gherkin Lexer"
-
 }
