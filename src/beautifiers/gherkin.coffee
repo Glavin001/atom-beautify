@@ -37,8 +37,8 @@ module.exports = class Gherkin extends Beautifier
             @write_indented(comment, indent)
 
         write_tags: (indent = 0) ->
-          for tag in @tags.splice(0, @tags.length)
-            @write_indented(tag, indent)
+          if @tags.length > 0
+            @write_indented(@tags.splice(0, @tags.length).join(' '), indent)
 
         comment: (value, line) ->
           logger.verbose({token: 'comment', value: value.trim(), line: line})
