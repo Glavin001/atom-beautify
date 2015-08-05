@@ -39,6 +39,7 @@ module.exports = class Beautifiers extends EventEmitter
     'coffee-fmt'
     'htmlbeautifier'
     'csscomb'
+    'gherkin'
     'gofmt'
     'fortran-beautifier'
     'js-beautify'
