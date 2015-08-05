@@ -85,6 +85,9 @@ install:
   # HTMLBeautifier
   - gem install htmlbeautifier
   - where htmlbeautifier
+  # Puppet-Lint
+  - gem install puppet-lint
+  - where puppet-lint
 
   # emacs
   - cinst emacs -y
