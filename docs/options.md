@@ -83,6 +83,18 @@ Supported options for each language.
 
 ---
 
+####  [Arduino - Config Path](#arduino---config-path) 
+
+**Key**: `arduino_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+
 ####  [C# - Config Path](#c---config-path) 
 
 **Key**: `cs_configPath`
@@ -911,6 +923,40 @@ Change case of identifiers (Supported by sqlformat)
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
+####  [Language Config - Arduino - Disable Beautifying Language](#language-config---arduino---disable-beautifying-language) 
+
+**Key**: `language_arduino_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Arduino Beautification
+
+####  [Language Config - Arduino - Default Beautifier](#language-config---arduino---default-beautifier) 
+
+**Key**: `language_arduino_default_beautifier`
+
+**Default**: `Uncrustify`
+
+**Type**: `string`
+
+**Enum**:  `Uncrustify` 
+
+**Description**:
+
+Default Beautifier to be used for Arduino
+
+####  [Language Config - Arduino - Beautify On Save](#language-config---arduino---beautify-on-save) 
+
+**Key**: `language_arduino_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Arduino files on save
+
 ####  [Language Config - C# - Disable Beautifying Language](#language-config---c---disable-beautifying-language) 
 
 **Key**: `language_cs_disabled`
@@ -1405,7 +1451,7 @@ Disable JavaScript Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `JSCS Fixer`  `Pretty Diff` 
 
 **Description**:
 
@@ -1999,6 +2045,40 @@ Default Beautifier to be used for SQL
 
 Automatically beautify SQL files on save
 
+####  [Language Config - SVG - Disable Beautifying Language](#language-config---svg---disable-beautifying-language) 
+
+**Key**: `language_svg_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable SVG Beautification
+
+####  [Language Config - SVG - Default Beautifier](#language-config---svg---default-beautifier) 
+
+**Key**: `language_svg_default_beautifier`
+
+**Default**: `Pretty Diff`
+
+**Type**: `string`
+
+**Enum**:  `Pretty Diff` 
+
+**Description**:
+
+Default Beautifier to be used for SVG
+
+####  [Language Config - SVG - Beautify On Save](#language-config---svg---beautify-on-save) 
+
+**Key**: `language_svg_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify SVG files on save
+
 ####  [Language Config - Swig - Disable Beautifying Language](#language-config---swig---disable-beautifying-language) 
 
 **Key**: `language_swig_disabled`
@@ -2245,6 +2325,18 @@ Supported options for each beautifier.
 ---
 
 ### Uncrustify
+
+####  [Arduino - Config Path](#arduino---config-path) 
+
+**Key**: `arduino_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [C# - Config Path](#c---config-path) 
 
