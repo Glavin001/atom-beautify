@@ -273,6 +273,34 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
+####  [gherkin - Indent size](#gherkin---indent-size) 
+
+**Key**: `gherkin_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation size/length (Supported by Gherkin formatter)
+
+####  [gherkin - Indent char](#gherkin---indent-char) 
+
+**Key**: `gherkin_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation character (Supported by Gherkin formatter)
+
 ####  [Fortran - Emacs path](#fortran---emacs-path) 
 
 **Key**: `fortran_emacs_path`
@@ -1263,6 +1291,40 @@ Default Beautifier to be used for ERB
 
 Automatically beautify ERB files on save
 
+####  [Language Config - gherkin - Disable Beautifying Language](#language-config---gherkin---disable-beautifying-language) 
+
+**Key**: `language_gherkin_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable gherkin Beautification
+
+####  [Language Config - gherkin - Default Beautifier](#language-config---gherkin---default-beautifier) 
+
+**Key**: `language_gherkin_default_beautifier`
+
+**Default**: `Gherkin formatter`
+
+**Type**: `string`
+
+**Enum**:  `Gherkin formatter` 
+
+**Description**:
+
+Default Beautifier to be used for gherkin
+
+####  [Language Config - gherkin - Beautify On Save](#language-config---gherkin---beautify-on-save) 
+
+**Key**: `language_gherkin_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify gherkin files on save
+
 ####  [Language Config - Go - Disable Beautifying Language](#language-config---go---disable-beautifying-language) 
 
 **Key**: `language_go_disabled`
@@ -1806,6 +1868,40 @@ Default Beautifier to be used for PHP
 **Description**:
 
 Automatically beautify PHP files on save
+
+####  [Language Config - Puppet - Disable Beautifying Language](#language-config---puppet---disable-beautifying-language) 
+
+**Key**: `language_puppet_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Puppet Beautification
+
+####  [Language Config - Puppet - Default Beautifier](#language-config---puppet---default-beautifier) 
+
+**Key**: `language_puppet_default_beautifier`
+
+**Default**: `puppet-lint`
+
+**Type**: `string`
+
+**Enum**:  `puppet-lint` 
+
+**Description**:
+
+Default Beautifier to be used for Puppet
+
+####  [Language Config - Puppet - Beautify On Save](#language-config---puppet---beautify-on-save) 
+
+**Key**: `language_puppet_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Puppet files on save
 
 ####  [Language Config - Python - Disable Beautifying Language](#language-config---python---disable-beautifying-language) 
 
@@ -3155,6 +3251,37 @@ Add a space before an anonymous function&#x27;s parens, ie. function () (Support
 **Description**:
 
 Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pretty Diff)
+
+
+### Gherkin formatter
+
+####  [gherkin - Indent size](#gherkin---indent-size) 
+
+**Key**: `gherkin_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation size/length (Supported by Gherkin formatter)
+
+####  [gherkin - Indent char](#gherkin---indent-char) 
+
+**Key**: `gherkin_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation character (Supported by Gherkin formatter)
 
 
 ### Fortran Beautifier
