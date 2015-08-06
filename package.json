@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.28.8",
+  "version": "0.28.9",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
   "repository": {
@@ -71,6 +71,7 @@
     "event-kit": "^1.2.0",
     "expand-home-dir": "0.0.2",
     "extend": "^2.0.1",
+    "gherkin": "2.12.2",
     "handlebars": "^3.0.3",
     "js-beautify": "^1.5.7",
     "jscs": "^1.13.1",
@@ -78,7 +79,7 @@
     "loophole": "^1.0.0",
     "node-dir": "^0.1.8",
     "node-uuid": "^1.4.3",
-    "prettydiff": "^1.12.8",
+    "prettydiff": "^1.12.17",
     "space-pen": "^5.1.1",
     "strip-json-comments": "^1.0.2",
     "temp": "^0.8.3",

@@ -1,29 +1,21 @@
 # Get Atom defaults
-scope = ['source.ruby']
-tabLength = atom?.config.get('editor.tabLength', scope: scope) ? 4
-softTabs = atom?.config.get('editor.softTabs', scope: scope) ? true
+tabLength = atom?.config.get('editor.tabLength') ? 4
+softTabs = atom?.config.get('editor.softTabs') ? true
 defaultIndentSize = (if softTabs then tabLength else 1)
 defaultIndentChar = (if softTabs then " " else "\t")
 defaultIndentWithTabs = not softTabs
 
 module.exports = {
 
-  name: "Ruby"
-  namespace: "ruby"
+  name: "gherkin"
+  namespace: "gherkin"
 
-  ###
-  Supported Grammars
-  ###
   grammars: [
-    "Ruby"
-    "Ruby on Rails"
+    "Gherkin"
   ]
 
-  ###
-  Supported extensions
-  ###
   extensions: [
-    "rb"
+    "feature"
   ]
 
   options:
@@ -35,8 +27,6 @@ module.exports = {
     indent_char:
       type: 'string'
       default: defaultIndentChar
+      minimum: 0
       description: "Indentation character"
-      enum: [" ", "\t"]
-
-
 }

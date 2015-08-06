@@ -83,6 +83,18 @@ Supported options for each language.
 
 ---
 
+####  [Arduino - Config Path](#arduino---config-path) 
+
+**Key**: `arduino_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+
 ####  [C# - Config Path](#c---config-path) 
 
 **Key**: `cs_configPath`
@@ -260,6 +272,34 @@ If lists of assignments or properties should be vertically aligned for faster an
 **Description**:
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+
+####  [gherkin - Indent size](#gherkin---indent-size) 
+
+**Key**: `gherkin_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation size/length (Supported by Gherkin formatter)
+
+####  [gherkin - Indent char](#gherkin---indent-char) 
+
+**Key**: `gherkin_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation character (Supported by Gherkin formatter)
 
 ####  [Fortran - Emacs path](#fortran---emacs-path) 
 
@@ -911,6 +951,40 @@ Change case of identifiers (Supported by sqlformat)
 
 Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
+####  [Language Config - Arduino - Disable Beautifying Language](#language-config---arduino---disable-beautifying-language) 
+
+**Key**: `language_arduino_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Arduino Beautification
+
+####  [Language Config - Arduino - Default Beautifier](#language-config---arduino---default-beautifier) 
+
+**Key**: `language_arduino_default_beautifier`
+
+**Default**: `Uncrustify`
+
+**Type**: `string`
+
+**Enum**:  `Uncrustify` 
+
+**Description**:
+
+Default Beautifier to be used for Arduino
+
+####  [Language Config - Arduino - Beautify On Save](#language-config---arduino---beautify-on-save) 
+
+**Key**: `language_arduino_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Arduino files on save
+
 ####  [Language Config - C# - Disable Beautifying Language](#language-config---c---disable-beautifying-language) 
 
 **Key**: `language_cs_disabled`
@@ -1217,6 +1291,40 @@ Default Beautifier to be used for ERB
 
 Automatically beautify ERB files on save
 
+####  [Language Config - gherkin - Disable Beautifying Language](#language-config---gherkin---disable-beautifying-language) 
+
+**Key**: `language_gherkin_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable gherkin Beautification
+
+####  [Language Config - gherkin - Default Beautifier](#language-config---gherkin---default-beautifier) 
+
+**Key**: `language_gherkin_default_beautifier`
+
+**Default**: `Gherkin formatter`
+
+**Type**: `string`
+
+**Enum**:  `Gherkin formatter` 
+
+**Description**:
+
+Default Beautifier to be used for gherkin
+
+####  [Language Config - gherkin - Beautify On Save](#language-config---gherkin---beautify-on-save) 
+
+**Key**: `language_gherkin_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify gherkin files on save
+
 ####  [Language Config - Go - Disable Beautifying Language](#language-config---go---disable-beautifying-language) 
 
 **Key**: `language_go_disabled`
@@ -1405,7 +1513,7 @@ Disable JavaScript Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `JSCS Fixer`  `Pretty Diff` 
 
 **Description**:
 
@@ -1761,6 +1869,40 @@ Default Beautifier to be used for PHP
 
 Automatically beautify PHP files on save
 
+####  [Language Config - Puppet - Disable Beautifying Language](#language-config---puppet---disable-beautifying-language) 
+
+**Key**: `language_puppet_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Puppet Beautification
+
+####  [Language Config - Puppet - Default Beautifier](#language-config---puppet---default-beautifier) 
+
+**Key**: `language_puppet_default_beautifier`
+
+**Default**: `puppet-lint`
+
+**Type**: `string`
+
+**Enum**:  `puppet-lint` 
+
+**Description**:
+
+Default Beautifier to be used for Puppet
+
+####  [Language Config - Puppet - Beautify On Save](#language-config---puppet---beautify-on-save) 
+
+**Key**: `language_puppet_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Puppet files on save
+
 ####  [Language Config - Python - Disable Beautifying Language](#language-config---python---disable-beautifying-language) 
 
 **Key**: `language_python_disabled`
@@ -1998,6 +2140,40 @@ Default Beautifier to be used for SQL
 **Description**:
 
 Automatically beautify SQL files on save
+
+####  [Language Config - SVG - Disable Beautifying Language](#language-config---svg---disable-beautifying-language) 
+
+**Key**: `language_svg_disabled`
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable SVG Beautification
+
+####  [Language Config - SVG - Default Beautifier](#language-config---svg---default-beautifier) 
+
+**Key**: `language_svg_default_beautifier`
+
+**Default**: `Pretty Diff`
+
+**Type**: `string`
+
+**Enum**:  `Pretty Diff` 
+
+**Description**:
+
+Default Beautifier to be used for SVG
+
+####  [Language Config - SVG - Beautify On Save](#language-config---svg---beautify-on-save) 
+
+**Key**: `language_svg_beautify_on_save`
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify SVG files on save
 
 ####  [Language Config - Swig - Disable Beautifying Language](#language-config---swig---disable-beautifying-language) 
 
@@ -2245,6 +2421,18 @@ Supported options for each beautifier.
 ---
 
 ### Uncrustify
+
+####  [Arduino - Config Path](#arduino---config-path) 
+
+**Key**: `arduino_configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [C# - Config Path](#c---config-path) 
 
@@ -3063,6 +3251,37 @@ Add a space before an anonymous function&#x27;s parens, ie. function () (Support
 **Description**:
 
 Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pretty Diff)
+
+
+### Gherkin formatter
+
+####  [gherkin - Indent size](#gherkin---indent-size) 
+
+**Key**: `gherkin_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation size/length (Supported by Gherkin formatter)
+
+####  [gherkin - Indent char](#gherkin---indent-char) 
+
+**Key**: `gherkin_indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+**Description**:
+
+Indentation character (Supported by Gherkin formatter)
 
 
 ### Fortran Beautifier
