@@ -322,7 +322,8 @@ debug = () ->
 
   # Language
   language = beautifier.getLanguage(grammarName, filePath)
-  addInfo('Original File Language', language.name)
+
+  addInfo('Original File Language', language?.name)
 
   # Get current editor's text
   text = editor.getText()
@@ -347,7 +348,7 @@ debug = () ->
     ] = allOptions
     projectOptions = allOptions[4..]
 
-    finalOptions = beautifier.getOptionsForLanguage(allOptions, language)
+    finalOptions = beautifier.getOptionsForLanguage(allOptions, language?)
 
     # Show options
     addInfo('Editor Options', "\n" +
