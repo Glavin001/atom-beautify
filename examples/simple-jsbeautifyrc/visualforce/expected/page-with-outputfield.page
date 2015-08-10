@@ -1,13 +1,13 @@
 <apex:page standardController="Contact">
 
-  <apex:sectionHeader  subtitle="{!contact.account.name}" title="{!contact.firstname}"/>
+  <apex:sectionHeader subtitle="{!contact.account.name}" title="{!contact.firstname}"/>
 
   <apex:pageBlock title="Contact">
     <apex:pageBlockSection title="Details">
-      <apex:outputfield  value="{!contact.firstname}"/>
-      <apex:outputfield  value="{!contact.lastname}"/>
-      <apex:outputfield  value="{!contact.salutation}"/>
-      <apex:outputfield  value="{!contact.birthdate}"/>
+      <apex:outputfield value="{!contact.firstname}"/>
+      <apex:outputfield value="{!contact.lastname}"/>
+      <apex:outputfield value="{!contact.salutation}"/>
+      <apex:outputfield value="{!contact.birthdate}"/>
     </apex:pageBlockSection>
   </apex:pageBlock>
 
