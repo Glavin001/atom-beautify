@@ -450,7 +450,7 @@ plugin.config = _.merge(require('./config.coffee'), defaultLanguageOptions)
 plugin.activate = ->
   @subscriptions = new CompositeDisposable
   @subscriptions.add handleSaveEvent()
-  plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
+  @subscriptions.add plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:beautify-editor", beautify
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
   @subscriptions.add atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
