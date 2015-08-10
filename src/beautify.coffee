@@ -4,6 +4,7 @@ pkg = require('../package.json')
 
 # Dependencies
 plugin = module.exports
+{CompositeDisposable} = require 'atom'
 _ = require("lodash")
 Beautifiers = require("./beautifiers")
 beautifier = new Beautifiers()
@@ -447,9 +448,13 @@ handleSaveEvent = ->
 Subscriber.extend plugin
 plugin.config = _.merge(require('./config.coffee'), defaultLanguageOptions)
 plugin.activate = ->
-  handleSaveEvent()
-  plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
-  atom.commands.add "atom-workspace", "atom-beautify:beautify-editor", beautify
-  atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
-  atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
-  atom.commands.add ".tree-view .directory .name", "atom-beautify:beautify-directory", beautifyDirectory
+  @subscriptions = new CompositeDisposable
+  @subscriptions.add handleSaveEvent()
+  @subscriptions.add plugin.subscribe atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
+  @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:beautify-editor", beautify
+  @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
+  @subscriptions.add atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
+  @subscriptions.add atom.commands.add ".tree-view .directory .name", "atom-beautify:beautify-directory", beautifyDirectory
+
+plugin.deactivate = ->
+  @subscriptions.dispose()
