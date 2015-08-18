@@ -16,3 +16,7 @@ The debugging results will be copied to your clipboard.
 4. Describe your issue / bug.
 5. Submit your new GitHub Issue and wait patiently. 
 If you have any additional / new information to add, please feel free to comment on that Issue and provide more helpful information.
+
+## Help Improving Atom Beautify By Changing Source Code
+
+See https://github.com/Glavin001/atom-beautify/blob/master/docs/add-languages-and-beautifiers.md for current documentation on adding support for new languages and beautifiers to Atom Beautify.
