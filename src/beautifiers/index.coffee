@@ -328,7 +328,7 @@ module.exports = class Beautifiers extends EventEmitter
         # use fallback if configured
         unsupportedLanguageFallback = atom.config.get("atom-beautify.unsupportedLanguageFallback")
         if languages.length < 1 && unsupportedLanguageFallback.charAt(0) != '-'
-          languages = [require('../languages/' + unsupportedLanguageFallback)]
+          languages = @languages.getLanguages({name: unsupportedLanguageFallback})
           logger.verbose('Unsupported Language, fallback to:', unsupportedLanguageFallback)
 
         # Check if unsupported language

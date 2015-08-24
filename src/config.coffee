@@ -1,7 +1,8 @@
+_ = require('lodash')
 Languages = require('./languages/')
 
 langFallbackDefault = '- none (do not format) -'
-langFallbacks = new Languages().languageNames
+langFallbacks = _.map((new Languages()).languages, (language) => language.name)
 langFallbacks.unshift(langFallbackDefault)
 
 module.exports = {
