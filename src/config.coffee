@@ -1,3 +1,10 @@
+_ = require('lodash')
+Languages = require('./languages/')
+
+langFallbackDefault = '- none (do not format) -'
+langFallbacks = _.map((new Languages()).languages, (language) => language.name)
+langFallbacks.unshift(langFallbackDefault)
+
 module.exports = {
   analytics :
     type : 'boolean'
@@ -28,4 +35,9 @@ module.exports = {
     type : 'boolean'
     default : false
     description : "Do not show any/all errors when they occur"
+  unsupportedLanguageFallback :
+    type : 'string'
+    default : langFallbackDefault
+    description : "Format any Unsupported Languages as the language you specify here"
+    enum : langFallbacks
 }

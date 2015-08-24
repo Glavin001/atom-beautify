@@ -76,6 +76,20 @@ Do not show &quot;Unsupported Language&quot; errors when they occur
 
 Do not show any/all errors when they occur
 
+####  [`unsupportedLanguageFallback`](#unsupportedlanguagefallback) 
+
+**Key**: `unsupportedLanguageFallback`
+
+**Default**: `- none (do not format) -`
+
+**Type**: `string`
+
+**Enum**:  `- none (do not format) -`  `Arduino`  `C#`  `C`  `CoffeeScript`  `C++`  `CSS`  `CSV`  `D`  `EJS`  `ERB`  `gherkin`  `Go`  `Fortran`  `Handlebars`  `HTML`  `Java`  `JavaScript`  `JSON`  `JSX`  `LESS`  `Markdown`  `Marko`  `Mustache`  `Objective-C`  `Pawn`  `Perl`  `PHP`  `Puppet`  `Python`  `Ruby`  `Rust`  `Sass`  `SCSS`  `Spacebars`  `SQL`  `SVG`  `Swig`  `TSS`  `Twig`  `TypeScript`  `Vala`  `Visualforce`  `XML` 
+
+**Description**:
+
+Format any Unsupported Languages as the language you specify here
+
 
 ## Language Options
 
