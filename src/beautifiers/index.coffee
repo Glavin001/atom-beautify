@@ -117,6 +117,11 @@ module.exports = class Beautifiers extends EventEmitter
         # Init field for supported beautifiers
         op.beautifiers = []
 
+        # Remember Option's Key
+        op.key =  field
+        
+        # Remember Option's Language
+        op.language = lang
 
         # Add option
         options[field] = op

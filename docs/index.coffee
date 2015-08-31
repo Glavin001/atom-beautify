@@ -40,6 +40,31 @@ Handlebars.registerHelper('linkify', (title, options) ->
     )
 )
 
+exampleConfig = (option) ->
+  # console.log(option)
+  t = option.type
+  d = switch
+    when option.default? then option.default
+    when t is "string" then ""
+    when t is "integer" then 0
+    when t is "boolean" then false
+    else null
+
+  json = {}
+  namespace = option.language.namespace
+  k = option.key
+  c = {}
+  c[k] = d
+  json[namespace] = c
+  return """```json
+  #{JSON.stringify(json, undefined, 4)}
+  ```"""
+
+Handlebars.registerHelper('example-config', (key, option, options) ->
+  results = exampleConfig(key, option)
+  # console.log(results)
+  return new Handlebars.SafeString(results)
+)
 
 context = {
     packageOptions: packageOptions
