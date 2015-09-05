@@ -24,7 +24,7 @@
 
 **Description**:
 
-{{description}}
+{{{description}}}
 
 {{#if beautifiers}}
 **Example `.jsbeautifyrc` Configuration**

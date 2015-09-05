@@ -92,7 +92,7 @@ When beautifying on save, use the entire file, even if there is selected text in
 
 **Description**:
 
-Do not show &quot;Unsupported Language&quot; errors when they occur
+Do not show "Unsupported Language" errors when they occur
 
 **How to Configure**
 
@@ -559,7 +559,7 @@ Indentation character (Supported by Gherkin formatter)
 
 **Description**:
 
-Path to the &#x60;emacs&#x60; executable (Supported by Fortran Beautifier)
+Path to the `emacs` executable (Supported by Fortran Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -607,7 +607,7 @@ Path to the emacs script (Supported by Fortran Beautifier)
 
 **Description**:
 
-Indent &lt;head&gt; and &lt;body&gt; sections. (Supported by JS Beautify)
+Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -1028,7 +1028,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Description**:
 
-Indentation uses tabs, overrides &#x60;Indent Size&#x60; and &#x60;Indent Char&#x60; (Supported by JS Beautify)
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -1152,7 +1152,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Description**:
 
-Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify, Pretty Diff)
+Add a space before an anonymous function's parens, ie. function () (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -1470,7 +1470,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 
 **Description**:
 
-Path to the &#x60;php-cs-fixer&#x60; CLI executable (Supported by PHP-CS-Fixer)
+Path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -4547,7 +4547,7 @@ Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, P
 
 **Description**:
 
-Indent &lt;head&gt; and &lt;body&gt; sections. (Supported by JS Beautify)
+Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -4944,7 +4944,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Description**:
 
-Indentation uses tabs, overrides &#x60;Indent Size&#x60; and &#x60;Indent Char&#x60; (Supported by JS Beautify)
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5068,7 +5068,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Description**:
 
-Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify, Pretty Diff)
+Add a space before an anonymous function's parens, ie. function () (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5725,7 +5725,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Description**:
 
-Add a space before an anonymous function&#x27;s parens, ie. function () (Supported by JS Beautify, Pretty Diff)
+Add a space before an anonymous function's parens, ie. function () (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5831,7 +5831,7 @@ Indentation character (Supported by Gherkin formatter)
 
 **Description**:
 
-Path to the &#x60;emacs&#x60; executable (Supported by Fortran Beautifier)
+Path to the `emacs` executable (Supported by Fortran Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5909,7 +5909,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 
 **Description**:
 
-Path to the &#x60;php-cs-fixer&#x60; CLI executable (Supported by PHP-CS-Fixer)
+Path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
