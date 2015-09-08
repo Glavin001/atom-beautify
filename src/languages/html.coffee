@@ -82,5 +82,11 @@ module.exports = {
       type: 'boolean'
       default: false
       description: "End output with newline"
+    extra_liners:
+      type: 'array'
+      default: ['head', 'body', '/html']
+      items:
+        type: 'string'
+      description: "List of tags (defaults to [head,body,/html] that should have an extra newline before them."
 
 }
