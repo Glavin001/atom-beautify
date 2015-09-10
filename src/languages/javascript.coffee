@@ -106,5 +106,10 @@ module.exports = {
       type: 'boolean'
       default: false
       description: "End output with newline"
+    end_with_comma:
+      type: 'boolean'
+      default: false
+      description: "If a terminating comma should be inserted into \
+                  arrays, object literals, and destructured objects."
 
 }

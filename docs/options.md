@@ -1440,6 +1440,30 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
+####  [JavaScript - End with comma](#javascript---end-with-comma) 
+
+**Namespace**: `js`
+
+**Key**: `end_with_comma`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_with_comma": false
+    }
+}
+```
+
 ####  [Objective-C - Config Path](#objective-c---config-path) 
 
 **Namespace**: `objectivec`
@@ -5386,6 +5410,30 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
+####  [JavaScript - End with comma](#javascript---end-with-comma) 
+
+**Namespace**: `js`
+
+**Key**: `end_with_comma`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_with_comma": false
+    }
+}
+```
+
 
 ### Pretty Diff
 
@@ -5865,6 +5913,30 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 {
     "js": {
         "wrap_line_length": 0
+    }
+}
+```
+
+####  [JavaScript - End with comma](#javascript---end-with-comma) 
+
+**Namespace**: `js`
+
+**Key**: `end_with_comma`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_with_comma": false
     }
 }
 ```
