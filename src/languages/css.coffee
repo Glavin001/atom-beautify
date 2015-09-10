@@ -78,5 +78,9 @@ module.exports = {
       default: false
       description: "If lists of assignments or properties should be \
                 vertically aligned for faster and easier reading."
-
+    no_lead_zero:
+      type: 'boolean'
+      default: false
+      description: "If in CSS values leading 0s immediately preceeding \
+                a decimal should be removed or prevented."
 }

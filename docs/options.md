@@ -471,6 +471,30 @@ If lists of assignments or properties should be vertically aligned for faster an
 }
 ```
 
+####  [CSS - No lead zero](#css---no-lead-zero) 
+
+**Namespace**: `css`
+
+**Key**: `no_lead_zero`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "css": {
+        "no_lead_zero": false
+    }
+}
+```
+
 ####  [D - Config Path](#d---config-path) 
 
 **Namespace**: `d`
@@ -5527,6 +5551,30 @@ If lists of assignments or properties should be vertically aligned for faster an
 {
     "css": {
         "align_assignments": false
+    }
+}
+```
+
+####  [CSS - No lead zero](#css---no-lead-zero) 
+
+**Namespace**: `css`
+
+**Key**: `no_lead_zero`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "css": {
+        "no_lead_zero": false
     }
 }
 ```
