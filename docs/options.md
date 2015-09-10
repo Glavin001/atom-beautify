@@ -940,6 +940,36 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
+####  [HTML - Extra liners](#html---extra-liners) 
+
+**Namespace**: `html`
+
+**Key**: `extra_liners`
+
+**Default**: `head,body,/html`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "extra_liners": [
+            "head",
+            "body",
+            "/html"
+        ]
+    }
+}
+```
+
 ####  [Java - Config Path](#java---config-path) 
 
 **Namespace**: `java`
@@ -4876,6 +4906,36 @@ End output with newline (Supported by JS Beautify)
 {
     "html": {
         "end_with_newline": false
+    }
+}
+```
+
+####  [HTML - Extra liners](#html---extra-liners) 
+
+**Namespace**: `html`
+
+**Key**: `extra_liners`
+
+**Default**: `head,body,/html`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "extra_liners": [
+            "head",
+            "body",
+            "/html"
+        ]
     }
 }
 ```
