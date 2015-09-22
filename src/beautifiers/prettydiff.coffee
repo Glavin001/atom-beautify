@@ -69,7 +69,7 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "handlebars"
         when "SGML"
           lang = "markup"
-        when "XML", "Visualforce", "SVG"
+        when "XML", "Visualforce", "SVG", "XSD", "XSL"
           lang = "xml"
         when "HTML"
           lang = "html"
