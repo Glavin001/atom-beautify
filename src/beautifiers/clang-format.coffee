@@ -12,9 +12,9 @@ module.exports = class ClangFormat extends Beautifier
   name: "clang-format"
 
   options: {
-    "C++": true
-    "C": true
-    "Objective-C": true
+    "C++": false
+    "C": false
+    "Objective-C": false
   }
 
   ###
