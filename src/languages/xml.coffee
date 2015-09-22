@@ -9,7 +9,7 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "XML"
+    "XML", "XSD", "XSL"
   ]
 
   ###
