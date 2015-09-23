@@ -16,8 +16,8 @@ module.exports = class PrettyDiff extends Beautifier
       ]
       cssinsertlines: "newline_between_rules"
       comments: ["indent_comments", (indent_comments) ->
-        if (indent_comments is true) then \
-          "indent" else "noindent"
+        if (indent_comments is false) then \
+          "noindent" else "indent"
       ]
       force: "force_indentation"
       quoteConvert: "convert_quotes"
