@@ -1,5 +1,6 @@
 "use strict"
 Beautifier = require('./beautifier')
+fs = require('fs')
 
 module.exports = class JSBeautify extends Beautifier
   name: "CSScomb"
@@ -23,7 +24,12 @@ module.exports = class JSBeautify extends Beautifier
       try
         # Load from Project's .csscomb.json
         projectConfigPath = atom.project.getDirectories()?[0]?.resolve('.csscomb.json')
-        config = require(projectConfigPath) # Will throw error if does not exist
+        #config = require(projectConfigPath) # Will throw error if does not exist
+
+        stats = fs.statSync(projectConfigPath)
+
+        config = Comb.getCustomConfig(projectConfigPath)
+
       catch e
         # Fallback to csscomb
         config = Comb.getConfig('csscomb')
