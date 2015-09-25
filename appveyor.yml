@@ -119,4 +119,4 @@ build_script:
   # Show current PATH
   - echo %PATH%
   # Run tests on package
-  - apm test --one --path %LOCALAPPDATA%/atom/bin/atom.cmd
+  - apm test --path %LOCALAPPDATA%/atom/bin/atom.cmd
