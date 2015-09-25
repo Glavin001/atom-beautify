@@ -36,6 +36,7 @@ module.exports = {
     default : false
     description : "Do not show any/all errors when they occur"
   unsupportedLanguageFallback :
+    title: "Unsupported Language Fallback"
     type : 'string'
     default : langFallbackDefault
     description : "Format any Unsupported Languages as the language you specify here"
