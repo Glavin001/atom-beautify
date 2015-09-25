@@ -26,5 +26,5 @@ module.exports = class PerlTidy extends Beautifier
       "--profile=#{options.perltidy_profile}" if options.perltidy_profile?.length
       @tempFile("input", text)
       ], help: {
-      link: "http://perltidy.sourceforge.net/"
+        link: "http://perltidy.sourceforge.net/"
       })

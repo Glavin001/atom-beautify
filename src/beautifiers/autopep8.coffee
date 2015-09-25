@@ -21,5 +21,5 @@ module.exports = class Autopep8 extends Beautifier
       ["--indent-size","#{options.indent_size}"] if options.indent_size?
       ["--ignore","#{options.ignore.join(',')}"] if options.ignore?
       ], help: {
-      link: "https://github.com/hhatto/autopep8"
+        link: "https://github.com/hhatto/autopep8"
       })

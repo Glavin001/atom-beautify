@@ -24,9 +24,9 @@ module.exports = class PuppetFix extends Beautifier
       '--fix'
       tempFile = @tempFile("input", text)
       ], {
-      ignoreReturnCode: true
-      help: {
-        link: "http://puppet-lint.com/"
+        ignoreReturnCode: true
+        help: {
+          link: "http://puppet-lint.com/"
         }
       })
       .then(=>

@@ -39,10 +39,10 @@ module.exports = class PHPCSFixer extends Beautifier
             "--fixers=#{options.fixers}" if options.fixers
             tempFile = @tempFile("temp", text)
             ], {
-            ignoreReturnCode: true
-            help: {
-              link: "http://php.net/manual/en/install.php"
-            }
+              ignoreReturnCode: true
+              help: {
+                link: "http://php.net/manual/en/install.php"
+              }
             })
             .then(=>
               @readFile(tempFile)
@@ -66,10 +66,10 @@ module.exports = class PHPCSFixer extends Beautifier
         "--fixers=#{options.fixers}" if options.fixers
         tempFile = @tempFile("temp", text)
         ], {
-        ignoreReturnCode: true
-        help: {
-          link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
-        }
+          ignoreReturnCode: true
+          help: {
+            link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+          }
         })
         .then(=>
           @readFile(tempFile)

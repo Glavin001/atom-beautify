@@ -20,5 +20,5 @@ module.exports = class RubyBeautify extends Beautifier
       "--indent_count", options.indent_size
       @tempFile("input", text)
       ], help: {
-      link: "https://github.com/erniebrodeur/ruby-beautify"
+        link: "https://github.com/erniebrodeur/ruby-beautify"
       })
