@@ -61,7 +61,7 @@ module.exports = class ClangFormat extends Beautifier
     )
     .then((dumpFile) =>
       # console.log("clang-format", dumpFile)
-      @run("clang-format", [
+      return @run("clang-format", [
         @dumpToFile(dumpFile, text)
         ["--style=file"]
         ], help: {
