@@ -39,6 +39,6 @@ if [ -f ./node_modules/.bin/coffeelint ]; then
 fi
 
 echo "Running specs..."
-ATOM_PATH=./atom atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm test --one --path atom/Atom.app/Contents/Resources/app/atom.sh
+ATOM_PATH=./atom atom/Atom.app/Contents/Resources/app/apm/node_modules/.bin/apm test --path atom/Atom.app/Contents/Resources/app/atom.sh
 
 exit

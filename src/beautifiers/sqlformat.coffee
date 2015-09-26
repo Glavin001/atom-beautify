@@ -20,5 +20,5 @@ module.exports = class Sqlformat extends Beautifier
       "--keywords=#{options.keywords}" if options.keywords?
       "--identifiers=#{options.identifiers}" if options.identifiers?
       ], help: {
-      link: "https://github.com/andialbrecht/sqlparse"
+        link: "https://github.com/andialbrecht/sqlparse"
       })

@@ -18,9 +18,9 @@ module.exports = class Rustfmt extends Beautifier
     @run(program, [
       tmpFile = @tempFile("tmp", text)
       ], help: {
-      link: "https://github.com/nrc/rustfmt"
-      program: "rustfmt"
-      pathOption: "Rust - Rustfmt Path"
+        link: "https://github.com/nrc/rustfmt"
+        program: "rustfmt"
+        pathOption: "Rust - Rustfmt Path"
       })
       .then(=>
         @readFile(tmpFile)
