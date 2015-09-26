@@ -36,8 +36,20 @@ module.exports = class ClangFormat extends Beautifier
     )
 
   beautify: (text, language, options) ->
+    # NOTE: One may wonder why this code goes a long way to construct a file
+    # path and dump content using a custom `dumpToFile`. Wouldn't it be easier
+    # to use `@tempFile` instead? The reason here is to work around the
+    # clang-format config file locating mechanism. As indicated in the manual,
+    # clang-format (with `--style file`) tries to locate a `.clang-format`
+    # config file in directory and parent directories of the input file,
+    # and retreat to default style if not found. Projects often makes use of
+    # this rule to define their own style in its top directory. Users often
+    # put a `.clang-format` in their $HOME to define his/her style. To honor
+    # this rule, we HAVE TO generate the temp file in THE SAME directory as
+    # the editing file. However, this mechanism is not directly supported by
+    # atom-beautify at the moment. So we introduce lots of code here.
     return new @Promise((resolve, reject) ->
-      editor = atom.workspace.getActiveTextEditor()
+      editor = atom?.workspace?.getActiveTextEditor()
       if editor?
         fullPath = editor.getPath()
         currDir = path.dirname(fullPath)
@@ -54,7 +66,7 @@ module.exports = class ClangFormat extends Beautifier
         ["--style=file"]
         ], help: {
         link: "https://clang.llvm.org/docs/ClangFormat.html"
-      }).then( =>
-        fs.unlinkSync(dumpFile)
-      )
+        }).finally( =>
+          fs.unlink(dumpFile)
+        )
     )
