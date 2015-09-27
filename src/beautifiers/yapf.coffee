@@ -21,5 +21,5 @@ module.exports = class Yapf extends Beautifier
       ["--style=pep8"]
       @tempFile("input", text)
       ], help: {
-      link: "https://github.com/google/yapf"
+        link: "https://github.com/google/yapf"
       })

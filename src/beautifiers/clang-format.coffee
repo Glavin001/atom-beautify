@@ -65,8 +65,8 @@ module.exports = class ClangFormat extends Beautifier
         @dumpToFile(dumpFile, text)
         ["--style=file"]
         ], help: {
-        link: "https://clang.llvm.org/docs/ClangFormat.html"
-        }).finally( =>
+          link: "https://clang.llvm.org/docs/ClangFormat.html"
+        }).finally( ->
           fs.unlink(dumpFile)
         )
     )
