@@ -37,6 +37,7 @@ module.exports = class Beautifiers extends EventEmitter
     'autopep8'
     'coffee-formatter'
     'coffee-fmt'
+    'clang-format'
     'htmlbeautifier'
     'csscomb'
     'gherkin'
@@ -54,6 +55,7 @@ module.exports = class Beautifiers extends EventEmitter
     'sqlformat'
     'tidy-markdown'
     'typescript-formatter'
+    'yapf'
   ]
 
   ###
