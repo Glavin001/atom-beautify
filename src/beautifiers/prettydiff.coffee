@@ -53,7 +53,10 @@ module.exports = class PrettyDiff extends Beautifier
   beautify: (text, language, options) ->
 
     return new @Promise((resolve, reject) =>
-      prettydiff = require("prettydiff")
+      abspath = __dirname.replace(/src(\/|\\)beautifiers/, "")
+      sepchar = abspath.charAt(abspath.length - 1)
+      abspath = abspath + "node_modules" + sepchar
+      prettydiff = require(absPath + "prettydiff" + sepChar + "prettydiff.js")
       _ = require('lodash')
 
       # Select Prettydiff language
