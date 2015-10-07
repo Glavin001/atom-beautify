@@ -29,6 +29,10 @@ module.exports = class PrettyDiff extends Beautifier
       space: "space_after_anon_function"
       noleadzero: "no_lead_zero"
       endcomma: "end_with_comma"
+      methodchain: ['break_chained_methods', (break_chained_methods) ->
+        if (break_chained_methods is true ) then \
+          false else true
+      ]
     # Apply language-specific options
     CSV: true
     ERB: true
