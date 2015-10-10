@@ -81,7 +81,7 @@ You can also type `ctrl-alt-b` as a shortcut or click `Packages > Beautify` in t
 
 #### Custom Keyboard Shortcuts
 
-See [Keymaps In-Depth](https://atom.io/docs/latest/advanced/keymaps) for more details.
+See [Keymaps In-Depth](https://atom.io/docs/latest/behind-atom-keymaps-in-depth) for more details.
 
 For example:
 
