@@ -6,10 +6,13 @@ module.exports = class JSBeautify extends Beautifier
 
   options: {
     # TODO: Add support for options
-    CSS: false
-    LESS: false
-    Sass: false
-    SCSS: false
+    _:
+      configPath: true
+      predefinedConfig: true
+    CSS: true
+    LESS: true
+    Sass: true
+    SCSS: true
   }
 
   beautify: (text, language, options) ->
@@ -18,16 +21,22 @@ module.exports = class JSBeautify extends Beautifier
 
       # Require
       Comb = require('csscomb')
+      expandHomeDir = require('expand-home-dir')
+      CSON = require('season')
 
       config = null
-      try
-        # Load from Project's .csscomb.json
-        projectConfigPath = atom.project.getDirectories()?[0]?.resolve('.csscomb.json')
-        config = require(projectConfigPath) # Will throw error if does not exist
-      catch e
-        # Fallback to csscomb
-        config = Comb.getConfig('csscomb')
-        # TODO: Add support to select CSSComb predefined config's name
+      try # Load from project config file, throwing error if neither exist
+        project = atom.project.getDirectories()?[0]
+        try
+          config = CSON.readFileSync(project?.resolve '.csscomb.cson')
+        catch
+          config = require(project?.resolve '.csscomb.json')
+      catch
+        try # Load from custom config
+          config = CSON.readFileSync(expandHomeDir options.configPath)
+        catch
+          # Fallback to [selected] CSScomb predifined config
+          config = Comb.getConfig(options.predefinedConfig)
       # console.log('config', config, options)
       # Configure
       comb = new Comb(config)

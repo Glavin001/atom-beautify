@@ -495,6 +495,58 @@ If in CSS values leading 0s immediately preceeding a decimal should be removed o
 }
 ```
 
+####  [CSS - comb custom config file](#css---comb-custom-config-file) 
+
+**Namespace**: `css`
+
+**Key**: `configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+
+**Description**:
+
+Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "css": {
+        "configPath": ""
+    }
+}
+```
+
+####  [CSS - comb predefined config](#css---comb-predefined-config) 
+
+**Namespace**: `css`
+
+**Key**: `predefinedConfig`
+
+**Default**: `csscomb`
+
+**Type**: `string`
+
+**Enum**:  `csscomb`  `yandex`  `zen` 
+
+**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+
+**Description**:
+
+Used if neither a project or custom config file exists. (Supported by CSScomb)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "css": {
+        "predefinedConfig": "csscomb"
+    }
+}
+```
+
 ####  [D - Config Path](#d---config-path) 
 
 **Namespace**: `d`
@@ -2007,7 +2059,7 @@ Disable C Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`  `clang-format` 
 
 **Description**:
 
@@ -2117,7 +2169,7 @@ Disable C++ Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`  `clang-format` 
 
 **Description**:
 
@@ -3162,7 +3214,7 @@ Disable Objective-C Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`  `clang-format` 
 
 **Description**:
 
@@ -3437,7 +3489,7 @@ Disable Python Beautification
 
 **Type**: `string`
 
-**Enum**:  `autopep8` 
+**Enum**:  `autopep8`  `yapf` 
 
 **Description**:
 
@@ -5937,6 +5989,61 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 {
     "js": {
         "end_with_comma": false
+    }
+}
+```
+
+
+### CSScomb
+
+####  [CSS - comb custom config file](#css---comb-custom-config-file) 
+
+**Namespace**: `css`
+
+**Key**: `configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+
+**Description**:
+
+Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "css": {
+        "configPath": ""
+    }
+}
+```
+
+####  [CSS - comb predefined config](#css---comb-predefined-config) 
+
+**Namespace**: `css`
+
+**Key**: `predefinedConfig`
+
+**Default**: `csscomb`
+
+**Type**: `string`
+
+**Enum**:  `csscomb`  `yandex`  `zen` 
+
+**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+
+**Description**:
+
+Used if neither a project or custom config file exists. (Supported by CSScomb)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "css": {
+        "predefinedConfig": "csscomb"
     }
 }
 ```
