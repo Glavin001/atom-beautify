@@ -26,6 +26,7 @@ module.exports = class Languages
     "go"
     "fortran"
     "handlebars"
+    "haskell"
     "html"
     "java"
     "javascript"
