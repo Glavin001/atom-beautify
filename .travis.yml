@@ -53,3 +53,7 @@ before_install:
   - brew gist-logs php-cs-fixer || true
   # CoffeeScript
   - npm install coffee-formatter
+  # Haskell
+  - brew install haskell-stack
+  - stack setup
+  - stack install stylish-haskell

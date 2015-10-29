@@ -53,6 +53,7 @@ module.exports = class Beautifiers extends EventEmitter
     'ruby-beautify'
     'rustfmt'
     'sqlformat'
+    'stylish-haskell'
     'tidy-markdown'
     'typescript-formatter'
     'yapf'
@@ -121,7 +122,7 @@ module.exports = class Beautifiers extends EventEmitter
 
         # Remember Option's Key
         op.key =  field
-        
+
         # Remember Option's Language
         op.language = lang
 
