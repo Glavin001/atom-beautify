@@ -14,7 +14,6 @@ module.exports = class Autopep8 extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    # console.log('autopep8', options, text, language)
     @run("autopep8", [
       @tempFile("input", text)
       ["--max-line-length", "#{options.max_line_length}"] if options.max_line_length?
