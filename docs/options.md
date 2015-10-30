@@ -2007,7 +2007,7 @@ Disable C Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`  `clang-format` 
 
 **Description**:
 
@@ -2117,7 +2117,7 @@ Disable C++ Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`  `clang-format` 
 
 **Description**:
 
@@ -2642,6 +2642,61 @@ Automatically beautify Handlebars files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - Handlebars - Beautify On Save*" and change it to your desired configuration.
 
+####  [Language Config - Haskell - Disable Beautifying Language](#language-config---haskell---disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Haskell Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Haskell - Disable Beautifying Language*" and change it to your desired configuration.
+
+####  [Language Config - Haskell - Default Beautifier](#language-config---haskell---default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `stylish-haskell`
+
+**Type**: `string`
+
+**Enum**:  `stylish-haskell` 
+
+**Description**:
+
+Default Beautifier to be used for Haskell
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Haskell - Default Beautifier*" and change it to your desired configuration.
+
+####  [Language Config - Haskell - Beautify On Save](#language-config---haskell---beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Haskell files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Haskell - Beautify On Save*" and change it to your desired configuration.
+
 ####  [Language Config - HTML - Disable Beautifying Language](#language-config---html---disable-beautifying-language) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -3162,7 +3217,7 @@ Disable Objective-C Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`  `clang-format` 
 
 **Description**:
 
@@ -3437,7 +3492,7 @@ Disable Python Beautification
 
 **Type**: `string`
 
-**Enum**:  `autopep8` 
+**Enum**:  `autopep8`  `yapf` 
 
 **Description**:
 
