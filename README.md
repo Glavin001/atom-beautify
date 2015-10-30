@@ -9,7 +9,7 @@
 
 > [Beautify](https://github.com/einars/js-beautify)
 HTML (including [Handlebars](http://handlebarsjs.com/)),
-CSS (including [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/)),
+CSS (including [Sass](http://sass-lang.com/) and [Less](http://lesscss.org/)),
 JavaScript, and much more in Atom.
 
 Atom Package: https://atom.io/packages/atom-beautify
@@ -34,7 +34,7 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
     - Requires [language-marko](https://github.com/raptorjs/atom-language-marko)
 - [x] CSS, including
   - [Sass](http://sass-lang.com/)
-  - [LESS](http://lesscss.org/)
+  - [Less](http://lesscss.org/)
 - [x] [SQL](https://github.com/Glavin001/atom-beautify/pull/67)
   - Requires [python-sqlparse](https://github.com/andialbrecht/sqlparse)
 - [x] [Markdown](https://github.com/Glavin001/atom-beautify/issues/292)
@@ -43,8 +43,8 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
   - Requires [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to be already installed.
 - [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
-  - Requires [autopep8](https://github.com/hhatto/autopep8) to be already installed.
-  - Beautifies to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
+  - Requires [autopep8](https://github.com/hhatto/autopep8) or [YAPF](https://github.com/google/yapf) to be already installed.
+  - Beautifies to [PEP 8](https://www.python.org/dev/peps/pep-0008/).
 - [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
   - Requires [Ruby Beautify](https://github.com/erniebrodeur/ruby-beautify)
 - [x] [CoffeeScript](https://github.com/donaldpipowitch/atom-beautify/issues/31)
