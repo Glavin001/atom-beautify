@@ -83,4 +83,16 @@ module.exports = {
       default: false
       description: "If in CSS values leading 0s immediately preceeding \
                 a decimal should be removed or prevented."
+    configPath:
+      title: "comb custom config file"
+      type: 'string'
+      default: ""
+      description: "Path to custom CSScomb config file, used in absense of a \
+                `.csscomb.json` or `.csscomb.cson` at the root of your project."
+    predefinedConfig:
+      title: "comb predefined config"
+      type: 'string'
+      default: "csscomb"
+      description: "Used if neither a project or custom config file exists."
+      enum: ["csscomb", "yandex", "zen"]
 }
