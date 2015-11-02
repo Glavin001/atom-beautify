@@ -1,5 +1,4 @@
-var Mist = React.createClass({
-  renderList: function() {
+var Mist = React.createClass({renderList: function() {
     return this
       .props
       .items
