@@ -1306,11 +1306,11 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Break chained method calls across subsequent lines (Supported by JS Beautify)
+Break chained method calls across subsequent lines (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5331,11 +5331,11 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Break chained method calls across subsequent lines (Supported by JS Beautify)
+Break chained method calls across subsequent lines (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5996,6 +5996,30 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 {
     "js": {
         "space_after_anon_function": false
+    }
+}
+```
+
+####  [JavaScript - Break chained methods](#javascript---break-chained-methods) 
+
+**Namespace**: `js`
+
+**Key**: `break_chained_methods`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Break chained method calls across subsequent lines (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "break_chained_methods": false
     }
 }
 ```
