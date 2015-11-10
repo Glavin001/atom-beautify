@@ -64,7 +64,7 @@ module.exports = {
     force_indentation:
       type: 'boolean'
       default: false
-      description: "if indentation should be forcefully applied to\
+      description: "if indentation should be forcefully applied to \
                 markup even if it disruptively adds unintended whitespace \
                 to the documents rendered output"
     convert_quotes:

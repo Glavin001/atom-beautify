@@ -407,7 +407,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Description**:
 
-if indentation should be forcefully applied tomarkup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
+if indentation should be forcefully applied to markup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5706,7 +5706,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Description**:
 
-if indentation should be forcefully applied tomarkup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
+if indentation should be forcefully applied to  markup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
