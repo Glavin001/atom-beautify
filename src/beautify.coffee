@@ -430,7 +430,7 @@ handleSaveEvent = ->
         posArray = getCursors(editor)
         origScrollTop = editor.getScrollTop()
         beautifyFilePath(filePath, ->
-          if editor.alive and editor.alive isnt false
+          if editor.isAlive() is true
             buffer.reload()
             logger.verbose('restore editor positions', posArray,origScrollTop)
             # Let the scrollTop setting run after all the save related stuff is run,
