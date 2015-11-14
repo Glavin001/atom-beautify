@@ -430,17 +430,18 @@ handleSaveEvent = ->
         posArray = getCursors(editor)
         origScrollTop = editor.getScrollTop()
         beautifyFilePath(filePath, ->
-          buffer.reload()
-          logger.verbose('restore editor positions', posArray,origScrollTop)
-          # Let the scrollTop setting run after all the save related stuff is run,
-          # otherwise setScrollTop is not working, probably because the cursor
-          # addition happens asynchronously
-          setTimeout ( ->
-            setCursors(editor, posArray)
-            editor.setScrollTop(origScrollTop)
-            # console.log "setScrollTop"
-            return
-          ), 0
+          if editor.alive and editor.alive isnt false
+            buffer.reload()
+            logger.verbose('restore editor positions', posArray,origScrollTop)
+            # Let the scrollTop setting run after all the save related stuff is run,
+            # otherwise setScrollTop is not working, probably because the cursor
+            # addition happens asynchronously
+            setTimeout ( ->
+              setCursors(editor, posArray)
+              editor.setScrollTop(origScrollTop)
+              # console.log "setScrollTop"
+              return
+            ), 0
         )
       )
     plugin.subscriptions.add disposable
