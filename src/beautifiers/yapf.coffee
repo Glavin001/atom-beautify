@@ -17,6 +17,9 @@ module.exports = class Yapf extends Beautifier
     @run("yapf", [
       ["--style=pep8"]
       @tempFile("input", text)
-      ], help: {
-        link: "https://github.com/google/yapf"
+      ], {
+          ignoreReturnCode: true,
+          help: {
+              link: "https://github.com/google/yapf"
+          }
       })
