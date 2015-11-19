@@ -610,10 +610,10 @@ module.exports = class Beautifiers extends EventEmitter
         options[lang] = options[lang] or {}
         options[lang][opt] = config[k]
 
-      # logger.verbose(lang, opt);
+      # logger.verbose(lang, opt)
       true
 
-    # logger.verbose(options);
+    # logger.verbose(options)
     options
 
   # Look for .jsbeautifierrc in file and home path, check env variables
