@@ -323,14 +323,13 @@ debug = () ->
 
   # Language
   language = beautifier.getLanguage(grammarName, filePath)
-
   addInfo('Original File Language', language?.name)
 
   # Get current editor's text
   text = editor.getText()
 
   # Contents
-  codeBlockSyntax = grammarName.toLowerCase().split(' ')[0]
+  codeBlockSyntax = (language?.name ? grammarName).toLowerCase().split(' ')[0]
   addInfo('Original File Contents', "\n```#{codeBlockSyntax}\n#{text}\n```")
   addHeader(2, "Beautification options")
 
@@ -377,9 +376,17 @@ debug = () ->
 
     #
     logs = ""
+    logFilePathRegex = new RegExp('\\: \\[(.*)\\]')
     subscription = logger.onLogging((msg) ->
       # console.log('logging', msg)
-      logs += msg
+      sep = path.sep
+      logs += msg.replace(logFilePathRegex, (a,b) ->
+        s = b.split(sep)
+        i = s.indexOf('atom-beautify')
+        p = s.slice(i+2).join(sep)
+        # console.log('logging', arguments, s, i, p)
+        return ': ['+p+']'
+      )
     )
     cb = (result) ->
       subscription.dispose()
@@ -387,15 +394,23 @@ debug = () ->
 
       # Logs
       addInfo('Beautified File Contents', "\n```#{codeBlockSyntax}\n#{result}\n```")
+      # Diff
+      JsDiff = require('diff')
+      diff = JsDiff.createPatch(filePath, text, \
+        result, "original", "beautified")
+      addInfo('Original vs. Beautified Diff', "\n```#{codeBlockSyntax}\n#{diff}\n```")
+
       addInfo('Logs', "\n```\n#{logs}\n```")
 
       # Save to clipboard
       atom.clipboard.write(debugInfo)
       confirm('Atom Beautify debugging information is now in your clipboard.\n' +
       'You can now paste this into an Issue you are reporting here\n' +
-      'https://github.com/Glavin001/atom-beautify/issues/ \n\n' +
-      'Warning: Be sure to look over the debug info before you send it,
-      to ensure you are not sharing undesirable private information.'
+      'https://github.com/Glavin001/atom-beautify/issues/\n\n' +
+      'Please follow the contribution guidelines found at\n' +
+      'https://github.com/Glavin001/atom-beautify/blob/master/CONTRIBUTING.md\n\n' +
+      'Warning: Be sure to look over the debug info before you send it, '+
+      'to ensure you are not sharing undesirable private information.'
       )
     try
       beautifier.beautify(text, allOptions, grammarName, filePath)
