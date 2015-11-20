@@ -33,6 +33,7 @@
     indent_with_tabs: false
   python:
     indent_size: 2
+    sort_imports: true
     #max_line_length: 79
     #ignore:
     #  - "E24"

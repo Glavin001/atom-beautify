@@ -41,6 +41,7 @@ before_install:
   # Python language support
   - brew install python
   - pip install --upgrade autopep8
+  - pip install --upgrade isort
   # SQL language support
   - pip install --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
