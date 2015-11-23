@@ -32,6 +32,11 @@ module.exports = {
       default: defaultIndentSize
       minimum: 0
       description: "Indentation size/length"
+    rubocop_path:
+      title: "Rubocop Path"
+      type: 'string'
+      default: ""
+      description: "Path to the `rubocop` CLI executable"
     indent_char:
       type: 'string'
       default: defaultIndentChar

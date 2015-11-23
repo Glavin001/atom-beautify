@@ -1766,6 +1766,30 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 }
 ```
 
+####  [Ruby - Rubocop Path](#ruby---rubocop-path) 
+
+**Namespace**: `ruby`
+
+**Key**: `rubocop_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+
+**Description**:
+
+Path to the `rubocop` CLI executable (Supported by Rubocop)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "ruby": {
+        "rubocop_path": ""
+    }
+}
+```
+
 ####  [Ruby - Indent char](#ruby---indent-char) 
 
 **Namespace**: `ruby`
@@ -6443,6 +6467,30 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 {
     "ruby": {
         "indent_size": 4
+    }
+}
+```
+
+####  [Ruby - Rubocop Path](#ruby---rubocop-path) 
+
+**Namespace**: `ruby`
+
+**Key**: `rubocop_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+
+**Description**:
+
+Path to the `rubocop` CLI executable (Supported by Rubocop)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "ruby": {
+        "rubocop_path": ""
     }
 }
 ```
