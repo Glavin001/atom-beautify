@@ -20,27 +20,27 @@ module.exports = class Beautifier
 
   ###
   Supported Options
-
+  
   Enable options for supported languages.
   - <string:language>:<boolean:all_options_enabled>
   - <string:language>:<string:option_key>:<boolean:enabled>
   - <string:language>:<string:option_key>:<string:rename>
   - <string:language>:<string:option_key>:<function:transform>
   - <string:language>:<string:option_key>:<array:mapper>
-
+  
   ###
   options: {}
 
   ###
   Supported languages by this Beautifier
-
+  
   Extracted from the keys of the `options` field.
   ###
   languages: null
 
   ###
   Beautify text
-
+  
   Override this method in subclasses
   ###
   beautify: null
@@ -87,7 +87,7 @@ module.exports = class Beautifier
 
   ###
   Get Shell Environment variables
-
+  
   Special thank you to @ioquatix
   See https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63
   ###
@@ -139,7 +139,7 @@ module.exports = class Beautifier
 
   ###
   Like the unix which utility.
-
+  
   Finds the first instance of a specified executable in the PATH environment variable.
   Does not cache the results,
   so hash -r is not needed when the PATH changes.
@@ -165,7 +165,7 @@ module.exports = class Beautifier
 
   ###
   Add help to error.description
-
+  
   Note: error.description is not officially used in JavaScript,
   however it is used internally for Atom Beautify when displaying errors.
   ###
@@ -256,8 +256,8 @@ module.exports = class Beautifier
               # If return code is not 0 then error occured
               if not ignoreReturnCode and returnCode isnt 0
                 err = new Error(stderr)
-                windowsProgramNotFoundMsg = 'is not recognized as an \
-                internal or external command'#, operable program or batch file.'
+                windowsProgramNotFoundMsg = "is not recognized as an \
+                internal or external command" # operable program or batch file
                 @verbose(stderr, windowsProgramNotFoundMsg)
                 if @isWindows and returnCode is 1 and \
                 stderr.indexOf(windowsProgramNotFoundMsg) isnt -1
@@ -346,5 +346,3 @@ module.exports = class Beautifier
     @verbose("Options for #{@name}:", @options)
     # Set supported languages
     @languages = _.keys(@options)
-
-
