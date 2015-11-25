@@ -57,6 +57,7 @@ module.exports = class Beautifiers extends EventEmitter
     'tidy-markdown'
     'typescript-formatter'
     'yapf'
+    'erl_tidy'
   ]
 
   ###

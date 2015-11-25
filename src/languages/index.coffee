@@ -22,6 +22,7 @@ module.exports = class Languages
     "d"
     "ejs"
     "erb"
+    "erlang"
     "gherkin"
     "go"
     "fortran"
