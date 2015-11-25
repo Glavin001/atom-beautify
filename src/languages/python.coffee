@@ -41,5 +41,9 @@ module.exports = {
       items:
         type: 'string'
       description: "do not fix these errors/warnings"
+    sort_imports:
+      type: 'boolean'
+      default: false
+      description: "sort imports (requires isort installed)"
 
 }
