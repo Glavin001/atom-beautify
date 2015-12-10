@@ -1,4 +1,4 @@
-# [atom-beautify](https://github.com/donaldpipowitch/atom-beautify)
+# [atom-beautify](https://github.com/Glavin001/atom-beautify)
 
 [![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify)
 [![Build status](https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true)](https://ci.appveyor.com/project/Glavin001/atom-beautify)
@@ -7,7 +7,7 @@
 
 [![Throughput Graph](https://graphs.waffle.io/Glavin001/atom-beautify/throughput.svg)](https://waffle.io/Glavin001/atom-beautify/metrics)
 
-> [Beautify](https://github.com/einars/js-beautify)
+> [Beautify](https://github.com/beautify-web/js-beautify)
 HTML (including [Handlebars](http://handlebarsjs.com/)),
 CSS (including [Sass](http://sass-lang.com/) and [Less](http://lesscss.org/)),
 JavaScript, and much more in Atom.
@@ -30,8 +30,8 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
     - Requires [htmlbeautifier](https://github.com/threedaymonk/htmlbeautifier)
   - [x] XML
   - [x] SVG
-  - [x] [Marko](https://github.com/raptorjs/marko)
-    - Requires [language-marko](https://github.com/raptorjs/atom-language-marko)
+  - [x] [Marko](https://github.com/marko-js/marko)
+    - Requires [language-marko](https://github.com/marko-js/atom-language-marko)
 - [x] CSS, including
   - [Sass](http://sass-lang.com/)
   - [Less](http://lesscss.org/)
@@ -40,14 +40,14 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] [Markdown](https://github.com/Glavin001/atom-beautify/issues/292)
 - [x] [Perl](https://github.com/Glavin001/atom-beautify/issues/33)
   - Requires [perltidy](http://perltidy.sourceforge.net/)
-- [x] [PHP](https://github.com/donaldpipowitch/atom-beautify/issues/26)  
+- [x] [PHP](https://github.com/Glavin001/atom-beautify/issues/26)  
   - Requires [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to be already installed.
-- [x] [Python](https://github.com/donaldpipowitch/atom-beautify/issues/24)
+- [x] [Python](https://github.com/Glavin001/atom-beautify/issues/24)
   - Requires [autopep8](https://github.com/hhatto/autopep8) or [YAPF](https://github.com/google/yapf) to be already installed.
   - Beautifies to [PEP 8](https://www.python.org/dev/peps/pep-0008/).
-- [x] [Ruby](https://github.com/donaldpipowitch/atom-beautify/issues/25)
+- [x] [Ruby](https://github.com/Glavin001/atom-beautify/issues/25)
   - Requires [Ruby Beautify](https://github.com/erniebrodeur/ruby-beautify)
-- [x] [CoffeeScript](https://github.com/donaldpipowitch/atom-beautify/issues/31)
+- [x] [CoffeeScript](https://github.com/Glavin001/atom-beautify/issues/31)
 - [x] [Golang](https://github.com/Glavin001/atom-beautify/issues/176)
 - [x] [Java](https://github.com/Glavin001/atom-beautify/issues/45)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
@@ -171,7 +171,7 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 Please update the [CHANGELOG.md](https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md),
 add yourself as a contributor to the [package.json](https://github.com/donaldpipowitch/atom-beautify/blob/master/package.json),
-and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests).
+and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests/).
 
 ## License
 
