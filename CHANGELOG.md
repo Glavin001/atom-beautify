@@ -1,4 +1,5 @@
 # dev
+- Add [elm-format](https://github.com/avh4/elm-format) beautifier for the Elm language.
 - Add [clang-format](http://clang.llvm.org/docs/ClangFormat.html) beautifier for C/C++/Obj-C languages.
 - Add [yapf](http://github.com/google/yapf) beautifier for Python.
 
