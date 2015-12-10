@@ -59,3 +59,6 @@ before_install:
   - brew install haskell-stack
   - stack setup
   - stack install stylish-haskell
+  # Elm
+  - curl -L -o /tmp/elm-format.tgz
+  - tar xvzf -C /usr/local/bin /tmp/elm-format.tgz

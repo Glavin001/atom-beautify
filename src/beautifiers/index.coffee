@@ -38,6 +38,7 @@ module.exports = class Beautifiers extends EventEmitter
     'coffee-formatter'
     'coffee-fmt'
     'clang-format'
+    'elm-format'
     'htmlbeautifier'
     'csscomb'
     'gherkin'
