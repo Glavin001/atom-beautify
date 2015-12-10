@@ -70,7 +70,7 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] [TypeScript](https://github.com/Glavin001/atom-beautify/issues/49)
 - [x] [Haskell](https://github.com/Glavin001/atom-beautify/issues/628)
   - Requires [stylish-haskell](https://github.com/jaspervdj/stylish-haskell)
-- [x] [Elm]()
+- [x] [Elm](https://github.com/Glavin001/atom-beautify/pull/700)
   - Requires [Elm-Format](https://github.com/avh4/elm-format)
 
 ## Usage
