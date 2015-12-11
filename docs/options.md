@@ -1740,6 +1740,30 @@ do not fix these errors/warnings (Supported by autopep8)
 }
 ```
 
+####  [Python - Sort imports](#python---sort-imports) 
+
+**Namespace**: `python`
+
+**Key**: `sort_imports`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+
+**Description**:
+
+sort imports (requires isort installed) (Supported by autopep8)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "sort_imports": false
+    }
+}
+```
+
 ####  [Ruby - Indent size](#ruby---indent-size) 
 
 **Namespace**: `ruby`
@@ -6438,6 +6462,30 @@ do not fix these errors/warnings (Supported by autopep8)
         "ignore": [
             "E24"
         ]
+    }
+}
+```
+
+####  [Python - Sort imports](#python---sort-imports) 
+
+**Namespace**: `python`
+
+**Key**: `sort_imports`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+
+**Description**:
+
+sort imports (requires isort installed) (Supported by autopep8)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "sort_imports": false
     }
 }
 ```
