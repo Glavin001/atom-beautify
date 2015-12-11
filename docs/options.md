@@ -2467,6 +2467,61 @@ Automatically beautify EJS files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - EJS - Beautify On Save*" and change it to your desired configuration.
 
+####  [Language Config - Elm - Disable Beautifying Language](#language-config---elm---disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Elm Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Elm - Disable Beautifying Language*" and change it to your desired configuration.
+
+####  [Language Config - Elm - Default Beautifier](#language-config---elm---default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `elm-format`
+
+**Type**: `string`
+
+**Enum**:  `elm-format` 
+
+**Description**:
+
+Default Beautifier to be used for Elm
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Elm - Default Beautifier*" and change it to your desired configuration.
+
+####  [Language Config - Elm - Beautify On Save](#language-config---elm---beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Elm files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Elm - Beautify On Save*" and change it to your desired configuration.
+
 ####  [Language Config - ERB - Disable Beautifying Language](#language-config---erb---disable-beautifying-language) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
