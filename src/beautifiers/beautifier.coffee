@@ -54,10 +54,10 @@ module.exports = class Beautifier
   ###
   Create temporary file
   ###
-  tempFile: (name = "atom-beautify-temp", contents = "") ->
+  tempFile: (name = "atom-beautify-temp", contents = "", ext = "") ->
     return new Promise((resolve, reject) =>
       # create temp file
-      temp.open(name, (err, info) =>
+      temp.open({prefix: name, suffix: ext}, (err, info) =>
         @debug('tempFile', name, err, info)
         return reject(err) if err
         fs.write(info.fd, contents, (err) ->

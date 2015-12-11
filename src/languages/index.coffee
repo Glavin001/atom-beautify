@@ -21,6 +21,7 @@ module.exports = class Languages
     "csv"
     "d"
     "ejs"
+    "elm"
     "erb"
     "gherkin"
     "go"
