@@ -25,5 +25,5 @@ module.exports = class ElmFormat extends Beautifier
           '--yes',
           newName
           ])
-        .then () =>
+        .then () ->
           readFile newName, {encoding: 'utf-8'}
