@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<!DOCTYPE stylesheet [<!ENTITY nbsp "<xsl:text disable-output-escaping='yes'>&amp;nbsp;</xsl:text>">]>
+<!DOCTYPE stylesheet [
+  <!ENTITY nbsp "<xsl:text disable-output-escaping='yes'>&amp;nbsp;</xsl:text>">
+]>
 
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 

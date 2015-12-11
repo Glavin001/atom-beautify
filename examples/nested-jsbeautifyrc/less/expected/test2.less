@@ -1,6 +1,7 @@
 // main: style.less
 @import (reference)"variables.less";
 @import (reference)"mixins.less";
+
 .modal {
   position: fixed;
   height: 100%;
@@ -9,6 +10,7 @@
   z-index: 10;
   opacity: 0;
   display: none;
+
   .innerModal {
     margin: auto;
     background-color: @white;
@@ -18,6 +20,7 @@
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
+
     .fa {
       float: right;
       color: @white;
@@ -33,6 +36,7 @@
       }
     }
   }
+
   &.modal-2text {
     .innerModal {
       width: @container-width;
@@ -41,9 +45,11 @@
       padding: 10px 25px;
       background-color: gainsboro;
       border-radius: 4px;
+
       h2 {
         margin: 0 0 7px;
       }
+
       div {
         height: 70%;
         overflow-y: scroll;
@@ -51,27 +57,30 @@
         padding: 15px;
         border-radius: 4px;
       }
+
       .large-cta {
         margin-top: 25px;
       }
     }
   }
 }
+
 #modal-video {
   .innerModal {
     left: 10%;
     margin-top: 30px;
     width: 1000px;
     background-color: lighten(@black, 25%);
+
     iframe {
       width: 600px;
       height: 340px;
       margin: 2% auto;
     }
-    
     //container
     > div {
       text-align: center;
+
       a {
         .styleLinks(@white, darken(@white, 10%));
         padding: 5px;
@@ -83,58 +92,72 @@
           background-color: fade(@white, 30%);
         }
       }
+
       h3 {
         color: @white;
         font-size: 3em;
         margin: 20px auto;
       }
+
       button {
         margin-bottom: 50px;
       }
     }
   }
 }
+
 .slideIn {
   .animation(SlideIn, 0.5s);
 }
+
 @-webkit-keyframes SlideIn {
   0% {
     .transform(translateY(-100%));
   }
+
   100% {
     .transform(translateY(0px));
   }
 }
+
 .fadeIn {
   display: block;
   .animation(FadeIn, 0.5s);
 }
+
 @-webkit-keyframes FadeIn {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .slideOut {
   .animation(SlideOut, 0.5s);
 }
+
 @-webkit-keyframes SlideOut {
   0% {
     .transform(translateY(0%));
   }
+
   100% {
     .transform(translateY(-100%));
   }
 }
+
 .fadeOut {
   .animation(FadeOut, 0.5s);
 }
+
 @-webkit-keyframes FadeOut {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     display: none;
