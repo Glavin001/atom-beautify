@@ -1,6 +1,6 @@
 module.exports = {
 
-  name: "CFML"
+  name: "Coldfusion"
   description: "Coldfusion Markup; cfscript is also handled via the prettydiff javascript parser"
   namespace: "cfml"
 
