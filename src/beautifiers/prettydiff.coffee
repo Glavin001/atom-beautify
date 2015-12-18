@@ -35,6 +35,7 @@ module.exports = class PrettyDiff extends Beautifier
       ]
     # Apply language-specific options
     CSV: true
+    CFML: true
     ERB: true
     EJS: true
     HTML: true
@@ -65,6 +66,8 @@ module.exports = class PrettyDiff extends Beautifier
       switch language
         when "CSV"
           lang = "csv"
+        when "CFML"
+          lang = "html"
         when "EJS", "Twig"
           lang = "ejs"
         when "ERB"
