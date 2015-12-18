@@ -2192,6 +2192,61 @@ Automatically beautify CoffeeScript files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - CoffeeScript - Beautify On Save*" and change it to your desired configuration.
 
+####  [Language Config - Coldfusion - Disable Beautifying Language](#language-config---coldfusion---disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Coldfusion Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Coldfusion - Disable Beautifying Language*" and change it to your desired configuration.
+
+####  [Language Config - Coldfusion - Default Beautifier](#language-config---coldfusion---default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `Pretty Diff`
+
+**Type**: `string`
+
+**Enum**:  `Pretty Diff` 
+
+**Description**:
+
+Default Beautifier to be used for Coldfusion
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Coldfusion - Default Beautifier*" and change it to your desired configuration.
+
+####  [Language Config - Coldfusion - Beautify On Save](#language-config---coldfusion---beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Coldfusion files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Coldfusion - Beautify On Save*" and change it to your desired configuration.
+
 ####  [Language Config - C++ - Disable Beautifying Language](#language-config---c---disable-beautifying-language) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
