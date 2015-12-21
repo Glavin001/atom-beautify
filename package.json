@@ -90,7 +90,7 @@
     "loophole": "^1.0.0",
     "node-dir": "^0.1.8",
     "node-uuid": "^1.4.3",
-    "prettydiff": "^1.16.1",
+    "prettydiff": "^1.16.6",
     "season": "^5.3.0",
     "space-pen": "^5.1.1",
     "strip-json-comments": "^1.0.2",
