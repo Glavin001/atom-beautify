@@ -1322,6 +1322,30 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 }
 ```
 
+####  [JavaScript - Preserve Ternary On Single Line](#javascript---preserve-ternary-lines) 
+
+**Namespace**: `js`
+
+**Key**: `preserve_ternary_lines`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Preserve ternary methods on a single line (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "preserve_ternary_lines": true
+    }
+}
+```
+
 ####  [JavaScript - Keep array indentation](#javascript---keep-array-indentation) 
 
 **Namespace**: `js`

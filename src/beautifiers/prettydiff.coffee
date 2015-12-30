@@ -33,6 +33,7 @@ module.exports = class PrettyDiff extends Beautifier
         if (break_chained_methods is true ) then \
           false else true
       ]
+      ternaryline: "preserve_ternary_lines"
     # Apply language-specific options
     CSV: true
     ERB: true
