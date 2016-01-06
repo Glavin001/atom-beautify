@@ -60,7 +60,7 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 - [x] [Objective-C](https://github.com/Glavin001/atom-beautify/issues/57)
   - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
 - [x] [D](https://github.com/Glavin001/atom-beautify/issues/57)
-  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/)
+  - Requires [Uncrustify](http://sourceforge.net/projects/uncrustify/) or [dfmt](https://github.com/Hackerpilot/dfmt)
 - [x] [Fortran](https://github.com/Glavin001/atom-beautify/issues/300)
   - Requires [GNU Emacs](http://www.gnu.org/software/emacs/)
 - [x] [Pawn](https://github.com/Glavin001/atom-beautify/issues/57)
