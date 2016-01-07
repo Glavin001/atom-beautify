@@ -16,6 +16,8 @@ module.exports = {
   extensions: [
   ]
 
+  defaultBeautifier: "dfmt"
+
   options:
     configPath:
       type: 'string'
