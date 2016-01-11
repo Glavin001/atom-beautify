@@ -12,6 +12,6 @@ module.exports = class Dfmt extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    @run("dfmt --indent_size 8", [
+    @run("dfmt", [
       @tempFile("input", text)
       ])
