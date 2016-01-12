@@ -1,6 +1,6 @@
 <apex:page standardController="Contact">
 
-  <apex:sectionHeader subtitle="{!contact.account.name}" title="{!contact.firstname}"/>
+  <apex:sectionHeader title="{!contact.firstname}" subtitle="{!contact.account.name}"/>
 
   <apex:form >
     <apex:pageBlock title="Contact">
@@ -9,7 +9,7 @@
         <apex:inputfield value="{!contact.lastname}"/>
         <apex:inputfield value="{!contact.salutation}"/>
         <apex:inputfield value="{!contact.birthdate}"/>
-        <apex:commandButton action="{!save}" value="Save"/>
+        <apex:commandButton value="Save" action="{!save}"/>
       </apex:pageBlockSection>
     </apex:pageBlock>
   </apex:form>

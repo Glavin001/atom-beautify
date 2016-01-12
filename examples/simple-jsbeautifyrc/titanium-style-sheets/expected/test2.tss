@@ -1,11 +1,11 @@
-".container": {
+".container" : {
   backgroundImage: 'images/bgbg-builder.png',
   width: 1024,
   height: 752,
   top: 0,
   left: 0
 },
-"#blackArrow": {
+"#blackArrow" : {
   touchEnabled: false,
   backgroundImage: 'images/arrow-builder.png',
   width: 15,

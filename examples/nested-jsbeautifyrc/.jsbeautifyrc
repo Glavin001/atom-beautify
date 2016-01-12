@@ -6,13 +6,6 @@
     indent_size: 2
     max_preserve_newlines: 1
     preserve_newlines: true
-    unformatted:
-      - "a"
-      - "sub"
-      - "sup"
-      - "b"
-      - "i"
-      - "u"
     wrap_line_length: 0
   css:
     indent_char: " "

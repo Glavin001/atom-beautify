@@ -1,6 +1,6 @@
 <apex:page standardController="Contact">
 
-  <apex:sectionHeader subtitle="{!contact.account.name}" title="{!contact.firstname}"/>
+  <apex:sectionHeader title="{!contact.firstname}" subtitle="{!contact.account.name}"/>
 
   <apex:pageBlock title="Contact">
     <apex:pageBlockSection title="Details">

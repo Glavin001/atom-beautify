@@ -301,6 +301,16 @@ module.exports = class Beautifiers extends EventEmitter
       _.contains(beautifier.languages, language)
     )
 
+  getBeautifierForLanguage : (language) ->
+    beautifiers = @getBeautifiers(language.name)
+    logger.verbose('beautifiers', _.map(beautifiers, 'name'))
+    # Select beautifier from language config preferences
+    preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
+    beautifier = _.find(beautifiers, (beautifier) ->
+      beautifier.name is preferredBeautifierName
+    ) or beautifiers[0]
+    return beautifier
+
   getLanguage : (grammar, filePath) ->
     # Get language
     fileExtension = path.extname(filePath)
@@ -415,7 +425,6 @@ module.exports = class Beautifiers extends EventEmitter
             return resolve( null )
 
           # Get more language config
-          preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
           beautifyOnSave = atom.config.get("atom-beautify.language_#{language.namespace}_beautify_on_save")
           legacyBeautifyOnSave = atom.config.get("atom-beautify.beautifyOnSave")
 
@@ -430,22 +439,17 @@ module.exports = class Beautifiers extends EventEmitter
 
           # Get Beautifier
           logger.verbose(grammar, language)
-          beautifiers = @getBeautifiers(language.name)
 
           logger.verbose("language options: #{JSON.stringify(options, null, 4)}")
-          logger.verbose('beautifiers', _.map(beautifiers, 'name'))
 
           logger.verbose(language.name, filePath, options, allOptions)
 
           # Check if unsupported language
-          if beautifiers.length < 1
+          beautifier = @getBeautifierForLanguage(language)
+          if not beautifier?
             unsupportedGrammar = true
             logger.verbose('Beautifier for language not found')
           else
-            # Select beautifier from language config preferences
-            beautifier = _.find(beautifiers, (beautifier) ->
-              beautifier.name is preferredBeautifierName
-            ) or beautifiers[0]
             logger.verbose('beautifier', beautifier.name)
 
             # Apply language-specific option transformations
@@ -520,7 +524,6 @@ module.exports = class Beautifiers extends EventEmitter
             )
 
       )
-
 
   findFileResults : {}
 

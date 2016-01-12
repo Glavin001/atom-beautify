@@ -941,7 +941,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,sub,sup,b,i,u`
+**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -958,11 +958,42 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
     "html": {
         "unformatted": [
             "a",
+            "span",
+            "img",
+            "bdo",
+            "em",
+            "strong",
+            "dfn",
+            "code",
+            "samp",
+            "kbd",
+            "var",
+            "cite",
+            "abbr",
+            "acronym",
+            "q",
             "sub",
             "sup",
-            "b",
+            "tt",
             "i",
-            "u"
+            "b",
+            "big",
+            "small",
+            "u",
+            "s",
+            "strike",
+            "font",
+            "ins",
+            "del",
+            "pre",
+            "address",
+            "dt",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6"
         ]
     }
 }
@@ -5093,7 +5124,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,sub,sup,b,i,u`
+**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -5110,11 +5141,42 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
     "html": {
         "unformatted": [
             "a",
+            "span",
+            "img",
+            "bdo",
+            "em",
+            "strong",
+            "dfn",
+            "code",
+            "samp",
+            "kbd",
+            "var",
+            "cite",
+            "abbr",
+            "acronym",
+            "q",
             "sub",
             "sup",
-            "b",
+            "tt",
             "i",
-            "u"
+            "b",
+            "big",
+            "small",
+            "u",
+            "s",
+            "strike",
+            "font",
+            "ins",
+            "del",
+            "pre",
+            "address",
+            "dt",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6"
         ]
     }
 }

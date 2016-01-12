@@ -344,11 +344,8 @@ debug = () ->
 
   # Beautifier
   beautifiers = beautifier.getBeautifiers(language.name)
-  preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
   addInfo('Supported Beautifiers', _.map(beautifiers, 'name').join(', '))
-  selectedBeautifier = _.find(beautifiers, (beautifier) ->
-    beautifier.name is preferredBeautifierName
-  ) or beautifiers[0]
+  selectedBeautifier = beautifier.getBeautifierForLanguage(language)
   addInfo('Selected Beautifier', selectedBeautifier.name)
 
   # Get current editor's text
