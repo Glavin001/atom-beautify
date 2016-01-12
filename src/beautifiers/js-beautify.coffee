@@ -23,6 +23,7 @@ module.exports = class JSBeautify extends Beautifier
 
   beautify: (text, language, options) ->
     @verbose("JS Beautify language #{language}")
+    @info("JS Beautify Options: #{JSON.stringify(options, null, 4)}")
     return new @Promise((resolve, reject) =>
       try
         switch language

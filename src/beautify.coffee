@@ -324,6 +324,16 @@ debug = () ->
   # Language
   language = beautifier.getLanguage(grammarName, filePath)
   addInfo('Original File Language', language?.name)
+  addInfo('Language namespace', language?.namespace)
+
+  # Beautifier
+  beautifiers = beautifier.getBeautifiers(language.name)
+  preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
+  addInfo('Supported Beautifiers', _.map(beautifiers, 'name').join(', '))
+  selectedBeautifier = _.find(beautifiers, (beautifier) ->
+    beautifier.name is preferredBeautifierName
+  ) or beautifiers[0]
+  addInfo('Selected Beautifier', selectedBeautifier.name)
 
   # Get current editor's text
   text = editor.getText()
@@ -331,9 +341,13 @@ debug = () ->
   # Contents
   codeBlockSyntax = (language?.name ? grammarName).toLowerCase().split(' ')[0]
   addInfo('Original File Contents', "\n```#{codeBlockSyntax}\n#{text}\n```")
-  addHeader(2, "Beautification options")
+
+  addInfo('Package Settings', "\n" +
+  "The raw package settings options\n" +
+  "```json\n#{JSON.stringify(atom.config.get('atom-beautify'), undefined, 4)}\n```")
 
   # Beautification Options
+  addHeader(2, "Beautification options")
   # Get all options
   allOptions = beautifier.getOptionsForPath(filePath, editor)
   # Resolve options with promises
@@ -348,9 +362,15 @@ debug = () ->
     ] = allOptions
     projectOptions = allOptions[4..]
 
-    finalOptions = beautifier.getOptionsForLanguage(allOptions, language?)
+    preTransformedOptions = beautifier.getOptionsForLanguage(allOptions, language)
+
+    if selectedBeautifier
+      finalOptions = beautifier.transformOptions(selectedBeautifier, language.name, preTransformedOptions)
 
     # Show options
+    # addInfo('All Options', "\n" +
+    # "All options extracted for file\n" +
+    # "```json\n#{JSON.stringify(allOptions, undefined, 4)}\n```")
     addInfo('Editor Options', "\n" +
     "Options from Atom Editor settings\n" +
     "```json\n#{JSON.stringify(editorOptions, undefined, 4)}\n```")
@@ -366,13 +386,14 @@ debug = () ->
     addInfo('Project Options', "\n" +
     "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
     "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
-    addInfo('Final Options', "\n" +
-    "Final combined options that are used\n" +
-    "```json\n#{JSON.stringify(finalOptions, undefined, 4)}\n```")
-
-    addInfo('Package Settings', "\n" +
-    "The raw package settings options\n" +
-    "```json\n#{JSON.stringify(atom.config.get('atom-beautify'), undefined, 4)}\n```")
+    addInfo('Pre-Transformed Options', "\n" +
+    "Combined options before transforming them given a beautifier's specifications\n" +
+    "```json\n#{JSON.stringify(preTransformedOptions, undefined, 4)}\n```")
+    if selectedBeautifier
+      addHeader(3, 'Final Options')
+      addInfo('Final Options', "\n" +
+      "Final combined and transformed options that are used\n" +
+      "```json\n#{JSON.stringify(finalOptions, undefined, 4)}\n```")
 
     #
     logs = ""
