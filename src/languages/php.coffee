@@ -42,6 +42,6 @@ module.exports = {
       title: "PHPCBF Standard"
       type: 'string'
       default: "",
-      description: "Standard name PEAR, PSR-1, PSR-2, Symphony... or path to CS rules"
+      description: "Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules"
 
 }

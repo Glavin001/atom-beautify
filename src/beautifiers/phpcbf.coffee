@@ -39,6 +39,7 @@ module.exports = class PHPCBF extends Beautifier
           # Found phpcbf path
           @run("php", [
             phpcbfPath
+            "--no-patch"
             "--standard=#{options.standard}" if options.standard
             tempFile = @tempFile("temp", text)
             ], {
@@ -64,6 +65,7 @@ module.exports = class PHPCBF extends Beautifier
       )
     else
       @run("phpcbf", [
+        "--no-patch"
         "--standard=#{options.standard}" if options.standard
         tempFile = @tempFile("temp", text)
         ], {

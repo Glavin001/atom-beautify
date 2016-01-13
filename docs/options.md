@@ -1691,6 +1691,54 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 }
 ```
 
+####  [PHP - PHPCBF Path](#php---phpcbf-path) 
+
+**Namespace**: `php`
+
+**Key**: `phpcbf_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "phpcbf_path": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
+
+**Namespace**: `php`
+
+**Key**: `standard`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "standard": ""
+    }
+}
+```
+
 ####  [Python - Max line length](#python---max-line-length) 
 
 **Namespace**: `python`
@@ -3568,7 +3616,7 @@ Disable PHP Beautification
 
 **Type**: `string`
 
-**Enum**:  `PHP-CS-Fixer` 
+**Enum**:  `PHP-CS-Fixer`  `PHPCBF` 
 
 **Description**:
 
@@ -6496,6 +6544,81 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 {
     "php": {
         "level": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Path](#php---phpcbf-path) 
+
+**Namespace**: `php`
+
+**Key**: `phpcbf_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "phpcbf_path": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
+
+**Namespace**: `php`
+
+**Key**: `standard`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "standard": ""
+    }
+}
+```
+
+
+### PHPCBF
+
+####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
+
+**Namespace**: `php`
+
+**Key**: `standard`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "standard": ""
     }
 }
 ```
