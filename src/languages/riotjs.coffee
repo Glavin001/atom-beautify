@@ -19,7 +19,7 @@ module.exports = {
     'tag'
   ]
 
-  defaultBeautifier: "Pretty Diff"
+  defaultBeautifier: "JS Beautify"
 
   options: []
 
