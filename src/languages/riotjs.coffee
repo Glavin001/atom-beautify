@@ -9,7 +9,7 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "Riot.js"
+    "Riot.js", "HTML (Riot Tag)"
   ]
 
   ###
