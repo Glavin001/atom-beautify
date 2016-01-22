@@ -50,7 +50,6 @@ module.exports = class Languages
     "scss"
     "sld"
     "spacebars"
-    "sql"
     "svg"
     "swig"
     "tss"
