@@ -26,5 +26,8 @@
     "indent_char": " ",
     "indent_level": 0,
     "indent_with_tabs": false
+  },
+  "markdown": {
+    "listItemIndent": "1"
   }
 }

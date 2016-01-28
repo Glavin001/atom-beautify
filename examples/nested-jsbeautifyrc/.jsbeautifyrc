@@ -38,3 +38,5 @@
     indent_size: 4
   erb:
     indent_size: 4
+  markdown:
+    listItemIndent: 1

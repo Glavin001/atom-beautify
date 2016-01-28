@@ -51,6 +51,7 @@ module.exports = class Beautifiers extends EventEmitter
     'phpcbf'
     'prettydiff'
     'puppet-fix'
+    'remark'
     'rubocop'
     'ruby-beautify'
     'rustfmt'
