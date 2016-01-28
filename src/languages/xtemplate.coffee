@@ -1,22 +1,21 @@
 module.exports = {
 
-  name: "XML"
-  description: "XML"
-  namespace: "xml"
-  fallback: ['html']
+  name: "XTemplate"
+  namespace: "html"
+  fallback: ['html','mustache']
 
   ###
   Supported Grammars
   ###
   grammars: [
-    "SLD", "XML", "XHTML", "XSD", "XSL", "JSP"
+    "XTemplate"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    'sld', 'xml', 'xhtml', 'xsd', 'xsl', 'jsp'
+    "xtemplate"
   ]
 
   defaultBeautifier: "Pretty Diff"

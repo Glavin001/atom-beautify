@@ -1,22 +1,22 @@
 module.exports = {
 
-  name: "XML"
-  description: "XML"
-  namespace: "xml"
-  fallback: ['html']
+  name: "Riot.js"
+  description: "Riot.js HTML based templating language"
+  namespace: "html"
+  fallback: ['html', 'mustache']
 
   ###
   Supported Grammars
   ###
   grammars: [
-    "SLD", "XML", "XHTML", "XSD", "XSL", "JSP"
+    "Riot.js"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    'sld', 'xml', 'xhtml', 'xsd', 'xsl', 'jsp'
+    'tag'
   ]
 
   defaultBeautifier: "Pretty Diff"
