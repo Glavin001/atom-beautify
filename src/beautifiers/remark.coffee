@@ -34,7 +34,6 @@ module.exports = class Remark extends Beautifier
   beautify: (text, language, options) ->
     return new @Promise((resolve, reject) ->
       try
-        console.log(options)
         remark = require 'remark'
         cleanMarkdown = remark.process(text, options)
         resolve cleanMarkdown
