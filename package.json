@@ -62,6 +62,10 @@
     {
       "name": "Murphy Randle",
       "url": "https://github.com/splodingsocks"
+    },
+    {
+      "name": "Luis Arias",
+      "url": "https://github.com/kaaloo"
     }
   ],
   "engines": {
@@ -84,7 +88,7 @@
     "extend": "^3.0.0",
     "gherkin": "2.12.2",
     "handlebars": "^4.0.2",
-    "js-beautify": "^1.5.10",
+    "js-beautify": "^1.6.2",
     "jscs": "^2.1.1",
     "lodash": "3.10.1",
     "loophole": "^1.0.0",
