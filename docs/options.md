@@ -125,7 +125,31 @@ Supported options for each language.
 
 ---
 
-####  [Arduino - Config Path](#arduino---config-path) 
+####  [Apex - Config Path](#apex---config-path)
+
+**Namespace**: `apex`
+
+**Key**: `configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "apex": {
+        "configPath": ""
+    }
+}
+```
+
+####  [Arduino - Config Path](#arduino---config-path)
 
 **Namespace**: `arduino`
 
