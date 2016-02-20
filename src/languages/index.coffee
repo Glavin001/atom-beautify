@@ -16,6 +16,7 @@ module.exports = class Languages
     "c-sharp"
     "c"
     "coffeescript"
+    "coldfusion"
     "cpp"
     "css"
     "csv"
