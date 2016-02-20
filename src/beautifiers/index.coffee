@@ -637,9 +637,12 @@ module.exports = class Beautifiers extends EventEmitter
     externalOptions = undefined
     if configPath
       fs ?= require("fs")
-      contents = fs.readFileSync(configPath,
-        encoding : "utf8"
-      )
+      try
+        contents = fs.readFileSync(configPath,
+          encoding : "utf8"
+        )
+      catch error
+        contents = null #file isnt available anymore
       unless contents
         externalOptions = {}
       else
