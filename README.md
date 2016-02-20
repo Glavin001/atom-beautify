@@ -72,6 +72,8 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
   - Requires [stylish-haskell](https://github.com/jaspervdj/stylish-haskell)
 - [x] [Elm](https://github.com/Glavin001/atom-beautify/pull/700)
   - Requires [Elm-Format](https://github.com/avh4/elm-format)
+- [x] [Erlang](https://github.com/Glavin001/atom-beautify/pull/683)
+  - Requires erlang syntax_tools to be installed
 
 ## Usage
 
