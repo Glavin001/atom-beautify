@@ -1571,6 +1571,82 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
+####  [Markdown - Gfm](#markdown---gfm) 
+
+**Namespace**: `markdown`
+
+**Key**: `gfm`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+GitHub Flavoured Markdown (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "gfm": true
+    }
+}
+```
+
+####  [Markdown - Yaml](#markdown---yaml) 
+
+**Namespace**: `markdown`
+
+**Key**: `yaml`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax). (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "yaml": true
+    }
+}
+```
+
+####  [Markdown - Commonmark](#markdown---commonmark) 
+
+**Namespace**: `markdown`
+
+**Key**: `commonmark`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+Allows and disallows several constructs. (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "commonmark": false
+    }
+}
+```
+
 ####  [Objective-C - Config Path](#objective-c---config-path) 
 
 **Namespace**: `objectivec`
@@ -1711,6 +1787,54 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 {
     "php": {
         "level": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Path](#php---phpcbf-path) 
+
+**Namespace**: `php`
+
+**Key**: `phpcbf_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "phpcbf_path": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
+
+**Namespace**: `php`
+
+**Key**: `standard`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "standard": ""
     }
 }
 ```
@@ -3317,7 +3441,7 @@ Disable Markdown Beautification
 
 **Type**: `string`
 
-**Enum**:  `Tidy Markdown` 
+**Enum**:  `Remark`  `Tidy Markdown` 
 
 **Description**:
 
@@ -3647,7 +3771,7 @@ Disable PHP Beautification
 
 **Type**: `string`
 
-**Enum**:  `PHP-CS-Fixer` 
+**Enum**:  `PHP-CS-Fixer`  `PHPCBF` 
 
 **Description**:
 
@@ -6478,6 +6602,85 @@ Path to the emacs script (Supported by Fortran Beautifier)
 ```
 
 
+### Remark
+
+####  [Markdown - Gfm](#markdown---gfm) 
+
+**Namespace**: `markdown`
+
+**Key**: `gfm`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+GitHub Flavoured Markdown (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "gfm": true
+    }
+}
+```
+
+####  [Markdown - Yaml](#markdown---yaml) 
+
+**Namespace**: `markdown`
+
+**Key**: `yaml`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax). (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "yaml": true
+    }
+}
+```
+
+####  [Markdown - Commonmark](#markdown---commonmark) 
+
+**Namespace**: `markdown`
+
+**Key**: `commonmark`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+Allows and disallows several constructs. (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "commonmark": false
+    }
+}
+```
+
+
 ### Perltidy
 
 ####  [Perl - Perltidy profile](#perl---perltidy-profile) 
@@ -6575,6 +6778,105 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 {
     "php": {
         "level": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Path](#php---phpcbf-path) 
+
+**Namespace**: `php`
+
+**Key**: `phpcbf_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "phpcbf_path": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
+
+**Namespace**: `php`
+
+**Key**: `standard`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "standard": ""
+    }
+}
+```
+
+
+### PHPCBF
+
+####  [PHP - PHPCBF Path](#php---phpcbf-path) 
+
+**Namespace**: `php`
+
+**Key**: `phpcbf_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "phpcbf_path": ""
+    }
+}
+```
+
+####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
+
+**Namespace**: `php`
+
+**Key**: `standard`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "standard": ""
     }
 }
 ```
