@@ -72,8 +72,8 @@ module.exports = {
     brace_style:
       type: 'string'
       default: "collapse"
-      enum: ["collapse", "expand", "end-expand", "none"]
-      description: "[collapse|expand|end-expand|none]"
+      enum: ["collapse", "collapse-preserve-inline", "expand", "end-expand", "none"]
+      description: "[collapse|collapse-preserve-inline|expand|end-expand|none]"
     break_chained_methods:
       type: 'boolean'
       default: false
