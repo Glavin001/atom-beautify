@@ -8,7 +8,7 @@ module.exports = class Dfmt extends Beautifier
   name: "dfmt"
 
   options: {
-    D: true
+    D: false
   }
 
   beautify: (text, language, options) ->
