@@ -37,11 +37,11 @@ module.exports = {
       type: 'string'
       default: "upper"
       description: "Change case of keywords"
-      enum: ["lower","upper","capitalize"]
+      enum: ["unchanged","lower","upper","capitalize"]
     identifiers:
       type: 'string'
-      default: "lower"
+      default: "unchanged"
       description: "Change case of identifiers"
-      enum: ["lower","upper","capitalize"]
+      enum: ["unchanged","lower","upper","capitalize"]
 
 }
