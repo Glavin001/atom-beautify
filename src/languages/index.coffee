@@ -46,6 +46,7 @@ module.exports = class Languages
     "php"
     "puppet"
     "python"
+    "riotjs"
     "ruby"
     "rust"
     "sass"
@@ -60,6 +61,7 @@ module.exports = class Languages
     "vala"
     "visualforce"
     "xml"
+    "xtemplate"
   ]
 
   ###
