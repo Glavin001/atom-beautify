@@ -3,7 +3,7 @@
   "main": "./src/beautify",
   "version": "0.28.22",
   "private": true,
-  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
+  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, and SQL in Atom",
   "repository": {
     "type": "git",
     "url": "https://github.com/Glavin001/atom-beautify"
@@ -147,6 +147,7 @@
     "objective-c",
     "c-sharp",
     "c#",
+    "coldfusion",
     "uncrustify",
     "java",
     "pawn",
