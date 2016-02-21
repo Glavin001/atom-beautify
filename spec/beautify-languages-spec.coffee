@@ -31,7 +31,6 @@ describe "BeautifyLanguages", ->
   # All Atom packages that Atom Beautify is dependent on
   dependentPackages = [
     'autocomplete-plus'
-    'mavensmate-atom'
     # 'linter'
     #   'atom-typescript' # it logs too much...
   ]
