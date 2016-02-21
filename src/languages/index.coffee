@@ -12,10 +12,12 @@ module.exports = class Languages
   # Supported unique configuration keys
   # Used for detecting nested configurations in .jsbeautifyrc
   languageNames: [
+    "apex"
     "arduino"
     "c-sharp"
     "c"
     "coffeescript"
+    "coldfusion"
     "cpp"
     "css"
     "csv"
@@ -23,6 +25,7 @@ module.exports = class Languages
     "ejs"
     "elm"
     "erb"
+    "erlang"
     "gherkin"
     "go"
     "fortran"
@@ -43,6 +46,7 @@ module.exports = class Languages
     "php"
     "puppet"
     "python"
+    "riotjs"
     "ruby"
     "rust"
     "sass"
@@ -57,6 +61,7 @@ module.exports = class Languages
     "vala"
     "visualforce"
     "xml"
+    "xtemplate"
   ]
 
   ###

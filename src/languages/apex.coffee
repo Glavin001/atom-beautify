@@ -1,23 +1,21 @@
 module.exports = {
 
-  name: "D"
-  namespace: "d"
+  name: "Apex"
+  namespace: "apex"
 
   ###
   Supported Grammars
   ###
   grammars: [
-    "D"
+    "Apex"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    "d"
+    "cls"
   ]
-
-  defaultBeautifier: "Uncrustify"
 
   options:
     configPath:

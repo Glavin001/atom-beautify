@@ -3,7 +3,7 @@
   "main": "./src/beautify",
   "version": "0.28.22",
   "private": true,
-  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
+  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, and SQL in Atom",
   "repository": {
     "type": "git",
     "url": "https://github.com/Glavin001/atom-beautify"
@@ -62,6 +62,10 @@
     {
       "name": "Murphy Randle",
       "url": "https://github.com/splodingsocks"
+    },
+    {
+      "name": "Luis Arias",
+      "url": "https://github.com/kaaloo"
     }
   ],
   "engines": {
@@ -84,13 +88,13 @@
     "extend": "^3.0.0",
     "gherkin": "2.12.2",
     "handlebars": "^4.0.2",
-    "js-beautify": "^1.5.10",
+    "js-beautify": "^1.6.2",
     "jscs": "^2.1.1",
     "lodash": "3.10.1",
     "loophole": "^1.0.0",
     "node-dir": "^0.1.8",
     "node-uuid": "^1.4.3",
-    "prettydiff": "^1.16.8",
+    "prettydiff": "^1.16.17",
     "remark": "^3.2.2",
     "season": "^5.3.0",
     "space-pen": "^5.1.1",
@@ -148,8 +152,10 @@
     "objective-c",
     "c-sharp",
     "c#",
+    "coldfusion",
     "uncrustify",
     "java",
+    "apex",
     "pawn",
     "vala",
     "d",

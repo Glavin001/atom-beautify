@@ -21,7 +21,7 @@ describe "BeautifyLanguages", ->
 
   # Activate all of the languages
   allLanguages = [
-    "c", "coffee-script", "css", "html",
+    "c", "coffee-script", "css", "d", "html",
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql", "svg",
@@ -61,7 +61,7 @@ describe "BeautifyLanguages", ->
 
     # Set Uncrustify config path
     # uncrustifyConfigPath = path.resolve(__dirname, "../examples/nested-jsbeautifyrc/uncrustify.cfg")
-    # uncrustifyLangs = ["c", "cpp", "objectivec", "cs", "d", "java", "pawn", "vala"]
+    # uncrustifyLangs = ["apex", "c", "cpp", "objectivec", "cs", "d", "java", "pawn", "vala"]
     # for lang in uncrustifyLangs
     #     do (lang) ->
       # atom.config.set("atom-beautify.#{lang}_configPath", uncrustifyConfigPath)

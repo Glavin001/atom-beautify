@@ -19,11 +19,13 @@ notifications:
 script: sh build-package.sh
 
 env:
-    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg"
+    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom"
 
 cache:
-    - pip
+    - pip: true
+    - bundler: true
     - directories:
+        - vendor/bundle # gems are installed here, https://docs.travis-ci.com/user/languages/ruby/#Dependency-Management
         - node_modules
         - $HOME/.atom
         - $HOME/.stack

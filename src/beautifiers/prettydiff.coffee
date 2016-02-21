@@ -33,8 +33,10 @@ module.exports = class PrettyDiff extends Beautifier
         if (break_chained_methods is true ) then \
           false else true
       ]
+      ternaryline: "preserve_ternary_lines"
     # Apply language-specific options
     CSV: true
+    Coldfusion: true
     ERB: true
     EJS: true
     HTML: true
@@ -65,6 +67,8 @@ module.exports = class PrettyDiff extends Beautifier
       switch language
         when "CSV"
           lang = "csv"
+        when "Coldfusion"
+          lang = "html"
         when "EJS", "Twig"
           lang = "ejs"
         when "ERB"

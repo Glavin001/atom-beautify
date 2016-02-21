@@ -9,7 +9,7 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "Riot.js"
+    "Riot.js", "HTML (Riot Tag)"
   ]
 
   ###
@@ -19,7 +19,7 @@ module.exports = {
     'tag'
   ]
 
-  defaultBeautifier: "Pretty Diff"
+  defaultBeautifier: "JS Beautify"
 
   options: []
 
