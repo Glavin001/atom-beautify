@@ -14,6 +14,7 @@ module.exports = {
   Supported extensions
   ###
   extensions: [
+    "d"
   ]
 
   defaultBeautifier: "dfmt"
