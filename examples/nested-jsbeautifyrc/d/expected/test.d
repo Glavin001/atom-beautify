@@ -1,10 +1,7 @@
-class Test
+class Test {
+private int member;
+public auto func ( string str )
 {
-    private int member;
-    public auto func(string str)
-    {
-        import std.stdio;
-
-        writeln("Hello world !");
-    }
+        import std.stdio; writeln("Hello world !");
+}
 }

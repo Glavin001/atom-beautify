@@ -17,7 +17,7 @@ module.exports = {
     "d"
   ]
 
-  defaultBeautifier: "dfmt"
+  defaultBeautifier: "Uncrustify"
 
   options:
     configPath:
