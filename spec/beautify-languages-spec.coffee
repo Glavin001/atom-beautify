@@ -21,7 +21,7 @@ describe "BeautifyLanguages", ->
 
   # Activate all of the languages
   allLanguages = [
-    "apex", "c", "coffee-script", "css", "d", "html",
+    "c", "coffee-script", "css", "d", "html",
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql", "svg",
@@ -31,6 +31,7 @@ describe "BeautifyLanguages", ->
   # All Atom packages that Atom Beautify is dependent on
   dependentPackages = [
     'autocomplete-plus'
+    'mavensmate-atom'
     # 'linter'
     #   'atom-typescript' # it logs too much...
   ]

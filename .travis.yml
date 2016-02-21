@@ -19,7 +19,7 @@ notifications:
 script: sh build-package.sh
 
 env:
-    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d"
+    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom"
 
 cache:
     - pip: true
