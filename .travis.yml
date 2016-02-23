@@ -1,6 +1,8 @@
-language: objective-c
+sudo: false
 
-osx_image: beta-xcode6.2
+os:
+  - linux
+  - osx
 
 git:
   depth: 10
@@ -19,7 +21,11 @@ notifications:
 script: sh build-package.sh
 
 env:
+  global:
     - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom"
+  matrix:
+    - ATOM_CHANNEL=stable
+    - ATOM_CHANNEL=beta
 
 cache:
     - pip: true
@@ -64,3 +70,11 @@ before_install:
   # Elm
   - curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.1-alpha2/elm-format-0.1-alpha2-mac-x64.tgz
   - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin
+
+addons:
+  apt:
+    packages:
+    - build-essential
+    - git
+    - libgnome-keyring-dev
+    - fakeroot
