@@ -14,8 +14,6 @@ module.exports = class PHPCBF extends Beautifier
         if (standard) then \
           standard else "PEAR"
       ]
-      phpcbf_path: (phpcbf_path) -> phpcbf_path or @which('phpcbf')
-      
     PHP: true
   }
 

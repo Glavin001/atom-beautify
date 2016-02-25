@@ -15,6 +15,7 @@ module.exports = {
   ###
   extensions: [
     "cls"
+    "trigger"
   ]
 
   options:
