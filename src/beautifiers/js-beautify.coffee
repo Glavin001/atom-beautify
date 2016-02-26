@@ -29,7 +29,10 @@ module.exports = class JSBeautify extends Beautifier
         switch language
           when "JSON", "JavaScript"
             beautifyJS = require("js-beautify")
+            # incomplete, just a test
+            # indent methods that won't create a new selection
             text = beautifyJS(text, options)
+              .replace(/(\s{2})\.\b(attr|classed|style|property|text|html)\b\(/g, '$1$1.$2(')
             resolve text
           when "Handlebars", "Mustache"
             # jshint ignore: start
