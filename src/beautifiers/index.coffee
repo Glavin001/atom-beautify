@@ -105,20 +105,14 @@ module.exports = class Beautifiers extends EventEmitter
     langOptions = {}
     languages = {} # Hash map of languages with their names
     for lang in @languages.languages
-      # Use the namespace from language as key prefix
-      namespace = lang.namespace
-      langOptions[namespace] ?= {
-        title: lang.name,
-        type: 'object',
-        description: "Options for language #{lang.name}"
-        collapsed: true
-        properties: {}
-      }
+      langOptions[lang.name] ?= {}
       languages[lang.name] ?= lang
-      options = _.get(langOptions, "#{namespace}.properties")
+      options = langOptions[lang.name]
+
 
       # Init field for supported beautifiers
       lang.beautifiers = []
+
 
       # Process all language options
       for field, op of lang.options
@@ -126,6 +120,7 @@ module.exports = class Beautifiers extends EventEmitter
           op.title = _plus.uncamelcase(field).split('.')
           .map(_plus.capitalize).join(' ')
         op.title = "#{lang.name} - #{op.title}"
+
 
         # Init field for supported beautifiers
         op.beautifiers = []
@@ -143,10 +138,11 @@ module.exports = class Beautifiers extends EventEmitter
     for beautifier in beautifiers
       beautifierName = beautifier.name
 
+
       # Iterate over supported languages
       for languageName, options of beautifier.options
-        namespace = languages[languageName].namespace
-        laOp = _.get(langOptions, "#{namespace}.properties")
+        laOp = langOptions[languageName]
+
 
         # Is a valid Language name
         if typeof options is "boolean"
@@ -154,6 +150,7 @@ module.exports = class Beautifiers extends EventEmitter
           # Enable / disable all options
           # Add Beautifier support to Language
           languages[languageName]?.beautifiers.push(beautifierName)
+
 
           # Check for beautifier's options support
           if options is true
@@ -194,6 +191,7 @@ module.exports = class Beautifiers extends EventEmitter
               # Complex Function
               [fields..., fn] = op
 
+
               # Add beautifier support to all required fields
               languages[languageName]?.beautifiers.push(beautifierName)
               for f in fields
@@ -205,13 +203,55 @@ module.exports = class Beautifiers extends EventEmitter
               # Unsupported
               logger.warn("Unsupported option:", beautifierName, languageName, field, op, langOptions)
 
-    # Improve descriptions to each language option
-    for g,group of langOptions
-      for o,optionDef of group.properties
+    # Prefix language's options with namespace
+    for langName, ops of langOptions
+
+      # Get language with name
+      lang = languages[langName]
+
+
+      # Use the namespace from language as key prefix
+      prefix = lang.namespace
+
+
+      # logger.verbose(langName, lang, prefix, ops)
+      # Iterate over all language options and rename fields
+      for field, op of ops
+
+        # Rename field
+        delete ops[field]
+        ops["#{prefix}_#{field}"] = op
+
+    # Flatten Options per language to array of all options
+    allOptions = _.values(langOptions)
+
+
+    # logger.verbose('allOptions', allOptions)
+    # Flatten array of objects to single object for options
+    flatOptions = _.reduce(allOptions, ((result, languageOptions, language) ->
+
+      # Iterate over fields (keys) in Language's Options
+      # and merge them into single result
+      # logger.verbose('language options', language, languageOptions, result)
+      return _.reduce(languageOptions, ((result, optionDef, optionName) ->
+
+        # TODO: Add supported beautifiers to option description
+        # logger.verbose('optionDef', optionDef, optionName)
         if optionDef.beautifiers.length > 0
+
+          # optionDef.title = "
           optionDef.description = "#{optionDef.description} (Supported by #{optionDef.beautifiers.join(', ')})"
         else
+
+          # optionDef.title = "(DEPRECATED)
           optionDef.description = "#{optionDef.description} (Not supported by any beautifiers)"
+        if result[optionName]?
+          logger.warn("Duplicate option detected: ", optionName, optionDef)
+        result[optionName] = optionDef
+        return result
+      ), result)
+    ), {})
+
 
     # Generate Language configurations
     # logger.verbose('languages', languages)
@@ -219,33 +259,33 @@ module.exports = class Beautifiers extends EventEmitter
 
       # logger.verbose(langName, lang)
       name = lang.name
-      namespace = lang.namespace
       beautifiers = lang.beautifiers
-      optionName = "language_#{namespace}"
+      optionName = "language_#{lang.namespace}"
+
 
       # Add Language configurations
-      _.set(langOptions, "#{namespace}.disabled", {
+      flatOptions["#{optionName}_disabled"] = {
         title : "Language Config - #{name} - Disable Beautifying Language"
         type : 'boolean'
         default : false
         description : "Disable #{name} Beautification"
-      })
-      _.set(langOptions, "#{namespace}.default_beautifier", {
+      }
+      flatOptions["#{optionName}_default_beautifier"] = {
         title : "Language Config - #{name} - Default Beautifier"
         type : 'string'
         default : lang.defaultBeautifier ? beautifiers[0]
         description : "Default Beautifier to be used for #{name}"
         enum : _.uniq(beautifiers)
-      })
-      _.set(langOptions, "#{namespace}.beautify_on_save", {
+      }
+      flatOptions["#{optionName}_beautify_on_save"] = {
         title : "Language Config - #{name} - Beautify On Save"
         type : 'boolean'
         default : false
         description : "Automatically beautify #{name} files on save"
-      })
+      }
 
-    # logger.verbose('langOptions', langOptions)
-    return langOptions
+    # logger.verbose('flatOptions', flatOptions)
+    return flatOptions
 
 
   ###
