@@ -54,6 +54,7 @@ module.exports = class PrettyDiff extends Beautifier
     LESS: true
     Swig: true
     Visualforce: true
+    "Riot.js": true
   }
 
   beautify: (text, language, options) ->
@@ -73,7 +74,7 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "ejs"
         when "ERB"
           lang = "html_ruby"
-        when "Handlebars", "Mustache", "Spacebars", "Swig"
+        when "Handlebars", "Mustache", "Spacebars", "Swig", "Riot.js"
           lang = "handlebars"
         when "SGML"
           lang = "markup"

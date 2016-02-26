@@ -7,15 +7,25 @@
   <script>
     this.message = 'Hello, Riot!'
     this.techs = [
-      { name: 'HTML' },
-      { name: 'JavaScript' },
-      { name: 'CSS' }
+      {
+        name: 'HTML'
+      }, {
+        name: 'JavaScript'
+      }, {
+        name: 'CSS'
+      }
     ]
   </script>
 
   <style scoped>
-    :scope { font-size: 2rem }
-    h3 { color: #444 }
-    ul { color: #999 }
+    :scope {
+      font-size: 2rem;
+    }
+    h3 {
+      color: #444;
+    }
+    ul {
+      color: #999;
+    }
   </style>
 </sample>
