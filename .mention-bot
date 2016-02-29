@@ -1,0 +1,9 @@
+
+{
+	"userBlacklist": [
+	  "Glavin001"
+	],
+	"fileBlacklist": [
+		"*.md"
+	]
+}
