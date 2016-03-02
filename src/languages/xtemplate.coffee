@@ -1,7 +1,7 @@
 module.exports = {
 
   name: "XTemplate"
-  namespace: "html"
+  namespace: "xtemplate"
   fallback: ['html','mustache']
 
   ###

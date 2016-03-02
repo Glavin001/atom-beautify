@@ -2,7 +2,7 @@ module.exports = {
 
   name: "Riot.js"
   description: "Riot.js HTML based templating language"
-  namespace: "html"
+  namespace: "riot"
   fallback: ['html', 'mustache']
 
   ###
