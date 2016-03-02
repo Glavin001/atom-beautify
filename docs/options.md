@@ -2076,11 +2076,11 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
 
 **Description**:
 
-Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -2944,7 +2944,7 @@ Disable D Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `dfmt`
+**Default**: `Uncrustify`
 
 **Type**: `string`
 
@@ -3473,7 +3473,7 @@ Automatically beautify Haskell files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - Haskell - Beautify On Save*" and change it to your desired configuration.
 
-####  [Language Config - XTemplate - Disable Beautifying Language](#language-config---xtemplate---disable-beautifying-language) 
+####  [Language Config - HTML - Disable Beautifying Language](#language-config---html---disable-beautifying-language) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3481,35 +3481,37 @@ Automatically beautify Haskell files on save
 
 **Description**:
 
-Disable XTemplate Beautification
+Disable HTML Beautification
 
 **How to Configure**
 
 1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Language Config - XTemplate - Disable Beautifying Language*" and change it to your desired configuration.
+3. Find the option "*Language Config - HTML - Disable Beautifying Language*" and change it to your desired configuration.
 
-####  [Language Config - XTemplate - Default Beautifier](#language-config---xtemplate---default-beautifier) 
+####  [Language Config - HTML - Default Beautifier](#language-config---html---default-beautifier) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `Pretty Diff`
+**Default**: `JS Beautify`
 
 **Type**: `string`
 
+**Enum**:  `JS Beautify`  `Pretty Diff` 
+
 **Description**:
 
-Default Beautifier to be used for XTemplate
+Default Beautifier to be used for HTML
 
 **How to Configure**
 
 1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Language Config - XTemplate - Default Beautifier*" and change it to your desired configuration.
+3. Find the option "*Language Config - HTML - Default Beautifier*" and change it to your desired configuration.
 
-####  [Language Config - XTemplate - Beautify On Save](#language-config---xtemplate---beautify-on-save) 
+####  [Language Config - HTML - Beautify On Save](#language-config---html---beautify-on-save) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3517,14 +3519,14 @@ Default Beautifier to be used for XTemplate
 
 **Description**:
 
-Automatically beautify XTemplate files on save
+Automatically beautify HTML files on save
 
 **How to Configure**
 
 1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Language Config - XTemplate - Beautify On Save*" and change it to your desired configuration.
+3. Find the option "*Language Config - HTML - Beautify On Save*" and change it to your desired configuration.
 
 ####  [Language Config - Java - Disable Beautifying Language](#language-config---java---disable-beautifying-language) 
 
@@ -4296,6 +4298,61 @@ Automatically beautify Python files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - Python - Beautify On Save*" and change it to your desired configuration.
 
+####  [Language Config - Riot.js - Disable Beautifying Language](#language-config---riot.js---disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Riot.js Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Riot.js - Disable Beautifying Language*" and change it to your desired configuration.
+
+####  [Language Config - Riot.js - Default Beautifier](#language-config---riot.js---default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `JS Beautify`
+
+**Type**: `string`
+
+**Enum**:  `Pretty Diff` 
+
+**Description**:
+
+Default Beautifier to be used for Riot.js
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Riot.js - Default Beautifier*" and change it to your desired configuration.
+
+####  [Language Config - Riot.js - Beautify On Save](#language-config---riot.js---beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Riot.js files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - Riot.js - Beautify On Save*" and change it to your desired configuration.
+
 ####  [Language Config - Ruby - Disable Beautifying Language](#language-config---ruby---disable-beautifying-language) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -5065,6 +5122,59 @@ Automatically beautify XML files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - XML - Beautify On Save*" and change it to your desired configuration.
+
+####  [Language Config - XTemplate - Disable Beautifying Language](#language-config---xtemplate---disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable XTemplate Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - XTemplate - Disable Beautifying Language*" and change it to your desired configuration.
+
+####  [Language Config - XTemplate - Default Beautifier](#language-config---xtemplate---default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `Pretty Diff`
+
+**Type**: `string`
+
+**Description**:
+
+Default Beautifier to be used for XTemplate
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - XTemplate - Default Beautifier*" and change it to your desired configuration.
+
+####  [Language Config - XTemplate - Beautify On Save](#language-config---xtemplate---beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify XTemplate files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - XTemplate - Beautify On Save*" and change it to your desired configuration.
 
 
 ## Beautifier Options
@@ -7303,11 +7413,11 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
 
 **Description**:
 
-Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -7345,30 +7455,6 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 
 
 ### PHPCBF
-
-####  [PHP - PHPCBF Path](#php---phpcbf-path) 
-
-**Namespace**: `php`
-
-**Key**: `phpcbf_path`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
-
-**Description**:
-
-Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "php": {
-        "phpcbf_path": ""
-    }
-}
-```
 
 ####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
 
