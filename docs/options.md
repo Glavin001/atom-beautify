@@ -1848,343 +1848,6 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-####  [LaTeX - Indent size](#latex---indent-size) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `4`
-
-**Type**: `integer`
-
-**Description**:
-
-Indentation size/length (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Indent size*" and change it to your desired configuration.
-
-####  [LaTeX - Indent char](#latex---indent-char) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: ` `
-
-**Type**: `string`
-
-**Description**:
-
-Indentation character (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Indent char*" and change it to your desired configuration.
-
-####  [LaTeX - Indent level](#latex---indent-level) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `integer`
-
-**Description**:
-
-Initial indentation level (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Indent level*" and change it to your desired configuration.
-
-####  [LaTeX - Indent with tabs](#latex---indent-with-tabs) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Indent with tabs*" and change it to your desired configuration.
-
-####  [LaTeX - Preserve newlines](#latex---preserve-newlines) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Description**:
-
-Preserve line-breaks (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Preserve newlines*" and change it to your desired configuration.
-
-####  [LaTeX - Max preserve newlines](#latex---max-preserve-newlines) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `10`
-
-**Type**: `integer`
-
-**Description**:
-
-Number of line-breaks to be preserved in one chunk (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Max preserve newlines*" and change it to your desired configuration.
-
-####  [LaTeX - Space in paren](#latex---space-in-paren) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Add padding spaces within paren, ie. f( a, b ) (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Space in paren*" and change it to your desired configuration.
-
-####  [LaTeX - Jslint happy](#latex---jslint-happy) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Enable jslint-stricter mode (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Jslint happy*" and change it to your desired configuration.
-
-####  [LaTeX - Space after anon function](#latex---space-after-anon-function) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Add a space before an anonymous function's parens, ie. function () (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Space after anon function*" and change it to your desired configuration.
-
-####  [LaTeX - Brace style](#latex---brace-style) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `collapse`
-
-**Type**: `string`
-
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
-
-**Description**:
-
-[collapse|collapse-preserve-inline|expand|end-expand|none] (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Brace style*" and change it to your desired configuration.
-
-####  [LaTeX - Break chained methods](#latex---break-chained-methods) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Break chained method calls across subsequent lines (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Break chained methods*" and change it to your desired configuration.
-
-####  [LaTeX - Keep array indentation](#latex---keep-array-indentation) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Preserve array indentation (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Keep array indentation*" and change it to your desired configuration.
-
-####  [LaTeX - Keep function indentation](#latex---keep-function-indentation) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
- (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Keep function indentation*" and change it to your desired configuration.
-
-####  [LaTeX - Space before conditional](#latex---space-before-conditional) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Description**:
-
- (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Space before conditional*" and change it to your desired configuration.
-
-####  [LaTeX - Eval code](#latex---eval-code) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
- (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Eval code*" and change it to your desired configuration.
-
-####  [LaTeX - Unescape strings](#latex---unescape-strings) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Decode printable characters encoded in xNN notation (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Unescape strings*" and change it to your desired configuration.
-
-####  [LaTeX - Wrap line length](#latex---wrap-line-length) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `integer`
-
-**Description**:
-
-Wrap lines at next opportunity after N characters (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - Wrap line length*" and change it to your desired configuration.
-
-####  [LaTeX - End with newline](#latex---end-with-newline) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-End output with newline (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - End with newline*" and change it to your desired configuration.
-
-####  [LaTeX - End with comma](#latex---end-with-comma) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Not supported by any beautifiers)
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*LaTeX - End with comma*" and change it to your desired configuration.
-
 ####  [Markdown - Gfm](#markdown---gfm) 
 
 **Namespace**: `markdown`
@@ -2413,11 +2076,11 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
-Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -3281,7 +2944,7 @@ Disable D Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `Uncrustify`
+**Default**: `dfmt`
 
 **Type**: `string`
 
@@ -4082,59 +3745,6 @@ Automatically beautify JSX files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - JSX - Beautify On Save*" and change it to your desired configuration.
-
-####  [Language Config - LaTeX - Disable Beautifying Language](#language-config---latex---disable-beautifying-language) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Disable LaTeX Beautification
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Language Config - LaTeX - Disable Beautifying Language*" and change it to your desired configuration.
-
-####  [Language Config - LaTeX - Default Beautifier](#language-config---latex---default-beautifier) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `Latex Beautify`
-
-**Type**: `string`
-
-**Description**:
-
-Default Beautifier to be used for LaTeX
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Language Config - LaTeX - Default Beautifier*" and change it to your desired configuration.
-
-####  [Language Config - LaTeX - Beautify On Save](#language-config---latex---beautify-on-save) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Automatically beautify LaTeX files on save
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Language Config - LaTeX - Beautify On Save*" and change it to your desired configuration.
 
 ####  [Language Config - LESS - Disable Beautifying Language](#language-config---less---disable-beautifying-language) 
 
@@ -7693,11 +7303,11 @@ By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
-Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -7735,6 +7345,30 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 
 
 ### PHPCBF
+
+####  [PHP - PHPCBF Path](#php---phpcbf-path) 
+
+**Namespace**: `php`
+
+**Key**: `phpcbf_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer, PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "phpcbf_path": ""
+    }
+}
+```
 
 ####  [PHP - PHPCBF Standard](#php---phpcbf-standard) 
 
