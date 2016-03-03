@@ -308,7 +308,7 @@ module.exports = class Beautifiers extends EventEmitter
     _.filter( @beautifiers, (beautifier) ->
 
       # logger.verbose('beautifier',beautifier, language)
-      _.contains(beautifier.languages, language)
+      _.includes(beautifier.languages, language)
     )
 
   getBeautifierForLanguage : (language) ->

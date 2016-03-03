@@ -91,6 +91,6 @@ module.exports = class Languages
     _.union(
       _.filter(@languages, (language) -> _.isEqual(language.name, name))
       _.filter(@languages, (language) -> _.isEqual(language.namespace, namespace))
-      _.filter(@languages, (language) -> _.contains(language.grammars, grammar))
-      _.filter(@languages, (language) -> _.contains(language.extensions, extension))
+      _.filter(@languages, (language) -> _.includes(language.grammars, grammar))
+      _.filter(@languages, (language) -> _.includes(language.extensions, extension))
     )
