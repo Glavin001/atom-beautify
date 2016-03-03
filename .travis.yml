@@ -64,9 +64,9 @@ before_install:
   # CoffeeScript
   - npm install coffee-formatter
   # Haskell
-  - brew install haskell-stack
-  - stack setup
-  - stack install stylish-haskell
+  # - brew install haskell-stack
+  # - stack setup
+  # - stack install stylish-haskell
   # Elm
   - curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.1-alpha2/elm-format-0.1-alpha2-mac-x64.tgz
   - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin
