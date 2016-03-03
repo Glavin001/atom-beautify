@@ -31,85 +31,32 @@ module.exports = {
 
   ###
   options:
-    # JavaScript
-    indent_size:
-      type: 'integer'
-      default: defaultIndentSize
-      minimum: 0
-      description: "Indentation size/length"
     indent_char:
       type: 'string'
       default: defaultIndentChar
       description: "Indentation character"
-    indent_level:
-      type: 'integer'
-      default: 0
-      description: "Initial indentation level"
     indent_with_tabs:
       type: 'boolean'
       default: defaultIndentWithTabs
       description: "Indentation uses tabs, overrides `Indent Size` and `Indent Char`"
-    preserve_newlines:
+    indent_preamble:
+      type: 'boolean'
+      default: false
+      description: "Indent the preable"
+    always_look_for_split_braces:
       type: 'boolean'
       default: true
-      description: "Preserve line-breaks"
-    max_preserve_newlines:
-      type: 'integer'
-      default: 10
-      description: "Number of line-breaks to be preserved in one chunk"
-    space_in_paren:
+      description: "If `latexindent` should look for commands that split braces across lines"
+    always_look_for_split_brackets:
       type: 'boolean'
       default: false
-      description: "Add padding spaces within paren, ie. f( a, b )"
-    jslint_happy:
+      description: "If `latexindent` should look for commands that split brackets across lines"
+    remove_trailing_whitespace:
       type: 'boolean'
       default: false
-      description: "Enable jslint-stricter mode"
-    space_after_anon_function:
-      type: 'boolean'
-      default: false
-      description: "Add a space before an anonymous function's parens, ie. function ()"
-    brace_style:
-      type: 'string'
-      default: "collapse"
-      enum: ["collapse", "collapse-preserve-inline", "expand", "end-expand", "none"]
-      description: "[collapse|collapse-preserve-inline|expand|end-expand|none]"
-    break_chained_methods:
-      type: 'boolean'
-      default: false
-      description: "Break chained method calls across subsequent lines"
-    keep_array_indentation:
-      type: 'boolean'
-      default: false
-      description: "Preserve array indentation"
-    keep_function_indentation:
-      type: 'boolean'
-      default: false
-      description: ""
-    space_before_conditional:
-      type: 'boolean'
-      default: true
-      description: ""
-    eval_code:
-      type: 'boolean'
-      default: false
-      description: ""
-    unescape_strings:
-      type: 'boolean'
-      default: false
-      description: "Decode printable characters encoded in xNN notation"
-    wrap_line_length:
-      type: 'integer'
-      default: 0
-      description: "Wrap lines at next opportunity after N characters"
-    end_with_newline:
-      type: 'boolean'
-      default: false
-      description: "End output with newline"
-    end_with_comma:
-      type: 'boolean'
-      default: false
-      description: "If a terminating comma should be inserted into \
-                  arrays, object literals, and destructured objects."
-
+      description: "Remove trailing whitespace"
+    align_columns_in_environments:
+      type: 'array'
+      default:["tabular", "matrix", "bmatrix", "pmatrix"]
+      decription: "Aligns columns by the alignment tabs for environments specified"
 }
