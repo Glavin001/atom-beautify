@@ -2,6 +2,10 @@
 
 Please contribute with a Pull Request and add your favourite languages and beautifiers.
 
+## Source Code Documentation
+Source code documentation can be found at http://glavin001.github.io/atom-beautify/docs/code/
+You can use [`codo`](https://github.com/coffeedoc/codo) to build your own documentation. Simply run `codo` in the project's directory and it will be generated into `docs/code/`.
+
 ## How to add a Language:
 
 1. Create a new Language file in https://github.com/Glavin001/atom-beautify/tree/master/src/languages
