@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>Atom-Beautify Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../extra/README.md.html' title='Atom-Beautify'>
+      Atom-Beautify
+    </a>
+    &raquo;
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>README.md</span>
+  </div>
+</div>
+    <div id='content'>
+      <nav class='toc'>
+        <p class='title'>
+          <a class='hide_toc' href='#'>
+            <strong>Table of Contents</strong>
+          </a>
+          <small>
+            (<a class='float_toc' href='#'>left</a>)
+          </small>
+        </p>
+      </nav>
+      <div id='filecontents'>
+        <h1 id="-atom-beautify-https-github-com-glavin001-atom-beautify-"><a href="https://github.com/Glavin001/atom-beautify">atom-beautify</a></h1><p><a href="https://travis-ci.org/Glavin001/atom-beautify"><img src="https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master" alt="Build Status"></a>
+<a href="https://ci.appveyor.com/project/Glavin001/atom-beautify"><img src="https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true" alt="Build status"></a>
+<a href="https://gitter.im/Glavin001/atom-beautify"><img src="https://img.shields.io/badge/gitter-Glavin001%2Fatom--beautify-1dce73.svg" alt="Gitter chat"></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X2RK5DKN6YXPJ&amp;lc=CA&amp;item_name=Atom%2dBeautify&amp;item_number=atom%2dbeautify&amp;currency_code=CAD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" alt="Paypal Donations"></a></p><p><a href="https://waffle.io/Glavin001/atom-beautify/metrics"><img src="https://graphs.waffle.io/Glavin001/atom-beautify/throughput.svg" alt="Throughput Graph"></a></p><blockquote><p><a href="https://github.com/beautify-web/js-beautify">Beautify</a>
+HTML (including <a href="http://handlebarsjs.com/">Handlebars</a>),
+CSS (including <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>),
+JavaScript, and much more in Atom.</p></blockquote><p>Atom Package: <a href="https://atom.io/packages/atom-beautify">https://atom.io/packages/atom-beautify</a></p><pre><code class="lang-bash">apm install atom-beautify
+</code></pre><p>Or Settings/Preferences ➔ Packages ➔ Search for <code>atom-beautify</code></p><h2 id="language-support">Language Support</h2>
+<ul>
+<li>[x] JavaScript and JSON</li>
+<li>[x] HTML, including<ul>
+<li>[x] <a href="http://handlebarsjs.com/">Handlebars</a></li>
+<li>[x] <a href="http://mustache.github.io">Mustache</a></li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/80">Embedded Ruby (ERB)</a><ul>
+<li>Requires <a href="https://github.com/threedaymonk/htmlbeautifier">htmlbeautifier</a></li>
+</ul>
+</li>
+<li>[x] XML</li>
+<li>[x] SVG</li>
+<li>[x] <a href="https://github.com/marko-js/marko">Marko</a><ul>
+<li>Requires <a href="https://github.com/marko-js/atom-language-marko">language-marko</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[x] CSS, including<ul>
+<li><a href="http://sass-lang.com/">Sass</a></li>
+<li><a href="http://lesscss.org/">Less</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/pull/67">SQL</a><ul>
+<li>Requires <a href="https://github.com/andialbrecht/sqlparse">python-sqlparse</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/292">Markdown</a></li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/33">Perl</a><ul>
+<li>Requires <a href="http://perltidy.sourceforge.net/">perltidy</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/26">PHP</a>  <ul>
+<li>Requires <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">php-cs-fixer</a> to be already installed.</li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/24">Python</a><ul>
+<li>Requires <a href="https://github.com/hhatto/autopep8">autopep8</a> or <a href="https://github.com/google/yapf">YAPF</a> to be already installed.</li>
+<li>Beautifies to <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>.</li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/25">Ruby</a><ul>
+<li>Requires <a href="https://github.com/erniebrodeur/ruby-beautify">Ruby Beautify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/31">CoffeeScript</a></li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/176">Golang</a></li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/45">Java</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">C</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">C++</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">C#</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">Objective-C</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">D</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a> or <a href="https://github.com/Hackerpilot/dfmt">dfmt</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/300">Fortran</a><ul>
+<li>Requires <a href="http://www.gnu.org/software/emacs/">GNU Emacs</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">Pawn</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">Vala</a><ul>
+<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/49">TypeScript</a></li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/628">Haskell</a><ul>
+<li>Requires <a href="https://github.com/jaspervdj/stylish-haskell">stylish-haskell</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/pull/700">Elm</a><ul>
+<li>Requires <a href="https://github.com/avh4/elm-format">Elm-Format</a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/Glavin001/atom-beautify/pull/683">Erlang</a><ul>
+<li>Requires erlang syntax_tools to be installed</li>
+</ul>
+</li>
+</ul>
+<h2 id="usage">Usage</h2><p>Open the <a href="https://github.com/atom/command-palette">Command Palette</a>, and type <code>Beautify</code>.</p><p>It will only beautify selected text if a selection is found -- if not, the whole file will be beautified.</p><h3 id="shortcut">Shortcut</h3><p>You can also type <code>ctrl-alt-b</code> as a shortcut or click <code>Packages &gt; Beautify</code> in the menu.</p><h4 id="custom-keyboard-shortcuts">Custom Keyboard Shortcuts</h4><p>See <a href="https://atom.io/docs/latest/behind-atom-keymaps-in-depth">Keymaps In-Depth</a> for more details.</p><p>For example:</p><pre><code class="lang-coffeescript">&#39;.editor&#39;:
+  &#39;ctrl-alt-b&#39;: &#39;atom-beautify:beautify-editor&#39;
+</code></pre>
+<h2 id="configuration">Configuration</h2><p>Edit your <code>.jsbeautifyrc</code> file in any of the following locations:</p><ul>
+<li>Atom Package Settings<br><code>Atom</code> ➔ <code>Preferences</code> ➔ Search for <code>atom-beautify</code></li>
+<li>Same directory as current file</li>
+<li>Project root<br><code>atom-beautify</code> will recursively look up from the current file&#39;s directory to find <code>.jsbeautifyrc</code>.</li>
+<li>Your user&#39;s home directory</li>
+</ul><p><strong>Note</strong>: <em>Comments are supported in <code>.jsbeautifyrc</code> thanks to <a href="https://github.com/sindresorhus/strip-json-comments">strip-json-comments</a>.</em></p><p>See examples of both ways inside <a href="https://github.com/donaldpipowitch/atom-beautify/tree/master/examples"><code>examples/</code></a></p><p>See <a href="https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md">all supported options in the documentation at  <code>docs/options.md</code></a>.</p><h3 id="simple">Simple</h3><p>See <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/simple-jsbeautifyrc/.jsbeautifyrc">examples/simple-jsbeautifyrc/.jsbeautifyrc</a>.</p><pre><code class="lang-json">{
+  &quot;indent_size&quot;: 2,
+  &quot;indent_char&quot;: &quot; &quot;,
+  &quot;other&quot;: &quot; &quot;,
+  &quot;indent_level&quot;: 0,
+  &quot;indent_with_tabs&quot;: false,
+  &quot;preserve_newlines&quot;: true,
+  &quot;max_preserve_newlines&quot;: 2,
+  &quot;jslint_happy&quot;: true,
+  &quot;indent_handlebars&quot;: true
+}
+</code></pre>
+<h3 id="nested">Nested</h3><p>See <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/nested-jsbeautifyrc/.jsbeautifyrc">examples/nested-jsbeautifyrc/.jsbeautifyrc</a>.</p><pre><code class="lang-json">{
+  &quot;html&quot;: {
+    &quot;brace_style&quot;: &quot;collapse&quot;,
+    &quot;indent_char&quot;: &quot; &quot;,
+    &quot;indent_scripts&quot;: &quot;normal&quot;,
+    &quot;indent_size&quot;: 6,
+    &quot;max_preserve_newlines&quot;: 1,
+    &quot;preserve_newlines&quot;: true,
+    &quot;unformatted&quot;: [&quot;a&quot;, &quot;sub&quot;, &quot;sup&quot;, &quot;b&quot;, &quot;i&quot;, &quot;u&quot;],
+    &quot;wrap_line_length&quot;: 0
+  },
+  &quot;css&quot;: {
+    &quot;indent_char&quot;: &quot; &quot;,
+    &quot;indent_size&quot;: 4
+  },
+  &quot;js&quot;: {
+    &quot;indent_size&quot;: 2,
+    &quot;indent_char&quot;: &quot; &quot;,
+    &quot;indent_level&quot;: 0,
+    &quot;indent_with_tabs&quot;: false,
+    &quot;preserve_newlines&quot;: true,
+    &quot;max_preserve_newlines&quot;: 2,
+    &quot;jslint_happy&quot;: true
+  },
+  &quot;sql&quot;: {
+    &quot;indent_size&quot;: 4,
+    &quot;indent_char&quot;: &quot; &quot;,
+    &quot;indent_level&quot;: 0,
+    &quot;indent_with_tabs&quot;: false
+  }
+}
+</code></pre>
+<h2 id="contributing">Contributing</h2><p><a href="https://github.com/donaldpipowitch/atom-beautify/graphs/contributors">See all contributors on GitHub</a>.</p><p>Please update the <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md">CHANGELOG.md</a>,
+add yourself as a contributor to the <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/package.json">package.json</a>,
+and submit a <a href="https://help.github.com/articles/using-pull-requests/">Pull Request on GitHub</a>.</p><h2 id="license">License</h2><p><a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/LICENSE.md">MIT</a> © <a href="https://github.com/Glavin001">Glavin Wiechert</a></p>
+      </div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.0
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

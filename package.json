@@ -178,6 +178,7 @@
   "scripts": {
     "prepublish": "npm run docs",
     "docs": "coffee docs/",
-    "lint": "coffeelint src/ spec/"
+    "lint": "coffeelint src/ spec/",
+    "code-docs": "codo && open docs/code/index.html"
   }
 }
