@@ -1,6 +1,8 @@
 Beautifiers = require "../src/beautifiers"
 beautifiers = new Beautifiers()
 Beautifier = require "../src/beautifiers/beautifier"
+Languages = require('../src/languages/')
+_ = require('lodash')
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -183,3 +185,24 @@ describe "Atom-Beautify", ->
               return v
             p.then(cb, cb)
             return p
+
+describe "Languages", ->
+
+  languages = null
+
+  beforeEach ->
+    languages = new Languages()
+
+  describe "Languages::namespace", ->
+
+    it "should verify that multiple languages do not share the same namespace", ->
+
+      namespaceGroups = _.groupBy(languages.languages, "namespace")
+      namespacePairs = _.toPairs(namespaceGroups)
+      namespaceOverlap = _.filter(namespacePairs, ([namespace, group]) -> group.length > 1)
+      console.log('namespaces', namespaceGroups, namespacePairs, namespaceOverlap)
+      expect(namespaceOverlap.length).toBe(0, \
+        "Language namespaces are overlapping.\n\
+        Namespaces are unique: only one language for each namespace.\n"+
+        _.map(namespaceOverlap, ([namespace, group]) -> "- '#{namespace}': Check languages #{_.map(group, 'name').join(', ')} for using namespace '#{namespace}'.").join('\n')
+        )
