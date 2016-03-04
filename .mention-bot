@@ -4,6 +4,7 @@
 	  "Glavin001"
 	],
 	"fileBlacklist": [
-		"*.md"
+		"*.md",
+		"package.json"
 	]
 }
