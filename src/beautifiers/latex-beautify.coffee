@@ -17,7 +17,7 @@ module.exports = class LatexBeautify extends Beautifier
   buildConfigFile: (options) ->
     indentChar = options.indent_char
     if options.indent_with_tabs
-      indentChar = "\t"
+      indentChar = "\\t"
     # +true = 1 and +false = 0
     config = """
              defaultIndent: \"#{indentChar}\"

@@ -37,7 +37,7 @@ module.exports = {
       description: "Indentation character"
     indent_with_tabs:
       type: 'boolean'
-      default: defaultIndentWithTabs
+      default: true
       description: "Indentation uses tabs, overrides `Indent Size` and `Indent Char`"
     indent_preamble:
       type: 'boolean'
