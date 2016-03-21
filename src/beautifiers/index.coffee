@@ -125,7 +125,7 @@ module.exports = class Beautifiers extends EventEmitter
         if not op.title?
           op.title = _plus.uncamelcase(field).split('.')
           .map(_plus.capitalize).join(' ')
-        op.title = "#{lang.name} - #{op.title}"
+        # op.title = "#{lang.name} - #{op.title}"
 
         # Init field for supported beautifiers
         op.beautifiers = []
@@ -224,21 +224,29 @@ module.exports = class Beautifiers extends EventEmitter
       optionName = "language_#{namespace}"
 
       # Add Language configurations
-      _.set(langOptions, "#{namespace}.disabled", {
-        title : "Language Config - #{name} - Disable Beautifying Language"
+      _.set(langOptions, "#{namespace}.properties.disabled", {
+        title : "Disable Beautifying Language"
+        order : -3
         type : 'boolean'
         default : false
         description : "Disable #{name} Beautification"
       })
-      _.set(langOptions, "#{namespace}.default_beautifier", {
-        title : "Language Config - #{name} - Default Beautifier"
+
+      defaultBeautifier = lang.defaultBeautifier ? beautifiers[0]
+      _.set(langOptions, "#{namespace}.properties.default_beautifier", {
+        title : "Default Beautifier"
+        order : -2
         type : 'string'
-        default : lang.defaultBeautifier ? beautifiers[0]
+        default : defaultBeautifier
         description : "Default Beautifier to be used for #{name}"
         enum : _.uniq(beautifiers)
       })
-      _.set(langOptions, "#{namespace}.beautify_on_save", {
-        title : "Language Config - #{name} - Beautify On Save"
+      if !_.includes(beautifiers, defaultBeautifier)
+        logger.warn("Language #{name} has a default beautifier of #{defaultBeautifier}, however it is not one of the supported beautifiers: #{optionDef.beautifiers.join(', ')}.")
+
+      _.set(langOptions, "#{namespace}.properties.beautify_on_save", {
+        title : "Beautify On Save"
+        order : -1
         type : 'boolean'
         default : false
         description : "Automatically beautify #{name} files on save"
