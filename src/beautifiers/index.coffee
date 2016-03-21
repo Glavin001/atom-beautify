@@ -216,12 +216,18 @@ module.exports = class Beautifiers extends EventEmitter
               logger.warn("Unsupported option:", beautifierName, languageName, field, op, langOptions)
 
     # Improve descriptions to each language option
+    unsupportedOptions = []
     for g,group of langOptions
       for o,optionDef of group.properties
         if optionDef.beautifiers.length > 0
           optionDef.description = "#{optionDef.description} (Supported by #{optionDef.beautifiers.join(', ')})"
         else
-          optionDef.description = "#{optionDef.description} (Not supported by any beautifiers)"
+          # optionDef.description = "#{optionDef.description} (Not supported by any beautifiers)"
+          logger.warn("#{g}'s option '#{optionDef.title} not supported by any beautifiers!")
+          unsupportedOptions.push("#{g}.properties.#{o}")
+    # Delete unsupported options
+    for p in unsupportedOptions
+      _.unset(langOptions, p)
 
     # Generate Language configurations
     # logger.verbose('languages', languages)
