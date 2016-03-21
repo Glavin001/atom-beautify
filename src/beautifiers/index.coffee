@@ -453,20 +453,20 @@ module.exports = class Beautifiers extends EventEmitter
             )
 
         # Check if Analytics is enabled
-        if atom.config.get("atom-beautify.analytics")
+        if atom.config.get("atom-beautify.general.analytics")
 
           # Setup Analytics
           analytics = new Analytics(analyticsWriteKey)
-          unless atom.config.get("atom-beautify._analyticsUserId")
+          unless atom.config.get("atom-beautify.general.analyticsUserId")
             uuid = require("node-uuid")
-            atom.config.set "atom-beautify._analyticsUserId", uuid.v4()
+            atom.config.set "atom-beautify.general.analyticsUserId", uuid.v4()
 
           # Setup Analytics User Id
-          userId = atom.config.get("atom-beautify._analyticsUserId")
+          userId = atom.config.get("atom-beautify.general.analyticsUserId")
           analytics.identify userId : userId
           version = pkg.version
           analytics.track
-            userId : atom.config.get("atom-beautify._analyticsUserId")
+            userId : atom.config.get("atom-beautify.general.analyticsUserId")
             event : "Beautify"
             properties :
               language : language?.name
@@ -478,7 +478,7 @@ module.exports = class Beautifiers extends EventEmitter
               category : version
 
         if unsupportedGrammar
-          if atom.config.get("atom-beautify.muteUnsupportedLanguageErrors")
+          if atom.config.get("atom-beautify.general.muteUnsupportedLanguageErrors")
             return resolve( null )
           else
             repoBugsUrl = pkg.bugs.url

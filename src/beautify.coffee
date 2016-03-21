@@ -58,7 +58,7 @@ beautifier.on('beautify::end', ->
 )
 # Show error
 showError = (error) ->
-  if not atom.config.get("atom-beautify.muteAllErrors")
+  if not atom.config.get("atom-beautify.general.muteAllErrors")
     # console.log(e)
     stack = error.stack
     detail = error.description or error.message
@@ -84,7 +84,7 @@ beautify = ({onSave}) ->
 
   # Continue beautifying
   path ?= require("path")
-  forceEntireFile = onSave and atom.config.get("atom-beautify.beautifyEntireFileOnSave")
+  forceEntireFile = onSave and atom.config.get("atom-beautify.general.beautifyEntireFileOnSave")
 
   # Get the path to the config file
   # All of the options

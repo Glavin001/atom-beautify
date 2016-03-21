@@ -15,12 +15,12 @@ module.exports = {
                 used the most, as well as other stats. Everything is anonymized and no personal
                 information, such as source code, is sent.
                 See https://github.com/Glavin001/atom-beautify/issues/47 for more details."
-      _analyticsUserId :
+      analyticsUserId :
         title: 'Analytics User Id'
         type : 'string'
         default : ""
         description : "Unique identifier for this user for tracking usage analytics"
-      _loggerLevel :
+      loggerLevel :
         title: "Logger Level"
         type : 'string'
         default : 'warn'

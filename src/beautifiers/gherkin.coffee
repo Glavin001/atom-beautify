@@ -121,7 +121,7 @@ module.exports = class Gherkin extends Beautifier
       lexer = new Lexer(recorder)
       lexer.scan(text)
 
-      loggerLevel = atom?.config.get('atom-beautify._loggerLevel')
+      loggerLevel = atom?.config.get('atom-beautify.general.loggerLevel')
       if loggerLevel is 'verbose'
         for line in recorder.lines
           logger.verbose("> #{line}")
