@@ -139,6 +139,16 @@ module.exports = class Beautifiers extends EventEmitter
         # Add option
         options[field] = op
 
+    # Language fallback options
+    for lang in @languages.languages
+      # Use the namespace from language as key prefix
+      namespaceDest = lang.namespace
+      optionsDest = _.get(langOptions, "#{namespaceDest}.properties")
+      fallback = _.reverse(lang.fallback ? [])
+      for namespaceSrc in fallback
+        optionsSrc = _.get(langOptions, "#{namespaceSrc}.properties")
+        _.merge(optionsDest, optionsSrc)
+
     # Find supported beautifiers for each language
     for beautifier in beautifiers
       beautifierName = beautifier.name
