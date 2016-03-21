@@ -112,6 +112,7 @@ module.exports = class Beautifiers extends EventEmitter
         type: 'object',
         description: "Options for language #{lang.name}"
         collapsed: true
+        beautifiers: []
         properties: {}
       }
       languages[lang.name] ?= lang
@@ -164,6 +165,7 @@ module.exports = class Beautifiers extends EventEmitter
           # Enable / disable all options
           # Add Beautifier support to Language
           languages[languageName]?.beautifiers.push(beautifierName)
+          _.get(langOptions, "#{namespace}.beautifiers")?.push(beautifierName)
 
           # Check for beautifier's options support
           if options is true
@@ -187,6 +189,7 @@ module.exports = class Beautifiers extends EventEmitter
               # Transformation
               if op is true
                 languages[languageName]?.beautifiers.push(beautifierName)
+                _.get(langOptions, "#{namespace}.beautifiers")?.push(beautifierName)
                 laOp?[field]?.beautifiers.push(beautifierName)
             else if typeof op is "string"
 
@@ -198,6 +201,7 @@ module.exports = class Beautifiers extends EventEmitter
 
               # Transformation
               languages[languageName]?.beautifiers.push(beautifierName)
+              _.get(langOptions, "#{namespace}.beautifiers")?.push(beautifierName)
               laOp?[field]?.beautifiers.push(beautifierName)
             else if _.isArray(op)
 
@@ -206,6 +210,7 @@ module.exports = class Beautifiers extends EventEmitter
 
               # Add beautifier support to all required fields
               languages[languageName]?.beautifiers.push(beautifierName)
+              _.get(langOptions, "#{namespace}.beautifiers")?.push(beautifierName)
               for f in fields
 
                 # Add beautifier to required field
@@ -223,7 +228,7 @@ module.exports = class Beautifiers extends EventEmitter
           optionDef.description = "#{optionDef.description} (Supported by #{optionDef.beautifiers.join(', ')})"
         else
           # optionDef.description = "#{optionDef.description} (Not supported by any beautifiers)"
-          logger.warn("#{g}'s option '#{optionDef.title} not supported by any beautifiers!")
+          # logger.warn("#{g}'s option '#{optionDef.title} not supported by any beautifiers!")
           unsupportedOptions.push("#{g}.properties.#{o}")
     # Delete unsupported options
     for p in unsupportedOptions

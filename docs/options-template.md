@@ -9,7 +9,7 @@ Configurable options for Atom Beautify.
 ---
 
 {{#each packageOptions}}
-{{> option}}
+{{> option-group}}
 {{/each}}
 
 ## Language Options
@@ -19,7 +19,7 @@ Supported options for each language.
 ---
 
 {{#each languageOptions}}
-{{> option}}
+{{> option-group}}
 {{/each}}
 
 ## Beautifier Options

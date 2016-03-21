@@ -1,4 +1,4 @@
-#### {{#if title}} {{#linkify title}}{{title}}{{/linkify}} {{else}} {{#linkify @key}}`{{@key}}`{{/linkify}} {{/if}}
+##### {{#if title}} {{#linkify title}}{{title}}{{/linkify}} {{else}} {{#linkify @key}}`{{@key}}`{{/linkify}} {{/if}}
 
 {{#if beautifiers}}
 **Namespace**: `{{language.namespace}}`
@@ -26,7 +26,7 @@
 
 {{{description}}}
 
-{{#if beautifiers}}
+{{#if language}}
 **Example `.jsbeautifyrc` Configuration**
 
 {{example-config this}}
