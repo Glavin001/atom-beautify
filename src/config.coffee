@@ -1,8 +1,9 @@
 module.exports = {
-  _general:
+  general:
     title: 'General'
     type: 'object'
     collapsed: true
+    order: -1
     description: 'General options for Atom Beautify'
     properties:
       analytics :
