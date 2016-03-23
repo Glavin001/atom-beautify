@@ -84,7 +84,7 @@
     "diff": "^2.1.0",
     "editorconfig": "^0.12.2",
     "event-kit": "^1.4.1",
-    "expand-home-dir": "0.0.2",
+    "expand-home-dir": "0.0.3",
     "extend": "^3.0.0",
     "gherkin": "2.12.2",
     "handlebars": "^4.0.2",
