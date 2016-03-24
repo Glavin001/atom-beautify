@@ -8,6 +8,7 @@ module.exports = {
   ###
   grammars: [
     "C"
+    "opencl"
   ]
 
   ###
@@ -15,6 +16,7 @@ module.exports = {
   ###
   extensions: [
     "c"
+    "cl"
   ]
 
   options:
