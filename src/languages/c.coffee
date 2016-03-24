@@ -8,6 +8,7 @@ module.exports = {
   ###
   grammars: [
     "C"
+    "opencl"
   ]
 
   ###
