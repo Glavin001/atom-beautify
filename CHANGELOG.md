@@ -3,6 +3,7 @@
 - Add [clang-format](http://clang.llvm.org/docs/ClangFormat.html) beautifier for C/C++/Obj-C languages.
 - Add [yapf](http://github.com/google/yapf) beautifier for Python.
 - Closes [#776] (https://github.com/Glavin001/atom-beautify/issues/776) Add support for `collapse-preserve-inline` brace_style for javascript.
+- Closes [#786](https://github.com/Glavin001/atom-beautify/issues/786) YAPF configuration files are ignored.
 
 # v0.29.0
 - Closes [#447](https://github.com/Glavin001/atom-beautify/issues/447). Improved Handlebars language support
