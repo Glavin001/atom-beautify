@@ -6,6 +6,7 @@
 
 # v0.29.0
 - Closes [#447](https://github.com/Glavin001/atom-beautify/issues/447). Improved Handlebars language support
+- Closes [#384](https://github.com/Glavin001/atom-beautify/issues/384). Add [latexindent.pl](https://github.com/cmhughes/latexindent.pl) beautifier for LaTeX language
 
 # v0.26.0 (2015-05-03)
 - Closes [#176](https://github.com/Glavin001/atom-beautify/issues/176). Add [gofmt](http://golang.org/cmd/gofmt/) beautifier for Go language

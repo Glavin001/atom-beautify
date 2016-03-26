@@ -1848,6 +1848,185 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
+####  [LaTeX - Indent char](#latex---indent-char) 
+
+**Namespace**: `latex`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Indentation character (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "indent_char": " "
+    }
+}
+```
+
+####  [LaTeX - Indent with tabs](#latex---indent-with-tabs) 
+
+**Namespace**: `latex`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "indent_with_tabs": false
+    }
+}
+```
+
+####  [LaTeX - Indent preamble](#latex---indent-preamble) 
+
+**Namespace**: `latex`
+
+**Key**: `indent_preamble`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Indent the preable (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "indent_preamble": false
+    }
+}
+```
+
+####  [LaTeX - Always look for split braces](#latex---always-look-for-split-braces) 
+
+**Namespace**: `latex`
+
+**Key**: `always_look_for_split_braces`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+If `latexindent` should look for commands that split braces across lines (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "always_look_for_split_braces": true
+    }
+}
+```
+
+####  [LaTeX - Always look for split brackets](#latex---always-look-for-split-brackets) 
+
+**Namespace**: `latex`
+
+**Key**: `always_look_for_split_brackets`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+If `latexindent` should look for commands that split brackets across lines (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "always_look_for_split_brackets": false
+    }
+}
+```
+
+####  [LaTeX - Remove trailing whitespace](#latex---remove-trailing-whitespace) 
+
+**Namespace**: `latex`
+
+**Key**: `remove_trailing_whitespace`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Remove trailing whitespace (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "remove_trailing_whitespace": false
+    }
+}
+```
+
+####  [LaTeX - Align columns in environments](#latex---align-columns-in-environments) 
+
+**Namespace**: `latex`
+
+**Key**: `align_columns_in_environments`
+
+**Default**: `tabular,matrix,bmatrix,pmatrix`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+undefined (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "align_columns_in_environments": [
+            "tabular",
+            "matrix",
+            "bmatrix",
+            "pmatrix"
+        ]
+    }
+}
+```
+
 ####  [Markdown - Gfm](#markdown---gfm) 
 
 **Namespace**: `markdown`
@@ -3747,6 +3926,61 @@ Automatically beautify JSX files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Language Config - JSX - Beautify On Save*" and change it to your desired configuration.
+
+####  [Language Config - LaTeX - Disable Beautifying Language](#language-config---latex---disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable LaTeX Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - LaTeX - Disable Beautifying Language*" and change it to your desired configuration.
+
+####  [Language Config - LaTeX - Default Beautifier](#language-config---latex---default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `Latex Beautify`
+
+**Type**: `string`
+
+**Enum**:  `Latex Beautify` 
+
+**Description**:
+
+Default Beautifier to be used for LaTeX
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - LaTeX - Default Beautifier*" and change it to your desired configuration.
+
+####  [Language Config - LaTeX - Beautify On Save](#language-config---latex---beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify LaTeX files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Language Config - LaTeX - Beautify On Save*" and change it to your desired configuration.
 
 ####  [Language Config - LESS - Disable Beautifying Language](#language-config---less---disable-beautifying-language) 
 
@@ -7220,6 +7454,188 @@ Path to the emacs script (Supported by Fortran Beautifier)
 {
     "fortran": {
         "emacs_script_path": ""
+    }
+}
+```
+
+
+### Latex Beautify
+
+####  [LaTeX - Indent char](#latex---indent-char) 
+
+**Namespace**: `latex`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Indentation character (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "indent_char": " "
+    }
+}
+```
+
+####  [LaTeX - Indent with tabs](#latex---indent-with-tabs) 
+
+**Namespace**: `latex`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "indent_with_tabs": false
+    }
+}
+```
+
+####  [LaTeX - Indent preamble](#latex---indent-preamble) 
+
+**Namespace**: `latex`
+
+**Key**: `indent_preamble`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Indent the preable (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "indent_preamble": false
+    }
+}
+```
+
+####  [LaTeX - Always look for split braces](#latex---always-look-for-split-braces) 
+
+**Namespace**: `latex`
+
+**Key**: `always_look_for_split_braces`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+If `latexindent` should look for commands that split braces across lines (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "always_look_for_split_braces": true
+    }
+}
+```
+
+####  [LaTeX - Always look for split brackets](#latex---always-look-for-split-brackets) 
+
+**Namespace**: `latex`
+
+**Key**: `always_look_for_split_brackets`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+If `latexindent` should look for commands that split brackets across lines (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "always_look_for_split_brackets": false
+    }
+}
+```
+
+####  [LaTeX - Remove trailing whitespace](#latex---remove-trailing-whitespace) 
+
+**Namespace**: `latex`
+
+**Key**: `remove_trailing_whitespace`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+Remove trailing whitespace (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "remove_trailing_whitespace": false
+    }
+}
+```
+
+####  [LaTeX - Align columns in environments](#latex---align-columns-in-environments) 
+
+**Namespace**: `latex`
+
+**Key**: `align_columns_in_environments`
+
+**Default**: `tabular,matrix,bmatrix,pmatrix`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+
+**Description**:
+
+undefined (Supported by Latex Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "latex": {
+        "align_columns_in_environments": [
+            "tabular",
+            "matrix",
+            "bmatrix",
+            "pmatrix"
+        ]
     }
 }
 ```

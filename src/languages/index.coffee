@@ -36,6 +36,7 @@ module.exports = class Languages
     "javascript"
     "json"
     "jsx"
+    "latex"
     "less"
     "markdown"
     'marko'
