@@ -87,6 +87,7 @@
     "bluebird": "^2.9.30",
     "coffee-fmt": "0.11.0",
     "coffee-formatter": "^0.1.2",
+    "coffee-script": "^1.10.0",
     "cross-spawn": "^2.0.0",
     "csscomb": "^3.1.7",
     "diff": "^2.1.0",
@@ -179,11 +180,11 @@
     "elm"
   ],
   "devDependencies": {
-    "coffee-script": "^1.9.3",
     "coffeelint": "^1.10.1",
     "handlebars": "^4.0.2"
   },
   "scripts": {
+    "postinstall": "./node_modules/.bin/coffee script/build-options.coffee",
     "prepublish": "npm run docs",
     "docs": "coffee docs/",
     "lint": "coffeelint src/ spec/",
