@@ -16,7 +16,6 @@ module.exports = class Yapf extends Beautifier
   beautify: (text, language, options) ->
     @run("yapf", [
       "-i"
-      ["--style=pep8"]
       tempFile = @tempFile("input", text)
       ], help: {
         link: "https://github.com/google/yapf"

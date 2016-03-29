@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.28.26",
+  "version": "0.28.27",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, and SQL in Atom",
   "repository": {
@@ -66,6 +66,14 @@
     {
       "name": "Luis Arias",
       "url": "https://github.com/kaaloo"
+    },
+    {
+      "name": "Bati Sengul",
+      "url": "https://github.com/Focus"
+    },
+    {
+      "name": "Dheepak Krishnamurthy",
+      "url": "https://github.com/kdheepak89"
     }
   ],
   "engines": {
@@ -84,7 +92,7 @@
     "diff": "^2.1.0",
     "editorconfig": "^0.12.2",
     "event-kit": "^1.4.1",
-    "expand-home-dir": "0.0.2",
+    "expand-home-dir": "0.0.3",
     "extend": "^3.0.0",
     "gherkin": "2.12.2",
     "handlebars": "^4.0.2",

@@ -44,6 +44,7 @@ module.exports = class Beautifiers extends EventEmitter
     'csscomb'
     'gherkin'
     'gofmt'
+    'latex-beautify'
     'fortran-beautifier'
     'js-beautify'
     'jscs'
