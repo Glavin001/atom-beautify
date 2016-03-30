@@ -31,12 +31,12 @@ describe "Atom-Beautify", ->
 
   describe "Beautifiers", ->
 
+    beautifier = null
+
+    beforeEach ->
+      beautifier = new Beautifier()
+
     describe "Beautifier::run", ->
-
-      beautifier = null
-
-      beforeEach ->
-        beautifier = new Beautifier()
 
       it "should error when beautifier's program not found", ->
         expect(beautifier).not.toBe(null)
@@ -185,6 +185,114 @@ describe "Atom-Beautify", ->
               return v
             p.then(cb, cb)
             return p
+
+  describe "Options", ->
+
+    editor = null
+    beautifier = null
+    workspaceElement = atom.views.getView(atom.workspace)
+    beforeEach ->
+      beautifier = new Beautifiers()
+      waitsForPromise ->
+        atom.workspace.open().then (e) ->
+          editor = e
+          expect(editor.getText()).toEqual("")
+
+    beautifyEditor = (callback) ->
+      isComplete = false
+      beforeText = null
+      delay = 500
+      runs ->
+        beforeText = editor.getText()
+        atom.commands.dispatch workspaceElement, "atom-beautify:beautify-editor"
+        setTimeout(->
+          isComplete = true
+        , delay)
+      waitsFor ->
+        isComplete
+
+      runs ->
+        afterText = editor.getText()
+        expect(typeof beforeText).toBe('string')
+        expect(typeof afterText).toBe('string')
+        return callback(beforeText, afterText)
+
+    describe "JavaScript", ->
+
+      beforeEach ->
+
+        waitsForPromise ->
+          packName = 'language-javascript'
+          atom.packages.activatePackage(packName)
+
+        runs ->
+          # Setup Editor
+          code = "var hello='world';function(){console.log('hello '+hello)}"
+          editor.setText(code)
+          # console.log(atom.grammars.grammarsByScopeName)
+          grammar = atom.grammars.selectGrammar('source.js')
+          expect(grammar.name).toBe('JavaScript')
+          editor.setGrammar(grammar)
+          expect(editor.getGrammar().name).toBe('JavaScript')
+
+          # See https://discuss.atom.io/t/solved-settimeout-not-working-firing-in-specs-tests/11427/17
+          jasmine.unspy(window, 'setTimeout')
+
+      afterEach ->
+        atom.packages.deactivatePackages()
+        atom.packages.unloadPackages()
+
+      describe ".jsbeautifyrc", ->
+
+      describe "Package settings", ->
+
+        getOptions = (callback) ->
+          options = null
+          waitsForPromise ->
+            console.log('beautifier', beautifier.getOptionsForPath, beautifier)
+            allOptions = beautifier.getOptionsForPath(null, null)
+            # Resolve options with promises
+            return Promise.all(allOptions)
+            .then((allOptions) ->
+              options = allOptions
+            )
+          runs ->
+            callback(options)
+
+        it "should change indent_size to 1", ->
+          atom.config.set('atom-beautify.js.indent_size', 1)
+
+          getOptions (allOptions) ->
+            expect(typeof allOptions).toBe('object')
+            configOptions = allOptions[1]
+            expect(typeof configOptions).toBe('object')
+            expect(configOptions.js.indent_size).toBe(1)
+
+            beautifyEditor (beforeText, afterText) ->
+              # console.log(beforeText, afterText, editor)
+              expect(afterText).toBe("""var hello = 'world';
+
+              function() {
+               console.log('hello ' + hello)
+              }""")
+
+        it "should change indent_size to 10", ->
+          atom.config.set('atom-beautify.js.indent_size', 10)
+
+          getOptions (allOptions) ->
+            expect(typeof allOptions).toBe('object')
+            configOptions = allOptions[1]
+            expect(typeof configOptions).toBe('object')
+            expect(configOptions.js.indent_size).toBe(10)
+
+            beautifyEditor (beforeText, afterText) ->
+              # console.log(beforeText, afterText, editor)
+              expect(afterText).toBe("""var hello = 'world';
+
+              function() {
+                        console.log('hello ' + hello)
+              }""")
+
 
 describe "Languages", ->
 
