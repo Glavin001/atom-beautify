@@ -66,21 +66,6 @@ showError = (error) ->
       stack, detail, dismissable : true})
 
 beautify = ({onSave}) ->
-  # Deprecation warning for beautify on save
-  if atom.config.get("atom-beautify.beautifyOnSave") is true
-    detail = """See issue https://github.com/Glavin001/atom-beautify/issues/308
-
-             To stop seeing this message:
-             - Uncheck (disable) the deprecated \"Beautify On Save\" option
-
-             To enable Beautify on Save for a particular language:
-             - Go to Atom Beautify's package settings
-             - Find option for \"Language Config - <Your Language> - Beautify On Save\"
-             - Check (enable) Beautify On Save option for that particular language
-
-             """
-
-    atom?.notifications.addWarning("The option \"atom-beautify.beautifyOnSave\" has been deprecated", {detail, dismissable : true})
 
   # Continue beautifying
   path ?= require("path")
@@ -490,7 +475,7 @@ handleSaveEvent = ->
       # TODO: select appropriate language
       language = languages[0]
       # Get language config
-      key = "atom-beautify.language_#{language.namespace}_beautify_on_save"
+      key = "atom-beautify.#{language.namespace}.beautify_on_save"
       beautifyOnSave = atom.config.get(key)
       logger.verbose('save editor positions', key, beautifyOnSave)
       if beautifyOnSave
@@ -516,7 +501,6 @@ plugin.config = _.merge(require('./config.coffee'), defaultLanguageOptions)
 plugin.activate = ->
   @subscriptions = new CompositeDisposable
   @subscriptions.add handleSaveEvent()
-  @subscriptions.add atom.config.observe("atom-beautify.beautifyOnSave", handleSaveEvent)
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:beautify-editor", beautify
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
   @subscriptions.add atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile

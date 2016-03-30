@@ -122,7 +122,7 @@ module.exports = class Beautifiers extends EventEmitter
     beautifiers = @getBeautifiers(language.name)
     logger.verbose('beautifiers', _.map(beautifiers, 'name'))
     # Select beautifier from language config preferences
-    preferredBeautifierName = atom.config.get("atom-beautify.language_#{language.namespace}_default_beautifier")
+    preferredBeautifierName = atom.config.get("atom-beautify.#{language.namespace}.default_beautifier")
     beautifier = _.find(beautifiers, (beautifier) ->
       beautifier.name is preferredBeautifierName
     ) or beautifiers[0]
@@ -229,7 +229,7 @@ module.exports = class Beautifiers extends EventEmitter
           logger.verbose("Language #{language.name} supported")
 
           # Get language config
-          langDisabled = atom.config.get("atom-beautify.language_#{language.namespace}_disabled")
+          langDisabled = atom.config.get("atom-beautify.#{language.namespace}.disabled")
 
 
           # Beautify!
@@ -242,11 +242,10 @@ module.exports = class Beautifiers extends EventEmitter
             return resolve( null )
 
           # Get more language config
-          beautifyOnSave = atom.config.get("atom-beautify.language_#{language.namespace}_beautify_on_save")
-          legacyBeautifyOnSave = atom.config.get("atom-beautify.beautifyOnSave")
+          beautifyOnSave = atom.config.get("atom-beautify.#{language.namespace}.beautify_on_save")
 
           # Verify if beautifying on save
-          if onSave and not (beautifyOnSave or legacyBeautifyOnSave)
+          if onSave and not beautifyOnSave
             logger.verbose("Beautify on save is disabled for language #{language.name}")
             # Saving, and beautify on save is disabled
             return resolve( null )
@@ -410,32 +409,7 @@ module.exports = class Beautifiers extends EventEmitter
     null
   getConfigOptionsFromSettings : (langs) ->
     config = atom.config.get('atom-beautify')
-    options = {}
-
-
-    # logger.verbose(langs, config);
-    # Iterate over keys of the settings
-    _.every _.keys(config), (k) ->
-
-      # Check if keys start with a language
-      p = k.split("_")[0]
-      idx = _.indexOf(langs, p)
-
-
-      # logger.verbose(k, p, idx);
-      if idx >= 0
-
-        # Remove the language prefix and nest in options
-        lang = langs[idx]
-        opt = k.replace( new RegExp("^" + lang + "_"), "")
-        options[lang] = options[lang] or {}
-        options[lang][opt] = config[k]
-
-      # logger.verbose(lang, opt)
-      true
-
-    # logger.verbose(options)
-    options
+    options = _.pick(config, langs)
 
   # Look for .jsbeautifierrc in file and home path, check env variables
   getConfig : (startPath, upwards = true) ->
