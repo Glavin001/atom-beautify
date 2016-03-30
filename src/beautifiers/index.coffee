@@ -130,7 +130,10 @@ module.exports = class Beautifiers extends EventEmitter
         op.key =  field
 
         # Remember Option's Language
-        op.language = lang
+        op.language = {
+          name: lang.name,
+          namespace: lang.namespace
+        }
 
         # Add option
         options[field] = op
