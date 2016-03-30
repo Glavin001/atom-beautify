@@ -103,6 +103,7 @@
     "node-dir": "^0.1.8",
     "node-uuid": "^1.4.3",
     "prettydiff": "^1.16.27",
+    "pug-beautify": "^0.1.1",
     "remark": "^3.2.2",
     "season": "^5.3.0",
     "space-pen": "^5.1.1",

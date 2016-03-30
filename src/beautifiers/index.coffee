@@ -52,6 +52,7 @@ module.exports = class Beautifiers extends EventEmitter
     'php-cs-fixer'
     'phpcbf'
     'prettydiff'
+    'pug-beautify'
     'puppet-fix'
     'remark'
     'rubocop'

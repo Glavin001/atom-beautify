@@ -55,3 +55,7 @@
     indent_size: 4
   markdown:
     listItemIndent: 1
+  jade:
+    indent_size: 4
+    indent_char: " "
+    omit_div: true
