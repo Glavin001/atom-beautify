@@ -3,6 +3,11 @@ beautifiers = new Beautifiers()
 Beautifier = require "../src/beautifiers/beautifier"
 Languages = require('../src/languages/')
 _ = require('lodash')
+fs   = require('fs')
+path = require('path')
+Promise = require("bluebird")
+temp = require('temp')
+temp.track()
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -28,6 +33,9 @@ describe "Atom-Beautify", ->
       # atom.config.set('atom-beautify._loggerLevel', 'verbose')
       # Return promise
       return activationPromise
+
+  afterEach ->
+    temp.cleanupSync()
 
   describe "Beautifiers", ->
 
@@ -262,6 +270,76 @@ describe "Atom-Beautify", ->
       #   atom.packages.unloadPackages()
 
       describe ".jsbeautifyrc", ->
+
+        it "should look at directories above file", ->
+          isDone = false
+          cb = (err) ->
+            isDone = true
+            expect(err).toBe(undefined)
+          runs ->
+            try
+              # console.log('runs')
+              # Make top directory
+              temp.mkdir('dir1', (err, dirPath) ->
+                # console.log(arguments)
+                return cb(err) if err
+                # Add .jsbeautifyrc file
+                rcPath = path.join(dirPath, '.jsbeautifyrc')
+                myData1 = {
+                  indent_size: 1,
+                  indent_char: '\t'
+                }
+                myData = JSON.stringify(myData1)
+                fs.writeFile(rcPath, myData, (err) ->
+                  # console.log(arguments)
+                  return cb(err) if err
+                  # Make next directory
+                  dirPath = path.join(dirPath, 'dir2')
+                  fs.mkdir(dirPath, (err) ->
+                    # console.log(arguments)
+                    return cb(err) if err
+                    # Add .jsbeautifyrc file
+                    rcPath = path.join(dirPath, '.jsbeautifyrc')
+                    myData2 = {
+                      indent_size: 2,
+                      indent_char: ' '
+                    }
+                    myData = JSON.stringify(myData2)
+                    fs.writeFile(rcPath, myData, (err) ->
+                      # console.log(arguments)
+                      return cb(err) if err
+                      Promise.all(beautifier.getOptionsForPath(rcPath, null))
+                      .then((allOptions) ->
+                        # console.log('allOptions', allOptions)
+
+                        # Extract options
+                        [
+                            editorOptions
+                            configOptions
+                            homeOptions
+                            editorConfigOptions
+                        ] = allOptions
+                        projectOptions = allOptions[4..]
+
+                        # Check that we extracted .jsbeautifyrc files
+                        [config1, config2] = projectOptions[-2..]
+
+                        expect(_.get(config1,'_default.indent_size')).toBe(myData1.indent_size)
+                        expect(_.get(config2,'_default.indent_size')).toBe(myData2.indent_size)
+                        expect(_.get(config1,'_default.indent_char')).toBe(myData1.indent_char)
+                        expect(_.get(config2,'_default.indent_char')).toBe(myData2.indent_char)
+
+                        cb()
+                      )
+                    )
+                  )
+                )
+              )
+            catch err
+              cb(err)
+          waitsFor ->
+            isDone
+
 
       describe "Package settings", ->
 

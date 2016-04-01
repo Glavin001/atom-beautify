@@ -414,7 +414,7 @@ module.exports = class Beautifiers extends EventEmitter
 
   # Look for .jsbeautifierrc in file and home path, check env variables
   getConfig : (startPath, upwards = true) ->
-
+    # console.log('getConfig', startPath, upwards)
     # Verify that startPath is a string
     startPath = ( if ( typeof startPath is "string") then startPath else "")
     return {} unless startPath
@@ -422,6 +422,7 @@ module.exports = class Beautifiers extends EventEmitter
 
     # Get the path to the config file
     configPath = @findConfig(".jsbeautifyrc", startPath, upwards)
+    logger.verbose('configPath', configPath, startPath, upwards)
     externalOptions = undefined
     if configPath
       fs ?= require("fs")
@@ -449,7 +450,8 @@ module.exports = class Beautifiers extends EventEmitter
             externalOptions = {}
     else
       externalOptions = {}
-    externalOptions
+    return externalOptions
+
   getOptionsForPath : (editedFilePath, editor) ->
     languageNamespaces = @languages.namespaces
 
