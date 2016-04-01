@@ -38,7 +38,6 @@ module.exports = {
     indent_char:
       type: 'string'
       default: defaultIndentChar
-      minimum: 0
       description: "Indentation character"
     brace_style:
       type: 'string'
