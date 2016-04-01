@@ -198,6 +198,25 @@ describe "Atom-Beautify", ->
           editor = e
           expect(editor.getText()).toEqual("")
 
+    describe "Migrate Settings", ->
+
+      migrateSettings = (beforeKey, afterKey, val) ->
+        # set old options
+        atom.config.set("atom-beautify.#{beforeKey}", val)
+        atom.commands.dispatch workspaceElement, "atom-beautify:migrate-settings"
+        # Check resulting config
+        expect(_.has(atom.config.get('atom-beautify'), beforeKey)).toBe(false)
+        expect(atom.config.get("atom-beautify.#{afterKey}")).toBe(val)
+
+      it "should migrate js_indent_size to js.indent_size", ->
+        migrateSettings("js_indent_size","js.indent_size", 10)
+
+      it "should migrate analytics to general.analytics", ->
+        migrateSettings("analytics","general.analytics", true)
+
+      it "should migrate _analyticsUserId to general._analyticsUserId", ->
+        migrateSettings("_analyticsUserId","general._analyticsUserId", "userid")
+
     beautifyEditor = (callback) ->
       isComplete = false
       beforeText = null
@@ -238,9 +257,9 @@ describe "Atom-Beautify", ->
           # See https://discuss.atom.io/t/solved-settimeout-not-working-firing-in-specs-tests/11427/17
           jasmine.unspy(window, 'setTimeout')
 
-      afterEach ->
-        atom.packages.deactivatePackages()
-        atom.packages.unloadPackages()
+      # afterEach ->
+      #   atom.packages.deactivatePackages()
+      #   atom.packages.unloadPackages()
 
       describe ".jsbeautifyrc", ->
 
@@ -249,7 +268,7 @@ describe "Atom-Beautify", ->
         getOptions = (callback) ->
           options = null
           waitsForPromise ->
-            console.log('beautifier', beautifier.getOptionsForPath, beautifier)
+            # console.log('beautifier', beautifier.getOptionsForPath, beautifier)
             allOptions = beautifier.getOptionsForPath(null, null)
             # Resolve options with promises
             return Promise.all(allOptions)
@@ -308,7 +327,7 @@ describe "Languages", ->
       namespaceGroups = _.groupBy(languages.languages, "namespace")
       namespacePairs = _.toPairs(namespaceGroups)
       namespaceOverlap = _.filter(namespacePairs, ([namespace, group]) -> group.length > 1)
-      console.log('namespaces', namespaceGroups, namespacePairs, namespaceOverlap)
+      # console.log('namespaces', namespaceGroups, namespacePairs, namespaceOverlap)
       expect(namespaceOverlap.length).toBe(0, \
         "Language namespaces are overlapping.\n\
         Namespaces are unique: only one language for each namespace.\n"+

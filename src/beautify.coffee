@@ -67,6 +67,8 @@ showError = (error) ->
 
 beautify = ({onSave}) ->
 
+  plugin.checkUnsupportedOptions()
+
   # Continue beautifying
   path ?= require("path")
   forceEntireFile = onSave and atom.config.get("atom-beautify.general.beautifyEntireFileOnSave")
@@ -258,6 +260,8 @@ beautifyDirectory = ({target}) ->
   return
 
 debug = () ->
+
+  plugin.checkUnsupportedOptions()
 
   # Get current editor
   editor = atom.workspace.getActiveTextEditor()
@@ -497,6 +501,53 @@ handleSaveEvent = ->
         )
       )
     plugin.subscriptions.add disposable
+
+getUnsupportedOptions = ->
+  settings = atom.config.get('atom-beautify')
+  schema = atom.config.getSchema('atom-beautify')
+  unsupportedOptions = _.filter(_.keys(settings), (key) ->
+    # return atom.config.getSchema("atom-beautify.${key}").type
+    # return typeof settings[key]
+    schema.properties[key] is undefined
+  )
+  return unsupportedOptions
+
+plugin.checkUnsupportedOptions = ->
+  unsupportedOptions = getUnsupportedOptions()
+  if unsupportedOptions.length isnt 0
+    atom.notifications.addWarning("You have unsupported options: #{unsupportedOptions.join(', ')} <br> Please run Atom command 'Atom-Beautify: Migrate Settings'.")
+
+plugin.migrateSettings = ->
+  unsupportedOptions = getUnsupportedOptions()
+  namespaces = beautifier.languages.namespaces
+  # console.log('migrate-settings', schema, namespaces, unsupportedOptions)
+  if unsupportedOptions.length is 0
+    atom.notifications.addSuccess("No options to migrate.")
+  else
+    rex = new RegExp("(#{namespaces.join('|')})_(.*)")
+    rename = _.toPairs(_.zipObject(unsupportedOptions, _.map(unsupportedOptions, (key) ->
+      m = key.match(rex)
+      if m is null
+        # Did not match
+        # Put into general
+        return "general.#{key}"
+      else
+        return "#{m[1]}.#{m[2]}"
+    )))
+    # console.log('rename', rename)
+    # logger.verbose('rename', rename)
+
+    # Move all option values to renamed key
+    _.each(rename, ([key, newKey]) ->
+      # console.log('rename', key, newKey)
+      # Copy to new key
+      val = atom.config.get("atom-beautify.#{key}")
+      atom.config.set("atom-beautify.#{newKey}", val)
+      # Delete old key
+      atom.config.set("atom-beautify.#{key}", undefined)
+    )
+    atom.notifications.addSuccess("Successfully migrated options: #{unsupportedOptions.join(', ')}")
+
 plugin.config = _.merge(require('./config.coffee'), defaultLanguageOptions)
 plugin.activate = ->
   @subscriptions = new CompositeDisposable
@@ -505,6 +556,7 @@ plugin.activate = ->
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
   @subscriptions.add atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
   @subscriptions.add atom.commands.add ".tree-view .directory .name", "atom-beautify:beautify-directory", beautifyDirectory
+  @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:migrate-settings", plugin.migrateSettings
 
 plugin.deactivate = ->
   @subscriptions.dispose()

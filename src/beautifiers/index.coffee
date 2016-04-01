@@ -286,16 +286,16 @@ module.exports = class Beautifiers extends EventEmitter
 
           # Setup Analytics
           analytics = new Analytics(analyticsWriteKey)
-          unless atom.config.get("atom-beautify.general.analyticsUserId")
+          unless atom.config.get("atom-beautify.general._analyticsUserId")
             uuid = require("node-uuid")
-            atom.config.set "atom-beautify.general.analyticsUserId", uuid.v4()
+            atom.config.set "atom-beautify.general._analyticsUserId", uuid.v4()
 
           # Setup Analytics User Id
-          userId = atom.config.get("atom-beautify.general.analyticsUserId")
+          userId = atom.config.get("atom-beautify.general._analyticsUserId")
           analytics.identify userId : userId
           version = pkg.version
           analytics.track
-            userId : atom.config.get("atom-beautify.general.analyticsUserId")
+            userId : atom.config.get("atom-beautify.general._analyticsUserId")
             event : "Beautify"
             properties :
               language : language?.name

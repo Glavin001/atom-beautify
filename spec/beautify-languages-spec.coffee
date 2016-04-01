@@ -15,7 +15,7 @@ isWindows = process.platform is 'win32' or
   process.env.OSTYPE is 'cygwin' or
   process.env.OSTYPE is 'msys'
 
-xdescribe "BeautifyLanguages", ->
+describe "BeautifyLanguages", ->
 
   optionsDir = path.resolve(__dirname, "../examples")
 
