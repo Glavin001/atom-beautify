@@ -1,6 +1,6 @@
 // main: style.less
-@import (reference)"variables.less";
-@import (reference)"mixins.less";
+@import (reference) "variables.less";
+@import (reference) "mixins.less";
 
 .modal {
   position: fixed;
@@ -109,7 +109,6 @@
 .slideIn {
   .animation(SlideIn, 0.5s);
 }
-
 @-webkit-keyframes SlideIn {
   0% {
     .transform(translateY(-100%));
@@ -124,7 +123,6 @@
   display: block;
   .animation(FadeIn, 0.5s);
 }
-
 @-webkit-keyframes FadeIn {
   0% {
     opacity: 0;
@@ -138,7 +136,6 @@
 .slideOut {
   .animation(SlideOut, 0.5s);
 }
-
 @-webkit-keyframes SlideOut {
   0% {
     .transform(translateY(0%));
@@ -152,7 +149,6 @@
 .fadeOut {
   .animation(FadeOut, 0.5s);
 }
-
 @-webkit-keyframes FadeOut {
   0% {
     opacity: 1;
