@@ -27,6 +27,13 @@ $ = null
 # nopt.clean(data, types);
 # return data;
 # }
+getScrollTop = (editor) ->
+  view = editor.viewRegistry.getView(editor)
+  view.getScrollTop()
+setScrollTop = (editor, value) ->
+  view = editor.viewRegistry.getView(editor)
+  view.setScrollTop value
+
 getCursors = (editor) ->
   cursors = editor.getCursors()
   posArray = []
@@ -96,7 +103,7 @@ beautify = ({onSave}) ->
         posArray = getCursors(editor)
 
         # console.log "posArray:
-        origScrollTop = editor.getScrollTop()
+        origScrollTop = getScrollTop(editor)
 
         # console.log "origScrollTop:
         if not forceEntireFile and isSelection
@@ -119,7 +126,7 @@ beautify = ({onSave}) ->
         setTimeout ( ->
 
           # console.log "setScrollTop"
-          editor.setScrollTop origScrollTop
+          setScrollTop editor, origScrollTop
           return
         ), 0
     else
@@ -484,7 +491,7 @@ handleSaveEvent = ->
       logger.verbose('save editor positions', key, beautifyOnSave)
       if beautifyOnSave
         posArray = getCursors(editor)
-        origScrollTop = editor.getScrollTop()
+        origScrollTop = getScrollTop(editor)
         beautifyFilePath(filePath, ->
           if editor.isAlive() is true
             buffer.reload()
@@ -494,7 +501,7 @@ handleSaveEvent = ->
             # addition happens asynchronously
             setTimeout ( ->
               setCursors(editor, posArray)
-              editor.setScrollTop(origScrollTop)
+              setScrollTop(editor, origScrollTop)
               # console.log "setScrollTop"
               return
             ), 0
