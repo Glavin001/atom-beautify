@@ -14,6 +14,23 @@ Configurable options for Atom Beautify.
 
 General options for Atom Beautify
 
+#####  [Analytics User Id](#analytics-user-id) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `string`
+
+**Description**:
+
+Unique identifier for this user for tracking usage analytics
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Analytics User Id*" and change it to your desired configuration.
+
 #####  [Anonymous Analytics](#anonymous-analytics) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -32,23 +49,6 @@ There is [Segment.io](https://segment.io/) which forwards data to [Google Analyt
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Anonymous Analytics*" and change it to your desired configuration.
-
-#####  [Analytics User Id](#analytics-user-id) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `string`
-
-**Description**:
-
-Unique identifier for this user for tracking usage analytics
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Analytics User Id*" and change it to your desired configuration.
 
 #####  [Beautify Entire File On Save](#beautify-entire-file-on-save) 
 
