@@ -186,7 +186,7 @@
     "handlebars": "^4.0.2"
   },
   "scripts": {
-    "postinstall": "./node_modules/.bin/coffee script/build-options.coffee",
+    "postinstall": "node script/build-options.js",
     "prepublish": "npm run docs",
     "docs": "coffee docs/",
     "lint": "coffeelint src/ spec/",
