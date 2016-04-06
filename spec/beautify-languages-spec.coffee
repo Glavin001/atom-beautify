@@ -10,45 +10,62 @@ JsDiff = require('diff')
 # To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 # or `fdescribe`). Remove the `f` to unfocus the block.
 
+# Check if Windows
+isWindows = process.platform is 'win32' or
+  process.env.OSTYPE is 'cygwin' or
+  process.env.OSTYPE is 'msys'
+
 describe "BeautifyLanguages", ->
 
   optionsDir = path.resolve(__dirname, "../examples")
 
   # Activate all of the languages
   allLanguages = [
-    "c", "coffee-script", "css", "html",
+    "c", "coffee-script", "css", "d", "html",
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
-    "python", "ruby", "sass", "sql",
-    "typescript", "xml", "csharp", "gfm", "marko",
-    "tss", "go", "html-swig"
+    "python", "ruby", "sass", "sql", "svg",
+    "xml", "csharp", "gfm", "marko",
+    "go", "html-swig"
     ]
+  # All Atom packages that Atom Beautify is dependent on
+  dependentPackages = [
+    'autocomplete-plus'
+    # 'linter'
+    #   'atom-typescript' # it logs too much...
+  ]
+  # Add language packages to dependentPackages
+  for lang in allLanguages
+    do (lang) ->
+      dependentPackages.push("language-#{lang}")
 
   beforeEach ->
     # Install all of the languages
-    for lang in allLanguages
-      do (lang) ->
+    for packageName in dependentPackages
+      do (packageName) ->
         waitsForPromise ->
-          atom.packages.activatePackage("language-#{lang}")
+          atom.packages.activatePackage(packageName)
 
     # Activate package
     waitsForPromise ->
-        activationPromise = atom.packages.activatePackage('atom-beautify')
-        # Force activate package
-        pack = atom.packages.getLoadedPackage("atom-beautify")
-        pack.activateNow()
+      activationPromise = atom.packages.activatePackage('atom-beautify')
+      # Force activate package
+      pack = atom.packages.getLoadedPackage("atom-beautify")
+      pack.activateNow()
+      # Need more debugging on Windows
+      if isWindows
         # Change logger level
-        # atom.config.set('atom-beautify._loggerLevel', 'verbose')
-        # Return promise
-        return activationPromise
+        atom.config.set('atom-beautify._loggerLevel', 'verbose')
+      # Return promise
+      return activationPromise
 
     # Set Uncrustify config path
     # uncrustifyConfigPath = path.resolve(__dirname, "../examples/nested-jsbeautifyrc/uncrustify.cfg")
-    # uncrustifyLangs = ["c", "cpp", "objectivec", "cs", "d", "java", "pawn", "vala"]
+    # uncrustifyLangs = ["apex", "c", "cpp", "objectivec", "cs", "d", "java", "pawn", "vala"]
     # for lang in uncrustifyLangs
     #     do (lang) ->
-            # atom.config.set("atom-beautify.#{lang}_configPath", uncrustifyConfigPath)
-            # expect(atom.config.get("atom-beautify.#{lang}_configPath")).toEqual("TEST")
+      # atom.config.set("atom-beautify.#{lang}_configPath", uncrustifyConfigPath)
+      # expect(atom.config.get("atom-beautify.#{lang}_configPath")).toEqual("TEST")
 
   ###
   Directory structure:
@@ -87,13 +104,13 @@ describe "BeautifyLanguages", ->
                 originalDir = path.resolve(testsDir, "original")
                 if not fs.existsSync(originalDir)
                   console.warn("Directory for test originals/inputs not found." +
-                               " Making it at #{originalDir}.")
+                    " Making it at #{originalDir}.")
                   fs.mkdirSync(originalDir)
                 # Expected
                 expectedDir = path.resolve(testsDir, "expected")
                 if not fs.existsSync(expectedDir)
                   console.warn("Directory for test expected/results not found." +
-                               "Making it at #{expectedDir}.")
+                    "Making it at #{expectedDir}.")
                   fs.mkdirSync(expectedDir)
 
                 # Language group tests
@@ -120,7 +137,7 @@ describe "BeautifyLanguages", ->
                         # Check if there is a matching expected test resut
                         if not fs.existsSync(expectedTestPath)
                           throw new Error("No matching expected test result found for '#{testName}' " +
-                                       "at '#{expectedTestPath}'.")
+                            "at '#{expectedTestPath}'.")
                           # err = fs.writeFileSync(expectedTestPath, originalContents)
                           # throw err if err
                         # Get contents of expected test file
@@ -134,31 +151,64 @@ describe "BeautifyLanguages", ->
                         # Get the options
                         allOptions = beautifier.getOptionsForPath(originalTestPath)
 
+                        # Get language
+                        language = beautifier.getLanguage(grammarName, testFileName)
+
                         beautifyCompleted = false
                         completionFun = (text) ->
-                        #   logger.verbose(expectedTestPath, text) if ext is ".less"
-                          expect(text instanceof Error).not.toEqual(true, text)
-                          return beautifyCompleted = true if text instanceof Error
-                        #   if text instanceof Error
-                        #     return beautifyCompleted = text # text == Error
+                          try
+                            expect(text instanceof Error).not.toEqual(true, text)
+                            return beautifyCompleted = true if text instanceof Error
+                          #   logger.verbose(expectedTestPath, text) if ext is ".less"
+                          #   if text instanceof Error
+                          #     return beautifyCompleted = text # text == Error
 
-                          expect(text).not.toEqual(null, "Language or Beautifier not found")
-                          return beautifyCompleted = true if text is null
+                            expect(text).not.toEqual(null, "Language or Beautifier not found")
+                            return beautifyCompleted = true if text is null
 
-                          expect(typeof text).toEqual("string", "Text: #{text}")
-                          return beautifyCompleted = true if typeof text is "string"
-                          # Check for beautification errors
-                          if text isnt expectedContents
-                            #   console.warn(allOptions, text, expectedContents)
+                            expect(typeof text).toEqual("string", "Text: #{text}")
+                            return beautifyCompleted = true if typeof text isnt "string"
+
+                            # Replace Newlines
+                            text = text.replace(/(?:\r\n|\r|\n)/g, '⏎\n')
+                            expectedContents = expectedContents\
+                              .replace(/(?:\r\n|\r|\n)/g, '⏎\n')
+                            # Replace tabs
+                            text = text.replace(/(?:\t)/g, '↹')
+                            expectedContents = expectedContents\
+                              .replace(/(?:\t)/g, '↹')
+                            # Replace spaces
+                            text = text.replace(/(?:\ )/g, '␣')
+                            expectedContents = expectedContents\
+                              .replace(/(?:\ )/g, '␣')
+
+                            # Check for beautification errors
+                            if text isnt expectedContents
+                              # console.warn(allOptions, text, expectedContents)
                               fileName = expectedTestPath
                               oldStr=text
                               newStr=expectedContents
                               oldHeader="beautified"
                               newHeader="expected"
-                              diff = JsDiff.createPatch(fileName, oldStr, newStr, oldHeader, newHeader)
-                              expect(text).toEqual(expectedContents, "Beautifier output does not match expected output:\n"+diff)
-                          # All done!
-                          beautifyCompleted = true
+                              diff = JsDiff.createPatch(fileName, oldStr, \
+                                newStr, oldHeader, newHeader)
+                              # Get options
+                              opts = beautifier.getOptionsForLanguage(allOptions, language)
+                              selectedBeautifier = beautifier.getBeautifierForLanguage(language)
+                              if selectedBeautifier?
+                                opts = beautifier.transformOptions(selectedBeautifier, language.name, opts)
+
+                              # Show error message with debug information
+                              expect(text).toEqual(expectedContents, \
+                                "Beautifier '#{selectedBeautifier?.name}' output does not match expected \
+                                output:\n#{diff}\n\n\
+                                With options:\n\
+                                #{JSON.stringify(opts, undefined, 4)}")
+                            # All done!
+                            beautifyCompleted = true
+                          catch e
+                            console.error(e)
+                            beautifyCompleted = e
 
                         runs ->
                           try
@@ -173,4 +223,4 @@ describe "BeautifyLanguages", ->
                             throw beautifyCompleted
                           else
                             return beautifyCompleted
-                        , "Waiting for beautification to complete", 5000)
+                        , "Waiting for beautification to complete", 60000)

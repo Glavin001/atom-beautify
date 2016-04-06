@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>Atom-Beautify Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../extra/README.md.html' title='Atom-Beautify'>
+      Atom-Beautify
+    </a>
+    &raquo;
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>CHANGELOG.md</span>
+  </div>
+</div>
+    <div id='content'>
+      <nav class='toc'>
+        <p class='title'>
+          <a class='hide_toc' href='#'>
+            <strong>Table of Contents</strong>
+          </a>
+          <small>
+            (<a class='float_toc' href='#'>left</a>)
+          </small>
+        </p>
+      </nav>
+      <div id='filecontents'>
+        <h1 id="dev">dev</h1>
+<ul>
+<li>Add <a href="https://github.com/avh4/elm-format">elm-format</a> beautifier for the Elm language.</li>
+<li>Add <a href="http://clang.llvm.org/docs/ClangFormat.html">clang-format</a> beautifier for C/C++/Obj-C languages.</li>
+<li>Add <a href="http://github.com/google/yapf">yapf</a> beautifier for Python.</li>
+<li>Closes [#776] (<a href="https://github.com/Glavin001/atom-beautify/issues/776">https://github.com/Glavin001/atom-beautify/issues/776</a>) Add support for <code>collapse-preserve-inline</code> brace_style for javascript.</li>
+</ul>
+<h1 id="v0-29-0">v0.29.0</h1>
+<ul>
+<li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/447">#447</a>. Improved Handlebars language support</li>
+</ul>
+<h1 id="v0-26-0-2015-05-03-">v0.26.0 (2015-05-03)</h1>
+<ul>
+<li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/176">#176</a>. Add <a href="http://golang.org/cmd/gofmt/">gofmt</a> beautifier for Go language</li>
+<li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/192">#192</a>. Add <a href="https://github.com/sterpe/coffee-fmt">coffee-fmt</a> beautifier for CoffeeScript language</li>
+<li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/209">#209</a>. Add <a href="http://csscomb.com/">CSScomb</a> beautifier for CSS/LESS/SCSS/Sass languages.<blockquote><p>To switch from <code>JS Beautify</code> (CSS) or <code>Pretty Diff</code> (SCSS/Sass/LESS) to
+using <code>CSScomb</code>, you will go into Atom Beautify package settings and
+find the option for <code>Language Config -&lt;Your Desired Language: CSS, etc&gt;- Default Beautifier</code> and select <code>CSScomb</code>.</p><p>CSScomb looks for a <code>.csscomb.json</code> file in your Atom&#39;s first project
+directory. If it does not find one, or if importing it fails, it will
+fallback to <code>csscomb</code> predefined configuration.</p></blockquote>
+</li>
+</ul>
+<h1 id="v0-25-0-2015-05-02-">v0.25.0 (2015-05-02)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/issues/282">Add new internal Beautifier API.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/issues/292">Switch to using Tidy-Markdown instead of Pandoc for Markdown beautification</a><ul>
+<li>Improve YAML Front-Matter support in Markdown. See <a href="https://github.com/Glavin001/atom-beautify/issues/261">#261</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/Glavin001/atom-beautify/pull/275">Add Rubocop beautifier for Ruby beautification</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/issues/197">Use Pretty Diff for XML Beautification</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/issues/136">Add EJS beautification support using Pretty Diff</a><ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/issues/179">Angular Template support by using EJS language beautifier, Pretty Diff</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/Glavin001/atom-beautify/issues/217">Add Spacebars beautification support using Pretty Diff</a></li>
+</ul>
+<h1 id="v0-24-1-2015-04-19-">v0.24.1 (2015-04-19)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/2fe815e47cf8c95d099ee0f17b2c4d83dc8dd2ce">Fix incorrect name for pandoc path option</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/6810805e3e290342a1060aca12c646724fc1694d">Updates context-menu to use new api</a></li>
+</ul>
+<h1 id="v0-24-0-2015-04-07-">v0.24.0 (2015-04-07)</h1>
+<ul>
+<li>Temporarily disable failing PHP tests</li>
+<li>Add Titanium style Sheets (TSS) support. See <a href="https://github.com/Glavin001/atom-beautify/issues/122">#122</a> and <a href="https://github.com/Glavin001/atom-beautify/issues/238">#238</a></li>
+</ul>
+<h1 id="v0-23-4-2015-04-07-">v0.23.4 (2015-04-07)</h1>
+<ul>
+<li>Rename incorrect <code>indent_character</code> option to <code>indent_char</code>. See <a href="https://github.com/Glavin001/atom-beautify/issues/266">#266</a></li>
+</ul>
+<h1 id="v0-23-3-2015-04-07-">v0.23.3 (2015-04-07)</h1>
+<ul>
+<li>Fix beautifying PHP with CLI path set for Windows. See <a href="https://github.com/Glavin001/atom-beautify/issues/269">#269</a></li>
+</ul>
+<h1 id="v0-23-2-2015-04-05-">v0.23.2 (2015-04-05)</h1>
+<ul>
+<li>Use svg instead of png to get better image quality, <a href="https://github.com/Glavin001/atom-beautify/issues/257">#257</a> <a href="https://github.com/PeterDaveHello">@PeterDaveHello</a></li>
+<li>TravisCI setup for php testing</li>
+<li>php is not necessary for php-beautify, <a href="https://github.com/Glavin001/atom-beautify/issues/263">#263</a> <a href="https://github.com/MGAio">@MGAio</a></li>
+</ul>
+<h1 id="v0-23-1-2015-03-25-">v0.23.1 (2015-03-25)</h1>
+<ul>
+<li>Add check for Windows and use windows specific &#39;mv&#39; command, <a href="https://github.com/Glavin001/atom-beautify/issues/251">#251</a> <a href="https://github.com/rrushton">@rrushton</a></li>
+</ul>
+<h1 id="v0-23-0-2015-03-20-">v0.23.0 (2015-03-20)</h1>
+<ul>
+<li>Switch to PHP Coding Standards Fixer, <a href="https://github.com/Glavin001/atom-beautify/issues/242">#242</a> <a href="https://github.com/rrushton">@rrushton</a></li>
+<li>Fix failing tests for LESS and SASS.</li>
+</ul>
+<h1 id="v0-22-5-2015-03-20-">v0.22.5 (2015-03-20)</h1>
+<ul>
+<li>Add Preserve new lines support for LESS/SCSS. See <a href="https://github.com/Glavin001/atom-beautify/issues/245">#245</a> and <a href="https://github.com/Glavin001/atom-beautify/issues/180">#180</a></li>
+</ul>
+<h1 id="v0-22-4-2015-03-20-">v0.22.4 (2015-03-20)</h1>
+<ul>
+<li>Change Debug command name to make <code>beautify editor</code> first. See <a href="https://github.com/Glavin001/atom-beautify/issues/240">#240</a></li>
+</ul>
+<h1 id="v0-22-3-2015-03-16-">v0.22.3 (2015-03-16)</h1>
+<ul>
+<li>Add another Titanium Style Sheet (disabled) test. See <a href="https://github.com/Glavin001/atom-beautify/issues/216">#216</a> and <a href="https://github.com/Glavin001/atom-beautify/issues/122">#122</a></li>
+<li>Fix bug in Debug command when Text Editor not selected. See <a href="https://github.com/Glavin001/atom-beautify/issues/237">#237</a></li>
+</ul>
+<h1 id="v0-22-2-2015-03-16-">v0.22.2 (2015-03-16)</h1>
+<ul>
+<li>Add Titanium Style Sheet example (disabled) test. See <a href="https://github.com/Glavin001/atom-beautify/issues/122">#122</a></li>
+<li>Redirect bashrc and bash_profile pipes to /dev/null. See <a href="https://github.com/Glavin001/atom-beautify/issues/215">#215</a></li>
+<li>Update prettydiff dependency to 0.11.0</li>
+</ul>
+<h1 id="v0-22-1-2015-03-16-">v0.22.1 (2015-03-16)</h1>
+<ul>
+<li>Add tilda (~) support for Uncrustify config paths. See <a href="https://github.com/Glavin001/atom-beautify/issues/235">#235</a></li>
+</ul>
+<h1 id="v0-22-0-2015-03-16-">v0.22.0 (2015-03-16)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/daf32301198d6d6bf2f5b79de2163fa829e4c259">Add donation information</a></li>
+<li>Add debugging information command. See <a href="https://github.com/Glavin001/atom-beautify/issues/237">#237</a></li>
+</ul>
+<h1 id="v0-21-6-2015-03-12-">v0.21.6 (2015-03-12)</h1>
+<ul>
+<li>Add option for htmlbeautifier path. See <a href="https://github.com/Glavin001/atom-beautify/issues/232">#232</a></li>
+<li>Add ASP.NET Web Forms and User Controls support. See <a href="https://github.com/Glavin001/atom-beautify/issues/230">#230</a></li>
+</ul>
+<h1 id="v0-21-5-2015-03-11-">v0.21.5 (2015-03-11)</h1>
+<ul>
+<li>Disable <code>Beautify Directory</code> menu option. See <a href="https://github.com/Glavin001/atom-beautify/issues/213">#213</a></li>
+</ul>
+<h1 id="v0-21-4-2015-03-07-">v0.21.4 (2015-03-07)</h1>
+<ul>
+<li><a href="https://github.com/filipesilva/atom-beautify/commit/fdd1668c20d2e2f7a5e7bd0c1459638309e6f130">Update options for js-beautify (HTML wrap-attributes, wrap-attributes-indent-size)</a></li>
+</ul>
+<h1 id="v0-21-3-2015-02-08-">v0.21.3 (2015-02-08)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/a50c5a3c4c884a2eddec7e36c1723eeef97c3758">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/181">#181</a> and fixes <a href="https://github.com/Glavin001/atom-beautify/issues/180">#180</a>. Clean up LESS/SCSS Unit Tests and update Prettydiff</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/d24a454ef7b011c7d4d63b7ba1757b8d0a0ced28">Updates to Atoms new API</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/d2ad4ccbfeec55fb3656e6aed64b88ddefa8a27d">Updating selectors to new Atom API</a></li>
+</ul>
+<h1 id="v0-21-2-2015-01-06-">v0.21.2 (2015-01-06)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/5aaeae4cc77b4805a4a41df42fe8708f5495f963">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/177">#177</a>. Update keybinding to beautify:beautify-editor</a></li>
+</ul>
+<h1 id="v0-21-1-2015-01-03-">v0.21.1 (2015-01-03)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/c110ca72a4e8e7f944facb1cf7d107a65697b551">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/173">#173</a>. Remove @ prefix from showError call</a></li>
+</ul>
+<h1 id="v0-21-0-2015-01-03-">v0.21.0 (2015-01-03)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/eb1471d23b1c2b704b8b3afa17462b4e73bc20f9">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/172">#172</a>, <a href="https://github.com/Glavin001/atom-beautify/issues/146">#146</a>. Update to new Atom Config API.</a></li>
+</ul>
+<blockquote><p>What&#39;s new:</p><ul>
+<li>Add settings descriptions</li>
+<li>Update options for js-beautify (JS, CSS, HTML)</li>
+<li>Update Spec to support new changes</li>
+</ul>
+</blockquote>
+<h1 id="v0-20-2-2015-01-02-">v0.20.2 (2015-01-02)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/c4c847948d5f88eb44b672d3471ceb92b126b5e3">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/171">#171</a>. Fix typo for CSS indent_char</a></li>
+</ul>
+<h1 id="v0-20-1-2015-01-02-">v0.20.1 (2015-01-02)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/f280469e77a8e6d1014e18c2c0ba717e9b15743e">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/169">#169</a>. Remove JS-Yaml and use YAML-Front-Matter, resolving conflict</a></li>
+</ul>
+<h1 id="v0-20-0-2015-01-02-">v0.20.0 (2015-01-02)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/e7a980045d769897011606aaa40e44db8de5ba6c">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/169">#169</a>. Add YAML Front Matter support to Markdown beautification</a></li>
+</ul>
+<h1 id="v0-19-0-2015-01-01-">v0.19.0 (2015-01-01)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/bd278968b4b54ee9586682252de6b320d302bcce">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/36">#36</a>. Add right-click beautification of directory (sub-files)</a></li>
+</ul>
+<h1 id="v0-18-0-2015-01-01-">v0.18.0 (2015-01-01)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/issues/18">Add Specs (Unit Tests) and Travis CI automated testing</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/dc1e720e908cbd60ae93316975c39628be105901">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/149">#149</a>. Update prettydiff to fix interpolated text vars in SCSS</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/3550280502fbfda4bf9b4467172f423cd94694ea">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/159">#159</a>, <a href="https://github.com/Glavin001/atom-beautify/issues/149">#149</a>. Update prettydiff to fix LESS and SCSS.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/259bb7083d367cabba10312e2bed40f3265fa6dc">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/168">#168</a>. Update Coffee-Formatter to fix broken CoffeeScript beautifier</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/e678fdf759a338f74c9111c993474b06f6f29644">See <a href="https://github.com/Glavin001/atom-beautify/issues/36">#36</a>. Add right-click Beautification of single files in Tree view</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/264821c30a34f3edd365e8f9e9fee4b68afd1a07">Fix feature, disabling language beautification, where <code>disabledLanguages = null</code></a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/974897b6f87023f954724e2c4c70e0ec4b49e7ed">Improve handling options in Python beautifier.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/b7a34b6178f06030604479590b2e226da85b5912">Improve SQL Beautifier to support missing config options.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/77f58bbfc778730de4055e050fd40d2ce46d0439">Throw error if trying to beautify Perl without setting Perl Tidy path</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/60f6a9bd075b6b18653e99724d3b8b47e7197d95">Improve CLI Beautify class to handle more error catching</a></li>
+</ul>
+<h1 id="v0-17-3-2014-12-27-">v0.17.3 (2014-12-27)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/9b38dc3badb062ba8212c126b13d6965a8ce9276">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/148">#148</a>. Fix PHP for when filters are not set.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/3499c111200cb2e7f6374622f7bb86c91c7820c1">Get Atom User settings instead of only default settings</a></li>
+</ul>
+<h1 id="v0-17-2-2014-12-14-">v0.17.2 (2014-12-14)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/ff4a5a3a716a642b9c426a3b41f76094a372132e">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/135">#135</a>. Switch from Git to npm Coffee-Formatter dependency.</a></li>
+</ul>
+<h1 id="v0-17-1-2014-11-19-">v0.17.1 (2014-11-19)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/c6c6d95a3e62e7453d732f2bab7619464bc5b875">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/107">#107</a>. Add PHP options for filters and directory_filters</a></li>
+</ul>
+<h1 id="v0-17-0-2014-11-16-">v0.17.0 (2014-11-16)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/ba7d9ce799b4284a77dd22fc4139d01fdee08b18">Add support for HTML (Rails) and Ruby on Rails grammar</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/f0ed7ac5ad5e54d8f653fd8aba23aaf53ed42fc6">disable beautification of specific languages</a></li>
+</ul>
+<h1 id="v0-16-0-2014-11-16-">v0.16.0 (2014-11-16)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/428ebe44f9d542f5082807b2fbdabf7282160ec7">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/140">#140</a>. Update js-beautify dependency to 1.5.4.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/f64d2bae2012e004f7e3b5bb6bc6ffdc1d59fded">Perl support (using perltidy) (see Glavin001/atom-beautify<a href="https://github.com/Glavin001/atom-beautify/issues/33">#33</a>)</a></li>
+</ul>
+<h1 id="v0-15-1-2014-10-26-">v0.15.1 (2014-10-26)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/dda313fbfe47f9d273e06e8e380f2e4c311c1b84">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/103">#103</a>. BeautifyEntireFileOnSave only applies when saving</a></li>
+</ul>
+<h1 id="v0-15-0-2014-10-26-">v0.15.0 (2014-10-26)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/ecbbbaec2942ed95461e2c103d23bd3665edab2e">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/123">#123</a>. Add Mustache support.</a></li>
+</ul>
+<h1 id="v0-14-1-2014-10-21-">v0.14.1 (2014-10-21)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/c0ee2bed96499ac71ea1266ccb227e9b3581c935">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/127">#127</a>. Increase startup time by using ActivationEvents</a></li>
+</ul>
+<h1 id="v0-14-0-2014-10-16-">v0.14.0 (2014-10-16)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/dcc9e2d3b58767578006ffacaca198da69fa3832">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/49">#49</a>. Add TypeScript support</a></li>
+</ul>
+<h1 id="v0-13-4-2014-10-05-">v0.13.4 (2014-10-05)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/120315f90d5a0bbdade2728472926f965150e7c1">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/110">#110</a>. Fixes Handlebars missing beautification</a></li>
+</ul>
+<h1 id="v0-13-3-2014-10-05-">v0.13.3 (2014-10-05)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/fbc58a648d3ccd845548d556f3dd1e046075bf04">Resolve Unsafe-Eval error for Atom &gt;=0.128.0</a></li>
+</ul>
+<h1 id="v0-13-2-2014-09-28-">v0.13.2 (2014-09-28)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/ccc8802f36fe15c4f29abffcd974cb0c7d1acdad">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/96">#96</a>. Fix support for Alphasort option for LESS/SCSS properties</a></li>
+</ul>
+<h1 id="v0-13-1-2014-09-28-">v0.13.1 (2014-09-28)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/7e828be19961bd29bf0615f9b0ca71b608191a94">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/102">#102</a>. Fix error when beautifying Python using custom autopep8 path</a></li>
+</ul>
+<h1 id="v0-13-0-2014-09-28-">v0.13.0 (2014-09-28)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/79fcdd9111fffc883305cb1b00b2f23806192952">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/105">#105</a>. Add options to mute errors.</a></li>
+</ul>
+<blockquote><p>New package options:</p><ul>
+<li>muteUnsupportedLanguageErrors</li>
+<li>muteAllErrors</li>
+</ul>
+</blockquote>
+<h1 id="v0-12-0-2014-09-18-">v0.12.0 (2014-09-18)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/ad662271c14f3ff4440d933b2c1c0ce6caf5b53b">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/93">#93</a>. Implement normalizing markdown through pandoc</a></li>
+</ul>
+<h1 id="v0-11-1-2014-09-16-">v0.11.1 (2014-09-16)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/80e1c03885688b6615e142dc347b4c7e10d27694">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/96">#96</a>. Update Pretty-Diff dependency to ^1.2.4</a></li>
+</ul>
+<h1 id="v0-11-0-2014-09-15-">v0.11.0 (2014-09-15)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/fefb25bf380c846222ec9f288c869d4765e03b2a">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/91">#91</a>. Add configuration option for custom Uncrustify path</a></li>
+</ul>
+<h1 id="v0-10-4-2014-09-12-">v0.10.4 (2014-09-12)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/7c56d84385e91798556ed534e1dfc4129a107d4b">Fix support for editorconfig with indent style = &#39;tab&#39;</a></li>
+</ul>
+<h1 id="v0-10-3-2014-09-10-">v0.10.3 (2014-09-10)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/31b217859e714767c5784f5613149304ddd4b9ad">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/84">#84</a>. Improve the error message panel to only appear on new error</a></li>
+</ul>
+<h1 id="v0-10-2-2014-09-10-">v0.10.2 (2014-09-10)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/490cd7ee051926f3c143bc0b9873fa1bc7cd9828">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/85">#85</a>. Add support for Windows for upwards recursive .jsbeautifyrc (see <a href="https://github.com/Glavin001/atom-beautify/issues/37">#37</a>)</a></li>
+</ul>
+<h1 id="v0-10-1-2014-09-10-">v0.10.1 (2014-09-10)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/2cd3bef6e0d6493d85dd85796ad67e0305e7ffc9">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/68">#68</a>. Fix error when beautifying file that is &quot;untitled&quot;.</a></li>
+</ul>
+<h1 id="v0-10-0-2014-09-09-">v0.10.0 (2014-09-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/baf3e49b97c5366829f021d843f3b6beb7d92a8c">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/68">#68</a>. Support editorconfig files.</a></li>
+</ul>
+<h1 id="v0-9-0-2014-09-09-">v0.9.0 (2014-09-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/738deace29fbcc981e96599bd9cd55f4010e4106">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/37">#37</a>. Support upwards recursive .jsbeautifyrc fallback.</a></li>
+</ul>
+<blockquote><p>Priority hierarchy:</p><ul>
+<li>Atom editor settings</li>
+<li>Atom Beautify package settings</li>
+<li>Home directory .jsbeautifyrc file configuration</li>
+<li>Closest EditorConfig file (see <a href="https://github.com/Glavin001/atom-beautify/issues/68">#68</a>)</li>
+<li>Project options (from closest .jsbeautifyrc file to the beautified
+editor&#39;s file to root, &quot;/&quot;)</li>
+</ul>
+</blockquote>
+<h1 id="v0-8-1-2014-09-09-">v0.8.1 (2014-09-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/c6a4101893a1ac91df58df02f033000bc36ea637">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/70">#70</a>. Update Pretty-Diff dep. from ^1.0.23 to ^1.2.1</a></li>
+</ul>
+<h1 id="v0-8-0-2014-09-09-">v0.8.0 (2014-09-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/6652e7f703575ed5666825d47cc05d6e48cb37cf">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/80">#80</a>. Add HTML Embedded Ruby (ERB) support.</a></li>
+</ul>
+<h1 id="v0-7-1-2014-09-09-">v0.7.1 (2014-09-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/d595ea7479a89cad58200613c4893927428be034">Fix typo from <code>.bash_rc</code> to <code>.bashrc</code> for cli-beautify</a></li>
+</ul>
+<h1 id="v0-7-1-2014-09-09-">v0.7.1 (2014-09-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/516c35623888634a3ffcca845fed6b962749fbf2">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/81">#81</a>. Beautify on Save now retains <code>this</code> scope when beautifying</a></li>
+</ul>
+<h1 id="v0-7-0-2014-09-08-">v0.7.0 (2014-09-08)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/4f5c75c5e3a5a934a7c36094e60d15022df0e564">See <a href="https://github.com/Glavin001/atom-beautify/issues/77">#77</a>. Add example of broken SCSS case.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/1130b58114cba90828aa2d37de42b800d15ae081">See <a href="https://github.com/Glavin001/atom-beautify/issues/71">#71</a>. Add example JS file using reserved words to test <a href="https://github.com/Glavin001/atom-beautify/issues/7">#7</a>1</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/05ee8f22b3b975a52d2fbbe998d4c49fbe9ae274">See <a href="https://github.com/Glavin001/atom-beautify/issues/56">#56</a>. Work on MessageView UI.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/6b2b306b9daf6a1594cefd357ce0d9c8ce3f7155">See <a href="https://github.com/Glavin001/atom-beautify/issues/56">#56</a>. Add &quot;Beautification in progress&quot; view.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/ffa2249c3e87d217cc544a71e23e389f97d978d7">See <a href="https://github.com/Glavin001/atom-beautify/issues/56">#56</a>. Add Atom-Message-Panel to display Unsupported Language messages</a></li>
+</ul>
+<h1 id="v0-6-5-2014-09-08-">v0.6.5 (2014-09-08)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/528c7dc281bc85c4132ce0cadf3740c04c3cc6e8">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/76">#76</a>. Add package option &quot;Beautify Entire File On Save&quot;</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/9c1965dec6233205639fd342daf20ab4b145ced6">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/78">#78</a>. Improve startup performance.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/7dbff2cbc1959ca4630f44e9a6755807e34c0c85">See <a href="https://github.com/Glavin001/atom-beautify/issues/61">#61</a>. Add LESS example with Mixins to test.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/0804cade1f09a8436f69e572c7bd5f725742db41">See <a href="https://github.com/Glavin001/atom-beautify/issues/56">#56</a>. Start implementing of Message View.</a></li>
+</ul>
+<h1 id="v0-6-4-2014-09-04-">v0.6.4 (2014-09-04)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/e599387d2025ab53e4db009d597816e23783850d">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/73">#73</a>. Prevent extra cursor appearing at end of file</a></li>
+</ul>
+<h1 id="v0-6-3-2014-08-30-">v0.6.3 (2014-08-30)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/09c6770cd2768ddb8dd635c2508065a40f909729">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/60">#60</a>. Convert package scripts from JavaScript to CoffeeScript.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/a2fbf0c47d0abeabbaa7289b4f32e261525d0182">Replacing node-parse with sqlparse for SQL beautification support</a></li>
+</ul>
+<h1 id="v0-6-2-2014-08-09-">v0.6.2 (2014-08-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/649f023d9c5066a85c114dc2d8bcd1feb4303158">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/59">#59</a>. Remove ActivationEvents to allow for beautifyOnSave.</a></li>
+</ul>
+<h1 id="v0-6-1-2014-08-08-">v0.6.1 (2014-08-08)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/325ada78510866487cb3aab9ae10e208b544eb1c">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/57">#57</a>. Customization in .jsbeautifyrc file now generates the config (.cfg) file for Uncrustify beautification.</a></li>
+</ul>
+<h1 id="v0-6-0-2014-08-08-">v0.6.0 (2014-08-08)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/5d6751cb4bd331ec1066b09bc457a73e1619e51b">See <a href="https://github.com/Glavin001/atom-beautify/issues/57">#57</a>. Add Uncrustify beautifier for multiple language support.</a></li>
+</ul>
+<blockquote><p>Uncrustify Language support:</p><ul>
+<li>C</li>
+<li>C++</li>
+<li>C#</li>
+<li>Objective-C</li>
+<li>Java</li>
+<li>D</li>
+<li>Pawn</li>
+<li>Vala</li>
+</ul><p>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/45">#45</a>. Add Java Support.</p></blockquote>
+<h1 id="v0-5-0-2014-08-04-">v0.5.0 (2014-08-04)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/8d90b30448a0c3df5eeca0d6f52bb8e9c3e3880e">See <a href="https://github.com/Glavin001/atom-beautify/issues/47">#47</a>. Update configuration to allow users to disable analytics.</a></li>
+</ul>
+<h1 id="v0-5-1-2014-08-04-">v0.5.1 (2014-08-04)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/1f0fb9c0db43b71816caf3c1d1d235484cbcd53a">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/44">#44</a>. Switch to using Pretty Diff for SASS, as well.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/1f0fb9c0db43b71816caf3c1d1d235484cbcd53a">See <a href="https://github.com/Glavin001/atom-beautify/issues/54">#54</a>. Use indent_size and indent_character options.</a></li>
+</ul>
+<h1 id="v0-5-0-2014-08-04-">v0.5.0 (2014-08-04)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/3c9836f920bea72396d03ac0b022b5f753776b55">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/31">#31</a>. Add CoffeeScript support.</a></li>
+</ul>
+<h1 id="v0-4-4-2014-08-03-">v0.4.4 (2014-08-03)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/7fdde0f8a68c8eecc2879c6bfe2369c4abfc904d">See <a href="https://github.com/Glavin001/atom-beautify/issues/51">#51</a>. Work on improving PHP support and deubgging errors.</a></li>
+</ul>
+<h1 id="v0-4-3-2014-08-03-">v0.4.3 (2014-08-03)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/fabed8fad30d36c0ffe42ed070f5495a7b7c1b14">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/47">#47</a>. Switch Analytics from Google Analytics to Segment.io</a></li>
+</ul>
+<h1 id="v0-4-2-2014-08-03-">v0.4.2 (2014-08-03)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/010863f5cce73740371b16b4077f58eab9b98cf6">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/54">#54</a>. LESS beautifier using PrettyDiff now fixed.</a></li>
+</ul>
+<h1 id="v0-4-1-2014-08-01-">v0.4.1 (2014-08-01)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/5bff9ebc4840aa18e38b468b7a5310c56b7ab302">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/54">#54</a>. Switch to using Pretty Diff for LESS support. Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/52">#52</a>. Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/52">#52</a>.</a></li>
+</ul>
+<h1 id="v0-4-0-2014-07-12-">v0.4.0 (2014-07-12)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/d8fb27289d4c1db7fde878002f442ae53d41f840">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/47">#47</a>. Add Google Analytics.</a></li>
+</ul>
+<h1 id="v0-3-8-2014-07-09-">v0.3.8 (2014-07-09)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/4271bfe8d72f04ef25cc136684c5e9a78636c399">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/46">#46</a>. Use ActivationEvents to speed up loading time.</a></li>
+</ul>
+<h1 id="v0-3-7-2014-07-03-">v0.3.7 (2014-07-03)</h1>
+<h1 id="v0-3-6-2014-07-03-">v0.3.6 (2014-07-03)</h1>
+<h1 id="v0-3-5-2014-07-03-">v0.3.5 (2014-07-03)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/d94d152621c431d358e8624bf67827e972756553">See <a href="https://github.com/Glavin001/atom-beautify/issues/40">#40</a>. Migrating ownership to Glavin001 for maintaining.</a></li>
+</ul>
+<h1 id="v0-3-4-2014-06-28-">v0.3.4 (2014-06-28)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/65ff7f9f7a040e9ad3a881ef0a6af387df644120">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/35">#35</a>. Add more options for Python PEP8 beautifying.</a></li>
+</ul>
+<h1 id="v0-3-3-2014-06-16-">v0.3.3 (2014-06-16)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/612c7dc17c20f01c36476e0432baf20bcab94ca4">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/24">#24</a>. Add Python (PEP 8) support.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/88651447a721f73fb58ae076b04ae296f0b4318b">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/25">#25</a>. Add Ruby support.</a></li>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/issues/18">#18</a>. Worked on setting up Travis CI and providing unit tests. Not closed.</li>
+</ul>
+<h1 id="v0-3-2-2014-06-14-">v0.3.2 (2014-06-14)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/54e61a816f7fd087822d44c97ed3ab8c7130a845">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/9">#9</a>. Nested options in .jsbeautifyrc are properly handled.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/78e0382c15b1a7587b8fcbe93af5b5fc20ba8fc7">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/21">#21</a>. Parsing .jsbeautifyrc falls back to YAML, when JSON fails.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/479034dae7af1080726e508d18fb6a9c8588d800">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/22">#22</a>. Use Atom Package Settings as configuration options.</a></li>
+</ul>
+<h1 id="v0-3-1-2014-06-14-">v0.3.1 (2014-06-14)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/978a6c5a43e910f322a476fb69230e6ec95e8a82">See <a href="https://github.com/Glavin001/atom-beautify/issues/14">#14</a>. Add JSON support.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/2e57630275773b331becc2fcadaf558e370750e6">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/14">#14</a>. Completed support for SQL.</a></li>
+</ul>
+<h1 id="v0-3-0-2014-06-13-">v0.3.0 (2014-06-13)</h1>
+<ul>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/cf1ea6db16d2188ddef5e6c1fb4d000cab67f99c">Allowing either flat or nested .jsbeautifyrc schemas</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/45352dd90591826e72054536f671b9eb074a9843">Use beautifyHTML to beautify HTML (Liquid) files.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/4fdab9759b5a774c467434a410c203eb4aeb74d8">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/15">#15</a>. Support loading .jsbeautifyrc from Project directory.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/4d486794b4e9ba58d206c8e16d325b2f1d693d30">See <a href="https://github.com/Glavin001/atom-beautify/issues/15">#15</a>. Updated README to reflect better .jsbeautifyrc support.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/58a375f8b6823fda7632f53d145e3e2d21e16dcd">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/16">#16</a>. Custom configuration options are now working correctly.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/b530eda6e3347179dd14fb671801b94a7269f2ad">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/13">#13</a>. Add Handlebars support.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/c34f6f9419284697bd3c04ddc0e400ae0600ca4d">Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/19">#19</a>. Can now beautify new files that have not been created/saved.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/eacf2329daf86bd21d7bda992a9b08379de67f2c">Closes <a href="https://github.com/Glavin001/atom-beautify/issues/20">#20</a>. Add Sass and LESS support. Update README.</a></li>
+<li><a href="https://github.com/Glavin001/atom-beautify/commit/a2dc4bd7db7893b11b53af41bb4556158bb81ed5">See <a href="https://github.com/Glavin001/atom-beautify/issues/15">#15</a>. Remove shelljs dependency and fixed typos.</a></li>
+</ul>
+<h1 id="v0-2-6-2014-05-15-">v0.2.6 (2014-05-15)</h1>
+<ul>
+<li>version bump</li>
+<li>added <code>&quot;jslint_happy&quot;: true</code> to own <code>.jsbeautifierrc</code></li>
+</ul>
+<h1 id="v0-2-5-2014-05-14-">v0.2.5 (2014-05-14)</h1>
+<ul>
+<li>fixed issue <a href="https://github.com/Glavin001/atom-beautify/issues/7">#7</a> (Place cursor back to edited place after beautifying)</li>
+<li>fixed issue <a href="https://github.com/Glavin001/atom-beautify/issues/8">#8</a> (Ignore jsbeautify when editing .jsbeautifyrc in place)</li>
+</ul>
+<h1 id="v0-2-3-2014-05-13-">v0.2.3 (2014-05-13)</h1>
+<ul>
+<li>support <code>.jsbeautifierrc</code> (thanks <a href="https://github.com/karolyi">@karolyi</a>)</li>
+<li>fixed: reload on save (thanks <a href="https://github.com/karolyi">@karolyi</a>)</li>
+</ul>
+<h1 id="v0-2-2-2014-03-18-">v0.2.2 (2014-03-18)</h1>
+<ul>
+<li>added experimental support for XML (thanks <a href="https://github.com/mtanzi">@mtanzi</a>)</li>
+</ul>
+<h1 id="v0-2-1-2014-03-12-">v0.2.1 (2014-03-12)</h1>
+<ul>
+<li>added option to beautify on save</li>
+</ul>
+<h1 id="v0-2-0-2014-03-11-">v0.2.0 (2014-03-11)</h1>
+<ul>
+<li>public release</li>
+<li>beautify JS, HTML and CSS files based on current editor settings</li>
+</ul>
+<!--- The following link definition list is generated by PimpMyChangelog --->
+
+      </div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.0
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

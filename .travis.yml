@@ -1,6 +1,8 @@
 language: objective-c
 
-osx_image: beta-xcode6.2
+osx_image: xcode7.3
+
+sudo: false
 
 git:
   depth: 10
@@ -19,13 +21,20 @@ notifications:
 script: sh build-package.sh
 
 env:
-    - APM_TEST_PACKAGES="language-typescript language-marko language-tss language-html-swig"
+  global:
+    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom"
+  matrix:
+    - ATOM_CHANNEL=stable
+    - ATOM_CHANNEL=beta
 
 cache:
-    - pip
+    - pip: true
+    - bundler: true
     - directories:
+        - vendor/bundle # gems are installed here, https://docs.travis-ci.com/user/languages/ruby/#Dependency-Management
         - node_modules
         - $HOME/.atom
+        - $HOME/.stack
 
 before_install:
   # Update Homebrew
@@ -36,9 +45,11 @@ before_install:
   # - gem install ruby-beautify --verbose
   - gem install rubocop
   - gem install htmlbeautifier
+  - gem install puppet-lint
   # Python language support
   - brew install python
   - pip install --upgrade autopep8
+  - pip install --upgrade isort
   # SQL language support
   - pip install --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
@@ -52,3 +63,10 @@ before_install:
   - brew gist-logs php-cs-fixer || true
   # CoffeeScript
   - npm install coffee-formatter
+  # Haskell
+  # - brew install haskell-stack
+  # - stack setup
+  # - stack install stylish-haskell
+  # Elm
+  - curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.1-alpha2/elm-format-0.1-alpha2-mac-x64.tgz
+  - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin

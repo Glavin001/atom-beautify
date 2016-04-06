@@ -1,9 +1,9 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.27.9",
+  "version": "0.29.1",
   "private": true,
-  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, and SQL in Atom",
+  "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, and SQL in Atom",
   "repository": {
     "type": "git",
     "url": "https://github.com/Glavin001/atom-beautify"
@@ -46,39 +46,74 @@
     {
       "name": "Ramón Cahenzli",
       "url": "https://github.com/psy-q"
+    },
+    {
+      "name": "Clemens Damke",
+      "url": "https://github.com/Cortys"
+    },
+    {
+      "name": "Zhang YANG",
+      "url": "https://github.com/ProgramFan"
+    },
+    {
+      "name": "Daniel Bayley",
+      "url": "https://github.com/danielbayley"
+    },
+    {
+      "name": "Murphy Randle",
+      "url": "https://github.com/splodingsocks"
+    },
+    {
+      "name": "Luis Arias",
+      "url": "https://github.com/kaaloo"
+    },
+    {
+      "name": "Bati Sengul",
+      "url": "https://github.com/Focus"
+    },
+    {
+      "name": "Dheepak Krishnamurthy",
+      "url": "https://github.com/kdheepak89"
     }
   ],
   "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+    "atom": ">=1.6.0 <2.0.0"
   },
   "dependencies": {
     "analytics-node": "^1.2.2",
-    "async": "^1.1.0",
+    "async": "^1.2.1",
     "atom-message-panel": "^1.2.4",
     "atom-space-pen-views": "^2.0.5",
-    "bluebird": "^2.9.26",
-    "coffee-fmt": "0.10.2",
+    "bluebird": "^2.9.30",
+    "coffee-fmt": "0.11.0",
     "coffee-formatter": "^0.1.2",
-    "csscomb": "^3.1.5",
-    "diff": "^1.4.0",
+    "coffee-script": "^1.10.0",
+    "cross-spawn": "^2.0.0",
+    "csscomb": "^3.1.7",
+    "diff": "^2.1.0",
     "editorconfig": "^0.12.2",
-    "emissary": "^1.3.3",
-    "event-kit": "^1.2.0",
-    "expand-home-dir": "0.0.2",
-    "extend": "^2.0.1",
-    "handlebars": "^3.0.3",
-    "js-beautify": "^1.5.6",
-    "lodash": "3.9.3",
+    "event-kit": "^1.4.1",
+    "expand-home-dir": "0.0.3",
+    "extend": "^3.0.0",
+    "gherkin": "2.12.2",
+    "handlebars": "^4.0.2",
+    "js-beautify": "^1.6.2",
+    "jscs": "^2.1.1",
+    "lodash": "4.6.1",
     "loophole": "^1.0.0",
     "node-dir": "^0.1.8",
     "node-uuid": "^1.4.3",
-    "prettydiff": "^1.11.21",
+    "prettydiff": "^1.16.27",
+    "pug-beautify": "^0.1.1",
+    "remark": "^3.2.2",
+    "season": "^5.3.0",
     "space-pen": "^5.1.1",
     "strip-json-comments": "^1.0.2",
-    "temp": "^0.8.1",
+    "temp": "^0.8.3",
     "tidy-markdown": "^0.3.2",
     "typescript-formatter": "~0.3.2",
     "underscore-plus": "^1.6.6",
+    "which": "^1.1.1",
     "winston": "^1.0.0",
     "yaml-front-matter": "^3.2.3"
   },
@@ -86,6 +121,7 @@
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
       "atom-beautify:beautify-editor",
+      "atom-beautify:migrate-settings",
       "core:save",
       "core:save-as"
     ],
@@ -127,8 +163,10 @@
     "objective-c",
     "c-sharp",
     "c#",
+    "coldfusion",
     "uncrustify",
     "java",
+    "apex",
     "pawn",
     "vala",
     "d",
@@ -139,14 +177,19 @@
     "jekyll",
     "marko",
     "go",
-    "golang"
+    "golang",
+    "svg",
+    "elm"
   ],
   "devDependencies": {
-    "coffee-script": "^1.9.3",
-    "handlebars": "^3.0.3"
+    "coffeelint": "^1.10.1",
+    "handlebars": "^4.0.2"
   },
   "scripts": {
+    "postinstall": "node script/build-options.js",
     "prepublish": "npm run docs",
-    "docs": "coffee docs/"
+    "docs": "coffee docs/",
+    "lint": "coffeelint src/ spec/",
+    "code-docs": "codo && open docs/code/index.html"
   }
 }

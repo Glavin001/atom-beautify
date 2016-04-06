@@ -6,15 +6,18 @@ Requires https://github.com/threedaymonk/htmlbeautifier
 Beautifier = require('./beautifier')
 
 module.exports = class HTMLBeautifier extends Beautifier
-    name: "HTML Beautifier"
-    options: {
-        ERB: true
-    }
+  name: "HTML Beautifier"
+  options: {
+    ERB:
+      indent_size: true
+  }
 
-    beautify: (text, language, options) ->
-        @run("htmlbeautifier", [
-            tempFile = @tempFile("temp", text)
-            ])
-            .then(=>
-                @readFile(tempFile)
-            )
+  beautify: (text, language, options) ->
+    console.log('erb', options)
+    @run("htmlbeautifier", [
+      "--tab-stops", options.indent_size
+      tempFile = @tempFile("temp", text)
+      ])
+      .then(=>
+        @readFile(tempFile)
+      )

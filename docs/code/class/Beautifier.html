@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='UTF-8'>
+  <title>Atom-Beautify Documentation</title>
+  <script src='../javascript/application.js'></script>
+  <script src='../javascript/search.js'></script>
+  <link rel='stylesheet' href='../stylesheets/application.css' type='text/css'>
+</head>
+  <body>
+    <div id='base' data-path='../'></div>
+<div id='header'>
+  <div id='menu'>
+    <a href='../extra/README.md.html' title='Atom-Beautify'>
+      Atom-Beautify
+    </a>
+    &raquo;
+    <a href='../alphabetical_index.html' title='Index'>
+      Index
+    </a>
+    &raquo;
+    <span class='title'>Beautifier</span>
+  </div>
+</div>
+    <div id='content'>
+      <h1>
+        Class:
+        Beautifier
+      </h1>
+      <table class='box'>
+        <tr>
+          <td>Defined in:</td>
+          <td>src&#47;beautifiers&#47;beautifier.coffee</td>
+        </tr>
+      </table>
+      <h2>Direct Known Subclasses</h2>
+      <p class='children'>
+        <a href='../class/Autopep8.html'>Autopep8</a>
+        <a href='../class/ClangFormat.html'>ClangFormat</a>
+        <a href='../class/CoffeeFmt.html'>CoffeeFmt</a>
+        <a href='../class/CoffeeFormatter.html'>CoffeeFormatter</a>
+        <a href='../class/JSBeautify.html'>JSBeautify</a>
+        <a href='../class/Dfmt.html'>Dfmt</a>
+        <a href='../class/ElmFormat.html'>ElmFormat</a>
+        <a href='../class/ErlTidy.html'>ErlTidy</a>
+        <a href='../class/FortranBeautifier.html'>FortranBeautifier</a>
+        <a href='../class/Gherkin.html'>Gherkin</a>
+        <a href='../class/Gofmt.html'>Gofmt</a>
+        <a href='../class/HTMLBeautifier.html'>HTMLBeautifier</a>
+        <a href='../class/JSBeautify.html'>JSBeautify</a>
+        <a href='../class/JSCSFixer.html'>JSCSFixer</a>
+        <a href='../class/PerlTidy.html'>PerlTidy</a>
+        <a href='../class/PHPCSFixer.html'>PHPCSFixer</a>
+        <a href='../class/PHPCBF.html'>PHPCBF</a>
+        <a href='../class/PrettyDiff.html'>PrettyDiff</a>
+        <a href='../class/PuppetFix.html'>PuppetFix</a>
+        <a href='../class/Remark.html'>Remark</a>
+        <a href='../class/Rubocop.html'>Rubocop</a>
+        <a href='../class/RubyBeautify.html'>RubyBeautify</a>
+        <a href='../class/Rustfmt.html'>Rustfmt</a>
+        <a href='../class/Sqlformat.html'>Sqlformat</a>
+        <a href='../class/StylishHaskell.html'>StylishHaskell</a>
+        <a href='../class/TidyMarkdown.html'>TidyMarkdown</a>
+        <a href='../class/TypeScriptFormatter.html'>TypeScriptFormatter</a>
+        <a href='../class/Uncrustify.html'>Uncrustify</a>
+        <a href='../class/Yapf.html'>Yapf</a>
+      </p>
+      <h2>Variables Summary</h2>
+      <dl class='constants'>
+  <dt id='Promise-variable'>
+    Promise
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>Promise</code></pre>
+    <div class='docstring'>
+  <p>Promise</p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+  <dt id='name-variable'>
+    name
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>&#39;Beautifier&#39;</code></pre>
+    <div class='docstring'>
+  <p>Name of Beautifier</p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+  <dt id='options-variable'>
+    options
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>{}</code></pre>
+    <div class='docstring'>
+  <p>Supported Options</p><p>Enable options for supported languages.</p><ul>
+<li><string:language>:<boolean:all_options_enabled></li>
+<li><string:language>:<string:option_key>:<boolean:enabled></li>
+<li><string:language>:<string:option_key>:<string:rename></li>
+<li><string:language>:<string:option_key>:<function:transform></li>
+<li><string:language>:<string:option_key>:<array:mapper></li>
+</ul>
+
+</div>
+<div class='tags'>
+</div>
+  </dd>
+  <dt id='languages-variable'>
+    languages
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>null</code></pre>
+    <div class='docstring'>
+  <p>Supported languages by this Beautifier</p><p>Extracted from the keys of the <code>options</code> field.</p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+  <dt id='beautify-variable'>
+    beautify
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>null</code></pre>
+    <div class='docstring'>
+  <p>Beautify text</p><p>Override this method in subclasses</p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+  <dt id='_envCache-variable'>
+    _envCache
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>null</code></pre>
+    <div class='docstring'>
+  <p>Get Shell Environment variables</p><p>Special thank you to @ioquatix
+See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63">https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63</a></p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+  <dt id='_envCacheDate-variable'>
+    _envCacheDate
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>null</code></pre>
+    
+  </dd>
+  <dt id='_envCacheExpiry-variable'>
+    _envCacheExpiry
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>10000</code></pre>
+    
+  </dd>
+  <dt id='logger-variable'>
+    logger
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>null</code></pre>
+    <div class='docstring'>
+  <p>Logger instance</p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+</dl>
+      <h2>Instance Method Summary</h2>
+      <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#deprecate-dynamic'>
+        #
+(void)
+<b>deprecate</b><span>(warning)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Show deprecation warning to user. 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#tempFile-dynamic'>
+        #
+(void)
+<b>tempFile</b><span>(name = &quot;atom-beautify-temp&quot;, contents = &quot;&quot;, ext = &quot;&quot;)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Create temporary file 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#readFile-dynamic'>
+        #
+(void)
+<b>readFile</b><span>(filePath)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Read file 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getShellEnvironment-dynamic'>
+        #
+(void)
+<b>getShellEnvironment</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#which-dynamic'>
+        #
+(void)
+<b>which</b><span>(exe, options = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Like the unix which utility. 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#commandNotFoundError-dynamic'>
+        #
+(void)
+<b>commandNotFoundError</b><span>(exe, help)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Add help to error.description <p>Note: error.description is not officially used in JavaScript,
+however it is used internally for Atom Beautify when displaying errors.</p>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#run-dynamic'>
+        #
+(void)
+<b>run</b><span>(executable, args, {ignoreReturnCode, help} = {})</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Run command-line interface command 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#spawn-dynamic'>
+        #
+(void)
+<b>spawn</b><span>(exe, args, options)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Spawn 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setupLogger-dynamic'>
+        #
+(void)
+<b>setupLogger</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Initialize and configure Logger 
+    </span>
+  </li>
+</ul>
+      <h2>Constructor Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='constructor-dynamic'>
+      #
+(void)
+<b>constructor</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Constructor to setup beautifer</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+      <h2>Instance Method Details</h2>
+      <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='deprecate-dynamic'>
+      #
+(void)
+<b>deprecate</b><span>(warning)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Show deprecation warning to user.</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='tempFile-dynamic'>
+      #
+(void)
+<b>tempFile</b><span>(name = &quot;atom-beautify-temp&quot;, contents = &quot;&quot;, ext = &quot;&quot;)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Create temporary file</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='readFile-dynamic'>
+      #
+(void)
+<b>readFile</b><span>(filePath)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Read file</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getShellEnvironment-dynamic'>
+      #
+(void)
+<b>getShellEnvironment</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='which-dynamic'>
+      #
+(void)
+<b>which</b><span>(exe, options = {})</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Like the unix which utility.</p><p>Finds the first instance of a specified executable in the PATH environment variable.
+Does not cache the results,
+so hash -r is not needed when the PATH changes.
+See <a href="https://github.com/isaacs/node-which">https://github.com/isaacs/node-which</a></p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='commandNotFoundError-dynamic'>
+      #
+(void)
+<b>commandNotFoundError</b><span>(exe, help)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Add help to error.description</p><p>Note: error.description is not officially used in JavaScript,
+however it is used internally for Atom Beautify when displaying errors.</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='run-dynamic'>
+      #
+(void)
+<b>run</b><span>(executable, args, {ignoreReturnCode, help} = {})</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Run command-line interface command</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='spawn-dynamic'>
+      #
+(void)
+<b>spawn</b><span>(exe, args, options)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Spawn</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setupLogger-dynamic'>
+      #
+(void)
+<b>setupLogger</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Initialize and configure Logger</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+</div>
+    </div>
+    <div id='footer'>
+  By
+  <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
+    Codo
+  </a>
+  2.1.0
+  &#10034;
+  Press H to see the keyboard shortcuts
+  &#10034;
+  <a href='http://twitter.com/netzpirat' target='_parent'>@netzpirat</a>
+  &#10034;
+  <a href='http://twitter.com/_inossidabile' target='_parent'>@_inossidabile</a>
+</div>
+<iframe id='search_frame'></iframe>
+<div id='fuzzySearch'>
+  <input type='text'>
+  <ol></ol>
+</div>
+<div id='help'>
+  <p>
+    Quickly fuzzy find classes, mixins, methods, file:
+  </p>
+  <ul>
+    <li>
+      <span>T</span>
+      Open fuzzy finder dialog
+    </li>
+  </ul>
+  <p>
+    Control the navigation frame:
+  </p>
+  <ul>
+    <li>
+      <span>L</span>
+      Toggle list view
+    </li>
+    <li>
+      <span>C</span>
+      Show class list
+    </li>
+    <li>
+      <span>I</span>
+      Show mixin list
+    </li>
+    <li>
+      <span>F</span>
+      Show file list
+    </li>
+    <li>
+      <span>M</span>
+      Show method list
+    </li>
+    <li>
+      <span>E</span>
+      Show extras list
+    </li>
+  </ul>
+  <p>
+    You can focus and blur the search input:
+  </p>
+  <ul>
+    <li>
+      <span>S</span>
+      Focus search input
+    </li>
+    <li>
+      <span>Esc</span>
+      Blur search input
+    </li>
+  </ul>
+</div>
+  </body>
+</html>

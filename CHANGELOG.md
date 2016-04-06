@@ -1,3 +1,14 @@
+# dev
+- Add [elm-format](https://github.com/avh4/elm-format) beautifier for the Elm language.
+- Add [clang-format](http://clang.llvm.org/docs/ClangFormat.html) beautifier for C/C++/Obj-C languages.
+- Add [yapf](http://github.com/google/yapf) beautifier for Python.
+- Closes [#776] (https://github.com/Glavin001/atom-beautify/issues/776) Add support for `collapse-preserve-inline` brace_style for javascript.
+- Closes [#786](https://github.com/Glavin001/atom-beautify/issues/786) YAPF configuration files are ignored.
+
+# v0.29.0
+- Closes [#447](https://github.com/Glavin001/atom-beautify/issues/447). Improved Handlebars language support
+- Closes [#384](https://github.com/Glavin001/atom-beautify/issues/384). Add [latexindent.pl](https://github.com/cmhughes/latexindent.pl) beautifier for LaTeX language
+
 # v0.26.0 (2015-05-03)
 - Closes [#176](https://github.com/Glavin001/atom-beautify/issues/176). Add [gofmt](http://golang.org/cmd/gofmt/) beautifier for Go language
 - Closes [#192](https://github.com/Glavin001/atom-beautify/issues/192). Add [coffee-fmt](https://github.com/sterpe/coffee-fmt) beautifier for CoffeeScript language

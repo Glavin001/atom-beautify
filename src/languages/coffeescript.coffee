@@ -1,23 +1,23 @@
 module.exports = {
 
-    name: "CoffeeScript"
-    namespace: "coffeescript"
-    fallback: ['js']
+  name: "CoffeeScript"
+  namespace: "coffeescript"
+  fallback: ['js']
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "CoffeeScript"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "CoffeeScript"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "coffee"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "coffee"
+  ]
 
-    defaultBeautifier: "coffee-fmt"
+  defaultBeautifier: "coffee-fmt"
 
 }

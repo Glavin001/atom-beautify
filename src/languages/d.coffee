@@ -1,25 +1,28 @@
 module.exports = {
 
-    name: "D"
-    namespace: "d"
+  name: "D"
+  namespace: "d"
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "D"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "D"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "d"
+  ]
 
-    options:
-        configPath:
-            type: 'string'
-            default: ""
-            description: "Path to uncrustify config file. i.e. uncrustify.cfg"
+  defaultBeautifier: "Uncrustify"
+
+  options:
+    configPath:
+      type: 'string'
+      default: ""
+      description: "Path to uncrustify config file. i.e. uncrustify.cfg"
 
 }

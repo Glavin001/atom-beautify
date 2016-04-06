@@ -1,0 +1,13 @@
+{
+  "indentation": {
+    "level": "error",
+    "value": 2
+  },
+  "line_endings": {
+    "value": "unix",
+    "level": "error"
+  },
+  "max_line_length": {
+    "value": false
+  }
+}

@@ -1,23 +1,23 @@
 module.exports = {
 
-    name: "Go"
-    description: "Golang"
-    namespace: "go"
+  name: "Go"
+  description: "Golang"
+  namespace: "go"
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "Go"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "Go"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "go"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "go"
+  ]
 
-    options: []
-    
+  options: []
+
 }

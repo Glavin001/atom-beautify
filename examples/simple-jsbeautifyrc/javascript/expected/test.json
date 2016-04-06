@@ -7,6 +7,5 @@
   "preserve_newlines": true,
   "max_preserve_newlines": 2,
   /* test *
-    "jslint_happy": true
-  }
-  */
+  "jslint_happy": true
+}

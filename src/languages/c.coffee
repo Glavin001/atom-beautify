@@ -1,26 +1,28 @@
 module.exports = {
 
-    name: "C"
-    namespace: "c"
+  name: "C"
+  namespace: "c"
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "C"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "C"
+    "opencl"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: [
-        "c"
-    ]
+  ###
+  Supported extensions
+  ###
+  extensions: [
+    "c"
+    "cl"
+  ]
 
-    options:
-        configPath:
-            type: 'string'
-            default: ""
-            description: "Path to uncrustify config file. i.e. uncrustify.cfg"
+  options:
+    configPath:
+      type: 'string'
+      default: ""
+      description: "Path to uncrustify config file. i.e. uncrustify.cfg"
 
 }

@@ -21,9 +21,7 @@ module.exports = (options, cb) ->
   # jshint ignore: start
   ic = options.indent_char
   if options.indent_with_tabs is 0 or options.indent_with_tabs is 1 or options.indent_with_tabs is 2
-
-
-  # Ignore indent_char option
+    null # Ignore indent_char option
   else if ic is " "
     options.indent_with_tabs = 0 # Spaces only
   else if ic is "\t"
@@ -65,11 +63,11 @@ module.exports = (options, cb) ->
       fs.write info.fd, text or "", (err) ->
 
         # console.log(err);
-        return cb(err)  if err
+        return cb(err) if err
         fs.close info.fd, (err) ->
 
           # console.log(err);
-          return cb(err)  if err
+          return cb(err) if err
           cb null, info.path
 
 

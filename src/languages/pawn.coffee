@@ -1,24 +1,24 @@
 module.exports = {
 
-    name: "Pawn"
-    namespace: "pawn"
+  name: "Pawn"
+  namespace: "pawn"
 
-    ###
-    Supported Grammars
-    ###
-    grammars: [
-        "Pawn"
-    ]
+  ###
+  Supported Grammars
+  ###
+  grammars: [
+    "Pawn"
+  ]
 
-    ###
-    Supported extensions
-    ###
-    extensions: []
+  ###
+  Supported extensions
+  ###
+  extensions: []
 
-    options:
-        configPath:
-            type: 'string'
-            default: ""
-            description: "Path to uncrustify config file. i.e. uncrustify.cfg"
+  options:
+    configPath:
+      type: 'string'
+      default: ""
+      description: "Path to uncrustify config file. i.e. uncrustify.cfg"
 
 }

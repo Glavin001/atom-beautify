@@ -1,0 +1,30 @@
+extends ../layout/basiclayout
+
+block append stylesheets
+  link(rel='stylesheet', href='/bower_components/bootstrap-table/dist/bootstrap-table.css')
+  style.
+    .sample_id {
+      color: #337AB7;
+      cursor: pointer;
+    }
+
+block content
+  div.container
+    div.col-lg-10
+      // Comment
+      div.page-header 
+        h1 Sample Anaysis
+          small  Find a sample
+      div
+        div#toolbar
+        table#table
+
+      //- div.well
+      //-   | Lorem ipsum dolor sit amet, natum bonorum expetendis usu ut. Eum impetus offendit disputationi eu, at vim aliquip lucilius praesent. Alia laudem antiopam te ius, sed ad munere integre, ubique facete sapientem nam ut.
+      //-   br
+      //-   br
+      //-   ul
+      //-     li Lorem ipsum dolor sit amet, natum bonorum expetendis usu ut.
+      //-     li Lorem ipsum dolor sit amet, natum bonorum expetendis usu ut.
+block append scripts
+  script(src='/bower_components/bootstrap-table/dist/bootstrap-table.js')
