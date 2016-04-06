@@ -19,6 +19,7 @@ module.exports = class Languages
     "coffeescript"
     "coldfusion"
     "cpp"
+    "crystal"
     "css"
     "csv"
     "d"
