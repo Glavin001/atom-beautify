@@ -546,9 +546,9 @@ plugin.migrateSettings = ->
 
     # Move all option values to renamed key
     _.each(rename, ([key, newKey]) ->
-      # console.log('rename', key, newKey)
       # Copy to new key
       val = atom.config.get("atom-beautify.#{key}")
+      # console.log('rename', key, newKey, val)
       atom.config.set("atom-beautify.#{newKey}", val)
       # Delete old key
       atom.config.set("atom-beautify.#{key}", undefined)

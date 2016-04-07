@@ -217,13 +217,28 @@ describe "Atom-Beautify", ->
         expect(atom.config.get("atom-beautify.#{afterKey}")).toBe(val)
 
       it "should migrate js_indent_size to js.indent_size", ->
+        migrateSettings("js_indent_size","js.indent_size", 1)
         migrateSettings("js_indent_size","js.indent_size", 10)
 
       it "should migrate analytics to general.analytics", ->
         migrateSettings("analytics","general.analytics", true)
+        migrateSettings("analytics","general.analytics", false)
 
       it "should migrate _analyticsUserId to general._analyticsUserId", ->
         migrateSettings("_analyticsUserId","general._analyticsUserId", "userid")
+        migrateSettings("_analyticsUserId","general._analyticsUserId", "userid2")
+
+      it "should migrate language_js_disabled to js.disabled", ->
+        migrateSettings("language_js_disabled","js.disabled", false)
+        migrateSettings("language_js_disabled","js.disabled", true)
+
+      it "should migrate language_js_default_beautifier to js.default_beautifier", ->
+        migrateSettings("language_js_default_beautifier","js.default_beautifier", "Pretty Diff")
+        migrateSettings("language_js_default_beautifier","js.default_beautifier", "JS Beautify")
+
+      it "should migrate language_js_beautify_on_save to js.beautify_on_save", ->
+        migrateSettings("language_js_beautify_on_save","js.beautify_on_save", true)
+        migrateSettings("language_js_beautify_on_save","js.beautify_on_save", false)
 
     beautifyEditor = (callback) ->
       isComplete = false
