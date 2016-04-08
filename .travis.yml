@@ -71,5 +71,4 @@ before_install:
   - curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.1-alpha2/elm-format-0.1-alpha2-mac-x64.tgz
   - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin
   # Crystal
-  - brew install crystal-lang
-  
+  - brew install crystal-lang  
