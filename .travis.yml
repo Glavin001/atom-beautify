@@ -72,3 +72,4 @@ before_install:
   - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin
   # Crystal
   - brew install crystal-lang
+  
