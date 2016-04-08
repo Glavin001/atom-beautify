@@ -522,7 +522,10 @@ getUnsupportedOptions = ->
 plugin.checkUnsupportedOptions = ->
   unsupportedOptions = getUnsupportedOptions()
   if unsupportedOptions.length isnt 0
-    atom.notifications.addWarning("You have unsupported options: #{unsupportedOptions.join(', ')} <br> Please run Atom command 'Atom-Beautify: Migrate Settings'.")
+    atom.notifications.addWarning("Please run Atom command 'Atom-Beautify: Migrate Settings'.", {
+      detail : "You have unsupported options: #{unsupportedOptions.join(', ')}",
+      dismissable : true
+    })
 
 plugin.migrateSettings = ->
   unsupportedOptions = getUnsupportedOptions()
