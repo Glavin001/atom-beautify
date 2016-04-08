@@ -83,7 +83,7 @@ It will only beautify selected text if a selection is found -- if not, the whole
 
 ### Shortcut
 
-You can also type `ctrl-alt-b` as a shortcut or click `Packages > Beautify` in the menu.
+You can also type <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>B</kbd> as a shortcut or click `Packages > Beautify` in the menu.
 
 #### Custom Keyboard Shortcuts
 

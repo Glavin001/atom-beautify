@@ -522,7 +522,10 @@ getUnsupportedOptions = ->
 plugin.checkUnsupportedOptions = ->
   unsupportedOptions = getUnsupportedOptions()
   if unsupportedOptions.length isnt 0
-    atom.notifications.addWarning("You have unsupported options: #{unsupportedOptions.join(', ')} <br> Please run Atom command 'Atom-Beautify: Migrate Settings'.")
+    atom.notifications.addWarning("Please run Atom command 'Atom-Beautify: Migrate Settings'.", {
+      detail : "You have unsupported options: #{unsupportedOptions.join(', ')}",
+      dismissable : true
+    })
 
 plugin.migrateSettings = ->
   unsupportedOptions = getUnsupportedOptions()
@@ -546,9 +549,9 @@ plugin.migrateSettings = ->
 
     # Move all option values to renamed key
     _.each(rename, ([key, newKey]) ->
-      # console.log('rename', key, newKey)
       # Copy to new key
       val = atom.config.get("atom-beautify.#{key}")
+      # console.log('rename', key, newKey, val)
       atom.config.set("atom-beautify.#{newKey}", val)
       # Delete old key
       atom.config.set("atom-beautify.#{key}", undefined)
