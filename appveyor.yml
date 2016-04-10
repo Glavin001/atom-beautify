@@ -76,6 +76,12 @@ install:
   - "%CMD_IN_ENV% pip install --upgrade autopep8"
   - where autopep8
 
+  - "%CMD_IN_ENV% pip install --upgrade isort"
+  - where isort
+
+  - "%CMD_IN_ENV% pip install --upgrade sqlparse"
+  - where sqlparse
+
   # Ruby & Gem
   - cinst ruby -y
   - "SET PATH=C:\\Ruby193\\bin;%PATH%"
