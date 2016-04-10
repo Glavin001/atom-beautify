@@ -33,7 +33,7 @@ module.exports = class FortranBeautifier extends Beautifier
       tempFile = @tempFile("temp", text)
       ]
 
-    if emacs_path?
+    if emacs_path
       @run(emacs_path, args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)
