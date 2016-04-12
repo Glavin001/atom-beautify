@@ -80,7 +80,7 @@ install:
   - where isort
 
   - "%CMD_IN_ENV% pip install --upgrade sqlparse"
-  
+
   # Ruby & Gem
   - cinst ruby -y
   - "SET PATH=C:\\Ruby193\\bin;%PATH%"
@@ -115,6 +115,7 @@ install:
   - 7za e uncrustify.zip -ouncrustify
   - "SET PATH=%cd%\\uncrustify;%PATH%"
   - where uncrustify
+  - ps: "echo $env:path"
 
 build_script:
 
