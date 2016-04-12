@@ -40,6 +40,7 @@ module.exports = class PrettyDiff extends Beautifier
     ERB: true
     EJS: true
     HTML: true
+    Handlebars: true
     XML: true
     SVG: true
     Spacebars: true
