@@ -116,6 +116,7 @@ install:
   - "SET PATH=%cd%\\uncrustify;%PATH%"
   - where uncrustify
   - ps: "echo $env:path"
+  - ps: where.exe uncrustify
 
 build_script:
 
