@@ -118,6 +118,12 @@ install:
   - ps: "echo $env:path"
   - ps: where.exe uncrustify
 
+  # elm-format
+  - curl -k -L https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-win-x64.zip -o elm-format.zip
+  - 7za e elm-format.zip -oelm-format
+  - "SET PATH=%cd%\\elm-format;%PATH%"
+  - where elm-format
+
 build_script:
 
   - cd %APPVEYOR_BUILD_FOLDER%
