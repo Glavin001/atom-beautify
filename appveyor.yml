@@ -115,8 +115,6 @@ install:
   - 7za e uncrustify.zip -ouncrustify
   - "SET PATH=%cd%\\uncrustify;%PATH%"
   - where uncrustify
-  - ps: "echo $env:path"
-  - ps: where.exe uncrustify
 
   # elm-format
   - curl -k -L https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-win-x64.zip -o elm-format.zip
@@ -131,5 +129,7 @@ build_script:
   - apm install language-marko language-html-swig language-svg language-elm language-d mavensmate-atom
   # Show current PATH
   - echo %PATH%
+  - where uncrustify
+  - where elm-format
   # Run tests on package
   - "%LOCALAPPDATA%\\atom\\bin\\atom.cmd --test spec"
