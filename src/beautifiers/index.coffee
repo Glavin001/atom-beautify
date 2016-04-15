@@ -302,7 +302,7 @@ module.exports = class Beautifiers extends EventEmitter
               grammar : grammar
               extension : fileExtension
               version : version
-              options : allOptions
+              #options : allOptions
               label : language?.name
               category : version
 
