@@ -34,14 +34,12 @@ module.exports = class FortranBeautifier extends Beautifier
       ]
 
     if emacs_path
-      args.unshift("#{emacs_path}")
-
-      @run("python", args, {ignoreReturnCode: true})
+      @run(emacs_path, args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)
         )
     else
-      @run("emacs", args, {ignoreReturnCode: true})
+      @run("emacs", args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)
         )
