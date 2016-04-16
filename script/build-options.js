@@ -129,6 +129,7 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
   allOptions = _.values(langOptions);
   flatOptions = _.reduce(allOptions, (function(result, languageOptions, language) {
     return _.reduce(languageOptions, (function(result, optionDef, optionName) {
+      optionDef.beautifiers = _.uniq(optionDef.beautifiers)
       if (optionDef.beautifiers.length > 0) {
         optionDef.description = optionDef.description + " (Supported by " + (optionDef.beautifiers.join(', ')) + ")";
       } else {
@@ -309,6 +310,7 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
     ref16 = group.properties;
     for (o in ref16) {
       optionDef = ref16[o];
+      optionDef.beautifiers = _.uniq(optionDef.beautifiers)
       if (optionDef.beautifiers.length > 0) {
         optionDef.description = optionDef.description + " (Supported by " + (optionDef.beautifiers.join(', ')) + ")";
       } else {
@@ -324,7 +326,8 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
     lang = languages[langName];
     name = lang.name;
     namespace = lang.namespace;
-    beautifiers = lang.beautifiers;
+    beautifiers = (lang.beautifiers = _.uniq(lang.beautifiers));
+    langOptions[namespace].beautifiers = beautifiers
     optionName = "language_" + namespace;
     _.set(langOptions, namespace + ".properties.disabled", {
       title: "Disable Beautifying Language",
