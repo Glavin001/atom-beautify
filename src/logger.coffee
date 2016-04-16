@@ -48,7 +48,7 @@ module.exports = do ->
     })
     wlogger.on('logging', (transport, level, msg, meta)->
       loggerLevel = atom?.config.get(\
-        'atom-beautify._loggerLevel') ? "warn"
+        'atom-beautify.general.loggerLevel') ? "warn"
       # console.log('logging', loggerLevel, arguments)
       loggerLevelNum = levels[loggerLevel]
       levelNum = levels[level]
