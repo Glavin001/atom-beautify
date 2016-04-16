@@ -57,7 +57,8 @@ module.exports = do ->
         label = "#{path.dirname(transport.label)\
                     .split(path.sep).reverse()[0]}\
                     #{path.sep}#{path.basename(transport.label)}"
-        console.log("#{label} [#{level}]: #{msg}", meta)
+        d = new Date()
+        console.log("#{d.toLocaleDateString()} #{d.toLocaleTimeString()} - #{label} [#{level}]: #{msg}", meta)
     )
     # Export logger methods
     loggerMethods = ['silly','debug','verbose','info','warn','error']
