@@ -2,9 +2,14 @@ Promise = require("bluebird")
 _ = require('lodash')
 fs = require("fs")
 temp = require("temp").track()
-spawn = require('cross-spawn')
 readFile = Promise.promisify(fs.readFile)
 which = require('which')
+# Get optional dependency cross-spawn
+spawn = null
+try
+  spawn = require('cross-spawn')
+catch err
+  spawn = require('child_process').spawn
 
 module.exports = class Beautifier
 
