@@ -76,6 +76,11 @@ install:
   - "%CMD_IN_ENV% pip install --upgrade autopep8"
   - where autopep8
 
+  - "%CMD_IN_ENV% pip install --upgrade isort"
+  - where isort
+
+  - "%CMD_IN_ENV% pip install --upgrade sqlparse"
+
   # Ruby & Gem
   - cinst ruby -y
   - "SET PATH=C:\\Ruby193\\bin;%PATH%"
@@ -105,18 +110,25 @@ install:
   - where php-cs-fixer
 
   # Uncrustify
-  - curl -L http://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.61/uncrustify-0.61.3-gf65394e-win32.zip/download > uncrustify.zip
+  - curl -k -L http://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.61/uncrustify-0.61.3-gf65394e-win32.zip/download -o uncrustify.zip
   - cinst 7zip.commandline -y
-  - 7za e uncrustify.zip -ouncrustify
-  - "SET PATH=%cd%\\uncrustify;%PATH%"
+  - 7za e uncrustify.zip -ouncrustify-d
+  - "SET PATH=%cd%\\uncrustify-d;%PATH%"
   - where uncrustify
+
+  # elm-format
+  - curl -k -L https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-win-x64.zip -o elm-format.zip
+  - 7za e elm-format.zip -oelm-format-d
+  - "SET PATH=%cd%\\elm-format-d;%PATH%"
+  - where elm-format
 
 build_script:
 
   - cd %APPVEYOR_BUILD_FOLDER%
   # Install languages to Atom
-  - apm install language-marko language-html-swig language-svg language-elm
+  - apm install language-marko language-html-swig language-svg language-elm language-d mavensmate-atom
   # Show current PATH
   - echo %PATH%
   # Run tests on package
+  #- "%LOCALAPPDATA%\\atom\\bin\\atom.cmd --test spec"
   - apm test --path %LOCALAPPDATA%/atom/bin/atom.cmd

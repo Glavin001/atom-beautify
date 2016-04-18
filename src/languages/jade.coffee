@@ -16,14 +16,14 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "Jade"
+    "Jade", "Pug"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    "jade"
+    "jade", "pug"
   ]
 
   options: [

@@ -394,7 +394,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [Coldfusion](#coldfusion) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -1331,7 +1331,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [CSS](#css) 
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`CSScomb`](#csscomb)  [`JS Beautify`](#js-beautify)  [`JS Beautify`](#js-beautify)  [`JS Beautify`](#js-beautify)  [`JS Beautify`](#js-beautify)  [`JS Beautify`](#js-beautify)  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -1720,7 +1720,7 @@ Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, P
 
 ####  [CSV](#csv) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -1870,7 +1870,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [EJS](#ejs) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -2172,7 +2172,7 @@ Automatically beautify Elm files on save
 
 ####  [ERB](#erb) 
 
-**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -2691,7 +2691,7 @@ Automatically beautify Go files on save
 
 ####  [Handlebars](#handlebars) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -2722,7 +2722,7 @@ Disable Handlebars Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify` 
+**Enum**:  `JS Beautify`  `Pretty Diff` 
 
 **Description**:
 
@@ -2844,11 +2844,11 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Indentation character (Supported by JS Beautify)
+Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -2922,11 +2922,11 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Indentation size/length (Supported by JS Beautify)
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -2974,11 +2974,11 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Preserve line-breaks (Supported by JS Beautify)
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -3118,11 +3118,11 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Maximum characters per line (0 disables) (Supported by JS Beautify)
+Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -3199,7 +3199,7 @@ Automatically beautify Haskell files on save
 
 ####  [HTML](#html) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -3644,7 +3644,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 ####  [Jade](#jade) 
 
-**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify)  [`Pug Beautify`](#pug-beautify) 
+**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify) 
 
 **Description**:
 
@@ -3846,7 +3846,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [JavaScript](#javascript) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`JSCS Fixer`](#jscs-fixer)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`JSCS Fixer`](#jscs-fixer)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -4379,7 +4379,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 
 ####  [JSON](#json) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -4912,7 +4912,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 
 ####  [JSX](#jsx) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -5393,7 +5393,7 @@ Remove trailing whitespace (Supported by Latex Beautify)
 
 ####  [LESS](#less) 
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -5758,7 +5758,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 ####  [Markdown](#markdown) 
 
-**Supported Beautifiers**:  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Remark`](#remark)  [`Tidy Markdown`](#tidy-markdown) 
+**Supported Beautifiers**:  [`Remark`](#remark)  [`Tidy Markdown`](#tidy-markdown) 
 
 **Description**:
 
@@ -7461,7 +7461,7 @@ sort imports (requires isort installed) (Supported by autopep8)
 
 ####  [Riot.js](#riot.js) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -7628,7 +7628,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 ####  [Ruby](#ruby) 
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify)  [`Ruby Beautify`](#ruby-beautify) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
 
 **Description**:
 
@@ -7856,7 +7856,7 @@ Path to rustfmt program (Supported by rustfmt)
 
 ####  [Sass](#sass) 
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -8221,7 +8221,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 ####  [SCSS](#scss) 
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -8586,7 +8586,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 ####  [Spacebars](#spacebars) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -8898,7 +8898,7 @@ Change case of keywords (Supported by sqlformat)
 
 ####  [SVG](#svg) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -9065,7 +9065,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 ####  [Swig](#swig) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -9232,7 +9232,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 ####  [TSS](#tss) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -9545,7 +9545,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 ####  [Twig](#twig) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -10404,7 +10404,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [Visualforce](#visualforce) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -10571,7 +10571,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 ####  [XML](#xml) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
@@ -11016,7 +11016,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 ####  [XTemplate](#xtemplate) 
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 

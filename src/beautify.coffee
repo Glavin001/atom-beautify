@@ -180,6 +180,7 @@ beautify = ({onSave}) ->
   return
 
 beautifyFilePath = (filePath, callback) ->
+  logger.verbose('beautifyFilePath', filePath)
 
   # Show in progress indicate on file's tree-view entry
   $ ?= require("atom-space-pen-views").$
@@ -188,13 +189,16 @@ beautifyFilePath = (filePath, callback) ->
 
   # Cleanup and return callback function
   cb = (err, result) ->
+    logger.verbose('Cleanup beautifyFilePath', err, result)
     $el = $(".icon-file-text[data-path=\"#{filePath}\"]")
     $el.removeClass('beautifying')
     return callback(err, result)
 
   # Get contents of file
   fs ?= require "fs"
+  logger.verbose('readFile', filePath)
   fs.readFile(filePath, (err, data) ->
+    logger.verbose('readFile completed', err, filePath)
     return cb(err) if err
     input = data?.toString()
     grammar = atom.grammars.selectGrammar(filePath, input)
@@ -202,14 +206,18 @@ beautifyFilePath = (filePath, callback) ->
 
     # Get the options
     allOptions = beautifier.getOptionsForPath(filePath)
+    logger.verbose('beautifyFilePath allOptions', allOptions)
 
     # Beautify File
     completionFun = (output) ->
+      logger.verbose('beautifyFilePath completionFun', output)
       if output instanceof Error
         return cb(output, null ) # output == Error
       else if typeof output is "string"
         # do not allow empty string
-        return cb(null, output) if output is ''
+        if output.trim() is ''
+          logger.verbose('beautifyFilePath, output was empty string!')
+          return cb(null, output)
         # save to file
         fs.writeFile(filePath, output, (err) ->
           return cb(err) if err
@@ -218,6 +226,7 @@ beautifyFilePath = (filePath, callback) ->
       else
         return cb( new Error("Unknown beautification result #{output}."), output)
     try
+      logger.verbose('beautify', input, allOptions, grammarName, filePath)
       beautifier.beautify(input, allOptions, grammarName, filePath)
       .then(completionFun)
       .catch(completionFun)
@@ -470,8 +479,9 @@ debug = () ->
 
 handleSaveEvent = ->
   atom.workspace.observeTextEditors (editor) ->
-    buffer = editor.getBuffer()
-    disposable = buffer.onDidSave(({path : filePath}) ->
+    disposable = editor.onDidSave(({path : filePath}) ->
+      logger.verbose('Should beautify on this save?')
+      buffer = editor.getBuffer()
       path ?= require('path')
       # Get Grammar
       grammar = editor.getGrammar().name
@@ -492,14 +502,18 @@ handleSaveEvent = ->
       if beautifyOnSave
         posArray = getCursors(editor)
         origScrollTop = getScrollTop(editor)
+        logger.verbose('Beautifying file', filePath)
         beautifyFilePath(filePath, ->
+          logger.verbose('Done beautifying file', filePath)
           if editor.isAlive() is true
+            logger.verbose('Reloading TextEditor buffer...')
             buffer.reload()
-            logger.verbose('restore editor positions', posArray,origScrollTop)
+            logger.verbose('Reloaded TextEditor buffer.')
             # Let the scrollTop setting run after all the save related stuff is run,
             # otherwise setScrollTop is not working, probably because the cursor
             # addition happens asynchronously
             setTimeout ( ->
+              logger.verbose('restore editor positions', posArray,origScrollTop)
               setCursors(editor, posArray)
               setScrollTop(editor, origScrollTop)
               # console.log "setScrollTop"
