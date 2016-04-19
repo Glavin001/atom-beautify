@@ -484,8 +484,12 @@ debug = () ->
 
 handleSaveEvent = ->
   atom.workspace.observeTextEditors (editor) ->
-    disposable = editor.onDidSave(({path : filePath}) ->
+    pendingPaths = {}
+    beautifyOnSaveHandler = ({path: filePath}) ->
       logger.verbose('Should beautify on this save?')
+      if pendingPaths[filePath]
+        logger.verbose("Editor with file path #{filePath} already beautified!")
+        return
       buffer = editor.getBuffer()
       path ?= require('path')
       # Get Grammar
@@ -511,13 +515,22 @@ handleSaveEvent = ->
           logger.verbose('Done beautifying file', filePath)
           if editor.isAlive() is true
             logger.verbose('Saving TextEditor...')
+            # Store the filePath to prevent infinite looping
+            # When Whitespace package has option "Ensure Single Trailing Newline" enabled
+            # It will add a newline and keep the file from converging on a beautified form
+            # and saving without emitting onDidSave event, because there were no changes.
+            pendingPaths[filePath] = true
             editor.save()
+            delete pendingPaths[filePath]
             logger.verbose('Saved TextEditor.')
         )
         .catch((error) ->
           return showError(error)
         )
-      )
+    disposable = editor.onDidSave(({path : filePath}) ->
+      # TODO: Implement debouncing
+      beautifyOnSaveHandler({path: filePath})
+    )
     plugin.subscriptions.add disposable
 
 getUnsupportedOptions = ->
