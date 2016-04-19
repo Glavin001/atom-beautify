@@ -70,3 +70,6 @@ before_install:
   # Elm
   - curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-mac-x64.tgz
   - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin
+  # OCaml
+  - brew install ocaml opam
+  - opam install ocp-indent
