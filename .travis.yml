@@ -72,4 +72,6 @@ before_install:
   - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin
   # OCaml
   - brew install ocaml opam
+  - opam init --auto-setup
   - opam install ocp-indent
+  
