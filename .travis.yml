@@ -73,5 +73,5 @@ before_install:
   # OCaml
   - brew install ocaml opam
   - opam init --auto-setup
-  - opam install ocp-indent
+  - opam install --yes ocp-indent
   
