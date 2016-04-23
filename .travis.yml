@@ -74,4 +74,5 @@ before_install:
   - brew install ocaml opam
   - opam init --auto-setup
   - opam install --yes ocp-indent
-  
+  # Crystal
+  - brew install crystal-lang
