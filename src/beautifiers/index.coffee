@@ -48,6 +48,7 @@ module.exports = class Beautifiers extends EventEmitter
     'fortran-beautifier'
     'js-beautify'
     'jscs'
+    'ocp-indent'
     'perltidy'
     'php-cs-fixer'
     'phpcbf'

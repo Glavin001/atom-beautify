@@ -43,6 +43,7 @@ module.exports = class Languages
     'marko'
     "mustache"
     "objective-c"
+    "ocaml"
     "pawn"
     "perl"
     "php"
