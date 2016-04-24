@@ -2,7 +2,7 @@ module XYZ {
   interface I {
     x: number,
    y,
-  z
+    z
 }
 
 var zZz = {
@@ -31,9 +31,9 @@ if (x === 3) {
   }
   console.log("x");
   x = y.hey
-  .b
-  .c
-  .d;
+    .b
+    .c
+    .d;
 
 
   export class X {
