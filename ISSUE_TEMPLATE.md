@@ -36,6 +36,7 @@ The debugging results will be copied to your clipboard.
 # Checklist
 
 - [ ] I have tried uninstalling and reinstalling Atom Beautify to ensure it installed properly
+- [ ] I have reloaded (or restarted) Atom to ensure it is not a caching issue
 - [ ] Searched for existing Atom Beautify Issues at https://github.com/Glavin001/atom-beautify/issues 
 so I know this is not a duplicate issue
 - [ ] Generated debugging information and added link for `debug.md` Gist to this issue
