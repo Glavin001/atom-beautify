@@ -125,9 +125,6 @@
     "winston": "^2.2.0",
     "yaml-front-matter": "^3.2.3"
   },
-  "optionalDependencies": {
-    "cross-spawn": "^2.0.0"
-  },
   "activationCommands": {
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
