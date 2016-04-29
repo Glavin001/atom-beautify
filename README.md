@@ -31,7 +31,6 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
   - [x] XML
   - [x] SVG
   - [x] [Marko](https://github.com/marko-js/marko)
-    - Requires [language-marko](https://github.com/marko-js/atom-language-marko)
 - [x] CSS, including
   - [Sass](http://sass-lang.com/)
   - [Less](http://lesscss.org/)

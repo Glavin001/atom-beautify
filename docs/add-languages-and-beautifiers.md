@@ -26,7 +26,12 @@ Now your Language is available and can be detected and beautifiers can support i
     - Prettydiff is a good example of complex options: https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/prettydiff.coffee
     - PHP-CS-Fixer is a good example of a CLI beautifier with arguments: https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/php-cs-fixer.coffee#L15-L39
   - `options` - the key represents the Language's name. The value could be `true` (supports all options), `false` (supports language, with no options), or an `object` whose keys are option keys and values are complex mappings. If you need to use these, let me know. `true` is probably what you want.
-  - The `beautify` function should return a `Promise` (use `@Promise` as shown). The arguments passed are: `text`, the source code from Atom's Text Editor, `language` is a string of the language's name (`JavaScript`), and `options` is an object of all of the options in their form as described by your Language definition (see `Configure the new language` above).
+  - The `beautify` function should return a `Promise` (use `@Promise` as shown). The arguments passed are:
+    - __`text`__ -  the source code from Atom's Text Editor
+    - __`language`__ - the language's name (`JavaScript`)
+    - __`options`__ - an object of all of the options in their form as described by your Language definition (see `Configure the new language` above).
+    - __`context`__ - an object with extra information:
+        - __`filePath`__ - The file path associated with the text being beautified (may be null)
 3. Add beautifier to list of `beautifierNames`: https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/index.coffee#L34
 4. Add test example files in https://github.com/Glavin001/atom-beautify/tree/master/examples
   - You can put your test in `nested-jsbeautifyrc` directory, https://github.com/Glavin001/atom-beautify/tree/master/examples/nested-jsbeautifyrc
