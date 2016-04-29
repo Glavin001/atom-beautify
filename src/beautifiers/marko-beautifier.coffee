@@ -17,12 +17,13 @@ module.exports = class MarkoBeautifier extends Beautifier
 
       indent = ''
 
-      for i in [0...indent_size - 1] by 1
+      for i in [0..indent_size - 1]
         indent += indent_char
 
       prettyprintOptions =
         syntax : options.syntax
         filename: if context.filePath then context.filePath else require.resolve('marko-prettyprint')
+        indent: indent
 
       try
         resolve(markoPrettyprint(text, prettyprintOptions))
