@@ -15,14 +15,17 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "JavaScript"
+    "JavaScript",
+    "JavaScript for Automation (JXA)"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    "js"
+    "js",
+    "scpt",
+    "applescript"
   ]
 
   defaultBeautifier: "JS Beautify"
