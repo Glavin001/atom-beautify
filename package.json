@@ -86,6 +86,10 @@
     {
       "name": "Patrick Steele-Idem",
       "url": "https://github.com/psteeleidem"
+    },
+    {
+      "name": "Joost van Doorn",
+      "url": "https://github.com/JoostvDoorn"
     }
   ],
   "engines": {
@@ -192,7 +196,8 @@
     "go",
     "golang",
     "svg",
-    "elm"
+    "elm",
+    "lua"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",

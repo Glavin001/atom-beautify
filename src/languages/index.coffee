@@ -40,6 +40,7 @@ module.exports = class Languages
     "jsx"
     "latex"
     "less"
+    "lua"
     "markdown"
     'marko'
     "mustache"
