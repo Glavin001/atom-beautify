@@ -72,6 +72,32 @@ if [ -f ./node_modules/.bin/coffeelint ]; then
   fi
 fi
 
+if [ -f ./node_modules/.bin/eslint ]; then
+  if [ -d ./src ]; then
+    echo "Linting package..."
+    ./node_modules/.bin/eslint src
+    rc=$?; if [ $rc -ne 0 ]; then exit $rc; fi
+  fi
+  if [ -d ./spec ]; then
+    echo "Linting package specs..."
+    ./node_modules/.bin/eslint spec
+    rc=$?; if [ $rc -ne 0 ]; then exit $rc; fi
+  fi
+fi
+
+if [ -f ./node_modules/.bin/standard ]; then
+  if [ -d ./src ]; then
+    echo "Linting package..."
+    ./node_modules/.bin/standard "src/**/*.js"
+    rc=$?; if [ $rc -ne 0 ]; then exit $rc; fi
+  fi
+  if [ -d ./spec ]; then
+    echo "Linting package specs..."
+    ./node_modules/.bin/standard "spec/**/*.js"
+    rc=$?; if [ $rc -ne 0 ]; then exit $rc; fi
+  fi
+fi
+
 if [ -d ./spec ]; then
   echo "Running specs..."
   "$ATOM_SCRIPT_PATH" --test spec

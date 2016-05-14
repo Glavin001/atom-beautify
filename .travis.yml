@@ -1,12 +1,3 @@
-language: objective-c
-
-osx_image: xcode7.3
-
-sudo: false
-
-git:
-  depth: 10
-
 notifications:
   webhooks:
     urls:
@@ -20,12 +11,29 @@ notifications:
 
 script: sh build-package.sh
 
+git:
+  depth: 10
+
+sudo: false
+
+os:
+  - linux
+  - osx
+
 env:
   global:
     - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom"
   matrix:
     - ATOM_CHANNEL=stable
     - ATOM_CHANNEL=beta
+
+addons:
+  apt:
+    packages:
+    - build-essential
+    - git
+    - libgnome-keyring-dev
+    - fakeroot
 
 cache:
     - pip: true
