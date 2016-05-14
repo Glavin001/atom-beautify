@@ -24,8 +24,10 @@ module.exports = {
   ###
   extensions: [
     "js",
-    "scpt",
-    "applescript"
+	"scpt"
+	"jxa"
+	"jxainc"
+	"applescript"
   ]
 
   defaultBeautifier: "JS Beautify"
