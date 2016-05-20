@@ -14,37 +14,69 @@ script: sh build-package.sh
 git:
   depth: 10
 
-sudo: false
+php:
+  - '5.6'
+python:
+  - '2.7'
+go:
+  - release
 
-os:
-  - linux
-  - osx
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: require
+      env:
+        - ATOM_CHANNEL=stable
+    - os: linux
+      dist: trusty
+      sudo: require
+      env:
+        - ATOM_CHANNEL=beta
+    - os: osx
+      env:
+        - ATOM_CHANNEL=stable
+    - os: osx
+      env:
+        - ATOM_CHANNEL=beta
 
 env:
   global:
     - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom"
-  matrix:
-    - ATOM_CHANNEL=stable
-    - ATOM_CHANNEL=beta
+    - PATH="/home/travis/gopath/bin:$HOME/.linuxbrew/bin:$PATH"
 
 addons:
   apt:
+    sources:
+    - sourceline: 'deb http://dist.crystal-lang.org/apt crystal main'
+    - sourceline: 'deb http://ppa.launchpad.net/avsm/ppa/ubuntu trusty main'
+    - sourceline: 'deb http://ppa.launchpad.net/ubuntu-lxc/lxd-stable/ubuntu trusty main'
     packages:
     - build-essential
     - git
     - libgnome-keyring-dev
     - fakeroot
+    - crystal
+    - ocaml
+    - camlp4
+    - opam
+    - php5-cli
+    - golang
 
 cache:
-    - pip: true
-    - bundler: true
-    - directories:
-        - vendor/bundle # gems are installed here, https://docs.travis-ci.com/user/languages/ruby/#Dependency-Management
-        - node_modules
-        - $HOME/.atom
-        - $HOME/.stack
+  pip: true
+  bundler: true
+  directories:
+    - vendor/bundle # gems are installed here, https://docs.travis-ci.com/user/languages/ruby/#Dependency-Management
+    - node_modules
+    - $HOME/.atom
+    - $HOME/.stack
 
 before_install:
+  # Install Homebrew on Linux
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
+    fi
   # Update Homebrew
   - brew update
   - brew tap homebrew/dupes
@@ -55,7 +87,9 @@ before_install:
   - gem install htmlbeautifier
   - gem install puppet-lint
   # Python language support
-  - brew install python
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install python; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
+  - pip install --upgrade pip
   - pip install --upgrade autopep8
   - pip install --upgrade isort
   # SQL language support
@@ -64,11 +98,18 @@ before_install:
   - brew install uncrustify
   # PHP
   - brew tap homebrew/homebrew-php
-  - brew install php56 || true
-  - brew gist-logs php56 || true
-  - echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini
-  - brew install php-cs-fixer || true
-  - brew gist-logs php-cs-fixer || true
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install php56 || true;
+      brew gist-logs php56 || true;
+      echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini;
+      brew install php-cs-fixer || true;
+      brew gist-logs php-cs-fixer || true;
+    fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      wget http://get.sensiolabs.org/php-cs-fixer.phar -O php-cs-fixer;
+      chmod a+x php-cs-fixer;
+      mv php-cs-fixer $HOME/.linuxbrew/bin/php-cs-fixer;
+    fi
   # CoffeeScript
   - npm install coffee-formatter
   # Haskell
@@ -76,11 +117,20 @@ before_install:
   # - stack setup
   # - stack install stylish-haskell
   # Elm
-  - curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-mac-x64.tgz
-  - tar xvzf /tmp/elm-format.tgz -C /usr/local/bin
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-mac-x64.tgz;
+      tar xvzf /tmp/elm-format.tgz -C /usr/local/bin;
+    fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-linux-x64.tgz;
+      tar xvzf /tmp/elm-format.tgz -C $HOME/.linuxbrew/bin;
+    fi
   # OCaml
-  - brew install ocaml opam
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install ocaml;
+      brew install opam;
+    fi
   - opam init --auto-setup
   - opam install --yes ocp-indent
   # Crystal
-  - brew install crystal-lang
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
