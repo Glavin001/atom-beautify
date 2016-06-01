@@ -10,6 +10,7 @@ module.exports = {
 
   name: "Marko"
   namespace: "marko"
+  fallback: ['html']
 
   ###
   Supported Grammars
