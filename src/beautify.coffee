@@ -28,10 +28,10 @@ $ = null
 # return data;
 # }
 getScrollTop = (editor) ->
-  view = editor.viewRegistry.getView(editor)
+  view = atom.views.getView(editor)
   view.getScrollTop()
 setScrollTop = (editor, value) ->
-  view = editor.viewRegistry.getView(editor)
+  view = atom.views.getView(editor)
   view.setScrollTop value
 
 getCursors = (editor) ->
