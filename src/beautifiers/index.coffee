@@ -66,6 +66,7 @@ module.exports = class Beautifiers extends EventEmitter
     'typescript-formatter'
     'yapf'
     'erl_tidy'
+    'marko-beautifier'
   ]
 
   ###
@@ -276,7 +277,11 @@ module.exports = class Beautifiers extends EventEmitter
 
             # Beautify text with language options
             @emit "beautify::start"
-            beautifier.beautify(text, language.name, options)
+
+            context =
+              filePath: filePath
+
+            beautifier.beautify(text, language.name, options, context)
             .then(resolve)
             .catch(reject)
             .finally(=>
