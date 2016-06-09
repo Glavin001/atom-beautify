@@ -17,7 +17,7 @@ module.exports = class PHPCSFixer extends Beautifier
   beautify: (text, language, options, context) ->
     @debug('php-cs-fixer', options)
 
-    configFile = @findFile(path.dirname(context.filePath), '.php_cs')
+    configFile = if context.filePath then @findFile(path.dirname(context.filePath), '.php_cs')
 
     if @isWindows
       # Find php-cs-fixer.phar script
