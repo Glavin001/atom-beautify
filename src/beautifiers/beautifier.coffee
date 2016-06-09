@@ -1,10 +1,11 @@
-Promise = require("bluebird")
+Promise = require('bluebird')
 _ = require('lodash')
-fs = require("fs")
-temp = require("temp").track()
+fs = require('fs')
+temp = require('temp').track()
 readFile = Promise.promisify(fs.readFile)
 which = require('which')
 spawn = require('child_process').spawn
+path = require('path')
 
 module.exports = class Beautifier
 
@@ -27,7 +28,6 @@ module.exports = class Beautifier
   - <string:language>:<string:option_key>:<string:rename>
   - <string:language>:<string:option_key>:<function:transform>
   - <string:language>:<string:option_key>:<array:mapper>
-
   ###
   options: {}
 
@@ -78,6 +78,24 @@ module.exports = class Beautifier
     .then((filePath) ->
       return readFile(filePath, "utf8")
     )
+
+  ###
+  Find file
+  ###
+  findFile: (startDir, fileNames) ->
+    throw new Error "Specify file names to find." unless arguments.length
+    unless fileNames instanceof Array
+      fileNames = [fileNames]
+    startDir = startDir.split(path.sep)
+    while startDir.length
+      currentDir = startDir.join(path.sep)
+      for fileName in fileNames
+        filePath = path.join(currentDir, fileName)
+        try
+          fs.accessSync(filePath, fs.R_OK)
+          return filePath
+      startDir.pop()
+    return null
 
   ###
   If platform is Windows
