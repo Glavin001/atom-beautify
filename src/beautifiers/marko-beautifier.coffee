@@ -2,6 +2,7 @@
 Beautifier = require('./beautifier')
 
 module.exports = class MarkoBeautifier extends Beautifier
+
   name: 'Marko Beautifier'
 
   options:
@@ -22,7 +23,7 @@ module.exports = class MarkoBeautifier extends Beautifier
 
       prettyprintOptions =
         syntax : options.syntax
-        filename: if context.filePath then context.filePath else require.resolve('marko-prettyprint')
+        filename: if context? and context.filePath? then context.filePath else require.resolve('marko-prettyprint')
         indent: indent
 
       try

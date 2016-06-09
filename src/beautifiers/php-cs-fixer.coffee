@@ -8,16 +8,15 @@ path = require('path')
 
 module.exports = class PHPCSFixer extends Beautifier
 
-  name: "PHP-CS-Fixer"
+  name: 'PHP-CS-Fixer'
 
-  options: {
+  options:
     PHP: true
-  }
 
   beautify: (text, language, options, context) ->
     @debug('php-cs-fixer', options)
 
-    configFile = if context.filePath then @findFile(path.dirname(context.filePath), '.php_cs')
+    configFile = if context? and context.filePath? then @findFile(path.dirname(context.filePath), '.php_cs')
 
     if @isWindows
       # Find php-cs-fixer.phar script
