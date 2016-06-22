@@ -313,7 +313,7 @@ module.exports = class Beautifier
       # when the spawn child process exits,
       # check if there were any errors and
       # close the writeable stream
-      cmd.on('exit', (returnCode) =>
+      cmd.on('close', (returnCode) =>
         @debug('spawn done', returnCode, stderr, stdout)
         resolve({returnCode, stdout, stderr})
       )
