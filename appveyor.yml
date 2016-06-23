@@ -126,7 +126,7 @@ build_script:
 
   - cd %APPVEYOR_BUILD_FOLDER%
   # Install languages to Atom
-  - apm install language-marko language-html-swig language-svg language-elm language-d mavensmate-atom
+  - apm install language-marko language-html-swig language-svg language-elm language-d mavensmate-atom language-lua
   # Show current PATH
   - echo %PATH%
   # Run tests on package
