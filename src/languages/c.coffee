@@ -15,6 +15,7 @@ module.exports = {
   Supported extensions
   ###
   extensions: [
+    "h"
     "c"
     "cl"
   ]
