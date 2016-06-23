@@ -37,8 +37,13 @@ module.exports = class PHPCBF extends Beautifier
         # Check if phpcbf path was found
         if phpcbfPath?
           # Found phpcbf path
-          @run("php", [
-            phpcbfPath
+
+          # Check if phpcbf is an executable
+          isExec = path.extname(phpcbfPath) isnt ''
+          exec = if isExec then phpcbfPath else "php"
+
+          @run(exec, [
+            phpcbfPath unless isExec
             "--no-patch"
             "--standard=#{options.standard}" if options.standard
             tempFile = @tempFile("temp", text)
