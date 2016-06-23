@@ -15,11 +15,8 @@ module.exports = class Rustfmt extends Beautifier
     Rust: true
   }
 
-  beautify: (text, language, options) ->
-    editor = atom.workspace.getActivePaneItem()
-    buffer = editor.getBuffer?()
-    filePath = buffer.getPath?()
-    cwd = if filePath then path.dirname filePath else undefined
+  beautify: (text, language, options, context) ->
+    cwd = context.filePath and path.dirname context.filePath
     program = options.rustfmt_path or "rustfmt"
     help = {
       link: "https://github.com/nrc/rustfmt"
