@@ -15,4 +15,8 @@ module.exports = class OCPIndent extends Beautifier
   beautify: (text, language, options) ->
     @run("ocp-indent", [
       @tempFile("input", text)
-      ])
+      ], {
+        help: {
+          link: "https://www.typerex.org/ocp-indent.html"
+        }
+      })
