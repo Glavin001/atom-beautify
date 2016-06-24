@@ -257,15 +257,12 @@ module.exports = class Beautifier
       .then(([exeName, args]) =>
         @debug('exeName, args:', exeName, args)
 
-        # Remove undefined/null values
-        args = _.without(args, undefined)
-        args = _.without(args, null)
-
         # Get PATH and other environment variables
-        Promise.all([exeName, @getShellEnvironment(), @which(exeName)])
+        Promise.all([exeName, args, @getShellEnvironment(), @which(exeName)])
       )
-      .then(([exeName, env, exePath]) =>
+      .then(([exeName, args, env, exePath]) =>
         @debug('exePath, env:', exePath, env)
+        @debug('args', args)
 
         exe = exePath ? exeName
         options = {
@@ -307,6 +304,10 @@ module.exports = class Beautifier
   Spawn
   ###
   spawn: (exe, args, options, onStdin) ->
+    # Remove undefined/null values
+    args = _.without(args, undefined)
+    args = _.without(args, null)
+
     return new Promise((resolve, reject) =>
       @debug('spawn', exe, args)
 
