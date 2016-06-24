@@ -5804,6 +5804,69 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 }
 ```
 
+####  [Lua](#lua) 
+
+**Supported Beautifiers**:  [`lua`](#lua) 
+
+**Description**:
+
+Options for language Lua
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Lua Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `lua`
+
+**Type**: `string`
+
+**Enum**:  `lua` 
+
+**Description**:
+
+Default Beautifier to be used for Lua
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Lua files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
 ####  [Markdown](#markdown) 
 
 **Supported Beautifiers**:  [`Remark`](#remark)  [`Tidy Markdown`](#tidy-markdown) 
@@ -5945,7 +6008,7 @@ Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax
 
 ####  [Marko](#marko) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
@@ -5972,11 +6035,11 @@ Disable Marko Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `JS Beautify`
+**Default**: `Marko Beautifier`
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify` 
+**Enum**:  `Marko Beautifier` 
 
 **Description**:
 
@@ -6018,11 +6081,11 @@ Automatically beautify Marko files on save
 
 **Enum**:  `collapse`  `expand`  `end-expand`  `none` 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-[collapse|expand|end-expand|none] (Supported by JS Beautify)
+[collapse|expand|end-expand|none] (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6042,11 +6105,11 @@ Automatically beautify Marko files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-End output with newline (Supported by JS Beautify)
+End output with newline (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6068,11 +6131,11 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by JS Beautify)
+List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6098,11 +6161,11 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Indentation character (Supported by JS Beautify)
+Indentation character (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6122,11 +6185,11 @@ Indentation character (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Indent <head> and <body> sections. (Supported by JS Beautify)
+Indent <head> and <body> sections. (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6150,11 +6213,11 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Enum**:  `keep`  `separate`  `normal` 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-[keep|separate|normal] (Supported by JS Beautify)
+[keep|separate|normal] (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6176,11 +6239,11 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Indentation size/length (Supported by JS Beautify)
+Indentation size/length (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6202,11 +6265,11 @@ Indentation size/length (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6228,11 +6291,11 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Preserve line-breaks (Supported by JS Beautify)
+Preserve line-breaks (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6240,6 +6303,34 @@ Preserve line-breaks (Supported by JS Beautify)
 {
     "html": {
         "preserve_newlines": true
+    }
+}
+```
+
+#####  [Syntax](#syntax) 
+
+**Namespace**: `marko`
+
+**Key**: `syntax`
+
+**Default**: `html`
+
+**Type**: `string`
+
+**Enum**:  `html`  `concise` 
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+[html|concise] (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "marko": {
+        "syntax": "html"
     }
 }
 ```
@@ -6254,11 +6345,11 @@ Preserve line-breaks (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+List of tags (defaults to inline) that should not be reformatted (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6320,11 +6411,11 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Enum**:  `auto`  `force` 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|force] (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6346,11 +6437,11 @@ Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Indent wrapped attributes to after N characters (Supported by JS Beautify)
+Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6372,11 +6463,11 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Maximum characters per line (0 disables) (Supported by JS Beautify)
+Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -12887,6 +12978,419 @@ undefined (Supported by Latex Beautify)
             "matrix",
             "bmatrix",
             "pmatrix"
+        ]
+    }
+}
+```
+
+
+### Marko Beautifier
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `html`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Indentation size/length (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "indent_size": 4
+    }
+}
+```
+
+#####  [Indent char](#indent-char) 
+
+**Namespace**: `html`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Indentation character (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "indent_char": " "
+    }
+}
+```
+
+#####  [Syntax](#syntax) 
+
+**Namespace**: `marko`
+
+**Key**: `syntax`
+
+**Default**: `html`
+
+**Type**: `string`
+
+**Enum**:  `html`  `concise` 
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+[html|concise] (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "marko": {
+        "syntax": "html"
+    }
+}
+```
+
+#####  [Indent inner html](#indent-inner-html) 
+
+**Namespace**: `html`
+
+**Key**: `indent_inner_html`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Indent <head> and <body> sections. (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "indent_inner_html": false
+    }
+}
+```
+
+#####  [Brace style](#brace-style) 
+
+**Namespace**: `html`
+
+**Key**: `brace_style`
+
+**Default**: `collapse`
+
+**Type**: `string`
+
+**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+[collapse|expand|end-expand|none] (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Indent scripts](#indent-scripts) 
+
+**Namespace**: `html`
+
+**Key**: `indent_scripts`
+
+**Default**: `normal`
+
+**Type**: `string`
+
+**Enum**:  `keep`  `separate`  `normal` 
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+[keep|separate|normal] (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "indent_scripts": "normal"
+    }
+}
+```
+
+#####  [Wrap line length](#wrap-line-length) 
+
+**Namespace**: `html`
+
+**Key**: `wrap_line_length`
+
+**Default**: `250`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Maximum characters per line (0 disables) (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "wrap_line_length": 250
+    }
+}
+```
+
+#####  [Wrap attributes](#wrap-attributes) 
+
+**Namespace**: `html`
+
+**Key**: `wrap_attributes`
+
+**Default**: `auto`
+
+**Type**: `string`
+
+**Enum**:  `auto`  `force` 
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Wrap attributes to new lines [auto|force] (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "wrap_attributes": "auto"
+    }
+}
+```
+
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+
+**Namespace**: `html`
+
+**Key**: `wrap_attributes_indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "wrap_attributes_indent_size": 4
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Preserve line-breaks (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Max preserve newlines](#max-preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Unformatted](#unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `unformatted`
+
+**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+List of tags (defaults to inline) that should not be reformatted (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": [
+            "a",
+            "span",
+            "img",
+            "bdo",
+            "em",
+            "strong",
+            "dfn",
+            "code",
+            "samp",
+            "kbd",
+            "var",
+            "cite",
+            "abbr",
+            "acronym",
+            "q",
+            "sub",
+            "sup",
+            "tt",
+            "i",
+            "b",
+            "big",
+            "small",
+            "u",
+            "s",
+            "strike",
+            "font",
+            "ins",
+            "del",
+            "pre",
+            "address",
+            "dt",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6"
+        ]
+    }
+}
+```
+
+#####  [End with newline](#end-with-newline) 
+
+**Namespace**: `html`
+
+**Key**: `end_with_newline`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+End output with newline (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "end_with_newline": false
+    }
+}
+```
+
+#####  [Extra liners](#extra-liners) 
+
+**Namespace**: `html`
+
+**Key**: `extra_liners`
+
+**Default**: `head,body,/html`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "extra_liners": [
+            "head",
+            "body",
+            "/html"
         ]
     }
 }
