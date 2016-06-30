@@ -15,6 +15,7 @@ module.exports = {
   ###
   extensions: [
     "f90"
+    "F90"
   ]
 
   ###
