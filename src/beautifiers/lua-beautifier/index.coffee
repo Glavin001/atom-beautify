@@ -6,7 +6,8 @@ path = require("path")
 Beautifier = require('../beautifier')
 
 module.exports = class Lua extends Beautifier
-  name: "lua"
+  name: "Lua beautifier"
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.pl"
 
   options: {
     Lua: true

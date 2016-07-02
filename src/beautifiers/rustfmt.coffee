@@ -10,6 +10,7 @@ versionCheckState = false
 
 module.exports = class Rustfmt extends Beautifier
   name: "rustfmt"
+  link: "https://github.com/nrc/rustfmt"
 
   options: {
     Rust: true

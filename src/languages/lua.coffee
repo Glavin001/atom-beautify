@@ -17,6 +17,6 @@ module.exports = {
     'lua'
   ]
 
-  defaultBeautifier: "lua"
+  defaultBeautifier: "Lua beautifier"
 
 }

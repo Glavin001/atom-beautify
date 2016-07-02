@@ -10,6 +10,7 @@ fs = require('fs')
 module.exports = class ClangFormat extends Beautifier
 
   name: "clang-format"
+  link: "https://clang.llvm.org/docs/ClangFormat.html"
 
   options: {
     "C++": false

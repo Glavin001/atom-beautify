@@ -6,7 +6,8 @@ Requires https://github.com/jaspervdj/stylish-haskell
 Beautifier = require('./beautifier')
 
 module.exports = class Crystal extends Beautifier
-  name: "crystal"
+  name: "Crystal"
+  link: "http://crystal-lang.org"
 
   options: {
     Crystal: true

@@ -3,6 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class PrettyDiff extends Beautifier
   name: "Pretty Diff"
+  link: "https://github.com/prettydiff/prettydiff"
   options: {
     # Apply these options first / globally, for all languages
     _:

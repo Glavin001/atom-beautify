@@ -8,6 +8,7 @@ path = require("path")
 
 module.exports = class FortranBeautifier extends Beautifier
   name: "Fortran Beautifier"
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp"
 
   options: {
     Fortran: true

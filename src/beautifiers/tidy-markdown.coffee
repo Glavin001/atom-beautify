@@ -3,6 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class TidyMarkdown extends Beautifier
   name: "Tidy Markdown"
+  link: "https://github.com/slang800/tidy-markdown"
   options: {
     Markdown: false
   }

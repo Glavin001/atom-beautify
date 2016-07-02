@@ -4,6 +4,7 @@ Beautifier = require('./beautifier')
 module.exports = class MarkoBeautifier extends Beautifier
 
   name: 'Marko Beautifier'
+  link: "https://github.com/marko-js/marko-prettyprint"
 
   options:
     Marko: true

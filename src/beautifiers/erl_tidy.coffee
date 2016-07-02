@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class ErlTidy extends Beautifier
 
   name: "erl_tidy"
+  link: "http://erlang.org/doc/man/erl_tidy.html"
 
   options: {
     Erlang: true
@@ -20,7 +21,9 @@ module.exports = class ErlTidy extends Beautifier
       @run("erl", [
         ["-eval", 'erl_tidy:file("' + tempFile + '")']
         ["-noshell", "-s", "init", "stop"]
-        ])
+        ],
+        { help: { link: "http://erlang.org/doc/man/erl_tidy.html" } }
+        )
     ).then(=>
       @readFile(tempFile)
     )

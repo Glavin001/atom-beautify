@@ -6,6 +6,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class ElmFormat extends Beautifier
   name: "elm-format"
+  link: "https://github.com/avh4/elm-format"
 
   options: {
     Elm: true

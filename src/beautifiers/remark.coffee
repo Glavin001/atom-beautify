@@ -3,6 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class Remark extends Beautifier
   name: "Remark"
+  link: "https://github.com/wooorm/remark"
   options: {
     _: {
       gfm: true

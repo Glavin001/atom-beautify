@@ -6,6 +6,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class Dfmt extends Beautifier
   name: "dfmt"
+  link: "https://github.com/Hackerpilot/dfmt"
 
   options: {
     D: false

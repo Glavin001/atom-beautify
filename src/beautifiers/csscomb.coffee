@@ -3,6 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class JSBeautify extends Beautifier
   name: "CSScomb"
+  link: "https://github.com/csscomb/csscomb.js"
 
   options: {
     # TODO: Add support for options

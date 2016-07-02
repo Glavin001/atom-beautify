@@ -7,6 +7,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class PHPCBF extends Beautifier
   name: "PHPCBF"
+  link: "http://php.net/manual/en/install.php"
 
   options: {
     _:

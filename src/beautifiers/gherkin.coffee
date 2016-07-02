@@ -8,6 +8,7 @@ logger = require('../logger')(__filename)
 
 module.exports = class Gherkin extends Beautifier
   name: "Gherkin formatter"
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee"
 
   options: {
     gherkin: true

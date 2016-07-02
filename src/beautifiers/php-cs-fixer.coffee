@@ -9,6 +9,7 @@ path = require('path')
 module.exports = class PHPCSFixer extends Beautifier
 
   name: 'PHP-CS-Fixer'
+  link: "http://php.net/manual/en/install.php"
 
   options:
     PHP: true

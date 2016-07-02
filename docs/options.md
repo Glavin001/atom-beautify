@@ -1181,7 +1181,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [Crystal](#crystal) 
 
-**Supported Beautifiers**:  [`crystal`](#crystal) 
+**Supported Beautifiers**:  [`Crystal`](#crystal) 
 
 **Description**:
 
@@ -1208,11 +1208,11 @@ Disable Crystal Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `crystal`
+**Default**: `Crystal`
 
 **Type**: `string`
 
-**Enum**:  `crystal` 
+**Enum**:  `Crystal` 
 
 **Description**:
 
@@ -5806,7 +5806,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 ####  [Lua](#lua) 
 
-**Supported Beautifiers**:  [`lua`](#lua) 
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
 
 **Description**:
 
@@ -5833,11 +5833,11 @@ Disable Lua Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `lua`
+**Default**: `Lua beautifier`
 
 **Type**: `string`
 
-**Enum**:  `lua` 
+**Enum**:  `Lua beautifier` 
 
 **Description**:
 

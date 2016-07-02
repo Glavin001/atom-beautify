@@ -6,6 +6,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class PerlTidy extends Beautifier
   name: "Perltidy"
+  link: "http://perltidy.sourceforge.net/"
 
   options: {
     Perl: true

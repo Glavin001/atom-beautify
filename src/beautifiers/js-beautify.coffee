@@ -3,6 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class JSBeautify extends Beautifier
   name: "JS Beautify"
+  link: "https://github.com/beautify-web/js-beautify"
 
   options: {
     HTML: true
