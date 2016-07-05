@@ -130,6 +130,32 @@
       <ul class='summary'>
   <li>
     <span class='signature'>
+      <a href='#getScrollTop-'>
+        ~
+(void)
+<b>getScrollTop</b><span>(editor)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      function cleanOptions(data, types) { nopt.clean(data, types);
+return data;
+}
+
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#setScrollTop-'>
+        ~
+(void)
+<b>setScrollTop</b><span>(editor, value)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
       <a href='#getCursors-'>
         ~
 (void)
@@ -137,9 +163,6 @@
       </a>
     </span>
     <span class='desc'>
-      <p>function cleanOptions(data, types) { nopt.clean(data, types);
-return data;
-}</p>
     </span>
   </li>
   <li>
@@ -170,7 +193,7 @@ return data;
       <a href='#beautify-'>
         ~
 (void)
-<b>beautify</b><span>({onSave})</span>
+<b>beautify</b><span>({editor, onSave})</span>
       </a>
     </span>
     <span class='desc'>
@@ -224,10 +247,10 @@ return data;
       <h2>Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='getCursors-'>
+    <p class='signature' id='getScrollTop-'>
       ~
 (void)
-<b>getCursors</b><span>(editor)</span>
+<b>getScrollTop</b><span>(editor)</span>
       <br>
     </p>
     <div class='docstring'>
@@ -238,6 +261,24 @@ return data;
 </div>
 <div class='tags'>
 </div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='setScrollTop-'>
+      ~
+(void)
+<b>setScrollTop</b><span>(editor, value)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getCursors-'>
+      ~
+(void)
+<b>getCursors</b><span>(editor)</span>
+      <br>
+    </p>
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='setCursors-'>
@@ -265,7 +306,7 @@ return data;
     <p class='signature' id='beautify-'>
       ~
 (void)
-<b>beautify</b><span>({onSave})</span>
+<b>beautify</b><span>({editor, onSave})</span>
       <br>
     </p>
     
@@ -313,7 +354,7 @@ return data;
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.0
+  2.1.1
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

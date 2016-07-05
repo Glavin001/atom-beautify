@@ -49,6 +49,14 @@
     <pre><code class='coffeescript'>&quot;Pretty Diff&quot;</code></pre>
     
   </dd>
+  <dt id='link-variable'>
+    link
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>&quot;https:&#47;&#47;github.com&#47;prettydiff&#47;prettydiff&quot;</code></pre>
+    
+  </dd>
   <dt id='options-variable'>
     options
     =
@@ -60,8 +68,24 @@
   Apply these options first &#47; globally, for all languages
    *&#47;
   _: {
-    inchar: &quot;indent_char&quot;,
-    insize: &quot;indent_size&quot;,
+    inchar: [
+      &quot;indent_with_tabs&quot;, &quot;indent_char&quot;, function(indent_with_tabs, indent_char) {
+        if (indent_with_tabs === true) {
+          return &quot;\t&quot;;
+        } else {
+          return indent_char;
+        }
+      }
+    ],
+    insize: [
+      &quot;indent_with_tabs&quot;, &quot;indent_size&quot;, function(indent_with_tabs, indent_size) {
+        if (indent_with_tabs === true) {
+          return 1;
+        } else {
+          return indent_size;
+        }
+      }
+    ],
     objsort: function(objsort) {
       return objsort || false;
     },
@@ -119,6 +143,7 @@
   ERB: true,
   EJS: true,
   HTML: true,
+  Handlebars: true,
   XML: true,
   SVG: true,
   Spacebars: true,
@@ -133,7 +158,8 @@
   LESS: true,
   Swig: true,
   Visualforce: true,
-  &quot;Riot.js&quot;: true
+  &quot;Riot.js&quot;: true,
+  XTemplate: true
 }</code></pre>
     
   </dd>
@@ -177,6 +203,7 @@
           <a href='../class/Beautifier.html#deprecate-dynamic'>#deprecate</a>
           <a href='../class/Beautifier.html#tempFile-dynamic'>#tempFile</a>
           <a href='../class/Beautifier.html#readFile-dynamic'>#readFile</a>
+          <a href='../class/Beautifier.html#findFile-dynamic'>#findFile</a>
           <a href='../class/Beautifier.html#getShellEnvironment-dynamic'>#getShellEnvironment</a>
           <a href='../class/Beautifier.html#which-dynamic'>#which</a>
           <a href='../class/Beautifier.html#commandNotFoundError-dynamic'>#commandNotFoundError</a>
@@ -203,7 +230,7 @@
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.0
+  2.1.1
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

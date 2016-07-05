@@ -34,111 +34,414 @@
         </p>
       </nav>
       <div id='filecontents'>
-        <h1 id="-atom-beautify-https-github-com-glavin001-atom-beautify-"><a href="https://github.com/Glavin001/atom-beautify">atom-beautify</a></h1><p><a href="https://travis-ci.org/Glavin001/atom-beautify"><img src="https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master" alt="Build Status"></a>
+        <h1 id="-lipstick-atom-beautify-https-github-com-glavin001-atom-beautify-">:lipstick: <a href="https://github.com/Glavin001/atom-beautify">atom-beautify</a></h1><p><a href="https://travis-ci.org/Glavin001/atom-beautify"><img src="https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master" alt="Build Status"></a>
 <a href="https://ci.appveyor.com/project/Glavin001/atom-beautify"><img src="https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true" alt="Build status"></a>
 <a href="https://gitter.im/Glavin001/atom-beautify"><img src="https://img.shields.io/badge/gitter-Glavin001%2Fatom--beautify-1dce73.svg" alt="Gitter chat"></a>
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X2RK5DKN6YXPJ&amp;lc=CA&amp;item_name=Atom%2dBeautify&amp;item_number=atom%2dbeautify&amp;currency_code=CAD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" alt="Paypal Donations"></a></p><p><a href="https://waffle.io/Glavin001/atom-beautify/metrics"><img src="https://graphs.waffle.io/Glavin001/atom-beautify/throughput.svg" alt="Throughput Graph"></a></p><blockquote><p><a href="https://github.com/beautify-web/js-beautify">Beautify</a>
-HTML (including <a href="http://handlebarsjs.com/">Handlebars</a>),
-CSS (including <a href="http://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a>),
-JavaScript, and much more in Atom.</p></blockquote><p>Atom Package: <a href="https://atom.io/packages/atom-beautify">https://atom.io/packages/atom-beautify</a></p><pre><code class="lang-bash">apm install atom-beautify
-</code></pre><p>Or Settings/Preferences ➔ Packages ➔ Search for <code>atom-beautify</code></p><h2 id="language-support">Language Support</h2>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X2RK5DKN6YXPJ&amp;lc=CA&amp;item_name=Atom%2dBeautify&amp;item_number=atom%2dbeautify&amp;currency_code=CAD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" alt="Paypal Donations"></a></p><p><a href="https://waffle.io/Glavin001/atom-beautify/metrics"><img src="https://graphs.waffle.io/Glavin001/atom-beautify/throughput.svg" alt="Throughput Graph"></a></p><blockquote><p>Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom</p></blockquote>
+<table>
+<thead>
+<tr>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original HTML</td>
+<td>Beautified HTML</td>
+</tr>
+<tr>
+<td><img src="https://cloud.githubusercontent.com/assets/1885333/16542727/db52adc6-408a-11e6-824e-04aed06bd2f7.png" alt="image"></td>
+<td><img src="https://cloud.githubusercontent.com/assets/1885333/16542728/dcac3700-408a-11e6-8e35-9c8fc4432edc.png" alt="image"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-<li>[x] JavaScript and JSON</li>
-<li>[x] HTML, including<ul>
-<li>[x] <a href="http://handlebarsjs.com/">Handlebars</a></li>
-<li>[x] <a href="http://mustache.github.io">Mustache</a></li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/80">Embedded Ruby (ERB)</a><ul>
-<li>Requires <a href="https://github.com/threedaymonk/htmlbeautifier">htmlbeautifier</a></li>
-</ul>
-</li>
-<li>[x] XML</li>
-<li>[x] SVG</li>
-<li>[x] <a href="https://github.com/marko-js/marko">Marko</a><ul>
-<li>Requires <a href="https://github.com/marko-js/atom-language-marko">language-marko</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#language-support">Language Support</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#selection-of-code">Selection of Code</a></li>
+<li><a href="#beautify-on-save">Beautify On Save</a></li>
+<li><a href="#keyboard-shortcut">Keyboard Shortcut</a><ul>
+<li><a href="#custom-keyboard-shortcuts">Custom Keyboard Shortcuts</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>[x] CSS, including<ul>
-<li><a href="http://sass-lang.com/">Sass</a></li>
-<li><a href="http://lesscss.org/">Less</a></li>
+<li><a href="#configuration">Configuration</a><ul>
+<li><a href="#simple">Simple</a></li>
+<li><a href="#nested-recommended">Nested</a></li>
 </ul>
 </li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/pull/67">SQL</a><ul>
-<li>Requires <a href="https://github.com/andialbrecht/sqlparse">python-sqlparse</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#contributing">Contributing</a></li>
 </ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/292">Markdown</a></li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/33">Perl</a><ul>
-<li>Requires <a href="http://perltidy.sourceforge.net/">perltidy</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/26">PHP</a>  <ul>
-<li>Requires <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">php-cs-fixer</a> to be already installed.</li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/24">Python</a><ul>
-<li>Requires <a href="https://github.com/hhatto/autopep8">autopep8</a> or <a href="https://github.com/google/yapf">YAPF</a> to be already installed.</li>
-<li>Beautifies to <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>.</li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/25">Ruby</a><ul>
-<li>Requires <a href="https://github.com/erniebrodeur/ruby-beautify">Ruby Beautify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/31">CoffeeScript</a></li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/176">Golang</a></li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/45">Java</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">C</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">C++</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">C#</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">Objective-C</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">D</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a> or <a href="https://github.com/Hackerpilot/dfmt">dfmt</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/300">Fortran</a><ul>
-<li>Requires <a href="http://www.gnu.org/software/emacs/">GNU Emacs</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">Pawn</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/57">Vala</a><ul>
-<li>Requires <a href="http://sourceforge.net/projects/uncrustify/">Uncrustify</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/49">TypeScript</a></li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/issues/628">Haskell</a><ul>
-<li>Requires <a href="https://github.com/jaspervdj/stylish-haskell">stylish-haskell</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/pull/700">Elm</a><ul>
-<li>Requires <a href="https://github.com/avh4/elm-format">Elm-Format</a></li>
-</ul>
-</li>
-<li>[x] <a href="https://github.com/Glavin001/atom-beautify/pull/683">Erlang</a><ul>
-<li>Requires erlang syntax_tools to be installed</li>
-</ul>
-</li>
-</ul>
-<h2 id="usage">Usage</h2><p>Open the <a href="https://github.com/atom/command-palette">Command Palette</a>, and type <code>Beautify</code>.</p><p>It will only beautify selected text if a selection is found -- if not, the whole file will be beautified.</p><h3 id="shortcut">Shortcut</h3><p>You can also type <code>ctrl-alt-b</code> as a shortcut or click <code>Packages &gt; Beautify</code> in the menu.</p><h4 id="custom-keyboard-shortcuts">Custom Keyboard Shortcuts</h4><p>See <a href="https://atom.io/docs/latest/behind-atom-keymaps-in-depth">Keymaps In-Depth</a> for more details.</p><p>For example:</p><pre><code class="lang-coffeescript">&#39;.editor&#39;:
+<h2 id="installation">Installation</h2><p>Atom Package: <a href="https://atom.io/packages/atom-beautify">https://atom.io/packages/atom-beautify</a></p><pre><code class="lang-bash">apm install atom-beautify
+</code></pre><p>Or Settings/Preferences ➔ Packages ➔ Search for <code>atom-beautify</code></p><h2 id="language-support">Language Support</h2><p>See <a href="https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md">all supported options in the documentation at  <code>docs/options.md</code></a>.</p><table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Grammars</th>
+<th>File Extensions</th>
+<th>Supported Beautifiers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apex</td>
+<td><code>Apex</code></td>
+<td><code>.cls</code>, <code>.trigger</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Arduino</td>
+<td><code>Arduino</code></td>
+<td><code>.ino</code>, <code>.pde</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>C</code>, <code>opencl</code></td>
+<td><code>.h</code>, <code>.c</code>, <code>.cl</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default), <a href="https://clang.llvm.org/docs/ClangFormat.html"><code>clang-format</code></a></td>
+</tr>
+<tr>
+<td>Coldfusion</td>
+<td><code>html</code></td>
+<td><code>.cfm</code>, <code>.cfml</code>, <code>.cfc</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>CoffeeScript</td>
+<td><code>CoffeeScript</code></td>
+<td><code>.coffee</code></td>
+<td><a href="https://github.com/Glavin001/Coffee-Formatter"><code>Coffee Formatter</code></a>, <a href="https://github.com/sterpe/coffee-fmt"><code>coffee-fmt</code></a> (Default)</td>
+</tr>
+<tr>
+<td>C++</td>
+<td><code>C++</code></td>
+<td><code>.h</code>, <code>.hh</code>, <code>.cc</code>, <code>.cpp</code>, <code>.cxx</code>, <code>.C</code>, <code>.c++</code>, <code>.hpp</code>, <code>.hxx</code>, <code>.h++</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default), <a href="https://clang.llvm.org/docs/ClangFormat.html"><code>clang-format</code></a></td>
+</tr>
+<tr>
+<td>Crystal</td>
+<td><code>Crystal</code></td>
+<td><code>.cr</code></td>
+<td><a href="http://crystal-lang.org"><code>Crystal</code></a> (Default)</td>
+</tr>
+<tr>
+<td>C#</td>
+<td><code>C#</code></td>
+<td><code>.cs</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td><code>CSS</code></td>
+<td><code>.css</code></td>
+<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default), <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a></td>
+</tr>
+<tr>
+<td>CSV</td>
+<td><code>CSV</code></td>
+<td><code>.csv</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>D</td>
+<td><code>D</code></td>
+<td><code>.d</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default), <a href="https://github.com/Hackerpilot/dfmt"><code>dfmt</code></a></td>
+</tr>
+<tr>
+<td>EJS</td>
+<td><code>JavaScript Template</code>, <code>HTML (Angular)</code></td>
+<td></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Elm</td>
+<td><code>Elm</code></td>
+<td><code>.elm</code></td>
+<td><a href="https://github.com/avh4/elm-format"><code>elm-format</code></a> (Default)</td>
+</tr>
+<tr>
+<td>ERB</td>
+<td><code>HTML (Ruby - ERB)</code>, <code>HTML (Rails)</code></td>
+<td><code>.erb</code></td>
+<td><a href="https://github.com/threedaymonk/htmlbeautifier"><code>HTML Beautifier</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td><code>Erlang</code></td>
+<td><code>.erl</code></td>
+<td><a href="http://erlang.org/doc/man/erl_tidy.html"><code>erl_tidy</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Fortran</td>
+<td><code>Fortran - Modern</code></td>
+<td><code>.f90</code></td>
+<td><a href="https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp"><code>Fortran Beautifier</code></a> (Default)</td>
+</tr>
+<tr>
+<td>gherkin</td>
+<td><code>Gherkin</code></td>
+<td><code>.feature</code></td>
+<td><a href="https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee"><code>Gherkin formatter</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Go</td>
+<td><code>Go</code></td>
+<td><code>.go</code></td>
+<td><a href="https://golang.org/cmd/gofmt/"><code>gofmt</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Handlebars</td>
+<td><code>Handlebars</code>, <code>HTML (Handlebars)</code></td>
+<td><code>.hbs</code>, <code>.handlebars</code></td>
+<td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default), <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a></td>
+</tr>
+<tr>
+<td>Haskell</td>
+<td><code>Haskell</code></td>
+<td><code>.hs</code></td>
+<td><a href="https://github.com/jaspervdj/stylish-haskell"><code>stylish-haskell</code></a> (Default)</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td><code>HTML</code></td>
+<td><code>.html</code></td>
+<td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default), <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a></td>
+</tr>
+<tr>
+<td>Jade</td>
+<td><code>Jade</code>, <code>Pug</code></td>
+<td><code>.jade</code>, <code>.pug</code></td>
+<td><a href="https://github.com/vingorius/pug-beautify"><code>Pug Beautify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Java</td>
+<td><code>Java</code></td>
+<td><code>.java</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td><code>JavaScript</code></td>
+<td><code>.js</code></td>
+<td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default), <a href="https://github.com/jscs-dev/node-jscs/"><code>JSCS Fixer</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a></td>
+</tr>
+<tr>
+<td>JSON</td>
+<td><code>JSON</code></td>
+<td><code>.json</code></td>
+<td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default), <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a></td>
+</tr>
+<tr>
+<td>JSX</td>
+<td><code>JSX</code>, <code>JavaScript (JSX)</code></td>
+<td><code>.jsx</code>, <code>.js</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>LaTeX</td>
+<td><code>LaTeX</code></td>
+<td><code>.tex</code></td>
+<td><a href="https://github.com/cmhughes/latexindent.pl"><code>Latex Beautify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>LESS</td>
+<td><code>LESS</code></td>
+<td><code>.less</code></td>
+<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Lua</td>
+<td><code>Lua</code></td>
+<td><code>.lua</code></td>
+<td><a href="https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.pl"><code>Lua beautifier</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td><code>GitHub Markdown</code></td>
+<td><code>.markdown</code>, <code>.md</code></td>
+<td><a href="https://github.com/wooorm/remark"><code>Remark</code></a>, <a href="https://github.com/slang800/tidy-markdown"><code>Tidy Markdown</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Marko</td>
+<td><code>Marko</code></td>
+<td><code>.marko</code></td>
+<td><a href="https://github.com/marko-js/marko-prettyprint"><code>Marko Beautifier</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Mustache</td>
+<td><code>HTML (Mustache)</code></td>
+<td><code>.mustache</code></td>
+<td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Objective-C</td>
+<td><code>Objective-C</code>, <code>Objective-C++</code></td>
+<td><code>.m</code>, <code>.mm</code>, <code>.h</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default), <a href="https://clang.llvm.org/docs/ClangFormat.html"><code>clang-format</code></a></td>
+</tr>
+<tr>
+<td>OCaml</td>
+<td><code>OCaml</code></td>
+<td><code>.ml</code></td>
+<td><a href="https://www.typerex.org/ocp-indent.html"><code>ocp-indent</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Pawn</td>
+<td><code>Pawn</code></td>
+<td></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Perl</td>
+<td><code>Perl</code>, <code>Perl 6</code></td>
+<td><code>.pl</code></td>
+<td><a href="http://perltidy.sourceforge.net/"><code>Perltidy</code></a> (Default)</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td><code>PHP</code></td>
+<td><code>.php</code>, <code>.module</code>, <code>.inc</code></td>
+<td><a href="http://php.net/manual/en/install.php"><code>PHP-CS-Fixer</code></a> (Default), <a href="http://php.net/manual/en/install.php"><code>PHPCBF</code></a></td>
+</tr>
+<tr>
+<td>Puppet</td>
+<td><code>Puppet</code></td>
+<td><code>.pp</code></td>
+<td><a href="http://puppet-lint.com/"><code>puppet-lint</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Python</td>
+<td><code>Python</code></td>
+<td><code>.py</code></td>
+<td><a href="https://github.com/hhatto/autopep8"><code>autopep8</code></a> (Default), <a href="https://github.com/google/yapf"><code>yapf</code></a></td>
+</tr>
+<tr>
+<td>Riot.js</td>
+<td><code>Riot.js</code>, <code>HTML (Riot Tag)</code></td>
+<td><code>.tag</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td><code>Ruby</code>, <code>Ruby on Rails</code></td>
+<td><code>.rb</code></td>
+<td><a href="https://github.com/bbatsov/rubocop"><code>Rubocop</code></a> (Default), <a href="https://github.com/erniebrodeur/ruby-beautify"><code>Ruby Beautify</code></a></td>
+</tr>
+<tr>
+<td>Rust</td>
+<td><code>Rust</code></td>
+<td><code>.rs</code>, <code>.rlib</code></td>
+<td><a href="https://github.com/nrc/rustfmt"><code>rustfmt</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Sass</td>
+<td><code>Sass</code></td>
+<td><code>.sass</code></td>
+<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>SCSS</td>
+<td><code>SCSS</code></td>
+<td><code>.scss</code></td>
+<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Spacebars</td>
+<td><code>Spacebars</code></td>
+<td></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>SQL (Rails)</code>, <code>SQL</code></td>
+<td><code>.sql</code></td>
+<td><a href="https://github.com/andialbrecht/sqlparse"><code>sqlformat</code></a> (Default)</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td><code>SVG</code></td>
+<td><code>.svg</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Swig</td>
+<td><code>HTML (Swig)</code>, <code>SWIG</code></td>
+<td><code>.swig</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>TSS</td>
+<td><code>TSS</code></td>
+<td><code>.tss</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Twig</td>
+<td><code>HTML (Twig)</code></td>
+<td><code>.twig</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td><code>TypeScript</code></td>
+<td><code>.ts</code></td>
+<td><a href="https://github.com/vvakame/typescript-formatter"><code>TypeScript Formatter</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Vala</td>
+<td><code>Vala</code></td>
+<td><code>.vala</code>, <code>.vapi</code></td>
+<td><a href="https://github.com/uncrustify/uncrustify"><code>Uncrustify</code></a> (Default)</td>
+</tr>
+<tr>
+<td>Visualforce</td>
+<td><code>Visualforce</code></td>
+<td><code>.page</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>XML</td>
+<td><code>SLD</code>, <code>XML</code>, <code>XHTML</code>, <code>XSD</code>, <code>XSL</code>, <code>JSP</code></td>
+<td><code>.sld</code>, <code>.xml</code>, <code>.xhtml</code>, <code>.xsd</code>, <code>.xsl</code>, <code>.jsp</code></td>
+<td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
+<td>XTemplate</td>
+<td><code>XTemplate</code></td>
+<td><code>.xtemplate</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2><p>Open the <a href="https://github.com/atom/command-palette">Command Palette</a>, type <code>Beautify</code>, and run <code>Beautify Editor</code>.</p><p><img src="https://cloud.githubusercontent.com/assets/1885333/16542583/1c8d975c-4085-11e6-8307-e35df7430a10.png" alt="image"></p><h3 id="selection-of-code">Selection of Code</h3><p>It will only beautify selected text if a selection is found -- if not, the whole file will be beautified.</p><table>
+<thead>
+<tr>
+<th>Selection of Code</th>
+<th>Beautify Selection of Code</th>
+<th>Beautify Entire File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select code in Atom editor</td>
+<td>Only that selection is beautified</td>
+<td>Without a selection all code is beautified</td>
+</tr>
+<tr>
+<td><img src="https://cloud.githubusercontent.com/assets/1885333/16542597/b3f90c84-4085-11e6-8a0e-1b8604ae385c.png" alt="image"></td>
+<td><img src="https://cloud.githubusercontent.com/assets/1885333/16542598/b5a86b10-4085-11e6-80cf-0afaf1a819c3.png" alt="image"></td>
+<td><img src="https://cloud.githubusercontent.com/assets/1885333/16542603/b798ec24-4085-11e6-880e-8d3a2741940f.png" alt="image"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="beautify-on-save">Beautify On Save</h3><p><code>Beautify On Save</code> can be enabled for each language individually.</p><p>For example, for language <code>HTML</code> go into Atom-Beautify&#39;s package settings (<code>Atom</code> ➔ <code>Preferences</code> ➔ Search for <code>atom-beautify</code>), find <code>HTML</code>, and toggle the <code>Beautify On Save</code> option.</p><p><img src="https://cloud.githubusercontent.com/assets/1885333/16542692/3e781e74-4089-11e6-9cf2-5a19af161093.gif" alt="atom-beautify-setup-beautify-on-save"></p><h3 id="keyboard-shortcut">Keyboard Shortcut</h3><p>You can also type <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>B</kbd> as a shortcut or click <code>Packages &gt; Beautify</code> in the menu.</p><h4 id="custom-keyboard-shortcuts">Custom Keyboard Shortcuts</h4><p>See <a href="https://atom.io/docs/latest/behind-atom-keymaps-in-depth">Keymaps In-Depth</a> for more details.</p><p>For example:</p><pre><code class="lang-coffeescript">&#39;.editor&#39;:
   &#39;ctrl-alt-b&#39;: &#39;atom-beautify:beautify-editor&#39;
 </code></pre>
 <h2 id="configuration">Configuration</h2><p>Edit your <code>.jsbeautifyrc</code> file in any of the following locations:</p><ul>
@@ -158,7 +461,7 @@ JavaScript, and much more in Atom.</p></blockquote><p>Atom Package: <a href="htt
   &quot;indent_handlebars&quot;: true
 }
 </code></pre>
-<h3 id="nested">Nested</h3><p>See <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/nested-jsbeautifyrc/.jsbeautifyrc">examples/nested-jsbeautifyrc/.jsbeautifyrc</a>.</p><pre><code class="lang-json">{
+<h3 id="nested-recommended-">Nested (Recommended)</h3><p>See <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/nested-jsbeautifyrc/.jsbeautifyrc">examples/nested-jsbeautifyrc/.jsbeautifyrc</a>.</p><pre><code class="lang-json">{
   &quot;html&quot;: {
     &quot;brace_style&quot;: &quot;collapse&quot;,
     &quot;indent_char&quot;: &quot; &quot;,
@@ -190,7 +493,7 @@ JavaScript, and much more in Atom.</p></blockquote><p>Atom Package: <a href="htt
   }
 }
 </code></pre>
-<h2 id="contributing">Contributing</h2><p><a href="https://github.com/donaldpipowitch/atom-beautify/graphs/contributors">See all contributors on GitHub</a>.</p><p>Please update the <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md">CHANGELOG.md</a>,
+<h2 id="troubleshooting">Troubleshooting</h2><p>See <a href="https://github.com/Glavin001/atom-beautify/blob/master/docs/troubleshooting.md"><code>docs/troubleshooting.md</code></a>.</p><h2 id="contributing">Contributing</h2><p><a href="https://github.com/donaldpipowitch/atom-beautify/graphs/contributors">See all contributors on GitHub</a>.</p><p>Please update the <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md">CHANGELOG.md</a>,
 add yourself as a contributor to the <a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/package.json">package.json</a>,
 and submit a <a href="https://help.github.com/articles/using-pull-requests/">Pull Request on GitHub</a>.</p><h2 id="license">License</h2><p><a href="https://github.com/donaldpipowitch/atom-beautify/blob/master/LICENSE.md">MIT</a> © <a href="https://github.com/Glavin001">Glavin Wiechert</a></p>
       </div>
@@ -200,7 +503,7 @@ and submit a <a href="https://help.github.com/articles/using-pull-requests/">Pul
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.0
+  2.1.1
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

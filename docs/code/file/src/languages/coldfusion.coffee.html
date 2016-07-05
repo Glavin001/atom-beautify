@@ -83,11 +83,6 @@
    *&#47;
   extensions: [&quot;cfm&quot;, &quot;cfml&quot;, &quot;cfc&quot;],
   options: {
-    indent_inner_html: {
-      type: &#39;boolean&#39;,
-      &quot;default&quot;: false,
-      description: &quot;Indent &lt;head&gt; and &lt;body&gt; sections.&quot;
-    },
     indent_size: {
       type: &#39;integer&#39;,
       &quot;default&quot;: defaultIndentSize,
@@ -100,65 +95,15 @@
       minimum: 0,
       description: &quot;Indentation character&quot;
     },
-    brace_style: {
-      type: &#39;string&#39;,
-      &quot;default&quot;: &quot;collapse&quot;,
-      &quot;enum&quot;: [&quot;collapse&quot;, &quot;expand&quot;, &quot;end-expand&quot;, &quot;none&quot;],
-      description: &quot;[collapse|expand|end-expand|none]&quot;
-    },
-    indent_scripts: {
-      type: &#39;string&#39;,
-      &quot;default&quot;: &quot;normal&quot;,
-      &quot;enum&quot;: [&quot;keep&quot;, &quot;separate&quot;, &quot;normal&quot;],
-      description: &quot;[keep|separate|normal]&quot;
-    },
     wrap_line_length: {
       type: &#39;integer&#39;,
       &quot;default&quot;: 250,
       description: &quot;Maximum characters per line (0 disables)&quot;
     },
-    wrap_attributes: {
-      type: &#39;string&#39;,
-      &quot;default&quot;: &quot;auto&quot;,
-      &quot;enum&quot;: [&quot;auto&quot;, &quot;force&quot;],
-      description: &quot;Wrap attributes to new lines [auto|force]&quot;
-    },
-    wrap_attributes_indent_size: {
-      type: &#39;integer&#39;,
-      &quot;default&quot;: defaultIndentSize,
-      minimum: 0,
-      description: &quot;Indent wrapped attributes to after N characters&quot;
-    },
     preserve_newlines: {
       type: &#39;boolean&#39;,
       &quot;default&quot;: true,
       description: &quot;Preserve line-breaks&quot;
-    },
-    max_preserve_newlines: {
-      type: &#39;integer&#39;,
-      &quot;default&quot;: 10,
-      description: &quot;Number of line-breaks to be preserved in one chunk&quot;
-    },
-    unformatted: {
-      type: &#39;array&#39;,
-      &quot;default&quot;: [&#39;a&#39;, &#39;sub&#39;, &#39;sup&#39;, &#39;b&#39;, &#39;i&#39;, &#39;u&#39;],
-      items: {
-        type: &#39;string&#39;
-      },
-      description: &quot;List of tags (defaults to inline) that should not be reformatted&quot;
-    },
-    end_with_newline: {
-      type: &#39;boolean&#39;,
-      &quot;default&quot;: false,
-      description: &quot;End output with newline&quot;
-    },
-    extra_liners: {
-      type: &#39;array&#39;,
-      &quot;default&quot;: [&#39;head&#39;, &#39;body&#39;, &#39;&#47;html&#39;],
-      items: {
-        type: &#39;string&#39;
-      },
-      description: &quot;List of tags (defaults to [head,body,&#47;html] that should have an extra newline before them.&quot;
     }
   }
 }</code></pre>
@@ -171,7 +116,7 @@
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.0
+  2.1.1
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

@@ -39,6 +39,7 @@
         <a href='../class/ClangFormat.html'>ClangFormat</a>
         <a href='../class/CoffeeFmt.html'>CoffeeFmt</a>
         <a href='../class/CoffeeFormatter.html'>CoffeeFormatter</a>
+        <a href='../class/Crystal.html'>Crystal</a>
         <a href='../class/JSBeautify.html'>JSBeautify</a>
         <a href='../class/Dfmt.html'>Dfmt</a>
         <a href='../class/ElmFormat.html'>ElmFormat</a>
@@ -49,10 +50,15 @@
         <a href='../class/HTMLBeautifier.html'>HTMLBeautifier</a>
         <a href='../class/JSBeautify.html'>JSBeautify</a>
         <a href='../class/JSCSFixer.html'>JSCSFixer</a>
+        <a href='../class/LatexBeautify.html'>LatexBeautify</a>
+        <a href='../class/Lua.html'>Lua</a>
+        <a href='../class/MarkoBeautifier.html'>MarkoBeautifier</a>
+        <a href='../class/OCPIndent.html'>OCPIndent</a>
         <a href='../class/PerlTidy.html'>PerlTidy</a>
         <a href='../class/PHPCSFixer.html'>PHPCSFixer</a>
         <a href='../class/PHPCBF.html'>PHPCBF</a>
         <a href='../class/PrettyDiff.html'>PrettyDiff</a>
+        <a href='../class/PugBeautify.html'>PugBeautify</a>
         <a href='../class/PuppetFix.html'>PuppetFix</a>
         <a href='../class/Remark.html'>Remark</a>
         <a href='../class/Rubocop.html'>Rubocop</a>
@@ -216,6 +222,18 @@ See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-ru
   </li>
   <li>
     <span class='signature'>
+      <a href='#findFile-dynamic'>
+        #
+(void)
+<b>findFile</b><span>(startDir, fileNames)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Find file 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
       <a href='#getShellEnvironment-dynamic'>
         #
 (void)
@@ -246,8 +264,9 @@ See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-ru
       </a>
     </span>
     <span class='desc'>
-      Add help to error.description <p>Note: error.description is not officially used in JavaScript,
-however it is used internally for Atom Beautify when displaying errors.</p>
+      Add help to error.description Note: error.description is not officially used in JavaScript,
+however it is used internally for Atom Beautify when displaying errors.
+
     </span>
   </li>
   <li>
@@ -255,7 +274,7 @@ however it is used internally for Atom Beautify when displaying errors.</p>
       <a href='#run-dynamic'>
         #
 (void)
-<b>run</b><span>(executable, args, {ignoreReturnCode, help} = {})</span>
+<b>run</b><span>(executable, args, {cwd, ignoreReturnCode, help, onStdin} = {})</span>
       </a>
     </span>
     <span class='desc'>
@@ -267,7 +286,7 @@ however it is used internally for Atom Beautify when displaying errors.</p>
       <a href='#spawn-dynamic'>
         #
 (void)
-<b>spawn</b><span>(exe, args, options)</span>
+<b>spawn</b><span>(exe, args, options, onStdin)</span>
       </a>
     </span>
     <span class='desc'>
@@ -345,6 +364,19 @@ however it is used internally for Atom Beautify when displaying errors.</p>
 </div>
   </div>
   <div class='method_details'>
+    <p class='signature' id='findFile-dynamic'>
+      #
+(void)
+<b>findFile</b><span>(startDir, fileNames)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Find file</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
     <p class='signature' id='getShellEnvironment-dynamic'>
       #
 (void)
@@ -387,7 +419,7 @@ however it is used internally for Atom Beautify when displaying errors.</p>
     <p class='signature' id='run-dynamic'>
       #
 (void)
-<b>run</b><span>(executable, args, {ignoreReturnCode, help} = {})</span>
+<b>run</b><span>(executable, args, {cwd, ignoreReturnCode, help, onStdin} = {})</span>
       <br>
     </p>
     <div class='docstring'>
@@ -400,7 +432,7 @@ however it is used internally for Atom Beautify when displaying errors.</p>
     <p class='signature' id='spawn-dynamic'>
       #
 (void)
-<b>spawn</b><span>(exe, args, options)</span>
+<b>spawn</b><span>(exe, args, options, onStdin)</span>
       <br>
     </p>
     <div class='docstring'>
@@ -429,7 +461,7 @@ however it is used internally for Atom Beautify when displaying errors.</p>
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.0
+  2.1.1
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

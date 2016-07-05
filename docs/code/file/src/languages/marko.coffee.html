@@ -39,6 +39,34 @@
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
+  <dt id='scope-variable'>
+    scope
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>[&#39;text.marko&#39;]</code></pre>
+    <div class='docstring'>
+  <p>Get Atom defaults</p>
+</div>
+<div class='tags'>
+</div>
+  </dd>
+  <dt id='defaultIndentSize-variable'>
+    defaultIndentSize
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>(softTabs ? tabLength : 4)</code></pre>
+    
+  </dd>
+  <dt id='defaultIndentChar-variable'>
+    defaultIndentChar
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>(softTabs ? &quot; &quot; : &quot;\t&quot;)</code></pre>
+    
+  </dd>
   <dt id='module.exports-variable'>
     module.exports
     =
@@ -58,7 +86,26 @@
   Supported extensions
    *&#47;
   extensions: [&quot;marko&quot;],
-  options: []
+  options: {
+    indent_size: {
+      type: &#39;integer&#39;,
+      &quot;default&quot;: defaultIndentSize,
+      minimum: 0,
+      description: &quot;Indentation size&#47;length&quot;
+    },
+    indent_char: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: defaultIndentChar,
+      description: &quot;Indentation character&quot;
+    },
+    syntax: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &quot;html&quot;,
+      &quot;enum&quot;: [&quot;html&quot;, &quot;concise&quot;],
+      description: &quot;[html|concise]&quot;
+    }
+  },
+  defaultBeautifier: &quot;Marko Beautifier&quot;
 }</code></pre>
     
   </dd>
@@ -69,7 +116,7 @@
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.0
+  2.1.1
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

@@ -215,7 +215,7 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 ## Troubleshooting
 
-Coming soon.
+See [`docs/troubleshooting.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/troubleshooting.md).
 
 ## Contributing
 

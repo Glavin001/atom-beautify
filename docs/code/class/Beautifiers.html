@@ -52,7 +52,7 @@
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>[&#39;uncrustify&#39;, &#39;autopep8&#39;, &#39;coffee-formatter&#39;, &#39;coffee-fmt&#39;, &#39;clang-format&#39;, &#39;dfmt&#39;, &#39;elm-format&#39;, &#39;htmlbeautifier&#39;, &#39;csscomb&#39;, &#39;gherkin&#39;, &#39;gofmt&#39;, &#39;fortran-beautifier&#39;, &#39;js-beautify&#39;, &#39;jscs&#39;, &#39;perltidy&#39;, &#39;php-cs-fixer&#39;, &#39;phpcbf&#39;, &#39;prettydiff&#39;, &#39;puppet-fix&#39;, &#39;remark&#39;, &#39;rubocop&#39;, &#39;ruby-beautify&#39;, &#39;rustfmt&#39;, &#39;sqlformat&#39;, &#39;stylish-haskell&#39;, &#39;tidy-markdown&#39;, &#39;typescript-formatter&#39;, &#39;yapf&#39;, &#39;erl_tidy&#39;]</code></pre>
+    <pre><code class='coffeescript'>[&#39;uncrustify&#39;, &#39;autopep8&#39;, &#39;coffee-formatter&#39;, &#39;coffee-fmt&#39;, &#39;clang-format&#39;, &#39;crystal&#39;, &#39;dfmt&#39;, &#39;elm-format&#39;, &#39;htmlbeautifier&#39;, &#39;csscomb&#39;, &#39;gherkin&#39;, &#39;gofmt&#39;, &#39;latex-beautify&#39;, &#39;fortran-beautifier&#39;, &#39;js-beautify&#39;, &#39;jscs&#39;, &#39;lua-beautifier&#39;, &#39;ocp-indent&#39;, &#39;perltidy&#39;, &#39;php-cs-fixer&#39;, &#39;phpcbf&#39;, &#39;prettydiff&#39;, &#39;pug-beautify&#39;, &#39;puppet-fix&#39;, &#39;remark&#39;, &#39;rubocop&#39;, &#39;ruby-beautify&#39;, &#39;rustfmt&#39;, &#39;sqlformat&#39;, &#39;stylish-haskell&#39;, &#39;tidy-markdown&#39;, &#39;typescript-formatter&#39;, &#39;yapf&#39;, &#39;erl_tidy&#39;, &#39;marko-beautifier&#39;]</code></pre>
     <div class='docstring'>
   <p>List of beautifier names</p><p>To register a beautifier add its name here</p>
 </div>
@@ -94,17 +94,6 @@
 </dl>
       <h2>Instance Method Summary</h2>
       <ul class='summary'>
-  <li>
-    <span class='signature'>
-      <a href='#buildOptionsForBeautifiers-dynamic'>
-        #
-(void)
-<b>buildOptionsForBeautifiers</b><span>(beautifiers)</span>
-      </a>
-    </span>
-    <span class='desc'>
-    </span>
-  </li>
   <li>
     <span class='signature'>
       <a href='#encodeURI-dynamic'>
@@ -174,6 +163,39 @@
   </li>
   <li>
     <span class='signature'>
+      <a href='#trackEvent-dynamic'>
+        #
+(void)
+<b>trackEvent</b><span>(payload)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#trackTiming-dynamic'>
+        #
+(void)
+<b>trackTiming</b><span>(payload)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#track-dynamic'>
+        #
+(void)
+<b>track</b><span>(type, payload)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
       <a href='#beautify-dynamic'>
         #
 (void)
@@ -215,8 +237,9 @@
       </a>
     </span>
     <span class='desc'>
-      <p>Storage for memoized results from find file Should prevent lots of directory traversal &amp;
-lookups when liniting an entire project</p>
+      Storage for memoized results from find file Should prevent lots of directory traversal &amp;
+lookups when liniting an entire project
+
     </span>
   </li>
   <li>
@@ -309,15 +332,6 @@ lookups when liniting an entire project</p>
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='buildOptionsForBeautifiers-dynamic'>
-      #
-(void)
-<b>buildOptionsForBeautifiers</b><span>(beautifiers)</span>
-      <br>
-    </p>
-    
-  </div>
-  <div class='method_details'>
     <p class='signature' id='encodeURI-dynamic'>
       #
 (void)
@@ -371,6 +385,33 @@ lookups when liniting an entire project</p>
       #
 (void)
 <b>transformOptions</b><span>(beautifier, languageName, options)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='trackEvent-dynamic'>
+      #
+(void)
+<b>trackEvent</b><span>(payload)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='trackTiming-dynamic'>
+      #
+(void)
+<b>trackTiming</b><span>(payload)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='track-dynamic'>
+      #
+(void)
+<b>track</b><span>(type, payload)</span>
       <br>
     </p>
     
@@ -526,7 +567,7 @@ or in the home directory. Configuration files are named
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.0
+  2.1.1
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

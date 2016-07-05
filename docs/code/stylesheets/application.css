@@ -315,6 +315,9 @@ h2 {
   font-family: monospace;
   font-weight: bold;
 }
+#content .tags ul .defaultState {
+  font-style: italic;
+}
 #content .tags .overloads h3 {
   margin-bottom: 0px;
 }
