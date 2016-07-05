@@ -12,7 +12,7 @@
 | Before | After |
 | --- | ---- |
 | Original HTML | Beautified HTML |
-| ![image](https://cloud.githubusercontent.com/assets/1885333/16542239/dd92b766-4076-11e6-8667-0e66cd9f4515.png) | ![image](https://cloud.githubusercontent.com/assets/1885333/16542240/df9bedb6-4076-11e6-98c3-0cbac446583b.png) |
+| ![image](https://cloud.githubusercontent.com/assets/1885333/16542727/db52adc6-408a-11e6-824e-04aed06bd2f7.png) | ![image](https://cloud.githubusercontent.com/assets/1885333/16542728/dcac3700-408a-11e6-8e35-9c8fc4432edc.png) |
 
 ## Table of Contents
 

@@ -115,6 +115,41 @@ Handlebars.registerHelper('language-beautifiers-support', (languageOptions, opti
   return new Handlebars.SafeString(results)
 )
 
+Handlebars.registerHelper('language-options-support', (languageOptions, options) ->
+
+  ###
+  | Option | PrettyDiff | JS-Beautify |
+  | --- | --- | --- |
+  | `brace_style` | ? | ? |
+  | `break_chained_methods` | ? | ? |
+  | `end_with_comma` | ? | ? |
+  | `end_with_newline` | ? | ? |
+  | `eval_code` | ? | ? |
+  | `indent_size` | :white_check_mark: | :white_check_mark: |
+  | `indent_char` | :white_check_mark: | :white_check_mark: |
+  ###
+
+  rows = []
+  beautifiers = languageOptions.beautifiers.sort()
+  headers = ['Option'].concat(beautifiers)
+  rows.push(headers)
+  rows.push(_.map(headers, () -> '---'))
+  # console.log(languageOptions)
+  _.each(Object.keys(languageOptions.properties), (op) ->
+    field = languageOptions.properties[op]
+    support = _.map(beautifiers, (b) ->
+      if (_.includes(field.beautifiers, b) or _.includes(["disabled", "default_beautifier", "beautify_on_save"], op))
+        return ':white_check_mark:'
+      else
+        return ':x:'
+    )
+    rows.push(["`#{op}`"].concat(support))
+  )
+
+  results = _.map(rows, (r) -> "| #{r.join(' | ')} |").join('\n')
+  return new Handlebars.SafeString(results)
+)
+
 sortKeysBy = (obj, comparator) ->
   keys = _.sortBy(_.keys(obj), (key) ->
     return if comparator then comparator(obj[key], key) else key

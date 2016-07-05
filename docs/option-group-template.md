@@ -2,6 +2,8 @@
 {{#if beautifiers}}
 
 **Supported Beautifiers**: {{#each beautifiers}} {{#linkify this}}`{{this}}`{{/linkify}} {{/each}}
+
+{{language-options-support this}}
 {{/if}}
 
 **Description**:

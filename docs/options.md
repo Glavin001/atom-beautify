@@ -135,6 +135,13 @@ Supported options for each language.
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
 
+| Option | Uncrustify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
+
 **Description**:
 
 Options for language Apex
@@ -221,6 +228,13 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 ####  [Arduino](#arduino) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+| Option | Uncrustify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
 
 **Description**:
 
@@ -309,6 +323,13 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 
 
+| Option | Uncrustify | clang-format |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: |
+
 **Description**:
 
 Options for language C
@@ -395,6 +416,16 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 ####  [Coldfusion](#coldfusion) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
@@ -562,6 +593,31 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 ####  [CoffeeScript](#coffeescript) 
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+
+| Option | Coffee Formatter | coffee-fmt |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :white_check_mark: | :x: |
+| `break_chained_methods` | :white_check_mark: | :x: |
+| `end_with_comma` | :white_check_mark: | :x: |
+| `end_with_newline` | :white_check_mark: | :x: |
+| `eval_code` | :white_check_mark: | :x: |
+| `indent_char` | :white_check_mark: | :white_check_mark: |
+| `indent_level` | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: | :white_check_mark: |
+| `jslint_happy` | :white_check_mark: | :x: |
+| `keep_array_indentation` | :white_check_mark: | :x: |
+| `keep_function_indentation` | :white_check_mark: | :x: |
+| `max_preserve_newlines` | :white_check_mark: | :x: |
+| `preserve_newlines` | :white_check_mark: | :x: |
+| `space_after_anon_function` | :white_check_mark: | :x: |
+| `space_before_conditional` | :white_check_mark: | :x: |
+| `space_in_paren` | :white_check_mark: | :x: |
+| `unescape_strings` | :white_check_mark: | :x: |
+| `wrap_line_length` | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -1096,6 +1152,13 @@ Wrap lines at next opportunity after N characters (Supported by Coffee Formatter
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 
 
+| Option | Uncrustify | clang-format |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: |
+
 **Description**:
 
 Options for language C++
@@ -1183,6 +1246,12 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Supported Beautifiers**:  [`Crystal`](#crystal) 
 
+| Option | Crystal |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language Crystal
@@ -1245,6 +1314,13 @@ Automatically beautify Crystal files on save
 ####  [C#](#c-) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+| Option | Uncrustify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
 
 **Description**:
 
@@ -1332,6 +1408,25 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 ####  [CSS](#css) 
 
 **Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | CSScomb | JS Beautify | Pretty Diff |
+| --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `align_assignments` | :x: | :x: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: | :x: |
+| `convert_quotes` | :x: | :x: | :white_check_mark: |
+| `force_indentation` | :x: | :x: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: | :white_check_mark: |
+| `indent_comments` | :x: | :x: | :white_check_mark: |
+| `indent_size` | :x: | :white_check_mark: | :white_check_mark: |
+| `newline_between_rules` | :x: | :white_check_mark: | :white_check_mark: |
+| `no_lead_zero` | :x: | :x: | :white_check_mark: |
+| `predefinedConfig` | :white_check_mark: | :x: | :x: |
+| `preserve_newlines` | :x: | :white_check_mark: | :white_check_mark: |
+| `selector_separator_newline` | :x: | :white_check_mark: | :x: |
+| `wrap_line_length` | :x: | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -1722,6 +1817,12 @@ Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, P
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language CSV
@@ -1784,6 +1885,13 @@ Automatically beautify CSV files on save
 ####  [D](#d) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`dfmt`](#dfmt) 
+
+| Option | Uncrustify | dfmt |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -1871,6 +1979,20 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 ####  [EJS](#ejs) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `break_chained_methods` | :white_check_mark: |
+| `end_with_comma` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `space_after_anon_function` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
@@ -2135,6 +2257,12 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`elm-format`](#elm-format) 
 
+| Option | elm-format |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language Elm
@@ -2197,6 +2325,16 @@ Automatically beautify Elm files on save
 ####  [ERB](#erb) 
 
 **Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | HTML Beautifier | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `preserve_newlines` | :x: | :white_check_mark: |
+| `wrap_line_length` | :x: | :white_check_mark: |
 
 **Description**:
 
@@ -2365,6 +2503,12 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`erl_tidy`](#erl_tidy) 
 
+| Option | erl_tidy |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language Erlang
@@ -2427,6 +2571,14 @@ Automatically beautify Erlang files on save
 ####  [Fortran](#fortran) 
 
 **Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+
+| Option | Fortran Beautifier |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `emacs_path` | :white_check_mark: |
+| `emacs_script_path` | :white_check_mark: |
 
 **Description**:
 
@@ -2538,6 +2690,14 @@ Path to the emacs script (Supported by Fortran Beautifier)
 ####  [gherkin](#gherkin) 
 
 **Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+
+| Option | Gherkin formatter |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
 
 **Description**:
 
@@ -2654,6 +2814,12 @@ Indentation size/length (Supported by Gherkin formatter)
 
 **Supported Beautifiers**:  [`gofmt`](#gofmt) 
 
+| Option | gofmt |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language Go
@@ -2716,6 +2882,25 @@ Automatically beautify Go files on save
 ####  [Handlebars](#handlebars) 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | JS Beautify | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :white_check_mark: | :x: |
+| `end_with_newline` | :white_check_mark: | :x: |
+| `extra_liners` | :white_check_mark: | :x: |
+| `indent_char` | :white_check_mark: | :white_check_mark: |
+| `indent_inner_html` | :white_check_mark: | :x: |
+| `indent_scripts` | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `max_preserve_newlines` | :white_check_mark: | :x: |
+| `preserve_newlines` | :white_check_mark: | :white_check_mark: |
+| `unformatted` | :white_check_mark: | :x: |
+| `wrap_attributes` | :white_check_mark: | :x: |
+| `wrap_attributes_indent_size` | :white_check_mark: | :x: |
+| `wrap_line_length` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -3162,6 +3347,12 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 **Supported Beautifiers**:  [`stylish-haskell`](#stylish-haskell) 
 
+| Option | stylish-haskell |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language Haskell
@@ -3224,6 +3415,25 @@ Automatically beautify Haskell files on save
 ####  [HTML](#html) 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | JS Beautify | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :white_check_mark: | :x: |
+| `end_with_newline` | :white_check_mark: | :x: |
+| `extra_liners` | :white_check_mark: | :x: |
+| `indent_char` | :white_check_mark: | :white_check_mark: |
+| `indent_inner_html` | :white_check_mark: | :x: |
+| `indent_scripts` | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `max_preserve_newlines` | :white_check_mark: | :x: |
+| `preserve_newlines` | :white_check_mark: | :white_check_mark: |
+| `unformatted` | :white_check_mark: | :x: |
+| `wrap_attributes` | :white_check_mark: | :x: |
+| `wrap_attributes_indent_size` | :white_check_mark: | :x: |
+| `wrap_line_length` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -3670,6 +3880,14 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 **Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify) 
 
+| Option | Pug Beautify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+
 **Description**:
 
 Options for language Jade
@@ -3785,6 +4003,13 @@ Indentation size/length (Supported by Pug Beautify)
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
 
+| Option | Uncrustify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
+
 **Description**:
 
 Options for language Java
@@ -3871,6 +4096,31 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 ####  [JavaScript](#javascript) 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`JSCS Fixer`](#jscs-fixer)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | JS Beautify | JSCS Fixer | Pretty Diff |
+| --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :white_check_mark: | :x: | :x: |
+| `break_chained_methods` | :white_check_mark: | :x: | :white_check_mark: |
+| `end_with_comma` | :white_check_mark: | :x: | :white_check_mark: |
+| `end_with_newline` | :white_check_mark: | :x: | :x: |
+| `eval_code` | :white_check_mark: | :x: | :x: |
+| `indent_char` | :white_check_mark: | :x: | :white_check_mark: |
+| `indent_level` | :white_check_mark: | :x: | :x: |
+| `indent_size` | :white_check_mark: | :x: | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: | :x: | :white_check_mark: |
+| `jslint_happy` | :white_check_mark: | :x: | :x: |
+| `keep_array_indentation` | :white_check_mark: | :x: | :x: |
+| `keep_function_indentation` | :white_check_mark: | :x: | :x: |
+| `max_preserve_newlines` | :white_check_mark: | :x: | :x: |
+| `preserve_newlines` | :white_check_mark: | :x: | :white_check_mark: |
+| `space_after_anon_function` | :white_check_mark: | :x: | :white_check_mark: |
+| `space_before_conditional` | :white_check_mark: | :x: | :x: |
+| `space_in_paren` | :white_check_mark: | :x: | :x: |
+| `unescape_strings` | :white_check_mark: | :x: | :x: |
+| `wrap_line_length` | :white_check_mark: | :x: | :white_check_mark: |
 
 **Description**:
 
@@ -4405,6 +4655,31 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
+| Option | JS Beautify | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :white_check_mark: | :x: |
+| `break_chained_methods` | :white_check_mark: | :white_check_mark: |
+| `end_with_comma` | :white_check_mark: | :white_check_mark: |
+| `end_with_newline` | :white_check_mark: | :x: |
+| `eval_code` | :white_check_mark: | :x: |
+| `indent_char` | :white_check_mark: | :white_check_mark: |
+| `indent_level` | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: | :white_check_mark: |
+| `jslint_happy` | :white_check_mark: | :x: |
+| `keep_array_indentation` | :white_check_mark: | :x: |
+| `keep_function_indentation` | :white_check_mark: | :x: |
+| `max_preserve_newlines` | :white_check_mark: | :x: |
+| `preserve_newlines` | :white_check_mark: | :white_check_mark: |
+| `space_after_anon_function` | :white_check_mark: | :white_check_mark: |
+| `space_before_conditional` | :white_check_mark: | :x: |
+| `space_in_paren` | :white_check_mark: | :x: |
+| `unescape_strings` | :white_check_mark: | :x: |
+| `wrap_line_length` | :white_check_mark: | :white_check_mark: |
+
 **Description**:
 
 Options for language JSON
@@ -4938,6 +5213,20 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `break_chained_methods` | :white_check_mark: |
+| `end_with_comma` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `space_after_anon_function` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
+
 **Description**:
 
 Options for language JSX
@@ -5199,6 +5488,19 @@ Wrap lines at next opportunity after N characters (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
 
+| Option | Latex Beautify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `align_columns_in_environments` | :white_check_mark: |
+| `always_look_for_split_braces` | :white_check_mark: |
+| `always_look_for_split_brackets` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_preamble` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
+| `remove_trailing_whitespace` | :white_check_mark: |
+
 **Description**:
 
 Options for language LaTeX
@@ -5442,6 +5744,24 @@ Remove trailing whitespace (Supported by Latex Beautify)
 ####  [LESS](#less) 
 
 **Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | CSScomb | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `align_assignments` | :x: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: |
+| `convert_quotes` | :x: | :white_check_mark: |
+| `force_indentation` | :x: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: |
+| `indent_comments` | :x: | :white_check_mark: |
+| `indent_size` | :x: | :white_check_mark: |
+| `newline_between_rules` | :x: | :white_check_mark: |
+| `no_lead_zero` | :x: | :white_check_mark: |
+| `predefinedConfig` | :white_check_mark: | :x: |
+| `preserve_newlines` | :x: | :white_check_mark: |
+| `wrap_line_length` | :x: | :white_check_mark: |
 
 **Description**:
 
@@ -5808,6 +6128,12 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
 
+| Option | Lua beautifier |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language Lua
@@ -5870,6 +6196,15 @@ Automatically beautify Lua files on save
 ####  [Markdown](#markdown) 
 
 **Supported Beautifiers**:  [`Remark`](#remark)  [`Tidy Markdown`](#tidy-markdown) 
+
+| Option | Remark | Tidy Markdown |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `commonmark` | :white_check_mark: | :x: |
+| `gfm` | :white_check_mark: | :x: |
+| `yaml` | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -6009,6 +6344,26 @@ Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax
 ####  [Marko](#marko) 
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+| Option | Marko Beautifier |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `brace_style` | :white_check_mark: |
+| `end_with_newline` | :white_check_mark: |
+| `extra_liners` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_inner_html` | :white_check_mark: |
+| `indent_scripts` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `max_preserve_newlines` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `syntax` | :white_check_mark: |
+| `unformatted` | :white_check_mark: |
+| `wrap_attributes` | :white_check_mark: |
+| `wrap_attributes_indent_size` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
@@ -6483,6 +6838,25 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
+| Option | JS Beautify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `brace_style` | :white_check_mark: |
+| `end_with_newline` | :white_check_mark: |
+| `extra_liners` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_inner_html` | :white_check_mark: |
+| `indent_scripts` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `max_preserve_newlines` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `unformatted` | :white_check_mark: |
+| `wrap_attributes` | :white_check_mark: |
+| `wrap_attributes_indent_size` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
+
 **Description**:
 
 Options for language Mustache
@@ -6928,6 +7302,13 @@ Maximum characters per line (0 disables) (Supported by JS Beautify)
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 
 
+| Option | Uncrustify | clang-format |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: |
+
 **Description**:
 
 Options for language Objective-C
@@ -7015,6 +7396,12 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Supported Beautifiers**:  [`ocp-indent`](#ocp-indent) 
 
+| Option | ocp-indent |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language OCaml
@@ -7077,6 +7464,13 @@ Automatically beautify OCaml files on save
 ####  [Pawn](#pawn) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+| Option | Uncrustify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
 
 **Description**:
 
@@ -7165,6 +7559,13 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Supported Beautifiers**:  [`Perltidy`](#perltidy) 
 
+| Option | Perltidy |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `perltidy_profile` | :white_check_mark: |
+
 **Description**:
 
 Options for language Perl
@@ -7251,6 +7652,17 @@ Specify a configuration file which will override the default name of .perltidyrc
 ####  [PHP](#php) 
 
 **Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+
+| Option | PHP-CS-Fixer | PHPCBF |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `cs_fixer_path` | :white_check_mark: | :x: |
+| `fixers` | :white_check_mark: | :x: |
+| `level` | :white_check_mark: | :x: |
+| `phpcbf_path` | :white_check_mark: | :x: |
+| `standard` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -7435,6 +7847,12 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 
 **Supported Beautifiers**:  [`puppet-lint`](#puppet-lint) 
 
+| Option | puppet-lint |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
 **Description**:
 
 Options for language Puppet
@@ -7497,6 +7915,16 @@ Automatically beautify Puppet files on save
 ####  [Python](#python) 
 
 **Supported Beautifiers**:  [`autopep8`](#autopep8)  [`yapf`](#yapf) 
+
+| Option | autopep8 | yapf |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `ignore` | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :x: |
+| `max_line_length` | :white_check_mark: | :x: |
+| `sort_imports` | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -7665,6 +8093,16 @@ sort imports (requires isort installed) (Supported by autopep8)
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
+
 **Description**:
 
 Options for language Riot.js
@@ -7832,6 +8270,15 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
 
+| Option | Rubocop | Ruby Beautify |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `rubocop_path` | :white_check_mark: | :x: |
+
 **Description**:
 
 Options for language Ruby
@@ -7973,6 +8420,13 @@ Path to the `rubocop` CLI executable (Supported by Rubocop)
 
 **Supported Beautifiers**:  [`rustfmt`](#rustfmt) 
 
+| Option | rustfmt |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `rustfmt_path` | :white_check_mark: |
+
 **Description**:
 
 Options for language Rust
@@ -8059,6 +8513,24 @@ Path to rustfmt program (Supported by rustfmt)
 ####  [Sass](#sass) 
 
 **Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | CSScomb | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `align_assignments` | :x: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: |
+| `convert_quotes` | :x: | :white_check_mark: |
+| `force_indentation` | :x: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: |
+| `indent_comments` | :x: | :white_check_mark: |
+| `indent_size` | :x: | :white_check_mark: |
+| `newline_between_rules` | :x: | :white_check_mark: |
+| `no_lead_zero` | :x: | :white_check_mark: |
+| `predefinedConfig` | :white_check_mark: | :x: |
+| `preserve_newlines` | :x: | :white_check_mark: |
+| `wrap_line_length` | :x: | :white_check_mark: |
 
 **Description**:
 
@@ -8425,6 +8897,24 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
 
+| Option | CSScomb | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `align_assignments` | :x: | :white_check_mark: |
+| `configPath` | :white_check_mark: | :x: |
+| `convert_quotes` | :x: | :white_check_mark: |
+| `force_indentation` | :x: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: |
+| `indent_comments` | :x: | :white_check_mark: |
+| `indent_size` | :x: | :white_check_mark: |
+| `newline_between_rules` | :x: | :white_check_mark: |
+| `no_lead_zero` | :x: | :white_check_mark: |
+| `predefinedConfig` | :white_check_mark: | :x: |
+| `preserve_newlines` | :x: | :white_check_mark: |
+| `wrap_line_length` | :x: | :white_check_mark: |
+
 **Description**:
 
 Options for language SCSS
@@ -8790,6 +9280,16 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
+
 **Description**:
 
 Options for language Spacebars
@@ -8957,6 +9457,15 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
 
+| Option | sqlformat |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `identifiers` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `keywords` | :white_check_mark: |
+
 **Description**:
 
 Options for language SQL
@@ -9101,6 +9610,16 @@ Change case of keywords (Supported by sqlformat)
 ####  [SVG](#svg) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
@@ -9269,6 +9788,16 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
+
 **Description**:
 
 Options for language Swig
@@ -9435,6 +9964,22 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 ####  [TSS](#tss) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `align_assignments` | :white_check_mark: |
+| `convert_quotes` | :white_check_mark: |
+| `force_indentation` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_comments` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `newline_between_rules` | :white_check_mark: |
+| `no_lead_zero` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
@@ -9749,6 +10294,20 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `break_chained_methods` | :white_check_mark: |
+| `end_with_comma` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `space_after_anon_function` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
+
 **Description**:
 
 Options for language Twig
@@ -10011,6 +10570,31 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 ####  [TypeScript](#typescript) 
 
 **Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+
+| Option | TypeScript Formatter |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `brace_style` | :white_check_mark: |
+| `break_chained_methods` | :white_check_mark: |
+| `end_with_comma` | :white_check_mark: |
+| `end_with_newline` | :white_check_mark: |
+| `eval_code` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_level` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
+| `jslint_happy` | :white_check_mark: |
+| `keep_array_indentation` | :white_check_mark: |
+| `keep_function_indentation` | :white_check_mark: |
+| `max_preserve_newlines` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `space_after_anon_function` | :white_check_mark: |
+| `space_before_conditional` | :white_check_mark: |
+| `space_in_paren` | :white_check_mark: |
+| `unescape_strings` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
@@ -10545,6 +11129,13 @@ Wrap lines at next opportunity after N characters (Supported by TypeScript Forma
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
 
+| Option | Uncrustify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
+
 **Description**:
 
 Options for language Vala
@@ -10631,6 +11222,16 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 ####  [Visualforce](#visualforce) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
@@ -10798,6 +11399,25 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 ####  [XML](#xml) 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+| Option | JS Beautify | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :white_check_mark: | :x: |
+| `end_with_newline` | :white_check_mark: | :x: |
+| `extra_liners` | :white_check_mark: | :x: |
+| `indent_char` | :white_check_mark: | :white_check_mark: |
+| `indent_inner_html` | :white_check_mark: | :x: |
+| `indent_scripts` | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `max_preserve_newlines` | :white_check_mark: | :x: |
+| `preserve_newlines` | :white_check_mark: | :white_check_mark: |
+| `unformatted` | :white_check_mark: | :x: |
+| `wrap_attributes` | :white_check_mark: | :x: |
+| `wrap_attributes_indent_size` | :white_check_mark: | :x: |
+| `wrap_line_length` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -11243,6 +11863,16 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 ####  [XTemplate](#xtemplate) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
 
 **Description**:
 
