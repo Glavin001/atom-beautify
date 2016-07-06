@@ -218,7 +218,7 @@ module.exports = class Beautifiers extends EventEmitter
           atom.config.set "atom-beautify.general._analyticsUserId", uuid.v4()
         # Setup Analytics User Id
         userId = atom.config.get("atom-beautify.general._analyticsUserId")
-        @analytics ?= new ua(trackingId, userId).debug()
+        @analytics ?= new ua(trackingId, userId)
         @analytics[type](payload).send()
     catch error
       logger.error(error)
