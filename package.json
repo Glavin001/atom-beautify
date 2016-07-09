@@ -115,7 +115,7 @@
     "jscs": "^3.0.3",
     "lodash": "^4.8.2",
     "loophole": "^1.0.0",
-    "marko-prettyprint": "^1.1.0",
+    "marko-prettyprint": "^1.1.8",
     "node-dir": "^0.1.15",
     "node-uuid": "^1.4.3",
     "prettydiff": "^1.16.27",
