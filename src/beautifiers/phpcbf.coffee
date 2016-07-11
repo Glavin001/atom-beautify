@@ -53,6 +53,8 @@ module.exports = class PHPCBF extends Beautifier
               help: {
                 link: "http://php.net/manual/en/install.php"
               }
+              onStdin: (stdin) ->
+                stdin.end()
             })
             .then(=>
               @readFile(tempFile)
@@ -79,6 +81,8 @@ module.exports = class PHPCBF extends Beautifier
           help: {
             link: "https://github.com/squizlabs/PHP_CodeSniffer"
           }
+          onStdin: (stdin) ->
+            stdin.end()
         })
         .then(=>
           @readFile(tempFile)
