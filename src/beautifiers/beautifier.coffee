@@ -170,6 +170,14 @@ module.exports = class Beautifier
       new Promise((resolve, reject) =>
         options.path ?= env.PATH
         if @isWindows
+          # Environment variables are case-insensitive in windows
+          # Check env for a case-insensitive 'path' variable
+          if !options.path
+            for i of env
+              if i.toLowerCase() is "path"
+                options.path = env[i]
+                break
+
           # Trick node-which into including files
           # with no extension as executables.
           # Put empty extension last to allow for other real extensions first
