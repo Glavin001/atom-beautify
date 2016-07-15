@@ -8,6 +8,7 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
+    "Babel ES6 JavaScript"
     "JSX"
     "JavaScript (JSX)"
   ]
