@@ -282,6 +282,11 @@ beautifyDirectory = ({target}) ->
 
 debug = () ->
 
+  open = require("open")
+  fs ?= require "fs"
+  GitHubApi = require("github")
+  github = new GitHubApi()
+
   plugin.checkUnsupportedOptions()
 
   # Get current editor
@@ -297,8 +302,11 @@ debug = () ->
   if not editor?
     return confirm("Active Editor not found.\n" +
     "Please select a Text Editor first to beautify.")
-  return unless confirm('Are you ready to debug Atom Beautify?\n\n' +
-  'Warning: This will change your current clipboard contents.')
+  return unless confirm('Are you ready to debug Atom Beautify?\n\n'+
+  'Warning: This will create an anonymous Gist on GitHub (publically accessible and cannot be easily deleted) '+
+  'containing the contents of your active Text Editor.\n'+
+  'Be sure to delete any private text from your active Text Editor before continuing '+
+  'to ensure you are not sharing undesirable private information.')
   debugInfo = ""
   headers = []
   tocEl = "<TABLEOFCONTENTS/>"
@@ -465,14 +473,39 @@ debug = () ->
       debugInfo = debugInfo.replace(tocEl, toc)
 
       # Save to clipboard
-      atom.clipboard.write(debugInfo)
-      confirm('Atom Beautify debugging information is now in your clipboard.\n' +
-      'You can now paste this into an Issue you are reporting here\n' +
-      'https://github.com/Glavin001/atom-beautify/issues/\n\n' +
-      'Please follow the contribution guidelines found at\n' +
-      'https://github.com/Glavin001/atom-beautify/blob/master/CONTRIBUTING.md\n\n' +
-      'Warning: Be sure to look over the debug info before you send it, '+
-      'to ensure you are not sharing undesirable private information.'
+      # atom.clipboard.write(debugInfo)
+      github.gists.create({
+        files: {
+          "debug.md": {
+            "content": debugInfo
+          }
+        },
+        public: true,
+        description: "Atom-Beautify debugging information"
+      }, (err, res) ->
+        # console.log(err, res)
+        if err
+          confirm("An error occurred when creating the Gist: "+err)
+        else
+          gistUrl = res.html_url
+          # Create Gist
+          open(gistUrl)
+          confirm("Your Atom Beautify debugging information can be found in the public Gist:\n#{res.html_url}\n\n" +
+            # 'You can now paste this into an Issue you are reporting here\n' +
+            # 'https://github.com/Glavin001/atom-beautify/issues/\n\n' +
+            # 'Please follow the contribution guidelines found at\n' +
+            # 'https://github.com/Glavin001/atom-beautify/blob/master/CONTRIBUTING.md\n\n' +
+            'Warning: Be sure to look over the debug info before you send it '+
+            'to ensure you are not sharing undesirable private information.\n\n'+
+            'If you want to delete this anonymous Gist read\n'+
+            'https://help.github.com/articles/deleting-an-anonymous-gist/'
+          )
+          # Create GitHub Issue
+          return unless confirm("Would you like to create a new Issue on GitHub now?")
+          issueTemplate = fs.readFileSync(path.resolve(__dirname, "../ISSUE_TEMPLATE.md")).toString()
+          body = issueTemplate.replace("<INSERT GIST HERE>", gistUrl)#.replace("<INSERT CODE HERE>", text)
+          open("https://github.com/Glavin001/atom-beautify/issues/new?body=#{encodeURIComponent(body)}")
+
       )
     try
       beautifier.beautify(text, allOptions, grammarName, filePath)
