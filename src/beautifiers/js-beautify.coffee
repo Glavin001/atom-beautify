@@ -19,6 +19,7 @@ module.exports = class JSBeautify extends Beautifier
       newline_between_rules: true
       preserve_newlines: true
       wrap_line_length: true
+      end_with_newline: true
   }
 
   beautify: (text, language, options) ->

@@ -57,6 +57,10 @@ module.exports = {
       type: 'integer'
       default: 0
       description: "Maximum amount of characters per line (0 = disable)"
+    end_with_newline:
+      type: 'boolean'
+      default: false
+      description: "End output with newline"
     indent_comments:
       type: 'boolean'
       default: true
