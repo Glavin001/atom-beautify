@@ -1417,6 +1417,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `align_assignments` | :x: | :x: | :white_check_mark: |
 | `configPath` | :white_check_mark: | :x: | :x: |
 | `convert_quotes` | :x: | :x: | :white_check_mark: |
+| `end_with_newline` | :x: | :white_check_mark: | :x: |
 | `force_indentation` | :x: | :x: | :white_check_mark: |
 | `indent_char` | :x: | :white_check_mark: | :white_check_mark: |
 | `indent_comments` | :x: | :x: | :white_check_mark: |
@@ -1563,6 +1564,30 @@ Convert the quote characters delimiting strings from either double or single quo
 }
 ```
 
+#####  [End with newline](#end-with-newline) 
+
+**Namespace**: `css`
+
+**Key**: `end_with_newline`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+End output with newline (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "css": {
+        "end_with_newline": false
+    }
+}
+```
+
 #####  [Force indentation](#force-indentation) 
 
 **Namespace**: `css`
@@ -1671,6 +1696,8 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `newline_between_rules`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -1684,7 +1711,7 @@ Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "css": {
-        "newline_between_rules": false
+        "newline_between_rules": true
     }
 }
 ```
@@ -6006,6 +6033,8 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Key**: `newline_between_rules`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -6019,7 +6048,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "newline_between_rules": false
+        "newline_between_rules": true
     }
 }
 ```
@@ -8775,6 +8804,8 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Key**: `newline_between_rules`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -8788,7 +8819,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "newline_between_rules": false
+        "newline_between_rules": true
     }
 }
 ```
@@ -9158,6 +9189,8 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Key**: `newline_between_rules`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -9171,7 +9204,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "newline_between_rules": false
+        "newline_between_rules": true
     }
 }
 ```
@@ -10200,6 +10233,8 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Key**: `newline_between_rules`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -10213,7 +10248,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "newline_between_rules": false
+        "newline_between_rules": true
     }
 }
 ```
@@ -12791,6 +12826,8 @@ Add a newline between multiple selectors (Supported by JS Beautify)
 
 **Key**: `newline_between_rules`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -12804,7 +12841,7 @@ Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "css": {
-        "newline_between_rules": false
+        "newline_between_rules": true
     }
 }
 ```
@@ -12857,6 +12894,30 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 {
     "html": {
         "wrap_line_length": 250
+    }
+}
+```
+
+#####  [End with newline](#end-with-newline) 
+
+**Namespace**: `html`
+
+**Key**: `end_with_newline`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+End output with newline (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "end_with_newline": false
     }
 }
 ```
@@ -13081,30 +13142,6 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "h5",
             "h6"
         ]
-    }
-}
-```
-
-#####  [End with newline](#end-with-newline) 
-
-**Namespace**: `html`
-
-**Key**: `end_with_newline`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-End output with newline (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "end_with_newline": false
     }
 }
 ```
@@ -14316,6 +14353,8 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Key**: `newline_between_rules`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -14329,7 +14368,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "newline_between_rules": false
+        "newline_between_rules": true
     }
 }
 ```
