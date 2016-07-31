@@ -45,7 +45,7 @@ module.exports = {
       description: "Add a newline between multiple selectors"
     newline_between_rules:
       type: 'boolean'
-      default: false
+      default: true
       description: "Add a newline between CSS rules"
     preserve_newlines:
       type: 'boolean'
