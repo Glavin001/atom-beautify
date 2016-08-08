@@ -118,7 +118,7 @@
     "handlebars": "^4.0.2",
     "js-beautify": "^1.6.3",
     "jscs": "^3.0.7",
-    "lodash": "^4.14.1",
+    "lodash": "^4.14.2",
     "loophole": "^1.0.0",
     "marko-prettyprint": "^1.1.8",
     "node-dir": "^0.1.15",
