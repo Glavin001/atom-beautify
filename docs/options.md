@@ -3232,7 +3232,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `unformatted`
 
-**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -3249,36 +3249,67 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
     "html": {
         "unformatted": [
             "a",
-            "span",
-            "img",
-            "bdo",
-            "em",
-            "strong",
-            "dfn",
-            "code",
-            "samp",
-            "kbd",
-            "var",
-            "cite",
             "abbr",
-            "acronym",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
             "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
             "sub",
             "sup",
-            "tt",
-            "i",
-            "b",
-            "big",
-            "small",
+            "svg",
+            "template",
+            "textarea",
+            "time",
             "u",
-            "s",
-            "strike",
-            "font",
-            "ins",
-            "del",
-            "pre",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
             "address",
+            "big",
             "dt",
+            "ins",
+            "small",
+            "strike",
+            "tt",
+            "pre",
             "h1",
             "h2",
             "h3",
@@ -3765,7 +3796,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `unformatted`
 
-**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -3782,36 +3813,67 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
     "html": {
         "unformatted": [
             "a",
-            "span",
-            "img",
-            "bdo",
-            "em",
-            "strong",
-            "dfn",
-            "code",
-            "samp",
-            "kbd",
-            "var",
-            "cite",
             "abbr",
-            "acronym",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
             "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
             "sub",
             "sup",
-            "tt",
-            "i",
-            "b",
-            "big",
-            "small",
+            "svg",
+            "template",
+            "textarea",
+            "time",
             "u",
-            "s",
-            "strike",
-            "font",
-            "ins",
-            "del",
-            "pre",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
             "address",
+            "big",
             "dt",
+            "ins",
+            "small",
+            "strike",
+            "tt",
+            "pre",
             "h1",
             "h2",
             "h3",
@@ -6725,7 +6787,7 @@ Preserve line-breaks (Supported by Marko Beautifier)
 
 **Key**: `unformatted`
 
-**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -6742,36 +6804,67 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
     "html": {
         "unformatted": [
             "a",
-            "span",
-            "img",
-            "bdo",
-            "em",
-            "strong",
-            "dfn",
-            "code",
-            "samp",
-            "kbd",
-            "var",
-            "cite",
             "abbr",
-            "acronym",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
             "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
             "sub",
             "sup",
-            "tt",
-            "i",
-            "b",
-            "big",
-            "small",
+            "svg",
+            "template",
+            "textarea",
+            "time",
             "u",
-            "s",
-            "strike",
-            "font",
-            "ins",
-            "del",
-            "pre",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
             "address",
+            "big",
             "dt",
+            "ins",
+            "small",
+            "strike",
+            "tt",
+            "pre",
             "h1",
             "h2",
             "h3",
@@ -7189,7 +7282,7 @@ Preserve line-breaks (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -7206,36 +7299,67 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
     "html": {
         "unformatted": [
             "a",
-            "span",
-            "img",
-            "bdo",
-            "em",
-            "strong",
-            "dfn",
-            "code",
-            "samp",
-            "kbd",
-            "var",
-            "cite",
             "abbr",
-            "acronym",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
             "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
             "sub",
             "sup",
-            "tt",
-            "i",
-            "b",
-            "big",
-            "small",
+            "svg",
+            "template",
+            "textarea",
+            "time",
             "u",
-            "s",
-            "strike",
-            "font",
-            "ins",
-            "del",
-            "pre",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
             "address",
+            "big",
             "dt",
+            "ins",
+            "small",
+            "strike",
+            "tt",
+            "pre",
             "h1",
             "h2",
             "h3",
@@ -8117,6 +8241,75 @@ sort imports (requires isort installed) (Supported by autopep8)
     }
 }
 ```
+
+####  [R](#r) 
+
+**Supported Beautifiers**:  [`R beautifier`](#r-beautifier) 
+
+| Option | R beautifier |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
+**Description**:
+
+Options for language R
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable R Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `R beautifier`
+
+**Type**: `string`
+
+**Enum**:  `R beautifier` 
+
+**Description**:
+
+Default Beautifier to be used for R
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify R files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
 ####  [Riot.js](#riot.js) 
 
@@ -11757,7 +11950,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `unformatted`
 
-**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -11774,36 +11967,67 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
     "html": {
         "unformatted": [
             "a",
-            "span",
-            "img",
-            "bdo",
-            "em",
-            "strong",
-            "dfn",
-            "code",
-            "samp",
-            "kbd",
-            "var",
-            "cite",
             "abbr",
-            "acronym",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
             "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
             "sub",
             "sup",
-            "tt",
-            "i",
-            "b",
-            "big",
-            "small",
+            "svg",
+            "template",
+            "textarea",
+            "time",
             "u",
-            "s",
-            "strike",
-            "font",
-            "ins",
-            "del",
-            "pre",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
             "address",
+            "big",
             "dt",
+            "ins",
+            "small",
+            "strike",
+            "tt",
+            "pre",
             "h1",
             "h2",
             "h3",
@@ -13088,7 +13312,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -13105,36 +13329,67 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
     "html": {
         "unformatted": [
             "a",
-            "span",
-            "img",
-            "bdo",
-            "em",
-            "strong",
-            "dfn",
-            "code",
-            "samp",
-            "kbd",
-            "var",
-            "cite",
             "abbr",
-            "acronym",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
             "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
             "sub",
             "sup",
-            "tt",
-            "i",
-            "b",
-            "big",
-            "small",
+            "svg",
+            "template",
+            "textarea",
+            "time",
             "u",
-            "s",
-            "strike",
-            "font",
-            "ins",
-            "del",
-            "pre",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
             "address",
+            "big",
             "dt",
+            "ins",
+            "small",
+            "strike",
+            "tt",
+            "pre",
             "h1",
             "h2",
             "h3",
@@ -13951,7 +14206,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 
 **Key**: `unformatted`
 
-**Default**: `a,span,img,bdo,em,strong,dfn,code,samp,kbd,var,cite,abbr,acronym,q,sub,sup,tt,i,b,big,small,u,s,strike,font,ins,del,pre,address,dt,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -13968,36 +14223,67 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
     "html": {
         "unformatted": [
             "a",
-            "span",
-            "img",
-            "bdo",
-            "em",
-            "strong",
-            "dfn",
-            "code",
-            "samp",
-            "kbd",
-            "var",
-            "cite",
             "abbr",
-            "acronym",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
             "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
             "sub",
             "sup",
-            "tt",
-            "i",
-            "b",
-            "big",
-            "small",
+            "svg",
+            "template",
+            "textarea",
+            "time",
             "u",
-            "s",
-            "strike",
-            "font",
-            "ins",
-            "del",
-            "pre",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
             "address",
+            "big",
             "dt",
+            "ins",
+            "small",
+            "strike",
+            "tt",
+            "pre",
             "h1",
             "h2",
             "h3",
