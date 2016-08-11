@@ -7,8 +7,8 @@ path = require("path")
 Beautifier = require('../beautifier')
 
 module.exports = class R extends Beautifier
-  name: "R beautifier"
-  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/r-beautifier/r-beautifier.r"
+  name: "formatR"
+  link: "https://github.com/yihui/formatR"
 
   options: {
     R: true
@@ -18,6 +18,7 @@ module.exports = class R extends Beautifier
     r_beautifier = path.resolve(__dirname, "r-beautifier.r")
     @run("Rscript", [
       r_beautifier,
+      options.indent_size,
       @tempFile("input", text),
       '>',
       @tempFile("input", text)
