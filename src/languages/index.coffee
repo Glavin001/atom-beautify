@@ -63,6 +63,7 @@ module.exports = class Languages
     "tss"
     "twig"
     "typescript"
+    "ux"
     "vala"
     "visualforce"
     "xml"
