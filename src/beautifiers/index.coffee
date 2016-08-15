@@ -66,6 +66,7 @@ module.exports = class Beautifiers extends EventEmitter
     'stylish-haskell'
     'tidy-markdown'
     'typescript-formatter'
+    'vue-beautifier'
     'yapf'
     'erl_tidy'
     'marko-beautifier'
