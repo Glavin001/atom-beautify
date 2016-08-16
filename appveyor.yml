@@ -83,7 +83,7 @@ install:
 
   # Ruby & Gem
   - cinst ruby -y
-  - "SET PATH=C:\\Ruby193\\bin;%PATH%"
+  - "SET PATH=C:\\tools\\ruby23\\bin;%PATH%"
   # Rubocop
   - gem install rubocop
   - where rubocop
@@ -98,6 +98,8 @@ install:
   - cinst emacs -y
   - where emacs
 
+  # FIXME: Enable allowEmptyChecksums, until someone fixes the checksum issue of php
+  - choco feature enable -n allowEmptyChecksums
   # PHP
   - cinst php -y
   - ps: "ls \"C:\\tools\\php\""
