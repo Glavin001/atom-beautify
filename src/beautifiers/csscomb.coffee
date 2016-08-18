@@ -12,7 +12,6 @@ module.exports = class JSBeautify extends Beautifier
       predefinedConfig: true
     CSS: true
     LESS: true
-    Sass: true
     SCSS: true
   }
 
