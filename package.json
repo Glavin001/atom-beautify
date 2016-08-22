@@ -114,7 +114,7 @@
     "expand-home-dir": "0.0.3",
     "extend": "^3.0.0",
     "gherkin": "2.12.2",
-    "github": "^2.4.0",
+    "github": "^2.4.1",
     "handlebars": "^4.0.2",
     "js-beautify": "^1.6.3",
     "jscs": "^3.0.7",
