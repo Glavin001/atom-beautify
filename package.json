@@ -99,6 +99,7 @@
       "name": "Sebastian DiLorenzo",
       "url": "https://github.com/Sebastian-D"
     },
+    {
       "name": "Émile Bergeron",
       "url": "https://github.com/emileber"
     }
@@ -266,7 +267,9 @@
     "yapf",
     "erl_tidy",
     "marko beautifier",
-    "r beautifier"
+    "r beautifier",
+    "vue",
+    "vue beautifier"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",

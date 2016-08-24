@@ -87,7 +87,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | PHP | `PHP` |`.php`, `.module`, `.inc` | [`PHP-CS-Fixer`](http://php.net/manual/en/install.php) (Default), [`PHPCBF`](http://php.net/manual/en/install.php) |
 | Puppet | `Puppet` |`.pp` | [`puppet-lint`](http://puppet-lint.com/) (Default) |
 | Python | `Python` |`.py` | [`autopep8`](https://github.com/hhatto/autopep8) (Default), [`yapf`](https://github.com/google/yapf) |
-| R | `R` |`.r`, `.R` | [`R beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/r-beautifier/r-beautifier.r) (Default) |
+| R | `R` |`.r`, `.R` | [`R beautifier`](https://github.com/yihui/formatR) (Default) |
 | Riot.js | `Riot.js`, `HTML (Riot Tag)` |`.tag` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Ruby | `Ruby`, `Ruby on Rails` |`.rb` | [`Rubocop`](https://github.com/bbatsov/rubocop) (Default), [`Ruby Beautify`](https://github.com/erniebrodeur/ruby-beautify) |
 | Rust | `Rust` |`.rs`, `.rlib` | [`rustfmt`](https://github.com/nrc/rustfmt) (Default) |
@@ -102,8 +102,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | TypeScript | `TypeScript` |`.ts` | [`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter) (Default) |
 | Vala | `Vala` |`.vala`, `.vapi` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Visualforce | `Visualforce` |`.page` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
-| Vue | `Vue Component` |`.vue` | `Vue Beautifier` (Default) |
-| XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
+| XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | XTemplate | `XTemplate` |`.xtemplate` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 
 ## Usage

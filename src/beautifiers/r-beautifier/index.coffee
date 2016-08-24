@@ -7,7 +7,7 @@ path = require("path")
 Beautifier = require('../beautifier')
 
 module.exports = class R extends Beautifier
-  name: "formatR"
+  name: "R beautifier"
   link: "https://github.com/yihui/formatR"
 
   options: {
