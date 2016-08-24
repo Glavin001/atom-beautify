@@ -96,6 +96,9 @@ before_install:
   - pip install --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
+  # R
+  - brew tap homebrew/science
+  - brew install r
   # PHP
   - brew tap homebrew/homebrew-php
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
