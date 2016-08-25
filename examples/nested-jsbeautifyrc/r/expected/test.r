@@ -13,7 +13,7 @@ if (TRUE) {
 # only 'single quotes' are allowed in comments
 df = data.frame(y = rnorm(100), x1 = rnorm(100), x2 = rnorm(100))
 lm(y ~ x1 + x2, data = df)
-1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 +
+1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 
   1 + 1  ## comments after a long line
 
 ## here is a long long long long long long long long long long long long long long
