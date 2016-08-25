@@ -42,6 +42,13 @@ apm install atom-beautify
 
 Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 
+### Important Notice: Analytics
+
+By default `Anonymous Analytics` is enabled. 
+If you do not wish to have usage data sent to Google Analytics then please disable `Anonymous Analytics` option before using Atom-Beautify.
+See https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md#anonymous-analytics for details.
+Thank you.
+
 ## Language Support
 
 See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
