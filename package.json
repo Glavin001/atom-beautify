@@ -261,7 +261,9 @@
     "typescript formatter",
     "yapf",
     "erl_tidy",
-    "marko beautifier"
+    "marko beautifier",
+    "vue",
+    "vue beautifier"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
