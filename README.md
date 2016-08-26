@@ -63,7 +63,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | C++ | `C++` |`.h`, `.hh`, `.cc`, `.cpp`, `.cxx`, `.C`, `.c++`, `.hpp`, `.hxx`, `.h++` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default), [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
 | Crystal | `Crystal` |`.cr` | [`Crystal`](http://crystal-lang.org) (Default) |
 | C# | `C#` |`.cs` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
-| CSS | `CSS` |`.css` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
+| CSS | `CSS` |`.css` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | CSV | `CSV` |`.csv` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | D | `D` |`.d` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default), [`dfmt`](https://github.com/Hackerpilot/dfmt) |
 | EJS | `JavaScript Template`, `HTML (Angular)` | | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
@@ -98,7 +98,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | Ruby | `Ruby`, `Ruby on Rails` |`.rb` | [`Rubocop`](https://github.com/bbatsov/rubocop) (Default), [`Ruby Beautify`](https://github.com/erniebrodeur/ruby-beautify) |
 | Rust | `Rust` |`.rs`, `.rlib` | [`rustfmt`](https://github.com/nrc/rustfmt) (Default) |
 | Sass | `Sass` |`.sass` | [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) (Default) |
-| SCSS | `SCSS` |`.scss` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
+| SCSS | `SCSS` |`.scss` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | Spacebars | `Spacebars` | | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | SQL | `SQL (Rails)`, `SQL` |`.sql` | [`sqlformat`](https://github.com/andialbrecht/sqlparse) (Default) |
 | SVG | `SVG` |`.svg` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |

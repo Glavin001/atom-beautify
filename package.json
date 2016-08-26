@@ -263,7 +263,8 @@
     "erl_tidy",
     "marko beautifier",
     "vue",
-    "vue beautifier"
+    "vue beautifier",
+    "sassconvert"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
