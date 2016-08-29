@@ -41,7 +41,7 @@ Unique identifier for this user for tracking usage analytics
 
 **Description**:
 
-There is [Segment.io](https://segment.io/) which forwards data to [Google Analytics](http://www.google.com/analytics/) to track what languages are being used the most, as well as other stats. Everything is anonymized and no personal information, such as source code, is sent. See https://github.com/Glavin001/atom-beautify/issues/47 for more details.
+[Google Analytics](http://www.google.com/analytics/) is used to track what languages are being used the most and causing the most errors, as well as other stats such as performance. Everything is anonymized and no personal information, such as source code, is sent. See https://github.com/Glavin001/atom-beautify/issues/47 for more details.
 
 **How to Configure**
 
@@ -1407,27 +1407,27 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [CSS](#css) 
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)  [`SassConvert`](#sassconvert) 
 
-| Option | CSScomb | JS Beautify | Pretty Diff |
-| --- | --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `align_assignments` | :x: | :x: | :white_check_mark: |
-| `configPath` | :white_check_mark: | :x: | :x: |
-| `convert_quotes` | :x: | :x: | :white_check_mark: |
-| `end_with_newline` | :x: | :white_check_mark: | :x: |
-| `force_indentation` | :x: | :x: | :white_check_mark: |
-| `indent_char` | :x: | :white_check_mark: | :white_check_mark: |
-| `indent_comments` | :x: | :x: | :white_check_mark: |
-| `indent_size` | :x: | :white_check_mark: | :white_check_mark: |
-| `newline_between_rules` | :x: | :white_check_mark: | :white_check_mark: |
-| `no_lead_zero` | :x: | :x: | :white_check_mark: |
-| `predefinedConfig` | :white_check_mark: | :x: | :x: |
-| `preserve_newlines` | :x: | :white_check_mark: | :white_check_mark: |
-| `selector_separator_newline` | :x: | :white_check_mark: | :x: |
-| `wrap_line_length` | :x: | :white_check_mark: | :white_check_mark: |
+| Option | CSScomb | JS Beautify | Pretty Diff | SassConvert |
+| --- | --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `align_assignments` | :x: | :x: | :white_check_mark: | :x: |
+| `configPath` | :white_check_mark: | :x: | :x: | :x: |
+| `convert_quotes` | :x: | :x: | :white_check_mark: | :x: |
+| `end_with_newline` | :x: | :white_check_mark: | :x: | :x: |
+| `force_indentation` | :x: | :x: | :white_check_mark: | :x: |
+| `indent_char` | :x: | :white_check_mark: | :white_check_mark: | :x: |
+| `indent_comments` | :x: | :x: | :white_check_mark: | :x: |
+| `indent_size` | :x: | :white_check_mark: | :white_check_mark: | :x: |
+| `newline_between_rules` | :x: | :white_check_mark: | :white_check_mark: | :x: |
+| `no_lead_zero` | :x: | :x: | :white_check_mark: | :x: |
+| `predefinedConfig` | :white_check_mark: | :x: | :x: | :x: |
+| `preserve_newlines` | :x: | :white_check_mark: | :white_check_mark: | :x: |
+| `selector_separator_newline` | :x: | :white_check_mark: | :x: | :x: |
+| `wrap_line_length` | :x: | :white_check_mark: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -1458,7 +1458,7 @@ Disable CSS Beautification
 
 **Type**: `string`
 
-**Enum**:  `CSScomb`  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `CSScomb`  `JS Beautify`  `Pretty Diff`  `SassConvert` 
 
 **Description**:
 
@@ -8242,102 +8242,6 @@ sort imports (requires isort installed) (Supported by autopep8)
 }
 ```
 
-####  [R](#r) 
-
-**Supported Beautifiers**:  [`R beautifier`](#r-beautifier) 
-
-| Option | R beautifier |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
-| `indent_size` | :white_check_mark: |
-
-**Description**:
-
-Options for language R
-
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Disable R Beautification
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
-
-#####  [Default Beautifier](#default-beautifier) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `R beautifier`
-
-**Type**: `string`
-
-**Enum**:  `R beautifier` 
-
-**Description**:
-
-Default Beautifier to be used for R
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Default Beautifier*" and change it to your desired configuration.
-
-#####  [Beautify On Save](#beautify-on-save) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Type**: `boolean`
-
-**Description**:
-
-Automatically beautify R files on save
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Beautify On Save*" and change it to your desired configuration.
-
-#####  [Indent size](#indent-size) 
-
-**Namespace**: `r`
-
-**Key**: `indent_size`
-
-**Default**: `4`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`R beautifier`](#r-beautifier) 
-
-**Description**:
-
-Indentation size/length (Supported by R beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "r": {
-        "indent_size": 4
-    }
-}
-```
-
 ####  [Riot.js](#riot.js) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -8761,25 +8665,13 @@ Path to rustfmt program (Supported by rustfmt)
 
 ####  [Sass](#sass) 
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`SassConvert`](#sassconvert) 
 
-| Option | CSScomb | Pretty Diff |
-| --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
-| `align_assignments` | :x: | :white_check_mark: |
-| `configPath` | :white_check_mark: | :x: |
-| `convert_quotes` | :x: | :white_check_mark: |
-| `force_indentation` | :x: | :white_check_mark: |
-| `indent_char` | :x: | :white_check_mark: |
-| `indent_comments` | :x: | :white_check_mark: |
-| `indent_size` | :x: | :white_check_mark: |
-| `newline_between_rules` | :x: | :white_check_mark: |
-| `no_lead_zero` | :x: | :white_check_mark: |
-| `predefinedConfig` | :white_check_mark: | :x: |
-| `preserve_newlines` | :x: | :white_check_mark: |
-| `wrap_line_length` | :x: | :white_check_mark: |
+| Option | SassConvert |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
 
 **Description**:
 
@@ -8806,11 +8698,11 @@ Disable Sass Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `Pretty Diff`
+**Default**: `SassConvert`
 
 **Type**: `string`
 
-**Enum**:  `CSScomb`  `Pretty Diff` 
+**Enum**:  `SassConvert` 
 
 **Description**:
 
@@ -8840,331 +8732,27 @@ Automatically beautify Sass files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Align assignments](#align-assignments) 
-
-**Namespace**: `css`
-
-**Key**: `align_assignments`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-If lists of assignments or properties should be vertically aligned for faster and easier reading. (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "align_assignments": false
-    }
-}
-```
-
-#####  [comb custom config file](#comb-custom-config-file) 
-
-**Namespace**: `css`
-
-**Key**: `configPath`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
-
-**Description**:
-
-Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "configPath": ""
-    }
-}
-```
-
-#####  [Convert quotes](#convert-quotes) 
-
-**Namespace**: `css`
-
-**Key**: `convert_quotes`
-
-**Default**: `none`
-
-**Type**: `string`
-
-**Enum**:  `none`  `double`  `single` 
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Convert the quote characters delimiting strings from either double or single quotes to the other. (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "convert_quotes": "none"
-    }
-}
-```
-
-#####  [Force indentation](#force-indentation) 
-
-**Namespace**: `css`
-
-**Key**: `force_indentation`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-if indentation should be forcefully applied to markup even if it disruptively adds unintended whitespace to the documents rendered output (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "force_indentation": false
-    }
-}
-```
-
-#####  [Indent char](#indent-char) 
-
-**Namespace**: `css`
-
-**Key**: `indent_char`
-
-**Default**: ` `
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Indentation character (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "indent_char": " "
-    }
-}
-```
-
-#####  [Indent comments](#indent-comments) 
-
-**Namespace**: `css`
-
-**Key**: `indent_comments`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Determines whether comments should be indented. (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "indent_comments": true
-    }
-}
-```
-
-#####  [Indent size](#indent-size) 
-
-**Namespace**: `css`
-
-**Key**: `indent_size`
-
-**Default**: `4`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Indentation size/length (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "indent_size": 4
-    }
-}
-```
-
-#####  [Newline between rules](#newline-between-rules) 
-
-**Namespace**: `css`
-
-**Key**: `newline_between_rules`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Add a newline between CSS rules (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "newline_between_rules": true
-    }
-}
-```
-
-#####  [No lead zero](#no-lead-zero) 
-
-**Namespace**: `css`
-
-**Key**: `no_lead_zero`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "no_lead_zero": false
-    }
-}
-```
-
-#####  [comb predefined config](#comb-predefined-config) 
-
-**Namespace**: `css`
-
-**Key**: `predefinedConfig`
-
-**Default**: `csscomb`
-
-**Type**: `string`
-
-**Enum**:  `csscomb`  `yandex`  `zen` 
-
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
-
-**Description**:
-
-Used if neither a project or custom config file exists. (Supported by CSScomb)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "predefinedConfig": "csscomb"
-    }
-}
-```
-
-#####  [Preserve newlines](#preserve-newlines) 
-
-**Namespace**: `css`
-
-**Key**: `preserve_newlines`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Retain empty lines. Consecutive empty lines will be converted to a single empty line. (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "preserve_newlines": false
-    }
-}
-```
-
-#####  [Wrap line length](#wrap-line-length) 
-
-**Namespace**: `css`
-
-**Key**: `wrap_line_length`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "css": {
-        "wrap_line_length": 0
-    }
-}
-```
-
 ####  [SCSS](#scss) 
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff)  [`SassConvert`](#sassconvert) 
 
-| Option | CSScomb | Pretty Diff |
-| --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
-| `align_assignments` | :x: | :white_check_mark: |
-| `configPath` | :white_check_mark: | :x: |
-| `convert_quotes` | :x: | :white_check_mark: |
-| `force_indentation` | :x: | :white_check_mark: |
-| `indent_char` | :x: | :white_check_mark: |
-| `indent_comments` | :x: | :white_check_mark: |
-| `indent_size` | :x: | :white_check_mark: |
-| `newline_between_rules` | :x: | :white_check_mark: |
-| `no_lead_zero` | :x: | :white_check_mark: |
-| `predefinedConfig` | :white_check_mark: | :x: |
-| `preserve_newlines` | :x: | :white_check_mark: |
-| `wrap_line_length` | :x: | :white_check_mark: |
+| Option | CSScomb | Pretty Diff | SassConvert |
+| --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `align_assignments` | :x: | :white_check_mark: | :x: |
+| `configPath` | :white_check_mark: | :x: | :x: |
+| `convert_quotes` | :x: | :white_check_mark: | :x: |
+| `force_indentation` | :x: | :white_check_mark: | :x: |
+| `indent_char` | :x: | :white_check_mark: | :x: |
+| `indent_comments` | :x: | :white_check_mark: | :x: |
+| `indent_size` | :x: | :white_check_mark: | :x: |
+| `newline_between_rules` | :x: | :white_check_mark: | :x: |
+| `no_lead_zero` | :x: | :white_check_mark: | :x: |
+| `predefinedConfig` | :white_check_mark: | :x: | :x: |
+| `preserve_newlines` | :x: | :white_check_mark: | :x: |
+| `wrap_line_length` | :x: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -9195,7 +8783,7 @@ Disable SCSS Beautification
 
 **Type**: `string`
 
-**Enum**:  `CSScomb`  `Pretty Diff` 
+**Enum**:  `CSScomb`  `Pretty Diff`  `SassConvert` 
 
 **Description**:
 
@@ -15454,35 +15042,6 @@ Indentation character (Supported by Pug Beautify)
 {
     "html": {
         "indent_char": " "
-    }
-}
-```
-
-
-### R beautifier
-
-#####  [Indent size](#indent-size) 
-
-**Namespace**: `r`
-
-**Key**: `indent_size`
-
-**Default**: `4`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`R beautifier`](#r-beautifier) 
-
-**Description**:
-
-Indentation size/length (Supported by R beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "r": {
-        "indent_size": 4
     }
 }
 ```

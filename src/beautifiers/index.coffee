@@ -62,6 +62,7 @@ module.exports = class Beautifiers extends EventEmitter
     'rubocop'
     'ruby-beautify'
     'rustfmt'
+    'sass-convert'
     'sqlformat'
     'stylish-haskell'
     'tidy-markdown'

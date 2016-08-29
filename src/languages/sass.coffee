@@ -2,7 +2,7 @@ module.exports = {
 
   name: "Sass"
   namespace: "sass"
-  fallback: ['css', 'scss']
+  fallback: ['css']
 
   ###
   Supported Grammars
@@ -18,6 +18,6 @@ module.exports = {
     "sass"
   ]
 
-  defaultBeautifier: "Pretty Diff"
+  defaultBeautifier: "SassConvert"
 
 }

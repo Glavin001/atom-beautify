@@ -93,6 +93,9 @@ install:
   # Puppet-Lint
   - gem install puppet-lint
   - where puppet-lint
+  # Sass
+  - gem install sass
+  - where sass-convert
 
   # emacs
   - cinst emacs -y

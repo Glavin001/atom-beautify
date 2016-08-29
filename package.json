@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.29.10",
+  "version": "0.29.11",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
   "repository": {
@@ -269,7 +269,8 @@
     "marko beautifier",
     "r beautifier",
     "vue",
-    "vue beautifier"
+    "vue beautifier",
+    "sassconvert"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
