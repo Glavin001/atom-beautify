@@ -7,7 +7,7 @@ path = require("path")
 Beautifier = require('../beautifier')
 
 module.exports = class R extends Beautifier
-  name: "R beautifier"
+  name: "formatR"
   link: "https://github.com/yihui/formatR"
 
   options: {
@@ -15,7 +15,7 @@ module.exports = class R extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    r_beautifier = path.resolve(__dirname, "r-beautifier.r")
+    r_beautifier = path.resolve(__dirname, "formatR.r")
     @run("Rscript", [
       r_beautifier,
       options.indent_size,

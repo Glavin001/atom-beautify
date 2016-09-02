@@ -270,7 +270,8 @@
     "r beautifier",
     "vue",
     "vue beautifier",
-    "sassconvert"
+    "sassconvert",
+    "formatr"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
