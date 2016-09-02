@@ -5,6 +5,10 @@
 Note that this will include a copy of your code.
 If your code is private, please create a different sample of code that reproduces the problem.
 
+Steps 2-5 are for older versions of Atom-Beautify.
+In newer/latest version, Atom-Beautify will provide you with a 
+series of prompts and guide you to create an anonymous Gist with your debugging information.
+
 1. In the Atom [command-palette](https://atom.io/packages/command-palette),
 search for and run the command `Atom Beautify: Help Debug Editor`.
 The debugging results will be copied to your clipboard.  
