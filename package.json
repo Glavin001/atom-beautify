@@ -267,7 +267,6 @@
     "yapf",
     "erl_tidy",
     "marko beautifier",
-    "r beautifier",
     "vue",
     "vue beautifier",
     "sassconvert",
