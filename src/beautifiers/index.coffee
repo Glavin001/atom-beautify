@@ -71,6 +71,7 @@ module.exports = class Beautifiers extends EventEmitter
     'yapf'
     'erl_tidy'
     'marko-beautifier'
+    'formatR'
   ]
 
   ###

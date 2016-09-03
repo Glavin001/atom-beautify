@@ -8242,6 +8242,102 @@ sort imports (requires isort installed) (Supported by autopep8)
 }
 ```
 
+####  [R](#r) 
+
+**Supported Beautifiers**:  [`formatR`](#formatr) 
+
+| Option | formatR |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+
+**Description**:
+
+Options for language R
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable R Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `formatR`
+
+**Type**: `string`
+
+**Enum**:  `formatR` 
+
+**Description**:
+
+Default Beautifier to be used for R
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify R files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `r`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`formatR`](#formatr) 
+
+**Description**:
+
+Indentation size/length (Supported by formatR)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "r": {
+        "indent_size": 4
+    }
+}
+```
+
 ####  [Riot.js](#riot.js) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -16333,6 +16429,35 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 {
     "js": {
         "indent_with_tabs": false
+    }
+}
+```
+
+
+### formatR
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `r`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`formatR`](#formatr) 
+
+**Description**:
+
+Indentation size/length (Supported by formatR)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "r": {
+        "indent_size": 4
     }
 }
 ```
