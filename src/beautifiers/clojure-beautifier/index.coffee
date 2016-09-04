@@ -13,8 +13,9 @@ module.exports = class ClojureBeautifier extends Beautifier
 
   beautify: (text, language, options) ->
     formatPath = path.resolve(__dirname, "fmt.edn")
+    cljfmt = path.resolve(__dirname, "../../../", "node_modules/.bin/cljfmt")
     @tempFile("input", text).then((filePath) =>
-      @run("cljfmt", [
+      @run(cljfmt, [
         filePath,
         "--edn=" + formatPath
       ]).then(=>
