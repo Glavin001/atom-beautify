@@ -21,7 +21,7 @@ describe "BeautifyLanguages", ->
 
   # Activate all of the languages
   allLanguages = [
-    "c", "coffee-script", "css", "d", "html",
+    "c", "clojure", "coffee-script", "css", "d", "html",
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql", "svg",
