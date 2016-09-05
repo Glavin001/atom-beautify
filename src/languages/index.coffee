@@ -51,6 +51,7 @@ module.exports = class Languages
     "php"
     "puppet"
     "python"
+    "r"
     "riotjs"
     "ruby"
     "rust"

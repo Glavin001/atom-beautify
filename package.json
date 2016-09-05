@@ -96,6 +96,10 @@
       "url": "https://github.com/yesenarman"
     },
     {
+      "name": "Sebastian DiLorenzo",
+      "url": "https://github.com/Sebastian-D"
+    },
+    {
       "name": "Émile Bergeron",
       "url": "https://github.com/emileber"
     }
@@ -251,6 +255,7 @@
     "pretty diff",
     "pug beautify",
     "puppet-lint",
+    "r",
     "remark",
     "rubocop",
     "ruby beautify",
@@ -263,7 +268,9 @@
     "erl_tidy",
     "marko beautifier",
     "vue",
-    "vue beautifier"
+    "vue beautifier",
+    "sassconvert",
+    "formatr"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
