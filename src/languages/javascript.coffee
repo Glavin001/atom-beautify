@@ -16,6 +16,7 @@ module.exports = {
   ###
   grammars: [
     "JavaScript"
+    "Babel ES6 JavaScript"
   ]
 
   ###
