@@ -270,7 +270,8 @@
     "vue",
     "vue beautifier",
     "sassconvert",
-    "formatr"
+    "formatr",
+    "nunjucks"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
