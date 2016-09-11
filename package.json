@@ -129,6 +129,7 @@
     "lodash": "^4.14.2",
     "loophole": "^1.0.0",
     "marko-prettyprint": "^1.1.8",
+    "node-cljfmt": "^0.5.3-1",
     "node-dir": "^0.1.15",
     "node-uuid": "^1.4.3",
     "open": "0.0.5",
@@ -270,7 +271,9 @@
     "vue",
     "vue beautifier",
     "sassconvert",
-    "formatr"
+    "formatr",
+    "clojure",
+    "clojure beautifier"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",

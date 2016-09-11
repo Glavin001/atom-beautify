@@ -590,6 +590,75 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
+####  [Clojure](#clojure) 
+
+**Supported Beautifiers**:  [`Clojure Beautifier`](#clojure-beautifier) 
+
+| Option | Clojure Beautifier |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
+**Description**:
+
+Options for language Clojure
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Clojure Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `cljfmt`
+
+**Type**: `string`
+
+**Enum**:  `Clojure Beautifier` 
+
+**Description**:
+
+Default Beautifier to be used for Clojure
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Clojure files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
 ####  [CoffeeScript](#coffeescript) 
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 

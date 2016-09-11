@@ -16,6 +16,7 @@ module.exports = class Languages
     "arduino"
     "c-sharp"
     "c"
+    "clojure"
     "coffeescript"
     "coldfusion"
     "cpp"

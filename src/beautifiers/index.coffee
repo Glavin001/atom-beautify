@@ -38,6 +38,7 @@ module.exports = class Beautifiers extends EventEmitter
     'autopep8'
     'coffee-formatter'
     'coffee-fmt'
+    'clojure-beautifier'
     'clang-format'
     'crystal'
     'dfmt'
