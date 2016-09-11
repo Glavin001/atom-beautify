@@ -273,7 +273,8 @@
     "sassconvert",
     "formatr",
     "clojure",
-    "clojure beautifier"
+    "clojure beautifier",
+    "nunjucks"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
