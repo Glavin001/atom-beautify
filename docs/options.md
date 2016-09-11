@@ -7520,6 +7520,183 @@ Maximum characters per line (0 disables) (Supported by JS Beautify)
 }
 ```
 
+####  [Nunjucks](#nunjucks) 
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+| Option | Pretty Diff |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `preserve_newlines` | :white_check_mark: |
+| `wrap_line_length` | :white_check_mark: |
+
+**Description**:
+
+Options for language Nunjucks
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Nunjucks Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `Pretty Diff`
+
+**Type**: `string`
+
+**Enum**:  `Pretty Diff` 
+
+**Description**:
+
+Default Beautifier to be used for Nunjucks
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Nunjucks files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Indent char](#indent-char) 
+
+**Namespace**: `html`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Indentation character (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "indent_char": " "
+    }
+}
+```
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `html`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Indentation size/length (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "indent_size": 4
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Preserve line-breaks (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Wrap line length](#wrap-line-length) 
+
+**Namespace**: `html`
+
+**Key**: `wrap_line_length`
+
+**Default**: `250`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Maximum characters per line (0 disables) (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "wrap_line_length": 250
+    }
+}
+```
+
 ####  [Objective-C](#objective-c) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 

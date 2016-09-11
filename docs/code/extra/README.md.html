@@ -34,9 +34,23 @@
         </p>
       </nav>
       <div id='filecontents'>
-        <h1 id="-lipstick-atom-beautify-https-github-com-glavin001-atom-beautify-">:lipstick: <a href="https://github.com/Glavin001/atom-beautify">atom-beautify</a></h1><p><a href="https://travis-ci.org/Glavin001/atom-beautify"><img src="https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master" alt="Build Status"></a>
-<a href="https://ci.appveyor.com/project/Glavin001/atom-beautify"><img src="https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true" alt="Build status"></a>
-<a href="https://gitter.im/Glavin001/atom-beautify"><img src="https://img.shields.io/badge/gitter-Glavin001%2Fatom--beautify-1dce73.svg" alt="Gitter chat"></a>
+        <h1 id="-lipstick-atom-beautify-https-github-com-glavin001-atom-beautify-">:lipstick: <a href="https://github.com/Glavin001/atom-beautify">atom-beautify</a></h1>
+<table>
+<thead>
+<tr>
+<th>Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"></th>
+<th><img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"></th>
+<th><img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://travis-ci.org/Glavin001/atom-beautify"><img src="https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master" alt="Build Status"></a></td>
+<td><a href="https://travis-ci.org/Glavin001/atom-beautify"><img src="https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master" alt="Build Status"></a></td>
+<td><a href="https://ci.appveyor.com/project/Glavin001/atom-beautify"><img src="https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true" alt="Build status"></a></td>
+</tr>
+</tbody>
+</table><p><a href="https://gitter.im/Glavin001/atom-beautify"><img src="https://img.shields.io/badge/gitter-Glavin001%2Fatom--beautify-1dce73.svg" alt="Gitter chat"></a>
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X2RK5DKN6YXPJ&amp;lc=CA&amp;item_name=Atom%2dBeautify&amp;item_number=atom%2dbeautify&amp;currency_code=CAD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" alt="Paypal Donations"></a></p><p><a href="https://waffle.io/Glavin001/atom-beautify/metrics"><img src="https://graphs.waffle.io/Glavin001/atom-beautify/throughput.svg" alt="Throughput Graph"></a></p><blockquote><p>Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom</p></blockquote>
 <table>
 <thead>
@@ -78,7 +92,10 @@
 <li><a href="#contributing">Contributing</a></li>
 </ul>
 <h2 id="installation">Installation</h2><p>Atom Package: <a href="https://atom.io/packages/atom-beautify">https://atom.io/packages/atom-beautify</a></p><pre><code class="lang-bash">apm install atom-beautify
-</code></pre><p>Or Settings/Preferences ➔ Packages ➔ Search for <code>atom-beautify</code></p><h2 id="language-support">Language Support</h2><p>See <a href="https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md">all supported options in the documentation at  <code>docs/options.md</code></a>.</p><table>
+</code></pre><p>Or Settings/Preferences ➔ Packages ➔ Search for <code>atom-beautify</code></p><h3 id="important-notice-analytics">Important Notice: Analytics</h3><p>By default <code>Anonymous Analytics</code> is enabled.
+If you do not wish to have usage data sent to Google Analytics then please disable <code>Anonymous Analytics</code> option before using Atom-Beautify.
+See <a href="https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md#anonymous-analytics"><code>Anonymous Analytics</code> section of docs</a> for details.
+Thank you.</p><h2 id="language-support">Language Support</h2><p>See <a href="https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md">all supported options in the documentation at  <code>docs/options.md</code></a>.</p><table>
 <thead>
 <tr>
 <th>Language</th>
@@ -140,7 +157,7 @@
 <td>CSS</td>
 <td><code>CSS</code></td>
 <td><code>.css</code></td>
-<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default), <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a></td>
+<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default), <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a>, <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax"><code>SassConvert</code></a></td>
 </tr>
 <tr>
 <td>CSV</td>
@@ -181,7 +198,7 @@
 <tr>
 <td>Fortran</td>
 <td><code>Fortran - Modern</code></td>
-<td><code>.f90</code></td>
+<td><code>.f90</code>, <code>.F90</code></td>
 <td><a href="https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp"><code>Fortran Beautifier</code></a> (Default)</td>
 </tr>
 <tr>
@@ -281,6 +298,12 @@
 <td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a> (Default)</td>
 </tr>
 <tr>
+<td>Nunjucks</td>
+<td><code>Nunjucks</code>, <code>Nunjucks Templates</code>, <code>HTML (Nunjucks Templates)</code></td>
+<td><code>.njk</code>, <code>.nunjucks</code></td>
+<td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+</tr>
+<tr>
 <td>Objective-C</td>
 <td><code>Objective-C</code>, <code>Objective-C++</code></td>
 <td><code>.m</code>, <code>.mm</code>, <code>.h</code></td>
@@ -323,6 +346,12 @@
 <td><a href="https://github.com/hhatto/autopep8"><code>autopep8</code></a> (Default), <a href="https://github.com/google/yapf"><code>yapf</code></a></td>
 </tr>
 <tr>
+<td>R</td>
+<td><code>R</code></td>
+<td><code>.r</code>, <code>.R</code></td>
+<td><a href="https://github.com/yihui/formatR"><code>formatR</code></a> (Default)</td>
+</tr>
+<tr>
 <td>Riot.js</td>
 <td><code>Riot.js</code>, <code>HTML (Riot Tag)</code></td>
 <td><code>.tag</code></td>
@@ -344,13 +373,13 @@
 <td>Sass</td>
 <td><code>Sass</code></td>
 <td><code>.sass</code></td>
-<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+<td><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax"><code>SassConvert</code></a> (Default)</td>
 </tr>
 <tr>
 <td>SCSS</td>
 <td><code>SCSS</code></td>
 <td><code>.scss</code></td>
-<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
+<td><a href="https://github.com/csscomb/csscomb.js"><code>CSScomb</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default), <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax"><code>SassConvert</code></a></td>
 </tr>
 <tr>
 <td>Spacebars</td>
@@ -407,9 +436,15 @@
 <td><a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
 </tr>
 <tr>
+<td>Vue</td>
+<td><code>Vue Component</code></td>
+<td><code>.vue</code></td>
+<td><code>Vue Beautifier</code> (Default)</td>
+</tr>
+<tr>
 <td>XML</td>
-<td><code>SLD</code>, <code>XML</code>, <code>XHTML</code>, <code>XSD</code>, <code>XSL</code>, <code>JSP</code></td>
-<td><code>.sld</code>, <code>.xml</code>, <code>.xhtml</code>, <code>.xsd</code>, <code>.xsl</code>, <code>.jsp</code></td>
+<td><code>SLD</code>, <code>XML</code>, <code>XHTML</code>, <code>XSD</code>, <code>XSL</code>, <code>JSP</code>, <code>GSP</code></td>
+<td><code>.sld</code>, <code>.xml</code>, <code>.xhtml</code>, <code>.xsd</code>, <code>.xsl</code>, <code>.jsp</code>, <code>.gsp</code></td>
 <td><a href="https://github.com/beautify-web/js-beautify"><code>JS Beautify</code></a>, <a href="https://github.com/prettydiff/prettydiff"><code>Pretty Diff</code></a> (Default)</td>
 </tr>
 <tr>
@@ -503,7 +538,7 @@ and submit a <a href="https://help.github.com/articles/using-pull-requests/">Pul
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.1
+  2.1.2
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;
