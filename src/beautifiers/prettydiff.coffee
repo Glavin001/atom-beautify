@@ -48,6 +48,7 @@ module.exports = class PrettyDiff extends Beautifier
     EJS: true
     HTML: true
     Handlebars: true
+    Nunjucks: true
     XML: true
     SVG: true
     Spacebars: true
@@ -55,7 +56,6 @@ module.exports = class PrettyDiff extends Beautifier
     JavaScript: true
     CSS: true
     SCSS: true
-    Sass: true
     JSON: true
     TSS: true
     Twig: true
@@ -103,7 +103,7 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "css"
         when "LESS"
           lang = "less"
-        when "SCSS", "Sass"
+        when "SCSS"
           lang = "scss"
         when "TSS"
           lang = "tss"
