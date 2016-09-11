@@ -38,6 +38,7 @@ module.exports = class Beautifiers extends EventEmitter
     'autopep8'
     'coffee-formatter'
     'coffee-fmt'
+    'clojure-beautifier'
     'clang-format'
     'crystal'
     'dfmt'
@@ -62,6 +63,7 @@ module.exports = class Beautifiers extends EventEmitter
     'rubocop'
     'ruby-beautify'
     'rustfmt'
+    'sass-convert'
     'sqlformat'
     'stylish-haskell'
     'tidy-markdown'
@@ -70,6 +72,7 @@ module.exports = class Beautifiers extends EventEmitter
     'yapf'
     'erl_tidy'
     'marko-beautifier'
+    'formatR'
   ]
 
   ###

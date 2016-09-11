@@ -10,9 +10,10 @@ module.exports = {
         title: 'Anonymous Analytics'
         type : 'boolean'
         default : true
-        description : "There is [Segment.io](https://segment.io/) which forwards data to [Google
-                Analytics](http://www.google.com/analytics/) to track what languages are being
-                used the most, as well as other stats. Everything is anonymized and no personal
+        description : "[Google
+                Analytics](http://www.google.com/analytics/) is used to track what languages are being
+                used the most and causing the most errors, as well as other stats such as performance.
+                Everything is anonymized and no personal
                 information, such as source code, is sent.
                 See https://github.com/Glavin001/atom-beautify/issues/47 for more details."
       _analyticsUserId :

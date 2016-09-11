@@ -16,6 +16,7 @@ module.exports = class Languages
     "arduino"
     "c-sharp"
     "c"
+    "clojure"
     "coffeescript"
     "coldfusion"
     "cpp"
@@ -44,6 +45,7 @@ module.exports = class Languages
     "markdown"
     'marko'
     "mustache"
+    "nunjucks"
     "objective-c"
     "ocaml"
     "pawn"
@@ -51,6 +53,7 @@ module.exports = class Languages
     "php"
     "puppet"
     "python"
+    "r"
     "riotjs"
     "ruby"
     "rust"
