@@ -1,6 +1,6 @@
 {
   "name": "atom-beautify",
-  "main": "./src/beautify",
+  "main": "./src/index.ts",
   "version": "0.29.11",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
@@ -143,6 +143,7 @@
     "typescript": "^1.8.10",
     "typescript-formatter": "^2.3.0",
     "underscore-plus": "^1.6.6",
+    "unibeautify": "^0.1.5",
     "universal-analytics": "^0.4.2",
     "which": "^1.1.1",
     "winston": "^2.2.0",
@@ -282,5 +283,12 @@
     "docs": "coffee docs/",
     "lint": "coffeelint src/ spec/",
     "code-docs": "codo && open docs/code/index.html"
+  },
+  "consumedServices": {
+    "unibeautify": {
+      "versions": {
+        "^1.0.0": "consumeBeautifier",
+      }
+    },
   }
 }
