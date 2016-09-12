@@ -278,7 +278,9 @@
     "formatr",
     "clojure",
     "clojure beautifier",
-    "nunjucks"
+    "nunjucks",
+    "ux markup",
+    "cljfmt"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",

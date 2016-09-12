@@ -59,7 +59,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | Arduino | `Arduino` |`.ino`, `.pde` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | C | `C`, `opencl` |`.h`, `.c`, `.cl` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default), [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
 | Coldfusion | `html` |`.cfm`, `.cfml`, `.cfc` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
-| Clojure | `Clojure` |`.clj`, `.cljs`, `.edn` | [`Clojure Beautifier`](https://github.com/snoe/node-cljfmt) |
+| Clojure | `Clojure` |`.clj`, `.cljs`, `.edn` | [`cljfmt`](https://github.com/snoe/node-cljfmt) (Default) |
 | CoffeeScript | `CoffeeScript` |`.coffee` | [`Coffee Formatter`](https://github.com/Glavin001/Coffee-Formatter), [`coffee-fmt`](https://github.com/sterpe/coffee-fmt) (Default) |
 | C++ | `C++` |`.h`, `.hh`, `.cc`, `.cpp`, `.cxx`, `.C`, `.c++`, `.hpp`, `.hxx`, `.h++` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default), [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
 | Crystal | `Crystal` |`.cr` | [`Crystal`](http://crystal-lang.org) (Default) |
@@ -109,6 +109,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | TSS | `TSS` |`.tss` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Twig | `HTML (Twig)` |`.twig` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | TypeScript | `TypeScript` |`.ts` | [`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter) (Default) |
+| UX Markup | `UX` |`.ux` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Vala | `Vala` |`.vala`, `.vapi` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Visualforce | `Visualforce` |`.page` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Vue | `Vue Component` |`.vue` | `Vue Beautifier` (Default) |

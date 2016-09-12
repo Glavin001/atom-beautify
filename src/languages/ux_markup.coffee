@@ -1,6 +1,6 @@
 module.exports = {
 
-  name: "UX"
+  name: "UX Markup"
   namespace: "ux"
   fallback: ['html']
 

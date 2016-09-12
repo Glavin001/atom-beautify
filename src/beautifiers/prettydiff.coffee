@@ -61,7 +61,7 @@ module.exports = class PrettyDiff extends Beautifier
     Twig: true
     LESS: true
     Swig: true
-    UX: true
+    "UX Markup": true
     Visualforce: true
     "Riot.js": true
     XTemplate: true
@@ -90,7 +90,7 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "markup"
         when "XML", "Visualforce", "SVG"
           lang = "xml"
-        when "HTML", "UX"
+        when "HTML", "Nunjucks", "UX Markup"
           lang = "html"
         when "JavaScript"
           lang = "javascript"

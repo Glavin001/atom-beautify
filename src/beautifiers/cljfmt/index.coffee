@@ -2,13 +2,13 @@
 path = require('path')
 Beautifier = require('../beautifier')
 
-module.exports = class ClojureBeautifier extends Beautifier
+module.exports = class Cljfmt extends Beautifier
 
-  name: "Clojure Beautifier"
+  name: "cljfmt"
   link: "https://github.com/snoe/node-cljfmt"
 
   options: {
-    Clojure: true
+    Clojure: false
   }
 
   beautify: (text, language, options) ->
