@@ -8,6 +8,7 @@
 - Closes [#786](https://github.com/Glavin001/atom-beautify/issues/786) YAPF configuration files are ignored.
 - Fix phpcbf hanging issue by closing stdin. See [#893](https://github.com/Glavin001/atom-beautify/issues/893)
 - Add warning notification when parsing `.jsbeautifyrc` as JSON or YAML fails. See [#1106](https://github.com/Glavin001/atom-beautify/issues/1106)
+- Add support for PrettyDiff's *bracepadding* option in JavaScript. See [#1157](https://github.com/Glavin001/atom-beautify/issues/1157)
 
 # v0.29.0
 - Closes [#447](https://github.com/Glavin001/atom-beautify/issues/447). Improved Handlebars language support
