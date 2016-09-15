@@ -2088,6 +2088,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `indent_with_tabs` | :white_check_mark: |
 | `preserve_newlines` | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: |
+| `space_in_paren` | :white_check_mark: |
 | `wrap_line_length` | :white_check_mark: |
 
 **Description**:
@@ -2319,6 +2320,30 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 {
     "js": {
         "space_after_anon_function": false
+    }
+}
+```
+
+#####  [Space in paren](#space-in-paren) 
+
+**Namespace**: `js`
+
+**Key**: `space_in_paren`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_in_paren": false
     }
 }
 ```
@@ -4276,7 +4301,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `preserve_newlines` | :white_check_mark: | :x: | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: | :x: | :white_check_mark: |
 | `space_before_conditional` | :white_check_mark: | :x: | :x: |
-| `space_in_paren` | :white_check_mark: | :x: | :x: |
+| `space_in_paren` | :white_check_mark: | :x: | :white_check_mark: |
 | `unescape_strings` | :white_check_mark: | :x: | :x: |
 | `wrap_line_length` | :white_check_mark: | :x: | :white_check_mark: |
 
@@ -4745,11 +4770,11 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify)
+Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -4834,7 +4859,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `preserve_newlines` | :white_check_mark: | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: | :white_check_mark: |
 | `space_before_conditional` | :white_check_mark: | :x: |
-| `space_in_paren` | :white_check_mark: | :x: |
+| `space_in_paren` | :white_check_mark: | :white_check_mark: |
 | `unescape_strings` | :white_check_mark: | :x: |
 | `wrap_line_length` | :white_check_mark: | :white_check_mark: |
 
@@ -5303,11 +5328,11 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify)
+Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5383,6 +5408,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `indent_with_tabs` | :white_check_mark: |
 | `preserve_newlines` | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: |
+| `space_in_paren` | :white_check_mark: |
 | `wrap_line_length` | :white_check_mark: |
 
 **Description**:
@@ -5614,6 +5640,30 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 {
     "js": {
         "space_after_anon_function": false
+    }
+}
+```
+
+#####  [Space in paren](#space-in-paren) 
+
+**Namespace**: `js`
+
+**Key**: `space_in_paren`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_in_paren": false
     }
 }
 ```
@@ -10491,6 +10541,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 | `indent_with_tabs` | :white_check_mark: |
 | `preserve_newlines` | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: |
+| `space_in_paren` | :white_check_mark: |
 | `wrap_line_length` | :white_check_mark: |
 
 **Description**:
@@ -10722,6 +10773,30 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 {
     "js": {
         "space_after_anon_function": false
+    }
+}
+```
+
+#####  [Space in paren](#space-in-paren) 
+
+**Namespace**: `js`
+
+**Key**: `space_in_paren`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_in_paren": false
     }
 }
 ```
@@ -14116,11 +14191,11 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify)
+Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -15434,6 +15509,30 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by P
 {
     "js": {
         "indent_with_tabs": false
+    }
+}
+```
+
+#####  [Space in paren](#space-in-paren) 
+
+**Namespace**: `js`
+
+**Key**: `space_in_paren`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_in_paren": false
     }
 }
 ```
