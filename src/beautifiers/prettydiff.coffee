@@ -41,6 +41,7 @@ module.exports = class PrettyDiff extends Beautifier
           false else true
       ]
       ternaryline: "preserve_ternary_lines"
+      bracepadding: "space_in_paren"
     # Apply language-specific options
     CSV: true
     Coldfusion: true
