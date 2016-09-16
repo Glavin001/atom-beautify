@@ -22,9 +22,7 @@ module.exports = {
   Supported extensions
   ###
   extensions: [
-    "html",
-    "smarty",
-    "tpl"
+    "html"
   ]
 
   options:
