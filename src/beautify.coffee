@@ -160,11 +160,10 @@ beautify = ({editor, onSave}) ->
     # Get file extension everything after the first dot of the filename is considered the file extension
     editedFileExtension = editor.getTitle().substr(editor.getTitle().indexOf("."))
     # Get the extensions from the config
-    Extensions = atom.config.get('atom-beautify.general.beautifyFileExtensions').split " "
-    # console.log editedFileExtension
-    # console.log Extensions
+    excludeFileExtensions = atom.config.get('atom-beautify.general.excludeFileExtensions')
 
-    if editedFileExtension in Extensions
+
+    if editedFileExtension in excludeFileExtensions
       error = new Error("""This File does not get beautified
       Check Atom-Beautify General Settings""")
       showError(error)
