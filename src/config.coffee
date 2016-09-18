@@ -32,6 +32,11 @@ module.exports = {
         type : 'boolean'
         default : true
         description : "When beautifying on save, use the entire file, even if there is selected text in the editor. Important: The `beautify on save` option for the specific language must be enabled for this to be applicable. This option is not `beautify on save`."
+      beautifyFileExtensions :
+        title: "Do not Beautify these extensions"
+        type : 'string'
+        default : ".min.js .min.css"
+        description : "Disables beautify for these files extensions"
       muteUnsupportedLanguageErrors :
         title: "Mute Unsupported Language Errors"
         type : 'boolean'

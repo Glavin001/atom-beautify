@@ -157,6 +157,19 @@ beautify = ({editor, onSave}) ->
     editedFilePath = editor.getPath()
 
 
+    # Get file extension everything after the first dot of the filename is considered the file extension
+    editedFileExtension = editor.getTitle().substr(editor.getTitle().indexOf("."))
+    # Get the extensions from the config
+    Extensions = atom.config.get('atom-beautify.general.beautifyFileExtensions').split " "
+    # console.log editedFileExtension
+    # console.log Extensions
+
+    if editedFileExtension in Extensions
+      error = new Error("""This File does not get beautified
+      Check Atom-Beautify General Settings""")
+      showError(error)
+      return reject(error)
+
     # Get all options
     allOptions = beautifier.getOptionsForPath(editedFilePath, editor)
 
