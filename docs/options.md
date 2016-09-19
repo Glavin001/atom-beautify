@@ -69,6 +69,25 @@ When beautifying on save, use the entire file, even if there is selected text in
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify Entire File On Save*" and change it to your desired configuration.
 
+#####  [File Extensions that are excluded from beautification](#file-extensions-that-are-excluded-from-beautification) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `.min.js,.min.css`
+
+**Type**: `array`
+
+**Description**:
+
+Disables beautify for these files extensions
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*File Extensions that are excluded from beautification*" and change it to your desired configuration.
+
 #####  [Logger Level](#logger-level) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
