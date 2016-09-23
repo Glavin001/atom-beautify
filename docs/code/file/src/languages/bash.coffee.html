@@ -23,13 +23,13 @@
     &raquo;
     <span class='title'>languages</span>
     &raquo;
-    <span class='title'>jsx.coffee</span>
+    <span class='title'>bash.coffee</span>
   </div>
 </div>
     <div id='content'>
       <h1>
         File:
-        jsx.coffee
+        bash.coffee
       </h1>
       <table class='box'>
         <tr>
@@ -45,19 +45,25 @@
   </dt>
   <dd>
     <pre><code class='coffeescript'>{
-  name: &quot;JSX&quot;,
-  namespace: &quot;jsx&quot;,
-  fallback: [&#39;js&#39;],
+  name: &quot;Bash&quot;,
+  namespace: &quot;bash&quot;,
 
   &#47;*
   Supported Grammars
    *&#47;
-  grammars: [&quot;JSX&quot;, &quot;JavaScript (JSX)&quot;, &quot;Babel ES6 JavaScript&quot;],
+  grammars: [&quot;Shell script&quot;],
 
   &#47;*
   Supported extensions
    *&#47;
-  extensions: [&quot;jsx&quot;, &quot;js&quot;]
+  extensions: [&quot;bash&quot;, &quot;sh&quot;],
+  options: {
+    configPath: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &quot;&quot;,
+      description: &quot;Path to uncrustify config file. i.e. uncrustify.cfg&quot;
+    }
+  }
 }</code></pre>
     
   </dd>

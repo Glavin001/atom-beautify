@@ -19,18 +19,18 @@
       Index
     </a>
     &raquo;
-    <span class='title'>PrettyDiff</span>
+    <span class='title'>Cljfmt</span>
   </div>
 </div>
     <div id='content'>
       <h1>
         Class:
-        PrettyDiff
+        Cljfmt
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
-          <td>src&#47;beautifiers&#47;prettydiff.coffee</td>
+          <td>src&#47;beautifiers&#47;cljfmt&#47;index.coffee</td>
         </tr>
         <tr>
           <td>Inherits:</td>
@@ -46,7 +46,7 @@
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>&quot;Pretty Diff&quot;</code></pre>
+    <pre><code class='coffeescript'>&quot;cljfmt&quot;</code></pre>
     
   </dd>
   <dt id='link-variable'>
@@ -54,7 +54,7 @@
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>&quot;https:&#47;&#47;github.com&#47;prettydiff&#47;prettydiff&quot;</code></pre>
+    <pre><code class='coffeescript'>&quot;https:&#47;&#47;github.com&#47;snoe&#47;node-cljfmt&quot;</code></pre>
     
   </dd>
   <dt id='options-variable'>
@@ -63,105 +63,7 @@
   </dt>
   <dd>
     <pre><code class='coffeescript'>{
-
-  &#47;*
-  Apply these options first &#47; globally, for all languages
-   *&#47;
-  _: {
-    inchar: [
-      &quot;indent_with_tabs&quot;, &quot;indent_char&quot;, function(indent_with_tabs, indent_char) {
-        if (indent_with_tabs === true) {
-          return &quot;\t&quot;;
-        } else {
-          return indent_char;
-        }
-      }
-    ],
-    insize: [
-      &quot;indent_with_tabs&quot;, &quot;indent_size&quot;, function(indent_with_tabs, indent_size) {
-        if (indent_with_tabs === true) {
-          return 1;
-        } else {
-          return indent_size;
-        }
-      }
-    ],
-    objsort: function(objsort) {
-      return objsort || false;
-    },
-    preserve: [
-      &#39;preserve_newlines&#39;, function(preserve_newlines) {
-        if (preserve_newlines === true) {
-          return &quot;all&quot;;
-        } else {
-          return &quot;none&quot;;
-        }
-      }
-    ],
-    cssinsertlines: &quot;newline_between_rules&quot;,
-    comments: [
-      &quot;indent_comments&quot;, function(indent_comments) {
-        if (indent_comments === false) {
-          return &quot;noindent&quot;;
-        } else {
-          return &quot;indent&quot;;
-        }
-      }
-    ],
-    force: &quot;force_indentation&quot;,
-    quoteConvert: &quot;convert_quotes&quot;,
-    vertical: [
-      &#39;align_assignments&#39;, function(align_assignments) {
-        if (align_assignments === true) {
-          return &quot;all&quot;;
-        } else {
-          return &quot;none&quot;;
-        }
-      }
-    ],
-    wrap: &quot;wrap_line_length&quot;,
-    space: &quot;space_after_anon_function&quot;,
-    noleadzero: &quot;no_lead_zero&quot;,
-    endcomma: &quot;end_with_comma&quot;,
-    methodchain: [
-      &#39;break_chained_methods&#39;, function(break_chained_methods) {
-        if (break_chained_methods === true) {
-          return false;
-        } else {
-          return true;
-        }
-      }
-    ],
-    ternaryline: &quot;preserve_ternary_lines&quot;,
-    bracepadding: &quot;space_in_paren&quot;
-  },
-
-  &#47;*
-  Apply language-specific options
-   *&#47;
-  CSV: true,
-  Coldfusion: true,
-  ERB: true,
-  EJS: true,
-  HTML: true,
-  Handlebars: true,
-  Nunjucks: true,
-  XML: true,
-  SVG: true,
-  Spacebars: true,
-  JSX: true,
-  JavaScript: true,
-  CSS: true,
-  SCSS: true,
-  JSON: true,
-  TSS: true,
-  Twig: true,
-  LESS: true,
-  Swig: true,
-  &quot;UX Markup&quot;: true,
-  Visualforce: true,
-  &quot;Riot.js&quot;: true,
-  XTemplate: true
+  Clojure: false
 }</code></pre>
     
   </dd>

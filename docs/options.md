@@ -319,6 +319,100 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
+####  [Bash](#bash) 
+
+**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+
+| Option | beautysh |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
+
+**Description**:
+
+Options for language Bash
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Bash Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `beautysh`
+
+**Type**: `string`
+
+**Enum**:  `beautysh` 
+
+**Description**:
+
+Default Beautifier to be used for Bash
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Bash files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Config Path](#config-path) 
+
+**Namespace**: `bash`
+
+**Key**: `configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by beautysh)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "bash": {
+        "configPath": ""
+    }
+}
+```
+
 ####  [C](#c) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 
@@ -16872,6 +16966,33 @@ sort imports (requires isort installed) (Supported by autopep8)
 {
     "python": {
         "sort_imports": false
+    }
+}
+```
+
+
+### beautysh
+
+#####  [Config Path](#config-path) 
+
+**Namespace**: `bash`
+
+**Key**: `configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+
+**Description**:
+
+Path to uncrustify config file. i.e. uncrustify.cfg (Supported by beautysh)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "bash": {
+        "configPath": ""
     }
 }
 ```

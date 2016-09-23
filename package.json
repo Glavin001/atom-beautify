@@ -284,7 +284,9 @@
     "clojure beautifier",
     "nunjucks",
     "ux markup",
-    "cljfmt"
+    "cljfmt",
+    "bash",
+    "beautysh"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
