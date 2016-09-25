@@ -7,7 +7,7 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "Shell script"
+    "Shell Script"
   ]
 
   defaultBeautifier: "beautysh"
@@ -19,11 +19,5 @@ module.exports = {
     "bash"
     "sh"
   ]
-
-  options:
-    configPath:
-      type: 'string'
-      default: ""
-      description: "Path to uncrustify config file. i.e. uncrustify.cfg"
 
 }
