@@ -29,10 +29,10 @@ $ = null
 # }
 getScrollTop = (editor) ->
   view = atom.views.getView(editor)
-  view.getScrollTop()
+  view?.getScrollTop()
 setScrollTop = (editor, value) ->
   view = atom.views.getView(editor)
-  view.setScrollTop value
+  view?.setScrollTop value
 
 getCursors = (editor) ->
   cursors = editor.getCursors()
