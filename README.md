@@ -49,6 +49,12 @@ If you do not wish to have usage data sent to Google Analytics then please disab
 See [`Anonymous Analytics` section of docs](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md#anonymous-analytics) for details.
 Thank you.
 
+### Next Version: [Unibeautify](https://github.com/Unibeautify/unibeautify)
+
+Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
+See [`unibeautify` branch](https://github.com/Glavin001/atom-beautify/tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
+
+
 ## Language Support
 
 See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
