@@ -9,13 +9,13 @@
         "declaration": true,
         "moduleResolution": "node"
     },
-    "filesGlob": [
-        "./typings/**/*.d.ts",
+    "include": [
+        "./declarations.d.ts",
         "./src/**/*.ts",
         "./script/**/*.ts",
         "./test/**/*.ts"
     ],
     "exclude": [
-        "node_modules"
+        "./node_modules"
     ]
 }

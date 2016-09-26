@@ -1,9 +1,2 @@
-
-import unibeautify from 'unibeautify';
-
-export = {
-  activate(state: any) {
-    unibeautify.getLoadedLanguages();
-    
-  }
-}
+import { AtomBeautify } from "./AtomBeautify";
+export = new AtomBeautify();
