@@ -328,7 +328,6 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `disabled` | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
-| `configPath` | :white_check_mark: |
 
 **Description**:
 
@@ -388,30 +387,6 @@ Automatically beautify Bash files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
-
-#####  [Config Path](#config-path) 
-
-**Namespace**: `bash`
-
-**Key**: `configPath`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`beautysh`](#beautysh) 
-
-**Description**:
-
-Path to uncrustify config file. i.e. uncrustify.cfg (Supported by beautysh)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "bash": {
-        "configPath": ""
-    }
-}
-```
 
 ####  [C](#c) 
 
@@ -16966,33 +16941,6 @@ sort imports (requires isort installed) (Supported by autopep8)
 {
     "python": {
         "sort_imports": false
-    }
-}
-```
-
-
-### beautysh
-
-#####  [Config Path](#config-path) 
-
-**Namespace**: `bash`
-
-**Key**: `configPath`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`beautysh`](#beautysh) 
-
-**Description**:
-
-Path to uncrustify config file. i.e. uncrustify.cfg (Supported by beautysh)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "bash": {
-        "configPath": ""
     }
 }
 ```

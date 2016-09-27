@@ -57,7 +57,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | --- | --- | --- | ---- |
 | Apex | `Apex` |`.cls`, `.trigger` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Arduino | `Arduino` |`.ino`, `.pde` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
-| Bash | `Shell script` |`.bash`, `.sh` | [`beautysh`](https://github.com/bemeurer/beautysh) (Default) |
+| Bash | `Shell Script` |`.bash`, `.sh` | [`beautysh`](https://github.com/bemeurer/beautysh) (Default) |
 | C | `C`, `opencl` |`.h`, `.c`, `.cl` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default), [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
 | Coldfusion | `html` |`.cfm`, `.cfml`, `.cfc` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Clojure | `Clojure` |`.clj`, `.cljs`, `.edn` | [`cljfmt`](https://github.com/snoe/node-cljfmt) (Default) |
