@@ -148,6 +148,7 @@ beautify = ({editor, onSave}) ->
 
     # Check if there is an active editor
     if not editor?
+
       return showError( new Error("Active Editor not found. "
         "Please select a Text Editor first to beautify."))
     isSelection = !!editor.getSelectedText()
@@ -164,9 +165,9 @@ beautify = ({editor, onSave}) ->
 
 
     if editedFileExtension in excludeFileExtensions
-      error = new Error("""This File does not get beautified
-      Check Atom-Beautify General Settings""")
-      showError(error)
+      error = new Error("This File does not get beautified
+      Check Atom-Beautify General Settings")
+      atom.notifications.addInfo("This File does not get beautified", { description: " Check Atom-Beautify General Settings" })
       return reject(error)
 
     # Get all options
@@ -198,6 +199,20 @@ beautify = ({editor, onSave}) ->
 
 beautifyFilePath = (filePath, callback) ->
   logger.verbose('beautifyFilePath', filePath)
+
+  # Check if fileExtension is in excludeFileExtensions and then abort and show info
+  editedFileExtension = filePath.substr(filePath.indexOf("."))
+
+  # Get the extensions from the config
+  excludeFileExtensions = atom.config.get('atom-beautify.general.excludeFileExtensions')
+
+
+  if editedFileExtension in excludeFileExtensions
+    error = new Error("This File does not get beautified
+    Check Atom-Beautify General Settings")
+    atom.notifications.addInfo("This File does not get beautified", { description: " Check Atom-Beautify General Settings" })
+    return null
+
 
   # Show in progress indicate on file's tree-view entry
   $ ?= require("atom-space-pen-views").$
