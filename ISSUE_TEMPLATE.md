@@ -2,13 +2,30 @@
 
 The results of beautification are not what I expect.
 
-# Expected Results
+# Input Before Beautification
 
-The beautified code should have looked like:
+This is what the code looked like before:
 
 ```
 <INSERT CODE HERE>
 ```
+
+# Expected Output
+
+The beautified code should have looked like this:
+
+```
+<INSERT CODE HERE>
+```
+
+# Actual Output
+
+The beautified code actually looked like this:
+
+```
+<INSERT CODE HERE>
+```
+
 
 # Steps to Reproduce
 
@@ -22,8 +39,11 @@ Here is a link to the `debug.md` Gist: <INSERT GIST HERE>
 
 # Checklist
 
-- [ ] I have tried uninstalling and reinstalling Atom Beautify to ensure it installed properly
-- [ ] I have reloaded (or restarted) Atom to ensure it is not a caching issue
-- [ ] Searched for existing Atom Beautify Issues at https://github.com/Glavin001/atom-beautify/issues
+I have:
+- [ ] Tried uninstalling and reinstalling Atom Beautify to ensure it installed properly
+- [ ] Reloaded (or restarted) Atom to ensure it is not a caching issue
+- [ ] Searched through existing Atom Beautify Issues at https://github.com/Glavin001/atom-beautify/issues
 so I know this is not a duplicate issue
+- [ ] Filled out the Input, Expected, and Actual sections above or have edited/removed them in a way that fully describes the issue.
 - [ ] Generated debugging information and added link for `debug.md` Gist to this issue
+
