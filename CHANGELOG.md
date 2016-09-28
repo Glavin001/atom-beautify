@@ -9,6 +9,7 @@
 - Fix phpcbf hanging issue by closing stdin. See [#893](https://github.com/Glavin001/atom-beautify/issues/893)
 - Add warning notification when parsing `.jsbeautifyrc` as JSON or YAML fails. See [#1106](https://github.com/Glavin001/atom-beautify/issues/1106)
 - Add support for PrettyDiff's *bracepadding* option in JavaScript. See [#1157](https://github.com/Glavin001/atom-beautify/issues/1157)
+- Add support for excluding certain File Extension. See [#224](https://github.com/Glavin001/atom-beautify/issues/224) and [#1205](https://github.com/Glavin001/atom-beautify/pull/1205)
 
 # v0.29.0
 - Closes [#447](https://github.com/Glavin001/atom-beautify/issues/447). Improved Handlebars language support
