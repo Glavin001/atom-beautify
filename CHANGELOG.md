@@ -1,4 +1,5 @@
 # dev
+- Update to `remark`'s new API and fix [#1196](https://github.com/Glavin001/atom-beautify/issues/1196)
 - Add beautifier for the Lua language.
 - Add [ocp-indent](https://github.com/OCamlPro/ocp-indent) beautifier for the OCaml language.
 - Add [elm-format](https://github.com/avh4/elm-format) beautifier for the Elm language.

@@ -36,7 +36,7 @@ module.exports = class Remark extends Beautifier
     return new @Promise((resolve, reject) ->
       try
         remark = require 'remark'
-        cleanMarkdown = remark.process(text, options)
+        cleanMarkdown = remark().process(text, options).toString()
         resolve cleanMarkdown
       catch err
         @error("Remark error: #{err}")
