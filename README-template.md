@@ -46,18 +46,18 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 
 By default `Anonymous Analytics` is enabled.
 If you do not wish to have usage data sent to Google Analytics then please disable `Anonymous Analytics` option before using Atom-Beautify.
-See [`Anonymous Analytics` section of docs](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md#anonymous-analytics) for details.
+See [`Anonymous Analytics` section of docs](docs/options.md#anonymous-analytics) for details.
 Thank you.
 
 ### Next Version: [Unibeautify](https://github.com/Unibeautify/unibeautify)
 
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
-See [`unibeautify` branch](https://github.com/Glavin001/atom-beautify/tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
+See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
 
 
 ## Language Support
 
-See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
+See [all supported options in the documentation at  `docs/options.md`](docs/options.md).
 
 {{language-beautifiers-support languageOptions}}
 
@@ -104,22 +104,22 @@ For example:
 
 Edit your `.jsbeautifyrc` file in any of the following locations:
 
-- Atom Package Settings  
+- Atom Package Settings
   `Atom` ➔ `Preferences` ➔ Search for `atom-beautify`
 - Same directory as current file
-- Project root  
+- Project root
 `atom-beautify` will recursively look up from the current file's directory to find `.jsbeautifyrc`.
 - Your user's home directory
 
 **Note**: *Comments are supported in `.jsbeautifyrc` thanks to [strip-json-comments](https://github.com/sindresorhus/strip-json-comments).*
 
-See examples of both ways inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
+See examples of both ways inside [`examples/`](examples)
 
-See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
+See [all supported options in the documentation at  `docs/options.md`](docs/options.md).
 
 ### Simple
 
-See [examples/simple-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/simple-jsbeautifyrc/.jsbeautifyrc).
+See [examples/simple-jsbeautifyrc/.jsbeautifyrc](examples/simple-jsbeautifyrc/.jsbeautifyrc).
 
 ```json
 {
@@ -137,7 +137,7 @@ See [examples/simple-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 ### Nested (Recommended)
 
-See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/nested-jsbeautifyrc/.jsbeautifyrc).
+See [examples/nested-jsbeautifyrc/.jsbeautifyrc](examples/nested-jsbeautifyrc/.jsbeautifyrc).
 
 ```json
 {
@@ -175,16 +175,16 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 ## Troubleshooting
 
-See [`docs/troubleshooting.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/troubleshooting.md).
+See [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
 ## Contributing
 
-[See all contributors on GitHub](https://github.com/donaldpipowitch/atom-beautify/graphs/contributors).
+[See all contributors on GitHub](../../graphs/contributors).
 
-Please update the [CHANGELOG.md](https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md),
-add yourself as a contributor to the [package.json](https://github.com/donaldpipowitch/atom-beautify/blob/master/package.json),
+Please update the [CHANGELOG.md](CHANGELOG.md),
+add yourself as a contributor to the [package.json](package.json),
 and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests/).
 
 ## License
 
-[MIT](https://github.com/donaldpipowitch/atom-beautify/blob/master/LICENSE.md) © [Glavin Wiechert](https://github.com/Glavin001)
+[MIT](LICENSE.md) © [Glavin Wiechert](https://github.com/Glavin001)
