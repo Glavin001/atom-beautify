@@ -42,4 +42,9 @@ module.exports = {
         type : 'boolean'
         default : false
         description : "Do not show any/all errors when they occur"
+      showLoadingView :
+        title: "Show Loading View"
+        type : 'boolean'
+        default : true
+        description : "Show loading view when beautifying"
     }

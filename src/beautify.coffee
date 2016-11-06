@@ -56,9 +56,10 @@ setCursors = (editor, posArray) ->
 
 # Show beautification progress/loading view
 beautifier.on('beautify::start', ->
-  LoadingView ?= require "./views/loading-view"
-  loadingView ?= new LoadingView()
-  loadingView.show()
+  if atom.config.get("atom-beautify.general.showLoadingView")
+    LoadingView ?= require "./views/loading-view"
+    loadingView ?= new LoadingView()
+    loadingView.show()
 )
 beautifier.on('beautify::end', ->
   loadingView?.hide()
