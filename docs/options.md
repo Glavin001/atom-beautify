@@ -8363,17 +8363,20 @@ Automatically beautify Puppet files on save
 
 ####  [Python](#python) 
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`yapf`](#yapf) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
 
-| Option | autopep8 | yapf |
-| --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
-| `ignore` | :white_check_mark: | :x: |
-| `indent_size` | :white_check_mark: | :x: |
-| `max_line_length` | :white_check_mark: | :x: |
-| `sort_imports` | :white_check_mark: | :x: |
+| Option | autopep8 | pybeautifier | yapf |
+| --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `formater` | :white_check_mark: | :white_check_mark: | :x: |
+| `ignore` | :white_check_mark: | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: | :x: |
+| `max_line_length` | :white_check_mark: | :white_check_mark: | :x: |
+| `multi_line_output` | :white_check_mark: | :white_check_mark: | :x: |
+| `sort_imports` | :white_check_mark: | :white_check_mark: | :x: |
+| `style_config` | :white_check_mark: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -8404,7 +8407,7 @@ Disable Python Beautification
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `yapf` 
+**Enum**:  `autopep8`  `pybeautifier`  `yapf` 
 
 **Description**:
 
@@ -8434,6 +8437,34 @@ Automatically beautify Python files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
+#####  [Formater](#formater) 
+
+**Namespace**: `python`
+
+**Key**: `formater`
+
+**Default**: `autopep8`
+
+**Type**: `string`
+
+**Enum**:  `autopep8`  `yapf` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formater used by pybeautifier (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "formater": "autopep8"
+    }
+}
+```
+
 #####  [Ignore](#ignore) 
 
 **Namespace**: `python`
@@ -8444,11 +8475,11 @@ Automatically beautify Python files on save
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-do not fix these errors/warnings (Supported by autopep8)
+do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8472,11 +8503,11 @@ do not fix these errors/warnings (Supported by autopep8)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-Indentation size/length (Supported by autopep8)
+Indentation size/length (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8498,11 +8529,11 @@ Indentation size/length (Supported by autopep8)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-set maximum allowed line length (Supported by autopep8)
+set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8510,6 +8541,34 @@ set maximum allowed line length (Supported by autopep8)
 {
     "python": {
         "max_line_length": 79
+    }
+}
+```
+
+#####  [Multi line output](#multi-line-output) 
+
+**Namespace**: `python`
+
+**Key**: `multi_line_output`
+
+**Default**: `Hanging Grid Grouped`
+
+**Type**: `string`
+
+**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+defines how from imports wrap (requires isort installed) (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "multi_line_output": "Hanging Grid Grouped"
     }
 }
 ```
@@ -8522,11 +8581,11 @@ set maximum allowed line length (Supported by autopep8)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-sort imports (requires isort installed) (Supported by autopep8)
+sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8534,6 +8593,32 @@ sort imports (requires isort installed) (Supported by autopep8)
 {
     "python": {
         "sort_imports": false
+    }
+}
+```
+
+#####  [Style config](#style-config) 
+
+**Namespace**: `python`
+
+**Key**: `style_config`
+
+**Default**: `pep8`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formatting style used by yapf (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "style_config": "pep8"
     }
 }
 ```
@@ -16782,11 +16867,11 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-set maximum allowed line length (Supported by autopep8)
+set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16808,11 +16893,11 @@ set maximum allowed line length (Supported by autopep8)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-Indentation size/length (Supported by autopep8)
+Indentation size/length (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16834,11 +16919,11 @@ Indentation size/length (Supported by autopep8)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-do not fix these errors/warnings (Supported by autopep8)
+do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16852,6 +16937,60 @@ do not fix these errors/warnings (Supported by autopep8)
 }
 ```
 
+#####  [Formater](#formater) 
+
+**Namespace**: `python`
+
+**Key**: `formater`
+
+**Default**: `autopep8`
+
+**Type**: `string`
+
+**Enum**:  `autopep8`  `yapf` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formater used by pybeautifier (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "formater": "autopep8"
+    }
+}
+```
+
+#####  [Style config](#style-config) 
+
+**Namespace**: `python`
+
+**Key**: `style_config`
+
+**Default**: `pep8`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formatting style used by yapf (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "style_config": "pep8"
+    }
+}
+```
+
 #####  [Sort imports](#sort-imports) 
 
 **Namespace**: `python`
@@ -16860,11 +16999,11 @@ do not fix these errors/warnings (Supported by autopep8)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-sort imports (requires isort installed) (Supported by autopep8)
+sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16872,6 +17011,34 @@ sort imports (requires isort installed) (Supported by autopep8)
 {
     "python": {
         "sort_imports": false
+    }
+}
+```
+
+#####  [Multi line output](#multi-line-output) 
+
+**Namespace**: `python`
+
+**Key**: `multi_line_output`
+
+**Default**: `Hanging Grid Grouped`
+
+**Type**: `string`
+
+**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+defines how from imports wrap (requires isort installed) (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "multi_line_output": "Hanging Grid Grouped"
     }
 }
 ```
@@ -16980,6 +17147,195 @@ Indentation size/length (Supported by formatR)
 {
     "r": {
         "indent_size": 4
+    }
+}
+```
+
+
+### pybeautifier
+
+#####  [Max line length](#max-line-length) 
+
+**Namespace**: `python`
+
+**Key**: `max_line_length`
+
+**Default**: `79`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+set maximum allowed line length (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "max_line_length": 79
+    }
+}
+```
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `python`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+Indentation size/length (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "indent_size": 4
+    }
+}
+```
+
+#####  [Ignore](#ignore) 
+
+**Namespace**: `python`
+
+**Key**: `ignore`
+
+**Default**: `E24`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+do not fix these errors/warnings (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "ignore": [
+            "E24"
+        ]
+    }
+}
+```
+
+#####  [Formater](#formater) 
+
+**Namespace**: `python`
+
+**Key**: `formater`
+
+**Default**: `autopep8`
+
+**Type**: `string`
+
+**Enum**:  `autopep8`  `yapf` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formater used by pybeautifier (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "formater": "autopep8"
+    }
+}
+```
+
+#####  [Style config](#style-config) 
+
+**Namespace**: `python`
+
+**Key**: `style_config`
+
+**Default**: `pep8`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formatting style used by yapf (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "style_config": "pep8"
+    }
+}
+```
+
+#####  [Sort imports](#sort-imports) 
+
+**Namespace**: `python`
+
+**Key**: `sort_imports`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "sort_imports": false
+    }
+}
+```
+
+#####  [Multi line output](#multi-line-output) 
+
+**Namespace**: `python`
+
+**Key**: `multi_line_output`
+
+**Default**: `Hanging Grid Grouped`
+
+**Type**: `string`
+
+**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+defines how from imports wrap (requires isort installed) (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "multi_line_output": "Hanging Grid Grouped"
     }
 }
 ```
