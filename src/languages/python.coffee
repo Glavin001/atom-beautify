@@ -41,9 +41,30 @@ module.exports = {
       items:
         type: 'string'
       description: "do not fix these errors/warnings"
+    formater:
+      type: 'string'
+      default: 'autopep8'
+      enum: ['autopep8', 'yapf']
+      description: "formater used by pybeautifier"
+    style_config:
+      type: 'string'
+      default: 'pep8'
+      description: "formatting style used by yapf"
     sort_imports:
       type: 'boolean'
       default: false
       description: "sort imports (requires isort installed)"
-
+    multi_line_output:
+      type: 'string'
+      default: 'Hanging Grid Grouped'
+      enum: [
+        'Grid'
+        'Vertical'
+        'Hanging Indent'
+        'Vertical Hanging Indent'
+        'Hanging Grid'
+        'Hanging Grid Grouped'
+        'NOQA'
+      ]
+      description: "defines how from imports wrap (requires isort installed)"
 }

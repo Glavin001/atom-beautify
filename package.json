@@ -114,6 +114,10 @@
     {
       "name": "Victor Uriarte",
       "url": "https://github.com/vmuriart"
+    },
+    {
+      "name": "guyskk",
+      "url": "https://github.com/guyskk"
     }
   ],
   "engines": {
@@ -288,6 +292,7 @@
     "clojure beautifier",
     "nunjucks",
     "ux markup",
+    "pybeautifier",
     "cljfmt"
   ],
   "devDependencies": {
