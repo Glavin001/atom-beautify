@@ -2931,6 +2931,100 @@ Indentation size/length (Supported by Gherkin formatter)
 }
 ```
 
+####  [GLSL](#glsl) 
+
+**Supported Beautifiers**:  [`clang-format`](#clang-format) 
+
+| Option | clang-format |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `configPath` | :white_check_mark: |
+
+**Description**:
+
+Options for language GLSL
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable GLSL Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `clang-format`
+
+**Type**: `string`
+
+**Enum**:  `clang-format` 
+
+**Description**:
+
+Default Beautifier to be used for GLSL
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify GLSL files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Config Path](#config-path) 
+
+**Namespace**: `glsl`
+
+**Key**: `configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`clang-format`](#clang-format) 
+
+**Description**:
+
+Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-format)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "glsl": {
+        "configPath": ""
+    }
+}
+```
+
 ####  [Go](#go) 
 
 **Supported Beautifiers**:  [`gofmt`](#gofmt) 
@@ -16872,6 +16966,33 @@ sort imports (requires isort installed) (Supported by autopep8)
 {
     "python": {
         "sort_imports": false
+    }
+}
+```
+
+
+### clang-format
+
+#####  [Config Path](#config-path) 
+
+**Namespace**: `glsl`
+
+**Key**: `configPath`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`clang-format`](#clang-format) 
+
+**Description**:
+
+Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-format)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "glsl": {
+        "configPath": ""
     }
 }
 ```

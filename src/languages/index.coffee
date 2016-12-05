@@ -29,6 +29,7 @@ module.exports = class Languages
     "erb"
     "erlang"
     "gherkin"
+    "glsl"
     "go"
     "fortran"
     "handlebars"
