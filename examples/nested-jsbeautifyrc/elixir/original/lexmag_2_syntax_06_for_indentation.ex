@@ -40,13 +40,13 @@ defmodule Lexmag2Syntax06ForIndentation do
     end
 
     indexes = 0..999
-    max_count =
+    max_size =
       indexes
       |> Enum.max
       |> Integer.to_string
       |> String.length
     for index <- indexes,
-     padded_index = String.pad_leading("#{index}", max_count, "0"),
+     padded_index = String.pad_leading("#{index}", max_size, "0"),
       into: %{},
     do: {index, padded_index}
   end

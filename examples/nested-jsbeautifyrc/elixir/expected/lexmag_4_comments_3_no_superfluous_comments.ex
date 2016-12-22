@@ -19,7 +19,7 @@ defmodule Lexmag4Comments3NoSuperfluousComments do
   """
   @spec test() :: any
   def test() do
-    # capitalize sentence
+    # NOTE: beautifier question if comment: `capitalize sentence` needed
     String.capitalize("example sentence is here.")
   end
 end

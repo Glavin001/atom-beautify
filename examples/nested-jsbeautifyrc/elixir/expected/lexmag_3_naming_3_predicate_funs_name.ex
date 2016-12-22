@@ -30,7 +30,7 @@ defmodule Lexmag3Naming3PredicateFunsName do
   def ok?(:ok), do: true
   def ok?(_), do: false
 
-  @spec is_ok?(sample :: any) :: boolean
-  defmacro is_ok?(:ok), do: true
-  defmacro is_ok?(_), do: false
+  @spec is_ok(sample :: any) :: boolean
+  defmacro is_ok(:ok), do: true
+  defmacro is_ok(_), do: false
 end

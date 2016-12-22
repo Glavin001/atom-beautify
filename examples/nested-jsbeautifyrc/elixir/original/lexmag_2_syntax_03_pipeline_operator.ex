@@ -43,6 +43,7 @@ defmodule Lexmag2Syntax03PipelineOperator do
   @spec test() :: any
   def test() do
     String.downcase(String.strip(" EXAMPLE "))
+
     "example" |> String.upcase
   end
 end

@@ -27,7 +27,7 @@ defmodule Lexmag2Syntax10BooleanOperators do
   @spec test(name :: atom) :: any
   def test(name) do
     task = :spying
-    is_atom(name) and !is_nil(name) and !is_boolean(name)
+    _ = not is_nil(name) and not is_boolean(name)
     is_binary(task) or is_atom(task)
   end
 end

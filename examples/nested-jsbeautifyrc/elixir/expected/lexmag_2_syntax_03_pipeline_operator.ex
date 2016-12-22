@@ -45,6 +45,7 @@ defmodule Lexmag2Syntax03PipelineOperator do
     " EXAMPLE "
     |> String.strip
     |> String.downcase
+
     String.upcase("example")
   end
 end
