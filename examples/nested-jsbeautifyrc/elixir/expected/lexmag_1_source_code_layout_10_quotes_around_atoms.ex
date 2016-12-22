@@ -12,15 +12,13 @@ defmodule Lexmag1SourceCodeLayout10QuotesAroundAtoms do
   @doc """
   When using atom literals that need to be quoted because they contain characters that are invalid in atoms (such as `:"foo-bar"`), use double quotes around the atom name:
 
-  ```elixir
-  # Bad
-  :'foo-bar'
-  :'atom number \#{index}'
+      # Bad
+      :'foo-bar'
+      :'atom number \#{index}'
 
-  # Good
-  :"foo-bar"
-  :"atom number \#{index}"
-  ```
+      # Good
+      :"foo-bar"
+      :"atom number \#{index}"
   """
   @spec test() :: any
   def test() do

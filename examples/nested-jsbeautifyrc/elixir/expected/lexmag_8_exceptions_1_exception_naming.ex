@@ -16,14 +16,12 @@ defmodule Lexmag8Exceptions1ExceptionNaming do
   @doc """
   Make exception names end with a trailing `Error`.
 
-  ```elixir
-  # Bad
-  BadResponse
-  ResponseException
+      # Bad
+      BadResponse
+      ResponseException
 
-  # Good
-  ResponseError
-  ```
+      # Good
+      ResponseError
   """
   @spec test() :: any
   def test() do

@@ -21,17 +21,15 @@ defmodule Lexmag5Modules1ModuleLayout do
   Use a consistent structure when calling `use`/`import`/`alias`/`require`: call
   them in this order and group multiple calls to each of them.
 
-  ```elixir
-  use GenServer
+      use GenServer
 
-  import Bitwise
-  import Kernel, except: [length: 1]
+      import Bitwise
+      import Kernel, except: [length: 1]
 
-  alias Mix.Utils
-  alias MapSet, as: Set
+      alias Mix.Utils
+      alias MapSet, as: Set
 
-  require Logger
-  ```
+      require Logger
   """
   @spec test() :: any
   def test() do

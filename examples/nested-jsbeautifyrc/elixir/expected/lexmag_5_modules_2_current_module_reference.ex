@@ -12,15 +12,13 @@ defmodule Lexmag5Modules2CurrentModuleReference do
   @doc """
   Use `__MODULE__` pseudo variable to reference current module.
 
-  ```elixir
-  # Bad
-  :ets.new(Kernel.LexicalTracker, [:named_table])
-  GenServer.start_link(Module.LocalsTracker, nil, [])
+      # Bad
+      :ets.new(Kernel.LexicalTracker, [:named_table])
+      GenServer.start_link(Module.LocalsTracker, nil, [])
 
-  # Good
-  :ets.new(__MODULE__, [:named_table])
-  GenServer.start_link(__MODULE__, nil, [])
-  ```
+      # Good
+      :ets.new(__MODULE__, [:named_table])
+      GenServer.start_link(__MODULE__, nil, [])
   """
   @spec test() :: any
   def test() do

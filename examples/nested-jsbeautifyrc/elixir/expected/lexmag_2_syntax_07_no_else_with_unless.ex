@@ -12,21 +12,19 @@ defmodule Lexmag2Syntax07NoElseWithUnless do
   @doc """
   Never use `unless` with `else`. Rewrite these with the positive case first.
 
-  ```elixir
-  # Bad
-  unless Enum.empty?(coll) do
-    :ok
-  else
-    :error
-  end
+      # Bad
+      unless Enum.empty?(coll) do
+        :ok
+      else
+        :error
+      end
 
-  # Good
-  if Enum.empty?(coll) do
-    :error
-  else
-    :ok
-  end
-  ```
+      # Good
+      if Enum.empty?(coll) do
+        :error
+      else
+        :ok
+      end
   """
   @spec test() :: any
   def test() do

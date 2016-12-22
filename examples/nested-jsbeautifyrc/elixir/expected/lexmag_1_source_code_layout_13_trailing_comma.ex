@@ -12,13 +12,11 @@ defmodule Lexmag1SourceCodeLayout13TrailingComma do
   @doc """
   When dealing with lists, maps, structs, or tuples whose elements span over multiple lines and are on separate lines with regard to the enclosing brackets, it's advised to use a trailing comma even for the last element:
 
-  ```elixir
-  [
-    :foo,
-    :bar,
-    :baz,
-  ]
-  ```
+      [
+        :foo,
+        :bar,
+        :baz,
+      ]
   """
   @spec test() :: any
   def test() do

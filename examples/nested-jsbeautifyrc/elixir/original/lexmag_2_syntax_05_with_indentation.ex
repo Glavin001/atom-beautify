@@ -12,24 +12,20 @@ defmodule Lexmag2Syntax05WithIndentation do
   @doc """
   Use the indentation shown below for the `with` special form:
 
-  ```elixir
-  with {year, ""} <- Integer.parse(year),
-       {month, ""} <- Integer.parse(month),
-       {day, ""} <- Integer.parse(day) do
-    new(year, month, day)
-  else
-    _ ->
-      {:error, :invalid_format}
-  end
-  ```
+      with {year, ""} <- Integer.parse(year),
+           {month, ""} <- Integer.parse(month),
+           {day, ""} <- Integer.parse(day) do
+        new(year, month, day)
+      else
+        _ ->
+          {:error, :invalid_format}
+      end
 
   Always use the indentation above if there's an `else` option. If there isn't, the following indentation works as well:
 
-  ```elixir
-  with {:ok, date} <- Calendar.ISO.date(year, month, day),
-       {:ok, time} <- Time.new(hour, minute, second, microsecond),
-       do: new(date, time)
-  ```
+      with {:ok, date} <- Calendar.ISO.date(year, month, day),
+           {:ok, time} <- Time.new(hour, minute, second, microsecond),
+           do: new(date, time)
   """
   @spec test() :: any
   def test() do

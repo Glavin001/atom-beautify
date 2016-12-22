@@ -12,13 +12,11 @@ defmodule Lexmag2Syntax12HexLiterals do
   @doc """
   Use uppercase in definition of hex literals.
 
-  ```elixir
-  # Bad
-  <<0xef, 0xbb, 0xbf>>
+      # Bad
+      <<0xef, 0xbb, 0xbf>>
 
-  # Good
-  <<0xEF, 0xBB, 0xBF>>
-  ```
+      # Good
+      <<0xEF, 0xBB, 0xBF>>
   """
   @spec test() :: any
   def test() do

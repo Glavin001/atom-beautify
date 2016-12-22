@@ -14,13 +14,11 @@ defmodule Lexmag7Structs1DefstructFieldsDefault do
   @doc """
   When calling `defstruct/1`, don't explicitly specify `nil` for fields that default to `nil`.
 
-  ```elixir
-  # Bad
-  defstruct first_name: nil, last_name: nil, admin?: false
+      # Bad
+      defstruct first_name: nil, last_name: nil, admin?: false
 
-  # Good
-  defstruct [:first_name, :last_name, admin?: false]
-  ```
+      # Good
+      defstruct [:first_name, :last_name, admin?: false]
   """
   @spec test() :: any
   def test() do

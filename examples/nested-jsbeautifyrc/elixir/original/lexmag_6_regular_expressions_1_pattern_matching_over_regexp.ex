@@ -12,15 +12,13 @@ defmodule Lexmag6RegularExpressions1PatternMatchingOverRegexp do
   @doc """
   Regular expressions are the last resort. Pattern matching and `String` module are things to start with.
 
-  ```elixir
-  # Bad
-  Regex.run(~r/#(\d{2})(\d{2})(\d{2})/, color)
-  Regex.match?(~r/(email|password)/, input)
+      # Bad
+      Regex.run(~r/#(\d{2})(\d{2})(\d{2})/, color)
+      Regex.match?(~r/(email|password)/, input)
 
-  # Good
-  <<?#, p1::2-bytes, p2::2-bytes, p3::2-bytes>> = color
-  String.contains?(input, ["email", "password"])
-  ```
+      # Good
+      <<?#, p1::2-bytes, p2::2-bytes, p3::2-bytes>> = color
+      String.contains?(input, ["email", "password"])
   """
   @spec test(color :: bitstring, input :: bitstring) :: any
   def test(color, input) do

@@ -14,33 +14,31 @@ defmodule Lexmag3Naming1SnakeCaseAtomsFunsVarsAttrs do
   @doc """
   Use `snake_case` for atoms, functions, variables and module attributes.
 
-  ```elixir
-  # Bad
-  :"no match"
-  :Error
-  :badReturn
+      # Bad
+      :"no match"
+      :Error
+      :badReturn
 
-  fileName = "sample.txt"
+      fileName = "sample.txt"
 
-  @_VERSION "0.0.1"
+      @_VERSION "0.0.1"
 
-  def readFile(path) do
-    #...
-  end
+      def readFile(path) do
+        #...
+      end
 
-  # Good
-  :no_match
-  :error
-  :bad_return
+      # Good
+      :no_match
+      :error
+      :bad_return
 
-  file_name = "sample.txt"
+      file_name = "sample.txt"
 
-  @version "0.0.1"
+      @version "0.0.1"
 
-  def read_file(path) do
-    #...
-  end
-  ```
+      def read_file(path) do
+        #...
+      end
   """
   @spec test_me() :: any
   def test_me() do

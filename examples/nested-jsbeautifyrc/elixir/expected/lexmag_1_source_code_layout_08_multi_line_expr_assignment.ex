@@ -12,28 +12,26 @@ defmodule Lexmag1SourceCodeLayout08MultiLineExprAssignment do
   @doc """
   When assigning the result of a multi-line expression, do not preserve alignment of its parts.
 
-  ```elixir
-  # Bad
-  {found, not_found} = Enum.map(files, &Path.expand(&1, path))
-                       |> Enum.partition(&File.exists?/1)
+      # Bad
+      {found, not_found} = Enum.map(files, &Path.expand(&1, path))
+                           |> Enum.partition(&File.exists?/1)
 
-  prefix = case base do
-             :binary -> "0b"
-             :octal -> "0o"
-             :hex -> "0x"
-           end
+      prefix = case base do
+                 :binary -> "0b"
+                 :octal -> "0o"
+                 :hex -> "0x"
+               end
 
-  # Good
-  {found, not_found} =
-    Enum.map(files, &Path.expand(&1, path))
-    |> Enum.partition(&File.exists?/1)
+      # Good
+      {found, not_found} =
+        Enum.map(files, &Path.expand(&1, path))
+        |> Enum.partition(&File.exists?/1)
 
-  prefix = case base do
-    :binary -> "0b"
-    :octal -> "0o"
-    :hex -> "0x"
-  end
-  ```
+      prefix = case base do
+        :binary -> "0b"
+        :octal -> "0o"
+        :hex -> "0x"
+      end
   """
   @spec test() :: any
   def test() do

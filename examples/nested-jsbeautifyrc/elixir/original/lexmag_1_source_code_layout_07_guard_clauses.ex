@@ -12,17 +12,15 @@ defmodule Lexmag1SourceCodeLayout07GuardClauses do
   @doc """
   Indent `when` guard clauses on the same level as the function/macro signature in the definition they're part of. Do this only if you cannot fit the `when` guard on the same line as the definition.
 
-  ```elixir
-  def format_error({exception, stacktrace})
-      when is_list(stacktrace) and stacktrace != [] do
-    # ...
-  end
+      def format_error({exception, stacktrace})
+          when is_list(stacktrace) and stacktrace != [] do
+        # ...
+      end
 
-  defmacro dngettext(domain, msgid, msgid_plural, count)
-           when is_binary(msgid) and is_binary(msgid_plural) do
-    # ...
-  end
-  ```
+      defmacro dngettext(domain, msgid, msgid_plural, count)
+               when is_binary(msgid) and is_binary(msgid_plural) do
+        # ...
+      end
   """
   @spec test(stacktrace :: list) :: any
   def test(stacktrace)

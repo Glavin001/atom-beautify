@@ -12,19 +12,15 @@ defmodule Lexmag3Naming3PredicateFunsName do
   @doc """
   The names of predicate functions (a function that return a boolean value) should have a trailing question mark `?` rather than a leading `has_` or similar.
 
-  ```elixir
-  def leap?(year) do
-    #...
-  end
-  ```
+      def leap?(year) do
+        #...
+      end
 
   Always use a leading `is_` when naming guard-safe predicate macros.
 
-  ```elixir
-  defmacro is_date(month, day) do
-    #...
-  end
-  ```
+      defmacro is_date(month, day) do
+        #...
+      end
   """
   @spec is_ok?(sample :: any) :: boolean
   def is_ok?(:ok), do: true

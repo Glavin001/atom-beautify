@@ -12,14 +12,12 @@ defmodule Lexmag1SourceCodeLayout06BitstringSegmentOptions do
   @doc """
   Do not put spaces around segment options definition in bitstrings.
 
-  ```elixir
-  # Bad
-  <<102 :: unsigned-big-integer, rest :: binary>>
-  <<102::unsigned - big - integer, rest::binary>>
+      # Bad
+      <<102 :: unsigned-big-integer, rest :: binary>>
+      <<102::unsigned - big - integer, rest::binary>>
 
-  # Good
-  <<102::unsigned-big-integer, rest::binary>>
-  ```
+      # Good
+      <<102::unsigned-big-integer, rest::binary>>
   """
   @spec test() :: any
   def test() do

@@ -12,33 +12,26 @@ defmodule Lexmag2Syntax03PipelineOperator do
   @doc """
   Favor the pipeline operator `|>` to chain function calls together.
 
-  ```elixir
-  # Bad
-  String.downcase(String.strip(input))
+      # Bad
+      String.downcase(String.strip(input))
 
-  # Good
-  input |> String.strip |> String.downcase
-  String.strip(input) |> String.downcase
-  ```
+      # Good
+      input |> String.strip |> String.downcase
+      String.strip(input) |> String.downcase
 
   Use a single level of indentation for multi-line pipelines.
 
-  ```elixir
-  String.strip(input)
-  |> String.downcase
-  |> String.slice(1, 3)
-  ```
+      String.strip(input)
+      |> String.downcase
+      |> String.slice(1, 3)
 
-  <a name="needless-pipeline"></a>
   Avoid needless pipelines like the plague.
 
-  ```elixir
-  # Bad
-  result = input |> String.strip
+      # Bad
+      result = input |> String.strip
 
-  # Good
-  result = String.strip(input)
-  ```
+      # Good
+      result = String.strip(input)
   """
   @spec test() :: any
   def test() do

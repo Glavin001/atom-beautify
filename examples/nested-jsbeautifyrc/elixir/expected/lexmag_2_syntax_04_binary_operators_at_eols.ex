@@ -12,17 +12,15 @@ defmodule Lexmag2Syntax04BinaryOperatorsAtEols do
   @doc """
   When making a multi-line expression, keep binary operators (the only exception is the `|>` operator) at the ends of the lines.
 
-  ```elixir
-  # Bad
-  "No matching message.\n"
-  <> "Process mailbox:\n"
-  <> mailbox
+      # Bad
+      "No matching message.\n"
+      <> "Process mailbox:\n"
+      <> mailbox
 
-  # Good
-  "No matching message.\n" <>
-  "Process mailbox:\n" <>
-  mailbox
-  ```
+      # Good
+      "No matching message.\n" <>
+      "Process mailbox:\n" <>
+      mailbox
   """
   @spec test() :: any
   def test() do

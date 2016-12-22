@@ -12,19 +12,15 @@ defmodule Lexmag9Exunit1ExunitAssertionSide do
   @doc """
   When asserting (or refuting) something with comparison operators (such as `==`, `<`, `>=`, and similar), put the expression being tested on the left-hand side of the operator and the value you're testing against on the right-hand side.
 
-  ```elixir
-  # Bad
-  assert "héllo" == Atom.to_string(:"héllo")
+      # Bad
+      assert "héllo" == Atom.to_string(:"héllo")
 
-  # Good
-  assert Atom.to_string(:"héllo") == "héllo"
-  ```
+      # Good
+      assert Atom.to_string(:"héllo") == "héllo"
 
   When using the match operator `=`, put the pattern on the left-hand side (as it won't work otherwise).
 
-  ```elixir
-  assert {:error, _reason} = File.stat("./non_existent_file")
-  ```
+      assert {:error, _reason} = File.stat("./non_existent_file")
   """
   @spec test() :: any
   def test() do

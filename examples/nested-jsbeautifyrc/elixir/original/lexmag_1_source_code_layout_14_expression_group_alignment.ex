@@ -12,23 +12,21 @@ defmodule Lexmag1SourceCodeLayout14ExpressionGroupAlignment do
   @doc """
   Avoid aligning expression groups:
 
-  ```elixir
-  # Bad
-  module = env.module
-  arity  = length(args)
+      # Bad
+      module = env.module
+      arity  = length(args)
 
-  def inspect(false), do: "false"
-  def inspect(true),  do: "true"
-  def inspect(nil),   do: "nil"
+      def inspect(false), do: "false"
+      def inspect(true),  do: "true"
+      def inspect(nil),   do: "nil"
 
-  # Good
-  module = env.module
-  arity = length(args)
+      # Good
+      module = env.module
+      arity = length(args)
 
-  def inspect(false), do: "false"
-  def inspect(true), do: "true"
-  def inspect(nil), do: "nil"
-  ```
+      def inspect(false), do: "false"
+      def inspect(true), do: "true"
+      def inspect(nil), do: "nil"
 
   The same non-alignment rule applies to `<-` and `->` clauses as well.
   """

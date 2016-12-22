@@ -12,13 +12,11 @@ defmodule Lexmag2Syntax08NoNilElse do
   @doc """
   Omit `else` option in `if` and `unless` clauses if it returns `nil`.
 
-  ```elixir
-  # Bad
-  if byte_size(data) > 0, do: data, else: nil
+      # Bad
+      if byte_size(data) > 0, do: data, else: nil
 
-  # Good
-  if byte_size(data) > 0, do: data
-  ```
+      # Good
+      if byte_size(data) > 0, do: data
   """
   @spec test(data :: bitstring) :: any
   def test(data) do

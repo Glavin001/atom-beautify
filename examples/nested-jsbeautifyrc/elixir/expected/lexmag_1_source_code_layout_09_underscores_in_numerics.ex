@@ -12,9 +12,7 @@ defmodule Lexmag1SourceCodeLayout09UnderscoresInNumerics do
   @doc """
   Add underscores to large numeric literals to improve their readability.
 
-  ```elixir
-  num = 1_000_000
-  ```
+      num = 1_000_000
   """
   @spec test() :: any
   def test() do

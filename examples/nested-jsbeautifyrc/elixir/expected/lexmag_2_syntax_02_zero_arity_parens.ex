@@ -12,22 +12,20 @@ defmodule Lexmag2Syntax02ZeroArityParens do
   @doc """
   Parentheses are a must for __local__ zero-arity function calls and definitions.
 
-  ```elixir
-  # Bad
-  pid = self
-  def new, do: %MapSet{}
+      # Bad
+      pid = self
+      def new, do: %MapSet{}
 
-  # Good
-  pid = self()
-  def new(), do: %MapSet{}
-  config = IEx.Config.new
-  ```
+      # Good
+      pid = self()
+      def new(), do: %MapSet{}
+      config = IEx.Config.new
+      ```
 
-  The same applies to __local__ one-arity function calls in pipelines.
+      The same applies to __local__ one-arity function calls in pipelines.
 
-  ```elixir
-  String.strip(input) |> decode()
-  ```
+      ```elixir
+      String.strip(input) |> decode()
   """
   @spec test(argument :: any) :: any
   def test(_argument), do: _pid = self()

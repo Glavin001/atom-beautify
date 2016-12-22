@@ -12,17 +12,15 @@ defmodule Lexmag2Syntax10BooleanOperators do
   @doc """
   Never use `||`, `&&` and `!` for strictly boolean checks. Use these operators only if any of the arguments are non-boolean.
 
-  ```elixir
-  # Bad
-  is_atom(name) && name != nil
-  is_binary(task) || is_atom(task)
+      # Bad
+      is_atom(name) && name != nil
+      is_binary(task) || is_atom(task)
 
-  # Good
-  is_atom(name) and name != nil
-  is_binary(task) or is_atom(task)
-  line && line != 0
-  file || "sample.exs"
-  ```
+      # Good
+      is_atom(name) and name != nil
+      is_binary(task) or is_atom(task)
+      line && line != 0
+      file || "sample.exs"
   """
   @spec test(name :: atom) :: any
   def test(name) do

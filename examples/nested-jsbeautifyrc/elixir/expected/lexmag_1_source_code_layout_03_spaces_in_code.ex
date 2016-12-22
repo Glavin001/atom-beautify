@@ -12,12 +12,10 @@ defmodule Lexmag1SourceCodeLayout03SpacesInCode do
   @doc """
   Use spaces around binary operators, after commas `,`, colons `:` and semicolons `;`. Do not put spaces around matched pairs like brackets `[]`, braces `{}`, etc. Whitespace might be (mostly) irrelevant to the Elixir compiler, but its proper use is the key to writing easily readable code.
 
-  ```elixir
-  sum = 1 + 2
-  [first | rest] = 'three'
-  {a1, a2} = {2, 3}
-  Enum.join(["one", <<"two">>, sum])
-  ```
+      sum = 1 + 2
+      [first | rest] = 'three'
+      {a1, a2} = {2, 3}
+      Enum.join(["one", <<"two">>, sum])
   """
   @spec test() :: any
   def test() do

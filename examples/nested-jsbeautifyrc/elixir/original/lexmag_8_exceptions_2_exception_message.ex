@@ -12,19 +12,15 @@ defmodule Lexmag8Exceptions2ExceptionMessage do
   @doc """
   Use non-capitalized error messages when raising exceptions, with no trailing punctuation.
 
-  ```elixir
-  # Bad
-  raise ArgumentError, "Malformed payload."
+      # Bad
+      raise ArgumentError, "Malformed payload."
 
-  # Good
-  raise ArgumentError, "malformed payload"
-  ```
+      # Good
+      raise ArgumentError, "malformed payload"
 
   There is one exception to the rule - always capitalize Mix error messages.
 
-  ```elixir
-  Mix.raise "Could not find dependency"
-  ```
+      Mix.raise "Could not find dependency"
   """
   @spec test() :: any
   def test() do

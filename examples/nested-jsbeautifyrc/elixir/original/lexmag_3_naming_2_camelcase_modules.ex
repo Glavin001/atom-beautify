@@ -22,25 +22,23 @@ defmodule Lexmag3Naming2CamelcaseModules do
   @doc """
   Use `CamelCase` for module names.
 
-  ```elixir
-  # Bad
-  defmodule :appStack do
-    #...
-  end
+      # Bad
+      defmodule :appStack do
+        #...
+      end
 
-  defmodule App_Stack do
-    #...
-  end
+      defmodule App_Stack do
+        #...
+      end
 
-  defmodule Appstack do
-    #...
-  end
+      defmodule Appstack do
+        #...
+      end
 
-  # Good
-  defmodule AppStack do
-    #...
-  end
-  ```
+      # Good
+      defmodule AppStack do
+        #...
+      end
   """
   @spec test() :: any
   def test() do

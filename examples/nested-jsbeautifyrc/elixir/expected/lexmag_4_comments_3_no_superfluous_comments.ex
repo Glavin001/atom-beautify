@@ -12,10 +12,8 @@ defmodule Lexmag4Comments3NoSuperfluousComments do
   @doc """
   Avoid superfluous comments.
 
-  ```elixir
-  # Bad
-  String.first(input) # Get first grapheme.
-  ```
+      # Bad
+      String.first(input) # Get first grapheme.
   """
   @spec test() :: any
   def test() do

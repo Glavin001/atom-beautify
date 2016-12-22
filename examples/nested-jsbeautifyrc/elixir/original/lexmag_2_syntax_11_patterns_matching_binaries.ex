@@ -12,15 +12,13 @@ defmodule Lexmag2Syntax11PatternsMatchingBinaries do
   @doc """
   Favor the binary concatenation operator `<>` over bitstring syntax for patterns matching binaries.
 
-  ```elixir
-  # Bad
-  <<"http://", _rest::bytes>> = input
-  <<first::utf8, rest::bytes>> = input
+      # Bad
+      <<"http://", _rest::bytes>> = input
+      <<first::utf8, rest::bytes>> = input
 
-  # Good
-  "http://" <> _rest = input
-  <<first::utf8>> <> rest = input
-  ```
+      # Good
+      "http://" <> _rest = input
+      <<first::utf8>> <> rest = input
   """
   @spec test() :: any
   def test() do

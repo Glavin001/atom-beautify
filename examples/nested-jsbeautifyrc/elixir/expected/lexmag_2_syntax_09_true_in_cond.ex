@@ -12,16 +12,14 @@ defmodule Lexmag2Syntax09TrueInCond do
   @doc """
   Use `true` as the always-match condition of the `cond` special form.
 
-  ```elixir
-  cond do
-    char in ?0..?9 ->
-      char - ?0
-    char in ?A..?Z ->
-      char - ?A + 10
-    true ->
-      char - ?a + 10
-  end
-  ```
+      cond do
+        char in ?0..?9 ->
+          char - ?0
+        char in ?A..?Z ->
+          char - ?A + 10
+        true ->
+          char - ?a + 10
+      end
   """
   @spec test(char :: integer) :: any
   def test(char) do

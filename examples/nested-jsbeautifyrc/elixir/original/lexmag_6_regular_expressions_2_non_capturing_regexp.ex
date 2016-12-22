@@ -12,9 +12,7 @@ defmodule Lexmag6RegularExpressions2NonCapturingRegexp do
   @doc """
   Use non-capturing groups when you don't use the captured result.
 
-  ```elixir
-  ~r/(?:post|zip )code: (\d+)/
-  ```
+      ~r/(?:post|zip )code: (\d+)/
   """
   @spec test() :: any
   def test() do

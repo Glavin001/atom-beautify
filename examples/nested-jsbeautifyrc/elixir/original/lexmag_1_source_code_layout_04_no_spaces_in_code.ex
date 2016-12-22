@@ -12,12 +12,10 @@ defmodule Lexmag1SourceCodeLayout04NoSpacesInCode do
   @doc """
   No spaces after unary operators and inside range literals, the only exception is the `not` operator.
 
-  ```elixir
-  angle = -45
-  ^result = Float.parse("42.01")
-  2 in 1..5
-  not File.exists?(path)
-  ```
+      angle = -45
+      ^result = Float.parse("42.01")
+      2 in 1..5
+      not File.exists?(path)
   """
   @spec test() :: any
   def test() do
