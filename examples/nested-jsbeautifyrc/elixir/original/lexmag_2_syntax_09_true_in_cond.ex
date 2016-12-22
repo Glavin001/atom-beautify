@@ -28,6 +28,8 @@ defmodule Lexmag2Syntax09TrueInCond do
         char - ?0
       char in ?A..?Z ->
         char - ?A + 10
+      :any ->
+        char - ?a + 10
     end
   end
 end

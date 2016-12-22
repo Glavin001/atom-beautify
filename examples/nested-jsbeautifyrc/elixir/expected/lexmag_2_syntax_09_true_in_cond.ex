@@ -29,7 +29,7 @@ defmodule Lexmag2Syntax09TrueInCond do
       char in ?A..?Z ->
         char - ?A + 10
       true ->
-        nil # NOTE: beautifier info to fill: "`true` as the always-match condition"
+        char - ?a + 10
     end
   end
 end
