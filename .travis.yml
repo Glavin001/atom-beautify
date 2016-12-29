@@ -138,3 +138,5 @@ before_install:
   - opam install --yes ocp-indent
   # Crystal
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
+  # Bash
+  - pip install beautysh

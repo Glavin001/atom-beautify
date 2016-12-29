@@ -73,6 +73,7 @@ module.exports = class Beautifiers extends EventEmitter
     'erl_tidy'
     'marko-beautifier'
     'formatR'
+    'beautysh'
   ]
 
   ###

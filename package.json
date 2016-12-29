@@ -288,6 +288,8 @@
     "nunjucks",
     "ux markup",
     "cljfmt",
+    "bash",
+    "beautysh",
     "glsl"
   ],
   "devDependencies": {
@@ -295,9 +297,10 @@
     "handlebars": "^4.0.2"
   },
   "scripts": {
-    "postinstall": "node script/build-options.js",
+    "build-options": "node script/build-options.js",
+    "postinstall": "npm run build-options",
+    "docs": "npm run build-options && coffee docs/",
     "prepublish": "npm run docs",
-    "docs": "coffee docs/",
     "lint": "coffeelint src/ spec/",
     "code-docs": "codo && open docs/code/index.html"
   }

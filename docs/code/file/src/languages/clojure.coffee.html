@@ -23,38 +23,42 @@
     &raquo;
     <span class='title'>languages</span>
     &raquo;
-    <span class='title'>index.coffee</span>
+    <span class='title'>clojure.coffee</span>
   </div>
 </div>
     <div id='content'>
       <h1>
         File:
-        index.coffee
+        clojure.coffee
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
           <td>src&#47;languages</td>
         </tr>
-        <tr>
-          <td>
-            Classes:
-          </td>
-          <td>
-            <a href='../../../class/Languages.html'>
-              Languages
-            </a>
-          </td>
-        </tr>
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='extend-variable'>
-    extend
+  <dt id='module.exports-variable'>
+    module.exports
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>null</code></pre>
+    <pre><code class='coffeescript'>{
+  name: &quot;Clojure&quot;,
+  namespace: &quot;clj&quot;,
+
+  &#47;*
+  Supported Grammars
+   *&#47;
+  grammars: [&quot;Clojure&quot;],
+
+  &#47;*
+  Supported extensions
+   *&#47;
+  extensions: [&#39;clj&#39;, &#39;cljs&#39;, &#39;edn&#39;],
+  defaultBeautifier: &quot;cljfmt&quot;
+}</code></pre>
     
   </dd>
 </dl>

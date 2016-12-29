@@ -23,38 +23,66 @@
     &raquo;
     <span class='title'>languages</span>
     &raquo;
-    <span class='title'>index.coffee</span>
+    <span class='title'>bash.coffee</span>
   </div>
 </div>
     <div id='content'>
       <h1>
         File:
-        index.coffee
+        bash.coffee
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
           <td>src&#47;languages</td>
         </tr>
-        <tr>
-          <td>
-            Classes:
-          </td>
-          <td>
-            <a href='../../../class/Languages.html'>
-              Languages
-            </a>
-          </td>
-        </tr>
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='extend-variable'>
-    extend
+  <dt id='scope-variable'>
+    scope
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>null</code></pre>
+    <pre><code class='coffeescript'>[&#39;source.sh&#39;, &#39;source.bash&#39;]</code></pre>
+    
+  </dd>
+  <dt id='defaultIndentSize-variable'>
+    defaultIndentSize
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>(softTabs ? tabLength : 1)</code></pre>
+    
+  </dd>
+  <dt id='module.exports-variable'>
+    module.exports
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>{
+  name: &quot;Bash&quot;,
+  namespace: &quot;bash&quot;,
+
+  &#47;*
+  Supported Grammars
+   *&#47;
+  grammars: [&quot;Shell Script&quot;],
+  defaultBeautifier: &quot;beautysh&quot;,
+
+  &#47;*
+  Supported extensions
+   *&#47;
+  extensions: [&quot;bash&quot;, &quot;sh&quot;],
+  options: {
+    indent_size: {
+      type: &#39;integer&#39;,
+      &quot;default&quot;: defaultIndentSize,
+      minimum: 0,
+      description: &quot;Indentation size&#47;length&quot;
+    }
+  }
+}</code></pre>
     
   </dd>
 </dl>
