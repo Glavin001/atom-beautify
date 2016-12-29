@@ -74,11 +74,11 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | CSS | `CSS` |`.css` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | CSV | `CSV` |`.csv` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | D | `D` |`.d` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default), [`dfmt`](https://github.com/Hackerpilot/dfmt) |
-| EJS | `JavaScript Template`, `HTML (Angular)` | | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
+| EJS | `EJS`, `JavaScript Template`, `HTML (Angular)` | | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Elm | `Elm` |`.elm` | [`elm-format`](https://github.com/avh4/elm-format) (Default) |
 | ERB | `HTML (Ruby - ERB)`, `HTML (Rails)` |`.erb` | [`HTML Beautifier`](https://github.com/threedaymonk/htmlbeautifier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Erlang | `Erlang` |`.erl` | [`erl_tidy`](http://erlang.org/doc/man/erl_tidy.html) (Default) |
-| Fortran | `Fortran - Modern` |`.f90`, `.F90` | [`Fortran Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp) (Default) |
+| Fortran | `Fortran - Modern` |`.f90`, `.F90`, `.f95`, `.F95` | [`Fortran Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp) (Default) |
 | gherkin | `Gherkin` |`.feature` | [`Gherkin formatter`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee) (Default) |
 | GLSL | `C`, `opencl`, `GLSL` |`.vert`, `.frag` | [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) (Default) |
 | Go | `Go` |`.go` | [`gofmt`](https://golang.org/cmd/gofmt/) (Default) |
@@ -89,7 +89,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Java | `Java` |`.java` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | JavaScript | `JavaScript` |`.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSON | `JSON` |`.json` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
-| JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript` |`.jsx`, `.js` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
+| JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript` |`.jsx`, `.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | LaTeX | `LaTeX` |`.tex` | [`Latex Beautify`](https://github.com/cmhughes/latexindent.pl) (Default) |
 | LESS | `LESS` |`.less` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Lua | `Lua` |`.lua` | [`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.pl) (Default) |
@@ -121,7 +121,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Vala | `Vala` |`.vala`, `.vapi` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Visualforce | `Visualforce` |`.page` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Vue | `Vue Component` |`.vue` | `Vue Beautifier` (Default) |
-| XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
+| XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | XTemplate | `XTemplate` |`.xtemplate` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 
 ## Usage
