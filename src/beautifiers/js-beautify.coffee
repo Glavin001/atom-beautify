@@ -12,6 +12,7 @@ module.exports = class JSBeautify extends Beautifier
     Marko: true
     JavaScript: true
     EJS: true
+    JSX: true
     JSON: true
     CSS:
       indent_size: true
