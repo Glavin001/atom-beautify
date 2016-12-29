@@ -11,6 +11,7 @@ module.exports = class JSBeautify extends Beautifier
     Mustache: true
     Marko: true
     JavaScript: true
+    EJS: true
     JSON: true
     CSS:
       indent_size: true
