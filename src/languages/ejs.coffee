@@ -9,6 +9,7 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
+    "EJS"
     "JavaScript Template"
     "HTML (Angular)"
   ]

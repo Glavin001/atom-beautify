@@ -1,8 +1,8 @@
 # :lipstick: [atom-beautify](https://github.com/Glavin001/atom-beautify)
 
-| Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"> |
-| --- | --- | --- |
-| [![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) | [![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) | [![Build status](https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true)](https://ci.appveyor.com/project/Glavin001/atom-beautify) |
+| Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"> and <img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"> |
+| --- | --- |
+| [![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) | [![Build status](https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true)](https://ci.appveyor.com/project/Glavin001/atom-beautify) |
 
 
 [![Gitter chat](https://img.shields.io/badge/gitter-Glavin001%2Fatom--beautify-1dce73.svg)](https://gitter.im/Glavin001/atom-beautify)
@@ -46,12 +46,18 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 
 By default `Anonymous Analytics` is enabled.
 If you do not wish to have usage data sent to Google Analytics then please disable `Anonymous Analytics` option before using Atom-Beautify.
-See [`Anonymous Analytics` section of docs](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md#anonymous-analytics) for details.
+See [`Anonymous Analytics` section of docs](docs/options.md#anonymous-analytics) for details.
 Thank you.
+
+### Next Version: [Unibeautify](https://github.com/Unibeautify/unibeautify)
+
+Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
+See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
+
 
 ## Language Support
 
-See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
+See [all supported options in the documentation at  `docs/options.md`](docs/options.md).
 
 | Language | Grammars | File Extensions | Supported Beautifiers |
 | --- | --- | --- | ---- |
@@ -74,6 +80,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | Erlang | `Erlang` |`.erl` | [`erl_tidy`](http://erlang.org/doc/man/erl_tidy.html) (Default) |
 | Fortran | `Fortran - Modern` |`.f90`, `.F90` | [`Fortran Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp) (Default) |
 | gherkin | `Gherkin` |`.feature` | [`Gherkin formatter`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee) (Default) |
+| GLSL | `C`, `opencl`, `GLSL` |`.vert`, `.frag` | [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) (Default) |
 | Go | `Go` |`.go` | [`gofmt`](https://golang.org/cmd/gofmt/) (Default) |
 | Handlebars | `Handlebars`, `HTML (Handlebars)` |`.hbs`, `.handlebars` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Haskell | `Haskell` |`.hs` | [`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell) (Default) |
@@ -94,7 +101,7 @@ See [all supported options in the documentation at  `docs/options.md`](https://g
 | OCaml | `OCaml` |`.ml` | [`ocp-indent`](https://www.typerex.org/ocp-indent.html) (Default) |
 | Pawn | `Pawn` | | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Perl | `Perl`, `Perl 6` |`.pl` | [`Perltidy`](http://perltidy.sourceforge.net/) (Default) |
-| PHP | `PHP` |`.php`, `.module`, `.inc` | [`PHP-CS-Fixer`](http://php.net/manual/en/install.php) (Default), [`PHPCBF`](http://php.net/manual/en/install.php) |
+| PHP | `PHP` |`.php`, `.module`, `.inc` | [`PHP-CS-Fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (Default), [`PHPCBF`](http://php.net/manual/en/install.php) |
 | Puppet | `Puppet` |`.pp` | [`puppet-lint`](http://puppet-lint.com/) (Default) |
 | Python | `Python` |`.py` | [`autopep8`](https://github.com/hhatto/autopep8) (Default), [`yapf`](https://github.com/google/yapf) |
 | R | `R` |`.r`, `.R` | [`formatR`](https://github.com/yihui/formatR) (Default) |
@@ -160,22 +167,22 @@ For example:
 
 Edit your `.jsbeautifyrc` file in any of the following locations:
 
-- Atom Package Settings  
+- Atom Package Settings
   `Atom` ➔ `Preferences` ➔ Search for `atom-beautify`
 - Same directory as current file
-- Project root  
+- Project root
 `atom-beautify` will recursively look up from the current file's directory to find `.jsbeautifyrc`.
 - Your user's home directory
 
 **Note**: *Comments are supported in `.jsbeautifyrc` thanks to [strip-json-comments](https://github.com/sindresorhus/strip-json-comments).*
 
-See examples of both ways inside [`examples/`](https://github.com/donaldpipowitch/atom-beautify/tree/master/examples)
+See examples of both ways inside [`examples/`](examples)
 
-See [all supported options in the documentation at  `docs/options.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/options.md).
+See [all supported options in the documentation at  `docs/options.md`](docs/options.md).
 
 ### Simple
 
-See [examples/simple-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/simple-jsbeautifyrc/.jsbeautifyrc).
+See [examples/simple-jsbeautifyrc/.jsbeautifyrc](examples/simple-jsbeautifyrc/.jsbeautifyrc).
 
 ```json
 {
@@ -193,7 +200,7 @@ See [examples/simple-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 ### Nested (Recommended)
 
-See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowitch/atom-beautify/blob/master/examples/nested-jsbeautifyrc/.jsbeautifyrc).
+See [examples/nested-jsbeautifyrc/.jsbeautifyrc](examples/nested-jsbeautifyrc/.jsbeautifyrc).
 
 ```json
 {
@@ -231,16 +238,16 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](https://github.com/donaldpipowi
 
 ## Troubleshooting
 
-See [`docs/troubleshooting.md`](https://github.com/Glavin001/atom-beautify/blob/master/docs/troubleshooting.md).
+See [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
 ## Contributing
 
-[See all contributors on GitHub](https://github.com/donaldpipowitch/atom-beautify/graphs/contributors).
+[See all contributors on GitHub](../../graphs/contributors).
 
-Please update the [CHANGELOG.md](https://github.com/donaldpipowitch/atom-beautify/blob/master/CHANGELOG.md),
-add yourself as a contributor to the [package.json](https://github.com/donaldpipowitch/atom-beautify/blob/master/package.json),
+Please update the [CHANGELOG.md](CHANGELOG.md),
+add yourself as a contributor to the [package.json](package.json),
 and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests/).
 
 ## License
 
-[MIT](https://github.com/donaldpipowitch/atom-beautify/blob/master/LICENSE.md) © [Glavin Wiechert](https://github.com/Glavin001)
+[MIT](LICENSE.md) © [Glavin Wiechert](https://github.com/Glavin001)

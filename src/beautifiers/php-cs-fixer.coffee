@@ -9,7 +9,7 @@ path = require('path')
 module.exports = class PHPCSFixer extends Beautifier
 
   name: 'PHP-CS-Fixer'
-  link: "http://php.net/manual/en/install.php"
+  link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
 
   options:
     PHP: true
@@ -44,7 +44,7 @@ module.exports = class PHPCSFixer extends Beautifier
             ], {
               ignoreReturnCode: true
               help: {
-                link: "http://php.net/manual/en/install.php"
+                link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
               }
             })
             .then(=>

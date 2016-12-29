@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.29.12",
+  "version": "0.29.14",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
   "repository": {
@@ -110,6 +110,10 @@
     {
       "name": "Elias Baryshnikov",
       "url": "https://github.com/qwemaze"
+    },
+    {
+      "name": "Victor Uriarte",
+      "url": "https://github.com/vmuriart"
     }
   ],
   "engines": {
@@ -122,15 +126,14 @@
     "bluebird": "^3.4.3",
     "coffee-fmt": "^0.12.0",
     "coffee-formatter": "^0.1.2",
-    "coffee-script": "^1.10.0",
+    "coffee-script": "^1.11.0",
     "csscomb": "^3.1.7",
-    "diff": "^3.0.0",
+    "diff": "3.0.0",
     "editorconfig": "^0.13.2",
     "event-kit": "^2.1.0",
     "expand-home-dir": "0.0.3",
     "extend": "^3.0.0",
     "gherkin": "2.12.2",
-    "github": "^3.1.0",
     "handlebars": "^4.0.2",
     "js-beautify": "^1.6.3",
     "jscs": "^3.0.7",
@@ -286,7 +289,8 @@
     "ux markup",
     "cljfmt",
     "bash",
-    "beautysh"
+    "beautysh",
+    "glsl"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
