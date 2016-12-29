@@ -16,6 +16,7 @@ module.exports = class ClangFormat extends Beautifier
     "C++": false
     "C": false
     "Objective-C": false
+    "GLSL": true
   }
 
   ###
