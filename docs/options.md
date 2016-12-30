@@ -6131,7 +6131,7 @@ Disable JSX Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `JS Beautify`
+**Default**: `Pretty Diff`
 
 **Type**: `string`
 
