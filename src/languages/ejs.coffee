@@ -17,7 +17,9 @@ module.exports = {
   ###
   Supported extensions
   ###
-  extensions: []
+  extensions: [
+    "ejs"
+  ]
 
   options: []
 
