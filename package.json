@@ -290,7 +290,8 @@
     "cljfmt",
     "bash",
     "beautysh",
-    "glsl"
+    "glsl",
+    "hh_format"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",

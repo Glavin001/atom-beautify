@@ -9043,18 +9043,18 @@ Specify a configuration file which will override the default name of .perltidyrc
 
 ####  [PHP](#php) 
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`hh_format`](#hh_format)  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
 
-| Option | PHP-CS-Fixer | PHPCBF |
-| --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
-| `cs_fixer_path` | :white_check_mark: | :x: |
-| `fixers` | :white_check_mark: | :x: |
-| `level` | :white_check_mark: | :x: |
-| `phpcbf_path` | :white_check_mark: | :x: |
-| `standard` | :white_check_mark: | :white_check_mark: |
+| Option | PHP-CS-Fixer | PHPCBF | hh_format |
+| --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `cs_fixer_path` | :white_check_mark: | :x: | :x: |
+| `fixers` | :white_check_mark: | :x: | :x: |
+| `level` | :white_check_mark: | :x: | :x: |
+| `phpcbf_path` | :white_check_mark: | :x: | :x: |
+| `standard` | :white_check_mark: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -9085,7 +9085,7 @@ Disable PHP Beautification
 
 **Type**: `string`
 
-**Enum**:  `PHP-CS-Fixer`  `PHPCBF` 
+**Enum**:  `hh_format`  `PHP-CS-Fixer`  `PHPCBF` 
 
 **Description**:
 
