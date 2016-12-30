@@ -83,7 +83,7 @@ install:
 
   # Ruby & Gem
   - cinst ruby -y
-  - "SET PATH=C:\\Ruby193\\bin;%PATH%"
+  - "SET PATH=C:\\tools\\ruby23\\bin;%PATH%"
   # Rubocop
   - gem install rubocop
   - where rubocop
@@ -93,11 +93,16 @@ install:
   # Puppet-Lint
   - gem install puppet-lint
   - where puppet-lint
+  # Sass
+  - gem install sass
+  - where sass-convert
 
   # emacs
   - cinst emacs -y
   - where emacs
 
+  # FIXME: Enable allowEmptyChecksums, until someone fixes the checksum issue of php
+  - choco feature enable -n allowEmptyChecksums
   # PHP
   - cinst php -y
   - ps: "ls \"C:\\tools\\php\""

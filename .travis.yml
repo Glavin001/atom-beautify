@@ -86,8 +86,9 @@ before_install:
   - gem install rubocop
   - gem install htmlbeautifier
   - gem install puppet-lint
+  # Sass language support
+  - gem install sass
   # Python language support
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install python; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
   - pip install --upgrade pip
   - pip install --upgrade autopep8
@@ -96,6 +97,9 @@ before_install:
   - pip install --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - brew install uncrustify
+  # R
+  - brew tap homebrew/science
+  - brew install r
   # PHP
   - brew tap homebrew/homebrew-php
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
@@ -134,3 +138,5 @@ before_install:
   - opam install --yes ocp-indent
   # Crystal
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
+  # Bash
+  - pip install beautysh

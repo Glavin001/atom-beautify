@@ -6,6 +6,17 @@ Please contribute with a Pull Request and add your favourite languages and beaut
 Source code documentation can be found at http://glavin001.github.io/atom-beautify/docs/code/
 You can use [`codo`](https://github.com/coffeedoc/codo) to build your own documentation. Simply run `codo` in the project's directory and it will be generated into `docs/code/`.
 
+## Options Documentation
+
+After you make a change to language or beautifier `options` you will need to update the `options.json` file that is created on install.
+
+```bash
+# Update src/options.json file to have new/changed options
+npm run postinstall
+# Update documentation to include information about those options
+npm run docs
+```
+
 ## How to add a Language:
 
 1. Create a new Language file in https://github.com/Glavin001/atom-beautify/tree/master/src/languages

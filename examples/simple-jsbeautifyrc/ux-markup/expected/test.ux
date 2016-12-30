@@ -1,0 +1,13 @@
+<App>
+  <DockPanel>
+    <StatusBarBackground Dock="Top"/>
+    <ScrollView ClipToBounds="true">
+      <StackPanel>
+        <Text FontSize="30">Hello, world!</Text>
+        <Slider/>
+        <Button Text="Button"/>
+        <Switch Alignment="Left"/>
+      </StackPanel>
+    </ScrollView>
+  </DockPanel>
+</App>

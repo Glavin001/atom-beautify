@@ -11,6 +11,8 @@ module.exports = class JSBeautify extends Beautifier
     Handlebars: true
     Mustache: true
     JavaScript: true
+    EJS: true
+    JSX: true
     JSON: true
     CSS:
       indent_size: true

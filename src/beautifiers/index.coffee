@@ -38,10 +38,12 @@ module.exports = class Beautifiers extends EventEmitter
     'autopep8'
     'coffee-formatter'
     'coffee-fmt'
+    'cljfmt'
     'clang-format'
     'crystal'
     'dfmt'
     'elm-format'
+    'hh_format'
     'htmlbeautifier'
     'csscomb'
     'gherkin'
@@ -62,13 +64,17 @@ module.exports = class Beautifiers extends EventEmitter
     'rubocop'
     'ruby-beautify'
     'rustfmt'
+    'sass-convert'
     'sqlformat'
     'stylish-haskell'
     'tidy-markdown'
     'typescript-formatter'
+    'vue-beautifier'
     'yapf'
     'erl_tidy'
     'marko-beautifier'
+    'formatR'
+    'beautysh'
   ]
 
   ###
@@ -477,13 +483,23 @@ module.exports = class Beautifiers extends EventEmitter
           strip ?= require("strip-json-comments")
           externalOptions = JSON.parse(strip(contents))
         catch e
-
+          jsonError = e.message
           logger.debug "Failed parsing config as JSON: " + configPath
           # Attempt as YAML
           try
             yaml ?= require("yaml-front-matter")
             externalOptions = yaml.safeLoad(contents)
           catch e
+            title = "Atom Beautify failed to parse config as JSON or YAML"
+            detail = """
+                     Parsing '.jsbeautifyrc' at #{configPath}
+                     JSON: #{jsonError}
+                     YAML: #{e.message}
+                     """
+            atom?.notifications.addWarning(title, {
+              detail
+              dismissable : true
+            })
             logger.debug "Failed parsing config as YAML and JSON: " + configPath
             externalOptions = {}
     else

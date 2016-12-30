@@ -110,7 +110,7 @@
     },
     newline_between_rules: {
       type: &#39;boolean&#39;,
-      &quot;default&quot;: false,
+      &quot;default&quot;: true,
       description: &quot;Add a newline between CSS rules&quot;
     },
     preserve_newlines: {
@@ -122,6 +122,11 @@
       type: &#39;integer&#39;,
       &quot;default&quot;: 0,
       description: &quot;Maximum amount of characters per line (0 = disable)&quot;
+    },
+    end_with_newline: {
+      type: &#39;boolean&#39;,
+      &quot;default&quot;: false,
+      description: &quot;End output with newline&quot;
     },
     indent_comments: {
       type: &#39;boolean&#39;,
@@ -173,7 +178,7 @@
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.1.1
+  2.1.2
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;

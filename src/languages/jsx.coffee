@@ -10,6 +10,8 @@ module.exports = {
   grammars: [
     "JSX"
     "JavaScript (JSX)"
+    "Babel ES6 JavaScript"
+    "JavaScript with JSX"
   ]
 
   ###
@@ -19,5 +21,7 @@ module.exports = {
     "jsx",
     "js"
   ]
+
+  defaultBeautifier: "Pretty Diff"
 
 }

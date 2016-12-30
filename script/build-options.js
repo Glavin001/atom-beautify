@@ -11,6 +11,8 @@ _plus = require('underscore-plus');
 
 require("coffee-script/register");
 
+logger = require('../src/logger')(__filename)
+
 Beautifiers = require("../src/beautifiers");
 
 buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
