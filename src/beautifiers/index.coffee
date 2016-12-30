@@ -43,6 +43,7 @@ module.exports = class Beautifiers extends EventEmitter
     'crystal'
     'dfmt'
     'elm-format'
+    'hh_format'
     'htmlbeautifier'
     'csscomb'
     'gherkin'

@@ -101,7 +101,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | OCaml | `OCaml` |`.ml` | [`ocp-indent`](https://www.typerex.org/ocp-indent.html) (Default) |
 | Pawn | `Pawn` | | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Perl | `Perl`, `Perl 6` |`.pl` | [`Perltidy`](http://perltidy.sourceforge.net/) (Default) |
-| PHP | `PHP` |`.php`, `.module`, `.inc` | [`PHP-CS-Fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (Default), [`PHPCBF`](http://php.net/manual/en/install.php) |
+| PHP | `PHP` |`.php`, `.module`, `.inc` | [`PHP-CS-Fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (Default), [`PHPCBF`](http://php.net/manual/en/install.php), [`hh_format`](http://hhvm.com/) |
 | Puppet | `Puppet` |`.pp` | [`puppet-lint`](http://puppet-lint.com/) (Default) |
 | Python | `Python` |`.py` | [`autopep8`](https://github.com/hhatto/autopep8) (Default), [`yapf`](https://github.com/google/yapf) |
 | R | `R` |`.r`, `.R` | [`formatR`](https://github.com/yihui/formatR) (Default) |
