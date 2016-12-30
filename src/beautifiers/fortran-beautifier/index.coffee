@@ -8,6 +8,7 @@ path = require("path")
 
 module.exports = class FortranBeautifier extends Beautifier
   name: "Fortran Beautifier"
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp"
 
   options: {
     Fortran: true
@@ -34,14 +35,12 @@ module.exports = class FortranBeautifier extends Beautifier
       ]
 
     if emacs_path
-      args.unshift("#{emacs_path}")
-
-      @run("python", args, {ignoreReturnCode: true})
+      @run(emacs_path, args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)
         )
     else
-      @run("emacs", args, {ignoreReturnCode: true})
+      @run("emacs", args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)
         )

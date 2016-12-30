@@ -1,10 +1,11 @@
-Promise = require("bluebird")
+Promise = require('bluebird')
 _ = require('lodash')
-fs = require("fs")
-temp = require("temp").track()
-spawn = require('cross-spawn')
+fs = require('fs')
+temp = require('temp').track()
 readFile = Promise.promisify(fs.readFile)
 which = require('which')
+spawn = require('child_process').spawn
+path = require('path')
 
 module.exports = class Beautifier
 
@@ -20,27 +21,26 @@ module.exports = class Beautifier
 
   ###
   Supported Options
-  
+
   Enable options for supported languages.
   - <string:language>:<boolean:all_options_enabled>
   - <string:language>:<string:option_key>:<boolean:enabled>
   - <string:language>:<string:option_key>:<string:rename>
   - <string:language>:<string:option_key>:<function:transform>
   - <string:language>:<string:option_key>:<array:mapper>
-  
   ###
   options: {}
 
   ###
   Supported languages by this Beautifier
-  
+
   Extracted from the keys of the `options` field.
   ###
   languages: null
 
   ###
   Beautify text
-  
+
   Override this method in subclasses
   ###
   beautify: null
@@ -80,6 +80,24 @@ module.exports = class Beautifier
     )
 
   ###
+  Find file
+  ###
+  findFile: (startDir, fileNames) ->
+    throw new Error "Specify file names to find." unless arguments.length
+    unless fileNames instanceof Array
+      fileNames = [fileNames]
+    startDir = startDir.split(path.sep)
+    while startDir.length
+      currentDir = startDir.join(path.sep)
+      for fileName in fileNames
+        filePath = path.join(currentDir, fileName)
+        try
+          fs.accessSync(filePath, fs.R_OK)
+          return filePath
+      startDir.pop()
+    return null
+
+  ###
   If platform is Windows
   ###
   isWindows: do ->
@@ -87,7 +105,7 @@ module.exports = class Beautifier
 
   ###
   Get Shell Environment variables
-  
+
   Special thank you to @ioquatix
   See https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63
   ###
@@ -95,7 +113,7 @@ module.exports = class Beautifier
   _envCacheDate: null
   _envCacheExpiry: 10000 # 10 seconds
   getShellEnvironment: ->
-    return new @Promise((resolve, reject) =>
+    return new Promise((resolve, reject) =>
       # Check Cache
       if @_envCache? and @_envCacheDate?
         # Check if Cache is old
@@ -139,7 +157,7 @@ module.exports = class Beautifier
 
   ###
   Like the unix which utility.
-  
+
   Finds the first instance of a specified executable in the PATH environment variable.
   Does not cache the results,
   so hash -r is not needed when the PATH changes.
@@ -152,6 +170,14 @@ module.exports = class Beautifier
       new Promise((resolve, reject) =>
         options.path ?= env.PATH
         if @isWindows
+          # Environment variables are case-insensitive in windows
+          # Check env for a case-insensitive 'path' variable
+          if !options.path
+            for i of env
+              if i.toLowerCase() is "path"
+                options.path = env[i]
+                break
+
           # Trick node-which into including files
           # with no extension as executables.
           # Put empty extension last to allow for other real extensions first
@@ -165,7 +191,7 @@ module.exports = class Beautifier
 
   ###
   Add help to error.description
-  
+
   Note: error.description is not officially used in JavaScript,
   however it is used internally for Atom Beautify when displaying errors.
   ###
@@ -230,72 +256,80 @@ module.exports = class Beautifier
   ###
   Run command-line interface command
   ###
-  run: (executable, args, {ignoreReturnCode, help} = {}) ->
+  run: (executable, args, {cwd, ignoreReturnCode, help, onStdin} = {}) ->
     # Flatten args first
     args = _.flatten(args)
+
     # Resolve executable and all args
     Promise.all([executable, Promise.all(args)])
-    .then(([exeName, args]) =>
-      @debug('exeName, args:', exeName, args)
-      return new Promise((resolve, reject) =>
-        # Remove undefined/null values
-        args = _.without(args, undefined)
-        args = _.without(args, null)
+      .then(([exeName, args]) =>
+        @debug('exeName, args:', exeName, args)
+
         # Get PATH and other environment variables
-        Promise.all([@getShellEnvironment(), @which(exeName)])
-        .then(([env, exePath]) =>
-          @debug('exePath, env:', exePath, env)
-          exe = exePath ? exeName
-          # Spawn command
-          options = {
-            env: env
-          }
-          cmd = @spawn(exe, args, options)
-            .then(({returnCode, stdout, stderr}) =>
-              @verbose('spawn result', returnCode, stdout, stderr)
-              # If return code is not 0 then error occured
-              if not ignoreReturnCode and returnCode isnt 0
-                err = new Error(stderr)
-                windowsProgramNotFoundMsg = "is not recognized as an \
-                internal or external command" # operable program or batch file
-                @verbose(stderr, windowsProgramNotFoundMsg)
-                if @isWindows and returnCode is 1 and \
-                stderr.indexOf(windowsProgramNotFoundMsg) isnt -1
-                  err = @commandNotFoundError(exeName, help)
-                reject(err)
-              else
-                resolve(stdout)
-            )
-            .catch((err) =>
-              @debug('error', err)
-              # Check if error is ENOENT
-              # (command could not be found)
-              if err.code is 'ENOENT' or err.errno is 'ENOENT'
-                reject(@commandNotFoundError(exeName, help))
-              else
-                # continue as normal error
-                reject(err)
-            )
-        )
+        Promise.all([exeName, args, @getShellEnvironment(), @which(exeName)])
       )
-    )
+      .then(([exeName, args, env, exePath]) =>
+        @debug('exePath, env:', exePath, env)
+        @debug('args', args)
+
+        exe = exePath ? exeName
+        options = {
+          cwd: cwd
+          env: env
+        }
+
+        @spawn(exe, args, options, onStdin)
+          .then(({returnCode, stdout, stderr}) =>
+            @verbose('spawn result', returnCode, stdout, stderr)
+
+            # If return code is not 0 then error occured
+            if not ignoreReturnCode and returnCode isnt 0
+              # operable program or batch file
+              windowsProgramNotFoundMsg = "is not recognized as an internal or external command"
+
+              @verbose(stderr, windowsProgramNotFoundMsg)
+
+              if @isWindows and returnCode is 1 and stderr.indexOf(windowsProgramNotFoundMsg) isnt -1
+                throw @commandNotFoundError(exeName, help)
+              else
+                throw new Error(stderr)
+            else
+              stdout
+          )
+          .catch((err) =>
+            @debug('error', err)
+
+            # Check if error is ENOENT (command could not be found)
+            if err.code is 'ENOENT' or err.errno is 'ENOENT'
+              throw @commandNotFoundError(exeName, help)
+            else
+              # continue as normal error
+              throw err
+          )
+      )
 
   ###
   Spawn
   ###
-  spawn: (exe, args, options) ->
+  spawn: (exe, args, options, onStdin) ->
+    # Remove undefined/null values
+    args = _.without(args, undefined)
+    args = _.without(args, null)
+
     return new Promise((resolve, reject) =>
       @debug('spawn', exe, args)
+
       cmd = spawn(exe, args, options)
-      # add a 'data' event listener for the spawn instance
       stdout = ""
       stderr = ""
-      cmd.stdout.on('data', (data) -> stdout += data )
-      cmd.stderr.on('data', (data) -> stderr += data )
-      # when the spawn child process exits,
-      # check if there were any errors and
-      # close the writeable stream
-      cmd.on('exit', (returnCode) =>
+
+      cmd.stdout.on('data', (data) ->
+        stdout += data
+      )
+      cmd.stderr.on('data', (data) ->
+        stderr += data
+      )
+      cmd.on('close', (returnCode) =>
         @debug('spawn done', returnCode, stderr, stdout)
         resolve({returnCode, stdout, stderr})
       )
@@ -303,6 +337,8 @@ module.exports = class Beautifier
         @debug('error', err)
         reject(err)
       )
+
+      onStdin cmd.stdin if onStdin
     )
 
   ###
@@ -319,7 +355,7 @@ module.exports = class Beautifier
     for key, method of @logger
       # @verbose(key, method)
       @[key] = method
-    @verbose("Beautifier logger has been initialized.")
+    @verbose("#{@name} beautifier logger has been initialized.")
 
   ###
   Constructor to setup beautifer

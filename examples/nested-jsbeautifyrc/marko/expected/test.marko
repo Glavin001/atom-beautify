@@ -1,8 +1,6 @@
-<if test="data.items">
-  <for each="item in data.items">
+<if(data.items)>
+  <for(item in data.items)>
     <div>${item.name}</div>
   </for>
 </if>
-<else>
-  content
-</else>
+<else>content</else>

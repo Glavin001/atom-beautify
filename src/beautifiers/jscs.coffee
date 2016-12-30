@@ -7,6 +7,7 @@ checker = null
 
 module.exports = class JSCSFixer extends Beautifier
   name: "JSCS Fixer"
+  link: "https://github.com/jscs-dev/node-jscs/"
 
   options: {
     JavaScript: false

@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class Yapf extends Beautifier
 
   name: "yapf"
+  link: "https://github.com/google/yapf"
 
   options: {
     Python: false

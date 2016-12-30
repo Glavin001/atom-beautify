@@ -7,6 +7,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class Rubocop extends Beautifier
   name: "Rubocop"
+  link: "https://github.com/bbatsov/rubocop"
 
   options: {
     Ruby:

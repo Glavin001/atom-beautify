@@ -4,6 +4,7 @@ Beautifier = require('./beautifier')
 module.exports = class CoffeeFormatter extends Beautifier
 
   name: "Coffee Formatter"
+  link: "https://github.com/Glavin001/Coffee-Formatter"
 
   options: {
     CoffeeScript: true

@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class Autopep8 extends Beautifier
 
   name: "autopep8"
+  link: "https://github.com/hhatto/autopep8"
 
   options: {
     Python: true

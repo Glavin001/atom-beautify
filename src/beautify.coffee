@@ -27,6 +27,13 @@ $ = null
 # nopt.clean(data, types);
 # return data;
 # }
+getScrollTop = (editor) ->
+  view = atom.views.getView(editor)
+  view?.getScrollTop()
+setScrollTop = (editor, value) ->
+  view = atom.views.getView(editor)
+  view?.setScrollTop value
+
 getCursors = (editor) ->
   cursors = editor.getCursors()
   posArray = []
@@ -65,114 +72,120 @@ showError = (error) ->
     atom.notifications?.addError(error.message, {
       stack, detail, dismissable : true})
 
-beautify = ({onSave}) ->
+beautify = ({editor, onSave}) ->
+  return new Promise((resolve, reject) ->
 
-  plugin.checkUnsupportedOptions()
+    plugin.checkUnsupportedOptions()
 
-  # Continue beautifying
-  path ?= require("path")
-  forceEntireFile = onSave and atom.config.get("atom-beautify.general.beautifyEntireFileOnSave")
+    # Continue beautifying
+    path ?= require("path")
+    forceEntireFile = onSave and atom.config.get("atom-beautify.general.beautifyEntireFileOnSave")
 
-  # Get the path to the config file
-  # All of the options
-  # Listed in order from default (base) to the one with the highest priority
-  # Left = Default, Right = Will override the left.
-  # Atom Editor
-  #
-  # User's Home path
-  # Project path
-  # Asynchronously and callback-style
-  beautifyCompleted = (text) ->
+    # Get the path to the config file
+    # All of the options
+    # Listed in order from default (base) to the one with the highest priority
+    # Left = Default, Right = Will override the left.
+    # Atom Editor
+    #
+    # User's Home path
+    # Project path
+    # Asynchronously and callback-style
+    beautifyCompleted = (text) ->
 
-    if not text?
-      # Do nothing, is undefined
-      # console.log 'beautifyCompleted'
-    else if text instanceof Error
-      showError(text)
-    else if typeof text is "string"
-      if oldText isnt text
+      if not text?
+        # Do nothing, is undefined
+        # console.log 'beautifyCompleted'
+      else if text instanceof Error
+        showError(text)
+        return reject(text)
+      else if typeof text is "string"
+        if oldText isnt text
 
-        # console.log "Replacing current editor's text with new text"
-        posArray = getCursors(editor)
+          # console.log "Replacing current editor's text with new text"
+          posArray = getCursors(editor)
 
-        # console.log "posArray:
-        origScrollTop = editor.getScrollTop()
+          # console.log "posArray:
+          origScrollTop = getScrollTop(editor)
 
-        # console.log "origScrollTop:
-        if not forceEntireFile and isSelection
-          selectedBufferRange = editor.getSelectedBufferRange()
+          # console.log "origScrollTop:
+          if not forceEntireFile and isSelection
+            selectedBufferRange = editor.getSelectedBufferRange()
 
-          # console.log "selectedBufferRange:
-          editor.setTextInBufferRange selectedBufferRange, text
-        else
+            # console.log "selectedBufferRange:
+            editor.setTextInBufferRange selectedBufferRange, text
+          else
 
-          # console.log "setText"
-          editor.setText text
+            # console.log "setText"
+            editor.setText text
 
-        # console.log "setCursors"
-        setCursors editor, posArray
+          # console.log "setCursors"
+          setCursors editor, posArray
 
-        # console.log "Done setCursors"
-        # Let the scrollTop setting run after all the save related stuff is run,
-        # otherwise setScrollTop is not working, probably because the cursor
-        # addition happens asynchronously
-        setTimeout ( ->
+          # console.log "Done setCursors"
+          # Let the scrollTop setting run after all the save related stuff is run,
+          # otherwise setScrollTop is not working, probably because the cursor
+          # addition happens asynchronously
+          setTimeout ( ->
 
-          # console.log "setScrollTop"
-          editor.setScrollTop origScrollTop
-          return
-        ), 0
+            # console.log "setScrollTop"
+            setScrollTop editor, origScrollTop
+            return resolve(text)
+          ), 0
+      else
+        error = new Error("Unsupported beautification result '#{text}'.")
+        showError(error)
+        return reject(error)
+
+      # else
+      # console.log "Already Beautiful!"
+      return
+
+    # console.log 'Beautify time!'
+    #
+    # Get current editor
+    editor = editor ? atom.workspace.getActiveTextEditor()
+
+
+    # Check if there is an active editor
+    if not editor?
+      return showError( new Error("Active Editor not found. "
+        "Please select a Text Editor first to beautify."))
+    isSelection = !!editor.getSelectedText()
+
+
+    # Get editor path and configurations for paths
+    editedFilePath = editor.getPath()
+
+
+    # Get all options
+    allOptions = beautifier.getOptionsForPath(editedFilePath, editor)
+
+
+    # Get current editor's text
+    text = undefined
+    if not forceEntireFile and isSelection
+      text = editor.getSelectedText()
     else
-      showError( new Error("Unsupported beautification result '#{text}'."))
+      text = editor.getText()
+    oldText = text
 
-    # else
-    # console.log "Already Beautiful!"
+
+    # Get Grammar
+    grammarName = editor.getGrammar().name
+
+
+    # Finally, beautify!
+    try
+      beautifier.beautify(text, allOptions, grammarName, editedFilePath, onSave : onSave)
+      .then(beautifyCompleted)
+      .catch(beautifyCompleted)
+    catch e
+      showError(e)
     return
-
-  # console.log 'Beautify time!'
-  #
-  # Get current editor
-  editor = atom.workspace.getActiveTextEditor()
-
-
-  # Check if there is an active editor
-  if not editor?
-    return showError( new Error("Active Editor not found. "
-      "Please select a Text Editor first to beautify."))
-  isSelection = !!editor.getSelectedText()
-
-
-  # Get editor path and configurations for paths
-  editedFilePath = editor.getPath()
-
-
-  # Get all options
-  allOptions = beautifier.getOptionsForPath(editedFilePath, editor)
-
-
-  # Get current editor's text
-  text = undefined
-  if not forceEntireFile and isSelection
-    text = editor.getSelectedText()
-  else
-    text = editor.getText()
-  oldText = text
-
-
-  # Get Grammar
-  grammarName = editor.getGrammar().name
-
-
-  # Finally, beautify!
-  try
-    beautifier.beautify(text, allOptions, grammarName, editedFilePath, onSave : onSave)
-    .then(beautifyCompleted)
-    .catch(beautifyCompleted)
-  catch e
-    showError(e)
-  return
+  )
 
 beautifyFilePath = (filePath, callback) ->
+  logger.verbose('beautifyFilePath', filePath)
 
   # Show in progress indicate on file's tree-view entry
   $ ?= require("atom-space-pen-views").$
@@ -181,13 +194,16 @@ beautifyFilePath = (filePath, callback) ->
 
   # Cleanup and return callback function
   cb = (err, result) ->
+    logger.verbose('Cleanup beautifyFilePath', err, result)
     $el = $(".icon-file-text[data-path=\"#{filePath}\"]")
     $el.removeClass('beautifying')
     return callback(err, result)
 
   # Get contents of file
   fs ?= require "fs"
+  logger.verbose('readFile', filePath)
   fs.readFile(filePath, (err, data) ->
+    logger.verbose('readFile completed', err, filePath)
     return cb(err) if err
     input = data?.toString()
     grammar = atom.grammars.selectGrammar(filePath, input)
@@ -195,14 +211,18 @@ beautifyFilePath = (filePath, callback) ->
 
     # Get the options
     allOptions = beautifier.getOptionsForPath(filePath)
+    logger.verbose('beautifyFilePath allOptions', allOptions)
 
     # Beautify File
     completionFun = (output) ->
+      logger.verbose('beautifyFilePath completionFun', output)
       if output instanceof Error
         return cb(output, null ) # output == Error
       else if typeof output is "string"
         # do not allow empty string
-        return cb(null, output) if output is ''
+        if output.trim() is ''
+          logger.verbose('beautifyFilePath, output was empty string!')
+          return cb(null, output)
         # save to file
         fs.writeFile(filePath, output, (err) ->
           return cb(err) if err
@@ -211,6 +231,7 @@ beautifyFilePath = (filePath, callback) ->
       else
         return cb( new Error("Unknown beautification result #{output}."), output)
     try
+      logger.verbose('beautify', input, allOptions, grammarName, filePath)
       beautifier.beautify(input, allOptions, grammarName, filePath)
       .then(completionFun)
       .catch(completionFun)
@@ -260,211 +281,263 @@ beautifyDirectory = ({target}) ->
   return
 
 debug = () ->
+  try
+    open = require("open")
+    fs ?= require "fs"
+    GitHubApi = require("github")
+    github = new GitHubApi()
 
-  plugin.checkUnsupportedOptions()
+    plugin.checkUnsupportedOptions()
 
-  # Get current editor
-  editor = atom.workspace.getActiveTextEditor()
+    # Get current editor
+    editor = atom.workspace.getActiveTextEditor()
 
-  linkifyTitle = (title) ->
-    title = title.toLowerCase()
-    p = title.split(/[\s,+#;,\/?:@&=+$]+/) # split into parts
-    sep = "-"
-    p.join(sep)
+    linkifyTitle = (title) ->
+      title = title.toLowerCase()
+      p = title.split(/[\s,+#;,\/?:@&=+$]+/) # split into parts
+      sep = "-"
+      p.join(sep)
 
-  # Check if there is an active editor
-  if not editor?
-    return confirm("Active Editor not found.\n" +
-    "Please select a Text Editor first to beautify.")
-  return unless confirm('Are you ready to debug Atom Beautify?\n\n' +
-  'Warning: This will change your current clipboard contents.')
-  debugInfo = ""
-  headers = []
-  tocEl = "<TABLEOFCONTENTS/>"
-  addInfo = (key, val) ->
-    if key?
-      debugInfo += "**#{key}**: #{val}\n\n"
-    else
-      debugInfo += "#{val}\n\n"
-  addHeader = (level, title) ->
-    debugInfo += "#{Array(level+1).join('#')} #{title}\n\n"
-    headers.push({
-      level, title
-      })
-  addHeader(1, "Atom Beautify - Debugging information")
-  debugInfo += "The following debugging information was " +
-  "generated by `Atom Beautify` on `#{new Date()}`." +
-  "\n\n---\n\n" +
-  tocEl +
-  "\n\n---\n\n"
+    # Check if there is an active editor
+    if not editor?
+      return confirm("Active Editor not found.\n" +
+      "Please select a Text Editor first to beautify.")
+    return unless confirm('Are you ready to debug Atom Beautify?\n\n'+
+    'Warning: This will create an anonymous Gist on GitHub (publically accessible and cannot be easily deleted) '+
+    'containing the contents of your active Text Editor.\n'+
+    'Be sure to delete any private text from your active Text Editor before continuing '+
+    'to ensure you are not sharing undesirable private information.')
+    debugInfo = ""
+    headers = []
+    tocEl = "<TABLEOFCONTENTS/>"
+    addInfo = (key, val) ->
+      if key?
+        debugInfo += "**#{key}**: #{val}\n\n"
+      else
+        debugInfo += "#{val}\n\n"
+    addHeader = (level, title) ->
+      debugInfo += "#{Array(level+1).join('#')} #{title}\n\n"
+      headers.push({
+        level, title
+        })
+    addHeader(1, "Atom Beautify - Debugging information")
+    debugInfo += "The following debugging information was " +
+    "generated by `Atom Beautify` on `#{new Date()}`." +
+    "\n\n---\n\n" +
+    tocEl +
+    "\n\n---\n\n"
 
-  # Platform
-  addInfo('Platform', process.platform)
-  addHeader(2, "Versions")
-
-
-  # Atom Version
-  addInfo('Atom Version', atom.appVersion)
-
-
-  # Atom Beautify Version
-  addInfo('Atom Beautify Version', pkg.version)
-  addHeader(2, "Original file to be beautified")
+    # Platform
+    addInfo('Platform', process.platform)
+    addHeader(2, "Versions")
 
 
-  # Original file
-  #
-  # Get editor path and configurations for paths
-  filePath = editor.getPath()
+    # Atom Version
+    addInfo('Atom Version', atom.appVersion)
 
-  # Path
-  addInfo('Original File Path', "`#{filePath}`")
 
-  # Get Grammar
-  grammarName = editor.getGrammar().name
+    # Atom Beautify Version
+    addInfo('Atom Beautify Version', pkg.version)
+    addHeader(2, "Original file to be beautified")
 
-  # Grammar
-  addInfo('Original File Grammar', grammarName)
 
-  # Language
-  language = beautifier.getLanguage(grammarName, filePath)
-  addInfo('Original File Language', language?.name)
-  addInfo('Language namespace', language?.namespace)
-
-  # Beautifier
-  beautifiers = beautifier.getBeautifiers(language.name)
-  addInfo('Supported Beautifiers', _.map(beautifiers, 'name').join(', '))
-  selectedBeautifier = beautifier.getBeautifierForLanguage(language)
-  addInfo('Selected Beautifier', selectedBeautifier.name)
-
-  # Get current editor's text
-  text = editor.getText()
-
-  # Contents
-  codeBlockSyntax = (language?.name ? grammarName).toLowerCase().split(' ')[0]
-  addHeader(3, 'Original File Contents')
-  addInfo(null, "\n```#{codeBlockSyntax}\n#{text}\n```")
-
-  addHeader(3, 'Package Settings')
-  addInfo(null,
-    "The raw package settings options\n" +
-    "```json\n#{JSON.stringify(atom.config.get('atom-beautify'), undefined, 4)}\n```")
-
-  # Beautification Options
-  addHeader(2, "Beautification options")
-  # Get all options
-  allOptions = beautifier.getOptionsForPath(filePath, editor)
-  # Resolve options with promises
-  Promise.all(allOptions)
-  .then((allOptions) ->
-    # Extract options
-    [
-        editorOptions
-        configOptions
-        homeOptions
-        editorConfigOptions
-    ] = allOptions
-    projectOptions = allOptions[4..]
-
-    preTransformedOptions = beautifier.getOptionsForLanguage(allOptions, language)
-
-    if selectedBeautifier
-      finalOptions = beautifier.transformOptions(selectedBeautifier, language.name, preTransformedOptions)
-
-    # Show options
-    # addInfo('All Options', "\n" +
-    # "All options extracted for file\n" +
-    # "```json\n#{JSON.stringify(allOptions, undefined, 4)}\n```")
-    addInfo('Editor Options', "\n" +
-    "Options from Atom Editor settings\n" +
-    "```json\n#{JSON.stringify(editorOptions, undefined, 4)}\n```")
-    addInfo('Config Options', "\n" +
-    "Options from Atom Beautify package settings\n" +
-    "```json\n#{JSON.stringify(configOptions, undefined, 4)}\n```")
-    addInfo('Home Options', "\n" +
-    "Options from `#{path.resolve(beautifier.getUserHome(), '.jsbeautifyrc')}`\n" +
-    "```json\n#{JSON.stringify(homeOptions, undefined, 4)}\n```")
-    addInfo('EditorConfig Options', "\n" +
-    "Options from [EditorConfig](http://editorconfig.org/) file\n" +
-    "```json\n#{JSON.stringify(editorConfigOptions, undefined, 4)}\n```")
-    addInfo('Project Options', "\n" +
-    "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
-    "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
-    addInfo('Pre-Transformed Options', "\n" +
-    "Combined options before transforming them given a beautifier's specifications\n" +
-    "```json\n#{JSON.stringify(preTransformedOptions, undefined, 4)}\n```")
-    if selectedBeautifier
-      addHeader(3, 'Final Options')
-      addInfo(null,
-        "Final combined and transformed options that are used\n" +
-        "```json\n#{JSON.stringify(finalOptions, undefined, 4)}\n```")
-
+    # Original file
     #
-    logs = ""
-    logFilePathRegex = new RegExp('\\: \\[(.*)\\]')
-    subscription = logger.onLogging((msg) ->
-      # console.log('logging', msg)
-      sep = path.sep
-      logs += msg.replace(logFilePathRegex, (a,b) ->
-        s = b.split(sep)
-        i = s.indexOf('atom-beautify')
-        p = s.slice(i+2).join(sep)
-        # console.log('logging', arguments, s, i, p)
-        return ': ['+p+']'
+    # Get editor path and configurations for paths
+    filePath = editor.getPath()
+
+    # Path
+    addInfo('Original File Path', "`#{filePath}`")
+
+    # Get Grammar
+    grammarName = editor.getGrammar().name
+
+    # Grammar
+    addInfo('Original File Grammar', grammarName)
+
+    # Language
+    language = beautifier.getLanguage(grammarName, filePath)
+    addInfo('Original File Language', language?.name)
+    addInfo('Language namespace', language?.namespace)
+
+    # Beautifier
+    beautifiers = beautifier.getBeautifiers(language.name)
+    addInfo('Supported Beautifiers', _.map(beautifiers, 'name').join(', '))
+    selectedBeautifier = beautifier.getBeautifierForLanguage(language)
+    addInfo('Selected Beautifier', selectedBeautifier.name)
+
+    # Get current editor's text
+    text = editor.getText() or ""
+
+    # Contents
+    codeBlockSyntax = (language?.name ? grammarName).toLowerCase().split(' ')[0]
+    addHeader(3, 'Original File Contents')
+    addInfo(null, "\n```#{codeBlockSyntax}\n#{text}\n```")
+
+    addHeader(3, 'Package Settings')
+    addInfo(null,
+      "The raw package settings options\n" +
+      "```json\n#{JSON.stringify(atom.config.get('atom-beautify'), undefined, 4)}\n```")
+
+    # Beautification Options
+    addHeader(2, "Beautification options")
+    # Get all options
+    allOptions = beautifier.getOptionsForPath(filePath, editor)
+    # Resolve options with promises
+    Promise.all(allOptions)
+    .then((allOptions) ->
+      # Extract options
+      [
+          editorOptions
+          configOptions
+          homeOptions
+          editorConfigOptions
+      ] = allOptions
+      projectOptions = allOptions[4..]
+
+      preTransformedOptions = beautifier.getOptionsForLanguage(allOptions, language)
+
+      if selectedBeautifier
+        finalOptions = beautifier.transformOptions(selectedBeautifier, language.name, preTransformedOptions)
+
+      # Show options
+      # addInfo('All Options', "\n" +
+      # "All options extracted for file\n" +
+      # "```json\n#{JSON.stringify(allOptions, undefined, 4)}\n```")
+      addInfo('Editor Options', "\n" +
+      "Options from Atom Editor settings\n" +
+      "```json\n#{JSON.stringify(editorOptions, undefined, 4)}\n```")
+      addInfo('Config Options', "\n" +
+      "Options from Atom Beautify package settings\n" +
+      "```json\n#{JSON.stringify(configOptions, undefined, 4)}\n```")
+      addInfo('Home Options', "\n" +
+      "Options from `#{path.resolve(beautifier.getUserHome(), '.jsbeautifyrc')}`\n" +
+      "```json\n#{JSON.stringify(homeOptions, undefined, 4)}\n```")
+      addInfo('EditorConfig Options', "\n" +
+      "Options from [EditorConfig](http://editorconfig.org/) file\n" +
+      "```json\n#{JSON.stringify(editorConfigOptions, undefined, 4)}\n```")
+      addInfo('Project Options', "\n" +
+      "Options from `.jsbeautifyrc` files starting from directory `#{path.dirname(filePath)}` and going up to root\n" +
+      "```json\n#{JSON.stringify(projectOptions, undefined, 4)}\n```")
+      addInfo('Pre-Transformed Options', "\n" +
+      "Combined options before transforming them given a beautifier's specifications\n" +
+      "```json\n#{JSON.stringify(preTransformedOptions, undefined, 4)}\n```")
+      if selectedBeautifier
+        addHeader(3, 'Final Options')
+        addInfo(null,
+          "Final combined and transformed options that are used\n" +
+          "```json\n#{JSON.stringify(finalOptions, undefined, 4)}\n```")
+
+      #
+      logs = ""
+      logFilePathRegex = new RegExp('\\: \\[(.*)\\]')
+      subscription = logger.onLogging((msg) ->
+        # console.log('logging', msg)
+        sep = path.sep
+        logs += msg.replace(logFilePathRegex, (a,b) ->
+          s = b.split(sep)
+          i = s.indexOf('atom-beautify')
+          p = s.slice(i+2).join(sep)
+          # console.log('logging', arguments, s, i, p)
+          return ': ['+p+']'
+        )
       )
+      cb = (result) ->
+        subscription.dispose()
+        addHeader(2, "Results")
+
+        # Logs
+        addInfo('Beautified File Contents', "\n```#{codeBlockSyntax}\n#{result}\n```")
+        # Diff
+        JsDiff = require('diff')
+        if typeof result is "string"
+          diff = JsDiff.createPatch(filePath or "", text or "", \
+            result or "", "original", "beautified")
+          addInfo('Original vs. Beautified Diff', "\n```#{codeBlockSyntax}\n#{diff}\n```")
+
+        addHeader(3, "Logs")
+        addInfo(null, "```\n#{logs}\n```")
+
+        # Build Table of Contents
+        toc = "## Table Of Contents\n"
+        for header in headers
+          ###
+          - Heading 1
+            - Heading 1.1
+          ###
+          indent = "  " # 2 spaces
+          bullet = "-"
+          indentNum = header.level - 2
+          if indentNum >= 0
+            toc += ("#{Array(indentNum+1).join(indent)}#{bullet} [#{header.title}](\##{linkifyTitle(header.title)})\n")
+        # Replace TABLEOFCONTENTS
+        debugInfo = debugInfo.replace(tocEl, toc)
+
+        # Save to clipboard
+        # atom.clipboard.write(debugInfo)
+        github.gists.create({
+          files: {
+            "debug.md": {
+              "content": debugInfo
+            }
+          },
+          public: true,
+          description: "Atom-Beautify debugging information"
+        }, (err, res) ->
+          # console.log(err, res)
+          if err
+            confirm("An error occurred when creating the Gist: "+err)
+          else
+            gistUrl = res.html_url
+            # Create Gist
+            open(gistUrl)
+            confirm("Your Atom Beautify debugging information can be found in the public Gist:\n#{res.html_url}\n\n" +
+              # 'You can now paste this into an Issue you are reporting here\n' +
+              # 'https://github.com/Glavin001/atom-beautify/issues/\n\n' +
+              # 'Please follow the contribution guidelines found at\n' +
+              # 'https://github.com/Glavin001/atom-beautify/blob/master/CONTRIBUTING.md\n\n' +
+              'Warning: Be sure to look over the debug info before you send it '+
+              'to ensure you are not sharing undesirable private information.\n\n'+
+              'If you want to delete this anonymous Gist read\n'+
+              'https://help.github.com/articles/deleting-an-anonymous-gist/'
+            )
+            # Create GitHub Issue
+            return unless confirm("Would you like to create a new Issue on GitHub now?")
+            issueTemplate = fs.readFileSync(path.resolve(__dirname, "../ISSUE_TEMPLATE.md")).toString()
+            body = issueTemplate.replace("<INSERT GIST HERE>", gistUrl)#.replace("<INSERT CODE HERE>", text)
+            open("https://github.com/Glavin001/atom-beautify/issues/new?body=#{encodeURIComponent(body)}")
+
+        )
+      try
+        beautifier.beautify(text, allOptions, grammarName, filePath)
+        .then(cb)
+        .catch(cb)
+      catch e
+        return cb(e)
     )
-    cb = (result) ->
-      subscription.dispose()
-      addHeader(2, "Results")
-
-      # Logs
-      addInfo('Beautified File Contents', "\n```#{codeBlockSyntax}\n#{result}\n```")
-      # Diff
-      JsDiff = require('diff')
-      diff = JsDiff.createPatch(filePath, text, \
-        result, "original", "beautified")
-      addInfo('Original vs. Beautified Diff', "\n```#{codeBlockSyntax}\n#{diff}\n```")
-
-      addHeader(3, "Logs")
-      addInfo(null, "```\n#{logs}\n```")
-
-      # Build Table of Contents
-      toc = "## Table Of Contents\n"
-      for header in headers
-        ###
-        - Heading 1
-          - Heading 1.1
-        ###
-        indent = "  " # 2 spaces
-        bullet = "-"
-        indentNum = header.level - 2
-        if indentNum >= 0
-          toc += ("#{Array(indentNum+1).join(indent)}#{bullet} [#{header.title}](\##{linkifyTitle(header.title)})\n")
-      # Replace TABLEOFCONTENTS
-      debugInfo = debugInfo.replace(tocEl, toc)
-
-      # Save to clipboard
-      atom.clipboard.write(debugInfo)
-      confirm('Atom Beautify debugging information is now in your clipboard.\n' +
-      'You can now paste this into an Issue you are reporting here\n' +
-      'https://github.com/Glavin001/atom-beautify/issues/\n\n' +
-      'Please follow the contribution guidelines found at\n' +
-      'https://github.com/Glavin001/atom-beautify/blob/master/CONTRIBUTING.md\n\n' +
-      'Warning: Be sure to look over the debug info before you send it, '+
-      'to ensure you are not sharing undesirable private information.'
-      )
-    try
-      beautifier.beautify(text, allOptions, grammarName, filePath)
-      .then(cb)
-      .catch(cb)
-    catch e
-      return cb(e)
-  )
+    .catch((error) ->
+      stack = error.stack
+      detail = error.description or error.message
+      atom?.notifications?.addError(error.message, {
+        stack, detail, dismissable : true
+      })
+    )
+  catch error
+    stack = error.stack
+    detail = error.description or error.message
+    atom?.notifications?.addError(error.message, {
+      stack, detail, dismissable : true
+    })
 
 handleSaveEvent = ->
   atom.workspace.observeTextEditors (editor) ->
-    buffer = editor.getBuffer()
-    disposable = buffer.onDidSave(({path : filePath}) ->
+    pendingPaths = {}
+    beautifyOnSaveHandler = ({path: filePath}) ->
+      logger.verbose('Should beautify on this save?')
+      if pendingPaths[filePath]
+        logger.verbose("Editor with file path #{filePath} already beautified!")
+        return
+      buffer = editor.getBuffer()
       path ?= require('path')
       # Get Grammar
       grammar = editor.getGrammar().name
@@ -483,23 +556,28 @@ handleSaveEvent = ->
       beautifyOnSave = atom.config.get(key)
       logger.verbose('save editor positions', key, beautifyOnSave)
       if beautifyOnSave
-        posArray = getCursors(editor)
-        origScrollTop = editor.getScrollTop()
-        beautifyFilePath(filePath, ->
+        logger.verbose('Beautifying file', filePath)
+        beautify({editor, onSave: true})
+        .then(() ->
+          logger.verbose('Done beautifying file', filePath)
           if editor.isAlive() is true
-            buffer.reload()
-            logger.verbose('restore editor positions', posArray,origScrollTop)
-            # Let the scrollTop setting run after all the save related stuff is run,
-            # otherwise setScrollTop is not working, probably because the cursor
-            # addition happens asynchronously
-            setTimeout ( ->
-              setCursors(editor, posArray)
-              editor.setScrollTop(origScrollTop)
-              # console.log "setScrollTop"
-              return
-            ), 0
+            logger.verbose('Saving TextEditor...')
+            # Store the filePath to prevent infinite looping
+            # When Whitespace package has option "Ensure Single Trailing Newline" enabled
+            # It will add a newline and keep the file from converging on a beautified form
+            # and saving without emitting onDidSave event, because there were no changes.
+            pendingPaths[filePath] = true
+            editor.save()
+            delete pendingPaths[filePath]
+            logger.verbose('Saved TextEditor.')
         )
-      )
+        .catch((error) ->
+          return showError(error)
+        )
+    disposable = editor.onDidSave(({path : filePath}) ->
+      # TODO: Implement debouncing
+      beautifyOnSaveHandler({path: filePath})
+    )
     plugin.subscriptions.add disposable
 
 getUnsupportedOptions = ->
@@ -515,7 +593,10 @@ getUnsupportedOptions = ->
 plugin.checkUnsupportedOptions = ->
   unsupportedOptions = getUnsupportedOptions()
   if unsupportedOptions.length isnt 0
-    atom.notifications.addWarning("You have unsupported options: #{unsupportedOptions.join(', ')} <br> Please run Atom command 'Atom-Beautify: Migrate Settings'.")
+    atom.notifications.addWarning("Please run Atom command 'Atom-Beautify: Migrate Settings'.", {
+      detail : "You can open the Atom command palette with `cmd-shift-p` (OSX) or `ctrl-shift-p` (Linux/Windows) in Atom. You have unsupported options: #{unsupportedOptions.join(', ')}",
+      dismissable : true
+    })
 
 plugin.migrateSettings = ->
   unsupportedOptions = getUnsupportedOptions()
@@ -539,9 +620,9 @@ plugin.migrateSettings = ->
 
     # Move all option values to renamed key
     _.each(rename, ([key, newKey]) ->
-      # console.log('rename', key, newKey)
       # Copy to new key
       val = atom.config.get("atom-beautify.#{key}")
+      # console.log('rename', key, newKey, val)
       atom.config.set("atom-beautify.#{newKey}", val)
       # Delete old key
       atom.config.set("atom-beautify.#{key}", undefined)

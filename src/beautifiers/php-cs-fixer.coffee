@@ -4,19 +4,22 @@ Requires https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 "use strict"
 Beautifier = require('./beautifier')
+path = require('path')
 
 module.exports = class PHPCSFixer extends Beautifier
-  name: "PHP-CS-Fixer"
 
-  options: {
+  name: 'PHP-CS-Fixer'
+  link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+
+  options:
     PHP: true
-  }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, context) ->
     @debug('php-cs-fixer', options)
 
-    isWin = @isWindows
-    if isWin
+    configFile = if context? and context.filePath? then @findFile(path.dirname(context.filePath), '.php_cs')
+
+    if @isWindows
       # Find php-cs-fixer.phar script
       @Promise.all([
         @which(options.cs_fixer_path) if options.cs_fixer_path
@@ -24,7 +27,6 @@ module.exports = class PHPCSFixer extends Beautifier
       ]).then((paths) =>
         @debug('php-cs-fixer paths', paths)
         _ = require 'lodash'
-        path = require 'path'
         # Get first valid, absolute path
         phpCSFixerPath = _.find(paths, (p) -> p and path.isAbsolute(p) )
         @verbose('phpCSFixerPath', phpCSFixerPath)
@@ -37,11 +39,12 @@ module.exports = class PHPCSFixer extends Beautifier
             "fix"
             "--level=#{options.level}" if options.level
             "--fixers=#{options.fixers}" if options.fixers
+            "--config-file=#{configFile}" if configFile
             tempFile = @tempFile("temp", text)
             ], {
               ignoreReturnCode: true
               help: {
-                link: "http://php.net/manual/en/install.php"
+                link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
               }
             })
             .then(=>
@@ -64,6 +67,7 @@ module.exports = class PHPCSFixer extends Beautifier
         "fix"
         "--level=#{options.level}" if options.level
         "--fixers=#{options.fixers}" if options.fixers
+        "--config-file=#{configFile}" if configFile
         tempFile = @tempFile("temp", text)
         ], {
           ignoreReturnCode: true

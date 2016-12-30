@@ -3,6 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class PugBeautify extends Beautifier
   name: "Pug Beautify"
+  link: "https://github.com/vingorius/pug-beautify"
   options: {
     # Apply these options first / globally, for all languages
     Jade:

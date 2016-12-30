@@ -45,7 +45,7 @@ module.exports = {
       description: "Add a newline between multiple selectors"
     newline_between_rules:
       type: 'boolean'
-      default: false
+      default: true
       description: "Add a newline between CSS rules"
     preserve_newlines:
       type: 'boolean'
@@ -57,6 +57,10 @@ module.exports = {
       type: 'integer'
       default: 0
       description: "Maximum amount of characters per line (0 = disable)"
+    end_with_newline:
+      type: 'boolean'
+      default: false
+      description: "End output with newline"
     indent_comments:
       type: 'boolean'
       default: true

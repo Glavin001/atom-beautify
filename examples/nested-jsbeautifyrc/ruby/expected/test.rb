@@ -5,9 +5,7 @@ conn_hash = { hosts: [
     { login: login, passcode: passcode, host: host, port: port }
 ],
               reliable: false, # Override default
-              connect_headers: conn_hdrs
-
-}
+              connect_headers: conn_hdrs }
 
 hash = { hosts: [
 
@@ -19,6 +17,4 @@ hash = { hosts: [
 
          logger: mylog,	# This enables callback logging!
 
-         max_reconnect_attempts: 5
-
-        }
+         max_reconnect_attempts: 5 }

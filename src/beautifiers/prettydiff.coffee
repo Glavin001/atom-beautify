@@ -3,11 +3,18 @@ Beautifier = require('./beautifier')
 
 module.exports = class PrettyDiff extends Beautifier
   name: "Pretty Diff"
+  link: "https://github.com/prettydiff/prettydiff"
   options: {
     # Apply these options first / globally, for all languages
     _:
-      inchar: "indent_char"
-      insize: "indent_size"
+      inchar: ["indent_with_tabs", "indent_char", (indent_with_tabs, indent_char) ->
+        if (indent_with_tabs is true) then \
+          "\t" else indent_char
+      ]
+      insize: ["indent_with_tabs", "indent_size", (indent_with_tabs, indent_size) ->
+        if (indent_with_tabs is true) then \
+          1 else indent_size
+      ]
       objsort: (objsort) ->
         objsort or false
       preserve: ['preserve_newlines', (preserve_newlines) ->
@@ -34,12 +41,15 @@ module.exports = class PrettyDiff extends Beautifier
           false else true
       ]
       ternaryline: "preserve_ternary_lines"
+      bracepadding: "space_in_paren"
     # Apply language-specific options
     CSV: true
     Coldfusion: true
     ERB: true
     EJS: true
     HTML: true
+    Handlebars: true
+    Nunjucks: true
     XML: true
     SVG: true
     Spacebars: true
@@ -47,12 +57,12 @@ module.exports = class PrettyDiff extends Beautifier
     JavaScript: true
     CSS: true
     SCSS: true
-    Sass: true
     JSON: true
     TSS: true
     Twig: true
     LESS: true
     Swig: true
+    "UX Markup": true
     Visualforce: true
     "Riot.js": true
     XTemplate: true
@@ -81,7 +91,7 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "markup"
         when "XML", "Visualforce", "SVG"
           lang = "xml"
-        when "HTML"
+        when "HTML", "Nunjucks", "UX Markup"
           lang = "html"
         when "JavaScript"
           lang = "javascript"
@@ -95,7 +105,7 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "css"
         when "LESS"
           lang = "less"
-        when "SCSS", "Sass"
+        when "SCSS"
           lang = "scss"
         when "TSS"
           lang = "tss"

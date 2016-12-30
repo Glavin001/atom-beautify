@@ -10,6 +10,7 @@ fs = require('fs')
 module.exports = class ClangFormat extends Beautifier
 
   name: "clang-format"
+  link: "https://clang.llvm.org/docs/ClangFormat.html"
 
   options: {
     "C++": false
@@ -21,7 +22,7 @@ module.exports = class ClangFormat extends Beautifier
     Dump contents to a given file
   ###
   dumpToFile: (name = "atom-beautify-dump", contents = "") ->
-    return new Promise((resolve, reject) =>
+    return new @Promise((resolve, reject) =>
       fs.open(name, "w", (err, fd) =>
         @debug('dumpToFile', name, err, fd)
         return reject(err) if err

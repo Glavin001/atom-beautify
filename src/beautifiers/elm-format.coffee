@@ -6,6 +6,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class ElmFormat extends Beautifier
   name: "elm-format"
+  link: "https://github.com/avh4/elm-format"
 
   options: {
     Elm: true
@@ -18,7 +19,7 @@ module.exports = class ElmFormat extends Beautifier
         '--yes',
         name
         ],
-        { help: { link: 'https://github.com/avh4/elm-format' } }
+        { help: { link: 'https://github.com/avh4/elm-format#installation-' } }
       )
       .then () =>
         @readFile(name)

@@ -1,41 +1,49 @@
-### Description
+# Description
 
 The results of beautification are not what I expect.
 
-### Expected Results
+# Input Before Beautification
 
-The beautified code should have looked like:
+This is what the code looked like before:
 
 ```
 <INSERT CODE HERE>
 ```
 
-### Steps to Reproduce
+# Expected Output
+
+The beautified code should have looked like this:
+
+```
+<INSERT CODE HERE>
+```
+
+# Actual Output
+
+The beautified code actually looked like this:
+
+```
+<INSERT CODE HERE>
+```
+
+
+# Steps to Reproduce
 
 1. Add code to Atom editor
 2. Run command `Atom Beautify: Beautify Editor`
 3. This beautified code does not look right!
 
-### Debug
+# Debug
 
-Here is a link to the `debug.md` Gist: https://gist.github.com/...
-
-#### How to create `debug.md` Gist
-
-Note that this will include a copy of your code.
-If your code is private, please create a different sample of code that reproduces the problem.
-
-1. In the Atom [command-palette](https://atom.io/packages/command-palette), 
-search for and run the command `Atom Beautify: Help Debug Editor`. 
-The debugging results will be copied to your clipboard.  
-2. Create a new Gist at https://gist.github.com/  
-3. Create a file in your new Gist called `debug.md`.  
-4. Paste your debugging results from Atom beautify into `debug.md` file in your Gist.  
-5. Add a link to your Gist in your new Issue.
+Here is a link to the `debug.md` Gist: <INSERT GIST HERE>
 
 # Checklist
 
-- [ ] I have tried uninstalling and reinstalling Atom Beautify to ensure it installed properly
-- [ ] Searched for existing Atom Beautify Issues at https://github.com/Glavin001/atom-beautify/issues 
+I have:
+- [ ] Tried uninstalling and reinstalling Atom Beautify to ensure it installed properly
+- [ ] Reloaded (or restarted) Atom to ensure it is not a caching issue
+- [ ] Searched through existing Atom Beautify Issues at https://github.com/Glavin001/atom-beautify/issues
 so I know this is not a duplicate issue
+- [ ] Filled out the Input, Expected, and Actual sections above or have edited/removed them in a way that fully describes the issue.
 - [ ] Generated debugging information and added link for `debug.md` Gist to this issue
+

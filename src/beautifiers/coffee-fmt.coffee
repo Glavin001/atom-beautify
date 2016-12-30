@@ -3,6 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class CoffeeFmt extends Beautifier
   name: "coffee-fmt"
+  link: "https://github.com/sterpe/coffee-fmt"
 
   options: {
     # Apply language-specific options

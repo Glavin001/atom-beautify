@@ -8,7 +8,7 @@ logger = require('../logger')(__filename)
 
 # Lazy loaded dependencies
 extend = null
-Analytics = null
+ua = null
 fs = null
 strip = null
 yaml = null
@@ -17,11 +17,12 @@ editorconfig = null
 # Misc
 {allowUnsafeEval} = require 'loophole'
 allowUnsafeEval ->
-  Analytics = require("analytics-node")
+  ua = require("universal-analytics")
 pkg = require("../../package.json")
+version = pkg.version
 
 # Analytics
-analyticsWriteKey = "u3c26xkae8"
+trackingId = "UA-52729731-2"
 
 ###
 Register all supported beautifiers
@@ -37,7 +38,9 @@ module.exports = class Beautifiers extends EventEmitter
     'autopep8'
     'coffee-formatter'
     'coffee-fmt'
+    'cljfmt'
     'clang-format'
+    'crystal'
     'dfmt'
     'elm-format'
     'htmlbeautifier'
@@ -48,6 +51,8 @@ module.exports = class Beautifiers extends EventEmitter
     'fortran-beautifier'
     'js-beautify'
     'jscs'
+    'lua-beautifier'
+    'ocp-indent'
     'perltidy'
     'php-cs-fixer'
     'phpcbf'
@@ -58,12 +63,16 @@ module.exports = class Beautifiers extends EventEmitter
     'rubocop'
     'ruby-beautify'
     'rustfmt'
+    'sass-convert'
     'sqlformat'
     'stylish-haskell'
     'tidy-markdown'
     'typescript-formatter'
+    'vue-beautifier'
     'yapf'
     'erl_tidy'
+    'marko-beautifier'
+    'formatR'
   ]
 
   ###
@@ -197,6 +206,31 @@ module.exports = class Beautifiers extends EventEmitter
       logger.warn("Unsupported Language options: ", beautifierOptions)
       return options
 
+  trackEvent : (payload) ->
+    @track("event", payload)
+
+  trackTiming : (payload) ->
+    @track("timing", payload)
+
+  track : (type, payload) ->
+    try
+      # Check if Analytics is enabled
+      if atom.config.get("atom-beautify.general.analytics")
+        # Setup Analytics
+        unless atom.config.get("atom-beautify.general._analyticsUserId")
+          uuid = require("node-uuid")
+          atom.config.set "atom-beautify.general._analyticsUserId", uuid.v4()
+        # Setup Analytics User Id
+        userId = atom.config.get("atom-beautify.general._analyticsUserId")
+        @analytics ?= new ua(trackingId, userId, {
+          headers: {
+            "User-Agent": navigator.userAgent
+          }
+        })
+        @analytics[type](payload).send()
+    catch error
+      logger.error(error)
+
 
   beautify : (text, allOptions, grammar, filePath, {onSave} = {}) ->
     return Promise.all(allOptions)
@@ -274,59 +308,67 @@ module.exports = class Beautifiers extends EventEmitter
 
             # Beautify text with language options
             @emit "beautify::start"
-            beautifier.beautify(text, language.name, options)
-            .then(resolve)
-            .catch(reject)
+
+            context =
+              filePath: filePath
+
+            startTime = new Date()
+            beautifier.beautify(text, language.name, options, context)
+            .then((result) =>
+              resolve(result)
+              # Track Timing
+              @trackTiming({
+                utc: "Beautify" # Category
+                utv: language?.name # Variable
+                utt: (new Date() - startTime) # Value
+                utl: version # Label
+              })
+              # Track Empty beautification results
+              if not result
+                @trackEvent({
+                  ec: version, # Category
+                  ea: "Beautify:Empty" # Action
+                  el: language?.name # Label
+                })
+            )
+            .catch((error) =>
+              reject(error)
+              # Track Errors
+              @trackEvent({
+                ec: version, # Category
+                ea: "Beautify:Error" # Action
+                el: language?.name # Label
+              })
+            )
             .finally(=>
               @emit "beautify::end"
             )
 
         # Check if Analytics is enabled
-        if atom.config.get("atom-beautify.general.analytics")
+        @trackEvent({
+          ec: version, # Category
+          ea: "Beautify" # Action
+          el: language?.name # Label
+        })
+        if onSave
+          @trackEvent({
+            ec: version, # Category
+            ea: "Beautify:OnSave" # Action
+            el: language?.name # Label
+          })
+        else
+          @trackEvent({
+            ec: version, # Category
+            ea: "Beautify:Manual" # Action
+            el: language?.name # Label
+          })
 
-          # Setup Analytics
-          analytics = new Analytics(analyticsWriteKey)
-          unless atom.config.get("atom-beautify.general._analyticsUserId")
-            uuid = require("node-uuid")
-            atom.config.set "atom-beautify.general._analyticsUserId", uuid.v4()
-
-          # Setup Analytics User Id
-          userId = atom.config.get("atom-beautify.general._analyticsUserId")
-          analytics.identify userId : userId
-          version = pkg.version
-          analytics.track
-            userId : atom.config.get("atom-beautify.general._analyticsUserId")
-            event : "Beautify"
-            properties :
-              language : language?.name
-              grammar : grammar
-              extension : fileExtension
-              version : version
-              options : allOptions
-              label : language?.name
-              category : version
 
         if unsupportedGrammar
           if atom.config.get("atom-beautify.general.muteUnsupportedLanguageErrors")
             return resolve( null )
           else
             repoBugsUrl = pkg.bugs.url
-
-
-            # issueTitle = "Add support for language with grammar '
-            # issueBody = """
-            #
-            # **Atom Version**:
-            # **Atom Beautify Version**:
-            # **Platform**:
-            #
-            # ```
-            #
-            # ```
-            #
-            # """
-            # requestLanguageUrl = "
-            # detail = "If you would like to request this language be supported please create an issue by clicking <a href=\"
             title = "Atom Beautify could not find a supported beautifier for this file"
             detail = """
                      Atom Beautify could not determine a supported beautifier to handle this file with grammar \"#{grammar}\" and extension \"#{fileExtension}\". \
@@ -439,13 +481,23 @@ module.exports = class Beautifiers extends EventEmitter
           strip ?= require("strip-json-comments")
           externalOptions = JSON.parse(strip(contents))
         catch e
-
+          jsonError = e.message
           logger.debug "Failed parsing config as JSON: " + configPath
           # Attempt as YAML
           try
             yaml ?= require("yaml-front-matter")
             externalOptions = yaml.safeLoad(contents)
           catch e
+            title = "Atom Beautify failed to parse config as JSON or YAML"
+            detail = """
+                     Parsing '.jsbeautifyrc' at #{configPath}
+                     JSON: #{jsonError}
+                     YAML: #{e.message}
+                     """
+            atom?.notifications.addWarning(title, {
+              detail
+              dismissable : true
+            })
             logger.debug "Failed parsing config as YAML and JSON: " + configPath
             externalOptions = {}
     else

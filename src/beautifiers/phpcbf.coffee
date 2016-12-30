@@ -7,6 +7,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class PHPCBF extends Beautifier
   name: "PHPCBF"
+  link: "http://php.net/manual/en/install.php"
 
   options: {
     _:
@@ -37,8 +38,13 @@ module.exports = class PHPCBF extends Beautifier
         # Check if phpcbf path was found
         if phpcbfPath?
           # Found phpcbf path
-          @run("php", [
-            phpcbfPath
+
+          # Check if phpcbf is an executable
+          isExec = path.extname(phpcbfPath) isnt ''
+          exec = if isExec then phpcbfPath else "php"
+
+          @run(exec, [
+            phpcbfPath unless isExec
             "--no-patch"
             "--standard=#{options.standard}" if options.standard
             tempFile = @tempFile("temp", text)
@@ -47,6 +53,8 @@ module.exports = class PHPCBF extends Beautifier
               help: {
                 link: "http://php.net/manual/en/install.php"
               }
+              onStdin: (stdin) ->
+                stdin.end()
             })
             .then(=>
               @readFile(tempFile)
@@ -73,6 +81,8 @@ module.exports = class PHPCBF extends Beautifier
           help: {
             link: "https://github.com/squizlabs/PHP_CodeSniffer"
           }
+          onStdin: (stdin) ->
+            stdin.end()
         })
         .then(=>
           @readFile(tempFile)

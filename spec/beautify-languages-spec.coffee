@@ -21,12 +21,12 @@ describe "BeautifyLanguages", ->
 
   # Activate all of the languages
   allLanguages = [
-    "c", "coffee-script", "css", "d", "html",
+    "c", "clojure", "coffee-script", "css", "d", "html",
     "java", "javascript", "json", "less",
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql", "svg",
     "xml", "csharp", "gfm", "marko",
-    "go", "html-swig"
+    "go", "html-swig", "lua"
     ]
   # All Atom packages that Atom Beautify is dependent on
   dependentPackages = [
@@ -94,6 +94,11 @@ describe "BeautifyLanguages", ->
           # All Languages for configuration
           langNames = fs.readdirSync(langsDir)
           for lang in langNames
+
+            # FIXME: Skip testing ocaml in Windows
+            if isWindows && lang == 'ocaml'
+              continue
+
             do (lang) ->
               # Generate the path to where al of the tests are
               testsDir = path.resolve(langsDir, lang)
