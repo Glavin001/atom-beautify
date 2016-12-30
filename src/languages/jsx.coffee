@@ -11,6 +11,7 @@ module.exports = {
     "JSX"
     "JavaScript (JSX)"
     "Babel ES6 JavaScript"
+    "JavaScript with JSX"
   ]
 
   ###
