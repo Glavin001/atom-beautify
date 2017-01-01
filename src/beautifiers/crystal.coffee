@@ -10,7 +10,7 @@ module.exports = class Crystal extends Beautifier
   link: "http://crystal-lang.org"
 
   options: {
-    Crystal: true
+    Crystal: false
   }
 
   beautify: (text, language, options) ->
