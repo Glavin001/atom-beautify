@@ -2272,7 +2272,7 @@ Automatically beautify EJS files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
@@ -8344,7 +8344,7 @@ Preserve line-breaks (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,strike,tt,pre,h1,h2,h3,h4,h5,h6`
 
 **Type**: `array`
 
@@ -8417,8 +8417,6 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "address",
             "big",
             "dt",
-            "ins",
-            "small",
             "strike",
             "tt",
             "pre",
@@ -12786,14 +12784,26 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
 | `brace_style` | :white_check_mark: |
+| `break_chained_methods` | :white_check_mark: |
+| `end_with_comma` | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: |
+| `eval_code` | :white_check_mark: |
 | `extra_liners` | :white_check_mark: |
 | `indent_char` | :white_check_mark: |
 | `indent_inner_html` | :white_check_mark: |
+| `indent_level` | :white_check_mark: |
 | `indent_scripts` | :white_check_mark: |
 | `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
+| `jslint_happy` | :white_check_mark: |
+| `keep_array_indentation` | :white_check_mark: |
+| `keep_function_indentation` | :white_check_mark: |
 | `max_preserve_newlines` | :white_check_mark: |
 | `preserve_newlines` | :white_check_mark: |
+| `space_after_anon_function` | :white_check_mark: |
+| `space_before_conditional` | :white_check_mark: |
+| `space_in_paren` | :white_check_mark: |
+| `unescape_strings` | :white_check_mark: |
 | `unformatted` | :white_check_mark: |
 | `wrap_attributes` | :white_check_mark: |
 | `wrap_attributes_indent_size` | :white_check_mark: |
@@ -12868,7 +12878,7 @@ Automatically beautify Vue files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
@@ -12882,6 +12892,54 @@ Automatically beautify Vue files on save
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Break chained methods](#break-chained-methods) 
+
+**Namespace**: `js`
+
+**Key**: `break_chained_methods`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Break chained method calls across subsequent lines (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "break_chained_methods": false
+    }
+}
+```
+
+#####  [End with comma](#end-with-comma) 
+
+**Namespace**: `js`
+
+**Key**: `end_with_comma`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_with_comma": false
     }
 }
 ```
@@ -12906,6 +12964,30 @@ End output with newline (Supported by Vue Beautifier)
 {
     "html": {
         "end_with_newline": false
+    }
+}
+```
+
+#####  [Eval code](#eval-code) 
+
+**Namespace**: `js`
+
+**Key**: `eval_code`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+ (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "eval_code": false
     }
 }
 ```
@@ -12990,6 +13072,30 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 }
 ```
 
+#####  [Indent level](#indent-level) 
+
+**Namespace**: `js`
+
+**Key**: `indent_level`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Initial indentation level (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "indent_level": 0
+    }
+}
+```
+
 #####  [Indent scripts](#indent-scripts) 
 
 **Namespace**: `html`
@@ -13044,6 +13150,102 @@ Indentation size/length (Supported by Vue Beautifier)
 }
 ```
 
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `js`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "indent_with_tabs": false
+    }
+}
+```
+
+#####  [Jslint happy](#jslint-happy) 
+
+**Namespace**: `js`
+
+**Key**: `jslint_happy`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Enable jslint-stricter mode (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "jslint_happy": false
+    }
+}
+```
+
+#####  [Keep array indentation](#keep-array-indentation) 
+
+**Namespace**: `js`
+
+**Key**: `keep_array_indentation`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Preserve array indentation (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "keep_array_indentation": false
+    }
+}
+```
+
+#####  [Keep function indentation](#keep-function-indentation) 
+
+**Namespace**: `js`
+
+**Key**: `keep_function_indentation`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+ (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "keep_function_indentation": false
+    }
+}
+```
+
 #####  [Max preserve newlines](#max-preserve-newlines) 
 
 **Namespace**: `html`
@@ -13092,6 +13294,104 @@ Preserve line-breaks (Supported by Vue Beautifier)
 {
     "html": {
         "preserve_newlines": true
+    }
+}
+```
+
+#####  [Space after anon function](#space-after-anon-function) 
+
+**Namespace**: `js`
+
+**Key**: `space_after_anon_function`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Add a space before an anonymous function's parens, ie. function () (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_after_anon_function": false
+    }
+}
+```
+
+#####  [Space before conditional](#space-before-conditional) 
+
+**Namespace**: `js`
+
+**Key**: `space_before_conditional`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+ (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_before_conditional": true
+    }
+}
+```
+
+#####  [Space in paren](#space-in-paren) 
+
+**Namespace**: `js`
+
+**Key**: `space_in_paren`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Add padding spaces within paren, ie. f( a, b ) (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_in_paren": false
+    }
+}
+```
+
+#####  [Unescape strings](#unescape-strings) 
+
+**Namespace**: `js`
+
+**Key**: `unescape_strings`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Decode printable characters encoded in xNN notation (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "unescape_strings": false
     }
 }
 ```
@@ -17299,30 +17599,6 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ### Vue Beautifier
 
-#####  [Indent inner html](#indent-inner-html) 
-
-**Namespace**: `html`
-
-**Key**: `indent_inner_html`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
-
-**Description**:
-
-Indent <head> and <body> sections. (Supported by Vue Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "indent_inner_html": false
-    }
-}
-```
-
 #####  [Indent size](#indent-size) 
 
 **Namespace**: `html`
@@ -17375,6 +17651,178 @@ Indentation character (Supported by Vue Beautifier)
 }
 ```
 
+#####  [Indent level](#indent-level) 
+
+**Namespace**: `js`
+
+**Key**: `indent_level`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Initial indentation level (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "indent_level": 0
+    }
+}
+```
+
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `js`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "indent_with_tabs": false
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Preserve line-breaks (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Max preserve newlines](#max-preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Space in paren](#space-in-paren) 
+
+**Namespace**: `js`
+
+**Key**: `space_in_paren`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Add padding spaces within paren, ie. f( a, b ) (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_in_paren": false
+    }
+}
+```
+
+#####  [Jslint happy](#jslint-happy) 
+
+**Namespace**: `js`
+
+**Key**: `jslint_happy`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Enable jslint-stricter mode (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "jslint_happy": false
+    }
+}
+```
+
+#####  [Space after anon function](#space-after-anon-function) 
+
+**Namespace**: `js`
+
+**Key**: `space_after_anon_function`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Add a space before an anonymous function's parens, ie. function () (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_after_anon_function": false
+    }
+}
+```
+
 #####  [Brace style](#brace-style) 
 
 **Namespace**: `html`
@@ -17385,7 +17833,7 @@ Indentation character (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
@@ -17399,6 +17847,250 @@ Indentation character (Supported by Vue Beautifier)
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Break chained methods](#break-chained-methods) 
+
+**Namespace**: `js`
+
+**Key**: `break_chained_methods`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Break chained method calls across subsequent lines (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "break_chained_methods": false
+    }
+}
+```
+
+#####  [Keep array indentation](#keep-array-indentation) 
+
+**Namespace**: `js`
+
+**Key**: `keep_array_indentation`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Preserve array indentation (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "keep_array_indentation": false
+    }
+}
+```
+
+#####  [Keep function indentation](#keep-function-indentation) 
+
+**Namespace**: `js`
+
+**Key**: `keep_function_indentation`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+ (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "keep_function_indentation": false
+    }
+}
+```
+
+#####  [Space before conditional](#space-before-conditional) 
+
+**Namespace**: `js`
+
+**Key**: `space_before_conditional`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+ (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "space_before_conditional": true
+    }
+}
+```
+
+#####  [Eval code](#eval-code) 
+
+**Namespace**: `js`
+
+**Key**: `eval_code`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+ (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "eval_code": false
+    }
+}
+```
+
+#####  [Unescape strings](#unescape-strings) 
+
+**Namespace**: `js`
+
+**Key**: `unescape_strings`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Decode printable characters encoded in xNN notation (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "unescape_strings": false
+    }
+}
+```
+
+#####  [Wrap line length](#wrap-line-length) 
+
+**Namespace**: `html`
+
+**Key**: `wrap_line_length`
+
+**Default**: `250`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Maximum characters per line (0 disables) (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "wrap_line_length": 250
+    }
+}
+```
+
+#####  [End with newline](#end-with-newline) 
+
+**Namespace**: `html`
+
+**Key**: `end_with_newline`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+End output with newline (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "end_with_newline": false
+    }
+}
+```
+
+#####  [End with comma](#end-with-comma) 
+
+**Namespace**: `js`
+
+**Key**: `end_with_comma`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_with_comma": false
+    }
+}
+```
+
+#####  [Indent inner html](#indent-inner-html) 
+
+**Namespace**: `html`
+
+**Key**: `indent_inner_html`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Indent <head> and <body> sections. (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "indent_inner_html": false
     }
 }
 ```
@@ -17427,32 +18119,6 @@ Indentation character (Supported by Vue Beautifier)
 {
     "html": {
         "indent_scripts": "normal"
-    }
-}
-```
-
-#####  [Wrap line length](#wrap-line-length) 
-
-**Namespace**: `html`
-
-**Key**: `wrap_line_length`
-
-**Default**: `250`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
-
-**Description**:
-
-Maximum characters per line (0 disables) (Supported by Vue Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "wrap_line_length": 250
     }
 }
 ```
@@ -17507,58 +18173,6 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 {
     "html": {
         "wrap_attributes_indent_size": 4
-    }
-}
-```
-
-#####  [Preserve newlines](#preserve-newlines) 
-
-**Namespace**: `html`
-
-**Key**: `preserve_newlines`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
-
-**Description**:
-
-Preserve line-breaks (Supported by Vue Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "preserve_newlines": true
-    }
-}
-```
-
-#####  [Max preserve newlines](#max-preserve-newlines) 
-
-**Namespace**: `html`
-
-**Key**: `max_preserve_newlines`
-
-**Default**: `10`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
-
-**Description**:
-
-Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "max_preserve_newlines": 10
     }
 }
 ```
@@ -17654,30 +18268,6 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
             "h5",
             "h6"
         ]
-    }
-}
-```
-
-#####  [End with newline](#end-with-newline) 
-
-**Namespace**: `html`
-
-**Key**: `end_with_newline`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
-
-**Description**:
-
-End output with newline (Supported by Vue Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "end_with_newline": false
     }
 }
 ```

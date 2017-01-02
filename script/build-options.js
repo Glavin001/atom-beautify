@@ -211,6 +211,11 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
       options[field] = op;
     }
   }
+  function mergeCustomizer(objValue, srcValue) {
+    if (_.isArray(objValue)) {
+      return _.uniq(objValue.concat(srcValue));
+    }
+  } 
   for (j = 0, len1 = allLanguages.length; j < len1; j++) {
     lang = allLanguages[j];
     namespaceDest = lang.namespace;
@@ -219,7 +224,7 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
     for (k = 0, len2 = fallback.length; k < len2; k++) {
       namespaceSrc = fallback[k];
       optionsSrc = _.get(langOptions, namespaceSrc + ".properties");
-      _.merge(optionsDest, optionsSrc);
+      _.mergeWith(optionsDest, optionsSrc, mergeCustomizer);
     }
   }
   for (l = 0, len3 = beautifiers.length; l < len3; l++) {
