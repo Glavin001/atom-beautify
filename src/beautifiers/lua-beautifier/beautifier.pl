@@ -14,12 +14,13 @@ while (<>) {
   my $orig = $_;
 
   s/(['"])[^\1]*?\1//g; # remove all quoted fragments for proper bracket processing
-  s/\s*--.+//; # remove all comments; this ignores long bracket style comments
+  s/\s*--\[\[.+\]\]//; # remove long bracket style comments on one line
+  s/\s*--[^(\[\[)].+//; # remove all one line comments; this ignores long bracket style comments
 
   # open a level; increase next indentation; don't change current one
   if (/^((local )?function|repeat|while)\b/ && !/\bend\s*[\),;]*$/
    || /\b(then|do)$/ && !/^elseif\b/     # only open on 'then' if there is no 'elseif'
-   || /^if\b/ && /\bthen\b/ && !/\bend$/ # only open on 'if' if there is no 'end' at the end
+   || /^if\b/ && /\bthen\b/ && !/\bend/ # only open on 'if' if there is no 'end' at the end
    || /\bfunction\s*\([^\)]*\)$/) {
     $nextIndent = $currIndent + 1;
   }
