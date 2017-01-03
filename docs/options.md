@@ -124,6 +124,57 @@ Do not show "Unsupported Language" errors when they occur
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Mute Unsupported Language Errors*" and change it to your desired configuration.
 
+#####  [`test1`](#test1) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `integer`
+
+**Description**:
+
+
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "**" and change it to your desired configuration.
+
+#####  [`test2`](#test2) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `integer`
+
+**Description**:
+
+
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "**" and change it to your desired configuration.
+
+#####  [`test3`](#test3) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `integer`
+
+**Description**:
+
+
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "**" and change it to your desired configuration.
+
 
 ## Language Options
 
@@ -973,8 +1024,6 @@ End output with newline (Supported by Coffee Formatter)
 
 **Key**: `indent_char`
 
-**Default**: ` `
-
 **Type**: `string`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -988,7 +1037,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```
@@ -1023,8 +1072,6 @@ Initial indentation level (Supported by Coffee Formatter)
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -1038,7 +1085,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -5179,8 +5226,6 @@ End output with newline (Supported by JS Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
-
 **Type**: `string`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -5194,7 +5239,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```
@@ -5229,8 +5274,6 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -5244,7 +5287,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -5737,8 +5780,6 @@ End output with newline (Supported by JS Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
-
 **Type**: `string`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -5752,7 +5793,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```
@@ -5787,8 +5828,6 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -5802,7 +5841,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -6295,8 +6334,6 @@ End output with newline (Supported by JS Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
-
 **Type**: `string`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -6310,7 +6347,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```
@@ -6345,8 +6382,6 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -6360,7 +6395,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -11986,8 +12021,6 @@ End output with newline (Supported by TypeScript Formatter)
 
 **Key**: `indent_char`
 
-**Default**: ` `
-
 **Type**: `string`
 
 **Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
@@ -12001,7 +12034,7 @@ Indentation character (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```
@@ -12036,8 +12069,6 @@ Initial indentation level (Supported by TypeScript Formatter)
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
@@ -12051,7 +12082,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -14313,8 +14344,6 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -14328,7 +14357,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -14338,8 +14367,6 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 **Namespace**: `js`
 
 **Key**: `indent_char`
-
-**Default**: ` `
 
 **Type**: `string`
 
@@ -14354,7 +14381,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```
@@ -17105,8 +17132,6 @@ Indentation character (Supported by Ruby Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
@@ -17120,7 +17145,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -17130,8 +17155,6 @@ Indentation size/length (Supported by TypeScript Formatter)
 **Namespace**: `js`
 
 **Key**: `indent_char`
-
-**Default**: ` `
 
 **Type**: `string`
 
@@ -17146,7 +17169,7 @@ Indentation character (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```
@@ -18474,8 +18497,6 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 
 **Key**: `indent_size`
 
-**Default**: `4`
-
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -18489,7 +18510,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_size": 4
+        "indent_size": 0
     }
 }
 ```
@@ -18499,8 +18520,6 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 **Namespace**: `js`
 
 **Key**: `indent_char`
-
-**Default**: ` `
 
 **Type**: `string`
 
@@ -18515,7 +18534,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_char": " "
+        "indent_char": ""
     }
 }
 ```

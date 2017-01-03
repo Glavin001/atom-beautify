@@ -34,12 +34,12 @@ module.exports = {
     # JavaScript
     indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indentation size/length"
     indent_char:
       type: 'string'
-      default: defaultIndentChar
+      default: null
       description: "Indentation character"
     indent_level:
       type: 'integer'
