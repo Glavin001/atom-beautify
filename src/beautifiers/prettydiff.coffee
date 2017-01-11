@@ -117,6 +117,7 @@ module.exports = class PrettyDiff extends Beautifier
         source: text
         lang: lang
         mode: "beautify"
+        crlf: getDefaultLineEnding() # solved issue 1457
 
       # Merge args intos options
       _.merge(options, args)
@@ -130,3 +131,23 @@ module.exports = class PrettyDiff extends Beautifier
       resolve(result)
 
     )
+
+  # Retrieves the default line ending based upon the Atom configuration
+  #  `line-ending-selector.defaultLineEnding`. If the Atom configuration
+  #  indicates "OS Default", the `process.platform` is queried, returning
+  #  CRLF for Windows systems and LF for all other systems.
+  # Code modified from atom/line-ending-selector
+  # returns: The correct line-ending character sequence based upon the Atom
+  #  configuration, or `null` if the Atom line ending configuration was not
+  #  recognized.
+  # see: https://github.com/atom/line-ending-selector/blob/master/lib/main.js
+  getDefaultLineEnding= ->
+    switch atom.config.get('line-ending-selector.defaultLineEnding')
+      when 'LF'
+        return false
+      when 'CRLF'
+        return true
+      when 'OS Default'
+        return if process.platform is 'win32' then true else false
+      else
+        return false
