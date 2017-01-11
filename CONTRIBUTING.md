@@ -7,7 +7,7 @@ Before creating any new Issues, please be sure to search through the existing At
 1. Generate your debugging information:  
   1a. In the Atom [command-palette](https://atom.io/packages/command-palette), 
 search for and run the command `Atom Beautify: Help Debug Editor`. 
-The debugging results will be copied to your clipboard.  
+The debugging results will be shown in a new Atom text editor tab.  
   1b. Create a new Gist at https://gist.github.com/  
   1c. Create a file in your new Gist called `debug.md`.  
   1d. Paste your debugging results from Atom beautify into `debug.md` file in your Gist.  
