@@ -3,6 +3,7 @@ module.exports = {
   name: "Golang Template"
   description: "Comma-Separated Values"
   namespace: "gohtml"
+  fallback: ["html"]
 
   ###
   Supported Grammars

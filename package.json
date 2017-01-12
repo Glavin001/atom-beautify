@@ -291,7 +291,8 @@
     "bash",
     "beautysh",
     "glsl",
-    "hh_format"
+    "hh_format",
+    "golang template"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
