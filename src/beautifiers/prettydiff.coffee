@@ -66,6 +66,7 @@ module.exports = class PrettyDiff extends Beautifier
     Visualforce: true
     "Riot.js": true
     XTemplate: true
+    "Golang Template": true
   }
 
   beautify: (text, language, options) ->
@@ -109,6 +110,8 @@ module.exports = class PrettyDiff extends Beautifier
           lang = "scss"
         when "TSS"
           lang = "tss"
+        when "Golang Template"
+          lang = "gohtml"
         else
           lang = "auto"
 
