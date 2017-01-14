@@ -111,10 +111,5 @@ module.exports = {
       default: false
       description: "If a terminating comma should be inserted into \
                   arrays, object literals, and destructured objects."
-    end_of_line:
-      type: 'string'
-      default: "System Default"
-      enum: ["CRLF","LF","System Default"]
-      description: "Override EOL from line-ending-selector"
 
 }
