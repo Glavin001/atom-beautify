@@ -766,6 +766,7 @@ Automatically beautify Clojure files on save
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :x: |
+| `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :x: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
@@ -891,6 +892,34 @@ Break chained method calls across subsequent lines (Supported by Coffee Formatte
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by Coffee Formatter)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -2179,6 +2208,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
+| `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
@@ -2310,6 +2340,34 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -4972,6 +5030,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: | :x: |
 | `break_chained_methods` | :white_check_mark: | :x: | :white_check_mark: |
+| `end_of_line` | :white_check_mark: | :x: | :x: |
 | `end_with_comma` | :white_check_mark: | :x: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: | :x: |
 | `eval_code` | :white_check_mark: | :x: | :x: |
@@ -5097,6 +5156,34 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -5530,6 +5617,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
+| `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
@@ -5655,6 +5743,34 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -6088,6 +6204,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
+| `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
@@ -6213,6 +6330,34 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -11779,6 +11924,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `beautify_on_save` | :white_check_mark: |
 | `brace_style` | :white_check_mark: |
 | `break_chained_methods` | :white_check_mark: |
+| `end_of_line` | :white_check_mark: |
 | `end_with_comma` | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: |
 | `eval_code` | :white_check_mark: |
@@ -11904,6 +12050,34 @@ Break chained method calls across subsequent lines (Supported by TypeScript Form
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by TypeScript Formatter)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -12785,6 +12959,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `beautify_on_save` | :white_check_mark: |
 | `brace_style` | :white_check_mark: |
 | `break_chained_methods` | :white_check_mark: |
+| `end_of_line` | :white_check_mark: |
 | `end_with_comma` | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: |
 | `eval_code` | :white_check_mark: |
@@ -12916,6 +13091,34 @@ Break chained method calls across subsequent lines (Supported by Vue Beautifier)
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -14777,6 +14980,34 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by Coffee Formatter)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
+    }
+}
+```
+
 
 ### Fortran Beautifier
 
@@ -15433,6 +15664,34 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 {
     "js": {
         "end_with_comma": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -17569,6 +17828,34 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by TypeScript Formatter)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
+    }
+}
+```
+
 
 ### Uncrustify
 
@@ -18067,6 +18354,34 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 {
     "js": {
         "end_with_comma": false
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "end_of_line": "System Default"
     }
 }
 ```

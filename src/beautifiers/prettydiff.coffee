@@ -42,14 +42,6 @@ module.exports = class PrettyDiff extends Beautifier
       ]
       ternaryline: "preserve_ternary_lines"
       bracepadding: "space_in_paren"
-      crlf: ['end_of_line', (end_of_line) ->
-        if (end_of_line == 'CRLF')
-          true
-        else if (end_of_line == 'LF')
-          false
-        else
-          null
-      ]
     # Apply language-specific options
     CSV: true
     Coldfusion: true
@@ -77,8 +69,7 @@ module.exports = class PrettyDiff extends Beautifier
   }
 
   beautify: (text, language, options) ->
-
-    options.crlf = options.crlf ? @getDefaultLineEnding(true,false)
+    options.crlf = @getDefaultLineEnding(true,false,options.end_of_line)
     return new @Promise((resolve, reject) =>
       prettydiff = require("prettydiff")
       _ = require('lodash')

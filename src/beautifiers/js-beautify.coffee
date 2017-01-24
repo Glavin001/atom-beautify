@@ -6,15 +6,6 @@ module.exports = class JSBeautify extends Beautifier
   link: "https://github.com/beautify-web/js-beautify"
 
   options: {
-    _:
-      eol: ['end_of_line', (end_of_line) ->
-        if (end_of_line == 'CRLF')
-          '\r\n'
-        else if (end_of_line == 'LF')
-          '\n'
-        else
-          null
-      ]
     HTML: true
     XML: true
     Handlebars: true
@@ -36,7 +27,7 @@ module.exports = class JSBeautify extends Beautifier
   beautify: (text, language, options) ->
     @verbose("JS Beautify language #{language}")
     @info("JS Beautify Options: #{JSON.stringify(options, null, 4)}")
-    options.eol = options.eol ? @getDefaultLineEnding('\r\n','\n')
+    options.eol = @getDefaultLineEnding('\r\n','\n',options.end_of_line)
     return new @Promise((resolve, reject) =>
       try
         switch language
