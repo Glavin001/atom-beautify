@@ -87,7 +87,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | HTML | `HTML` |`.html` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Jade | `Jade`, `Pug` |`.jade`, `.pug` | [`Pug Beautify`](https://github.com/vingorius/pug-beautify) (Default) |
 | Java | `Java` |`.java` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
-| JavaScript | `JavaScript` |`.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
+| JavaScript | `JavaScript` |`.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`ESLint Fixer`](https://github.com/eslint/eslint) |
 | JSON | `JSON` |`.json` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript`, `JavaScript with JSX` |`.jsx`, `.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | LaTeX | `LaTeX` |`.tex` | [`Latex Beautify`](https://github.com/cmhughes/latexindent.pl) (Default) |
