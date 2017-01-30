@@ -37,6 +37,7 @@ module.exports = class Languages
     "handlebars"
     "haskell"
     "html"
+    "isml"
     "jade"
     "java"
     "javascript"
