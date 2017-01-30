@@ -215,7 +215,7 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
     if (_.isArray(objValue)) {
       return _.uniq(objValue.concat(srcValue));
     }
-  } 
+  }
   for (j = 0, len1 = allLanguages.length; j < len1; j++) {
     lang = allLanguages[j];
     namespaceDest = lang.namespace;
