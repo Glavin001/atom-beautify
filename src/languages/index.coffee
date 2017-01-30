@@ -25,6 +25,7 @@ module.exports = class Languages
     "css"
     "csv"
     "d"
+    "demandwarescript"
     "ejs"
     "elm"
     "erb"
