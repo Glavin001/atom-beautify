@@ -296,7 +296,9 @@
     "bash",
     "beautysh",
     "glsl",
-    "hh_format"
+    "hh_format",
+    "nginx",
+    "nginx beautify"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",
