@@ -13,7 +13,7 @@ module.exports = class NginxBeautify extends Beautifier
 
     return new @Promise((resolve, reject) ->
       Beautify = require("nginxbeautify")
-      instance = new Beautify(options);
+      instance = new Beautify(options)
       try
         resolve(instance.parse(text))
       catch error
