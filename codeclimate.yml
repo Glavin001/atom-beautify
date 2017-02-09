@@ -1,0 +1,9 @@
+engines:
+ coffeelint:
+   enabled: true
+
+ratings:
+ paths:
+ - "**.coffee"
+
+exclude_paths:
