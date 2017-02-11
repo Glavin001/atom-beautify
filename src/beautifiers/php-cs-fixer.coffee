@@ -64,9 +64,9 @@ module.exports = class PHPCSFixer extends Beautifier
         @Promise.reject(@commandNotFoundError(
           'php-cs-fixer'
           {
-          link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
-          program: "php-cs-fixer.phar"
-          pathOption: "PHP - CS Fixer Path"
+            link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+            program: "php-cs-fixer.phar"
+            pathOption: "PHP - CS Fixer Path"
           })
         )
     )
