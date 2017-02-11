@@ -18,6 +18,12 @@ module.exports = class PHPCSFixer extends Beautifier
     @debug('php-cs-fixer', options)
 
     configFile = if context? and context.filePath? then @findFile(path.dirname(context.filePath), '.php_cs')
+    runOptions = {
+      ignoreReturnCode: true
+      help: {
+        link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+      }
+    }
 
     # Find php-cs-fixer.phar script
     @Promise.all([
@@ -42,12 +48,7 @@ module.exports = class PHPCSFixer extends Beautifier
             "--fixers=#{options.fixers}" if options.fixers
             "--config-file=#{configFile}" if configFile
             tempFile = @tempFile("temp", text)
-            ], {
-              ignoreReturnCode: true
-              help: {
-                link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
-              }
-            })
+            ], runOptions)
             .then(=>
               @readFile(tempFile)
             )
@@ -58,12 +59,7 @@ module.exports = class PHPCSFixer extends Beautifier
             "--fixers=#{options.fixers}" if options.fixers
             "--config-file=#{configFile}" if configFile
             tempFile = @tempFile("temp", text)
-            ], {
-              ignoreReturnCode: true
-              help: {
-                link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
-              }
-            })
+            ], runOptions)
             .then(=>
               @readFile(tempFile)
             )
