@@ -21,7 +21,7 @@ module.exports = class PHPCSFixer extends Beautifier
     phpCsFixerOptions = [
       "fix"
       "--rules=#{options.rules}" if options.rules
-      "--config-file=#{configFile}" if configFile
+      "--config=#{configFile}" if configFile
     ]
     runOptions = {
       ignoreReturnCode: true
