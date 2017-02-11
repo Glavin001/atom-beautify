@@ -9049,8 +9049,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `cs_fixer_path` | :white_check_mark: | :x: | :x: |
-| `fixers` | :white_check_mark: | :x: | :x: |
-| `level` | :white_check_mark: | :x: | :x: |
+| `rules` | :white_check_mark: | :x: | :x: |
 | `phpcbf_path` | :white_check_mark: | :x: | :x: |
 | `standard` | :white_check_mark: | :white_check_mark: | :x: |
 
@@ -9125,7 +9124,7 @@ Automatically beautify PHP files on save
 
 **Description**:
 
-Path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
+Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9137,50 +9136,26 @@ Path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
-#####  [Fixers](#fixers) 
+#####  [Rules](#rules)
 
 **Namespace**: `php`
 
-**Key**: `fixers`
+**Key**: `rules`
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
-Add fixer(s). i.e. linefeed,-short_tag,indentation (Supported by PHP-CS-Fixer)
+Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "php": {
-        "fixers": ""
-    }
-}
-```
-
-#####  [Level](#level) 
-
-**Namespace**: `php`
-
-**Key**: `level`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
-
-**Description**:
-
-By default, all PSR-2 fixers and some additional ones are run. (Supported by PHP-CS-Fixer)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "php": {
-        "level": ""
+        "rules": ""
     }
 }
 ```
