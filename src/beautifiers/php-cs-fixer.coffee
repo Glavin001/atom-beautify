@@ -18,6 +18,12 @@ module.exports = class PHPCSFixer extends Beautifier
     @debug('php-cs-fixer', options)
 
     configFile = if context? and context.filePath? then @findFile(path.dirname(context.filePath), '.php_cs')
+    phpCsFixerOptions = [
+      "fix"
+      "--level=#{options.level}" if options.level
+      "--fixers=#{options.fixers}" if options.fixers
+      "--config-file=#{configFile}" if configFile
+    ]
     runOptions = {
       ignoreReturnCode: true
       help: {
@@ -40,26 +46,15 @@ module.exports = class PHPCSFixer extends Beautifier
       # Check if PHP-CS-Fixer path was found
       if phpCSFixerPath?
         # Found PHP-CS-Fixer path
+        tempFile = @tempFile("temp", text)
+
         if @isWindows
-          @run("php", [
-            phpCSFixerPath
-            "fix"
-            "--level=#{options.level}" if options.level
-            "--fixers=#{options.fixers}" if options.fixers
-            "--config-file=#{configFile}" if configFile
-            tempFile = @tempFile("temp", text)
-            ], runOptions)
+          @run("php", [phpCSFixerPath, phpCsFixerOptions, tempFile], runOptions)
             .then(=>
               @readFile(tempFile)
             )
         else
-          @run(phpCSFixerPath, [
-            "fix"
-            "--level=#{options.level}" if options.level
-            "--fixers=#{options.fixers}" if options.fixers
-            "--config-file=#{configFile}" if configFile
-            tempFile = @tempFile("temp", text)
-            ], runOptions)
+          @run(phpCSFixerPath, [phpCsFixerOptions, tempFile], runOptions)
             .then(=>
               @readFile(tempFile)
             )
