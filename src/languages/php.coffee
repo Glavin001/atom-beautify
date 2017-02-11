@@ -26,7 +26,7 @@ module.exports = {
       title: "PHP-CS-Fixer Path"
       type: 'string'
       default: ""
-      description: "Path to the `php-cs-fixer` CLI executable"
+      description: "Absolute path to the `php-cs-fixer` CLI executable"
     rules:
       type: 'string'
       default: ""
