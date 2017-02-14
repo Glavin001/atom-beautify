@@ -104,6 +104,7 @@ install:
   # FIXME: Enable allowEmptyChecksums, until someone fixes the checksum issue of php
   - choco feature enable -n allowEmptyChecksums
   # PHP
+  - ps: Set-Service wuauserv -StartupType Manual
   - cinst php -y
   - ps: "ls \"C:\\tools\\php\""
   - "SET PATH=C:\\tools\\php;%PATH%"
