@@ -106,8 +106,8 @@ install:
   # PHP
   - ps: Set-Service wuauserv -StartupType Manual
   - cinst php -y
-  - ps: "ls \"C:\\tools\\php\""
-  - "SET PATH=C:\\tools\\php;%PATH%"
+  - ps: "ls \"C:\\tools\\php71\""
+  - "SET PATH=C:\\tools\\php71;%PATH%"
   - where php
   # PHP-CS-Fixer
   - cinst curl -y # Use cURL to download file from URL
