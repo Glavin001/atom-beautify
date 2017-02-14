@@ -13,13 +13,13 @@ module.exports = class ESLintFixer extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    return new @Promise((resolve, reject) =>
+    return new @Promise((resolve, reject) ->
       editor = atom.workspace.getActiveTextEditor()
       filePath = editor.getPath()
       projectPath = atom.project.relativizePath(filePath)[0]
 
       result = null
-      allowUnsafeNewFunction =>
+      allowUnsafeNewFunction ->
         importPath = Path.join(projectPath, 'node_modules', 'eslint')
         try
           CLIEngine = require(importPath).CLIEngine
