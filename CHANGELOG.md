@@ -1,4 +1,5 @@
 # dev
+- Add support for additional wrap attribute options of js-beautify (html): force-aligned and force-expand-multiline.
 - Update to `remark`'s new API and fix [#1196](https://github.com/Glavin001/atom-beautify/issues/1196)
 - Add beautifier for the Lua language.
 - Add [ocp-indent](https://github.com/OCamlPro/ocp-indent) beautifier for the OCaml language.
