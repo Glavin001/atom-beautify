@@ -22,6 +22,12 @@ module.exports = {
     "js"
   ]
 
-  defaultBeautifier: "Pretty Diff"
+  defaultBeautifier: "JS Beautify"
+
+  options:
+    e4x:
+      type: 'boolean'
+      default: true
+      description: "Support e4x/jsx syntax"
 
 }
