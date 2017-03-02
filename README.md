@@ -54,6 +54,9 @@ Thank you.
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
 
+## Temporary Pause With Development
+
+As I can see the Issues on GitHub are growing I want to let everyone know I still plan to maintain Atom-Beautify. Unfortunately, I will be fairly busy for a little while longer with my final semester of University (assignments, projects, exams, etc) and large work-related projects. Therefore, I apologize for my temporarily absense as I finish off these other commitments. My plan is to return to working on Atom-Beautify with a newfound energy to add features and squash bugs in Atom-Beautify when this University semester is over around mid-April 2017. Thank you for your understanding and patience during this time. - [Glavin](https://github.com/Glavin001)
 
 ## Language Support
 
