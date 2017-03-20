@@ -120,7 +120,7 @@
     "atom": ">=1.6.0 <2.0.0"
   },
   "dependencies": {
-    "async": "^2.0.1",
+    "async": "^2.1.0",
     "atom-message-panel": "^1.2.4",
     "atom-space-pen-views": "^2.0.5",
     "bluebird": "^3.4.3",
