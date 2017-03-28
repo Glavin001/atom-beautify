@@ -4,6 +4,7 @@ path = require("path")
 
 "use strict"
 Beautifier = require('../beautifier')
+format = require './beautifier'
 
 module.exports = class Lua extends Beautifier
   name: "Lua beautifier"
@@ -14,9 +15,8 @@ module.exports = class Lua extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    lua_beautifier = path.resolve(__dirname, "beautifier.pl")
-    @run("perl", [
-      lua_beautifier,
-      '<',
-      @tempFile("input", text)
-      ])
+    new @Promise (resolve, reject) ->
+      try
+        resolve format text, options.indent_char.repeat options.indent_size
+      catch error
+        reject error
