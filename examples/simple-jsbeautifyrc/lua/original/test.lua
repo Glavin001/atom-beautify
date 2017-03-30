@@ -8,11 +8,26 @@ a = 1,
   b =2            ,
     c= 3,
 }
-local e={a=1,b=2}
-
-function aaa(a,b,c)
-return a+b
+if a~='a' then
+local b=a
 end
+local e={a=1,b=2}
+function aaa(a,b,c)
+
+-- comment 1
+    -- comment 2     1231
+    -- comment 1     123 123 123123 12
+-- [[ comment 1    ]]
+    --[[
+        muli comments
+            ssss
+            @asdasd   sad
+    ]]
+local a = -1
+return a+b-c
+end
+local b = {a=1,b=[[this is two space  ;
+    ]],c=2}
 
 function quicksorter(i, vec, low, high)
   if low >= high then
