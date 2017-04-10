@@ -146,7 +146,7 @@ module.exports = class Beautifiers extends EventEmitter
 
   getLanguages : (grammar, filePath) ->
     # Get language
-    fileExtension = @getExtension(filePath) 
+    fileExtension = @getExtension(filePath)
 
     if fileExtension
       languages = @languages.getLanguages({grammar, extension: fileExtension})
@@ -256,7 +256,7 @@ module.exports = class Beautifiers extends EventEmitter
         language = @getLanguage(grammar, filePath)
 
         # Check if unsupported language
-        if !language 
+        if !language
           unsupportedGrammar = true
 
           logger.verbose('Unsupported language')
