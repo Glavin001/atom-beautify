@@ -114,6 +114,10 @@
     {
       "name": "Victor Uriarte",
       "url": "https://github.com/vmuriart"
+    },
+    {
+      "name": "Taylon Silmer",
+      "url": "https://github.com/taylon"
     }
   ],
   "engines": {
@@ -130,6 +134,7 @@
     "csscomb": "^3.1.7",
     "diff": "3.0.0",
     "editorconfig": "^0.13.2",
+    "eslint": "^3.13.1",
     "event-kit": "^2.1.0",
     "expand-home-dir": "0.0.3",
     "extend": "^3.0.0",
@@ -259,6 +264,8 @@
     "fortran beautifier",
     "js beautify",
     "jscs fixer",
+    "eslint",
+    "eslint fixer",
     "lua beautifier",
     "ocp-indent",
     "perltidy",
