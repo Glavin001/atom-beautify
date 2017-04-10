@@ -169,7 +169,7 @@ Handlebars.registerHelper('beautifiers-info', (beautifiers, options) ->
   )
   results = """
   | Beautifier | Is Pre-Installed? | Installation Instructions |
-  | --- | --- | --- | ---- |
+  | --- | --- | --- |
   #{rows.join('\n')}
   """
   return new Handlebars.SafeString(results)

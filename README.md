@@ -60,7 +60,7 @@ See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Iss
 Some of the supported beautifiers are developed for Node.js and are automatically installed when Atom-Beautify is installed. However, other beautifiers are command-line interface (CLI) applications and require you to manually install them.
 
 | Beautifier | Is Pre-Installed? | Installation Instructions |
-| --- | --- | --- | ---- |
+| --- | --- | --- |
 | autopep8 | :x: | Go to https://github.com/hhatto/autopep8 and follow the instructions. |
 | beautysh | :x: | Go to https://github.com/bemeurer/beautysh and follow the instructions. |
 | clang-format | :x: | Go to https://clang.llvm.org/docs/ClangFormat.html and follow the instructions. |
