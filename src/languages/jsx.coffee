@@ -22,7 +22,7 @@ module.exports = {
     "js"
   ]
 
-  defaultBeautifier: "JS Beautify"
+  defaultBeautifier: "Pretty Diff"
 
   options:
     e4x:
