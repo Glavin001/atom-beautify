@@ -167,7 +167,8 @@
     "universal-analytics": "^0.4.2",
     "which": "^1.2.11",
     "winston": "^2.2.0",
-    "yaml-front-matter": "^3.2.3"
+    "yaml-front-matter": "^3.2.3",
+    "snyk": "^1.24.6"
   },
   "activationCommands": {
     "atom-workspace": [
@@ -312,8 +313,10 @@
     "build-options": "node script/build-options.js",
     "postinstall": "npm run build-options",
     "docs": "npm run build-options && coffee docs/",
-    "prepublish": "npm run docs",
+    "prepublish": "npm run snyk-protect && npm run docs",
     "lint": "coffeelint src/ spec/",
-    "code-docs": "codo && open docs/code/index.html"
-  }
+    "code-docs": "codo && open docs/code/index.html",
+    "snyk-protect": "snyk protect"
+  },
+  "snyk": true
 }
