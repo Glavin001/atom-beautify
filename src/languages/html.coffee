@@ -56,8 +56,8 @@ module.exports = {
     wrap_attributes:
       type: 'string'
       default: "auto"
-      enum: ["auto", "force"]
-      description: "Wrap attributes to new lines [auto|force]"
+      enum: ["auto", "force", "force-aligned", "force-expand-multiline"]
+      description: "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline]"
     wrap_attributes_indent_size:
       type: 'integer'
       default: defaultIndentSize
