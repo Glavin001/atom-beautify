@@ -2895,13 +2895,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -4110,13 +4110,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -4674,13 +4674,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6088,6 +6088,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
+| `e4x` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
@@ -6213,6 +6214,32 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [E4x](#e4x) 
+
+**Namespace**: `jsx`
+
+**Key**: `e4x`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Support e4x/jsx syntax (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "jsx": {
+        "e4x": true
     }
 }
 ```
@@ -7948,13 +7975,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by Marko Beautifier)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8441,13 +8468,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -13501,13 +13528,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by Vue Beautifier)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -13996,13 +14023,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -15499,13 +15526,13 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -15664,6 +15691,32 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
             "body",
             "/html"
         ]
+    }
+}
+```
+
+#####  [E4x](#e4x) 
+
+**Namespace**: `jsx`
+
+**Key**: `e4x`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Support e4x/jsx syntax (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "jsx": {
+        "e4x": true
     }
 }
 ```
@@ -16051,13 +16104,13 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by Marko Beautifier)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -18133,13 +18186,13 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force] (Supported by Vue Beautifier)
+Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
