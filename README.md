@@ -72,6 +72,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | dfmt | :x: | Go to https://github.com/Hackerpilot/dfmt and follow the instructions. |
 | elm-format | :x: | Go to https://github.com/avh4/elm-format and follow the instructions. |
 | erl_tidy | :x: | Go to http://erlang.org/doc/man/erl_tidy.html and follow the instructions. |
+| ESLint Fixer | :white_check_mark: | Nothing! |
 | formatR | :x: | Go to https://github.com/yihui/formatR and follow the instructions. |
 | Fortran Beautifier | :x: | Go to https://www.gnu.org/software/emacs/ and follow the instructions. |
 | Gherkin formatter | :white_check_mark: | Nothing! |
@@ -135,7 +136,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | HTML | `HTML` |`.html` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Jade | `Jade`, `Pug` |`.jade`, `.pug` | [`Pug Beautify`](https://github.com/vingorius/pug-beautify) (Default) |
 | Java | `Java` |`.java` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
-| JavaScript | `JavaScript` |`.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`ESLint Fixer`](https://github.com/eslint/eslint) |
+| JavaScript | `JavaScript` |`.js` | [`ESLint Fixer`](https://github.com/eslint/eslint), [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSON | `JSON` |`.json` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript`, `JavaScript with JSX` |`.jsx`, `.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | LaTeX | `LaTeX` |`.tex` | [`Latex Beautify`](https://github.com/cmhughes/latexindent.pl) (Default) |
