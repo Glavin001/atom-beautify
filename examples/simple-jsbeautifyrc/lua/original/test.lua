@@ -31,3 +31,19 @@ function lazysort(vec, low, high)
       return vec[i]
   end
 end
+
+local function test()
+  if true then
+ print("true")
+            if true --[[and true]] then
+     print("both true")
+  end
+  end
+end
+
+function isRaceMode()
+  if world == nil then return false end;
+  local gameMode = gamemodes[world.gameModeIndex];
+  if gameMode == nil then return false end;
+  return gameMode.shortName == "race";
+end
