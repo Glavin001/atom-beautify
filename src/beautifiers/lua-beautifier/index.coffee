@@ -7,7 +7,8 @@ Beautifier = require('../beautifier')
 
 module.exports = class Lua extends Beautifier
   name: "Lua beautifier"
-  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.pl"
+  link: "https://www.perl.org/"
+  isPreInstalled: false
 
   options: {
     Lua: true

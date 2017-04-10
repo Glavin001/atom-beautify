@@ -10,6 +10,7 @@ module.exports = class PHPCSFixer extends Beautifier
 
   name: 'PHP-CS-Fixer'
   link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+  isPreInstalled: false
 
   options:
     PHP: true

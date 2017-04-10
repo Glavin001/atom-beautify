@@ -4,6 +4,7 @@ Beautifier = require('./beautifier')
 module.exports = class SassConvert extends Beautifier
   name: "SassConvert"
   link: "http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax"
+  isPreInstalled: false
 
   options:
     # TODO: Add support for options
