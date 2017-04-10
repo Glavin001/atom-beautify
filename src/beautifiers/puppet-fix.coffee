@@ -8,6 +8,7 @@ module.exports = class PuppetFix extends Beautifier
   # this is what displays as your Default Beautifier in Language Config
   name: "puppet-lint"
   link: "http://puppet-lint.com/"
+  isPreInstalled: false
 
   options: {
     Puppet: true

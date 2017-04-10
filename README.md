@@ -20,6 +20,7 @@
 ## Table of Contents
 
 - [Installation](#installation)
+- [Beautifiers](#beautifiers)
 - [Language Support](#language-support)
 - [Usage](#usage)
   - [Selection of Code](#selection-of-code)
@@ -54,6 +55,54 @@ Thank you.
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
 
+## Beautifiers
+
+Some of the supported beautifiers are developed for Node.js and are automatically installed when Atom-Beautify is installed. However, other beautifiers are command-line interface (CLI) applications and require you to manually install them.
+
+| Beautifier | Is Pre-Installed? | Installation Instructions |
+| --- | --- | --- |
+| autopep8 | :x: | Go to https://github.com/hhatto/autopep8 and follow the instructions. |
+| beautysh | :x: | Go to https://github.com/bemeurer/beautysh and follow the instructions. |
+| clang-format | :x: | Go to https://clang.llvm.org/docs/ClangFormat.html and follow the instructions. |
+| cljfmt | :white_check_mark: | Nothing! |
+| Coffee Formatter | :white_check_mark: | Nothing! |
+| coffee-fmt | :white_check_mark: | Nothing! |
+| Crystal | :x: | Go to http://crystal-lang.org and follow the instructions. |
+| CSScomb | :white_check_mark: | Nothing! |
+| dfmt | :x: | Go to https://github.com/Hackerpilot/dfmt and follow the instructions. |
+| elm-format | :x: | Go to https://github.com/avh4/elm-format and follow the instructions. |
+| erl_tidy | :x: | Go to http://erlang.org/doc/man/erl_tidy.html and follow the instructions. |
+| ESLint Fixer | :white_check_mark: | Nothing! |
+| formatR | :x: | Go to https://github.com/yihui/formatR and follow the instructions. |
+| Fortran Beautifier | :x: | Go to https://www.gnu.org/software/emacs/ and follow the instructions. |
+| Gherkin formatter | :white_check_mark: | Nothing! |
+| gofmt | :x: | Go to https://golang.org/cmd/gofmt/ and follow the instructions. |
+| hh_format | :x: | Go to http://hhvm.com/ and follow the instructions. |
+| HTML Beautifier | :x: | Go to https://github.com/threedaymonk/htmlbeautifier and follow the instructions. |
+| JS Beautify | :white_check_mark: | Nothing! |
+| JSCS Fixer | :white_check_mark: | Nothing! |
+| Latex Beautify | :x: | Go to https://github.com/cmhughes/latexindent.pl and follow the instructions. |
+| Lua beautifier | :x: | Go to https://www.perl.org/ and follow the instructions. |
+| Marko Beautifier | :white_check_mark: | Nothing! |
+| ocp-indent | :x: | Go to https://www.typerex.org/ocp-indent.html and follow the instructions. |
+| Perltidy | :x: | Go to http://perltidy.sourceforge.net/ and follow the instructions. |
+| PHP-CS-Fixer | :x: | Go to https://github.com/FriendsOfPHP/PHP-CS-Fixer and follow the instructions. |
+| PHPCBF | :x: | Go to http://php.net/manual/en/install.php and follow the instructions. |
+| Pretty Diff | :white_check_mark: | Nothing! |
+| Pug Beautify | :white_check_mark: | Nothing! |
+| puppet-lint | :x: | Go to http://puppet-lint.com/ and follow the instructions. |
+| Remark | :white_check_mark: | Nothing! |
+| Rubocop | :x: | Go to https://github.com/bbatsov/rubocop and follow the instructions. |
+| Ruby Beautify | :x: | Go to https://github.com/erniebrodeur/ruby-beautify and follow the instructions. |
+| rustfmt | :x: | Go to https://github.com/nrc/rustfmt and follow the instructions. |
+| SassConvert | :x: | Go to http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax and follow the instructions. |
+| sqlformat | :x: | Go to https://github.com/andialbrecht/sqlparse and follow the instructions. |
+| stylish-haskell | :x: | Go to https://github.com/jaspervdj/stylish-haskell and follow the instructions. |
+| Tidy Markdown | :white_check_mark: | Nothing! |
+| TypeScript Formatter | :white_check_mark: | Nothing! |
+| Uncrustify | :x: | Go to https://github.com/uncrustify/uncrustify and follow the instructions. |
+| Vue Beautifier | :white_check_mark: | Nothing! |
+| yapf | :x: | Go to https://github.com/google/yapf and follow the instructions. |
 
 ## Language Support
 
@@ -78,7 +127,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Elm | `Elm` |`.elm` | [`elm-format`](https://github.com/avh4/elm-format) (Default) |
 | ERB | `HTML (Ruby - ERB)`, `HTML (Rails)` |`.erb` | [`HTML Beautifier`](https://github.com/threedaymonk/htmlbeautifier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Erlang | `Erlang` |`.erl` | [`erl_tidy`](http://erlang.org/doc/man/erl_tidy.html) (Default) |
-| Fortran | `Fortran - Modern` |`.f90`, `.F90`, `.f95`, `.F95` | [`Fortran Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/fortran-beautifier/emacs-fortran-formating-script.lisp) (Default) |
+| Fortran | `Fortran - Modern` |`.f90`, `.F90`, `.f95`, `.F95` | [`Fortran Beautifier`](https://www.gnu.org/software/emacs/) (Default) |
 | gherkin | `Gherkin` |`.feature` | [`Gherkin formatter`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee) (Default) |
 | GLSL | `C`, `opencl`, `GLSL` |`.vert`, `.frag` | [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) (Default) |
 | Go | `Go` |`.go` | [`gofmt`](https://golang.org/cmd/gofmt/) (Default) |
@@ -87,12 +136,12 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | HTML | `HTML` |`.html` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Jade | `Jade`, `Pug` |`.jade`, `.pug` | [`Pug Beautify`](https://github.com/vingorius/pug-beautify) (Default) |
 | Java | `Java` |`.java` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
-| JavaScript | `JavaScript` |`.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
+| JavaScript | `JavaScript` |`.js` | [`ESLint Fixer`](https://github.com/eslint/eslint), [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSON | `JSON` |`.json` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript`, `JavaScript with JSX` |`.jsx`, `.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | LaTeX | `LaTeX` |`.tex` | [`Latex Beautify`](https://github.com/cmhughes/latexindent.pl) (Default) |
 | LESS | `LESS` |`.less` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
-| Lua | `Lua` |`.lua` | [`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.pl) (Default) |
+| Lua | `Lua` |`.lua` | [`Lua beautifier`](https://www.perl.org/) (Default) |
 | Markdown | `GitHub Markdown` |`.markdown`, `.md` | [`Remark`](https://github.com/wooorm/remark), [`Tidy Markdown`](https://github.com/slang800/tidy-markdown) (Default) |
 | Marko | `Marko` |`.marko` | [`Marko Beautifier`](https://github.com/marko-js/marko-prettyprint) (Default) |
 | Mustache | `HTML (Mustache)` |`.mustache` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default) |
@@ -120,7 +169,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | UX Markup | `UX` |`.ux` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Vala | `Vala` |`.vala`, `.vapi` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Visualforce | `Visualforce` |`.page` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
-| Vue | `Vue Component` |`.vue` | `Vue Beautifier` (Default) |
+| Vue | `Vue Component` |`.vue` | [`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee) (Default) |
 | XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | XTemplate | `XTemplate` |`.xtemplate` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 

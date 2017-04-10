@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class OCPIndent extends Beautifier
   name: "ocp-indent"
   link: "https://www.typerex.org/ocp-indent.html"
+  isPreInstalled: false
 
   options: {
     OCaml: true

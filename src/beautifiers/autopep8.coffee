@@ -9,6 +9,7 @@ module.exports = class Autopep8 extends Beautifier
 
   name: "autopep8"
   link: "https://github.com/hhatto/autopep8"
+  isPreInstalled: false
 
   options: {
     Python: true

@@ -9,6 +9,7 @@ module.exports = class ErlTidy extends Beautifier
 
   name: "erl_tidy"
   link: "http://erlang.org/doc/man/erl_tidy.html"
+  isPreInstalled: false
 
   options: {
     Erlang: true

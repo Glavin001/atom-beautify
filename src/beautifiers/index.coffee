@@ -52,6 +52,7 @@ module.exports = class Beautifiers extends EventEmitter
     'fortran-beautifier'
     'js-beautify'
     'jscs'
+    'eslint'
     'lua-beautifier'
     'ocp-indent'
     'perltidy'
@@ -140,19 +141,31 @@ module.exports = class Beautifiers extends EventEmitter
     ) or beautifiers[0]
     return beautifier
 
-  getLanguage : (grammar, filePath) ->
+  getExtension : (filePath) ->
+    if filePath
+      return path.extname(filePath).substr(1)
+
+  getLanguages : (grammar, filePath) ->
     # Get language
-    fileExtension = path.extname(filePath)
-    # Remove prefix "." (period) in fileExtension
-    fileExtension = fileExtension.substr(1)
-    languages = @languages.getLanguages({grammar, extension: fileExtension})
-    logger.verbose(languages, grammar, fileExtension)
-    # Check if unsupported language
-    if languages.length < 1
-      return null
+    fileExtension = @getExtension(filePath)
+
+    if fileExtension
+      languages = @languages.getLanguages({grammar, extension: fileExtension})
     else
-      # TODO: select appropriate language
+      languages = @languages.getLanguages({grammar})
+
+    logger.verbose(languages, grammar, fileExtension)
+
+    return languages
+
+  getLanguage : (grammar, filePath) ->
+    languages = @getLanguages(grammar, filePath)
+
+    # Check if unsupported language
+    if languages.length > 0
       language = languages[0]
+
+    return language
 
   getOptionsForLanguage : (allOptions, language) ->
     # Options for Language
@@ -241,15 +254,10 @@ module.exports = class Beautifiers extends EventEmitter
         logger.info('beautify', text, allOptions, grammar, filePath, onSave)
         logger.verbose(allOptions)
 
-        # Get language
-        fileExtension = path.extname(filePath)
-        # Remove prefix "." (period) in fileExtension
-        fileExtension = fileExtension.substr(1)
-        languages = @languages.getLanguages({grammar, extension: fileExtension})
-        logger.verbose(languages, grammar, fileExtension)
+        language = @getLanguage(grammar, filePath)
 
         # Check if unsupported language
-        if languages.length < 1
+        if !language
           unsupportedGrammar = true
 
           logger.verbose('Unsupported language')
@@ -260,18 +268,13 @@ module.exports = class Beautifiers extends EventEmitter
             # not intended to be beautified
             return resolve( null )
         else
-          # TODO: select appropriate language
-          language = languages[0]
-
           logger.verbose("Language #{language.name} supported")
 
           # Get language config
           langDisabled = atom.config.get("atom-beautify.#{language.namespace}.disabled")
 
-
           # Beautify!
           unsupportedGrammar = false
-
 
           # Check if Language is disabled
           if langDisabled
@@ -370,6 +373,7 @@ module.exports = class Beautifiers extends EventEmitter
           if atom.config.get("atom-beautify.general.muteUnsupportedLanguageErrors")
             return resolve( null )
           else
+            fileExtension = @getExtension(filePath)
             repoBugsUrl = pkg.bugs.url
             title = "Atom Beautify could not find a supported beautifier for this file"
             detail = """

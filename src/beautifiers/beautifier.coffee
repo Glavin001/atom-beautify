@@ -32,6 +32,11 @@ module.exports = class Beautifier
   options: {}
 
   ###
+  Is the beautifier a command-line interface beautifier?
+  ###
+  isPreInstalled: true
+
+  ###
   Supported languages by this Beautifier
 
   Extracted from the keys of the `options` field.

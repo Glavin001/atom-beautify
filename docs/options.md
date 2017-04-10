@@ -4963,32 +4963,32 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [JavaScript](#javascript) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`JSCS Fixer`](#jscs-fixer)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`JSCS Fixer`](#jscs-fixer)  [`ESLint Fixer`](#eslint-fixer)  [`Pretty Diff`](#pretty-diff) 
 
-| Option | JS Beautify | JSCS Fixer | Pretty Diff |
-| --- | --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `brace_style` | :white_check_mark: | :x: | :x: |
-| `break_chained_methods` | :white_check_mark: | :x: | :white_check_mark: |
-| `end_with_comma` | :white_check_mark: | :x: | :white_check_mark: |
-| `end_with_newline` | :white_check_mark: | :x: | :x: |
-| `eval_code` | :white_check_mark: | :x: | :x: |
-| `indent_char` | :white_check_mark: | :x: | :white_check_mark: |
-| `indent_level` | :white_check_mark: | :x: | :x: |
-| `indent_size` | :white_check_mark: | :x: | :white_check_mark: |
-| `indent_with_tabs` | :white_check_mark: | :x: | :white_check_mark: |
-| `jslint_happy` | :white_check_mark: | :x: | :x: |
-| `keep_array_indentation` | :white_check_mark: | :x: | :x: |
-| `keep_function_indentation` | :white_check_mark: | :x: | :x: |
-| `max_preserve_newlines` | :white_check_mark: | :x: | :x: |
-| `preserve_newlines` | :white_check_mark: | :x: | :white_check_mark: |
-| `space_after_anon_function` | :white_check_mark: | :x: | :white_check_mark: |
-| `space_before_conditional` | :white_check_mark: | :x: | :x: |
-| `space_in_paren` | :white_check_mark: | :x: | :white_check_mark: |
-| `unescape_strings` | :white_check_mark: | :x: | :x: |
-| `wrap_line_length` | :white_check_mark: | :x: | :white_check_mark: |
+| Option | ESLint Fixer | JS Beautify | JSCS Fixer | Pretty Diff |
+| --- | --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :x: | :white_check_mark: | :x: | :x: |
+| `break_chained_methods` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `end_with_comma` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `end_with_newline` | :x: | :white_check_mark: | :x: | :x: |
+| `eval_code` | :x: | :white_check_mark: | :x: | :x: |
+| `indent_char` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `indent_level` | :x: | :white_check_mark: | :x: | :x: |
+| `indent_size` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `indent_with_tabs` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `jslint_happy` | :x: | :white_check_mark: | :x: | :x: |
+| `keep_array_indentation` | :x: | :white_check_mark: | :x: | :x: |
+| `keep_function_indentation` | :x: | :white_check_mark: | :x: | :x: |
+| `max_preserve_newlines` | :x: | :white_check_mark: | :x: | :x: |
+| `preserve_newlines` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `space_after_anon_function` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `space_before_conditional` | :x: | :white_check_mark: | :x: | :x: |
+| `space_in_paren` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `unescape_strings` | :x: | :white_check_mark: | :x: | :x: |
+| `wrap_line_length` | :x: | :white_check_mark: | :x: | :white_check_mark: |
 
 **Description**:
 
@@ -5019,7 +5019,7 @@ Disable JavaScript Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `JSCS Fixer`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `JSCS Fixer`  `ESLint Fixer`  `Pretty Diff` 
 
 **Description**:
 

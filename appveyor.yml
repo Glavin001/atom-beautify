@@ -15,6 +15,7 @@ environment:
     - PYTHON: "C:\\Python27"
       PYTHON_VERSION: "2.7.8"
       PYTHON_ARCH: "32"
+      RUBY_VERSION: 23
 
     # - PYTHON: "C:\\Python27-x64"
     #   PYTHON_VERSION: "2.7.8"
@@ -82,8 +83,7 @@ install:
   - "%CMD_IN_ENV% pip install --upgrade sqlparse"
 
   # Ruby & Gem
-  - cinst ruby -y
-  - "SET PATH=C:\\tools\\ruby23\\bin;%PATH%"
+  - SET PATH=C:\Ruby%RUBY_VERSION%\bin;C:\Ruby23-x64\DevKit\mingw\bin;%PATH%
   # Rubocop
   - gem install rubocop
   - where rubocop
@@ -104,9 +104,10 @@ install:
   # FIXME: Enable allowEmptyChecksums, until someone fixes the checksum issue of php
   - choco feature enable -n allowEmptyChecksums
   # PHP
+  - ps: Set-Service wuauserv -StartupType Manual
   - cinst php -y
-  - ps: "ls \"C:\\tools\\php\""
-  - "SET PATH=C:\\tools\\php;%PATH%"
+  - ps: "ls \"C:\\tools\\php71\""
+  - "SET PATH=C:\\tools\\php71;%PATH%"
   - where php
   # PHP-CS-Fixer
   - cinst curl -y # Use cURL to download file from URL
