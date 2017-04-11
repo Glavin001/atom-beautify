@@ -8,7 +8,7 @@ module.exports = class TypeScriptFormatter extends Beautifier
     TypeScript: true
   }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, {filePath}) ->
     return new @Promise((resolve, reject) =>
 
       try
