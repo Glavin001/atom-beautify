@@ -1,5 +1,6 @@
 "use strict"
 Beautifier = require('./beautifier')
+Promise = require('bluebird')
 
 module.exports = class TypeScriptFormatter extends Beautifier
   name: "TypeScript Formatter"
@@ -9,27 +10,52 @@ module.exports = class TypeScriptFormatter extends Beautifier
   }
 
   beautify: (text, language, options, {filePath}) ->
-    return new @Promise((resolve, reject) =>
+    try
+      base = require("typescript-formatter/lib/provider/base").default
+      tsconfigjson = require("typescript-formatter/lib/provider/tsconfigjson").default
+      { default: editorconfig, postProcess: editorconfigPostProcess } = require("typescript-formatter/lib/provider/editorconfig")
+      { default: tslintjson, postProcess, tslintPostProcess } = require("typescript-formatter/lib/provider/tslintjson")
 
-      try
-        format = require("typescript-formatter/lib/formatter").default
-        formatterUtils = require("typescript-formatter/lib/utils")
-        # @verbose('format', format, formatterUtils)
+      format = require("typescript-formatter/lib/formatter").default
+      formatterUtils = require("typescript-formatter/lib/utils")
+      # @verbose('format', format, formatterUtils)
 
-        opts = formatterUtils.createDefaultFormatCodeOptions()
+      optionModifiers = [base, tsconfigjson, editorconfig, tslintjson, pluginOptsModifier options]
+      postProcessors = [editorconfigPostProcess, tslintPostProcess, fileEndingPostProcess]
 
-        if options.indent_with_tabs
-          opts.ConvertTabsToSpaces = false
-        else
-          opts.TabSize = options.tab_width or options.indent_size
-          opts.IndentSize = options.indent_size
-          opts.IndentStyle = 'space'
+      formatSettings = formatterUtils.createDefaultFormatCodeOptions()
 
-        @verbose('typescript', text, opts)
-        result = format('', text, opts)
-        @verbose(result)
-        resolve result
-      catch e
-        return reject(e)
+      processFormatCodeOptions(optionModifiers, filePath, {}, formatSettings)
+        .then((formatSettings) =>
+          @verbose('typescript', text, formatSettings)
+          result = format('', text, formatSettings)
+          @verbose(result)
+          return result
+        )
+    catch e
+      return Promise.reject(e)
 
-    )
+processFormatCodeOptions = (optionModifiers, fileName, opts, formatSettings) ->
+  modifiers = optionModifiers.slice 0
+
+  next = (_formatSettings) ->
+    if modifiers.length is 0
+      return Promise.resolve(formatSettings)
+    modifier = modifiers.shift()
+    ret = modifier(fileName, opts, formatSettings)
+    return Promise.resolve(ret).then((formatSettings) -> next formatSettings)
+
+  next formatSettings
+
+fileEndingPostProcess = (fileName, formattedCode, opts, formatSettings) ->
+  Promise.resolve formattedCode.replace(/\r?\n/g, formatSettings.NewLineCharacter or '\n')
+
+pluginOptsModifier = (pluginOpts) -> (fileName, opts, formatSettings) ->
+  if pluginOpts.indent_with_tabs
+    formatSettings.ConvertTabsToSpaces = false
+  else
+    formatSettings.TabSize = pluginOpts.tab_width or pluginOpts.indent_size
+    formatSettings.IndentSize = pluginOpts.indent_size
+    formatSettings.IndentStyle = 'space'
+
+  Promise.resolve formatSettings
