@@ -8715,6 +8715,181 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
+####  [Nginx](#nginx) 
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+| Option | Nginx Beautify |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `dontJoinCurlyBracet` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
+
+**Description**:
+
+Options for language Nginx
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Nginx Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `Nginx Beautify`
+
+**Type**: `string`
+
+**Enum**:  `Nginx Beautify` 
+
+**Description**:
+
+Default Beautifier to be used for Nginx
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Nginx files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Don&#x27;t join curly brackets](#don't-join-curly-brackets) 
+
+**Namespace**: `nginx`
+
+**Key**: `dontJoinCurlyBracet`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+undefined (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "dontJoinCurlyBracet": true
+    }
+}
+```
+
+#####  [Indent char](#indent-char) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation character (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_char": " "
+    }
+}
+```
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation size/length (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_size": 4
+    }
+}
+```
+
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_with_tabs": false
+    }
+}
+```
+
 ####  [Nunjucks](#nunjucks) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -16522,6 +16697,111 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
             "body",
             "/html"
         ]
+    }
+}
+```
+
+
+### Nginx Beautify
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation size/length (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_size": 4
+    }
+}
+```
+
+#####  [Indent char](#indent-char) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation character (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_char": " "
+    }
+}
+```
+
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_with_tabs": false
+    }
+}
+```
+
+#####  [Don&#x27;t join curly brackets](#don't-join-curly-brackets) 
+
+**Namespace**: `nginx`
+
+**Key**: `dontJoinCurlyBracet`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+undefined (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "dontJoinCurlyBracet": true
     }
 }
 ```

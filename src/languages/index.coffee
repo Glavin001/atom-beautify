@@ -48,6 +48,7 @@ module.exports = class Languages
     "markdown"
     'marko'
     "mustache"
+    "nginx"
     "nunjucks"
     "objective-c"
     "ocaml"

@@ -116,6 +116,10 @@
       "url": "https://github.com/vmuriart"
     },
     {
+      "name": "Denys Vitali",
+      "url": "https://github.com/denysvitali"
+    },
+    {
       "name": "Daniel Brodin",
       "url": "https://github.com/danielbrodin"
     },
@@ -153,6 +157,7 @@
     "lodash": "^4.14.2",
     "loophole": "^1.0.0",
     "marko-prettyprint": "^1.2.0",
+    "nginxbeautify": "^2.0.0",
     "node-dir": "^0.1.16",
     "node-cljfmt": "^0.5.3-1",
     "node-uuid": "^1.4.3",
@@ -307,6 +312,8 @@
     "beautysh",
     "glsl",
     "hh_format",
+    "nginx",
+    "nginx beautify",
     "golang template"
   ],
   "devDependencies": {
