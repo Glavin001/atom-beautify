@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class HhFormat extends Beautifier
   name: "hh_format"
   link: "http://hhvm.com/"
+  isPreInstalled: false
 
   options:
     PHP: false

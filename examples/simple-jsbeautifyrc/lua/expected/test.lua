@@ -1,5 +1,34 @@
 -- Ensure that that the element at i is in the right position,
 -- and return a closure which can be used for continuing the sort.
+local a = 'a  b   c'
+local b = '12345678'
+local c = 'a  b   c' + 'a  b   c'
+local t = {
+  a = 1,
+  b = 2,
+  c = 3,
+}
+if a ~= 'a' then
+  local b = a
+end
+local e = {a = 1, b = 2}
+function aaa(a, b, c)
+
+  -- comment 1
+  -- comment 2     1231
+  -- comment 1     123 123 123123 12
+  -- [[ comment 1    ]]
+    --[[
+        muli comments
+            ssss
+            @asdasd   sad
+    ]]
+  local a = -1
+  return a + b - c
+end
+local b = {a = 1, b = [[this is two space  ;
+    ]], c = 2}
+
 function quicksorter(i, vec, low, high)
   if low >= high then
     return quicksorter
@@ -11,10 +40,10 @@ function quicksorter(i, vec, low, high)
     -- Create the promise
     local function self(i, vec, low, high)
       if i < middle then
-        left = left(i, vec, low, middle-1)
+        left = left(i, vec, low, middle - 1)
         return self
       elseif i > middle then
-        right = right(i, vec, middle+1, high)
+        right = right(i, vec, middle + 1, high)
         return self
       end
     end

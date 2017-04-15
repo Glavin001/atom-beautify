@@ -11,6 +11,8 @@ _ = require('lodash')
 module.exports = class Uncrustify extends Beautifier
   name: "Uncrustify"
   link: "https://github.com/uncrustify/uncrustify"
+  isPreInstalled: false
+
   options: {
     Apex: true
     C: true

@@ -51,6 +51,8 @@ module.exports = class JSBeautify extends Beautifier
             beautifyCSS = require("js-beautify").css
             text = beautifyCSS(text, options)
             resolve text
+          else
+            reject(new Error("Unknown language for JS Beautify: "+language))
       catch err
         @error("JS Beautify error: #{err}")
         reject(err)

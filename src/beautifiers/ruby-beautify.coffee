@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class RubyBeautify extends Beautifier
   name: "Ruby Beautify"
   link: "https://github.com/erniebrodeur/ruby-beautify"
+  isPreInstalled: false
 
   options: {
     Ruby:

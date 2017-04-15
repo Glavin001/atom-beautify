@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class Sqlformat extends Beautifier
   name: "sqlformat"
   link: "https://github.com/andialbrecht/sqlparse"
+  isPreInstalled: false
 
   options: {
     SQL: true

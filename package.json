@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.29.16",
+  "version": "0.29.19",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
   "repository": {
@@ -114,6 +114,26 @@
     {
       "name": "Victor Uriarte",
       "url": "https://github.com/vmuriart"
+    },
+    {
+      "name": "guyskk",
+      "url": "https://github.com/guyskk"
+    },
+    {
+      "name": "Denys Vitali",
+      "url": "https://github.com/denysvitali"
+    },
+    {
+      "name": "Daniel Brodin",
+      "url": "https://github.com/danielbrodin"
+    },
+    {
+      "name": "Anton Brok-Volchansky",
+      "url": "https://github.com/re6exp"
+    },
+    {
+      "name": "Taylon Silmer",
+      "url": "https://github.com/taylon"
     }
   ],
   "engines": {
@@ -130,6 +150,7 @@
     "csscomb": "^3.1.7",
     "diff": "3.0.0",
     "editorconfig": "^0.13.2",
+    "eslint": "^3.13.1",
     "event-kit": "^2.1.0",
     "expand-home-dir": "0.0.3",
     "extend": "^3.0.0",
@@ -140,6 +161,7 @@
     "lodash": "^4.14.2",
     "loophole": "^1.0.0",
     "marko-prettyprint": "^1.2.0",
+    "nginxbeautify": "^2.0.0",
     "node-dir": "^0.1.16",
     "node-cljfmt": "^0.5.3-1",
     "node-uuid": "^1.4.3",
@@ -151,7 +173,7 @@
     "space-pen": "^5.1.1",
     "strip-json-comments": "^2.0.1",
     "temp": "^0.8.3",
-    "tidy-markdown": "^2.0.3",
+    "tidy-markdown": "2.0.3",
     "typescript": "^1.8.10",
     "typescript-formatter": "^2.3.0",
     "underscore-plus": "^1.6.6",
@@ -259,6 +281,8 @@
     "fortran beautifier",
     "js beautify",
     "jscs fixer",
+    "eslint",
+    "eslint fixer",
     "lua beautifier",
     "ocp-indent",
     "perltidy",
@@ -287,11 +311,15 @@
     "clojure beautifier",
     "nunjucks",
     "ux markup",
+    "pybeautifier",
     "cljfmt",
     "bash",
     "beautysh",
     "glsl",
-    "hh_format"
+    "hh_format",
+    "nginx",
+    "nginx beautify",
+    "golang template"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",

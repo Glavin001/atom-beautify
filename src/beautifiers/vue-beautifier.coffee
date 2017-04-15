@@ -5,13 +5,14 @@ _ = require('lodash')
 
 module.exports = class VueBeautifier extends Beautifier
   name: "Vue Beautifier"
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee"
 
   options:
     Vue: true
 
   beautify: (text, language, options) ->
     return new @Promise((resolve, reject) ->
-      regexp = /(<(template|script|style)[^>]*>)((\s|\S)*?)<\/\2>/gi
+      regexp = /(^<(template|script|style)[^>]*>)((\s|\S)*)^<\/\2>/gim
 
       resolve(text.replace(regexp, (match, begin, type, text) ->
         lang = /lang\s*=\s*['"](\w+)["']/.exec(begin)?[1]
