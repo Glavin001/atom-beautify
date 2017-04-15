@@ -5226,6 +5226,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :x: | :white_check_mark: | :x: | :x: |
 | `break_chained_methods` | :x: | :white_check_mark: | :x: | :white_check_mark: |
+| `end_of_line` | :x: | :white_check_mark: | :x: | :x: |
 | `end_with_comma` | :x: | :white_check_mark: | :x: | :white_check_mark: |
 | `end_with_newline` | :x: | :white_check_mark: | :x: | :x: |
 | `eval_code` | :x: | :white_check_mark: | :x: | :x: |
@@ -6399,8 +6400,8 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
-| `end_of_line` | :white_check_mark: | :x: |
 | `e4x` | :white_check_mark: | :x: |
+| `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
@@ -6530,18 +6531,6 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 }
 ```
 
-#####  [End of line](#end-of-line) 
-
-**Namespace**: `js`
-
-**Key**: `end_of_line`
-
-**Default**: `System Default`
-
-**Type**: `string`
-
-**Enum**:  `CRLF`  `LF`  `System Default` 
-
 #####  [E4x](#e4x) 
 
 **Namespace**: `jsx`
@@ -6556,9 +6545,35 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 
 **Description**:
 
-Override EOL from line-ending-selector (Supported by JS Beautify)
-
 Support e4x/jsx syntax (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "jsx": {
+        "e4x": true
+    }
+}
+```
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `js`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6566,7 +6581,6 @@ Support e4x/jsx syntax (Supported by JS Beautify)
 {
     "js": {
         "end_of_line": "System Default"
-        "e4x": true
     }
 }
 ```
