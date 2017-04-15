@@ -21,6 +21,10 @@ module.exports = class PHPCBF extends Beautifier
 
   beautify: (text, language, options) ->
     @debug('phpcbf', options)
+    standardFiles = ['phpcs.xml', 'phpcs.xml.dist', 'phpcs.ruleset.xml', 'ruleset.xml']
+    standardFile = @findFile(atom.project.getPaths()[0], standardFiles);
+
+    options.standard = standardFile if standardFile
 
     isWin = @isWindows
     if isWin
