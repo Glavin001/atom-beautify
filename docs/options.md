@@ -8047,26 +8047,26 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 
 ####  [Mustache](#mustache) 
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
-| Option | JS Beautify |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
-| `brace_style` | :white_check_mark: |
-| `end_with_newline` | :white_check_mark: |
-| `extra_liners` | :white_check_mark: |
-| `indent_char` | :white_check_mark: |
-| `indent_inner_html` | :white_check_mark: |
-| `indent_scripts` | :white_check_mark: |
-| `indent_size` | :white_check_mark: |
-| `max_preserve_newlines` | :white_check_mark: |
-| `preserve_newlines` | :white_check_mark: |
-| `unformatted` | :white_check_mark: |
-| `wrap_attributes` | :white_check_mark: |
-| `wrap_attributes_indent_size` | :white_check_mark: |
-| `wrap_line_length` | :white_check_mark: |
+| Option | JS Beautify | Pretty Diff |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :white_check_mark: | :x: |
+| `end_with_newline` | :white_check_mark: | :x: |
+| `extra_liners` | :white_check_mark: | :x: |
+| `indent_char` | :white_check_mark: | :white_check_mark: |
+| `indent_inner_html` | :white_check_mark: | :x: |
+| `indent_scripts` | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: |
+| `max_preserve_newlines` | :white_check_mark: | :x: |
+| `preserve_newlines` | :white_check_mark: | :white_check_mark: |
+| `unformatted` | :white_check_mark: | :x: |
+| `wrap_attributes` | :white_check_mark: | :x: |
+| `wrap_attributes_indent_size` | :white_check_mark: | :x: |
+| `wrap_line_length` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -8097,7 +8097,7 @@ Disable Mustache Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify` 
+**Enum**:  `JS Beautify`  `Pretty Diff` 
 
 **Description**:
 
@@ -8219,11 +8219,11 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Indentation character (Supported by JS Beautify)
+Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8297,11 +8297,11 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Indentation size/length (Supported by JS Beautify)
+Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8349,11 +8349,11 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Preserve line-breaks (Supported by JS Beautify)
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8522,11 +8522,11 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Maximum characters per line (0 disables) (Supported by JS Beautify)
+Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
