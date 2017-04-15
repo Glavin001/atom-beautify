@@ -102,6 +102,28 @@ module.exports = class Beautifier
       startDir.pop()
     return null
 
+# Retrieves the default line ending based upon the Atom configuration
+  #  `line-ending-selector.defaultLineEnding`. If the Atom configuration
+  #  indicates "OS Default", the `process.platform` is queried, returning
+  #  CRLF for Windows systems and LF for all other systems.
+  # Code modified from atom/line-ending-selector
+  # returns: The correct line-ending character sequence based upon the Atom
+  #  configuration, or `null` if the Atom line ending configuration was not
+  #  recognized.
+  # see: https://github.com/atom/line-ending-selector/blob/master/lib/main.js
+  getDefaultLineEnding: (crlf,lf,optionEol) ->
+    if (!optionEol || optionEol == 'System Default')
+      optionEol = atom.config.get('line-ending-selector.defaultLineEnding')
+    switch optionEol
+      when 'LF'
+        return lf
+      when 'CRLF'
+        return crlf
+      when 'OS Default'
+        return if process.platform is 'win32' then crlf else lf
+      else
+        return lf
+
   ###
   If platform is Windows
   ###
