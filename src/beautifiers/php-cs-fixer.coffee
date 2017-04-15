@@ -21,9 +21,9 @@ module.exports = class PHPCSFixer extends Beautifier
     configFile = if context? and context.filePath? then @findFile(path.dirname(context.filePath), '.php_cs')
     phpCsFixerOptions = [
       "fix"
-      "--level=#{options.level}" if options.level
-      "--fixers=#{options.fixers}" if options.fixers
-      "--config-file=#{configFile}" if configFile
+      "--rules=#{options.rules}" if options.rules
+      "--config=#{configFile}" if configFile
+      "--using-cache=no"
     ]
     runOptions = {
       ignoreReturnCode: true
