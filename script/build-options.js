@@ -185,6 +185,7 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
         type: 'object',
         description: "Options for language " + lang.name,
         collapsed: true,
+        scope: lang.scope,
         beautifiers: [],
         grammars: lang.grammars,
         extensions: lang.extensions,

@@ -1,15 +1,8 @@
-# Get Atom defaults
-scope = ['text.html']
-tabLength = atom?.config.get('editor.tabLength', scope: scope) ? 4
-softTabs = atom?.config.get('editor.softTabs', scope: scope) ? true
-defaultIndentSize = (if softTabs then tabLength else 1)
-defaultIndentChar = (if softTabs then " " else "\t")
-defaultIndentWithTabs = not softTabs
-
 module.exports = {
 
   name: "HTML"
   namespace: "html"
+  scope: ['text.html']
 
   ###
   Supported Grammars
@@ -32,12 +25,12 @@ module.exports = {
       description: "Indent <head> and <body> sections."
     indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indentation size/length"
     indent_char:
       type: 'string'
-      default: defaultIndentChar
+      default: null
       description: "Indentation character"
     brace_style:
       type: 'string'
@@ -60,7 +53,7 @@ module.exports = {
       description: "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline]"
     wrap_attributes_indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indent wrapped attributes to after N characters"
     preserve_newlines:

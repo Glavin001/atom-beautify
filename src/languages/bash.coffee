@@ -1,12 +1,8 @@
-scope = ['source.sh', 'source.bash']
-tabLength = atom?.config.get('editor.tabLength', scope: scope) ? 2
-softTabs = atom?.config.get('editor.softTabs', scope: scope) ? true
-defaultIndentSize = (if softTabs then tabLength else 1)
-
 module.exports = {
 
   name: "Bash"
   namespace: "bash"
+  scope: ['source.sh', 'source.bash']
 
   ###
   Supported Grammars
@@ -28,7 +24,7 @@ module.exports = {
   options:
     indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indentation size/length"
 

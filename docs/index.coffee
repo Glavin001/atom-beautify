@@ -82,12 +82,6 @@ Handlebars.registerHelper('example-config', (key, option, options) ->
 
 Handlebars.registerHelper('language-beautifiers-support', (languageOptions, options) ->
 
-  ###
-  | Language | Supported Beautifiers |
-  | --- | ---- |
-  | JavaScript | Js-Beautify, Pretty Diff |
-  ###
-
   rows = _.map(languageOptions, (val, k) ->
     name = val.title
     defaultBeautifier = _.get(val, "properties.default_beautifier.default")

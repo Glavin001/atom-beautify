@@ -465,7 +465,7 @@ Automatically beautify Bash files on save
 
 **Key**: `indent_size`
 
-**Default**: `2`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -480,7 +480,7 @@ Indentation size/length (Supported by beautysh)
 ```json
 {
     "bash": {
-        "indent_size": 2
+        "indent_size": 1
     }
 }
 ```
@@ -658,7 +658,7 @@ Automatically beautify Coldfusion files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -673,7 +673,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "cfml": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -684,7 +684,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -699,7 +699,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "cfml": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -1072,6 +1072,8 @@ End output with newline (Supported by Coffee Formatter)
 
 **Key**: `indent_char`
 
+**Default**: `	`
+
 **Type**: `string`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -1085,7 +1087,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -1120,6 +1122,8 @@ Initial indentation level (Supported by Coffee Formatter)
 
 **Key**: `indent_size`
 
+**Default**: `1`
+
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -1133,7 +1137,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -1143,6 +1147,8 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -1157,7 +1163,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -1878,7 +1884,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -1893,7 +1899,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "css": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -1930,7 +1936,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -1945,7 +1951,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "css": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -2546,7 +2552,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -2561,7 +2567,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -2648,7 +2654,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -2663,7 +2669,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -2673,6 +2679,8 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -2687,7 +2695,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -3043,7 +3051,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -3058,7 +3066,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -3237,7 +3245,7 @@ Automatically beautify ERB files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -3252,7 +3260,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -3263,7 +3271,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -3278,7 +3286,7 @@ Indentation size/length (Supported by HTML Beautifier, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -3600,7 +3608,7 @@ Automatically beautify gherkin files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -3615,7 +3623,7 @@ Indentation character (Supported by Gherkin formatter)
 ```json
 {
     "gherkin": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -3626,7 +3634,7 @@ Indentation character (Supported by Gherkin formatter)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -3641,7 +3649,7 @@ Indentation size/length (Supported by Gherkin formatter)
 ```json
 {
     "gherkin": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -3888,7 +3896,7 @@ Automatically beautify Golang Template files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -3903,7 +3911,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -3914,7 +3922,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -3929,7 +3937,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -4156,7 +4164,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -4171,7 +4179,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -4234,7 +4242,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -4249,7 +4257,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -4435,7 +4443,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -4450,7 +4458,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -4720,7 +4728,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -4735,7 +4743,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -4798,7 +4806,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -4813,7 +4821,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -4999,7 +5007,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -5014,7 +5022,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -5122,7 +5130,7 @@ Automatically beautify Jade files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -5137,7 +5145,7 @@ Indentation character (Supported by Pug Beautify)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -5148,7 +5156,7 @@ Indentation character (Supported by Pug Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -5163,7 +5171,7 @@ Indentation size/length (Supported by Pug Beautify)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -5509,6 +5517,8 @@ End output with newline (Supported by JS Beautify)
 
 **Key**: `indent_char`
 
+**Default**: `	`
+
 **Type**: `string`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -5522,7 +5532,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -5557,6 +5567,8 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
+**Default**: `1`
+
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -5570,7 +5582,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -5580,6 +5592,8 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -5594,7 +5608,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -6092,6 +6106,8 @@ End output with newline (Supported by JS Beautify)
 
 **Key**: `indent_char`
 
+**Default**: `	`
+
 **Type**: `string`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -6105,7 +6121,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -6140,6 +6156,8 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
+**Default**: `1`
+
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -6153,7 +6171,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -6163,6 +6181,8 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -6177,7 +6197,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -6702,6 +6722,8 @@ End output with newline (Supported by JS Beautify)
 
 **Key**: `indent_char`
 
+**Default**: `	`
+
 **Type**: `string`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -6715,7 +6737,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -6750,6 +6772,8 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
+**Default**: `1`
+
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -6763,7 +6787,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -6773,6 +6797,8 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -6787,7 +6813,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -7201,7 +7227,7 @@ If `latexindent` should look for commands that split brackets across lines (Supp
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -7216,7 +7242,7 @@ Indentation character (Supported by Latex Beautify)
 ```json
 {
     "latex": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -7482,7 +7508,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -7497,7 +7523,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -7534,7 +7560,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -7549,7 +7575,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -8068,7 +8094,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -8083,7 +8109,7 @@ Indentation character (Supported by Marko Beautifier)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -8146,7 +8172,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -8161,7 +8187,7 @@ Indentation size/length (Supported by Marko Beautifier)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -8375,7 +8401,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -8390,7 +8416,7 @@ Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -8591,7 +8617,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -8606,7 +8632,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -8669,7 +8695,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -8684,7 +8710,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -8868,7 +8894,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -8883,7 +8909,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -9019,7 +9045,7 @@ undefined (Supported by Nginx Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -9034,7 +9060,7 @@ Indentation character (Supported by Nginx Beautify)
 ```json
 {
     "nginx": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -9045,7 +9071,7 @@ Indentation character (Supported by Nginx Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -9060,7 +9086,7 @@ Indentation size/length (Supported by Nginx Beautify)
 ```json
 {
     "nginx": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -9070,6 +9096,8 @@ Indentation size/length (Supported by Nginx Beautify)
 **Namespace**: `nginx`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -9084,7 +9112,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 ```json
 {
     "nginx": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -9168,7 +9196,7 @@ Automatically beautify Nunjucks files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -9183,7 +9211,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -9194,7 +9222,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -9209,7 +9237,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -9993,7 +10021,7 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -10008,7 +10036,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 ```json
 {
     "python": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -10193,7 +10221,7 @@ Automatically beautify R files on save
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -10208,7 +10236,7 @@ Indentation size/length (Supported by formatR)
 ```json
 {
     "r": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -10292,7 +10320,7 @@ Automatically beautify Riot.js files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -10307,7 +10335,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -10318,7 +10346,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -10333,7 +10361,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -10468,7 +10496,7 @@ Automatically beautify Ruby files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -10485,7 +10513,7 @@ Indentation character (Supported by Ruby Beautify)
 ```json
 {
     "ruby": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -10496,7 +10524,7 @@ Indentation character (Supported by Ruby Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -10511,7 +10539,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 ```json
 {
     "ruby": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -10890,7 +10918,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -10905,7 +10933,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -10942,7 +10970,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -10957,7 +10985,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -11167,7 +11195,7 @@ Automatically beautify Spacebars files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -11182,7 +11210,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -11193,7 +11221,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -11208,7 +11236,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -11371,7 +11399,7 @@ Change case of identifiers (Supported by sqlformat)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -11386,7 +11414,7 @@ Indentation size/length (Supported by sqlformat)
 ```json
 {
     "sql": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -11498,7 +11526,7 @@ Automatically beautify SVG files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -11513,7 +11541,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -11524,7 +11552,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -11539,7 +11567,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -11675,7 +11703,7 @@ Automatically beautify Swig files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -11690,7 +11718,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -11701,7 +11729,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -11716,7 +11744,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -11934,7 +11962,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -11949,7 +11977,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -11986,7 +12014,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -12001,7 +12029,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "css": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -12236,7 +12264,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -12251,7 +12279,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -12262,7 +12290,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -12277,7 +12305,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -12287,6 +12315,8 @@ Indentation size/length (Supported by Pretty Diff)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -12301,7 +12331,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by P
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -12653,6 +12683,8 @@ End output with newline (Supported by TypeScript Formatter)
 
 **Key**: `indent_char`
 
+**Default**: `	`
+
 **Type**: `string`
 
 **Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
@@ -12666,7 +12698,7 @@ Indentation character (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -12701,6 +12733,8 @@ Initial indentation level (Supported by TypeScript Formatter)
 
 **Key**: `indent_size`
 
+**Default**: `1`
+
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
@@ -12714,7 +12748,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -12724,6 +12758,8 @@ Indentation size/length (Supported by TypeScript Formatter)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -12738,7 +12774,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by T
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -13068,7 +13104,7 @@ Automatically beautify UX Markup files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -13083,7 +13119,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -13094,7 +13130,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -13109,7 +13145,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -13339,7 +13375,7 @@ Automatically beautify Visualforce files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -13354,7 +13390,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -13365,7 +13401,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -13380,7 +13416,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -13720,7 +13756,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -13735,7 +13771,7 @@ Indentation character (Supported by Vue Beautifier)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -13822,7 +13858,7 @@ Initial indentation level (Supported by Vue Beautifier)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -13837,7 +13873,7 @@ Indentation size/length (Supported by Vue Beautifier)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -13847,6 +13883,8 @@ Indentation size/length (Supported by Vue Beautifier)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -13861,7 +13899,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by V
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -14217,7 +14255,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -14232,7 +14270,7 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -14433,7 +14471,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -14448,7 +14486,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -14511,7 +14549,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -14526,7 +14564,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -14712,7 +14750,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -14727,7 +14765,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -14837,7 +14875,7 @@ Automatically beautify XTemplate files on save
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -14852,7 +14890,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -14863,7 +14901,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -14878,7 +14916,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -15005,6 +15043,8 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 
 **Key**: `indent_size`
 
+**Default**: `1`
+
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -15018,7 +15058,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -15028,6 +15068,8 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 **Namespace**: `js`
 
 **Key**: `indent_char`
+
+**Default**: `	`
 
 **Type**: `string`
 
@@ -15042,7 +15084,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -15077,6 +15119,8 @@ Initial indentation level (Supported by Coffee Formatter)
 
 **Key**: `indent_with_tabs`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -15090,7 +15134,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -15553,7 +15597,7 @@ Path to the emacs script (Supported by Fortran Beautifier)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -15568,7 +15612,7 @@ Indentation size/length (Supported by Gherkin formatter)
 ```json
 {
     "gherkin": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -15579,7 +15623,7 @@ Indentation size/length (Supported by Gherkin formatter)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -15594,7 +15638,7 @@ Indentation character (Supported by Gherkin formatter)
 ```json
 {
     "gherkin": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -15608,7 +15652,7 @@ Indentation character (Supported by Gherkin formatter)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -15623,7 +15667,7 @@ Indentation size/length (Supported by HTML Beautifier, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -15637,7 +15681,7 @@ Indentation size/length (Supported by HTML Beautifier, Pretty Diff)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -15652,7 +15696,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -15663,7 +15707,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -15678,7 +15722,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -15839,6 +15883,8 @@ Initial indentation level (Supported by JS Beautify)
 
 **Key**: `indent_with_tabs`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
@@ -15852,7 +15898,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -16267,7 +16313,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -16282,7 +16328,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -16447,7 +16493,7 @@ Support e4x/jsx syntax (Supported by JS Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -16462,7 +16508,7 @@ Indentation character (Supported by Latex Beautify)
 ```json
 {
     "latex": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -16631,7 +16677,7 @@ undefined (Supported by Latex Beautify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -16646,7 +16692,7 @@ Indentation size/length (Supported by Marko Beautifier)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -16657,7 +16703,7 @@ Indentation size/length (Supported by Marko Beautifier)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -16672,7 +16718,7 @@ Indentation character (Supported by Marko Beautifier)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -16845,7 +16891,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -16860,7 +16906,7 @@ Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -17075,7 +17121,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -17090,7 +17136,7 @@ Indentation size/length (Supported by Nginx Beautify)
 ```json
 {
     "nginx": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -17101,7 +17147,7 @@ Indentation size/length (Supported by Nginx Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -17116,7 +17162,7 @@ Indentation character (Supported by Nginx Beautify)
 ```json
 {
     "nginx": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -17126,6 +17172,8 @@ Indentation character (Supported by Nginx Beautify)
 **Namespace**: `nginx`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -17140,7 +17188,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 ```json
 {
     "nginx": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -17333,7 +17381,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -17348,7 +17396,7 @@ Indentation size/length (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -17359,7 +17407,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -17374,7 +17422,7 @@ Indentation character (Supported by Pretty Diff)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -17589,6 +17637,8 @@ If in CSS values leading 0s immediately preceeding a decimal should be removed o
 
 **Key**: `indent_with_tabs`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -17602,7 +17652,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by P
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -17712,7 +17762,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -17727,7 +17777,7 @@ Indentation size/length (Supported by Pug Beautify)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -17738,7 +17788,7 @@ Indentation size/length (Supported by Pug Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -17753,7 +17803,7 @@ Indentation character (Supported by Pug Beautify)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -17846,7 +17896,7 @@ Allows and disallows several constructs. (Supported by Remark)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -17861,7 +17911,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 ```json
 {
     "ruby": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -17899,7 +17949,7 @@ Path to the `rubocop` CLI executable (Supported by Rubocop)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -17914,7 +17964,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 ```json
 {
     "ruby": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -17925,7 +17975,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -17942,7 +17992,7 @@ Indentation character (Supported by Ruby Beautify)
 ```json
 {
     "ruby": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -17955,6 +18005,8 @@ Indentation character (Supported by Ruby Beautify)
 **Namespace**: `js`
 
 **Key**: `indent_size`
+
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -17969,7 +18021,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -17979,6 +18031,8 @@ Indentation size/length (Supported by TypeScript Formatter)
 **Namespace**: `js`
 
 **Key**: `indent_char`
+
+**Default**: `	`
 
 **Type**: `string`
 
@@ -17993,7 +18047,7 @@ Indentation character (Supported by TypeScript Formatter)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -18028,6 +18082,8 @@ Initial indentation level (Supported by TypeScript Formatter)
 
 **Key**: `indent_with_tabs`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
@@ -18041,7 +18097,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by T
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -18480,7 +18536,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -18495,7 +18551,7 @@ Indentation size/length (Supported by Vue Beautifier)
 ```json
 {
     "html": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -18506,7 +18562,7 @@ Indentation size/length (Supported by Vue Beautifier)
 
 **Key**: `indent_char`
 
-**Default**: ` `
+**Default**: `	`
 
 **Type**: `string`
 
@@ -18521,7 +18577,7 @@ Indentation character (Supported by Vue Beautifier)
 ```json
 {
     "html": {
-        "indent_char": " "
+        "indent_char": "\t"
     }
 }
 ```
@@ -18556,6 +18612,8 @@ Initial indentation level (Supported by Vue Beautifier)
 
 **Key**: `indent_with_tabs`
 
+**Default**: `true`
+
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
@@ -18569,7 +18627,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by V
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -19060,7 +19118,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Key**: `wrap_attributes_indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -19075,7 +19133,7 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 ```json
 {
     "html": {
-        "wrap_attributes_indent_size": 4
+        "wrap_attributes_indent_size": 1
     }
 }
 ```
@@ -19240,7 +19298,7 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -19255,7 +19313,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 ```json
 {
     "python": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -19403,7 +19461,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 
 **Key**: `indent_size`
 
-**Default**: `2`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -19418,7 +19476,7 @@ Indentation size/length (Supported by beautysh)
 ```json
 {
     "bash": {
-        "indent_size": 2
+        "indent_size": 1
     }
 }
 ```
@@ -19459,6 +19517,8 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 
 **Key**: `indent_size`
 
+**Default**: `1`
+
 **Type**: `integer`
 
 **Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
@@ -19472,7 +19532,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_size": 0
+        "indent_size": 1
     }
 }
 ```
@@ -19482,6 +19542,8 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 **Namespace**: `js`
 
 **Key**: `indent_char`
+
+**Default**: `	`
 
 **Type**: `string`
 
@@ -19496,7 +19558,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 ```json
 {
     "js": {
-        "indent_char": ""
+        "indent_char": "\t"
     }
 }
 ```
@@ -19506,6 +19568,8 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 **Namespace**: `js`
 
 **Key**: `indent_with_tabs`
+
+**Default**: `true`
 
 **Type**: `boolean`
 
@@ -19520,7 +19584,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 ```json
 {
     "js": {
-        "indent_with_tabs": false
+        "indent_with_tabs": true
     }
 }
 ```
@@ -19534,7 +19598,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -19549,7 +19613,7 @@ Indentation size/length (Supported by formatR)
 ```json
 {
     "r": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -19589,7 +19653,7 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -19604,7 +19668,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 ```json
 {
     "python": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
@@ -19779,7 +19843,7 @@ Path to rustfmt program (Supported by rustfmt)
 
 **Key**: `indent_size`
 
-**Default**: `4`
+**Default**: `1`
 
 **Type**: `integer`
 
@@ -19794,7 +19858,7 @@ Indentation size/length (Supported by sqlformat)
 ```json
 {
     "sql": {
-        "indent_size": 4
+        "indent_size": 1
     }
 }
 ```
