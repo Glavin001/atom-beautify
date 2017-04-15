@@ -32,6 +32,7 @@ module.exports = class Languages
     "gherkin"
     "glsl"
     "go"
+    "gohtml"
     "fortran"
     "handlebars"
     "haskell"

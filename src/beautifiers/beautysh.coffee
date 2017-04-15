@@ -4,6 +4,8 @@ Beautifier = require('./beautifier')
 module.exports = class BashBeautify extends Beautifier
   name: "beautysh"
   link: "https://github.com/bemeurer/beautysh"
+  isPreInstalled: false
+
   options: {
     Bash:
       indent_size: true

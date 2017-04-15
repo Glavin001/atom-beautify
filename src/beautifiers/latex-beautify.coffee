@@ -8,6 +8,7 @@ temp = require("temp").track()
 module.exports = class LatexBeautify extends Beautifier
   name: "Latex Beautify"
   link: "https://github.com/cmhughes/latexindent.pl"
+  isPreInstalled: false
 
   options: {
     LaTeX: true

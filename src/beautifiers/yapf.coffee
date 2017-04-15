@@ -9,6 +9,7 @@ module.exports = class Yapf extends Beautifier
 
   name: "yapf"
   link: "https://github.com/google/yapf"
+  isPreInstalled: false
 
   options: {
     Python: false

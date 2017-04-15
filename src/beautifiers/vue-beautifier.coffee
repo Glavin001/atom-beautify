@@ -5,6 +5,7 @@ _ = require('lodash')
 
 module.exports = class VueBeautifier extends Beautifier
   name: "Vue Beautifier"
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee"
 
   options:
     Vue: true
