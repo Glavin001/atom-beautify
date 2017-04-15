@@ -2,7 +2,7 @@ module.exports = {
 
   name: "Vue"
   namespace: "vue"
-  fallback: ['html']
+  fallback: ['html', 'js']
 
   ###
   Supported Grammars

@@ -19,6 +19,8 @@ module.exports = {
     "inc"
   ]
 
+  defaultBeautifier: "PHP-CS-Fixer"
+
   options:
     cs_fixer_path:
       title: "PHP-CS-Fixer Path"

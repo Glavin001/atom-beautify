@@ -14,6 +14,7 @@ module.exports = class Languages
   languageNames: [
     "apex"
     "arduino"
+    "bash"
     "c-sharp"
     "c"
     "clojure"
@@ -29,6 +30,7 @@ module.exports = class Languages
     "erb"
     "erlang"
     "gherkin"
+    "glsl"
     "go"
     "fortran"
     "handlebars"

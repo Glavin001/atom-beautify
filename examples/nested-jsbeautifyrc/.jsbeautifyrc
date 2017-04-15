@@ -60,3 +60,7 @@
     indent_size: 4
     indent_char: " "
     omit_div: true
+  vue:
+    space_before_conditional: false
+    space_after_anon_function: false
+    jslint_happy: false

@@ -8,6 +8,7 @@ Beautifier = require('./beautifier')
 module.exports = class StylishHaskell extends Beautifier
   name: "stylish-haskell"
   link: "https://github.com/jaspervdj/stylish-haskell"
+  isPreInstalled: false
 
   options: {
     Haskell: true

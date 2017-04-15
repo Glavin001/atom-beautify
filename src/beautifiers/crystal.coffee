@@ -8,9 +8,10 @@ Beautifier = require('./beautifier')
 module.exports = class Crystal extends Beautifier
   name: "Crystal"
   link: "http://crystal-lang.org"
+  isPreInstalled: false
 
   options: {
-    Crystal: true
+    Crystal: false
   }
 
   beautify: (text, language, options) ->

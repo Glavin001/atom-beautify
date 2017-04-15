@@ -16,7 +16,7 @@ module.exports = {
   Supported extensions
   ###
   extensions: [
-    'sld', 'xml', 'xhtml', 'xsd', 'xsl', 'jsp', 'gsp'
+    'sld', 'xml', 'xhtml', 'xsd', 'xsl', 'jsp', 'gsp', 'plist', 'recipe'
   ]
 
   defaultBeautifier: "Pretty Diff"
