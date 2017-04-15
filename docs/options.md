@@ -8725,8 +8725,9 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
 | `dontJoinCurlyBracet` | :white_check_mark: |
-| `spaces` | :white_check_mark: |
-| `tabs` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
 
 **Description**:
 
@@ -8813,52 +8814,78 @@ undefined (Supported by Nginx Beautify)
 }
 ```
 
-#####  [Spaces](#spaces) 
+#####  [Indent char](#indent-char) 
 
 **Namespace**: `nginx`
 
-**Key**: `spaces`
+**Key**: `indent_char`
 
-**Type**: `number`
+**Default**: ` `
+
+**Type**: `string`
 
 **Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
 
 **Description**:
 
-Indent with spaces (Supported by Nginx Beautify)
+Indentation character (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "nginx": {
-        "spaces": 0
+        "indent_char": " "
     }
 }
 ```
 
-#####  [Tabs](#tabs) 
+#####  [Indent size](#indent-size) 
 
 **Namespace**: `nginx`
 
-**Key**: `tabs`
+**Key**: `indent_size`
 
-**Default**: `1`
+**Default**: `4`
 
-**Type**: `number`
+**Type**: `integer`
 
 **Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
 
 **Description**:
 
-Indent with tabs (Supported by Nginx Beautify)
+Indentation size/length (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "nginx": {
-        "tabs": 1
+        "indent_size": 4
+    }
+}
+```
+
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_with_tabs": false
     }
 }
 ```
@@ -16677,52 +16704,78 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 ### Nginx Beautify
 
-#####  [Spaces](#spaces) 
+#####  [Indent size](#indent-size) 
 
 **Namespace**: `nginx`
 
-**Key**: `spaces`
+**Key**: `indent_size`
 
-**Type**: `number`
+**Default**: `4`
+
+**Type**: `integer`
 
 **Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
 
 **Description**:
 
-Indent with spaces (Supported by Nginx Beautify)
+Indentation size/length (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "nginx": {
-        "spaces": 0
+        "indent_size": 4
     }
 }
 ```
 
-#####  [Tabs](#tabs) 
+#####  [Indent char](#indent-char) 
 
 **Namespace**: `nginx`
 
-**Key**: `tabs`
+**Key**: `indent_char`
 
-**Default**: `1`
+**Default**: ` `
 
-**Type**: `number`
+**Type**: `string`
 
 **Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
 
 **Description**:
 
-Indent with tabs (Supported by Nginx Beautify)
+Indentation character (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "nginx": {
-        "tabs": 1
+        "indent_char": " "
+    }
+}
+```
+
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `nginx`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Nginx Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "nginx": {
+        "indent_with_tabs": false
     }
 }
 ```
