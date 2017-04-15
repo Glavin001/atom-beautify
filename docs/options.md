@@ -124,6 +124,25 @@ Do not show "Unsupported Language" errors when they occur
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Mute Unsupported Language Errors*" and change it to your desired configuration.
 
+#####  [Show Loading View](#show-loading-view) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Description**:
+
+Show loading view when beautifying
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Show Loading View*" and change it to your desired configuration.
+
 
 ## Language Options
 
@@ -9683,17 +9702,20 @@ Automatically beautify Puppet files on save
 
 ####  [Python](#python) 
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`yapf`](#yapf) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
 
-| Option | autopep8 | yapf |
-| --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
-| `ignore` | :white_check_mark: | :x: |
-| `indent_size` | :white_check_mark: | :x: |
-| `max_line_length` | :white_check_mark: | :x: |
-| `sort_imports` | :white_check_mark: | :x: |
+| Option | autopep8 | pybeautifier | yapf |
+| --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `formater` | :white_check_mark: | :white_check_mark: | :x: |
+| `ignore` | :white_check_mark: | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :white_check_mark: | :x: |
+| `max_line_length` | :white_check_mark: | :white_check_mark: | :x: |
+| `multi_line_output` | :white_check_mark: | :white_check_mark: | :x: |
+| `sort_imports` | :white_check_mark: | :white_check_mark: | :x: |
+| `style_config` | :white_check_mark: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -9724,7 +9746,7 @@ Disable Python Beautification
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `yapf` 
+**Enum**:  `autopep8`  `pybeautifier`  `yapf` 
 
 **Description**:
 
@@ -9754,6 +9776,34 @@ Automatically beautify Python files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
+#####  [Formater](#formater) 
+
+**Namespace**: `python`
+
+**Key**: `formater`
+
+**Default**: `autopep8`
+
+**Type**: `string`
+
+**Enum**:  `autopep8`  `yapf` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formater used by pybeautifier (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "formater": "autopep8"
+    }
+}
+```
+
 #####  [Ignore](#ignore) 
 
 **Namespace**: `python`
@@ -9764,11 +9814,11 @@ Automatically beautify Python files on save
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-do not fix these errors/warnings (Supported by autopep8)
+do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9792,11 +9842,11 @@ do not fix these errors/warnings (Supported by autopep8)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-Indentation size/length (Supported by autopep8)
+Indentation size/length (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9818,11 +9868,11 @@ Indentation size/length (Supported by autopep8)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-set maximum allowed line length (Supported by autopep8)
+set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9830,6 +9880,34 @@ set maximum allowed line length (Supported by autopep8)
 {
     "python": {
         "max_line_length": 79
+    }
+}
+```
+
+#####  [Multi line output](#multi-line-output) 
+
+**Namespace**: `python`
+
+**Key**: `multi_line_output`
+
+**Default**: `Hanging Grid Grouped`
+
+**Type**: `string`
+
+**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+defines how from imports wrap (requires isort installed) (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "multi_line_output": "Hanging Grid Grouped"
     }
 }
 ```
@@ -9842,11 +9920,11 @@ set maximum allowed line length (Supported by autopep8)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
 
 **Description**:
 
-sort imports (requires isort installed) (Supported by autopep8)
+sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9854,6 +9932,32 @@ sort imports (requires isort installed) (Supported by autopep8)
 {
     "python": {
         "sort_imports": false
+    }
+}
+```
+
+#####  [Style config](#style-config) 
+
+**Namespace**: `python`
+
+**Key**: `style_config`
+
+**Default**: `pep8`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+formatting style used by yapf (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "style_config": "pep8"
     }
 }
 ```
@@ -10573,21 +10677,6 @@ Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.cs
 }
 ```
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
-
-| Option | autopep8 | pybeautifier | yapf |
-| --- | --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `formater` | :white_check_mark: | :white_check_mark: | :x: |
-| `ignore` | :white_check_mark: | :white_check_mark: | :x: |
-| `indent_size` | :white_check_mark: | :white_check_mark: | :x: |
-| `max_line_length` | :white_check_mark: | :white_check_mark: | :x: |
-| `multi_line_output` | :white_check_mark: | :white_check_mark: | :x: |
-| `sort_imports` | :white_check_mark: | :white_check_mark: | :x: |
-| `style_config` | :white_check_mark: | :white_check_mark: | :x: |
-
 #####  [Convert quotes](#convert-quotes) 
 
 **Namespace**: `css`
@@ -10623,8 +10712,6 @@ Convert the quote characters delimiting strings from either double or single quo
 **Key**: `force_indentation`
 
 **Type**: `boolean`
-
-**Enum**:  `autopep8`  `pybeautifier`  `yapf` 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
@@ -10668,34 +10755,6 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Formater](#formater) 
-
-**Namespace**: `python`
-
-**Key**: `formater`
-
-**Default**: `autopep8`
-
-**Type**: `string`
-
-**Enum**:  `autopep8`  `yapf` 
-
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
-
-**Description**:
-
-formater used by pybeautifier (Supported by autopep8, pybeautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "python": {
-        "formater": "autopep8"
-    }
-}
-```
-
 #####  [Indent comments](#indent-comments) 
 
 **Namespace**: `css`
@@ -10705,12 +10764,6 @@ formater used by pybeautifier (Supported by autopep8, pybeautifier)
 **Default**: `true`
 
 **Type**: `boolean`
-
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
-
-**Description**:
-
-do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
@@ -10738,19 +10791,11 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
-
-**Description**:
-
-Indentation size/length (Supported by autopep8, pybeautifier)
-
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
 Indentation size/length (Supported by Pretty Diff)
-
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -10772,11 +10817,6 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
-
-**Description**:
-
-set maximum allowed line length (Supported by autopep8, pybeautifier)
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
@@ -10793,36 +10833,6 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 }
 ```
 
-#####  [Multi line output](#multi-line-output) 
-
-**Namespace**: `python`
-
-**Key**: `multi_line_output`
-
-**Default**: `Hanging Grid Grouped`
-
-**Type**: `string`
-
-**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
-
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
-
-**Description**:
-
-defines how from imports wrap (requires isort installed) (Supported by autopep8, pybeautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "python": {
-        "multi_line_output": "Hanging Grid Grouped"
-    }
-}
-```
-
-#####  [Sort imports](#sort-imports) 
-
 #####  [No lead zero](#no-lead-zero) 
 
 **Namespace**: `css`
@@ -10830,12 +10840,6 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 **Key**: `no_lead_zero`
 
 **Type**: `boolean`
-
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
-
-**Description**:
-
-sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
 
@@ -10852,36 +10856,6 @@ If in CSS values leading 0s immediately preceeding a decimal should be removed o
     }
 }
 ```
-
-#####  [Style config](#style-config) 
-
-**Namespace**: `python`
-
-**Key**: `style_config`
-
-**Default**: `pep8`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
-
-**Description**:
-
-formatting style used by yapf (Supported by autopep8, pybeautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "python": {
-        "style_config": "pep8"
-    }
-}
-```
-
-####  [R](#r) 
-
-**Supported Beautifiers**:  [`formatR`](#formatr) 
 
 #####  [comb predefined config](#comb-predefined-config) 
 

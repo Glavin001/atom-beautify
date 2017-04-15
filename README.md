@@ -92,6 +92,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Pretty Diff | :white_check_mark: | Nothing! |
 | Pug Beautify | :white_check_mark: | Nothing! |
 | puppet-lint | :x: | Go to http://puppet-lint.com/ and follow the instructions. |
+| pybeautifier | :white_check_mark: | Nothing! |
 | Remark | :white_check_mark: | Nothing! |
 | Rubocop | :x: | Go to https://github.com/bbatsov/rubocop and follow the instructions. |
 | Ruby Beautify | :x: | Go to https://github.com/erniebrodeur/ruby-beautify and follow the instructions. |
