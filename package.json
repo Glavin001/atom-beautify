@@ -116,6 +116,10 @@
       "url": "https://github.com/vmuriart"
     },
     {
+      "name": "guyskk",
+      "url": "https://github.com/guyskk"
+    },
+    {
       "name": "Denys Vitali",
       "url": "https://github.com/denysvitali"
     },
@@ -307,6 +311,7 @@
     "clojure beautifier",
     "nunjucks",
     "ux markup",
+    "pybeautifier",
     "cljfmt",
     "bash",
     "beautysh",

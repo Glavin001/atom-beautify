@@ -155,7 +155,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Perl | `Perl`, `Perl 6` |`.pl` | [`Perltidy`](http://perltidy.sourceforge.net/) (Default) |
 | PHP | `PHP` |`.php`, `.module`, `.inc` | [`PHP-CS-Fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) (Default), [`PHPCBF`](http://php.net/manual/en/install.php), [`hh_format`](http://hhvm.com/) |
 | Puppet | `Puppet` |`.pp` | [`puppet-lint`](http://puppet-lint.com/) (Default) |
-| Python | `Python` |`.py` | [`autopep8`](https://github.com/hhatto/autopep8) (Default), [`yapf`](https://github.com/google/yapf) |
+| Python | `Python` |`.py` | [`autopep8`](https://github.com/hhatto/autopep8) (Default), [`pybeautifier`](https://github.com/guyskk/pybeautifier), [`yapf`](https://github.com/google/yapf) |
 | R | `R` |`.r`, `.R` | [`formatR`](https://github.com/yihui/formatR) (Default) |
 | Riot.js | `Riot.js`, `HTML (Riot Tag)` |`.tag` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Ruby | `Ruby`, `Ruby on Rails` |`.rb` | [`Rubocop`](https://github.com/bbatsov/rubocop) (Default), [`Ruby Beautify`](https://github.com/erniebrodeur/ruby-beautify) |
