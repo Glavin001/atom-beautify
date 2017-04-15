@@ -6,15 +6,6 @@ module.exports = {
     order: -1
     description: 'General options for Atom Beautify'
     properties:
-      test1:
-        type: "integer"
-        default: null
-      test2:
-        type: "integer"
-        default: undefined
-      test3:
-        type: "integer"
-        default: 0
       analytics :
         title: 'Anonymous Analytics'
         type : 'boolean'
