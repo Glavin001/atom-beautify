@@ -131,6 +131,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | gherkin | `Gherkin` |`.feature` | [`Gherkin formatter`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee) (Default) |
 | GLSL | `C`, `opencl`, `GLSL` |`.vert`, `.frag` | [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) (Default) |
 | Go | `Go` |`.go` | [`gofmt`](https://golang.org/cmd/gofmt/) (Default) |
+| Golang Template | `HTML (Go)`, `Go Template` |`.gohtml` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Handlebars | `Handlebars`, `HTML (Handlebars)` |`.hbs`, `.handlebars` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Haskell | `Haskell` |`.hs` | [`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell) (Default) |
 | HTML | `HTML` |`.html` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
