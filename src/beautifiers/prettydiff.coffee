@@ -71,7 +71,7 @@ module.exports = class PrettyDiff extends Beautifier
   }
 
   beautify: (text, language, options) ->
-
+    options.crlf = @getDefaultLineEnding(true,false,options.end_of_line)
     return new @Promise((resolve, reject) =>
       prettydiff = require("prettydiff")
       _ = require('lodash')

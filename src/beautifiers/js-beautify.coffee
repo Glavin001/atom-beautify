@@ -27,9 +27,7 @@ module.exports = class JSBeautify extends Beautifier
   beautify: (text, language, options) ->
     @verbose("JS Beautify language #{language}")
     @info("JS Beautify Options: #{JSON.stringify(options, null, 4)}")
-    #TODO reconsider handling of EOL once js-beautify adds EOL detection
-    #see https://github.com/beautify-web/js-beautify/issues/899
-    options.eol = getDefaultLineEnding() ? options.eol #fixes issue #707
+    options.eol = @getDefaultLineEnding('\r\n','\n',options.end_of_line)
     return new @Promise((resolve, reject) =>
       try
         switch language
@@ -60,23 +58,3 @@ module.exports = class JSBeautify extends Beautifier
         reject(err)
 
     )
-
-  # Retrieves the default line ending based upon the Atom configuration
-  #  `line-ending-selector.defaultLineEnding`. If the Atom configuration
-  #  indicates "OS Default", the `process.platform` is queried, returning
-  #  CRLF for Windows systems and LF for all other systems.
-  # Code modified from atom/line-ending-selector
-  # returns: The correct line-ending character sequence based upon the Atom
-  #  configuration, or `null` if the Atom line ending configuration was not
-  #  recognized.
-  # see: https://github.com/atom/line-ending-selector/blob/master/lib/main.js
-  getDefaultLineEnding= ->
-    switch atom.config.get('line-ending-selector.defaultLineEnding')
-      when 'LF'
-        return '\n'
-      when 'CRLF'
-        return '\r\n'
-      when 'OS Default'
-        return if process.platform is 'win32' then '\r\n' else '\n'
-      else
-        return null
