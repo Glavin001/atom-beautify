@@ -6,7 +6,21 @@ module.exports = class NginxBeautify extends Beautifier
   link: "https://github.com/denysvitali/nginxbeautify"
 
   options: {
-    Nginx: true
+    Nginx: {
+      spaces: ["indent_with_tabs", "indent_size", "indent_char", (indent_with_tabs, indent_size, indent_char) ->
+        if indent_with_tabs or indent_char is "\t"
+          0
+        else
+          indent_size
+      ]
+      tabs: ["indent_with_tabs", "indent_size", "indent_char", (indent_with_tabs, indent_size, indent_char) ->
+        if indent_with_tabs or indent_char is "\t"
+          indent_size
+        else
+          0
+      ]
+      dontJoinCurlyBracet: true
+    }
   }
 
   beautify: (text, language, options) ->
