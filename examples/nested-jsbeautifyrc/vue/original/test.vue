@@ -17,18 +17,9 @@ return {
 </script>
 
 <style lang="sass">
-nav {
-ul {
-    margin: 0
-    padding: 0
-}
-  li {
-    display: inline-block
-}
-a {
-    display: block
-    }
-}
+  body
+    color: red
+    background-color: red
 </style>
 
 <style lang="scss">

@@ -31,7 +31,7 @@ module.exports = class VueBeautifier extends Beautifier
             require("js-beautify")(text, options)
           when "style"
             switch lang
-              when "sass", "scss"
+              when "scss"
                 options = _.merge(options,
                   source: text
                   lang: "scss"
