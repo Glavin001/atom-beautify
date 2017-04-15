@@ -414,7 +414,7 @@ Automatically beautify Bash files on save
 
 **Key**: `indent_size`
 
-**Default**: `2`
+**Default**: `4`
 
 **Type**: `integer`
 
@@ -429,7 +429,7 @@ Indentation size/length (Supported by beautysh)
 ```json
 {
     "bash": {
-        "indent_size": 2
+        "indent_size": 4
     }
 }
 ```
@@ -7216,8 +7216,6 @@ Indent the preable (Supported by Latex Beautify)
 
 **Key**: `indent_with_tabs`
 
-**Default**: `true`
-
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
@@ -7231,7 +7229,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by L
 ```json
 {
     "latex": {
-        "indent_with_tabs": true
+        "indent_with_tabs": false
     }
 }
 ```
@@ -16446,8 +16444,6 @@ Indentation character (Supported by Latex Beautify)
 
 **Key**: `indent_with_tabs`
 
-**Default**: `true`
-
 **Type**: `boolean`
 
 **Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
@@ -16461,7 +16457,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by L
 ```json
 {
     "latex": {
-        "indent_with_tabs": true
+        "indent_with_tabs": false
     }
 }
 ```
@@ -19380,7 +19376,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 
 **Key**: `indent_size`
 
-**Default**: `2`
+**Default**: `4`
 
 **Type**: `integer`
 
@@ -19395,7 +19391,7 @@ Indentation size/length (Supported by beautysh)
 ```json
 {
     "bash": {
-        "indent_size": 2
+        "indent_size": 4
     }
 }
 ```

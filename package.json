@@ -327,7 +327,6 @@
   },
   "scripts": {
     "build-options": "node script/build-options.js",
-    "postinstall": "npm run build-options",
     "docs": "npm run build-options && coffee docs/",
     "prepublish": "npm run docs",
     "lint": "coffeelint src/ spec/",

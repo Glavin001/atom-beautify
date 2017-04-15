@@ -110,11 +110,32 @@ module.exports = class Beautifiers extends EventEmitter
       new Beautifier()
     )
 
+    @options = @loadOptions()
+
+  loadOptions : ->
     try
-      @options = require('../options.json')
-    catch
-      console.warn('Beautifier options not found.')
-      @options = {}
+      options = require('../options.json')
+      options = _.mapValues(options, (lang) ->
+        scope = lang.scope
+        tabLength = atom?.config.get('editor.tabLength', scope: scope) ? 4
+        softTabs = atom?.config.get('editor.softTabs', scope: scope) ? true
+        defaultIndentSize = (if softTabs then tabLength else 1)
+        defaultIndentChar = (if softTabs then " " else "\t")
+        defaultIndentWithTabs = not softTabs
+        if _.has(lang, "properties.indent_size")
+          _.set(lang, "properties.indent_size.default", defaultIndentSize)
+        if _.has(lang, "properties.indent_char")
+          _.set(lang, "properties.indent_char.default", defaultIndentChar)
+        if _.has(lang, "properties.indent_with_tabs")
+          _.set(lang, "properties.indent_with_tabs.default", defaultIndentWithTabs)
+        if _.has(lang, "properties.wrap_attributes_indent_size")
+          _.set(lang, "properties.wrap_attributes_indent_size.default", defaultIndentSize)
+        return lang
+      )
+    catch error
+      console.error("Error loading options", error)
+      options = {}
+    return options
 
   ###
     From https://github.com/atom/notifications/blob/01779ade79e7196f1603b8c1fa31716aa4a33911/lib/notification-issue.coffee#L130

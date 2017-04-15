@@ -1,16 +1,9 @@
-# Get Atom defaults
-scope = ['text.jade']
-tabLength = atom?.config.get('editor.tabLength', scope: scope) ? 4
-softTabs = atom?.config.get('editor.softTabs', scope: scope) ? true
-defaultIndentSize = (if softTabs then tabLength else 1)
-defaultIndentChar = (if softTabs then " " else "\t")
-defaultIndentWithTabs = not softTabs
-
 module.exports = {
 
   name: "Jade"
   namespace: "jade"
   fallback: ['html']
+  scope: ['text.jade']
 
   ###
   Supported Grammars
@@ -29,12 +22,12 @@ module.exports = {
   options: [
     indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indentation size/length"
     indent_char:
       type: 'string'
-      default: defaultIndentChar
+      default: null
       description: "Indentation character"
     omit_div:
       type: 'boolean'

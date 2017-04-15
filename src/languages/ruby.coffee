@@ -1,15 +1,8 @@
-# Get Atom defaults
-scope = ['source.ruby']
-tabLength = atom?.config.get('editor.tabLength', scope: scope) ? 4
-softTabs = atom?.config.get('editor.softTabs', scope: scope) ? true
-defaultIndentSize = (if softTabs then tabLength else 1)
-defaultIndentChar = (if softTabs then " " else "\t")
-defaultIndentWithTabs = not softTabs
-
 module.exports = {
 
   name: "Ruby"
   namespace: "ruby"
+  scope: ['source.ruby']
 
   ###
   Supported Grammars
@@ -29,19 +22,18 @@ module.exports = {
   options:
     indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indentation size/length"
+    indent_char:
+      type: 'string'
+      default: null
+      description: "Indentation character"
+      enum: [" ", "\t"]
     rubocop_path:
       title: "Rubocop Path"
       type: 'string'
       default: ""
       description: "Path to the `rubocop` CLI executable"
-    indent_char:
-      type: 'string'
-      default: defaultIndentChar
-      description: "Indentation character"
-      enum: [" ", "\t"]
-
 
 }

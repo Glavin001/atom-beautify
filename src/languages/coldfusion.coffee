@@ -1,15 +1,9 @@
-scope = ['text.html']
-tabLength = atom?.config.get('editor.tabLength', scope: scope) ? 4
-softTabs = atom?.config.get('editor.softTabs', scope: scope) ? true
-defaultIndentSize = (if softTabs then tabLength else 1)
-defaultIndentChar = (if softTabs then " " else "\t")
-defaultIndentWithTabs = not softTabs
-
 module.exports = {
 
   name: "Coldfusion"
   description: "Coldfusion Markup; cfscript is also handled via the prettydiff javascript parser"
   namespace: "cfml"
+  scope: ['text.html']
 
   ###
   Supported Grammars
@@ -30,12 +24,12 @@ module.exports = {
   options:
     indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indentation size/length"
     indent_char:
       type: 'string'
-      default: defaultIndentChar
+      default: null
       minimum: 0
       description: "Indentation character"
     wrap_line_length:

@@ -1,14 +1,8 @@
-# Get Atom defaults
-tabLength = atom?.config.get('editor.tabLength') ? 4
-softTabs = atom?.config.get('editor.softTabs') ? true
-defaultIndentSize = (if softTabs then tabLength else 1)
-defaultIndentChar = (if softTabs then " " else "\t")
-defaultIndentWithTabs = not softTabs
-
 module.exports = {
 
   name: "gherkin"
   namespace: "gherkin"
+  scope: []
 
   grammars: [
     "Gherkin"
@@ -21,12 +15,12 @@ module.exports = {
   options:
     indent_size:
       type: 'integer'
-      default: defaultIndentSize
+      default: null
       minimum: 0
       description: "Indentation size/length"
     indent_char:
       type: 'string'
-      default: defaultIndentChar
+      default: null
       minimum: 0
       description: "Indentation character"
 }
