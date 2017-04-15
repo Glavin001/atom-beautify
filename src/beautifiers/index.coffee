@@ -54,6 +54,7 @@ module.exports = class Beautifiers extends EventEmitter
     'jscs'
     'eslint'
     'lua-beautifier'
+    'nginx-beautify'
     'ocp-indent'
     'perltidy'
     'php-cs-fixer'
