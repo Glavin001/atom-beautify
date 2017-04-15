@@ -1,4 +1,3 @@
-console.log('loading nunjucks')
 
 module.exports = {
 

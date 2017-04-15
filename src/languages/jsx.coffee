@@ -24,4 +24,10 @@ module.exports = {
 
   defaultBeautifier: "Pretty Diff"
 
+  options:
+    e4x:
+      type: 'boolean'
+      default: true
+      description: "Support e4x/jsx syntax"
+
 }

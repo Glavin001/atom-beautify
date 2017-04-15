@@ -45,5 +45,5 @@ I have:
 - [ ] Searched through existing Atom Beautify Issues at https://github.com/Glavin001/atom-beautify/issues
 so I know this is not a duplicate issue
 - [ ] Filled out the Input, Expected, and Actual sections above or have edited/removed them in a way that fully describes the issue.
-- [ ] Generated debugging information and added link for `debug.md` Gist to this issue
+- [ ] Generated debugging information by executing `Atom Beautify: Help Debug Editor` command in Atom and added link for `debug.md` Gist to this issue
 

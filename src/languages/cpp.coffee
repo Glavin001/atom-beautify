@@ -20,10 +20,12 @@ module.exports = {
     "cpp"
     "cxx"
     "C"
+    "cu"
     "c++"
     "hpp"
     "hxx"
     "h++"
+    "cuh"
   ]
 
   options:

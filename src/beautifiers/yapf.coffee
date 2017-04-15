@@ -9,6 +9,7 @@ module.exports = class Yapf extends Beautifier
 
   name: "yapf"
   link: "https://github.com/google/yapf"
+  isPreInstalled: false
 
   options: {
     Python: false
@@ -23,8 +24,12 @@ module.exports = class Yapf extends Beautifier
       }, ignoreReturnCode: true)
       .then(=>
         if options.sort_imports
+          editor = atom.workspace.getActiveTextEditor()
+          filePath = editor.getPath()
+          projectPath = atom.project.relativizePath(filePath)[0]
+
           @run("isort",
-            [tempFile],
+            ["-sp", projectPath, tempFile],
             help: {
               link: "https://github.com/timothycrosley/isort"
           })

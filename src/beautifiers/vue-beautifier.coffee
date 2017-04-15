@@ -1,49 +1,59 @@
 "use strict"
 Beautifier = require('./beautifier')
-prettydiff = require("prettydiff")
-_ = require('lodash')
 
 module.exports = class VueBeautifier extends Beautifier
   name: "Vue Beautifier"
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee"
 
   options:
     Vue: true
 
   beautify: (text, language, options) ->
-    return new @Promise((resolve, reject) ->
-      regexp = /(<(template|script|style)[^>]*>)((\s|\S)*?)<\/\2>/gi
+    return new @Promise((resolve, reject) =>
+      prettydiff = require("prettydiff")
+      _ = require('lodash')
+      regexp = /(^<(template|script|style)[^>]*>)((\s|\S)*?)^<\/\2>/gim
 
-      resolve(text.replace(regexp, (match, begin, type, text) ->
+      results = text.replace(regexp, (match, begin, type, text) =>
         lang = /lang\s*=\s*['"](\w+)["']/.exec(begin)?[1]
-
-        switch type
+        replaceText = text
+        text = text.trim()
+        beautifiedText = (switch type
           when "template"
             switch lang
               when "pug", "jade"
-                match.replace(text, "\n" + require("pug-beautify")(text, options) + "\n")
+                require("pug-beautify")(text, options)
               when undefined
-                match.replace(text, "\n" + require("js-beautify").html(text, options) + "\n")
+                require("js-beautify").html(text, options)
               else
-                match
+                undefined
           when "script"
-            match.replace(text, "\n" + require("js-beautify")(text, options) + "\n")
+            require("js-beautify")(text, options)
           when "style"
             switch lang
-              when "sass", "scss"
-                options = _.merge options,
+              when "scss"
+                options = _.merge(options,
                   source: text
                   lang: "scss"
                   mode: "beautify"
-                match.replace(text, prettydiff.api(options)[0])
+                )
+                prettydiff.api(options)[0]
               when "less"
-                options = _.merge options,
-                source: text
-                lang: "less"
-                mode: "beautify"
-                match.replace(text, prettydiff.api(options)[0])
+                options = _.merge(options,
+                  source: text
+                  lang: "less"
+                  mode: "beautify"
+                )
+                prettydiff.api(options)[0]
               when undefined
-                match.replace(text, "\n" + require("js-beautify").css(text, options) + "\n")
+                require("js-beautify").css(text, options)
               else
-                match
-      ))
+                undefined
+        )
+        result = if beautifiedText then match.replace(replaceText, "\n#{beautifiedText.trim()}\n") else match
+        @verbose("Vue part", match, begin, type, text, lang, result)
+        return result
+      )
+      @verbose("Vue final results", results)
+      resolve(results)
     )

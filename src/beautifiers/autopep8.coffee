@@ -9,6 +9,7 @@ module.exports = class Autopep8 extends Beautifier
 
   name: "autopep8"
   link: "https://github.com/hhatto/autopep8"
+  isPreInstalled: false
 
   options: {
     Python: true
@@ -26,8 +27,12 @@ module.exports = class Autopep8 extends Beautifier
       })
       .then(=>
         if options.sort_imports
+          editor = atom.workspace.getActiveTextEditor()
+          filePath = editor.getPath()
+          projectPath = atom.project.relativizePath(filePath)[0]
+
           @run("isort",
-            [tempFile],
+            ["-sp", projectPath, tempFile],
             help: {
               link: "https://github.com/timothycrosley/isort"
           })
