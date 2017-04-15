@@ -9425,7 +9425,7 @@ Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHP-CS-Fixer, PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16637,7 +16637,7 @@ Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHP-CS-Fixer, PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16664,7 +16664,7 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 
 **Description**:
 
-Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules (Supported by PHP-CS-Fixer, PHPCBF)
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHP-CS-Fixer, PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
