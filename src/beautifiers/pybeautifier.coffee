@@ -38,6 +38,7 @@ module.exports = class PythonBeautifier extends Beautifier
 
   name: "pybeautifier"
   link: "https://github.com/guyskk/pybeautifier"
+  isPreInstalled: false
 
   options: {
     Python: true

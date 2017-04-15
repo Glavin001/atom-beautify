@@ -84,7 +84,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Latex Beautify | :x: | Go to https://github.com/cmhughes/latexindent.pl and follow the instructions. |
 | Lua beautifier | :x: | Go to https://www.perl.org/ and follow the instructions. |
 | Marko Beautifier | :white_check_mark: | Nothing! |
-| Nginx Beautify | :white_check_mark: | Nothing! |
+| Nginx Beautify | :x: | Go to https://github.com/denysvitali/nginxbeautify and follow the instructions. |
 | ocp-indent | :x: | Go to https://www.typerex.org/ocp-indent.html and follow the instructions. |
 | Perltidy | :x: | Go to http://perltidy.sourceforge.net/ and follow the instructions. |
 | PHP-CS-Fixer | :x: | Go to https://github.com/FriendsOfPHP/PHP-CS-Fixer and follow the instructions. |
@@ -92,7 +92,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Pretty Diff | :white_check_mark: | Nothing! |
 | Pug Beautify | :white_check_mark: | Nothing! |
 | puppet-lint | :x: | Go to http://puppet-lint.com/ and follow the instructions. |
-| pybeautifier | :white_check_mark: | Nothing! |
+| pybeautifier | :x: | Go to https://github.com/guyskk/pybeautifier and follow the instructions. |
 | Remark | :white_check_mark: | Nothing! |
 | Rubocop | :x: | Go to https://github.com/bbatsov/rubocop and follow the instructions. |
 | Ruby Beautify | :x: | Go to https://github.com/erniebrodeur/ruby-beautify and follow the instructions. |

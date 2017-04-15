@@ -4,6 +4,7 @@ Beautifier = require('./beautifier')
 module.exports = class NginxBeautify extends Beautifier
   name: "Nginx Beautify"
   link: "https://github.com/denysvitali/nginxbeautify"
+  isPreInstalled: false
 
   options: {
     Nginx: {
