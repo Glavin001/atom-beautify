@@ -9,6 +9,7 @@ Beautifier = require('../beautifier')
 module.exports = class R extends Beautifier
   name: "formatR"
   link: "https://github.com/yihui/formatR"
+  isPreInstalled: false
 
   options: {
     R: true

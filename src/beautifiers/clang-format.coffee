@@ -11,11 +11,13 @@ module.exports = class ClangFormat extends Beautifier
 
   name: "clang-format"
   link: "https://clang.llvm.org/docs/ClangFormat.html"
+  isPreInstalled: false
 
   options: {
     "C++": false
     "C": false
     "Objective-C": false
+    "GLSL": true
   }
 
   ###

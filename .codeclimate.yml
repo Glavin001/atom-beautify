@@ -1,0 +1,12 @@
+engines:
+ coffeelint:
+   enabled: true
+ eslint:
+   enabled: true
+
+ratings:
+ paths:
+ - "**.coffee"
+ - "**.js"
+
+exclude_paths:

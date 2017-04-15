@@ -16,6 +16,8 @@ module.exports = {
   extensions: [
     "f90"
     "F90"
+    "f95"
+    "F95"
   ]
 
   ###
