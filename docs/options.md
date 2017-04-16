@@ -14902,6 +14902,100 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
+####  [YAML](#yaml) 
+
+**Supported Beautifiers**:  [`align-yaml`](#align-yaml) 
+
+| Option | align-yaml |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `padding` | :white_check_mark: |
+
+**Description**:
+
+Options for language YAML
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable YAML Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `align-yaml`
+
+**Type**: `string`
+
+**Enum**:  `align-yaml` 
+
+**Description**:
+
+Default Beautifier to be used for YAML
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify YAML files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Padding](#padding) 
+
+**Namespace**: `yaml`
+
+**Key**: `padding`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`align-yaml`](#align-yaml) 
+
+**Description**:
+
+The amount of padding to add next to each line. (Supported by align-yaml)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "yaml": {
+        "padding": 0
+    }
+}
+```
+
 
 ## Beautifier Options
 
@@ -19174,6 +19268,33 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
             "body",
             "/html"
         ]
+    }
+}
+```
+
+
+### align-yaml
+
+#####  [Padding](#padding) 
+
+**Namespace**: `yaml`
+
+**Key**: `padding`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`align-yaml`](#align-yaml) 
+
+**Description**:
+
+The amount of padding to add next to each line. (Supported by align-yaml)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "yaml": {
+        "padding": 0
     }
 }
 ```

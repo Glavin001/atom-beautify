@@ -35,6 +35,7 @@ module.exports = class Beautifiers extends EventEmitter
   ###
   beautifierNames : [
     'uncrustify'
+    'align-yaml'
     'autopep8'
     'coffee-formatter'
     'coffee-fmt'
