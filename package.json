@@ -140,6 +140,7 @@
     "atom": ">=1.6.0 <2.0.0"
   },
   "dependencies": {
+    "align-yaml": "^0.1.8",
     "async": "^2.0.1",
     "atom-message-panel": "^1.2.4",
     "atom-space-pen-views": "^2.0.5",
@@ -162,8 +163,8 @@
     "loophole": "^1.0.0",
     "marko-prettyprint": "^1.2.0",
     "nginxbeautify": "^2.0.0",
-    "node-dir": "^0.1.16",
     "node-cljfmt": "^0.5.3-1",
+    "node-dir": "^0.1.16",
     "node-uuid": "^1.4.3",
     "open": "0.0.5",
     "prettydiff": "^1.16.27",
@@ -319,7 +320,8 @@
     "hh_format",
     "nginx",
     "nginx beautify",
-    "golang template"
+    "golang template",
+    "align-yaml"
   ],
   "devDependencies": {
     "coffeelint": "^1.10.1",

@@ -76,6 +76,7 @@ module.exports = class Languages
     "visualforce"
     "xml"
     "xtemplate"
+    "yaml"
   ]
 
   ###

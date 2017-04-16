@@ -62,6 +62,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 
 | Beautifier | Is Pre-Installed? | Installation Instructions |
 | --- | --- | --- |
+| align-yaml | :white_check_mark: | Nothing! |
 | autopep8 | :x: | Go to https://github.com/hhatto/autopep8 and follow the instructions. |
 | beautysh | :x: | Go to https://github.com/bemeurer/beautysh and follow the instructions. |
 | clang-format | :x: | Go to https://clang.llvm.org/docs/ClangFormat.html and follow the instructions. |
@@ -177,6 +178,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Vue | `Vue Component` |`.vue` | [`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee) (Default) |
 | XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | XTemplate | `XTemplate` |`.xtemplate` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
+| YAML | `YAML` |`.yml`, `.yaml` | [`align-yaml`](https://github.com/jonschlinkert/align-yaml) (Default) |
 
 ## Usage
 
