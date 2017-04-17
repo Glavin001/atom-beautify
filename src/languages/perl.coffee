@@ -15,6 +15,10 @@ module.exports = {
   ###
   extensions: [
     "pl"
+    "PL"
+    "pm"
+    "pod"
+    "t"
   ]
 
   options:
