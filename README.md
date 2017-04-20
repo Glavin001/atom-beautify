@@ -46,10 +46,15 @@ Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
 
 ### Important Notice: Analytics
 
-By default `Anonymous Analytics` is enabled.
-If you do not wish to have usage data sent to Google Analytics then please disable `Anonymous Analytics` option before using Atom-Beautify.
+[Atom-Beautify respects the `core.telemetryConsent` configuration option from Atom editor.](https://github.com/Glavin001/atom-beautify/issues/1179)
+If you do not wish to have usage data sent to Google Analytics then please set `core.telemetryConsent` to `no` or `undecided` option before using Atom-Beautify.
 See [`Anonymous Analytics` section of docs](docs/options.md#anonymous-analytics) for details.
 Thank you.
+
+| On Atom Load | Change Setting Later |
+| --- | --- |
+| ![image](https://cloud.githubusercontent.com/assets/1885333/25234140/947b1b50-25b7-11e7-8ebc-0ae37420f13e.png) | ![image](https://cloud.githubusercontent.com/assets/1885333/25234184/b41b4192-25b7-11e7-8185-a83829b48078.png) |
+
 
 ### Next Version: [Unibeautify](https://github.com/Unibeautify/unibeautify)
 
