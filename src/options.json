@@ -5792,10 +5792,56 @@
           "namespace": "php"
         }
       },
+      "cs_fixer_version": {
+        "title": "PHP-CS-Fixer Version",
+        "type": "integer",
+        "default": 2,
+        "enum": [
+          1,
+          2
+        ],
+        "beautifiers": [
+          "PHP-CS-Fixer"
+        ],
+        "key": "cs_fixer_version",
+        "language": {
+          "name": "PHP",
+          "namespace": "php"
+        },
+        "description": "undefined (Supported by PHP-CS-Fixer)"
+      },
+      "fixers": {
+        "type": "string",
+        "default": "",
+        "description": "Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only) (Supported by PHP-CS-Fixer)",
+        "title": "Fixers",
+        "beautifiers": [
+          "PHP-CS-Fixer"
+        ],
+        "key": "fixers",
+        "language": {
+          "name": "PHP",
+          "namespace": "php"
+        }
+      },
+      "level": {
+        "type": "string",
+        "default": "",
+        "description": "By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 only) (Supported by PHP-CS-Fixer)",
+        "title": "Level",
+        "beautifiers": [
+          "PHP-CS-Fixer"
+        ],
+        "key": "level",
+        "language": {
+          "name": "PHP",
+          "namespace": "php"
+        }
+      },
       "rules": {
         "type": "string",
         "default": "",
-        "description": "Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (Supported by PHP-CS-Fixer)",
+        "description": "Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)",
         "title": "Rules",
         "beautifiers": [
           "PHP-CS-Fixer"

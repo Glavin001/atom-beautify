@@ -27,10 +27,23 @@ module.exports = {
       type: 'string'
       default: ""
       description: "Absolute path to the `php-cs-fixer` CLI executable"
+    cs_fixer_version:
+      title: "PHP-CS-Fixer Version"
+      type: 'integer'
+      default: 2
+      enum: [1, 2]
+    fixers:
+      type: 'string'
+      default: ""
+      description: "Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only)"
+    level:
+      type: 'string'
+      default: ""
+      description: "By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 only)"
     rules:
       type: 'string'
       default: ""
-      description: "Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2"
+      description: "Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only)"
     phpcbf_path:
       title: "PHPCBF Path"
       type: 'string'
