@@ -1,3 +1,7 @@
+# v0.29.23 (2016-04-20)
+- See #1607. Add support for PHP-CS-Fixer 1, along with version 2.
+- Closes #1179. Replace atom-beautify.general.analytics option with configuration option
+
 # v0.29.3 to v0.29.22 (2016-04-16 to 2017-04-15)
 - Add support for additional wrap attribute options of js-beautify (html): force-aligned and force-expand-multiline.
 - Update to `remark`'s new API and fix [#1196](https://github.com/Glavin001/atom-beautify/issues/1196)
@@ -14,7 +18,6 @@
 - Add support for PrettyDiff's *bracepadding* option in JavaScript. See [#1157](https://github.com/Glavin001/atom-beautify/issues/1157)
 - Closes [#447](https://github.com/Glavin001/atom-beautify/issues/447). Improved Handlebars language support
 - Closes [#384](https://github.com/Glavin001/atom-beautify/issues/384). Add [latexindent.pl](https://github.com/cmhughes/latexindent.pl) beautifier for LaTeX language
-
 
 # v0.29.2 (2016-04-08)
 - See #924. Add more verbose debugging to beautifyFilePath
