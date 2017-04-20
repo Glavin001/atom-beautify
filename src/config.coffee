@@ -6,16 +6,6 @@ module.exports = {
     order: -1
     description: 'General options for Atom Beautify'
     properties:
-      analytics :
-        title: 'Anonymous Analytics'
-        type : 'boolean'
-        default : true
-        description : "[Google
-                Analytics](http://www.google.com/analytics/) is used to track what languages are being
-                used the most and causing the most errors, as well as other stats such as performance.
-                Everything is anonymized and no personal
-                information, such as source code, is sent.
-                See https://github.com/Glavin001/atom-beautify/issues/47 for more details."
       _analyticsUserId :
         title: 'Analytics User Id'
         type : 'string'

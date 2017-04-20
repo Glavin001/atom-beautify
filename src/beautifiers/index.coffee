@@ -254,7 +254,8 @@ module.exports = class Beautifiers extends EventEmitter
   track : (type, payload) ->
     try
       # Check if Analytics is enabled
-      if atom.config.get("atom-beautify.general.analytics")
+      if atom.config.get("core.telemetryConsent") is "limited"
+        logger.info("Analytics is enabled.")
         # Setup Analytics
         unless atom.config.get("atom-beautify.general._analyticsUserId")
           uuid = require("node-uuid")
@@ -267,6 +268,8 @@ module.exports = class Beautifiers extends EventEmitter
           }
         })
         @analytics[type](payload).send()
+      else
+        logger.info("Analytics is disabled.")
     catch error
       logger.error(error)
 
