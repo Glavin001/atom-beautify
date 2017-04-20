@@ -31,25 +31,6 @@ Unique identifier for this user for tracking usage analytics
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Analytics User Id*" and change it to your desired configuration.
 
-#####  [Anonymous Analytics](#anonymous-analytics) 
-
-**Important**: This option is only configurable from within Atom Beautify's setting panel.
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Description**:
-
-[Google Analytics](http://www.google.com/analytics/) is used to track what languages are being used the most and causing the most errors, as well as other stats such as performance. Everything is anonymized and no personal information, such as source code, is sent. See https://github.com/Glavin001/atom-beautify/issues/47 for more details.
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Anonymous Analytics*" and change it to your desired configuration.
-
 #####  [Beautify Entire File On Save](#beautify-entire-file-on-save) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -9590,6 +9571,9 @@ Specify a configuration file which will override the default name of .perltidyrc
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `cs_fixer_path` | :white_check_mark: | :x: | :x: |
+| `cs_fixer_version` | :white_check_mark: | :x: | :x: |
+| `fixers` | :white_check_mark: | :x: | :x: |
+| `level` | :white_check_mark: | :x: | :x: |
 | `phpcbf_path` | :white_check_mark: | :x: | :x: |
 | `rules` | :white_check_mark: | :x: | :x: |
 | `standard` | :white_check_mark: | :white_check_mark: | :x: |
@@ -9677,6 +9661,82 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
+#####  [PHP-CS-Fixer Version](#php-cs-fixer-version) 
+
+**Namespace**: `php`
+
+**Key**: `cs_fixer_version`
+
+**Default**: `2`
+
+**Type**: `integer`
+
+**Enum**:  `1`  `2` 
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+undefined (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "cs_fixer_version": 2
+    }
+}
+```
+
+#####  [Fixers](#fixers) 
+
+**Namespace**: `php`
+
+**Key**: `fixers`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only) (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "fixers": ""
+    }
+}
+```
+
+#####  [Level](#level) 
+
+**Namespace**: `php`
+
+**Key**: `level`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 only) (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "level": ""
+    }
+}
+```
+
 #####  [PHPCBF Path](#phpcbf-path) 
 
 **Namespace**: `php`
@@ -9713,7 +9773,7 @@ Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (Supported by PHP-CS-Fixer)
+Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17261,6 +17321,82 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
+#####  [PHP-CS-Fixer Version](#php-cs-fixer-version) 
+
+**Namespace**: `php`
+
+**Key**: `cs_fixer_version`
+
+**Default**: `2`
+
+**Type**: `integer`
+
+**Enum**:  `1`  `2` 
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+undefined (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "cs_fixer_version": 2
+    }
+}
+```
+
+#####  [Fixers](#fixers) 
+
+**Namespace**: `php`
+
+**Key**: `fixers`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only) (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "fixers": ""
+    }
+}
+```
+
+#####  [Level](#level) 
+
+**Namespace**: `php`
+
+**Key**: `level`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 only) (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "level": ""
+    }
+}
+```
+
 #####  [Rules](#rules) 
 
 **Namespace**: `php`
@@ -17273,7 +17409,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (Supported by PHP-CS-Fixer)
+Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
