@@ -44,6 +44,12 @@ module.exports = {
       type: 'string'
       default: ""
       description: "Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only)"
+    allow_risky:
+      title: "Allow risky rules"
+      type: 'string'
+      default: "no"
+      enum: ["no", "yes"]
+      description: "allow risky rules to be applied!"
     phpcbf_path:
       title: "PHPCBF Path"
       type: 'string'
