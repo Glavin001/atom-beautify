@@ -24,6 +24,7 @@ module.exports = class PHPCSFixer extends Beautifier
       "fix"
       "--rules=#{options.rules}" if options.rules
       "--config=#{configFile}" if configFile
+      "--allow-risky=#{options.allow_risky}" if options.allow_risky
       "--using-cache=no"
     ]
     if version is 1

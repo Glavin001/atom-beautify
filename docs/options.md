@@ -9570,6 +9570,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 | `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `allow_risky` | :white_check_mark: | :x: | :x: |
 | `cs_fixer_path` | :white_check_mark: | :x: | :x: |
 | `cs_fixer_version` | :white_check_mark: | :x: | :x: |
 | `fixers` | :white_check_mark: | :x: | :x: |
@@ -9636,6 +9637,34 @@ Automatically beautify PHP files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Allow risky rules](#allow-risky-rules) 
+
+**Namespace**: `php`
+
+**Key**: `allow_risky`
+
+**Default**: `no`
+
+**Type**: `string`
+
+**Enum**:  `no`  `yes` 
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "allow_risky": "no"
+    }
+}
+```
 
 #####  [PHP-CS-Fixer Path](#php-cs-fixer-path) 
 
@@ -17417,6 +17446,34 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 {
     "php": {
         "rules": ""
+    }
+}
+```
+
+#####  [Allow risky rules](#allow-risky-rules) 
+
+**Namespace**: `php`
+
+**Key**: `allow_risky`
+
+**Default**: `no`
+
+**Type**: `string`
+
+**Enum**:  `no`  `yes` 
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "allow_risky": "no"
     }
 }
 ```

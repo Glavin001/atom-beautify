@@ -5852,6 +5852,24 @@
           "namespace": "php"
         }
       },
+      "allow_risky": {
+        "title": "Allow risky rules",
+        "type": "string",
+        "default": "no",
+        "enum": [
+          "no",
+          "yes"
+        ],
+        "description": "allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)",
+        "beautifiers": [
+          "PHP-CS-Fixer"
+        ],
+        "key": "allow_risky",
+        "language": {
+          "name": "PHP",
+          "namespace": "php"
+        }
+      },
       "phpcbf_path": {
         "title": "PHPCBF Path",
         "type": "string",
