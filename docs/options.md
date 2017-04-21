@@ -9654,7 +9654,7 @@ Automatically beautify PHP files on save
 
 **Description**:
 
-allow risky rules to be applied! (Supported by PHP-CS-Fixer)
+allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17466,7 +17466,7 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 
 **Description**:
 
-allow risky rules to be applied! (Supported by PHP-CS-Fixer)
+allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 

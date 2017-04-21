@@ -5860,7 +5860,7 @@
           "no",
           "yes"
         ],
-        "description": "allow risky rules to be applied! (Supported by PHP-CS-Fixer)",
+        "description": "allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)",
         "beautifiers": [
           "PHP-CS-Fixer"
         ],

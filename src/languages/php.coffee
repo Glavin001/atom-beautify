@@ -49,7 +49,7 @@ module.exports = {
       type: 'string'
       default: "no"
       enum: ["no", "yes"]
-      description: "allow risky rules to be applied!"
+      description: "allow risky rules to be applied (PHP-CS-Fixer 2 only)"
     phpcbf_path:
       title: "PHPCBF Path"
       type: 'string'
