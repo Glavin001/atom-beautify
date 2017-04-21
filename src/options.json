@@ -4193,10 +4193,19 @@
       "Latex Beautify"
     ],
     "grammars": [
-      "LaTeX"
+      "BibTeX",
+      "LaTeX",
+      "TeX"
     ],
     "extensions": [
-      "tex"
+      "bib",
+      "tex",
+      "sty",
+      "cls",
+      "dtx",
+      "ins",
+      "bbx",
+      "cbx"
     ],
     "properties": {
       "indent_char": {
