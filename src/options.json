@@ -5860,6 +5860,7 @@
           "no",
           "yes"
         ],
+        "description": "allow risky rules to be applied! (Supported by PHP-CS-Fixer)",
         "beautifiers": [
           "PHP-CS-Fixer"
         ],
@@ -5867,8 +5868,7 @@
         "language": {
           "name": "PHP",
           "namespace": "php"
-        },
-        "description": "allow risky rules to be applied!"
+        }
       },
       "phpcbf_path": {
         "title": "PHPCBF Path",
