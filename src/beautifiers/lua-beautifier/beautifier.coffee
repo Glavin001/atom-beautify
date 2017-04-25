@@ -28,6 +28,7 @@ DEFAULT_WARN_FN = (msg) ->
 
 module.exports = (str, indent, warn_fn, opts = {}) ->
   do_not_change_whitespace = !!opts?.do_not_change_whitespace
+  eol = opts?.eol or '\n'
   indent = indent or DEFAULT_INDENT
   warn_fn = if typeof warn_fn == 'function' then warn_fn else DEFAULT_WARN_FN
   indent = ' '.repeat(indent) if Number.isInteger(indent)
@@ -102,4 +103,4 @@ module.exports = (str, indent, warn_fn, opts = {}) ->
     new_line or undefined
 
   warn_fn 'positive indentation at the end' if $currIndent > 0
-  new_code.join '\n'
+  new_code.join eol
