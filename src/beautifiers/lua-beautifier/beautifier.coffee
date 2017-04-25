@@ -8,7 +8,8 @@ adjust_space = (line) ->
   # replace all whitespaces inside the string with one space, WARNING: the whitespaces in string will be replace too!
   line = line.replace /\s?(==|>=|<=|~=|[=><\+\*\/])\s?/g, ' $1 '
   # add whitespace around the operator
-  line = line.replace /([^=|\-|(|\s])\s?\-\s?([^\-|\[])/g, '$1 - $2'
+  line = line.replace /([^=e\-\(\s])\s?\-\s?([^\-\[])/g, '$1 - $2'
+  line = line.replace /([^\d])e\s?\-\s?([^\-\[])/g, '$1e - $2'
   # just format minus, not for -- or negative number or commentary.
   line = line.replace /,([^\s])/g, ', $1'
   # adjust ','
@@ -25,7 +26,8 @@ adjust_space = (line) ->
 DEFAULT_WARN_FN = (msg) ->
   console.log('WARNING:', msg)
 
-module.exports = (str, indent, warn_fn) ->
+module.exports = (str, indent, warn_fn, opts = {}) ->
+  do_not_change_whitespace = !!opts?.do_not_change_whitespace
   indent = indent or DEFAULT_INDENT
   warn_fn = if typeof warn_fn == 'function' then warn_fn else DEFAULT_WARN_FN
   indent = ' '.repeat(indent) if Number.isInteger(indent)
@@ -45,7 +47,7 @@ module.exports = (str, indent, warn_fn) ->
           arr = line.split(/\]=*\]/, 2)
           comment = arr[0]
           code = arr[1]
-          line = comment + ']' + '='.repeat($template - 1) + ']' + adjust_space(code)
+          line = comment + ']' + '='.repeat($template - 1) + ']' + if do_not_change_whitespace then code else adjust_space(code)
           $template = 0
         $template = 0
       else
@@ -56,7 +58,7 @@ module.exports = (str, indent, warn_fn) ->
     if !$template_flag
       line = line.trim()
       # remote all spaces on both ends
-      line = adjust_space(line)
+      line = if do_not_change_whitespace then line else adjust_space(line)
     if !line.length
       return ''
     raw_line = line

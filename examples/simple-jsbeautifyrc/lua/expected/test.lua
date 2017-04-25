@@ -2,6 +2,7 @@
 -- and return a closure which can be used for continuing the sort.
 local a = 'a  b   c'
 local b = '12345678'
+local x = 1.99e-07
 local c = 'a  b   c' + 'a  b   c'
 local t = {
   a = 1,

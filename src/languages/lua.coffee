@@ -19,4 +19,9 @@ module.exports = {
 
   defaultBeautifier: "Lua beautifier"
 
+  options:
+    do_not_change_whitespace:
+      type: 'boolean'
+      default: false
+      description: "do not adjust whitespace"
 }

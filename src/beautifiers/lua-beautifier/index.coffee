@@ -18,6 +18,6 @@ module.exports = class Lua extends Beautifier
   beautify: (text, language, options) ->
     new @Promise (resolve, reject) ->
       try
-        resolve format text, options.indent_char.repeat options.indent_size
+        resolve format text, options.indent_char.repeat(options.indent_size), @warn, options
       catch error
         reject error
