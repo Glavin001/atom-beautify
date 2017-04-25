@@ -4567,6 +4567,20 @@
       "lua"
     ],
     "properties": {
+      "do_not_change_whitespace": {
+        "type": "boolean",
+        "default": false,
+        "description": "do not adjust whitespace (Supported by Lua beautifier)",
+        "title": "Do not change whitespace",
+        "beautifiers": [
+          "Lua beautifier"
+        ],
+        "key": "do_not_change_whitespace",
+        "language": {
+          "name": "Lua",
+          "namespace": "lua"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,

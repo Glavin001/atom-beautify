@@ -7633,6 +7633,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 | `disabled` | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
+| `do_not_change_whitespace` | :white_check_mark: |
 
 **Description**:
 
@@ -7692,6 +7693,30 @@ Automatically beautify Lua files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Do not change whitespace](#do-not-change-whitespace) 
+
+**Namespace**: `lua`
+
+**Key**: `do_not_change_whitespace`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+do not adjust whitespace (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "do_not_change_whitespace": false
+    }
+}
+```
 
 ####  [Markdown](#markdown) 
 
@@ -16770,6 +16795,33 @@ undefined (Supported by Latex Beautify)
             "bmatrix",
             "pmatrix"
         ]
+    }
+}
+```
+
+
+### Lua beautifier
+
+#####  [Do not change whitespace](#do-not-change-whitespace) 
+
+**Namespace**: `lua`
+
+**Key**: `do_not_change_whitespace`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+do not adjust whitespace (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "do_not_change_whitespace": false
     }
 }
 ```
