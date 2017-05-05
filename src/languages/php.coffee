@@ -55,6 +55,11 @@ module.exports = {
       type: 'string'
       default: ""
       description: "Path to the `phpcbf` CLI executable",
+    phpcbf_version:
+      title: "PHPCBF Version"
+      type: 'integer'
+      default: 2
+      enum: [1, 2, 3]
     standard:
       title: "PHPCBF Standard"
       type: 'string'
