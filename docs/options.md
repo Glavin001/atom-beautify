@@ -7074,7 +7074,7 @@ Automatically beautify LaTeX files on save
 
 **Description**:
 
-undefined (Supported by Latex Beautify)
+ (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8945,7 +8945,7 @@ Automatically beautify Nginx files on save
 
 **Description**:
 
-undefined (Supported by Nginx Beautify)
+ (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9575,9 +9575,10 @@ Specify a configuration file which will override the default name of .perltidyrc
 | `cs_fixer_version` | :white_check_mark: | :x: | :x: |
 | `fixers` | :white_check_mark: | :x: | :x: |
 | `level` | :white_check_mark: | :x: | :x: |
-| `phpcbf_path` | :white_check_mark: | :x: | :x: |
+| `phpcbf_path` | :x: | :white_check_mark: | :x: |
+| `phpcbf_version` | :x: | :white_check_mark: | :x: |
 | `rules` | :white_check_mark: | :x: | :x: |
-| `standard` | :white_check_mark: | :white_check_mark: | :x: |
+| `standard` | :x: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -9706,7 +9707,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-undefined (Supported by PHP-CS-Fixer)
+ (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9774,11 +9775,11 @@ By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 o
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
-Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
+Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9786,6 +9787,34 @@ Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
 {
     "php": {
         "phpcbf_path": ""
+    }
+}
+```
+
+#####  [PHPCBF Version](#phpcbf-version) 
+
+**Namespace**: `php`
+
+**Key**: `phpcbf_version`
+
+**Default**: `2`
+
+**Type**: `integer`
+
+**Enum**:  `1`  `2`  `3` 
+
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+undefined (Supported by PHPCBF)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "phpcbf_version": 2
     }
 }
 ```
@@ -9820,20 +9849,22 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 
 **Key**: `standard`
 
+**Default**: `PEAR`
+
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
-Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHP-CS-Fixer, PHPCBF)
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "php": {
-        "standard": ""
+        "standard": "PEAR"
     }
 }
 ```
@@ -16757,7 +16788,7 @@ Remove trailing whitespace (Supported by Latex Beautify)
 
 **Description**:
 
-undefined (Supported by Latex Beautify)
+ (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17311,7 +17342,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 
 **Description**:
 
-undefined (Supported by Nginx Beautify)
+ (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17366,7 +17397,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-undefined (Supported by PHP-CS-Fixer)
+ (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17478,6 +17509,9 @@ allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 }
 ```
 
+
+### PHPCBF
+
 #####  [PHPCBF Path](#phpcbf-path) 
 
 **Namespace**: `php`
@@ -17486,11 +17520,11 @@ allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
-Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
+Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17502,53 +17536,56 @@ Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
-#####  [PHPCBF Standard](#phpcbf-standard) 
+#####  [PHPCBF Version](#phpcbf-version) 
 
 **Namespace**: `php`
 
-**Key**: `standard`
+**Key**: `phpcbf_version`
 
-**Type**: `string`
+**Default**: `2`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+**Type**: `integer`
+
+**Enum**:  `1`  `2`  `3` 
+
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
-Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHP-CS-Fixer, PHPCBF)
+undefined (Supported by PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "php": {
-        "standard": ""
+        "phpcbf_version": 2
     }
 }
 ```
 
-
-### PHPCBF
-
 #####  [PHPCBF Standard](#phpcbf-standard) 
 
 **Namespace**: `php`
 
 **Key**: `standard`
 
+**Default**: `PEAR`
+
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
-Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHP-CS-Fixer, PHPCBF)
+Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "php": {
-        "standard": ""
+        "standard": "PEAR"
     }
 }
 ```
