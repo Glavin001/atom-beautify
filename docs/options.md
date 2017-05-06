@@ -7074,7 +7074,7 @@ Automatically beautify LaTeX files on save
 
 **Description**:
 
-undefined (Supported by Latex Beautify)
+ (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8945,7 +8945,7 @@ Automatically beautify Nginx files on save
 
 **Description**:
 
-undefined (Supported by Nginx Beautify)
+ (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9706,7 +9706,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-undefined (Supported by PHP-CS-Fixer)
+ (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16757,7 +16757,7 @@ Remove trailing whitespace (Supported by Latex Beautify)
 
 **Description**:
 
-undefined (Supported by Latex Beautify)
+ (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17311,7 +17311,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 
 **Description**:
 
-undefined (Supported by Nginx Beautify)
+ (Supported by Nginx Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17366,7 +17366,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Description**:
 
-undefined (Supported by PHP-CS-Fixer)
+ (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
