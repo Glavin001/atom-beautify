@@ -207,12 +207,17 @@ fs.writeFileSync(readmePath, readmeResult)
 
 console.log('Updating package.json')
 # Add Language keywords
-ls = _.map(Object.keys(languagesMap), (a)->a.toLowerCase())
+languageNames = _.map(Object.keys(languagesMap), (a)->a.toLowerCase())
 
 # Add Beautifier keywords
-bs = _.map(Object.keys(beautifiersMap), (a)->a.toLowerCase())
-keywords = _.union(pkg.keywords, ls, bs)
+beautifierNames = _.map(Object.keys(beautifiersMap), (a)->a.toLowerCase())
+keywords = _.union(pkg.keywords, languageNames, beautifierNames)
 pkg.keywords = keywords
+
+# Add Language-specific beautify commands
+beautifyLanguageCommands = _.map(languageNames, (languageName) -> "atom-beautify:beautify-language-#{languageName}")
+pkg.activationCommands["atom-workspace"] = _.union(pkg.activationCommands["atom-workspace"], beautifyLanguageCommands)
+
 fs.writeFileSync(path.resolve(__dirname,'../package.json'), JSON.stringify(pkg, undefined, 2))
 
 console.log('Done.')

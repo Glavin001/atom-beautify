@@ -4301,7 +4301,7 @@
           "name": "LaTeX",
           "namespace": "latex"
         },
-        "description": "undefined (Supported by Latex Beautify)"
+        "description": " (Supported by Latex Beautify)"
       },
       "disabled": {
         "title": "Disable Beautifying Language",
@@ -5420,7 +5420,7 @@
           "name": "Nginx",
           "namespace": "nginx"
         },
-        "description": "undefined (Supported by Nginx Beautify)"
+        "description": " (Supported by Nginx Beautify)"
       },
       "disabled": {
         "title": "Disable Beautifying Language",
@@ -5808,7 +5808,7 @@
           "name": "PHP",
           "namespace": "php"
         },
-        "description": "undefined (Supported by PHP-CS-Fixer)"
+        "description": " (Supported by PHP-CS-Fixer)"
       },
       "fixers": {
         "type": "string",
@@ -5874,9 +5874,9 @@
         "title": "PHPCBF Path",
         "type": "string",
         "default": "",
-        "description": "Path to the `phpcbf` CLI executable (Supported by PHP-CS-Fixer)",
+        "description": "Path to the `phpcbf` CLI executable (Supported by PHPCBF)",
         "beautifiers": [
-          "PHP-CS-Fixer"
+          "PHPCBF"
         ],
         "key": "phpcbf_path",
         "language": {
@@ -5884,13 +5884,31 @@
           "namespace": "php"
         }
       },
+      "phpcbf_version": {
+        "title": "PHPCBF Version",
+        "type": "integer",
+        "default": 2,
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "beautifiers": [
+          "PHPCBF"
+        ],
+        "key": "phpcbf_version",
+        "language": {
+          "name": "PHP",
+          "namespace": "php"
+        },
+        "description": "undefined (Supported by PHPCBF)"
+      },
       "standard": {
         "title": "PHPCBF Standard",
         "type": "string",
-        "default": "",
-        "description": "Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHP-CS-Fixer, PHPCBF)",
+        "default": "PEAR",
+        "description": "Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root. (Supported by PHPCBF)",
         "beautifiers": [
-          "PHP-CS-Fixer",
           "PHPCBF"
         ],
         "key": "standard",

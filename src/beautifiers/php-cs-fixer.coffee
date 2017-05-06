@@ -13,7 +13,13 @@ module.exports = class PHPCSFixer extends Beautifier
   isPreInstalled: false
 
   options:
-    PHP: true
+    PHP:
+      rules: true
+      cs_fixer_path: true
+      cs_fixer_version: true
+      allow_risky: true
+      level: true
+      fixers: true
 
   beautify: (text, language, options, context) ->
     @debug('php-cs-fixer', options)
