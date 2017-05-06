@@ -274,14 +274,14 @@ module.exports = class Beautifiers extends EventEmitter
       logger.error(error)
 
 
-  beautify : (text, allOptions, grammar, filePath, {onSave} = {}) ->
+  beautify : (text, allOptions, grammar, filePath, {onSave, language} = {}) ->
     return Promise.all(allOptions)
     .then((allOptions) =>
       return new Promise((resolve, reject) =>
-        logger.info('beautify', text, allOptions, grammar, filePath, onSave)
+        logger.info('beautify', text, allOptions, grammar, filePath, onSave, language)
         logger.verbose(allOptions)
 
-        language = @getLanguage(grammar, filePath)
+        language ?= @getLanguage(grammar, filePath)
 
         # Check if unsupported language
         if !language

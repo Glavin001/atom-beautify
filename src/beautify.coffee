@@ -73,7 +73,7 @@ showError = (error) ->
     atom.notifications?.addError(error.message, {
       stack, detail, dismissable : true})
 
-beautify = ({editor, onSave}) ->
+beautify = ({ editor, onSave, language }) ->
   return new Promise((resolve, reject) ->
 
     plugin.checkUnsupportedOptions()
@@ -177,7 +177,7 @@ beautify = ({editor, onSave}) ->
 
     # Finally, beautify!
     try
-      beautifier.beautify(text, allOptions, grammarName, editedFilePath, onSave : onSave)
+      beautifier.beautify(text, allOptions, grammarName, editedFilePath, onSave: onSave, language: language)
       .then(beautifyCompleted)
       .catch(beautifyCompleted)
     catch e
@@ -604,6 +604,17 @@ plugin.migrateSettings = ->
     )
     atom.notifications.addSuccess("Successfully migrated options: #{unsupportedOptions.join(', ')}")
 
+plugin.addLanguageCommands = ->
+  languages = beautifier.languages.languages
+  logger.verbose("languages", languages)
+  for language in languages
+    ((language) =>
+      @subscriptions.add atom.commands.add("atom-workspace", "atom-beautify:beautify-language-#{language.name.toLowerCase()}", () ->
+        logger.verbose("Beautifying language", language)
+        beautify({ language })
+      )
+    )(language)
+
 plugin.config = _.merge(require('./config.coffee'), defaultLanguageOptions)
 plugin.activate = ->
   @subscriptions = new CompositeDisposable
@@ -613,6 +624,7 @@ plugin.activate = ->
   @subscriptions.add atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
   @subscriptions.add atom.commands.add ".tree-view .directory .name", "atom-beautify:beautify-directory", beautifyDirectory
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:migrate-settings", plugin.migrateSettings
+  @addLanguageCommands()
 
 plugin.deactivate = ->
   @subscriptions.dispose()
