@@ -1,4 +1,12 @@
-# v0.29.23 (2016-04-20)
+# Next
+- ...
+
+# v0.29.24 (2017-05-06)
+- Fix [#1643](https://github.com/Glavin001/atom-beautify/issues/1643). Add PHPCBF Version setting and remove "--no-patch" option from version 3.0 of PHPCBF. See [#1645](https://github.com/Glavin001/atom-beautify/pull/1645).
+- Close [#27](https://github.com/Glavin001/atom-beautify/issues/27). Add commands for beautifying a specific language
+- Add "Allow Risky" option for PHP-CS-Fixer. See [#1614](https://github.com/Glavin001/atom-beautify/pull/1614)
+
+# v0.29.23 (2017-04-20)
 - See #1607. Add support for PHP-CS-Fixer 1, along with version 2.
 - Closes #1179. Replace atom-beautify.general.analytics option with configuration option
 
