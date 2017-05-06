@@ -2,6 +2,7 @@
 Beautifier = require('./beautifier')
 path = require('path')
 fs = require("fs")
+expandHomeDir = require('expand-home-dir')
 temp = require("temp").track()
 
 
@@ -14,33 +15,22 @@ module.exports = class LatexBeautify extends Beautifier
     LaTeX: true
   }
 
-  # There are too many options with latexmk, I have tried to slim this down to the most useful ones.
-  # This method creates a configuration file for latexindent.
-  buildConfigFile: (options) ->
-    indentChar = options.indent_char
-    if options.indent_with_tabs
-      indentChar = "\\t"
-    # +true = 1 and +false = 0
-    config = """
-             defaultIndent: \"#{indentChar}\"
-             alwaysLookforSplitBraces: #{+options.always_look_for_split_braces}
-             alwaysLookforSplitBrackets: #{+options.always_look_for_split_brackets}
-             indentPreamble: #{+options.indent_preamble}
-             removeTrailingWhitespace: #{+options.remove_trailing_whitespace}
-             lookForAlignDelims:\n
-             """
-    for delim in options.align_columns_in_environments
-      config += "\t#{delim}: 1\n"
-    return config
-
   # Latexindent accepts configuration _files_ only.
   # This file has to be named localSettings.yaml and be in the same folder as the tex file.
   # It also insists on creating a log file somewhere.
   # So we set up a directory with all the files in place.
-  setUpDir: (dirPath, text, config) ->
+  setUpDir: (dirPath, text, configPath) ->
     @texFile = path.join(dirPath, "latex.tex")
     fs.writeFile @texFile, text, (err) ->
       return reject(err) if err
+    if configPath
+      projectPath = atom.workspace.project.getPaths()[0]
+      expandedConfigPath = expandHomeDir(configPath)
+      configPath = path.resolve(projectPath, expandedConfigPath)
+      config = fs.readFileSync configPath, "utf8", (err) ->
+        return reject(err) if err
+    else
+      config = ""
     @configFile = path.join(dirPath, "localSettings.yaml")
     fs.writeFile @configFile, config, (err) ->
       return reject(err) if err
@@ -57,12 +47,12 @@ module.exports = class LatexBeautify extends Beautifier
       )
     )
     .then((dirPath)=>
-      @setUpDir(dirPath, text, @buildConfigFile(options))
+      @setUpDir(dirPath, text, options.configPath)
       run = @run "latexindent", [
-        "-o"            #Output to the same location as file, -w creates a backup file, whereas this does not
-        "-s"            #Silent mode
-        "-l"            #Tell latexindent we have a local configuration file
-        "-c=" + dirPath #Tell latexindent to place the log file in this directory
+        "-o"                       #Output to the same location as file, -w creates a backup file, whereas this does not
+        "-s"                       #Silent mode
+        "-l" if options.configPath #Tell latexindent we have a local configuration file
+        "-c=" + dirPath            #Tell latexindent to place the log file in this directory
         @texFile
         @texFile
       ], help: {

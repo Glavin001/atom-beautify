@@ -4199,109 +4199,19 @@
       "tex"
     ],
     "properties": {
-      "indent_char": {
+      "configPath": {
         "type": "string",
-        "default": null,
-        "description": "Indentation character (Supported by Latex Beautify)",
-        "title": "Indent char",
+        "default": "",
+        "description": "Path to latexindent config file. i.e. localSettings.yaml (Supported by Latex Beautify)",
+        "title": "Config Path",
         "beautifiers": [
           "Latex Beautify"
         ],
-        "key": "indent_char",
+        "key": "configPath",
         "language": {
           "name": "LaTeX",
           "namespace": "latex"
         }
-      },
-      "indent_with_tabs": {
-        "type": "boolean",
-        "default": null,
-        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Latex Beautify)",
-        "title": "Indent with tabs",
-        "beautifiers": [
-          "Latex Beautify"
-        ],
-        "key": "indent_with_tabs",
-        "language": {
-          "name": "LaTeX",
-          "namespace": "latex"
-        }
-      },
-      "indent_preamble": {
-        "type": "boolean",
-        "default": false,
-        "description": "Indent the preable (Supported by Latex Beautify)",
-        "title": "Indent preamble",
-        "beautifiers": [
-          "Latex Beautify"
-        ],
-        "key": "indent_preamble",
-        "language": {
-          "name": "LaTeX",
-          "namespace": "latex"
-        }
-      },
-      "always_look_for_split_braces": {
-        "type": "boolean",
-        "default": true,
-        "description": "If `latexindent` should look for commands that split braces across lines (Supported by Latex Beautify)",
-        "title": "Always look for split braces",
-        "beautifiers": [
-          "Latex Beautify"
-        ],
-        "key": "always_look_for_split_braces",
-        "language": {
-          "name": "LaTeX",
-          "namespace": "latex"
-        }
-      },
-      "always_look_for_split_brackets": {
-        "type": "boolean",
-        "default": false,
-        "description": "If `latexindent` should look for commands that split brackets across lines (Supported by Latex Beautify)",
-        "title": "Always look for split brackets",
-        "beautifiers": [
-          "Latex Beautify"
-        ],
-        "key": "always_look_for_split_brackets",
-        "language": {
-          "name": "LaTeX",
-          "namespace": "latex"
-        }
-      },
-      "remove_trailing_whitespace": {
-        "type": "boolean",
-        "default": false,
-        "description": "Remove trailing whitespace (Supported by Latex Beautify)",
-        "title": "Remove trailing whitespace",
-        "beautifiers": [
-          "Latex Beautify"
-        ],
-        "key": "remove_trailing_whitespace",
-        "language": {
-          "name": "LaTeX",
-          "namespace": "latex"
-        }
-      },
-      "align_columns_in_environments": {
-        "type": "array",
-        "default": [
-          "tabular",
-          "matrix",
-          "bmatrix",
-          "pmatrix"
-        ],
-        "decription": "Aligns columns by the alignment tabs for environments specified",
-        "title": "Align columns in environments",
-        "beautifiers": [
-          "Latex Beautify"
-        ],
-        "key": "align_columns_in_environments",
-        "language": {
-          "name": "LaTeX",
-          "namespace": "latex"
-        },
-        "description": "undefined (Supported by Latex Beautify)"
       },
       "disabled": {
         "title": "Disable Beautifying Language",
