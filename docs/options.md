@@ -9849,6 +9849,8 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 
 **Key**: `standard`
 
+**Default**: `PEAR`
+
 **Type**: `string`
 
 **Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
@@ -9862,7 +9864,7 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 ```json
 {
     "php": {
-        "standard": ""
+        "standard": "PEAR"
     }
 }
 ```
@@ -17568,6 +17570,8 @@ undefined (Supported by PHPCBF)
 
 **Key**: `standard`
 
+**Default**: `PEAR`
+
 **Type**: `string`
 
 **Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
@@ -17581,7 +17585,7 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 ```json
 {
     "php": {
-        "standard": ""
+        "standard": "PEAR"
     }
 }
 ```
