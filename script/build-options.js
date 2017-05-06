@@ -322,7 +322,7 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
       optionDef = ref16[o];
       optionDef.beautifiers = _.uniq(optionDef.beautifiers)
       if (optionDef.beautifiers.length > 0) {
-        optionDef.description = optionDef.description + " (Supported by " + (optionDef.beautifiers.join(', ')) + ")";
+        optionDef.description = (optionDef.description || "") + " (Supported by " + (optionDef.beautifiers.join(', ')) + ")";
       } else {
         unsupportedOptions.push(g + ".properties." + o);
       }
