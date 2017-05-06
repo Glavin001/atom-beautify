@@ -4301,7 +4301,7 @@
           "name": "LaTeX",
           "namespace": "latex"
         },
-        "description": "undefined (Supported by Latex Beautify)"
+        "description": " (Supported by Latex Beautify)"
       },
       "disabled": {
         "title": "Disable Beautifying Language",
@@ -5420,7 +5420,7 @@
           "name": "Nginx",
           "namespace": "nginx"
         },
-        "description": "undefined (Supported by Nginx Beautify)"
+        "description": " (Supported by Nginx Beautify)"
       },
       "disabled": {
         "title": "Disable Beautifying Language",
@@ -5808,7 +5808,7 @@
           "name": "PHP",
           "namespace": "php"
         },
-        "description": "undefined (Supported by PHP-CS-Fixer)"
+        "description": " (Supported by PHP-CS-Fixer)"
       },
       "fixers": {
         "type": "string",
