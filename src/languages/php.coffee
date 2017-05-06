@@ -55,10 +55,15 @@ module.exports = {
       type: 'string'
       default: ""
       description: "Path to the `phpcbf` CLI executable",
+    phpcbf_version:
+      title: "PHPCBF Version"
+      type: 'integer'
+      default: 2
+      enum: [1, 2, 3]
     standard:
       title: "PHPCBF Standard"
       type: 'string'
-      default: "",
+      default: "PEAR",
       description: "Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root."
 
 }
