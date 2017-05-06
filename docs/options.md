@@ -9807,7 +9807,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Description**:
 
-undefined (Supported by PHPCBF)
+ (Supported by PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17552,7 +17552,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Description**:
 
-undefined (Supported by PHPCBF)
+ (Supported by PHPCBF)
 
 **Example `.jsbeautifyrc` Configuration**
 

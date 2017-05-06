@@ -5901,7 +5901,7 @@
           "name": "PHP",
           "namespace": "php"
         },
-        "description": "undefined (Supported by PHPCBF)"
+        "description": " (Supported by PHPCBF)"
       },
       "standard": {
         "title": "PHPCBF Standard",
