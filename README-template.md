@@ -24,6 +24,8 @@
 - [Beautifiers](#beautifiers)
 - [Language Support](#language-support)
 - [Usage](#usage)
+  - [Command Palette](#command-palette)
+    - [Beautify a Specific Language](#beautify-a-specific-language)
   - [Selection of Code](#selection-of-code)
   - [Beautify On Save](#beautify-on-save)
   - [Keyboard Shortcut](#keyboard-shortcut)
@@ -75,9 +77,19 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 
 ## Usage
 
+### Command Palette
+
 Open the [Command Palette](https://github.com/atom/command-palette), type `Beautify`, and run `Beautify Editor`.
 
 ![image](https://cloud.githubusercontent.com/assets/1885333/16542583/1c8d975c-4085-11e6-8307-e35df7430a10.png)
+
+#### Beautify a Specific Language
+
+You can use the [Command Palette](https://github.com/atom/command-palette) to beautify the editor for a specific language.
+The commands are in the form `Atom Beautify: Beautify Language {NAME}` (i.e. `atom-beautify:beautify-language-{NAME}` for keyboard shortcuts).
+For example, you may want to beautify `JavaScript` code within a `HTML` file.
+
+![atom-beautify-language-commands](https://cloud.githubusercontent.com/assets/1885333/25775586/f3fc7ec4-327e-11e7-8576-45e735e80032.gif)
 
 ### Selection of Code
 
@@ -95,7 +107,6 @@ It will only beautify selected text if a selection is found -- if not, the whole
 For example, for language `HTML` go into Atom-Beautify's package settings (`Atom` ➔ `Preferences` ➔ Search for `atom-beautify`), find `HTML`, and toggle the `Beautify On Save` option.
 
 ![atom-beautify-setup-beautify-on-save](https://cloud.githubusercontent.com/assets/1885333/16542692/3e781e74-4089-11e6-9cf2-5a19af161093.gif)
-
 
 ### Keyboard Shortcut
 
