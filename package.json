@@ -178,7 +178,7 @@
     "typescript": "^1.8.10",
     "typescript-formatter": "^2.3.0",
     "underscore-plus": "^1.6.6",
-    "universal-analytics": "^0.4.2",
+    "universal-analytics": "^0.4.7",
     "which": "^1.2.11",
     "winston": "^2.2.0",
     "yaml-front-matter": "^3.2.3"
