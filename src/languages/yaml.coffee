@@ -25,7 +25,7 @@ module.exports = {
   options: {
     padding:
       type: 'integer'
-      default: null
+      default: 0
       minimum: 0
       description: "The amount of padding to add next to each line."
   }
