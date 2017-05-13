@@ -17,6 +17,7 @@ module.exports = class PHPCSFixer extends Beautifier
       rules: true
       cs_fixer_path: true
       cs_fixer_version: true
+      cs_fixer_config_file: true
       allow_risky: true
       level: true
       fixers: true
@@ -24,12 +25,20 @@ module.exports = class PHPCSFixer extends Beautifier
   beautify: (text, language, options, context) ->
     @debug('php-cs-fixer', options)
     version = options.cs_fixer_version
+    configFiles = ['.php_cs', '.php_cs.dist']
 
-    configFile = if context? and context.filePath? then @findFile(path.dirname(context.filePath), '.php_cs')
+    # Find a config file in the working directory if a custom one was not provided
+    if not options.cs_fixer_config_file
+      options.cs_fixer_config_file = if context? and context.filePath? then @findFile(path.dirname(context.filePath), configFiles)
+
+    # Try again to find a config file in the project root
+    if not options.cs_fixer_config_file
+      options.cs_fixer_config_file = @findFile(atom.project.getPaths()[0], configFiles)
+
     phpCsFixerOptions = [
       "fix"
       "--rules=#{options.rules}" if options.rules
-      "--config=#{configFile}" if configFile
+      "--config=#{options.cs_fixer_config_file}" if options.cs_fixer_config_file
       "--allow-risky=#{options.allow_risky}" if options.allow_risky
       "--using-cache=no"
     ]
@@ -38,7 +47,7 @@ module.exports = class PHPCSFixer extends Beautifier
         "fix"
         "--level=#{options.level}" if options.level
         "--fixers=#{options.fixers}" if options.fixers
-        "--config-file=#{configFile}" if configFile
+        "--config-file=#{options.cs_fixer_config_file}" if options.cs_fixer_config_file
       ]
     runOptions = {
       ignoreReturnCode: true

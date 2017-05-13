@@ -32,6 +32,11 @@ module.exports = {
       type: 'integer'
       default: 2
       enum: [1, 2]
+    cs_fixer_config_file:
+      title: "PHP-CS-Fixer Config File"
+      type: 'string'
+      default: ""
+      description: "Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if found in the working directory or project root."
     fixers:
       type: 'string'
       default: ""
@@ -49,7 +54,7 @@ module.exports = {
       type: 'string'
       default: "no"
       enum: ["no", "yes"]
-      description: "allow risky rules to be applied (PHP-CS-Fixer 2 only)"
+      description: "Allow risky rules to be applied (PHP-CS-Fixer 2 only)"
     phpcbf_path:
       title: "PHPCBF Path"
       type: 'string'
