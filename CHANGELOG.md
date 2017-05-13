@@ -1,4 +1,5 @@
 # Next
+- Fix [#1524](https://github.com/Glavin001/atom-beautify/issues/1524). Add PHP-CS-Fixer config file setting and improve automatic detection of standard config files. See [#1661](https://github.com/Glavin001/atom-beautify/pull/1661)
 - ...
 
 # v0.29.24 (2017-05-06)
@@ -20,7 +21,7 @@
 - Add [clang-format](http://clang.llvm.org/docs/ClangFormat.html) beautifier for C/C++/Obj-C languages.
 - Add [yapf](http://github.com/google/yapf) beautifier for Python.
 - Add [ESLint](https://github.com/eslint/eslint) beautifier for Javascript
-- Closes [#776] (https://github.com/Glavin001/atom-beautify/issues/776) Add support for `collapse-preserve-inline` brace_style for javascript.
+- Closes [#776](https://github.com/Glavin001/atom-beautify/issues/776) Add support for `collapse-preserve-inline` brace_style for javascript.
 - Closes [#786](https://github.com/Glavin001/atom-beautify/issues/786) YAPF configuration files are ignored.
 - Fix phpcbf hanging issue by closing stdin. See [#893](https://github.com/Glavin001/atom-beautify/issues/893)
 - Add warning notification when parsing `.jsbeautifyrc` as JSON or YAML fails. See [#1106](https://github.com/Glavin001/atom-beautify/issues/1106)
