@@ -37,14 +37,14 @@ module.exports = class VueBeautifier extends Beautifier
                   lang: "scss"
                   mode: "beautify"
                 )
-                prettydiff.api(options)[0]
+                prettydiff(options)
               when "less"
                 options = _.merge(options,
                   source: text
                   lang: "less"
                   mode: "beautify"
                 )
-                prettydiff.api(options)[0]
+                prettydiff(options)
               when undefined
                 require("js-beautify").css(text, options)
               else
