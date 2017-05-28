@@ -183,7 +183,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Vala | `Vala` |`.vala`, `.vapi` | [`Uncrustify`](https://github.com/uncrustify/uncrustify) (Default) |
 | Visualforce | `Visualforce` |`.page` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | Vue | `Vue Component` |`.vue` | [`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee) (Default) |
-| XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
+| XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe`, `.config` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | XTemplate | `XTemplate` |`.xtemplate` | [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | YAML | `YAML` |`.yml`, `.yaml` | [`align-yaml`](https://github.com/jonschlinkert/align-yaml) (Default) |
 

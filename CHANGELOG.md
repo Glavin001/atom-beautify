@@ -1,5 +1,6 @@
 # Next
 - Fix [#1524](https://github.com/Glavin001/atom-beautify/issues/1524). Add PHP-CS-Fixer config file setting and improve automatic detection of standard config files. See [#1661](https://github.com/Glavin001/atom-beautify/pull/1661)
+- Add support for files with '.config' extension. Add extension to the XML language to support XML config files.
 - ...
 
 # v0.29.25 (2017-05-12)
