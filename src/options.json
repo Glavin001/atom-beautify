@@ -5725,7 +5725,11 @@
       "Perl 6"
     ],
     "extensions": [
-      "pl"
+      "pl",
+      "PL",
+      "pm",
+      "pod",
+      "t"
     ],
     "properties": {
       "perltidy_profile": {
