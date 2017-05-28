@@ -2,6 +2,9 @@
 - Fix [#1524](https://github.com/Glavin001/atom-beautify/issues/1524). Add PHP-CS-Fixer config file setting and improve automatic detection of standard config files. See [#1661](https://github.com/Glavin001/atom-beautify/pull/1661)
 - ...
 
+# v0.29.25 (2017-05-12)
+- Fix [#1547](https://github.com/Glavin001/atom-beautify/issues/1547), [#1630](https://github.com/Glavin001/atom-beautify/issues/1630). Update CSSComb to latest version.
+
 # v0.29.24 (2017-05-06)
 - Fix [#1643](https://github.com/Glavin001/atom-beautify/issues/1643). Add PHPCBF Version setting and remove "--no-patch" option from version 3.0 of PHPCBF. See [#1645](https://github.com/Glavin001/atom-beautify/pull/1645).
 - Close [#27](https://github.com/Glavin001/atom-beautify/issues/27). Add commands for beautifying a specific language
