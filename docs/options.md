@@ -7633,6 +7633,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 | `disabled` | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
+| `end_of_line` | :white_check_mark: |
 
 **Description**:
 
@@ -7692,6 +7693,34 @@ Automatically beautify Lua files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `lua`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "end_of_line": "System Default"
+    }
+}
+```
 
 ####  [Markdown](#markdown) 
 
@@ -16826,6 +16855,37 @@ Remove trailing whitespace (Supported by Latex Beautify)
             "bmatrix",
             "pmatrix"
         ]
+    }
+}
+```
+
+
+### Lua beautifier
+
+#####  [End of line](#end-of-line) 
+
+**Namespace**: `lua`
+
+**Key**: `end_of_line`
+
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+Override EOL from line-ending-selector (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "end_of_line": "System Default"
     }
 }
 ```

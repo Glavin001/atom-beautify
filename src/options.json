@@ -4576,6 +4576,25 @@
       "lua"
     ],
     "properties": {
+      "end_of_line": {
+        "type": "string",
+        "default": "System Default",
+        "enum": [
+          "CRLF",
+          "LF",
+          "System Default"
+        ],
+        "description": "Override EOL from line-ending-selector (Supported by Lua beautifier)",
+        "title": "End of line",
+        "beautifiers": [
+          "Lua beautifier"
+        ],
+        "key": "end_of_line",
+        "language": {
+          "name": "Lua",
+          "namespace": "lua"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
