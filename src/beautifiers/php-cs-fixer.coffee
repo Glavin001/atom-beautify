@@ -10,7 +10,30 @@ module.exports = class PHPCSFixer extends Beautifier
 
   name: 'PHP-CS-Fixer'
   link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
-  isPreInstalled: false
+  executables: [
+    {
+      name: "PHP"
+      cmd: "php"
+      homepage: "http://php.net/"
+      installation: "http://php.net/manual/en/install.php"
+      version: {
+        args: ['--version']
+        parse: (text) -> text.match(/PHP (.*) \(cli\)/)[1]
+        supported: '>= 0.0.0'
+      }
+    }
+    {
+      name: "PHP-CS-Fixer"
+      cmd: "php-cs-fixer"
+      homepage: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
+      installation: "https://github.com/FriendsOfPHP/PHP-CS-Fixer#installation"
+      version: {
+        args: ['--version']
+        parse: (text) -> text.match(/version (.*) by/)[1] + ".0"
+        supported: '>= 0.0.0'
+      }
+    }
+  ]
 
   options:
     PHP:
@@ -24,7 +47,8 @@ module.exports = class PHPCSFixer extends Beautifier
 
   beautify: (text, language, options, context) ->
     @debug('php-cs-fixer', options)
-    version = options.cs_fixer_version
+    php = @exe('php')
+    phpCsFixer = @exe('php-cs-fixer')
     configFiles = ['.php_cs', '.php_cs.dist']
 
     # Find a config file in the working directory if a custom one was not provided
@@ -42,7 +66,7 @@ module.exports = class PHPCSFixer extends Beautifier
       "--allow-risky=#{options.allow_risky}" if options.allow_risky
       "--using-cache=no"
     ]
-    if version is 1
+    if phpCsFixer.isVersion('1.x')
       phpCsFixerOptions = [
         "fix"
         "--level=#{options.level}" if options.level
@@ -60,7 +84,9 @@ module.exports = class PHPCSFixer extends Beautifier
     @Promise.all([
       @which(options.cs_fixer_path) if options.cs_fixer_path
       @which('php-cs-fixer')
-    ]).then((paths) =>
+      tempFile = @tempFile("temp", text, '.php')
+    ]).then(([customPath, phpCsFixerPath]) =>
+      paths = [customPath, phpCsFixerPath]
       @debug('php-cs-fixer paths', paths)
       _ = require 'lodash'
       # Get first valid, absolute path
@@ -71,10 +97,8 @@ module.exports = class PHPCSFixer extends Beautifier
       # Check if PHP-CS-Fixer path was found
       if phpCSFixerPath?
         # Found PHP-CS-Fixer path
-        tempFile = @tempFile("temp", text)
-
         if @isWindows
-          @run("php", [phpCSFixerPath, phpCsFixerOptions, tempFile], runOptions)
+          php([phpCSFixerPath, phpCsFixerOptions, tempFile], runOptions)
             .then(=>
               @readFile(tempFile)
             )

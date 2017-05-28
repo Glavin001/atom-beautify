@@ -3,8 +3,6 @@
 
 "use strict"
 Beautifier = require('./beautifier')
-Lexer = require('gherkin').Lexer('en')
-logger = require('../logger')(__filename)
 
 module.exports = class Gherkin extends Beautifier
   name: "Gherkin formatter"
@@ -15,6 +13,8 @@ module.exports = class Gherkin extends Beautifier
   }
 
   beautify: (text, language, options) ->
+    Lexer = require('gherkin').Lexer('en')
+    logger = @logger
     return new @Promise((resolve, reject) ->
       recorder = {
         lines: []

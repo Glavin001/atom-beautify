@@ -157,6 +157,8 @@ Handlebars.registerHelper('beautifiers-info', (beautifiers, options) ->
   rows = _.map(beautifiers, (beautifier, k) ->
     name = beautifier.name
     isPreInstalled = beautifier.isPreInstalled
+    if typeof isPreInstalled is "function"
+      isPreInstalled = beautifier.isPreInstalled()
     link = beautifier.link
     installationInstructions = if isPreInstalled then "Nothing!" else "Go to #{link} and follow the instructions."
     return "| #{name} | #{if isPreInstalled then ':white_check_mark:' else ':x:'} | #{installationInstructions} |"

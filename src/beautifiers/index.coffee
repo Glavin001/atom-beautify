@@ -345,36 +345,40 @@ module.exports = class Beautifiers extends EventEmitter
               filePath: filePath
 
             startTime = new Date()
-            beautifier.beautify(text, language.name, options, context)
-            .then((result) =>
-              resolve(result)
-              # Track Timing
-              @trackTiming({
-                utc: "Beautify" # Category
-                utv: language?.name # Variable
-                utt: (new Date() - startTime) # Value
-                utl: version # Label
-              })
-              # Track Empty beautification results
-              if not result
+            beautifier.loadExecutables()
+              .then((executables) ->
+                logger.verbose('executables', executables)
+                beautifier.beautify(text, language.name, options, context)
+              )
+              .then((result) =>
+                resolve(result)
+                # Track Timing
+                @trackTiming({
+                  utc: "Beautify" # Category
+                  utv: language?.name # Variable
+                  utt: (new Date() - startTime) # Value
+                  utl: version # Label
+                })
+                # Track Empty beautification results
+                if not result
+                  @trackEvent({
+                    ec: version, # Category
+                    ea: "Beautify:Empty" # Action
+                    el: language?.name # Label
+                  })
+              )
+              .catch((error) =>
+                reject(error)
+                # Track Errors
                 @trackEvent({
                   ec: version, # Category
-                  ea: "Beautify:Empty" # Action
+                  ea: "Beautify:Error" # Action
                   el: language?.name # Label
                 })
-            )
-            .catch((error) =>
-              reject(error)
-              # Track Errors
-              @trackEvent({
-                ec: version, # Category
-                ea: "Beautify:Error" # Action
-                el: language?.name # Label
-              })
-            )
-            .finally(=>
-              @emit "beautify::end"
-            )
+              )
+              .finally(=>
+                @emit "beautify::end"
+              )
 
         # Check if Analytics is enabled
         @trackEvent({
