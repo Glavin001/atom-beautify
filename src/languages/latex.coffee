@@ -8,14 +8,23 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
+    "BibTeX"
     "LaTeX"
+    "TeX"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
+    "bib"
     "tex"
+    "sty"
+    "cls"
+    "dtx"
+    "ins"
+    "bbx"
+    "cbx"
   ]
 
   defaultBeautifier: "Latex Beautify"

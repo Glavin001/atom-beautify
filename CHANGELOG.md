@@ -14,6 +14,7 @@
 # v0.29.23 (2017-04-20)
 - See #1607. Add support for PHP-CS-Fixer 1, along with version 2.
 - Closes #1179. Replace atom-beautify.general.analytics option with configuration option
+- Add more LaTeX extensions
 
 # v0.29.3 to v0.29.22 (2016-04-16 to 2017-04-15)
 - Add support for additional wrap attribute options of js-beautify (html): force-aligned and force-expand-multiline.
