@@ -117,7 +117,7 @@ beautify = ({ editor, onSave, language }) ->
           else
 
             # console.log "setText"
-            editor.setText text
+            editor.getBuffer().setTextViaDiff(text)
 
           # console.log "setCursors"
           setCursors editor, posArray
