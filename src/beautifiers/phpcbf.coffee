@@ -76,7 +76,7 @@ module.exports = class PHPCBF extends Beautifier
       )
     else
       @run("phpcbf", [
-        "--no-patch"
+        "--no-patch" unless options.phpcbf_version is 3
         "--standard=#{options.standard}" if options.standard
         tempFile = @tempFile("temp", text)
         ], {
