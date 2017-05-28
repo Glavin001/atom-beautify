@@ -1,7 +1,16 @@
 # Next
-- Fix [#1524](https://github.com/Glavin001/atom-beautify/issues/1524). Add PHP-CS-Fixer config file setting and improve automatic detection of standard config files. See [#1661](https://github.com/Glavin001/atom-beautify/pull/1661)
-- Add support for files with '.config' extension. Add extension to the XML language to support XML config files.
 - ...
+
+# v0.29.26 (2017-05-28)
+- Fix #116. Switch from setText to setTextViaDiff, preserve folds
+- Add more perl filetypes (#1603)
+- Add more LaTeX extensions (#1617)
+- Don't specify file extension when requiring modules (#1631)
+- Update CSSComb to v4.0.1. (#1660)
+- Fix #1682. Removed --no-patch flag from phpcbf beautifier version 3 (#1683)
+- Fix [#1524](https://github.com/Glavin001/atom-beautify/issues/1524). Add PHP-CS-Fixer config file setting and improve automatic detection of standard config files. See [#1661](https://github.com/Glavin001/atom-beautify/pull/1661)
+- Add .php extension to temp files (#1649)
+- Add support for files with '.config' extension. Add extension to the XML language to support XML config files. (#1285)
 
 # v0.29.25 (2017-05-12)
 - Fix [#1547](https://github.com/Glavin001/atom-beautify/issues/1547), [#1630](https://github.com/Glavin001/atom-beautify/issues/1630). Update CSSComb to latest version.
