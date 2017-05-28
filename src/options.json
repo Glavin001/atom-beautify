@@ -8631,7 +8631,8 @@
       "jsp",
       "gsp",
       "plist",
-      "recipe"
+      "recipe",
+      "config"
     ],
     "properties": {
       "indent_inner_html": {
