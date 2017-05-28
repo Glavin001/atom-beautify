@@ -9571,6 +9571,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `allow_risky` | :white_check_mark: | :x: | :x: |
+| `cs_fixer_config_file` | :white_check_mark: | :x: | :x: |
 | `cs_fixer_path` | :white_check_mark: | :x: | :x: |
 | `cs_fixer_version` | :white_check_mark: | :x: | :x: |
 | `fixers` | :white_check_mark: | :x: | :x: |
@@ -9655,7 +9656,7 @@ Automatically beautify PHP files on save
 
 **Description**:
 
-allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
+Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9663,6 +9664,30 @@ allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 {
     "php": {
         "allow_risky": "no"
+    }
+}
+```
+
+#####  [PHP-CS-Fixer Config File](#php-cs-fixer-config-file) 
+
+**Namespace**: `php`
+
+**Key**: `cs_fixer_config_file`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if found in the working directory or project root. (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "cs_fixer_config_file": ""
     }
 }
 ```
@@ -17409,6 +17434,30 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
+#####  [PHP-CS-Fixer Config File](#php-cs-fixer-config-file) 
+
+**Namespace**: `php`
+
+**Key**: `cs_fixer_config_file`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if found in the working directory or project root. (Supported by PHP-CS-Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "php": {
+        "cs_fixer_config_file": ""
+    }
+}
+```
+
 #####  [Fixers](#fixers) 
 
 **Namespace**: `php`
@@ -17497,7 +17546,7 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 
 **Description**:
 
-allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
+Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer)
 
 **Example `.jsbeautifyrc` Configuration**
 
