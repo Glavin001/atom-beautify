@@ -7633,7 +7633,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 | `disabled` | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
-| `do_not_change_whitespace` | :white_check_mark: |
+| `end_of_line` | :white_check_mark: |
 
 **Description**:
 
@@ -7694,26 +7694,30 @@ Automatically beautify Lua files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Do not change whitespace](#do-not-change-whitespace) 
+#####  [End of line](#end-of-line) 
 
 **Namespace**: `lua`
 
-**Key**: `do_not_change_whitespace`
+**Key**: `end_of_line`
 
-**Type**: `boolean`
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
 
 **Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
 
 **Description**:
 
-do not adjust whitespace (Supported by Lua beautifier)
+Override EOL from line-ending-selector (Supported by Lua beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "lua": {
-        "do_not_change_whitespace": false
+        "end_of_line": "System Default"
     }
 }
 ```
@@ -16802,26 +16806,30 @@ undefined (Supported by Latex Beautify)
 
 ### Lua beautifier
 
-#####  [Do not change whitespace](#do-not-change-whitespace) 
+#####  [End of line](#end-of-line) 
 
 **Namespace**: `lua`
 
-**Key**: `do_not_change_whitespace`
+**Key**: `end_of_line`
 
-**Type**: `boolean`
+**Default**: `System Default`
+
+**Type**: `string`
+
+**Enum**:  `CRLF`  `LF`  `System Default` 
 
 **Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
 
 **Description**:
 
-do not adjust whitespace (Supported by Lua beautifier)
+Override EOL from line-ending-selector (Supported by Lua beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "lua": {
-        "do_not_change_whitespace": false
+        "end_of_line": "System Default"
     }
 }
 ```

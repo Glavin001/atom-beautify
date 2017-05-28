@@ -20,8 +20,9 @@ module.exports = {
   defaultBeautifier: "Lua beautifier"
 
   options:
-    do_not_change_whitespace:
-      type: 'boolean'
-      default: false
-      description: "do not adjust whitespace"
+    end_of_line:
+      type: 'string'
+      default: "System Default"
+      enum: ["CRLF","LF","System Default"]
+      description: "Override EOL from line-ending-selector"
 }

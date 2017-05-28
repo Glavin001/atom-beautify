@@ -4567,15 +4567,20 @@
       "lua"
     ],
     "properties": {
-      "do_not_change_whitespace": {
-        "type": "boolean",
-        "default": false,
-        "description": "do not adjust whitespace (Supported by Lua beautifier)",
-        "title": "Do not change whitespace",
+      "end_of_line": {
+        "type": "string",
+        "default": "System Default",
+        "enum": [
+          "CRLF",
+          "LF",
+          "System Default"
+        ],
+        "description": "Override EOL from line-ending-selector (Supported by Lua beautifier)",
+        "title": "End of line",
         "beautifiers": [
           "Lua beautifier"
         ],
-        "key": "do_not_change_whitespace",
+        "key": "end_of_line",
         "language": {
           "name": "Lua",
           "namespace": "lua"
