@@ -51,7 +51,7 @@ module.exports = class Rubocop extends Beautifier
         @run(rubocopPath, [
           "--auto-correct"
           "--config", configFile
-          tempFile = @tempFile("temp", text)
+          tempFile = @tempFile("temp", text, '.rb')
           ], {ignoreReturnCode: true})
           .then(=>
             @readFile(tempFile)
@@ -60,7 +60,7 @@ module.exports = class Rubocop extends Beautifier
         @run("rubocop", [
           "--auto-correct"
           "--config", configFile
-          tempFile = @tempFile("temp", text)
+          tempFile = @tempFile("temp", text, '.rb')
           ], {ignoreReturnCode: true})
           .then(=>
             @readFile(tempFile)
