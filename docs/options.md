@@ -131,6 +131,75 @@ Supported options for each language.
 
 ---
 
+####  [Executables](#executables) 
+
+**Description**:
+
+Configure executables used by beautifiers.
+
+#####  [PHP](#php) 
+
+**Namespace**: ``
+
+**Key**: `php`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Options for PHP executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*PHP*" and change it to your desired configuration.
+
+#####  [PHP-CS-Fixer](#php-cs-fixer) 
+
+**Namespace**: ``
+
+**Key**: `php_cs_fixer`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Options for PHP-CS-Fixer executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*PHP-CS-Fixer*" and change it to your desired configuration.
+
+#####  [PHPCBF](#phpcbf) 
+
+**Namespace**: ``
+
+**Key**: `phpcbf`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Options for PHPCBF executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*PHPCBF*" and change it to your desired configuration.
+
 ####  [Apex](#apex) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
@@ -17618,6 +17687,48 @@ Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 }
 ```
 
+#####  [PHP](#php) 
+
+**Namespace**: ``
+
+**Key**: `php`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Options for PHP executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*PHP*" and change it to your desired configuration.
+
+#####  [PHP-CS-Fixer](#php-cs-fixer) 
+
+**Namespace**: ``
+
+**Key**: `php_cs_fixer`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+
+**Description**:
+
+Options for PHP-CS-Fixer executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*PHP-CS-Fixer*" and change it to your desired configuration.
+
 
 ### PHPCBF
 
@@ -17698,6 +17809,27 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
     }
 }
 ```
+
+#####  [PHPCBF](#phpcbf) 
+
+**Namespace**: ``
+
+**Key**: `phpcbf`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+
+**Description**:
+
+Options for PHPCBF executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*PHPCBF*" and change it to your desired configuration.
 
 
 ### Perltidy

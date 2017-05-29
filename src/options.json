@@ -9122,5 +9122,71 @@
         "description": "Automatically beautify YAML files on save"
       }
     }
+  },
+  "executables": {
+    "title": "Executables",
+    "type": "object",
+    "collapsed": true,
+    "order": -1,
+    "description": "Configure executables used by beautifiers.",
+    "properties": {
+      "php": {
+        "key": "php",
+        "title": "PHP",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for PHP executable.",
+        "beautifiers": [
+          "PHP-CS-Fixer"
+        ],
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"php\" executable."
+          }
+        }
+      },
+      "php_cs_fixer": {
+        "key": "php_cs_fixer",
+        "title": "PHP-CS-Fixer",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for PHP-CS-Fixer executable.",
+        "beautifiers": [
+          "PHP-CS-Fixer"
+        ],
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"php-cs-fixer\" executable."
+          }
+        }
+      },
+      "phpcbf": {
+        "key": "phpcbf",
+        "title": "PHPCBF",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for PHPCBF executable.",
+        "beautifiers": [
+          "PHPCBF"
+        ],
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"phpcbf\" executable."
+          }
+        }
+      }
+    }
   }
 }

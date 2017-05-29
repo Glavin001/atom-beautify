@@ -82,25 +82,28 @@ Handlebars.registerHelper('example-config', (key, option, options) ->
 
 Handlebars.registerHelper('language-beautifiers-support', (languageOptions, options) ->
 
-  rows = _.map(languageOptions, (val, k) ->
-    name = val.title
-    defaultBeautifier = _.get(val, "properties.default_beautifier.default")
-    beautifiers = _.map(val.beautifiers, (b) ->
-      beautifier = beautifiersMap[b]
-      isDefault = b is defaultBeautifier
-      if beautifier.link
-        r = "[`#{b}`](#{beautifier.link})"
-      else
-        r = "`#{b}`"
-      if isDefault
-        r += " (Default)"
-      return r
-    )
-    grammars = _.map(val.grammars, (b) -> "`#{b}`")
-    extensions = _.map(val.extensions, (b) -> "`.#{b}`")
+  rows = _.chain(languageOptions)
+    .filter((val, k) -> k isnt "executables")
+    .map((val, k) ->
+      name = val.title
+      defaultBeautifier = _.get(val, "properties.default_beautifier.default")
+      beautifiers = _.map(val.beautifiers, (b) ->
+        beautifier = beautifiersMap[b]
+        isDefault = b is defaultBeautifier
+        if beautifier.link
+          r = "[`#{b}`](#{beautifier.link})"
+        else
+          r = "`#{b}`"
+        if isDefault
+          r += " (Default)"
+        return r
+      )
+      grammars = _.map(val.grammars, (b) -> "`#{b}`")
+      extensions = _.map(val.extensions, (b) -> "`.#{b}`")
 
-    return "| #{name} | #{grammars.join(', ')} |#{extensions.join(', ')} | #{beautifiers.join(', ')} |"
-  )
+      return "| #{name} | #{grammars.join(', ')} |#{extensions.join(', ')} | #{beautifiers.join(', ')} |"
+    )
+    .value()
   results = """
   | Language | Grammars | File Extensions | Supported Beautifiers |
   | --- | --- | --- | ---- |

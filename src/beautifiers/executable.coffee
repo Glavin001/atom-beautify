@@ -23,16 +23,15 @@ module.exports = class Executable
     @installation = options.installation
     if options.version?
       versionOptions = options.version
-      @versionArgs = versionOptions.args
-      @versionParse = versionOptions.parse
-      @versionsSupported = versionOptions.supported
+      @versionArgs = versionOptions.args or @versionArgs
+      @versionParse = versionOptions.parse or @versionParse
+      @versionsSupported = versionOptions.supported or @versionsSupported
     @setupLogger()
 
   init: () ->
     Promise.all([
       @loadVersion()
-    ])
-      .then(() => @)
+    ]).then(() => @)
 
   ###
   Logger instance

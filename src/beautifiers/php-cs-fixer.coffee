@@ -17,9 +17,7 @@ module.exports = class PHPCSFixer extends Beautifier
       homepage: "http://php.net/"
       installation: "http://php.net/manual/en/install.php"
       version: {
-        args: ['--version']
         parse: (text) -> text.match(/PHP (.*) \(cli\)/)[1]
-        supported: '>= 0.0.0'
       }
     }
     {
@@ -28,9 +26,7 @@ module.exports = class PHPCSFixer extends Beautifier
       homepage: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
       installation: "https://github.com/FriendsOfPHP/PHP-CS-Fixer#installation"
       version: {
-        args: ['--version']
         parse: (text) -> text.match(/version (.*) by/)[1] + ".0"
-        supported: '>= 0.0.0'
       }
     }
   ]
