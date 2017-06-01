@@ -8,12 +8,12 @@ shellEnv = require('shell-env')
 
 module.exports = class Executable
 
-  name = null
-  cmd = null
-  homepage = null
-  installation = null
-  versionArgs = ['--version']
-  versionParse = (text) -> semver.clean(text)
+  name: null
+  cmd: null
+  homepage: null
+  installation: null
+  versionArgs: ['--version']
+  versionParse: (text) -> semver.clean(text)
   versionsSupported: '>= 0.0.0'
 
   constructor: (options) ->
@@ -23,15 +23,17 @@ module.exports = class Executable
     @installation = options.installation
     if options.version?
       versionOptions = options.version
-      @versionArgs = versionOptions.args or @versionArgs
-      @versionParse = versionOptions.parse or @versionParse
-      @versionsSupported = versionOptions.supported or @versionsSupported
+      @versionArgs = versionOptions.args if versionOptions.args
+      @versionParse = versionOptions.parse if versionOptions.parse
+      @versionsSupported = versionOptions.supported if versionOptions.supported
     @setupLogger()
 
   init: () ->
     Promise.all([
       @loadVersion()
-    ]).then(() => @)
+    ])
+      .then(() => @verbose("Done init of #{@name}"))
+      .then(() => @)
 
   ###
   Logger instance

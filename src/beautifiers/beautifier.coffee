@@ -42,12 +42,14 @@ module.exports = class Beautifier
 
   _exe: {}
   loadExecutables: () ->
+    @debug("Load executables")
     if Object.keys(@_exe).length is @executables.length
       Promise.resolve(@_exe)
     else
       Promise.resolve(executables = @executables.map((e) -> new Executable(e)))
         .then((executables) -> Promise.all(executables.map((e) -> e.init())))
         .then((es) =>
+          @debug("Executables loaded", es)
           exe = {}
           missingInstalls = []
           es.forEach((e) ->
