@@ -91,7 +91,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | JS Beautify | :white_check_mark: | Nothing! |
 | JSCS Fixer | :white_check_mark: | Nothing! |
 | Latex Beautify | :x: | Go to https://github.com/cmhughes/latexindent.pl and follow the instructions. |
-| Lua beautifier | :x: | Go to https://www.perl.org/ and follow the instructions. |
+| Lua beautifier | :white_check_mark: | Nothing! |
 | Marko Beautifier | :white_check_mark: | Nothing! |
 | Nginx Beautify | :white_check_mark: | Nothing! |
 | ocp-indent | :x: | Go to https://www.typerex.org/ocp-indent.html and follow the instructions. |
@@ -153,7 +153,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript`, `JavaScript with JSX` |`.jsx`, `.js` | [`JS Beautify`](https://github.com/beautify-web/js-beautify), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
 | LaTeX | `BibTeX`, `LaTeX`, `TeX` |`.bib`, `.tex`, `.sty`, `.cls`, `.dtx`, `.ins`, `.bbx`, `.cbx` | [`Latex Beautify`](https://github.com/cmhughes/latexindent.pl) (Default) |
 | LESS | `LESS` |`.less` | [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) (Default) |
-| Lua | `Lua` |`.lua` | [`Lua beautifier`](https://www.perl.org/) (Default) |
+| Lua | `Lua` |`.lua` | [`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee) (Default) |
 | Markdown | `GitHub Markdown` |`.markdown`, `.md` | [`Remark`](https://github.com/wooorm/remark), [`Tidy Markdown`](https://github.com/slang800/tidy-markdown) (Default) |
 | Marko | `Marko` |`.marko` | [`Marko Beautifier`](https://github.com/marko-js/marko-prettyprint) (Default) |
 | Mustache | `HTML (Mustache)` |`.mustache` | [`JS Beautify`](https://github.com/beautify-web/js-beautify) (Default), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |

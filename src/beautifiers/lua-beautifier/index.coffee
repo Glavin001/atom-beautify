@@ -8,8 +8,7 @@ format = require './beautifier'
 
 module.exports = class Lua extends Beautifier
   name: "Lua beautifier"
-  link: "https://www.perl.org/"
-  isPreInstalled: false
+  link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee"
 
   options: {
     Lua: true
