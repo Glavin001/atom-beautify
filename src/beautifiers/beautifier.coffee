@@ -168,12 +168,14 @@ module.exports = class Beautifier
   See https://github.com/isaacs/node-which
   ###
   which: (exe, options = {}) ->
+    # @deprecate("Beautifier.which function has been deprecated. Please use Executables.")
     Executable.which(exe, options)
 
   ###
   Run command-line interface command
   ###
   run: (executable, args, {cwd, ignoreReturnCode, help, onStdin} = {}) ->
+    # @deprecate("Beautifier.run function has been deprecated. Please use Executables.")
     exe = new Executable({
       name: @name
       homepage: @link

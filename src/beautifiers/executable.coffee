@@ -6,25 +6,36 @@ path = require('path')
 semver = require('semver')
 shellEnv = require('shell-env')
 
+parentConfigKey = "atom-beautify.executables"
+
 module.exports = class Executable
 
   name: null
   cmd: null
+  key: null
   homepage: null
   installation: null
   versionArgs: ['--version']
   versionParse: (text) -> semver.clean(text)
+  versionRunOptions: {}
   versionsSupported: '>= 0.0.0'
 
   constructor: (options) ->
+    # Validation
+    if !options.cmd?
+      throw new Error("Command is required for an Executable.")
+    if !options.homepage? or !options.homepage?
+      throw new Error("Either a homepage or installation page is required for an Executable.")
     @name = options.name
     @cmd = options.cmd
+    @key = @cmd.split('-').join('_')
     @homepage = options.homepage
     @installation = options.installation
     if options.version?
       versionOptions = options.version
       @versionArgs = versionOptions.args if versionOptions.args
       @versionParse = versionOptions.parse if versionOptions.parse
+      @versionRunOptions = versionOptions.runOptions if versionOptions.runOptions
       @versionsSupported = versionOptions.supported if versionOptions.supported
     @setupLogger()
 
@@ -80,7 +91,11 @@ module.exports = class Executable
       Promise.resolve(@version)
 
   runVersion: () ->
-    @run(@versionArgs)
+    @run(@versionArgs, @versionRunOptions)
+      .then((version) =>
+        @verbose("Version: " + version)
+        version
+      )
 
   isSupported: () ->
     @isVersion(@versionsSupported)
@@ -88,15 +103,19 @@ module.exports = class Executable
   isVersion: (range) ->
     semver.satisfies(@version, range)
 
+  getConfig: () ->
+    atom?.config.get("#{parentConfigKey}.#{@key}") or {}
+
   ###
   Run command-line interface command
   ###
   run: (args, options = {}) ->
-    @debug("Run: ", args, options)
-    exeName = @cmd
-    { cwd, ignoreReturnCode, help, onStdin } = options
+    @debug("Run: ", @cmd, args, options)
+    { cwd, ignoreReturnCode, help, onStdin, returnStderr } = options
     # Flatten args first
     args = _.flatten(args)
+    exeName = @cmd
+    config = @getConfig()
 
     # Resolve executable and all args
     Promise.all([@shellEnv(), Promise.all(args)])
@@ -104,7 +123,11 @@ module.exports = class Executable
         @debug('exeName, args:', exeName, args)
 
         # Get PATH and other environment variables
-        Promise.all([exeName, args, env, @which(exeName)])
+        if config and config.path
+          exePath = config.path
+        else
+          exePath = @which(exeName)
+        Promise.all([exeName, args, env, exePath])
       )
       .then(([exeName, args, env, exePath]) =>
         @debug('exePath:', exePath)
@@ -119,7 +142,9 @@ module.exports = class Executable
 
         @spawn(exe, args, spawnOptions, onStdin)
           .then(({returnCode, stdout, stderr}) =>
-            @verbose('spawn result', returnCode, stdout, stderr)
+            @verbose('spawn result, returnCode', returnCode)
+            @verbose('spawn result, stdout', stdout)
+            @verbose('spawn result, stderr', stderr)
 
             # If return code is not 0 then error occured
             if not ignoreReturnCode and returnCode isnt 0
@@ -133,7 +158,10 @@ module.exports = class Executable
               else
                 throw new Error(stderr)
             else
-              stdout
+              if returnStderr
+                stderr
+              else
+                stdout
           )
           .catch((err) =>
             @debug('error', err)

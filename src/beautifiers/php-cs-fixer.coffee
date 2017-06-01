@@ -77,6 +77,9 @@ module.exports = class PHPCSFixer extends Beautifier
     }
 
     # Find php-cs-fixer.phar script
+    if options.cs_fixer_path
+      @deprecate("The \"cs_fixer_path\" has been deprecated. Please change to using the config with path \"Executables - PHP - Path\" in Atom-Beautify package settings.")
+
     @Promise.all([
       @which(options.cs_fixer_path) if options.cs_fixer_path
       @which('php-cs-fixer')
@@ -94,7 +97,7 @@ module.exports = class PHPCSFixer extends Beautifier
       if phpCSFixerPath?
         # Found PHP-CS-Fixer path
         if @isWindows
-          php([phpCSFixerPath, phpCsFixerOptions, tempFile], runOptions)
+          php.run([phpCSFixerPath, phpCsFixerOptions, tempFile], runOptions)
             .then(=>
               @readFile(tempFile)
             )
