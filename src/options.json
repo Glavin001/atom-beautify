@@ -9130,6 +9130,25 @@
     "order": -1,
     "description": "Configure executables used by beautifiers.",
     "properties": {
+      "uncrustify": {
+        "key": "uncrustify",
+        "title": "Uncrustify",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Uncrustify executable.",
+        "beautifiers": [
+          "Uncrustify"
+        ],
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"uncrustify\" executable."
+          }
+        }
+      },
       "emacs": {
         "key": "emacs",
         "title": "Emacs",

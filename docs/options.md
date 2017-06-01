@@ -242,6 +242,27 @@ Options for PHPCBF executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*PHPCBF*" and change it to your desired configuration.
 
+#####  [Uncrustify](#uncrustify) 
+
+**Namespace**: ``
+
+**Key**: `uncrustify`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+**Description**:
+
+Options for Uncrustify executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Uncrustify*" and change it to your desired configuration.
+
 ####  [Apex](#apex) 
 
 **Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
@@ -19071,6 +19092,27 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
     }
 }
 ```
+
+#####  [Uncrustify](#uncrustify) 
+
+**Namespace**: ``
+
+**Key**: `uncrustify`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+
+**Description**:
+
+Options for Uncrustify executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Uncrustify*" and change it to your desired configuration.
 
 
 ### Vue Beautifier
