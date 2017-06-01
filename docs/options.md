@@ -137,6 +137,27 @@ Supported options for each language.
 
 Configure executables used by beautifiers.
 
+#####  [Rscript](#rscript) 
+
+**Namespace**: ``
+
+**Key**: `Rscript`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`formatR`](#formatr) 
+
+**Description**:
+
+Options for Rscript executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Rscript*" and change it to your desired configuration.
+
 #####  [PHP](#php) 
 
 **Namespace**: ``
@@ -20122,6 +20143,27 @@ Indentation size/length (Supported by formatR)
     }
 }
 ```
+
+#####  [Rscript](#rscript) 
+
+**Namespace**: ``
+
+**Key**: `Rscript`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`formatR`](#formatr) 
+
+**Description**:
+
+Options for Rscript executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Rscript*" and change it to your desired configuration.
 
 
 ### pybeautifier
