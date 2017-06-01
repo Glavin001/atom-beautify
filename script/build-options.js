@@ -185,8 +185,7 @@ buildOptionsForExecutables = function(beautifiers) {
   const properties = {}
   _.forEach(executables, (executable) => {
     const { name, cmd, beautifiers } = executable;
-    const sanitizedCmd = cmd.split('-').join('_');
-    const key = sanitizedCmd;
+    const key = cmd;
     const option = {
       key: key,
       title: name,

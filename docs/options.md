@@ -158,6 +158,27 @@ Options for Rscript executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Rscript*" and change it to your desired configuration.
 
+#####  [Emacs](#emacs) 
+
+**Namespace**: ``
+
+**Key**: `emacs`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+
+**Description**:
+
+Options for Emacs executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Emacs*" and change it to your desired configuration.
+
 #####  [PHP](#php) 
 
 **Namespace**: ``
@@ -183,7 +204,7 @@ Options for PHP executable.
 
 **Namespace**: ``
 
-**Key**: `php_cs_fixer`
+**Key**: `php-cs-fixer`
 
 **Type**: `object`
 
@@ -15873,6 +15894,27 @@ Path to the emacs script (Supported by Fortran Beautifier)
 }
 ```
 
+#####  [Emacs](#emacs) 
+
+**Namespace**: ``
+
+**Key**: `emacs`
+
+**Type**: `object`
+
+**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+
+**Description**:
+
+Options for Emacs executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Emacs*" and change it to your desired configuration.
+
 
 ### Gherkin formatter
 
@@ -17733,7 +17775,7 @@ Options for PHP executable.
 
 **Namespace**: ``
 
-**Key**: `php_cs_fixer`
+**Key**: `php-cs-fixer`
 
 **Type**: `object`
 

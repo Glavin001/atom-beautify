@@ -9130,6 +9130,25 @@
     "order": -1,
     "description": "Configure executables used by beautifiers.",
     "properties": {
+      "emacs": {
+        "key": "emacs",
+        "title": "Emacs",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Emacs executable.",
+        "beautifiers": [
+          "Fortran Beautifier"
+        ],
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"emacs\" executable."
+          }
+        }
+      },
       "php": {
         "key": "php",
         "title": "PHP",
@@ -9149,8 +9168,8 @@
           }
         }
       },
-      "php_cs_fixer": {
-        "key": "php_cs_fixer",
+      "php-cs-fixer": {
+        "key": "php-cs-fixer",
         "title": "PHP-CS-Fixer",
         "type": "object",
         "collapsed": true,

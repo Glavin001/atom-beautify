@@ -26,7 +26,7 @@ module.exports = class Executable
       throw new Error("The command (i.e. cmd property) is required for an Executable.")
     @name = options.name
     @cmd = options.cmd
-    @key = @cmd.split('-').join('_')
+    @key = @cmd
     @homepage = options.homepage
     @installation = options.installation
     if options.version?

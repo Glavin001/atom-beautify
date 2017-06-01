@@ -16,10 +16,7 @@ module.exports = class R extends Beautifier
       homepage: "https://github.com/yihui/formatR"
       installation: "https://github.com/yihui/formatR"
       version: {
-        parse: (text) ->
-          r = /version (\d\.\d\.\d) /
-          console.log("parse version", text, r, text.match(r))
-          text.match(r)[1]
+        parse: (text) -> text.match(/version (\d+\.\d+\.\d+) /)[1]
         runOptions: {
           returnStderr: true
         }
