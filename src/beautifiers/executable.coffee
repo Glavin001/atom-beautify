@@ -23,9 +23,7 @@ module.exports = class Executable
   constructor: (options) ->
     # Validation
     if !options.cmd?
-      throw new Error("Command is required for an Executable.")
-    if !options.homepage? or !options.homepage?
-      throw new Error("Either a homepage or installation page is required for an Executable.")
+      throw new Error("The command (i.e. cmd property) is required for an Executable.")
     @name = options.name
     @cmd = options.cmd
     @key = @cmd.split('-').join('_')
