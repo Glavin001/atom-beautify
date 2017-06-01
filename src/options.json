@@ -9146,6 +9146,38 @@
           }
         }
       },
+      "autopep8": {
+        "key": "autopep8",
+        "title": "autopep8",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for autopep8 executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"autopep8\" executable."
+          }
+        }
+      },
+      "isort": {
+        "key": "isort",
+        "title": "isort",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for isort executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"isort\" executable."
+          }
+        }
+      },
       "emacs": {
         "key": "emacs",
         "title": "Emacs",

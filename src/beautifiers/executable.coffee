@@ -19,6 +19,7 @@ module.exports = class Executable
   versionParse: (text) -> semver.clean(text)
   versionRunOptions: {}
   versionsSupported: '>= 0.0.0'
+  required: true
 
   constructor: (options) ->
     # Validation
@@ -29,6 +30,7 @@ module.exports = class Executable
     @key = @cmd
     @homepage = options.homepage
     @installation = options.installation
+    @required = not options.optional
     if options.version?
       versionOptions = options.version
       @versionArgs = versionOptions.args if versionOptions.args
@@ -43,6 +45,12 @@ module.exports = class Executable
     ])
       .then(() => @verbose("Done init of #{@name}"))
       .then(() => @)
+      .catch((error) =>
+        if not @.required
+          @
+        else
+          Promise.reject(error)
+      )
 
   ###
   Logger instance
@@ -82,7 +90,12 @@ module.exports = class Executable
         .catch((error) =>
           @isInstalled = false
           @error(error)
-          Promise.reject(@commandNotFoundError())
+          help = {
+            program: @cmd
+            link: @installation or @homepage
+            pathOption: "Executable - #{@name or @cmd} - Path"
+          }
+          Promise.reject(@commandNotFoundError(@name or @cmd, help))
         )
     else
       @verbose("Loading cached version")
@@ -215,10 +228,9 @@ module.exports = class Executable
   ###
   commandNotFoundError: (exe, help) ->
     exe ?= @name or @cmd
-    # help ?= {
-    #   program: @cmd
-    #   link: @installation or @homepage
-    # }
+    @constructor.commandNotFoundError(exe, help)
+
+  @commandNotFoundError: (exe, help) ->
     # Create new improved error
     # notify user that it may not be
     # installed or in path

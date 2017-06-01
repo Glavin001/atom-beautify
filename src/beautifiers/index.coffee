@@ -368,6 +368,7 @@ module.exports = class Beautifiers extends EventEmitter
                   })
               )
               .catch((error) =>
+                logger.error(error)
                 reject(error)
                 # Track Errors
                 @trackEvent({

@@ -47,14 +47,14 @@ module.exports = class Beautifier
       Promise.resolve(@_exe)
     else
       Promise.resolve(executables = @executables.map((e) -> new Executable(e)))
-        .then((executables) -> Promise.all(executables.map((e) -> e.init())))
+        .then((executables) -> Promise.all(executables.map((exe) -> exe.init())))
         .then((es) =>
           @debug("Executables loaded", es)
           exe = {}
           missingInstalls = []
           es.forEach((e) ->
             exe[e.cmd] = e
-            if not e.isInstalled
+            if not e.isInstalled and e.required
               missingInstalls.push(e)
           )
           @_exe = exe
@@ -62,13 +62,18 @@ module.exports = class Beautifier
           if missingInstalls.length is 0
             return @_exe
           else
-            throw new Error("Missing required executables: #{missingInstalls.map((e) -> e.cmd).join(' and ')}")
+            @debug("Missing required executables: #{missingInstalls.map((e) -> e.cmd).join(' and ')}.")
+            throw Executable.commandNotFoundError(missingInstalls[0].cmd)
+        )
+        .catch((error) =>
+          @debug("Error loading executables", error)
+          Promise.reject(error)
         )
   exe: (cmd) ->
     console.log('exe', cmd, @_exe)
     e = @_exe[cmd]
     if !e?
-      throw new Error("Missing executable \"#{cmd}\". Please report this bug to https://github.com/Glavin001/atom-beautify/issues")
+      throw Executable.commandNotFoundError(cmd)
     e
 
   ###
