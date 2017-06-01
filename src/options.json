@@ -9136,9 +9136,6 @@
         "type": "object",
         "collapsed": true,
         "description": "Options for Uncrustify executable.",
-        "beautifiers": [
-          "Uncrustify"
-        ],
         "properties": {
           "path": {
             "key": "path",
@@ -9155,9 +9152,6 @@
         "type": "object",
         "collapsed": true,
         "description": "Options for Emacs executable.",
-        "beautifiers": [
-          "Fortran Beautifier"
-        ],
         "properties": {
           "path": {
             "key": "path",
@@ -9174,9 +9168,6 @@
         "type": "object",
         "collapsed": true,
         "description": "Options for PHP executable.",
-        "beautifiers": [
-          "PHP-CS-Fixer"
-        ],
         "properties": {
           "path": {
             "key": "path",
@@ -9193,9 +9184,6 @@
         "type": "object",
         "collapsed": true,
         "description": "Options for PHP-CS-Fixer executable.",
-        "beautifiers": [
-          "PHP-CS-Fixer"
-        ],
         "properties": {
           "path": {
             "key": "path",
@@ -9212,9 +9200,6 @@
         "type": "object",
         "collapsed": true,
         "description": "Options for PHPCBF executable.",
-        "beautifiers": [
-          "PHPCBF"
-        ],
         "properties": {
           "path": {
             "key": "path",
@@ -9231,9 +9216,6 @@
         "type": "object",
         "collapsed": true,
         "description": "Options for Rscript executable.",
-        "beautifiers": [
-          "formatR"
-        ],
         "properties": {
           "path": {
             "key": "path",

@@ -124,13 +124,6 @@ Show loading view when beautifying
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Show Loading View*" and change it to your desired configuration.
 
-
-## Language Options
-
-Supported options for each language.
-
----
-
 ####  [Executables](#executables) 
 
 **Description**:
@@ -139,13 +132,9 @@ Configure executables used by beautifiers.
 
 #####  [Rscript](#rscript) 
 
-**Namespace**: ``
-
-**Key**: `Rscript`
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
 
 **Type**: `object`
-
-**Supported Beautifiers**:  [`formatR`](#formatr) 
 
 **Description**:
 
@@ -160,13 +149,9 @@ Options for Rscript executable.
 
 #####  [Emacs](#emacs) 
 
-**Namespace**: ``
-
-**Key**: `emacs`
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
 
 **Type**: `object`
-
-**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
 
 **Description**:
 
@@ -181,13 +166,9 @@ Options for Emacs executable.
 
 #####  [PHP](#php) 
 
-**Namespace**: ``
-
-**Key**: `php`
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
 
 **Type**: `object`
-
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
 
 **Description**:
 
@@ -202,13 +183,9 @@ Options for PHP executable.
 
 #####  [PHP-CS-Fixer](#php-cs-fixer) 
 
-**Namespace**: ``
-
-**Key**: `php-cs-fixer`
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
 
 **Type**: `object`
-
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
 
 **Description**:
 
@@ -223,13 +200,9 @@ Options for PHP-CS-Fixer executable.
 
 #####  [PHPCBF](#phpcbf) 
 
-**Namespace**: ``
-
-**Key**: `phpcbf`
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
 
 **Type**: `object`
-
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
 
 **Description**:
 
@@ -244,13 +217,9 @@ Options for PHPCBF executable.
 
 #####  [Uncrustify](#uncrustify) 
 
-**Namespace**: ``
-
-**Key**: `uncrustify`
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
 
 **Type**: `object`
-
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
 
 **Description**:
 
@@ -262,6 +231,13 @@ Options for Uncrustify executable.
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Uncrustify*" and change it to your desired configuration.
+
+
+## Language Options
+
+Supported options for each language.
+
+---
 
 ####  [Apex](#apex) 
 
@@ -15915,27 +15891,6 @@ Path to the emacs script (Supported by Fortran Beautifier)
 }
 ```
 
-#####  [Emacs](#emacs) 
-
-**Namespace**: ``
-
-**Key**: `emacs`
-
-**Type**: `object`
-
-**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
-
-**Description**:
-
-Options for Emacs executable.
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Emacs*" and change it to your desired configuration.
-
 
 ### Gherkin formatter
 
@@ -17771,48 +17726,6 @@ Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 }
 ```
 
-#####  [PHP](#php) 
-
-**Namespace**: ``
-
-**Key**: `php`
-
-**Type**: `object`
-
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
-
-**Description**:
-
-Options for PHP executable.
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*PHP*" and change it to your desired configuration.
-
-#####  [PHP-CS-Fixer](#php-cs-fixer) 
-
-**Namespace**: ``
-
-**Key**: `php-cs-fixer`
-
-**Type**: `object`
-
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
-
-**Description**:
-
-Options for PHP-CS-Fixer executable.
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*PHP-CS-Fixer*" and change it to your desired configuration.
-
 
 ### PHPCBF
 
@@ -17893,27 +17806,6 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
     }
 }
 ```
-
-#####  [PHPCBF](#phpcbf) 
-
-**Namespace**: ``
-
-**Key**: `phpcbf`
-
-**Type**: `object`
-
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
-
-**Description**:
-
-Options for PHPCBF executable.
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*PHPCBF*" and change it to your desired configuration.
 
 
 ### Perltidy
@@ -19093,27 +18985,6 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-#####  [Uncrustify](#uncrustify) 
-
-**Namespace**: ``
-
-**Key**: `uncrustify`
-
-**Type**: `object`
-
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
-
-**Description**:
-
-Options for Uncrustify executable.
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Uncrustify*" and change it to your desired configuration.
-
 
 ### Vue Beautifier
 
@@ -20227,27 +20098,6 @@ Indentation size/length (Supported by formatR)
     }
 }
 ```
-
-#####  [Rscript](#rscript) 
-
-**Namespace**: ``
-
-**Key**: `Rscript`
-
-**Type**: `object`
-
-**Supported Beautifiers**:  [`formatR`](#formatr) 
-
-**Description**:
-
-Options for Rscript executable.
-
-**How to Configure**
-
-1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
-*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
-2. Go into *Packages* and search for "*Atom Beautify*" package.
-3. Find the option "*Rscript*" and change it to your desired configuration.
 
 
 ### pybeautifier

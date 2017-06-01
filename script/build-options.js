@@ -192,7 +192,7 @@ buildOptionsForExecutables = function(beautifiers) {
       type: "object",
       collapsed: true,
       description: `Options for ${name} executable.`,
-      beautifiers,
+      // beautifiers,
       properties: {
         path: {
           key: "path",

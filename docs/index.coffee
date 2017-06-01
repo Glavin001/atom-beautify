@@ -1,3 +1,4 @@
+
 #!/usr/bin/env coffee
 
 # Dependencies
@@ -11,7 +12,10 @@ pkg = require('../package.json')
 console.log('Generating options...')
 beautifier = new Beautifiers()
 languageOptions = beautifier.options
+executableOptions = languageOptions.executables
+delete languageOptions.executables
 packageOptions = require('../src/config.coffee')
+packageOptions.executables = executableOptions
 # Build options by Beautifier
 beautifiersMap = _.keyBy(beautifier.beautifiers, 'name')
 languagesMap = _.keyBy(beautifier.languages.languages, 'name')
