@@ -18,7 +18,14 @@ module.exports = class Uncrustify extends Beautifier
       homepage: "http://uncrustify.sourceforge.net/"
       installation: "https://github.com/uncrustify/uncrustify"
       version: {
-        parse: (text) -> text.match(/uncrustify (\d+\.\d+)/)[1] + ".0"
+        parse: (text) ->
+          try
+            v = text.match(/uncrustify (\d+\.\d+)/)[1]
+          catch error
+            @error(error)
+            v = text.match(/Uncrustify-(\d+\.\d+)/)[1] if not v?
+          if v
+            return v + ".0"
       }
     }
   ]
@@ -94,9 +101,7 @@ module.exports = class Uncrustify extends Beautifier
         outputFile = @tempFile("output", text)
         "-l"
         lang
-        ], help: {
-          link: "http://sourceforge.net/projects/uncrustify/"
-        })
+        ])
         .then(=>
           @readFile(outputFile)
         )
