@@ -164,6 +164,40 @@ Options for autopep8 executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*autopep8*" and change it to your desired configuration.
 
+#####  [beautysh](#beautysh) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for beautysh executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*beautysh*" and change it to your desired configuration.
+
+#####  [ClangFormat](#clangformat) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for ClangFormat executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*ClangFormat*" and change it to your desired configuration.
+
 #####  [Emacs](#emacs) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
