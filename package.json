@@ -407,6 +407,7 @@
     "docs": "npm run build-options && coffee docs/",
     "prepublish": "npm run docs",
     "lint": "coffeelint src/ spec/",
-    "code-docs": "codo && open docs/code/index.html"
+    "code-docs": "codo && open docs/code/index.html",
+    "test": "atom --test spec"
   }
 }
