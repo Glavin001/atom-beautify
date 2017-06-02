@@ -9194,6 +9194,38 @@
           }
         }
       },
+      "crystal": {
+        "key": "crystal",
+        "title": "Crystal",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Crystal executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"crystal\" executable."
+          }
+        }
+      },
+      "dfmt": {
+        "key": "dfmt",
+        "title": "Dfmt",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Dfmt executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Executable Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"dfmt\" executable."
+          }
+        }
+      },
       "emacs": {
         "key": "emacs",
         "title": "Emacs",

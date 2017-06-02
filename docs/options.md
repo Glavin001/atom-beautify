@@ -198,6 +198,40 @@ Options for ClangFormat executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*ClangFormat*" and change it to your desired configuration.
 
+#####  [Crystal](#crystal) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for Crystal executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Crystal*" and change it to your desired configuration.
+
+#####  [Dfmt](#dfmt) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for Dfmt executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Dfmt*" and change it to your desired configuration.
+
 #####  [Emacs](#emacs) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
