@@ -85,7 +85,7 @@ module.exports = class Executable
           @version = version
         )
         .then((version) =>
-          @verbose("#{@cmd} version: #{version}")
+          @info("#{@cmd} version: #{version}")
           version
         )
         .catch((error) =>
@@ -105,7 +105,7 @@ module.exports = class Executable
   runVersion: () ->
     @run(@versionArgs, @versionRunOptions)
       .then((version) =>
-        @verbose("Version: " + version)
+        @info("Version text: " + version)
         version
       )
 

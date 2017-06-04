@@ -278,7 +278,7 @@ module.exports = class Beautifiers extends EventEmitter
     return Promise.all(allOptions)
     .then((allOptions) =>
       return new Promise((resolve, reject) =>
-        logger.info('beautify', text, allOptions, grammar, filePath, onSave, language)
+        logger.debug('beautify', text, allOptions, grammar, filePath, onSave, language)
         logger.verbose(allOptions)
 
         language ?= @getLanguage(grammar, filePath)
