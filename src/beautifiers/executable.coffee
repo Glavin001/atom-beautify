@@ -5,6 +5,7 @@ spawn = require('child_process').spawn
 path = require('path')
 semver = require('semver')
 shellEnv = require('shell-env')
+os = require('os')
 
 parentConfigKey = "atom-beautify.executables"
 
@@ -127,6 +128,7 @@ module.exports = class Executable
     args = _.flatten(args)
     exeName = @cmd
     config = @getConfig()
+    cwd ?= os.tmpDir()
 
     # Resolve executable and all args
     Promise.all([@shellEnv(), Promise.all(args)])
@@ -143,13 +145,17 @@ module.exports = class Executable
       .then(([exeName, args, env, exePath]) =>
         @debug('exePath:', exePath)
         @debug('env:', env)
+        @debug('PATH:', env.PATH)
         @debug('args', args)
+        args = this.relativizePaths(args)
+        @debug('relativized args', args)
 
         exe = exePath ? exeName
         spawnOptions = {
           cwd: cwd
           env: env
         }
+        @debug('spawnOptions', spawnOptions)
 
         @spawn(exe, args, spawnOptions, onStdin)
           .then(({returnCode, stdout, stderr}) =>
@@ -185,6 +191,16 @@ module.exports = class Executable
               throw err
           )
       )
+
+  relativizePaths: (args) ->
+    tmpDir = os.tmpDir()
+    newArgs = args.map((arg) ->
+      isTmpFile = typeof arg is 'string' and path.isAbsolute(arg) and path.dirname(arg).startsWith(tmpDir)
+      if isTmpFile
+        return path.relative(tmpDir, arg)
+      return arg
+    )
+    newArgs
 
   ###
   Spawn
