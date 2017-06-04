@@ -9139,10 +9139,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"uncrustify\" executable."
+            "description": "Absolute path to the \"uncrustify\" executable's binary/script."
           }
         }
       },
@@ -9155,10 +9155,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"autopep8\" executable."
+            "description": "Absolute path to the \"autopep8\" executable's binary/script."
           }
         }
       },
@@ -9171,10 +9171,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"isort\" executable."
+            "description": "Absolute path to the \"isort\" executable's binary/script."
           }
         }
       },
@@ -9187,10 +9187,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"clang-format\" executable."
+            "description": "Absolute path to the \"clang-format\" executable's binary/script."
           }
         }
       },
@@ -9203,10 +9203,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"crystal\" executable."
+            "description": "Absolute path to the \"crystal\" executable's binary/script."
           }
         }
       },
@@ -9219,10 +9219,26 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"dfmt\" executable."
+            "description": "Absolute path to the \"dfmt\" executable's binary/script."
+          }
+        }
+      },
+      "elm-format": {
+        "key": "elm-format",
+        "title": "elm-format",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for elm-format executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"elm-format\" executable's binary/script."
           }
         }
       },
@@ -9235,10 +9251,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"emacs\" executable."
+            "description": "Absolute path to the \"emacs\" executable's binary/script."
           }
         }
       },
@@ -9251,10 +9267,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"php\" executable."
+            "description": "Absolute path to the \"php\" executable's binary/script."
           }
         }
       },
@@ -9267,10 +9283,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"php-cs-fixer\" executable."
+            "description": "Absolute path to the \"php-cs-fixer\" executable's binary/script."
           }
         }
       },
@@ -9283,10 +9299,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"phpcbf\" executable."
+            "description": "Absolute path to the \"phpcbf\" executable's binary/script."
           }
         }
       },
@@ -9299,10 +9315,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"Rscript\" executable."
+            "description": "Absolute path to the \"Rscript\" executable's binary/script."
           }
         }
       },
@@ -9315,10 +9331,10 @@
         "properties": {
           "path": {
             "key": "path",
-            "title": "Executable Path",
+            "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"beautysh\" executable."
+            "description": "Absolute path to the \"beautysh\" executable's binary/script."
           }
         }
       }

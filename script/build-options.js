@@ -196,10 +196,10 @@ buildOptionsForExecutables = function(beautifiers) {
       properties: {
         path: {
           key: "path",
-          title: "Executable Path",
+          title: "Binary/Script Path",
           type: "string",
           default: "",
-          description: `Absolute path to the "${cmd}" executable.`,
+          description: `Absolute path to the "${cmd}" executable's binary/script.`,
         }
       }
     }

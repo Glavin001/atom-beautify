@@ -1,9 +1,9 @@
-module Main (..) where
+module Main exposing (..)
 
 
 addThings x y =
-  x + y
+    x + y
 
 
 main =
-  addThings 4 5
+    addThings 4 5
