@@ -15,7 +15,11 @@ module.exports = class ElmFormat extends Beautifier
       installation: "https://github.com/avh4/elm-format#installation-"
       version: {
         args: ['--help']
-        parse: (text) -> text.match(/elm-format-\d+.\d+ (\d+\.\d+\.\d+)/)[1]
+        parse: (text) ->
+          try
+            return text.match(/elm-format-\d+.\d+ (\d+\.\d+\.\d+)/)[1]
+          catch
+            return text.match(/elm-format (\d+\.\d+\.\d+)/)[1]
       }
     }
   ]
