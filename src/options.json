@@ -1072,7 +1072,7 @@
       "no_lead_zero": {
         "type": "boolean",
         "default": false,
-        "description": "If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)",
+        "description": "If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)",
         "title": "No lead zero",
         "beautifiers": [
           "Pretty Diff"
@@ -1087,7 +1087,7 @@
         "title": "comb custom config file",
         "type": "string",
         "default": "",
-        "description": "Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)",
+        "description": "Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)",
         "beautifiers": [
           "CSScomb"
         ],
@@ -4239,7 +4239,7 @@
       "indent_preamble": {
         "type": "boolean",
         "default": false,
-        "description": "Indent the preable (Supported by Latex Beautify)",
+        "description": "Indent the preamble (Supported by Latex Beautify)",
         "title": "Indent preamble",
         "beautifiers": [
           "Latex Beautify"
@@ -4300,7 +4300,7 @@
           "bmatrix",
           "pmatrix"
         ],
-        "decription": "Aligns columns by the alignment tabs for environments specified",
+        "description": "Aligns columns by the alignment tabs for environments specified",
         "title": "Align columns in environments",
         "beautifiers": [
           "Latex Beautify"
@@ -4490,7 +4490,7 @@
       "no_lead_zero": {
         "type": "boolean",
         "default": false,
-        "description": "If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)",
+        "description": "If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)",
         "title": "No lead zero",
         "beautifiers": [
           "Pretty Diff"
@@ -4505,7 +4505,7 @@
         "title": "comb custom config file",
         "type": "string",
         "default": "",
-        "description": "Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)",
+        "description": "Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)",
         "beautifiers": [
           "CSScomb"
         ],
@@ -5439,7 +5439,7 @@
         "title": "Don't join curly brackets",
         "type": "boolean",
         "default": true,
-        "descriotion": "",
+        "description": "",
         "beautifiers": [
           "Nginx Beautify"
         ],
@@ -6707,7 +6707,7 @@
       "no_lead_zero": {
         "type": "boolean",
         "default": false,
-        "description": "If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)",
+        "description": "If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)",
         "title": "No lead zero",
         "beautifiers": [
           "Pretty Diff"
@@ -6722,7 +6722,7 @@
         "title": "comb custom config file",
         "type": "string",
         "default": "",
-        "description": "Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)",
+        "description": "Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)",
         "beautifiers": [
           "CSScomb"
         ],
@@ -7323,7 +7323,7 @@
       "no_lead_zero": {
         "type": "boolean",
         "default": false,
-        "description": "If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)",
+        "description": "If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)",
         "title": "No lead zero",
         "beautifiers": [
           "Pretty Diff"
