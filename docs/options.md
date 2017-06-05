@@ -10084,7 +10084,7 @@ Automatically beautify Python files on save
 
 **Description**:
 
-formater used by pybeautifier (Supported by autopep8, pybeautifier)
+formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -19737,7 +19737,7 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Description**:
 
-formater used by pybeautifier (Supported by autopep8, pybeautifier)
+formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -20090,7 +20090,7 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Description**:
 
-formater used by pybeautifier (Supported by autopep8, pybeautifier)
+formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 

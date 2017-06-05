@@ -6108,7 +6108,7 @@
           "autopep8",
           "yapf"
         ],
-        "description": "formater used by pybeautifier (Supported by autopep8, pybeautifier)",
+        "description": "formatter used by pybeautifier (Supported by autopep8, pybeautifier)",
         "title": "Formater",
         "beautifiers": [
           "autopep8",
