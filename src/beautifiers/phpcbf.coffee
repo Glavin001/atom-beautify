@@ -92,7 +92,7 @@ module.exports = class PHPCBF extends Beautifier
       @run("phpcbf", [
         "--no-patch" unless options.phpcbf_version is 3
         "--standard=#{options.standard}" if options.standard
-        tempFile = @tempFile("temp", text)
+        tempFile = @tempFile("temp", text, ".php")
         ], {
           ignoreReturnCode: true
           help: {
