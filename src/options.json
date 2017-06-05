@@ -4300,7 +4300,7 @@
           "bmatrix",
           "pmatrix"
         ],
-        "description": "Aligns columns by the alignment tabs for environments specified",
+        "description": "Aligns columns by the alignment tabs for environments specified (Supported by Latex Beautify)",
         "title": "Align columns in environments",
         "beautifiers": [
           "Latex Beautify"
@@ -4309,8 +4309,7 @@
         "language": {
           "name": "LaTeX",
           "namespace": "latex"
-        },
-        "description": " (Supported by Latex Beautify)"
+        }
       },
       "disabled": {
         "title": "Disable Beautifying Language",
@@ -5439,7 +5438,7 @@
         "title": "Don't join curly brackets",
         "type": "boolean",
         "default": true,
-        "description": "",
+        "description": " (Supported by Nginx Beautify)",
         "beautifiers": [
           "Nginx Beautify"
         ],
@@ -5447,8 +5446,7 @@
         "language": {
           "name": "Nginx",
           "namespace": "nginx"
-        },
-        "description": " (Supported by Nginx Beautify)"
+        }
       },
       "disabled": {
         "title": "Disable Beautifying Language",

@@ -1718,7 +1718,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Description**:
 
-Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
+Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -1922,7 +1922,7 @@ Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 
 **Description**:
 
-If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
+If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -7074,7 +7074,7 @@ Automatically beautify LaTeX files on save
 
 **Description**:
 
- (Supported by Latex Beautify)
+Aligns columns by the alignment tabs for environments specified (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -7179,7 +7179,7 @@ Indentation character (Supported by Latex Beautify)
 
 **Description**:
 
-Indent the preable (Supported by Latex Beautify)
+Indent the preamble (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -7356,7 +7356,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Description**:
 
-Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
+Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -7536,7 +7536,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 
 **Description**:
 
-If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
+If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -10957,7 +10957,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Description**:
 
-Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
+Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -11137,7 +11137,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 
 **Description**:
 
-If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
+If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -12181,7 +12181,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 
 **Description**:
 
-If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
+If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -15191,7 +15191,7 @@ Supported options for each beautifier.
 
 **Description**:
 
-Path to custom CSScomb config file, used in absense of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
+Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.csscomb.cson` at the root of your project. (Supported by CSScomb)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16742,7 +16742,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by L
 
 **Description**:
 
-Indent the preable (Supported by Latex Beautify)
+Indent the preamble (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16842,7 +16842,7 @@ Remove trailing whitespace (Supported by Latex Beautify)
 
 **Description**:
 
- (Supported by Latex Beautify)
+Aligns columns by the alignment tabs for environments specified (Supported by Latex Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17973,7 +17973,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Description**:
 
-If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented. (Supported by Pretty Diff)
+If in CSS values leading 0s immediately preceding a decimal should be removed or prevented. (Supported by Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
