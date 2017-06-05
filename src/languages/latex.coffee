@@ -44,7 +44,7 @@ module.exports = {
     indent_preamble:
       type: 'boolean'
       default: false
-      description: "Indent the preable"
+      description: "Indent the preamble"
     always_look_for_split_braces:
       type: 'boolean'
       default: true
@@ -60,5 +60,5 @@ module.exports = {
     align_columns_in_environments:
       type: 'array'
       default:["tabular", "matrix", "bmatrix", "pmatrix"]
-      decription: "Aligns columns by the alignment tabs for environments specified"
+      description: "Aligns columns by the alignment tabs for environments specified"
 }
