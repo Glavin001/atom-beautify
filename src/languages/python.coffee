@@ -38,7 +38,7 @@ module.exports = {
       type: 'string'
       default: 'autopep8'
       enum: ['autopep8', 'yapf']
-      description: "formater used by pybeautifier"
+      description: "formatter used by pybeautifier"
     style_config:
       type: 'string'
       default: 'pep8'
