@@ -122,11 +122,12 @@ before_install:
   # - stack install stylish-haskell
   # Elm
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-mac-x64.tgz;
+      curl -L -o /tmp/elm-format.tgz
+      https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.17-0.7.0-exp-mac-x64.tgz;
       tar xvzf /tmp/elm-format.tgz -C /usr/local/bin;
     fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-linux-x64.tgz;
+      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.17-0.7.0-exp-linux-x64.tgz;
       tar xvzf /tmp/elm-format.tgz -C $HOME/.linuxbrew/bin;
     fi
   # OCaml
