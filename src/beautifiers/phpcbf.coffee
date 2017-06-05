@@ -17,6 +17,9 @@ module.exports = class PHPCBF extends Beautifier
       version: {
         args: ['--version']
       }
+      docker: {
+        image: "unibeautify/phpcbf"
+      }
     }
   ]
   isPreInstalled: false

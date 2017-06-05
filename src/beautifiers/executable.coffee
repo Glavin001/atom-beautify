@@ -6,10 +6,12 @@ path = require('path')
 semver = require('semver')
 shellEnv = require('shell-env')
 os = require('os')
+fs = require('fs')
 
 parentConfigKey = "atom-beautify.executables"
 
-module.exports = class Executable
+
+class Executable
 
   name: null
   cmd: null
@@ -73,31 +75,7 @@ module.exports = class Executable
     if force or !@version?
       @verbose("Loading version without cache")
       @runVersion()
-        .then((text) => @versionParse(text))
-        .then((version) ->
-          valid = Boolean(semver.valid(version))
-          if not valid
-            throw new Error("Version is not valid: "+version)
-          version
-        )
-        .then((version) =>
-          @isInstalled = true
-          @version = version
-        )
-        .then((version) =>
-          @info("#{@cmd} version: #{version}")
-          version
-        )
-        .catch((error) =>
-          @isInstalled = false
-          @error(error)
-          help = {
-            program: @cmd
-            link: @installation or @homepage
-            pathOption: "Executable - #{@name or @cmd} - Path"
-          }
-          Promise.reject(@commandNotFoundError(@name or @cmd, help))
-        )
+        .then((text) => @saveVersion(text))
     else
       @verbose("Loading cached version")
       Promise.resolve(@version)
@@ -107,6 +85,34 @@ module.exports = class Executable
       .then((version) =>
         @info("Version text: " + version)
         version
+      )
+
+  saveVersion: (text) ->
+    Promise.resolve()
+      .then( => @versionParse(text))
+      .then((version) ->
+        valid = Boolean(semver.valid(version))
+        if not valid
+          throw new Error("Version is not valid: "+version)
+        version
+      )
+      .then((version) =>
+        @isInstalled = true
+        @version = version
+      )
+      .then((version) =>
+        @info("#{@cmd} version: #{version}")
+        version
+      )
+      .catch((error) =>
+        @isInstalled = false
+        @error(error)
+        help = {
+          program: @cmd
+          link: @installation or @homepage
+          pathOption: "Executable - #{@name or @cmd} - Path"
+        }
+        Promise.reject(@commandNotFoundError(@name or @cmd, help))
       )
 
   isSupported: () ->
@@ -195,7 +201,7 @@ module.exports = class Executable
   relativizePaths: (args) ->
     tmpDir = os.tmpDir()
     newArgs = args.map((arg) ->
-      isTmpFile = typeof arg is 'string' and path.isAbsolute(arg) and path.dirname(arg).startsWith(tmpDir)
+      isTmpFile = typeof arg is 'string' and not arg.includes(':') and path.isAbsolute(arg) and path.dirname(arg).startsWith(tmpDir)
       if isTmpFile
         return path.relative(tmpDir, arg)
       return arg
@@ -362,3 +368,59 @@ module.exports = class Executable
   ###
   isWindows: () -> @constructor.isWindows()
   @isWindows: () -> new RegExp('^win').test(process.platform)
+
+class HybridExecutable extends Executable
+
+  dockerOptions: {
+    image: undefined
+    workingDir: "/workdir"
+  }
+
+  constructor: (options) ->
+    super(options)
+    if options.docker?
+      @dockerOptions = Object.assign({}, @dockerOptions, options.docker)
+      @docker = @constructor.dockerExecutable()
+
+  @docker: undefined
+  @dockerExecutable: () ->
+    if not @docker?
+      @docker = new Executable({
+        name: "Docker"
+        cmd: "docker"
+        homepage: "https://www.docker.com/"
+        installation: "https://www.docker.com/get-docker"
+        version: {
+          parse: (text) -> text.match(/version [0]*([1-9]\d*).[0]*([1-9]\d*).[0]*([1-9]\d*)/).slice(1).join('.')
+        }
+      })
+    return @docker
+
+  init: () ->
+    super()
+      .catch((error) =>
+        return Promise.reject(error) if not @docker?
+        @docker.init()
+          .then(=> @runImage(@versionArgs, @versionRunOptions))
+          .then((text) => @saveVersion(text))
+          .then(=> @)
+          .catch((error) =>
+            @debug(error)
+            Promise.reject(error)
+          )
+      )
+
+  run: (args, options = {}) ->
+    if @docker and @docker.isInstalled
+      return @runImage(args, options)
+    super(args, options)
+
+  runImage: (args, options) ->
+    @debug("Run Docker executable: ", args, options)
+    { cwd } = options
+    pwd = fs.realpathSync(cwd or os.tmpDir())
+    image = @dockerOptions.image
+    workingDir = @dockerOptions.workingDir
+    @docker.run(["run", "-v", "#{pwd}:#{workingDir}", "-w", workingDir, image, args], options)
+
+module.exports = HybridExecutable

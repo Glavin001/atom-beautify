@@ -28,6 +28,10 @@ module.exports = class PHPCSFixer extends Beautifier
       version: {
         parse: (text) -> text.match(/version (.*) by/)[1] + ".0"
       }
+      docker: {
+        image: "unibeautify/php-cs-fixer"
+        workingDir: "/project"
+      }
     }
   ]
 

@@ -21,6 +21,9 @@ module.exports = class ElmFormat extends Beautifier
           catch
             return text.match(/elm-format (\d+\.\d+\.\d+)/)[1]
       }
+      docker: {
+        image: "unibeautify/elm-format"
+      }
     }
   ]
 

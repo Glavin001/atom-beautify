@@ -27,6 +27,9 @@ module.exports = class Uncrustify extends Beautifier
           if v
             return v + ".0"
       }
+      docker: {
+        image: "unibeautify/uncrustify"
+      }
     }
   ]
 
