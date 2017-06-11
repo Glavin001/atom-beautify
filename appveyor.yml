@@ -129,11 +129,6 @@ install:
   - pip install beautysh
   - where beautysh
 
-  # R
-  - choco install r.project -y
-  - where R
-
-
 build_script:
 
   - cd %APPVEYOR_BUILD_FOLDER%
