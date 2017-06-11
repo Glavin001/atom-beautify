@@ -20,6 +20,9 @@ module.exports = class ClangFormat extends Beautifier
       version: {
         parse: (text) -> text.match(/version (\d+\.\d+\.\d+)/)[1]
       }
+      docker: {
+        image: "unibeautify/clang-format"
+      }
     }
   ]
 

@@ -21,6 +21,9 @@ module.exports = class R extends Beautifier
           returnStderr: true
         }
       }
+      docker: {
+        image: "unibeautify/rscript"
+      }
     }
   ]
 

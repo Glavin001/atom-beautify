@@ -15,6 +15,9 @@ module.exports = class BashBeautify extends Beautifier
         args: ['--help'],
         parse: (text) -> text.indexOf("usage: beautysh") isnt -1 and "0.0.0"
       }
+      docker: {
+        image: "unibeautify/beautysh"
+      }
     }
   ]
 

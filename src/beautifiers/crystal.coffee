@@ -17,6 +17,9 @@ module.exports = class Crystal extends Beautifier
       version: {
         parse: (text) -> text.match(/Crystal (\d+\.\d+\.\d+)/)[1]
       }
+      docker: {
+        image: "unibeautify/crystal"
+      }
     }
   ]
 

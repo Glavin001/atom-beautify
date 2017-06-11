@@ -21,6 +21,9 @@ module.exports = class Autopep8 extends Beautifier
           returnStderr: true
         }
       }
+      docker: {
+        image: "unibeautify/autopep8"
+      }
     }
     {
       name: "isort"
