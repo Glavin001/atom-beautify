@@ -46,9 +46,6 @@ install:
   - ECHO "Filesystem root:"
   - ps: "ls \"C:/\""
 
-  # - ECHO "Installed SDKs:"
-  # - ps: "ls \"C:/Program Files/Microsoft SDKs/Windows\""
-
   - cinst atom -y
   - cd %APPVEYOR_BUILD_FOLDER%
   # Add Atom's bin (apm, etc) to PATH
@@ -115,11 +112,6 @@ install:
   - "SET PATH=%cd%;%PATH%" # Add current working directory to PATH
   - where php-cs-fixer
 
-  # Docker
-  - where docker
-  - docker --version
-  - docker ps
-
   # Uncrustify
   - curl -k -L http://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.61/uncrustify-0.61.3-gf65394e-win32.zip/download -o uncrustify.zip
   - cinst 7zip.commandline -y
@@ -128,17 +120,18 @@ install:
   - where uncrustify
 
   # elm-format
-  - docker pull unibeautify/elm-format
-  - docker run -it unibeautify/elm-format
+  - curl -k -L https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.18-0.7.0-exp-win-i386.zip -o elm-format.zip
+  - 7za e elm-format.zip -oelm-format-d
+  - "SET PATH=%cd%\\elm-format-d;%PATH%"
+  - where elm-format
 
   # R
-  - docker pull unibeautify/rscript
-  - docker run -it unibeautify/rscript
+  - choco install r.project -y
+  - where Rscript
 
   # Beautysh
-  - docker pull unibeautify/beautysh
-  - docker run -it unibeautify/beautysh
-
+  - pip install beautysh
+  - where beautysh
 
 build_script:
 
