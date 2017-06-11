@@ -23,6 +23,13 @@ go:
 
 matrix:
   include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      services:
+        - docker
+      env:
+        - ATOM_CHANNEL=stable
     # - os: linux
     #   dist: trusty
     #   sudo: require
