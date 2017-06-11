@@ -15,6 +15,14 @@ isWindows = process.platform is 'win32' or
   process.env.OSTYPE is 'cygwin' or
   process.env.OSTYPE is 'msys'
 
+unspportedLangs = {
+  windows: [
+    "ocaml"
+    "r"
+    "clojure"
+  ]
+}
+
 describe "BeautifyLanguages", ->
 
   optionsDir = path.resolve(__dirname, "../examples")
@@ -95,7 +103,8 @@ describe "BeautifyLanguages", ->
           for lang in langNames
 
             # FIXME: Skip testing ocaml in Windows
-            if isWindows && lang == 'ocaml'
+            if isWindows and unspportedLangs.windows.indexOf(lang) isnt -1
+              console.warn("Tests for Windows do not support #{lang}")
               continue
 
             do (lang) ->
