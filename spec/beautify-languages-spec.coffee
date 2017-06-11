@@ -62,7 +62,7 @@ describe "BeautifyLanguages", ->
       pack.activateNow()
       # Need more debugging on Windows
       # Change logger level
-      atom.config.set('atom-beautify.general.loggerLevel', 'info')
+      atom.config.set('atom-beautify.general.loggerLevel', 'verbose')
       # Return promise
       return activationPromise
 

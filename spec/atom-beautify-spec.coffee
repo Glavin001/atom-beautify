@@ -31,7 +31,7 @@ describe "Atom-Beautify", ->
       pack = atom.packages.getLoadedPackage("atom-beautify")
       pack.activateNow()
       # Change logger level
-      # atom.config.set('atom-beautify._loggerLevel', 'verbose')
+      atom.config.set('atom-beautify.general.loggerLevel', 'verbose')
       # Return promise
       return activationPromise
 

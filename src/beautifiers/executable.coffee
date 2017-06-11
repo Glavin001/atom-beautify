@@ -404,8 +404,8 @@ class HybridExecutable extends Executable
           .then(=> @runImage(@versionArgs, @versionRunOptions))
           .then((text) => @saveVersion(text))
           .then(=> @)
-          .catch((error) =>
-            @debug(error)
+          .catch((dockerError) =>
+            @debug(dockerError)
             Promise.reject(error)
           )
       )
