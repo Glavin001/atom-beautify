@@ -125,13 +125,14 @@ install:
   - "SET PATH=%cd%\\elm-format-d;%PATH%"
   - where elm-format
 
-  # R
-  - choco install r.project -y
-  - where Rscript
-
   # Beautysh
   - pip install beautysh
   - where beautysh
+
+  # R
+  - choco install r.project -y
+  - where R
+
 
 build_script:
 
