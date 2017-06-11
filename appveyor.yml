@@ -1,5 +1,5 @@
 version: "{build}"
-os: Windows Server 2012 R2
+os: Visual Studio 2017
 
 test: off
 deploy: off
@@ -116,8 +116,6 @@ install:
   - where php-cs-fixer
 
   # Docker
-  - choco install docker-for-windows --pre
-  - choco install docker
   - where docker
   - docker --version
   - docker ps
@@ -134,8 +132,8 @@ install:
   - docker run -it unibeautify/elm-format
 
   # R
-  - choco install r.project
-  - where Rscript
+  - docker pull unibeautify/rscript
+  - docker run -it unibeautify/rscript
 
   # Beautysh
   - docker pull unibeautify/beautysh
