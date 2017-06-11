@@ -123,10 +123,26 @@ install:
   - where uncrustify
 
   # elm-format
-  - curl -k -L https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-win-x64.zip -o elm-format.zip
+  - curl -k -L https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.17-0.7.0-exp-win-x64.zip -o elm-format.zip
   - 7za e elm-format.zip -oelm-format-d
   - "SET PATH=%cd%\\elm-format-d;%PATH%"
   - where elm-format
+
+  # R
+  - choco install r.project
+  - where Rscript
+
+  # Docker
+  - choco install docker-for-windows --pre
+  - choco install docker
+  - where docker
+  - docker --version
+  - docker ps
+
+  # Beautysh
+  - docker pull unibeautify/beautysh
+  - docker run -it unibeautify/beautysh
+
 
 build_script:
 
