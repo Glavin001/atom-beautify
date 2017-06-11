@@ -20,6 +20,15 @@ unspportedLangs = {
     "ocaml"
     "r"
     "clojure"
+    # Broken
+    "apex"
+    "bash"
+    "csharp"
+    "d"
+    "elm"
+    "java"
+    "objectivec"
+    "opencl"
   ]
 }
 
