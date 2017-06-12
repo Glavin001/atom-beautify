@@ -38,6 +38,4 @@ module.exports = class R extends Beautifier
       r_beautifier,
       options.indent_size,
       @tempFile("input", text),
-      '>',
-      @tempFile("input", text)
     ])
