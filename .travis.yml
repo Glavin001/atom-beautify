@@ -107,6 +107,7 @@ before_install:
   # R
   - brew tap homebrew/science
   - brew install r
+  - rscript --version
   # PHP
   - brew tap homebrew/homebrew-php
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then

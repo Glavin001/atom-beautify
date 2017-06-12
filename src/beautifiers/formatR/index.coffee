@@ -12,7 +12,7 @@ module.exports = class R extends Beautifier
   executables: [
     {
       name: "Rscript"
-      cmd: "Rscript"
+      cmd: "rscript"
       homepage: "https://github.com/yihui/formatR"
       installation: "https://github.com/yihui/formatR"
       version: {
@@ -32,9 +32,9 @@ module.exports = class R extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    rScript = @exe("Rscript")
+    rscript = @exe("rscript")
     r_beautifier = path.resolve(__dirname, "formatR.r")
-    rScript.run([
+    rscript.run([
       r_beautifier,
       options.indent_size,
       @tempFile("input", text),
