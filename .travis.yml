@@ -80,6 +80,8 @@ cache:
     - $HOME/.stack
 
 before_install:
+  # Docker based beautifiers
+  - docker pull unibeautify/rscript
   # Install Homebrew on Linux
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
@@ -106,8 +108,10 @@ before_install:
   - brew install uncrustify
   # R
   - brew tap homebrew/science
-  - brew install r
-  - rscript --version
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install r;
+      rscript --version;
+    fi
   # PHP
   - brew tap homebrew/homebrew-php
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
