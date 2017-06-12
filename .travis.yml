@@ -110,7 +110,6 @@ before_install:
       brew install r;
       rscript --version;
     else
-      # Docker based beautifiers
       docker pull unibeautify/rscript;
     fi
   # PHP
