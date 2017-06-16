@@ -179,7 +179,7 @@ class Executable
               if @isWindows() and returnCode is 1 and stderr.indexOf(windowsProgramNotFoundMsg) isnt -1
                 throw @commandNotFoundError(exeName, help)
               else
-                throw new Error(stderr)
+                throw new Error(stderr or stdout)
             else
               if returnStderr
                 stderr
