@@ -282,6 +282,7 @@ module.exports = class Beautifiers extends EventEmitter
         logger.verbose(allOptions)
 
         language ?= @getLanguage(grammar, filePath)
+        fileExtension = @getExtension(filePath)
 
         # Check if unsupported language
         if !language
@@ -343,6 +344,7 @@ module.exports = class Beautifiers extends EventEmitter
 
             context =
               filePath: filePath
+              fileExtension: fileExtension
 
             startTime = new Date()
             beautifier.loadExecutables()
@@ -405,7 +407,6 @@ module.exports = class Beautifiers extends EventEmitter
           if atom.config.get("atom-beautify.general.muteUnsupportedLanguageErrors")
             return resolve( null )
           else
-            fileExtension = @getExtension(filePath)
             repoBugsUrl = pkg.bugs.url
             title = "Atom Beautify could not find a supported beautifier for this file"
             detail = """

@@ -46,7 +46,9 @@ module.exports = class Uncrustify extends Beautifier
     Arduino: true
   }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, context) ->
+    fileExtension = context.fileExtension
+
     uncrustify = @exe("uncrustify")
     # console.log('uncrustify.beautify', language, options)
     return new @Promise((resolve, reject) ->
@@ -99,9 +101,9 @@ module.exports = class Uncrustify extends Beautifier
         "-c"
         configPath
         "-f"
-        @tempFile("input", text)
+        @tempFile("input", text, fileExtension and ".#{fileExtension}")
         "-o"
-        outputFile = @tempFile("output", text)
+        outputFile = @tempFile("output", text, fileExtension and ".#{fileExtension}")
         "-l"
         lang
         ])
