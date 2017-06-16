@@ -97,7 +97,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       gem install sass;
     else
-      docker pull unibeautify/sass-convert
+      docker pull unibeautify/sass-convert;
     fi
   # Python language support
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
@@ -108,9 +108,9 @@ before_install:
   - pip install --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install uncrustify
+      brew install uncrustify;
     else
-      docker pull unibeautify/uncrustify
+      docker pull unibeautify/uncrustify;
     fi
   # R
   - brew tap homebrew/science
