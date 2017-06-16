@@ -130,14 +130,12 @@ class Executable
   run: (args, options = {}) ->
     @debug("Run: ", @cmd, args, options)
     { cwd, ignoreReturnCode, help, onStdin, returnStderr } = options
-    # Flatten args first
-    args = _.flatten(args)
     exeName = @cmd
     config = @getConfig()
     cwd ?= os.tmpDir()
 
     # Resolve executable and all args
-    Promise.all([@shellEnv(), Promise.all(args)])
+    Promise.all([@shellEnv(), this.resolveArgs(args)])
       .then(([env, args]) =>
         @debug('exeName, args:', exeName, args)
 
@@ -198,10 +196,15 @@ class Executable
           )
       )
 
+  resolveArgs: (args) ->
+    args = _.flatten(args)
+    Promise.all(args)
+
   relativizePaths: (args) ->
     tmpDir = os.tmpDir()
     newArgs = args.map((arg) ->
-      isTmpFile = typeof arg is 'string' and not arg.includes(':') and path.isAbsolute(arg) and path.dirname(arg).startsWith(tmpDir)
+      isTmpFile = (typeof arg is 'string' and not arg.includes(':') and \
+        path.isAbsolute(arg) and path.dirname(arg).startsWith(tmpDir))
       if isTmpFile
         return path.relative(tmpDir, arg)
       return arg
@@ -419,10 +422,32 @@ class HybridExecutable extends Executable
 
   runImage: (args, options) ->
     @debug("Run Docker executable: ", args, options)
-    { cwd } = options
-    pwd = fs.realpathSync(cwd or os.tmpDir())
-    image = @dockerOptions.image
-    workingDir = @dockerOptions.workingDir
-    @docker.run(["run", "-v", "#{pwd}:#{workingDir}", "-w", workingDir, image, args], options)
+    this.resolveArgs(args)
+      .then((args) =>
+        { cwd } = options
+        tmpDir = os.tmpDir()
+        pwd = fs.realpathSync(cwd or tmpDir)
+        image = @dockerOptions.image
+        workingDir = @dockerOptions.workingDir
+
+        rootPath = '/mountedRoot'
+        newArgs = args.map((arg) ->
+          if (typeof arg is 'string' and not arg.includes(':') \
+            and path.isAbsolute(arg) and not path.dirname(arg).startsWith(tmpDir))
+            then path.join(rootPath, arg) else arg
+        )
+
+        @docker.run([
+            "run",
+            "--volume", "#{pwd}:#{workingDir}",
+            "--volume", "#{path.resolve('/')}:#{rootPath}",
+            "--workdir", workingDir,
+            image,
+            newArgs
+          ],
+          options
+        )
+      )
+
 
 module.exports = HybridExecutable
