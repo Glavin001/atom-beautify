@@ -85,7 +85,7 @@ before_install:
       git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
     fi
   # Update Homebrew
-  - brew update
+  # - brew update
   - brew tap homebrew/dupes
   - brew tap homebrew/versions
   # Ruby language support
@@ -94,7 +94,11 @@ before_install:
   - gem install htmlbeautifier
   - gem install puppet-lint
   # Sass language support
-  - gem install sass
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      gem install sass;
+    else
+      docker pull unibeautify/sass-convert
+    fi
   # Python language support
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
   - pip install --upgrade pip
@@ -103,7 +107,11 @@ before_install:
   # SQL language support
   - pip install --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
-  - brew install uncrustify
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install uncrustify
+    else
+      docker pull unibeautify/uncrustify
+    fi
   # R
   - brew tap homebrew/science
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
