@@ -396,6 +396,7 @@ class HybridExecutable extends Executable
       })
     return @docker
 
+  installedWithDocker: false
   init: () ->
     super()
       .catch((error) =>
@@ -403,6 +404,7 @@ class HybridExecutable extends Executable
         @docker.init()
           .then(=> @runImage(@versionArgs, @versionRunOptions))
           .then((text) => @saveVersion(text))
+          .then(() => @installedWithDocker = true)
           .then(=> @)
           .catch((dockerError) =>
             @debug(dockerError)
@@ -411,7 +413,7 @@ class HybridExecutable extends Executable
       )
 
   run: (args, options = {}) ->
-    if @docker and @docker.isInstalled
+    if @installedWithDocker and @docker and @docker.isInstalled
       return @runImage(args, options)
     super(args, options)
 
