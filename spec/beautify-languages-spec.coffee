@@ -15,7 +15,9 @@ isWindows = process.platform is 'win32' or
   process.env.OSTYPE is 'cygwin' or
   process.env.OSTYPE is 'msys'
 
-unspportedLangs = {
+unsupportedLangs = {
+  all: [
+  ]
   windows: [
     "ocaml"
     "r"
@@ -111,10 +113,12 @@ describe "BeautifyLanguages", ->
           langNames = fs.readdirSync(langsDir)
           for lang in langNames
 
-            # FIXME: Skip testing ocaml in Windows
-            if isWindows and unspportedLangs.windows.indexOf(lang) isnt -1
+            shouldSkipLang = false
+            if unsupportedLangs.all.indexOf(lang) isnt -1
+              shouldSkipLang = true
+            if isWindows and unsupportedLangs.windows.indexOf(lang) isnt -1
               console.warn("Tests for Windows do not support #{lang}")
-              continue
+              shouldSkipLang = true
 
             do (lang) ->
               # Generate the path to where al of the tests are
@@ -136,7 +140,7 @@ describe "BeautifyLanguages", ->
                   fs.mkdirSync(expectedDir)
 
                 # Language group tests
-                describe "when beautifying language '#{lang}'", ->
+                describe "#{if shouldSkipLang then '#' else ''}when beautifying language '#{lang}'", ->
 
                   # All tests for language
                   testNames = fs.readdirSync(originalDir)
@@ -145,11 +149,12 @@ describe "BeautifyLanguages", ->
                       ext = path.extname(testFileName)
                       testName = path.basename(testFileName, ext)
                       # If prefixed with underscore (_) then this is a hidden test
+                      shouldSkip = false
                       if testFileName[0] is '_'
                         # Do not show this test
-                        return
+                        shouldSkip = true
                       # Confirm this is a test
-                      it "#{testName} #{testFileName}", ->
+                      it "#{if shouldSkip then '# ' else ''}#{testName} #{testFileName}", ->
 
                         # Generate paths to test files
                         originalTestPath = path.resolve(originalDir, testFileName)
