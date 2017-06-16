@@ -9306,8 +9306,8 @@
           }
         }
       },
-      "Rscript": {
-        "key": "Rscript",
+      "rscript": {
+        "key": "rscript",
         "title": "Rscript",
         "type": "object",
         "collapsed": true,
@@ -9318,7 +9318,7 @@
             "title": "Binary/Script Path",
             "type": "string",
             "default": "",
-            "description": "Absolute path to the \"Rscript\" executable's binary/script."
+            "description": "Absolute path to the \"rscript\" executable's binary/script."
           }
         }
       },
