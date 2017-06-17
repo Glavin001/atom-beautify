@@ -1,5 +1,6 @@
 PHPCSFixer = require "../src/beautifiers/php-cs-fixer"
 Beautifier = require "../src/beautifiers/beautifier"
+Executable = require "../src/beautifiers/executable"
 path = require 'path'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -23,17 +24,22 @@ describe "PHP-CS-Fixer Beautifier", ->
       pack = atom.packages.getLoadedPackage("atom-beautify")
       pack.activateNow()
       # Change logger level
-      # atom.config.set('atom-beautify._loggerLevel', 'verbose')
+      atom.config.set('atom-beautify.general.loggerLevel', 'info')
       # Return promise
       return activationPromise
 
   describe "Beautifier::beautify", ->
 
     beautifier = null
+    execSpawn = null
 
     beforeEach ->
       beautifier = new PHPCSFixer()
       # console.log('new beautifier')
+      execSpawn = Executable.prototype.spawn
+
+    afterEach ->
+      Executable.prototype.spawn = execSpawn
 
     OSSpecificSpecs = ->
       text = "<?php echo \"test\"; ?>"
@@ -49,13 +55,14 @@ describe "PHP-CS-Fixer Beautifier", ->
             levels: ""
           }
           # Mock spawn
-          beautifier.spawn = (exe, args, options) ->
+          # beautifier.spawn
+          Executable.prototype.spawn = (exe, args, options) ->
             # console.log('spawn', exe, args, options)
             er = new Error('ENOENT')
             er.code = 'ENOENT'
             return beautifier.Promise.reject(er)
           # Beautify
-          p = beautifier.beautify(text, language, options)
+          p = beautifier.loadExecutables().then(() -> beautifier.beautify(text, language, options))
           expect(p).not.toBe(null)
           expect(p instanceof beautifier.Promise).toBe(true)
           cb = (v) ->
@@ -74,7 +81,7 @@ describe "PHP-CS-Fixer Beautifier", ->
           expect(beautifier).not.toBe(null)
           expect(beautifier instanceof Beautifier).toBe(true)
 
-          if not beautifier.isWindows and failingProgram is "php"
+          if not Executable.isWindows and failingProgram is "php"
             # Only applicable on Windows
             return
 
@@ -104,8 +111,9 @@ describe "PHP-CS-Fixer Beautifier", ->
                 # console.log('fake exe path', exe)
                 beautifier.Promise.resolve("/#{exe}")
 
-            oldSpawn = beautifier.spawn.bind(beautifier)
-            beautifier.spawn = (exe, args, options) ->
+            # oldSpawn = beautifier.spawn.bind(beautifier)
+            # beautifier.spawn
+            Executable.prototype.spawn = (exe, args, options) ->
               # console.log('spawn', exe, args, options)
               if exe is failingProgram
                 er = new Error('ENOENT')
@@ -117,21 +125,21 @@ describe "PHP-CS-Fixer Beautifier", ->
                   stdout: 'stdout',
                   stderr: ''
                   })
-            p = beautifier.beautify(text, language, options)
+            p = beautifier.loadExecutables().then(() -> beautifier.beautify(text, language, options))
             expect(p).not.toBe(null)
             expect(p instanceof beautifier.Promise).toBe(true)
             p.then(cb, cb)
             return p
 
-      # failWhichProgram('php')
-      failWhichProgram('php-cs-fixer')
+      failWhichProgram('PHP')
+      # failWhichProgram('php-cs-fixer')
 
     unless isWindows
       describe "Mac/Linux", ->
 
         beforeEach ->
           # console.log('mac/linx')
-          beautifier.isWindows = false
+          Executable.isWindows = () -> false
 
         do OSSpecificSpecs
 
@@ -139,6 +147,6 @@ describe "PHP-CS-Fixer Beautifier", ->
 
       beforeEach ->
         # console.log('windows')
-        beautifier.isWindows = true
+        Executable.isWindows = () -> true
 
       do OSSpecificSpecs

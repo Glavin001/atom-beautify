@@ -63,6 +63,10 @@ Thank you.
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
 
+### Want automated installation?
+
+See [Issue #1678](https://github.com/Glavin001/atom-beautify/issues/1687) for a solution utilizing [Docker](https://www.docker.com/) to achieve automated installation of beautifiers which are not already preinstalled.
+
 ## Beautifiers
 
 Some of the supported beautifiers are developed for Node.js and are automatically installed when Atom-Beautify is installed. However, other beautifiers are command-line interface (CLI) applications and require you to manually install them.

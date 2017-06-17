@@ -11,7 +11,27 @@ _ = require('lodash')
 module.exports = class Uncrustify extends Beautifier
   name: "Uncrustify"
   link: "https://github.com/uncrustify/uncrustify"
-  isPreInstalled: false
+  executables: [
+    {
+      name: "Uncrustify"
+      cmd: "uncrustify"
+      homepage: "http://uncrustify.sourceforge.net/"
+      installation: "https://github.com/uncrustify/uncrustify"
+      version: {
+        parse: (text) ->
+          try
+            v = text.match(/uncrustify (\d+\.\d+)/)[1]
+          catch error
+            @error(error)
+            v = text.match(/Uncrustify-(\d+\.\d+)/)[1] if not v?
+          if v
+            return v + ".0"
+      }
+      docker: {
+        image: "unibeautify/uncrustify"
+      }
+    }
+  ]
 
   options: {
     Apex: true
@@ -26,7 +46,10 @@ module.exports = class Uncrustify extends Beautifier
     Arduino: true
   }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, context) ->
+    fileExtension = context.fileExtension
+
+    uncrustify = @exe("uncrustify")
     # console.log('uncrustify.beautify', language, options)
     return new @Promise((resolve, reject) ->
       configPath = options.configPath
@@ -50,8 +73,6 @@ module.exports = class Uncrustify extends Beautifier
           reject(new Error("No Uncrustify Config Path set! Please configure Uncrustify with Atom Beautify."))
     )
     .then((configPath) =>
-
-
       # Select Uncrustify language
       lang = "C" # Default is C
       switch language
@@ -76,18 +97,16 @@ module.exports = class Uncrustify extends Beautifier
         when "Arduino"
           lang = "CPP"
 
-      @run("uncrustify", [
+      uncrustify.run([
         "-c"
         configPath
         "-f"
-        @tempFile("input", text)
+        @tempFile("input", text, fileExtension and ".#{fileExtension}")
         "-o"
-        outputFile = @tempFile("output", text)
+        outputFile = @tempFile("output", text, fileExtension and ".#{fileExtension}")
         "-l"
         lang
-        ], help: {
-          link: "http://sourceforge.net/projects/uncrustify/"
-        })
+        ])
         .then(=>
           @readFile(outputFile)
         )

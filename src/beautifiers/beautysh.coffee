@@ -4,7 +4,22 @@ Beautifier = require('./beautifier')
 module.exports = class BashBeautify extends Beautifier
   name: "beautysh"
   link: "https://github.com/bemeurer/beautysh"
-  isPreInstalled: false
+  executables: [
+    {
+      name: "beautysh"
+      cmd: "beautysh"
+      homepage: "https://github.com/bemeurer/beautysh"
+      installation: "https://github.com/bemeurer/beautysh#installation"
+      version: {
+        # Does not display version
+        args: ['--help'],
+        parse: (text) -> text.indexOf("usage: beautysh") isnt -1 and "0.0.0"
+      }
+      docker: {
+        image: "unibeautify/beautysh"
+      }
+    }
+  ]
 
   options: {
     Bash:
@@ -12,6 +27,7 @@ module.exports = class BashBeautify extends Beautifier
   }
 
   beautify: (text, language, options) ->
+    beautysh = @exe("beautysh")
     file = @tempFile("input", text)
-    @run('beautysh', [ '-i', options.indent_size, '-f', file ], help: { link: "https://github.com/bemeurer/beautysh" })
-    .then(=> @readFile file)
+    beautysh.run([ '-i', options.indent_size, '-f', file ])
+      .then(=> @readFile file)

@@ -23,6 +23,13 @@ go:
 
 matrix:
   include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      services:
+        - docker
+      env:
+        - ATOM_CHANNEL=stable
     # - os: linux
     #   dist: trusty
     #   sudo: require
@@ -78,7 +85,7 @@ before_install:
       git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
     fi
   # Update Homebrew
-  - brew update
+  # - brew update
   - brew tap homebrew/dupes
   - brew tap homebrew/versions
   # Ruby language support
@@ -87,7 +94,11 @@ before_install:
   - gem install htmlbeautifier
   - gem install puppet-lint
   # Sass language support
-  - gem install sass
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      gem install sass;
+    else
+      docker pull unibeautify/sass-convert;
+    fi
   # Python language support
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
   - pip install --upgrade pip
@@ -96,10 +107,19 @@ before_install:
   # SQL language support
   - pip install --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
-  - brew install uncrustify
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install uncrustify;
+    else
+      docker pull unibeautify/uncrustify;
+    fi
   # R
   - brew tap homebrew/science
-  - brew install r
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install r;
+      rscript --version;
+    else
+      docker pull unibeautify/rscript;
+    fi
   # PHP
   - brew tap homebrew/homebrew-php
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
@@ -122,11 +142,12 @@ before_install:
   # - stack install stylish-haskell
   # Elm
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-mac-x64.tgz;
+      curl -L -o /tmp/elm-format.tgz
+      https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.17-0.7.0-exp-mac-x64.tgz;
       tar xvzf /tmp/elm-format.tgz -C /usr/local/bin;
     fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-linux-x64.tgz;
+      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.17-0.7.0-exp-linux-x64.tgz;
       tar xvzf /tmp/elm-format.tgz -C $HOME/.linuxbrew/bin;
     fi
   # OCaml
