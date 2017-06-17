@@ -413,14 +413,22 @@
     "next-update": {
       "skip": [
         "gherkin",
-        "expand-home-dir"
+        "expand-home-dir",
+        "typescript",
+        "typescript-formatter",
+        "tidy-markdown",
+        "underscore-plus"
       ]
     }
   },
   "greenkeeper": {
     "ignore": [
       "gherkin",
-      "expand-home-dir"
+      "expand-home-dir",
+      "typescript",
+      "typescript-formatter",
+      "tidy-markdown",
+      "underscore-plus"
     ]
   }
 }
