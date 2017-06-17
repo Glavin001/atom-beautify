@@ -1,5 +1,5 @@
 version: "{build}"
-os: Windows Server 2012 R2
+image: Visual Studio 2017
 
 test: off
 deploy: off
@@ -45,9 +45,6 @@ install:
 
   - ECHO "Filesystem root:"
   - ps: "ls \"C:/\""
-
-  - ECHO "Installed SDKs:"
-  - ps: "ls \"C:/Program Files/Microsoft SDKs/Windows\""
 
   - cinst atom -y
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -116,17 +113,21 @@ install:
   - where php-cs-fixer
 
   # Uncrustify
-  - curl -k -L http://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.61/uncrustify-0.61.3-gf65394e-win32.zip/download -o uncrustify.zip
+  - curl -k -L https://sourceforge.net/projects/uncrustify/files/uncrustify/uncrustify-0.65/uncrustify-0.65-win32.zip/download -o uncrustify.zip
   - cinst 7zip.commandline -y
   - 7za e uncrustify.zip -ouncrustify-d
   - "SET PATH=%cd%\\uncrustify-d;%PATH%"
   - where uncrustify
 
   # elm-format
-  - curl -k -L https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-win-x64.zip -o elm-format.zip
+  - curl -k -L https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.18-0.7.0-exp-win-i386.zip -o elm-format.zip
   - 7za e elm-format.zip -oelm-format-d
   - "SET PATH=%cd%\\elm-format-d;%PATH%"
   - where elm-format
+
+  # Beautysh
+  - pip install beautysh
+  - where beautysh
 
 build_script:
 

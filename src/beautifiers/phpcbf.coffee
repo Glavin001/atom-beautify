@@ -8,6 +8,20 @@ Beautifier = require('./beautifier')
 module.exports = class PHPCBF extends Beautifier
   name: "PHPCBF"
   link: "http://php.net/manual/en/install.php"
+  executables: [
+    {
+      name: "PHPCBF"
+      cmd: "phpcbf"
+      homepage: "https://github.com/squizlabs/PHP_CodeSniffer"
+      installation: "https://github.com/squizlabs/PHP_CodeSniffer#installation"
+      version: {
+        args: ['--version']
+      }
+      docker: {
+        image: "unibeautify/phpcbf"
+      }
+    }
+  ]
   isPreInstalled: false
 
   options: {
@@ -78,7 +92,7 @@ module.exports = class PHPCBF extends Beautifier
       @run("phpcbf", [
         "--no-patch" unless options.phpcbf_version is 3
         "--standard=#{options.standard}" if options.standard
-        tempFile = @tempFile("temp", text)
+        tempFile = @tempFile("temp", text, ".php")
         ], {
           ignoreReturnCode: true
           help: {

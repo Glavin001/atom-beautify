@@ -9122,5 +9122,238 @@
         "description": "Automatically beautify YAML files on save"
       }
     }
+  },
+  "executables": {
+    "title": "Executables",
+    "type": "object",
+    "collapsed": true,
+    "order": -1,
+    "description": "Configure executables used by beautifiers.",
+    "properties": {
+      "uncrustify": {
+        "key": "uncrustify",
+        "title": "Uncrustify",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Uncrustify executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"uncrustify\" executable's binary/script."
+          }
+        }
+      },
+      "autopep8": {
+        "key": "autopep8",
+        "title": "autopep8",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for autopep8 executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"autopep8\" executable's binary/script."
+          }
+        }
+      },
+      "isort": {
+        "key": "isort",
+        "title": "isort",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for isort executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"isort\" executable's binary/script."
+          }
+        }
+      },
+      "clang-format": {
+        "key": "clang-format",
+        "title": "ClangFormat",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for ClangFormat executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"clang-format\" executable's binary/script."
+          }
+        }
+      },
+      "crystal": {
+        "key": "crystal",
+        "title": "Crystal",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Crystal executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"crystal\" executable's binary/script."
+          }
+        }
+      },
+      "dfmt": {
+        "key": "dfmt",
+        "title": "Dfmt",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Dfmt executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"dfmt\" executable's binary/script."
+          }
+        }
+      },
+      "elm-format": {
+        "key": "elm-format",
+        "title": "elm-format",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for elm-format executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"elm-format\" executable's binary/script."
+          }
+        }
+      },
+      "emacs": {
+        "key": "emacs",
+        "title": "Emacs",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Emacs executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"emacs\" executable's binary/script."
+          }
+        }
+      },
+      "php": {
+        "key": "php",
+        "title": "PHP",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for PHP executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"php\" executable's binary/script."
+          }
+        }
+      },
+      "php-cs-fixer": {
+        "key": "php-cs-fixer",
+        "title": "PHP-CS-Fixer",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for PHP-CS-Fixer executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"php-cs-fixer\" executable's binary/script."
+          }
+        }
+      },
+      "phpcbf": {
+        "key": "phpcbf",
+        "title": "PHPCBF",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for PHPCBF executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"phpcbf\" executable's binary/script."
+          }
+        }
+      },
+      "sass-convert": {
+        "key": "sass-convert",
+        "title": "SassConvert",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for SassConvert executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"sass-convert\" executable's binary/script."
+          }
+        }
+      },
+      "rscript": {
+        "key": "rscript",
+        "title": "Rscript",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Rscript executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"rscript\" executable's binary/script."
+          }
+        }
+      },
+      "beautysh": {
+        "key": "beautysh",
+        "title": "beautysh",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for beautysh executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"beautysh\" executable's binary/script."
+          }
+        }
+      }
+    }
   }
 }
