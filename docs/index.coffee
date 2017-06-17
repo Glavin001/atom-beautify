@@ -91,17 +91,25 @@ Handlebars.registerHelper('language-beautifiers-support', (languageOptions, opti
     .map((val, k) ->
       name = val.title
       defaultBeautifier = _.get(val, "properties.default_beautifier.default")
-      beautifiers = _.map(val.beautifiers, (b) ->
-        beautifier = beautifiersMap[b]
-        isDefault = b is defaultBeautifier
-        if beautifier.link
-          r = "[`#{b}`](#{beautifier.link})"
-        else
-          r = "`#{b}`"
-        if isDefault
-          r += " (Default)"
-        return r
-      )
+      beautifiers = _.chain(val.beautifiers)
+        .sortBy()
+        .sortBy((b) ->
+          beautifier = beautifiersMap[b]
+          isDefault = b is defaultBeautifier
+          return !isDefault
+        )
+        .map((b) ->
+          beautifier = beautifiersMap[b]
+          isDefault = b is defaultBeautifier
+          if beautifier.link
+            r = "[`#{b}`](#{beautifier.link})"
+          else
+            r = "`#{b}`"
+          if isDefault
+            r = "**#{r}**"
+          return r
+        )
+        .value()
       grammars = _.map(val.grammars, (b) -> "`#{b}`")
       extensions = _.map(val.extensions, (b) -> "`.#{b}`")
 
@@ -155,7 +163,7 @@ Handlebars.registerHelper('language-options-support', (languageOptions, options)
 Handlebars.registerHelper('beautifiers-info', (beautifiers, options) ->
 
   ###
-  | Beautifier | Is Pre-Installed? | Installation Instructions |
+  | Beautifier | Preinstalled? | Installation Instructions |
   | --- | ---- |
   | Pretty Diff | :white_check_mark: | N/A |
   | AutoPEP8 | :x: | LINK |
@@ -167,12 +175,60 @@ Handlebars.registerHelper('beautifiers-info', (beautifiers, options) ->
     if typeof isPreInstalled is "function"
       isPreInstalled = beautifier.isPreInstalled()
     link = beautifier.link
-    installationInstructions = if isPreInstalled then "Nothing!" else "Go to #{link} and follow the instructions."
-    return "| #{name} | #{if isPreInstalled then ':white_check_mark:' else ':x:'} | #{installationInstructions} |"
+    executables = beautifier.executables or []
+    hasExecutables = executables.length > 0
+    dockerExecutables = executables.filter((exe) -> !!exe.docker)
+    hasDockerExecutables = dockerExecutables.length > 0
+    installWithDocker = dockerExecutables.map((d) -> "- #{d.docker.image}").join('\n')
+
+    preinstalledCell = do (() ->
+      if isPreInstalled
+        ":white_check_mark:"
+      else
+        if executables.length > 0
+          ":warning: #{executables.length} executable#{if executables.length is 1 then '' else 's'}"
+        else
+          ":warning: Manual installation"
+    )
+    dockerCell = do (() ->
+      if isPreInstalled
+        ":ok_hand: Not necessary"
+      else
+        if hasExecutables
+          if dockerExecutables.length is executables.length
+            ":white_check_mark: :100:% of executables"
+          else if dockerExecutables.length > 0
+            ":warning: Only #{dockerExecutables.length} of #{executables.length} executables"
+          else
+            ":x: No Docker support"
+        else
+          ":construction: Not an executable"
+    )
+    installationInstructions = do (() ->
+      if isPreInstalled
+        ":smiley: Nothing!"
+      else
+        if hasExecutables
+          executablesInstallation = ""
+          if hasDockerExecutables
+            executablesInstallation += ":whale: With [Docker](https://www.docker.com/):<br/>"
+            dockerExecutables.forEach((e, i) ->
+              executablesInstallation += "#{i+1}. Install [#{e.name or e.cmd} (`#{e.cmd}`)](#{e.homepage}) with `docker pull #{e.docker.image}`<br/>"
+            )
+            executablesInstallation += "<br/>"
+          executablesInstallation += ":bookmark_tabs: Manually:<br/>"
+          executables.forEach((e, i) ->
+            executablesInstallation += "#{i+1}. Install [#{e.name or e.cmd} (`#{e.cmd}`)](#{e.homepage}) by following #{e.installation}<br/>"
+          )
+          return executablesInstallation
+        else
+          ":page_facing_up: Go to #{link} and follow the instructions."
+    )
+    return "| #{name} | #{preinstalledCell} | #{dockerCell} | #{installationInstructions} |"
   )
   results = """
-  | Beautifier | Is Pre-Installed? | Installation Instructions |
-  | --- | --- | --- |
+  | Beautifier | Preinstalled | [:whale: Docker](https://www.docker.com/) | Installation |
+  | --- | --- | --- |--- |
   #{rows.join('\n')}
   """
   return new Handlebars.SafeString(results)
