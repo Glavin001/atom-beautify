@@ -175,9 +175,9 @@
     "node-dir": "0.1.17",
     "node-uuid": "1.4.8",
     "open": "0.0.5",
-    "prettydiff": "99.0.1",
+    "prettydiff": "1.16.37",
     "pug-beautify": "^0.1.1",
-    "remark": "7.0.1",
+    "remark": "6.0.1",
     "season": "6.0.0",
     "semver": "^5.3.0",
     "shell-env": "^0.3.0",
@@ -185,8 +185,8 @@
     "strip-json-comments": "^2.0.1",
     "temp": "^0.8.3",
     "tidy-markdown": "2.0.3",
-    "typescript": "^1.8.10",
-    "typescript-formatter": "^2.3.0",
+    "typescript": "1.8.10",
+    "typescript-formatter": "2.3.0",
     "underscore-plus": "^1.6.6",
     "universal-analytics": "0.4.13",
     "which": "1.2.14",
@@ -417,7 +417,8 @@
         "typescript",
         "typescript-formatter",
         "tidy-markdown",
-        "underscore-plus"
+        "underscore-plus",
+        "prettydiff"
       ]
     }
   },
@@ -428,7 +429,8 @@
       "typescript",
       "typescript-formatter",
       "tidy-markdown",
-      "underscore-plus"
+      "underscore-plus",
+      "prettydiff"
     ]
   }
 }
