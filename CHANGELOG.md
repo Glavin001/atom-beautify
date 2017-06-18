@@ -1,4 +1,5 @@
 # Next
+- Fix [#1703](https://github.com/Glavin001/atom-beautify/issues/1703). Now Fortran 2003/2008 file extensions are available for Fortran beautifier.
 - ...
 
 # v0.30.0 (2017-06-17)
