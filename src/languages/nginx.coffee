@@ -38,5 +38,5 @@ module.exports = {
       title: "Don't join curly brackets"
       type: "boolean"
       default: true
-      descriotion: ""
+      description: ""
 }

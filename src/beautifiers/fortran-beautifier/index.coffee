@@ -9,7 +9,17 @@ path = require("path")
 module.exports = class FortranBeautifier extends Beautifier
   name: "Fortran Beautifier"
   link: "https://www.gnu.org/software/emacs/"
-  isPreInstalled: false
+  executables: [
+    {
+      name: "Emacs"
+      cmd: "emacs"
+      homepage: "https://www.gnu.org/software/emacs/"
+      installation: "https://www.gnu.org/software/emacs/"
+      version: {
+        parse: (text) -> text.match(/Emacs (\d+\.\d+\.\d+)/)[1]
+      }
+    }
+  ]
 
   options: {
     Fortran: true
@@ -17,6 +27,7 @@ module.exports = class FortranBeautifier extends Beautifier
 
   beautify: (text, language, options) ->
     @debug('fortran-beautifier', options)
+    emacs = @exe("emacs")
 
     emacs_path = options.emacs_path
     emacs_script_path = options.emacs_script_path
@@ -36,12 +47,13 @@ module.exports = class FortranBeautifier extends Beautifier
       ]
 
     if emacs_path
+      @deprecate("The \"emacs_path\" has been deprecated. Please switch to using the config with path \"Executables - Emacs - Path\" in Atom-Beautify package settings now.")
       @run(emacs_path, args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)
         )
     else
-      @run("emacs", args, {ignoreReturnCode: false})
+      emacs.run(args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)
         )

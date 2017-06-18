@@ -1,4 +1,5 @@
 Beautifiers = require "../src/beautifiers"
+Executable = require "../src/beautifiers/executable"
 beautifiers = new Beautifiers()
 Beautifier = require "../src/beautifiers/beautifier"
 Languages = require('../src/languages/')
@@ -30,7 +31,7 @@ describe "Atom-Beautify", ->
       pack = atom.packages.getLoadedPackage("atom-beautify")
       pack.activateNow()
       # Change logger level
-      # atom.config.set('atom-beautify._loggerLevel', 'verbose')
+      atom.config.set('atom-beautify.general.loggerLevel', 'info')
       # Return promise
       return activationPromise
 
@@ -124,7 +125,7 @@ describe "Atom-Beautify", ->
             pathOption: "Lang - Test Program Path"
           }
           # Force to be Windows
-          beautifier.isWindows = true
+          Executable.isWindows = () ->true
           terminal = 'CMD prompt'
           whichCmd = "where.exe"
           # Process
@@ -132,7 +133,7 @@ describe "Atom-Beautify", ->
           expect(p).not.toBe(null)
           expect(p instanceof beautifier.Promise).toBe(true)
           cb = (v) ->
-            # console.log(v)
+            console.log("error", v, v.description)
             expect(v).not.toBe(null)
             expect(v instanceof Error).toBe(true)
             expect(v.code).toBe("CommandNotFound")
@@ -167,7 +168,7 @@ describe "Atom-Beautify", ->
               pathOption: "Lang - Test Program Path"
             }
             # Force to be Mac/Linux (not Windows)
-            beautifier.isWindows = false
+            Executable.isWindows = () ->false
             terminal = "Terminal"
             whichCmd = "which"
             # Process

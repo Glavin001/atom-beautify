@@ -3,7 +3,7 @@ module.exports = {
     title: 'General'
     type: 'object'
     collapsed: true
-    order: -1
+    order: -2
     description: 'General options for Atom Beautify'
     properties:
       _analyticsUserId :

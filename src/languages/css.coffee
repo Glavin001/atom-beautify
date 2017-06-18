@@ -78,13 +78,13 @@ module.exports = {
     no_lead_zero:
       type: 'boolean'
       default: false
-      description: "If in CSS values leading 0s immediately preceeding \
+      description: "If in CSS values leading 0s immediately preceding \
                 a decimal should be removed or prevented."
     configPath:
       title: "comb custom config file"
       type: 'string'
       default: ""
-      description: "Path to custom CSScomb config file, used in absense of a \
+      description: "Path to custom CSScomb config file, used in absence of a \
                 `.csscomb.json` or `.csscomb.cson` at the root of your project."
     predefinedConfig:
       title: "comb predefined config"

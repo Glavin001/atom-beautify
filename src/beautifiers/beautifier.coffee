@@ -4,8 +4,9 @@ fs = require('fs')
 temp = require('temp').track()
 readFile = Promise.promisify(fs.readFile)
 which = require('which')
-spawn = require('child_process').spawn
 path = require('path')
+shellEnv = require('shell-env')
+Executable = require('./executable')
 
 module.exports = class Beautifier
 
@@ -31,10 +32,49 @@ module.exports = class Beautifier
   ###
   options: {}
 
+  executables: []
+
   ###
   Is the beautifier a command-line interface beautifier?
   ###
-  isPreInstalled: true
+  isPreInstalled: () ->
+    @executables.length is 0
+
+  _exe: {}
+  loadExecutables: () ->
+    @debug("Load executables")
+    if Object.keys(@_exe).length is @executables.length
+      Promise.resolve(@_exe)
+    else
+      Promise.resolve(executables = @executables.map((e) -> new Executable(e)))
+        .then((executables) -> Promise.all(executables.map((exe) -> exe.init())))
+        .then((es) =>
+          @debug("Executables loaded", es)
+          exe = {}
+          missingInstalls = []
+          es.forEach((e) ->
+            exe[e.cmd] = e
+            if not e.isInstalled and e.required
+              missingInstalls.push(e)
+          )
+          @_exe = exe
+          @debug("exe", exe)
+          if missingInstalls.length is 0
+            return @_exe
+          else
+            @debug("Missing required executables: #{missingInstalls.map((e) -> e.cmd).join(' and ')}.")
+            throw Executable.commandNotFoundError(missingInstalls[0].cmd)
+        )
+        .catch((error) =>
+          @debug("Error loading executables", error)
+          Promise.reject(error)
+        )
+  exe: (cmd) ->
+    console.log('exe', cmd, @_exe)
+    e = @_exe[cmd]
+    if !e?
+      throw Executable.commandNotFoundError(cmd)
+    e
 
   ###
   Supported languages by this Beautifier
@@ -102,7 +142,7 @@ module.exports = class Beautifier
       startDir.pop()
     return null
 
-# Retrieves the default line ending based upon the Atom configuration
+  # Retrieves the default line ending based upon the Atom configuration
   #  `line-ending-selector.defaultLineEnding`. If the Atom configuration
   #  indicates "OS Default", the `process.platform` is queried, returning
   #  CRLF for Windows systems and LF for all other systems.
@@ -125,64 +165,6 @@ module.exports = class Beautifier
         return lf
 
   ###
-  If platform is Windows
-  ###
-  isWindows: do ->
-    return new RegExp('^win').test(process.platform)
-
-  ###
-  Get Shell Environment variables
-
-  Special thank you to @ioquatix
-  See https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63
-  ###
-  _envCache: null
-  _envCacheDate: null
-  _envCacheExpiry: 10000 # 10 seconds
-  getShellEnvironment: ->
-    return new Promise((resolve, reject) =>
-      # Check Cache
-      if @_envCache? and @_envCacheDate?
-        # Check if Cache is old
-        if (new Date() - @_envCacheDate) < @_envCacheExpiry
-          # Still fresh
-          return resolve(@_envCache)
-
-      # Check if Windows
-      if @isWindows
-        # Windows
-        # Use default
-        resolve(process.env)
-      else
-        # Mac & Linux
-        # I tried using ChildProcess.execFile but there is no way to set detached and
-        # this causes the child shell to lock up.
-        # This command runs an interactive login shell and
-        # executes the export command to get a list of environment variables.
-        # We then use these to run the script:
-        child = spawn process.env.SHELL, ['-ilc', 'env'],
-          # This is essential for interactive shells, otherwise it never finishes:
-          detached: true,
-          # We don't care about stdin, stderr can go out the usual way:
-          stdio: ['ignore', 'pipe', process.stderr]
-        # We buffer stdout:
-        buffer = ''
-        child.stdout.on 'data', (data) -> buffer += data
-        # When the process finishes, extract the environment variables and pass them to the callback:
-        child.on 'close', (code, signal) =>
-          if code isnt 0
-            return reject(new Error("Could not get Shell Environment. Exit code: "+code+", Signal: "+signal))
-          environment = {}
-          for definition in buffer.split('\n')
-            [key, value] = definition.split('=', 2)
-            environment[key] = value if key != ''
-          # Cache Environment
-          @_envCache = environment
-          @_envCacheDate = new Date()
-          resolve(environment)
-      )
-
-  ###
   Like the unix which utility.
 
   Finds the first instance of a specified executable in the PATH environment variable.
@@ -191,182 +173,21 @@ module.exports = class Beautifier
   See https://github.com/isaacs/node-which
   ###
   which: (exe, options = {}) ->
-    # Get PATH and other environment variables
-    @getShellEnvironment()
-    .then((env) =>
-      new Promise((resolve, reject) =>
-        options.path ?= env.PATH
-        if @isWindows
-          # Environment variables are case-insensitive in windows
-          # Check env for a case-insensitive 'path' variable
-          if !options.path
-            for i of env
-              if i.toLowerCase() is "path"
-                options.path = env[i]
-                break
-
-          # Trick node-which into including files
-          # with no extension as executables.
-          # Put empty extension last to allow for other real extensions first
-          options.pathExt ?= "#{process.env.PATHEXT ? '.EXE'};"
-        which(exe, options, (err, path) ->
-          resolve(exe) if err
-          resolve(path)
-        )
-      )
-    )
-
-  ###
-  Add help to error.description
-
-  Note: error.description is not officially used in JavaScript,
-  however it is used internally for Atom Beautify when displaying errors.
-  ###
-  commandNotFoundError: (exe, help) ->
-    # Create new improved error
-    # notify user that it may not be
-    # installed or in path
-    message = "Could not find '#{exe}'. \
-            The program may not be installed."
-    er = new Error(message)
-    er.code = 'CommandNotFound'
-    er.errno = er.code
-    er.syscall = 'beautifier::run'
-    er.file = exe
-    if help?
-      if typeof help is "object"
-        # Basic notice
-        helpStr = "See #{help.link} for program \
-                            installation instructions.\n"
-        # Help to configure Atom Beautify for program's path
-        helpStr += "You can configure Atom Beautify \
-                    with the absolute path \
-                    to '#{help.program or exe}' by setting \
-                    '#{help.pathOption}' in \
-                    the Atom Beautify package settings.\n" if help.pathOption
-        # Optional, additional help
-        helpStr += help.additional if help.additional
-        # Common Help
-        issueSearchLink =
-          "https://github.com/Glavin001/atom-beautify/\
-                  search?q=#{exe}&type=Issues"
-        docsLink = "https://github.com/Glavin001/\
-                  atom-beautify/tree/master/docs"
-        helpStr += "Your program is properly installed if running \
-                            '#{if @isWindows then 'where.exe' \
-                            else 'which'} #{exe}' \
-                            in your #{if @isWindows then 'CMD prompt' \
-                            else 'Terminal'} \
-                            returns an absolute path to the executable. \
-                            If this does not work then you have not \
-                            installed the program correctly and so \
-                            Atom Beautify will not find the program. \
-                            Atom Beautify requires that the program be \
-                            found in your PATH environment variable. \n\
-                            Note that this is not an Atom Beautify issue \
-                            if beautification does not work and the above \
-                            command also does not work: this is expected \
-                            behaviour, since you have not properly installed \
-                            your program. Please properly setup the program \
-                            and search through existing Atom Beautify issues \
-                            before creating a new issue. \
-                            See #{issueSearchLink} for related Issues and \
-                            #{docsLink} for documentation. \
-                            If you are still unable to resolve this issue on \
-                            your own then please create a new issue and \
-                            ask for help.\n"
-        er.description = helpStr
-      else #if typeof help is "string"
-        er.description = help
-    return er
+    # @deprecate("Beautifier.which function has been deprecated. Please use Executables.")
+    Executable.which(exe, options)
 
   ###
   Run command-line interface command
   ###
   run: (executable, args, {cwd, ignoreReturnCode, help, onStdin} = {}) ->
-    # Flatten args first
-    args = _.flatten(args)
-
-    # Resolve executable and all args
-    Promise.all([executable, Promise.all(args)])
-      .then(([exeName, args]) =>
-        @debug('exeName, args:', exeName, args)
-
-        # Get PATH and other environment variables
-        Promise.all([exeName, args, @getShellEnvironment(), @which(exeName)])
-      )
-      .then(([exeName, args, env, exePath]) =>
-        @debug('exePath, env:', exePath, env)
-        @debug('args', args)
-
-        exe = exePath ? exeName
-        options = {
-          cwd: cwd
-          env: env
-        }
-
-        @spawn(exe, args, options, onStdin)
-          .then(({returnCode, stdout, stderr}) =>
-            @verbose('spawn result', returnCode, stdout, stderr)
-
-            # If return code is not 0 then error occured
-            if not ignoreReturnCode and returnCode isnt 0
-              # operable program or batch file
-              windowsProgramNotFoundMsg = "is not recognized as an internal or external command"
-
-              @verbose(stderr, windowsProgramNotFoundMsg)
-
-              if @isWindows and returnCode is 1 and stderr.indexOf(windowsProgramNotFoundMsg) isnt -1
-                throw @commandNotFoundError(exeName, help)
-              else
-                throw new Error(stderr)
-            else
-              stdout
-          )
-          .catch((err) =>
-            @debug('error', err)
-
-            # Check if error is ENOENT (command could not be found)
-            if err.code is 'ENOENT' or err.errno is 'ENOENT'
-              throw @commandNotFoundError(exeName, help)
-            else
-              # continue as normal error
-              throw err
-          )
-      )
-
-  ###
-  Spawn
-  ###
-  spawn: (exe, args, options, onStdin) ->
-    # Remove undefined/null values
-    args = _.without(args, undefined)
-    args = _.without(args, null)
-
-    return new Promise((resolve, reject) =>
-      @debug('spawn', exe, args)
-
-      cmd = spawn(exe, args, options)
-      stdout = ""
-      stderr = ""
-
-      cmd.stdout.on('data', (data) ->
-        stdout += data
-      )
-      cmd.stderr.on('data', (data) ->
-        stderr += data
-      )
-      cmd.on('close', (returnCode) =>
-        @debug('spawn done', returnCode, stderr, stdout)
-        resolve({returnCode, stdout, stderr})
-      )
-      cmd.on('error', (err) =>
-        @debug('error', err)
-        reject(err)
-      )
-
-      onStdin cmd.stdin if onStdin
-    )
+    # @deprecate("Beautifier.run function has been deprecated. Please use Executables.")
+    exe = new Executable({
+      name: @name
+      homepage: @link
+      installation: @link
+      cmd: executable
+    })
+    exe.run(args, {cwd, ignoreReturnCode, help, onStdin})
 
   ###
   Logger instance

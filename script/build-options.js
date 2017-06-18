@@ -172,6 +172,53 @@ buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
   return flatOptions;
 };
 
+buildOptionsForExecutables = function(beautifiers) {
+  executables = _.chain(beautifiers)
+    .map((beautifier) => {
+      const executables = beautifier.executables || [];
+      executables.forEach((executable) => executable.beautifiers = [beautifier.name]);
+      return executables;
+    })
+    .flatten()
+    .value();
+
+  const properties = {}
+  _.forEach(executables, (executable) => {
+    const { name, cmd, beautifiers } = executable;
+    const key = cmd;
+    const option = {
+      key: key,
+      title: name,
+      type: "object",
+      collapsed: true,
+      description: `Options for ${name} executable.`,
+      // beautifiers,
+      properties: {
+        path: {
+          key: "path",
+          title: "Binary/Script Path",
+          type: "string",
+          default: "",
+          description: `Absolute path to the "${cmd}" executable's binary/script.`,
+        }
+      }
+    }
+    properties[key] = option;
+  });
+
+  const options = {
+    executables: {
+      title: 'Executables',
+      type: 'object',
+      collapsed: true,
+      order: -1,
+      description: 'Configure executables used by beautifiers.',
+      properties
+    }
+  }
+  return options
+};
+
 buildOptionsForBeautifiers = function(beautifiers, allLanguages) {
   var beautifier, beautifierName, defaultBeautifier, f, fallback, field, fields, fn, g, group, i, j, k, l, laOp, lang, langName, langOptions, languageName, languages, len, len1, len2, len3, len4, len5, m, n, name, name1, namespace, namespaceDest, namespaceSrc, o, op, optionDef, optionName, options, optionsDest, optionsSrc, p, q, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, unsupportedOptions;
   langOptions = {};
@@ -374,10 +421,11 @@ beautifier = new Beautifiers();
 console.log('Building options for beautifiers');
 
 beautifierOptions = buildOptionsForBeautifiers(beautifier.beautifiers, beautifier.languages.languages);
+executableOptions = buildOptionsForExecutables(beautifier.beautifiers)
 
 console.log('Done building options for beautifiers');
-
-optionsStr = JSON.stringify(beautifierOptions, null, 2);
+combinedOptions = Object.assign({}, beautifierOptions, executableOptions)
+optionsStr = JSON.stringify(combinedOptions, null, 2);
 
 outputFilename = path.resolve(__dirname, '../src/options.json');
 
