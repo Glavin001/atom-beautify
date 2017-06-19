@@ -18,7 +18,7 @@ module.exports = class Autopep8 extends Beautifier
       version: {
         parse: (text) -> text.match(/autopep8 (\d+\.\d+\.\d+)/)[1]
         runOptions: {
-          returnStderr: true
+          returnStdoutOrStderr: true
         }
       }
       docker: {
@@ -41,7 +41,7 @@ module.exports = class Autopep8 extends Beautifier
     Python: true
   }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, context = {}) ->
     @exe("autopep8").run([
         tempFile = @tempFile("input", text)
         "-i"
@@ -51,17 +51,8 @@ module.exports = class Autopep8 extends Beautifier
       ])
       .then(=>
         if options.sort_imports
-          editor = atom.workspace.getActiveTextEditor()
-          filePath = editor.getPath()
-          projectPath = atom.project.relativizePath(filePath)[0]
-
-          @exe("isort")
-            .run(
-              ["-sp", projectPath, tempFile],
-            )
-            .then(=>
-              @readFile(tempFile)
-            )
-        else
-          @readFile(tempFile)
+          filePath = context.filePath
+          projectPath = atom?.project.relativizePath(filePath)[0]
+          @exe("isort").run(["-sp", projectPath, tempFile])
       )
+      .then(=> @readFile(tempFile))

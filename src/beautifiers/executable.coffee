@@ -129,7 +129,7 @@ class Executable
   ###
   run: (args, options = {}) ->
     @debug("Run: ", @cmd, args, options)
-    { cwd, ignoreReturnCode, help, onStdin, returnStderr } = options
+    { cwd, ignoreReturnCode, help, onStdin, returnStderr, returnStdoutOrStderr } = options
     exeName = @cmd
     config = @getConfig()
     cwd ?= os.tmpDir()
@@ -179,7 +179,9 @@ class Executable
               else
                 throw new Error(stderr or stdout)
             else
-              if returnStderr
+              if returnStdoutOrStderr
+                return stdout or stderr
+              else if returnStderr
                 stderr
               else
                 stdout
