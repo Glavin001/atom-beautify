@@ -119,7 +119,10 @@ class Executable
     @isVersion(@versionsSupported)
 
   isVersion: (range) ->
-    semver.satisfies(@version, range)
+    @versionSatisfies(@version, range)
+
+  versionSatisfies: (version, range) ->
+    semver.satisfies(version, range)
 
   getConfig: () ->
     atom?.config.get("#{parentConfigKey}.#{@key}") or {}
@@ -129,21 +132,16 @@ class Executable
   ###
   run: (args, options = {}) ->
     @debug("Run: ", @cmd, args, options)
-    { cwd, ignoreReturnCode, help, onStdin, returnStderr, returnStdoutOrStderr } = options
-    exeName = @cmd
-    config = @getConfig()
+    { cmd, cwd, ignoreReturnCode, help, onStdin, returnStderr, returnStdoutOrStderr } = options
+    exeName = cmd or @cmd
     cwd ?= os.tmpDir()
 
     # Resolve executable and all args
     Promise.all([@shellEnv(), this.resolveArgs(args)])
       .then(([env, args]) =>
         @debug('exeName, args:', exeName, args)
-
         # Get PATH and other environment variables
-        if config and config.path
-          exePath = config.path
-        else
-          exePath = @which(exeName)
+        exePath = @path(exeName)
         Promise.all([exeName, args, env, exePath])
       )
       .then(([exeName, args, env, exePath]) =>
@@ -197,6 +195,14 @@ class Executable
               throw err
           )
       )
+
+  path: (cmd = @cmd) ->
+    config = @getConfig()
+    if config and config.path
+      Promise.resolve(config.path)
+    else
+      exeName = cmd
+      @which(exeName)
 
   resolveArgs: (args) ->
     args = _.flatten(args)

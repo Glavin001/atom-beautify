@@ -25,8 +25,13 @@ module.exports = class PHPCSFixer extends Beautifier
       cmd: "php-cs-fixer"
       homepage: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
       installation: "https://github.com/FriendsOfPHP/PHP-CS-Fixer#installation"
+      optional: true
       version: {
-        parse: (text) -> text.match(/version (.*) by/)[1] + ".0"
+        parse: (text) ->
+          try
+            text.match(/version (.*) by/)[1] + ".0"
+          catch
+            text.match(/PHP CS Fixer (\d+\.\d+\.\d+)/)[1]
       }
       docker: {
         image: "unibeautify/php-cs-fixer"
@@ -66,7 +71,10 @@ module.exports = class PHPCSFixer extends Beautifier
       "--allow-risky=#{options.allow_risky}" if options.allow_risky
       "--using-cache=no"
     ]
-    if phpCsFixer.isVersion('1.x')
+
+    isVersion1 = ((phpCsFixer.isInstalled and phpCsFixer.isVersion('1.x')) or \
+      (options.cs_fixer_version and phpCsFixer.versionSatisfies("#{options.cs_fixer_version}.0.0", '1.x')))
+    if isVersion1
       phpCsFixerOptions = [
         "fix"
         "--level=#{options.level}" if options.level
@@ -82,43 +90,32 @@ module.exports = class PHPCSFixer extends Beautifier
 
     # Find php-cs-fixer.phar script
     if options.cs_fixer_path
-      @deprecate("The \"cs_fixer_path\" has been deprecated. Please switch to using the config with path \"Executables - PHP-CS-Fixer - Path\" in Atom-Beautify package settings now.")
+      deprecationMessage = "The \"PHP - PHP-CS-Fixer Path (cs_fixer_path)\" configuration option has been deprecated. Please switch to using the option named \"Executables - PHP-CS-Fixer - Path\" in Atom-Beautify package settings now."
+      @deprecate(deprecationMessage)
 
     @Promise.all([
       @which(options.cs_fixer_path) if options.cs_fixer_path
-      @which('php-cs-fixer')
+      phpCsFixer.path()
       tempFile = @tempFile("temp", text, '.php')
-    ]).then(([customPath, phpCsFixerPath]) =>
-      paths = [customPath, phpCsFixerPath]
-      @debug('php-cs-fixer paths', paths)
-      _ = require 'lodash'
+    ]).then(([customPhpCsFixerPath, phpCsFixerPath]) =>
       # Get first valid, absolute path
-      phpCSFixerPath = _.find(paths, (p) -> p and path.isAbsolute(p) )
-      @verbose('phpCSFixerPath', phpCSFixerPath)
-      @debug('phpCSFixerPath', phpCSFixerPath, paths)
+      finalPhpCsFixerPath = if customPhpCsFixerPath and path.isAbsolute(customPhpCsFixerPath) then \
+        customPhpCsFixerPath else phpCsFixerPath
+      @verbose('finalPhpCsFixerPath', finalPhpCsFixerPath, phpCsFixerPath, customPhpCsFixerPath)
 
-      # Check if PHP-CS-Fixer path was found
-      if phpCSFixerPath?
-        # Found PHP-CS-Fixer path
-        if @isWindows
-          php.run([phpCSFixerPath, phpCsFixerOptions, tempFile], runOptions)
-            .then(=>
-              @readFile(tempFile)
-            )
-        else
-          @run(phpCSFixerPath, [phpCsFixerOptions, tempFile], runOptions)
-            .then(=>
-              @readFile(tempFile)
-            )
+      isPhpScript = (finalPhpCsFixerPath.indexOf(".phar") isnt -1) or (finalPhpCsFixerPath.indexOf(".php") isnt -1)
+      @verbose('isPhpScript', isPhpScript)
+
+      if finalPhpCsFixerPath and isPhpScript
+        php.run([finalPhpCsFixerPath, phpCsFixerOptions, tempFile], runOptions)
+          .then(=>
+            @readFile(tempFile)
+          )
       else
-        @verbose('php-cs-fixer not found!')
-        # Could not find PHP-CS-Fixer path
-        @Promise.reject(@commandNotFoundError(
-          'php-cs-fixer'
-          {
-            link: "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
-            program: "php-cs-fixer.phar"
-            pathOption: "PHP - CS Fixer Path"
-          })
+        phpCsFixer.run([phpCsFixerOptions, tempFile],
+          Object.assign({}, runOptions, { cmd: finalPhpCsFixerPath })
         )
+          .then(=>
+            @readFile(tempFile)
+          )
     )
