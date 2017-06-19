@@ -1,10 +1,12 @@
 # Next
+- ...
+
+# v0.30.1 (2017-06-19)
 - Fix [#1703](https://github.com/Glavin001/atom-beautify/issues/1703). Now Fortran 2003/2008 file extensions are available for Fortran beautifier.
 - Fix [#1030](https://github.com/Glavin001/atom-beautify/issues/1030). Autopep8 Executable did not handle older and newer versions.
 - Fixes [#1725](https://github.com/Glavin001/atom-beautify/issues/1725). Improve PHP-CS-Fixer support with handling script path
   Detect if the executable path is either .phar (PHP) or not and
   run the executable PHP-CS-Fixer differently considering.
-- ...
 
 # v0.30.0 (2017-06-17)
 - Close [#1687](https://github.com/Glavin001/atom-beautify/issues/1687). Introducing Executables with Docker support! Executables wrap any non-preinstalled application, check if it is installed, and provide additional configuration options, including Docker support! See [#1687](https://github.com/Glavin001/atom-beautify/issues/1687) for more information.
