@@ -1,4 +1,5 @@
 # Next
+- Add goimports beautifier for Go language
 - ...
 
 # v0.30.1 (2017-06-19)
