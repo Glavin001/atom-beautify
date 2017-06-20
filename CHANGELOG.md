@@ -1,4 +1,5 @@
 # Next
+- Fixes [#1725](https://github.com/Glavin001/atom-beautify/issues/1725). Fix version parsing of PHP executable
 - Fixes [#1730](https://github.com/Glavin001/atom-beautify/issues/1730). Correctly parse PHPCBF version and improve handling of Executable
 - ...
 

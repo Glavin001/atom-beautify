@@ -15,7 +15,7 @@ module.exports = class PHPCBF extends Beautifier
       homepage: "http://php.net/"
       installation: "http://php.net/manual/en/install.php"
       version: {
-        parse: (text) -> text.match(/PHP (.*) \(cli\)/)[1]
+        parse: (text) -> text.match(/PHP (\d+\.\d+\.\d+)/)[1]
       }
     }
     {
