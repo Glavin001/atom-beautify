@@ -16,7 +16,11 @@ module.exports = class Autopep8 extends Beautifier
       homepage: "https://github.com/hhatto/autopep8"
       installation: "https://github.com/hhatto/autopep8#installation"
       version: {
-        parse: (text) -> text.match(/autopep8 (\d+\.\d+\.\d+)/)[1]
+        parse: (text) ->
+          try
+            text.match(/autopep8 (\d+\.\d+\.\d+)/)[1]
+          catch
+            text.match(/autopep8 (\d+\.\d+)/)[1] + ".0"
         runOptions: {
           returnStdoutOrStderr: true
         }
