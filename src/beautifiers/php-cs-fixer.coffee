@@ -96,8 +96,8 @@ module.exports = class PHPCSFixer extends Beautifier
     @Promise.all([
       @which(options.cs_fixer_path) if options.cs_fixer_path
       phpCsFixer.path()
-      tempFile = @tempFile("temp", text, '.php')
-    ]).then(([customPhpCsFixerPath, phpCsFixerPath]) =>
+      @tempFile("temp", text, '.php')
+    ]).then(([customPhpCsFixerPath, phpCsFixerPath, tempFile]) =>
       # Get first valid, absolute path
       finalPhpCsFixerPath = if customPhpCsFixerPath and path.isAbsolute(customPhpCsFixerPath) then \
         customPhpCsFixerPath else phpCsFixerPath
