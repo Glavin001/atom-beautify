@@ -139,7 +139,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Elm | `Elm` |`.elm` | **[`elm-format`](https://github.com/avh4/elm-format)** |
 | ERB | `HTML (Ruby - ERB)`, `HTML (Rails)` |`.erb` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`HTML Beautifier`](https://github.com/threedaymonk/htmlbeautifier) |
 | Erlang | `Erlang` |`.erl` | **[`erl_tidy`](http://erlang.org/doc/man/erl_tidy.html)** |
-| Fortran | `Fortran - Modern` |`.f90`, `.F90`, `.f95`, `.F95` | **[`Fortran Beautifier`](https://www.gnu.org/software/emacs/)** |
+| Fortran | `Fortran - Modern` |`.f90`, `.F90`, `.f95`, `.F95`, `.f03`, `.F03`, `.f08`, `.F08` | **[`Fortran Beautifier`](https://www.gnu.org/software/emacs/)** |
 | gherkin | `Gherkin` |`.feature` | **[`Gherkin formatter`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee)** |
 | GLSL | `C`, `opencl`, `GLSL` |`.vert`, `.frag` | **[`clang-format`](https://clang.llvm.org/docs/ClangFormat.html)** |
 | Go | `Go` |`.go` | **[`gofmt`](https://golang.org/cmd/gofmt/)** |
