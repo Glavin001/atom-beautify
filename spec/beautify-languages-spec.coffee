@@ -4,6 +4,10 @@ beautifier = new Beautifiers()
 fs = require "fs"
 path = require "path"
 JsDiff = require('diff')
+shellEnv = require('shell-env')
+
+# Fix https://discuss.atom.io/t/specs-do-not-load-shell-environment-variables-activationhooks-core-loaded-shell-environment/44199
+process.env = shellEnv.sync()
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
