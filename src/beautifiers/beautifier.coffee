@@ -187,6 +187,11 @@ module.exports = class Beautifier
       installation: @link
       cmd: executable
     })
+    help ?= {
+      program: executable
+      link: @link
+      pathOption: undefined
+    }
     exe.run(args, {cwd, ignoreReturnCode, help, onStdin})
 
   ###

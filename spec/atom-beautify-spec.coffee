@@ -78,8 +78,11 @@ describe "Atom-Beautify", ->
             expect(v).not.toBe(null)
             expect(v instanceof Error).toBe(true)
             expect(v.code).toBe("CommandNotFound")
-            expect(v.description).toBe(undefined, \
-              'Error should not have a description.')
+            expect(typeof v.description).toBe("string", \
+              'Error should have a description.')
+            expect(v.description
+              .indexOf("Executable - Beautifier - Path")).toBe(-1, \
+              "Error should not have pathOption.")
             return v
           p.then(cb, cb)
           return p
