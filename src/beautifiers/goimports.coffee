@@ -23,6 +23,9 @@ module.exports = class Goimports extends Beautifier
           returnStderr: true
         }
       }
+      docker: {
+        image: "unibeautify/goimports"
+      }
     }
   ]
 

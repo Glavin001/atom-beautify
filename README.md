@@ -87,7 +87,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Fortran Beautifier | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [Emacs (`emacs`)](https://www.gnu.org/software/emacs/) by following https://www.gnu.org/software/emacs/<br/> |
 | Gherkin formatter | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | gofmt | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://golang.org/cmd/gofmt/ and follow the instructions. |
-| goimports | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [goimports (`goimports`)](https://godoc.org/golang.org/x/tools/cmd/goimports) by following https://godoc.org/golang.org/x/tools/cmd/goimports<br/> |
+| goimports | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [goimports (`goimports`)](https://godoc.org/golang.org/x/tools/cmd/goimports) with `docker pull unibeautify/goimports`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [goimports (`goimports`)](https://godoc.org/golang.org/x/tools/cmd/goimports) by following https://godoc.org/golang.org/x/tools/cmd/goimports<br/> |
 | hh_format | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://hhvm.com/ and follow the instructions. |
 | HTML Beautifier | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/threedaymonk/htmlbeautifier and follow the instructions. |
 | JS Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
