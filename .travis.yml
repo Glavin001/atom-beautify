@@ -30,6 +30,13 @@ matrix:
         - docker
       env:
         - ATOM_CHANNEL=stable
+    - os: linux
+      dist: trusty
+      sudo: required
+      services:
+        - docker
+      env:
+        - ATOM_CHANNEL=beta
     # - os: linux
     #   dist: trusty
     #   sudo: require
@@ -43,9 +50,9 @@ matrix:
     - os: osx
       env:
         - ATOM_CHANNEL=stable
-    - os: osx
-      env:
-        - ATOM_CHANNEL=beta
+    # - os: osx
+    #   env:
+    #     - ATOM_CHANNEL=beta
 
 env:
   global:
