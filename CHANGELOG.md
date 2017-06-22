@@ -21,6 +21,8 @@
 # v0.30.0 (2017-06-17)
 - Close [#1687](https://github.com/Glavin001/atom-beautify/issues/1687). Introducing Executables with Docker support! Executables wrap any non-preinstalled application, check if it is installed, and provide additional configuration options, including Docker support! See [#1687](https://github.com/Glavin001/atom-beautify/issues/1687) for more information.
 - Fix [#1652](https://github.com/Glavin001/atom-beautify/issues/1652) and [#1653](https://github.com/Glavin001/atom-beautify/issues/1653). Add `.rb` to temp files passed in to the `rubocop` executable so they are not excluded.
+- Fixes [#1361](https://github.com/Glavin001/atom-beautify/issues/1361). Add file extension to temporary files for Uncrustify beautifier
+- Fixed #1613 and #1588. Add EOL, scientific notation, and adjust whitespace support for Lua Beautifier
 
 # v0.29.26 (2017-05-28)
 - Fix #116. Switch from setText to setTextViaDiff, preserve folds
