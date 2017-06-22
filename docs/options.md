@@ -249,6 +249,23 @@ Options for Emacs executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Emacs*" and change it to your desired configuration.
 
+#####  [goimports](#goimports) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for goimports executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*goimports*" and change it to your desired configuration.
+
 #####  [isort](#isort) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -3920,13 +3937,13 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 
 ####  [Go](#go) 
 
-**Supported Beautifiers**:  [`gofmt`](#gofmt) 
+**Supported Beautifiers**:  [`gofmt`](#gofmt)  [`goimports`](#goimports) 
 
-| Option | gofmt |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
+| Option | gofmt | goimports |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -3957,7 +3974,7 @@ Disable Go Beautification
 
 **Type**: `string`
 
-**Enum**:  `gofmt` 
+**Enum**:  `gofmt`  `goimports` 
 
 **Description**:
 

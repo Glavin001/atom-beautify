@@ -1,4 +1,5 @@
 # Next
+- Add goimports beautifier for Go language
 - ...
 - Fixes [#1728](https://github.com/Glavin001/atom-beautify/issues/1728). Remove Shell-Env from Executable, use Atom's process.env instead. See [#1735](https://github.com/Glavin001/atom-beautify/pull/1735).
 
