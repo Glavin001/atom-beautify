@@ -2085,7 +2085,8 @@
     "description": "Options for language Go",
     "collapsed": true,
     "beautifiers": [
-      "gofmt"
+      "gofmt",
+      "goimports"
     ],
     "grammars": [
       "Go"
@@ -2108,7 +2109,8 @@
         "default": "gofmt",
         "description": "Default Beautifier to be used for Go",
         "enum": [
-          "gofmt"
+          "gofmt",
+          "goimports"
         ]
       },
       "beautify_on_save": {
@@ -9241,6 +9243,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"elm-format\" executable's binary/script."
+          }
+        }
+      },
+      "goimports": {
+        "key": "goimports",
+        "title": "goimports",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for goimports executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"goimports\" executable's binary/script."
           }
         }
       },
