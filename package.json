@@ -267,7 +267,8 @@
       "atom-beautify:beautify-language-visualforce",
       "atom-beautify:beautify-language-xml",
       "atom-beautify:beautify-language-xtemplate",
-      "atom-beautify:beautify-language-yaml"
+      "atom-beautify:beautify-language-yaml",
+      "atom-beautify:beautify-language-elixir"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -400,6 +401,8 @@
     "nginx beautify",
     "golang template",
     "align-yaml",
+    "elixir",
+    "exfmt",
     "goimports"
   ],
   "devDependencies": {

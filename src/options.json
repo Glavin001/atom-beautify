@@ -1765,6 +1765,48 @@
       }
     }
   },
+  "ex": {
+    "title": "Elixir",
+    "type": "object",
+    "description": "Options for language Elixir",
+    "collapsed": true,
+    "beautifiers": [
+      "exfmt"
+    ],
+    "grammars": [
+      "Elixir"
+    ],
+    "extensions": [
+      "ex",
+      "exs"
+    ],
+    "properties": {
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Elixir Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "exfmt",
+        "description": "Default Beautifier to be used for Elixir",
+        "enum": [
+          "exfmt"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Elixir files on save"
+      }
+    }
+  },
   "elm": {
     "title": "Elm",
     "type": "object",

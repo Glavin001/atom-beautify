@@ -26,6 +26,7 @@ module.exports = class Languages
     "csv"
     "d"
     "ejs"
+    "elixir"
     "elm"
     "erb"
     "erlang"

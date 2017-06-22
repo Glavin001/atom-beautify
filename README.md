@@ -83,6 +83,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | elm-format | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [elm-format (`elm-format`)](https://github.com/avh4/elm-format) with `docker pull unibeautify/elm-format`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [elm-format (`elm-format`)](https://github.com/avh4/elm-format) by following https://github.com/avh4/elm-format#installation-<br/> |
 | erl_tidy | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://erlang.org/doc/man/erl_tidy.html and follow the instructions. |
 | ESLint Fixer | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
+| exfmt | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/lpil/exfmt and follow the instructions. |
 | formatR | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [Rscript (`rscript`)](https://github.com/yihui/formatR) with `docker pull unibeautify/rscript`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [Rscript (`rscript`)](https://github.com/yihui/formatR) by following https://github.com/yihui/formatR<br/> |
 | Fortran Beautifier | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [Emacs (`emacs`)](https://www.gnu.org/software/emacs/) by following https://www.gnu.org/software/emacs/<br/> |
 | Gherkin formatter | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
@@ -140,6 +141,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Elm | `Elm` |`.elm` | **[`elm-format`](https://github.com/avh4/elm-format)** |
 | ERB | `HTML (Ruby - ERB)`, `HTML (Rails)` |`.erb` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`HTML Beautifier`](https://github.com/threedaymonk/htmlbeautifier) |
 | Erlang | `Erlang` |`.erl` | **[`erl_tidy`](http://erlang.org/doc/man/erl_tidy.html)** |
+| Elixir | `Elixir` |`.ex`, `.exs` | **[`exfmt`](https://github.com/lpil/exfmt)** |
 | Fortran | `Fortran - Modern` |`.f90`, `.F90`, `.f95`, `.F95`, `.f03`, `.F03`, `.f08`, `.F08` | **[`Fortran Beautifier`](https://www.gnu.org/software/emacs/)** |
 | gherkin | `Gherkin` |`.feature` | **[`Gherkin formatter`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee)** |
 | GLSL | `C`, `opencl`, `GLSL` |`.vert`, `.frag` | **[`clang-format`](https://clang.llvm.org/docs/ClangFormat.html)** |
