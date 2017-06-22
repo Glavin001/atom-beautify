@@ -26,7 +26,6 @@ matrix:
     - os: linux
       dist: trusty
       sudo: required
-      group: edge
       services:
         - docker
       env:
@@ -66,8 +65,6 @@ addons:
     - sourceline: 'deb http://dist.crystal-lang.org/apt crystal main'
     - sourceline: 'deb http://ppa.launchpad.net/avsm/ppa/ubuntu trusty main'
     - sourceline: 'deb http://ppa.launchpad.net/ubuntu-lxc/lxd-stable/ubuntu trusty main'
-    - sourceline: 'deb https://packages.erlang-solutions.com/ubuntu trusty contrib'
-      key_url: 'https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc'
     packages:
     - build-essential
     - git
@@ -79,7 +76,6 @@ addons:
     - opam
     - php5-cli
     - golang
-    - elixir
 
 cache:
   pip: true
@@ -176,5 +172,15 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       brew install elixir;
     fi
-  - sudo mix local.hex --force
-  - sudo mix archive.install github lpil/exfmt --force
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb;
+      sudo dpkg -i erlang-solutions_1.0_all.deb;
+      sudo apt-get update;
+      sudo apt-get install erlang;
+      kiex install 1.4.5;
+      kiex use 1.4.5;
+      kiex default 1.4.5;
+      [[ -s "$HOME/.kiex/scripts/kiex" ]] && source "$HOME/.kiex/scripts/kiex";
+    fi
+  - mix local.hex --force
+  - mix archive.install github lpil/exfmt --force
