@@ -1,5 +1,6 @@
 # Next
 - ...
+- Fixes [#1728](https://github.com/Glavin001/atom-beautify/issues/1728). Remove Shell-Env from Executable, use Atom's process.env instead. See [#1735](https://github.com/Glavin001/atom-beautify/pull/1735).
 
 # v0.30.2 (2017-06-20)
 - Fixes [#1030](https://github.com/Glavin001/atom-beautify/issues/1030). Add support for alpha versions of autopep8

@@ -4,7 +4,6 @@ which = require('which')
 spawn = require('child_process').spawn
 path = require('path')
 semver = require('semver')
-shellEnv = require('shell-env')
 os = require('os')
 fs = require('fs')
 
@@ -324,15 +323,11 @@ class Executable
 
   @_envCache = null
   shellEnv: () ->
-    @constructor.shellEnv()
+    env = @constructor.shellEnv()
+    @debug("env", env)
+    return env
   @shellEnv: () ->
-    if @_envCache
-      return Promise.resolve(@_envCache)
-    else
-      shellEnv()
-        .then((env) =>
-          @_envCache = env
-        )
+    Promise.resolve(process.env)
 
   ###
   Like the unix which utility.

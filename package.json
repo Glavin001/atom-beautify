@@ -193,6 +193,9 @@
     "winston": "2.3.1",
     "yaml-front-matter": "3.4.0"
   },
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ],
   "activationCommands": {
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
