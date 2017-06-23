@@ -13,41 +13,44 @@ module.exports = class TypeScriptFormatter extends Beautifier
     try
       base = require("typescript-formatter/lib/provider/base").default
       tsconfigjson = require("typescript-formatter/lib/provider/tsconfigjson").default
-      { default: editorconfig, postProcess: editorconfigPostProcess } = require("typescript-formatter/lib/provider/editorconfig")
-      { default: tslintjson, postProcess, tslintPostProcess } = require("typescript-formatter/lib/provider/tslintjson")
+      { default: editorconfig } = require("typescript-formatter/lib/provider/editorconfig")
+      tslint = require("typescript-formatter/lib/provider/tslintjson")
 
       format = require("typescript-formatter/lib/formatter").default
       formatterUtils = require("typescript-formatter/lib/utils")
-      # @verbose('format', format, formatterUtils)
 
-      optionModifiers = [base, tsconfigjson, editorconfig, tslintjson, pluginOptsModifier options]
-      postProcessors = [editorconfigPostProcess, tslintPostProcess, fileEndingPostProcess]
+      optionModifiers = [base, tsconfigjson, editorconfig, tslint.default, pluginOptsModifier options]
+      postProcessors = [tslint.postProcess, fileEndingPostProcess]
 
       formatSettings = formatterUtils.createDefaultFormatCodeOptions()
 
-      processFormatCodeOptions(optionModifiers, filePath, {}, formatSettings)
+      processData(optionModifiers, formatSettings, (process, settings) => process(filePath, {}, settings))
         .then((formatSettings) =>
           @verbose('typescript', text, formatSettings)
           result = format('', text, formatSettings)
           @verbose(result)
           return result
         )
+        .then((formatted) =>
+          return processData(postProcessors, formatted, (process, code) => process(filePath, code, {}, formatSettings))
+        )
     catch e
       return Promise.reject(e)
 
-processFormatCodeOptions = (optionModifiers, fileName, opts, formatSettings) ->
-  modifiers = optionModifiers.slice 0
+processData = (dataTransformers, data, process) ->
+  modifiers = dataTransformers.slice 0
 
-  next = (_formatSettings) ->
+  next = (_data) ->
     if modifiers.length is 0
-      return Promise.resolve(formatSettings)
+      return Promise.resolve(_data)
     modifier = modifiers.shift()
-    ret = modifier(fileName, opts, formatSettings)
-    return Promise.resolve(ret).then((formatSettings) -> next formatSettings)
+    ret = process(modifier, _data)
+    return Promise.resolve(ret).then((transformed) -> next transformed)
 
-  next formatSettings
+  next data
 
 fileEndingPostProcess = (fileName, formattedCode, opts, formatSettings) ->
+  console.log(formatSettings)
   Promise.resolve formattedCode.replace(/\r?\n/g, formatSettings.NewLineCharacter or '\n')
 
 pluginOptsModifier = (pluginOpts) -> (fileName, opts, formatSettings) ->
