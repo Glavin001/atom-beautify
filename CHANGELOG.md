@@ -1,5 +1,5 @@
 # Next
-- ...
+- Fixes [#1638] (https://github.com/Glavin001/atom-beautify/issues/1638). Update typescript and typescript-formatter versions.
 
 # v0.30.3 (2017-06-21)
 - Improve command not found error message
