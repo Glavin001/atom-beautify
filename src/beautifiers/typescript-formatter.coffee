@@ -26,16 +26,15 @@ module.exports = class TypeScriptFormatter extends Beautifier
 
       options.eol = @getDefaultLineEnding('\r\n', '\n', options.end_of_line)
 
-      processData(optionModifiers, formatSettings, (process, settings) => process(filePath, options, settings))
+      processData(optionModifiers, formatSettings, (process, settings) -> process(filePath, options, settings))
         .then((formatSettings) =>
           @verbose('typescript', text, formatSettings)
           result = format('', text, formatSettings)
           @verbose(result)
           return result
         )
-        .then((formatted) =>
-          return processData(postProcessors, formatted, (process, code) => process(filePath, code, options, formatSettings))
-        )
+        .then((formatted) -> processData postProcessors, formatted, (process, code) ->
+          process(filePath, code, options, formatSettings))
     catch e
       return Promise.reject(e)
 
