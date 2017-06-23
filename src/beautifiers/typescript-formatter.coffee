@@ -19,12 +19,14 @@ module.exports = class TypeScriptFormatter extends Beautifier
       format = require("typescript-formatter/lib/formatter").default
       formatterUtils = require("typescript-formatter/lib/utils")
 
-      optionModifiers = [base, tsconfigjson, editorconfig, tslint.default, pluginOptsModifier options]
+      optionModifiers = [base, tsconfigjson, editorconfig, tslint.default, pluginOptsModifier]
       postProcessors = [tslint.postProcess, fileEndingPostProcess]
 
       formatSettings = formatterUtils.createDefaultFormatCodeOptions()
 
-      processData(optionModifiers, formatSettings, (process, settings) => process(filePath, {}, settings))
+      options.eol = @getDefaultLineEnding('\r\n', '\n', options.end_of_line)
+
+      processData(optionModifiers, formatSettings, (process, settings) => process(filePath, options, settings))
         .then((formatSettings) =>
           @verbose('typescript', text, formatSettings)
           result = format('', text, formatSettings)
@@ -32,7 +34,7 @@ module.exports = class TypeScriptFormatter extends Beautifier
           return result
         )
         .then((formatted) =>
-          return processData(postProcessors, formatted, (process, code) => process(filePath, code, {}, formatSettings))
+          return processData(postProcessors, formatted, (process, code) => process(filePath, code, options, formatSettings))
         )
     catch e
       return Promise.reject(e)
@@ -50,15 +52,16 @@ processData = (dataTransformers, data, process) ->
   next data
 
 fileEndingPostProcess = (fileName, formattedCode, opts, formatSettings) ->
-  console.log(formatSettings)
   Promise.resolve formattedCode.replace(/\r?\n/g, formatSettings.NewLineCharacter or '\n')
 
-pluginOptsModifier = (pluginOpts) -> (fileName, opts, formatSettings) ->
-  if pluginOpts.indent_with_tabs
+pluginOptsModifier = (fileName, opts, formatSettings) ->
+  if opts.indent_with_tabs
     formatSettings.ConvertTabsToSpaces = false
   else
-    formatSettings.TabSize = pluginOpts.tab_width or pluginOpts.indent_size
-    formatSettings.IndentSize = pluginOpts.indent_size
+    formatSettings.TabSize = opts.tab_width or opts.indent_size
     formatSettings.IndentStyle = 'space'
+    formatSettings.IndentSize = opts.indent_size
+
+  formatSettings.NewLineCharacter = opts.eol
 
   Promise.resolve formatSettings
