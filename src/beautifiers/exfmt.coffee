@@ -7,10 +7,21 @@ Beautifier = require('./beautifier')
 module.exports = class Exfmt extends Beautifier
   name: "exfmt"
   link: "https://github.com/lpil/exfmt"
-  isPreInstalled: false
+  executables: [
+    {
+      name: "exfmt"
+      cmd: "mix"
+      homepage: "https://github.com/lpil/exfmt"
+      installation: "https://github.com/lpil/exfmt"
+      version: {
+        args: ['help exfmt'],
+        parse: (text) -> text.match(/exfmt-(\d+\.\d+\.\d+)/)[1]
+      }
+    }
+  ]
 
   options: {
-    Elixir: true
+    Elixir: false
   }
 
   beautify: (text, language, options) ->
