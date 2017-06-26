@@ -59,11 +59,11 @@ module.exports = class LatexBeautify extends Beautifier
     .then((dirPath)=>
       @setUpDir(dirPath, text, @buildConfigFile(options))
       run = @run "latexindent", [
-        "-o"            #Output to the same location as file, -w creates a backup file, whereas this does not
         "-s"            #Silent mode
         "-l"            #Tell latexindent we have a local configuration file
         "-c=" + dirPath #Tell latexindent to place the log file in this directory
         @texFile
+        "-o"            #Output to the same location as file, -w creates a backup file, whereas this does not
         @texFile
       ], help: {
         link: "https://github.com/cmhughes/latexindent.pl"
