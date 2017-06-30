@@ -17,7 +17,7 @@
     ]
   </script>
 
-  <style scoped>
+  <style scoped="scoped">
     :scope {
       font-size: 2rem;
     }
