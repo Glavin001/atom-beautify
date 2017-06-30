@@ -434,7 +434,7 @@
       "typescript-formatter",
       "tidy-markdown",
       "underscore-plus",
-      "prettydiffi2"
+      "prettydiff2"
     ]
   }
 }
