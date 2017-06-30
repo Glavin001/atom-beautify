@@ -73,7 +73,7 @@ module.exports = class PrettyDiff extends Beautifier
   beautify: (text, language, options) ->
     options.crlf = @getDefaultLineEnding(true,false,options.end_of_line)
     return new @Promise((resolve, reject) =>
-      prettydiff = require("prettydiff")
+      prettydiff = require("prettydiff2")
       _ = require('lodash')
 
       # Select Prettydiff language
@@ -127,8 +127,7 @@ module.exports = class PrettyDiff extends Beautifier
 
       # Beautify
       @verbose('prettydiff', options)
-      output = prettydiff.api(options)
-      result = output[0]
+      result = prettydiff(options)
 
       # Return beautified text
       resolve(result)
