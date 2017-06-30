@@ -44,7 +44,7 @@ module.exports = class VueBeautifier extends Beautifier
                   lang: "less"
                   mode: "beautify"
                 )
-                prettydiffoptions)
+                prettydiff(options)
               when undefined
                 require("js-beautify").css(text, options)
               else
