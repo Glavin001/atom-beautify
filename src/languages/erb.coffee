@@ -2,7 +2,7 @@ module.exports = {
 
   name: "ERB"
   namespace: "erb"
-  fallback: ['xml']
+  fallback: ['html']
 
   ###
   Supported Grammars
