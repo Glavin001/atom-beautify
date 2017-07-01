@@ -96,6 +96,10 @@ module.exports = class Beautifier
   deprecate: (warning) ->
     atom.notifications?.addWarning(warning)
 
+  deprecateOptionForExecutable: (exeName, oldOption, newOption) ->
+    deprecationMessage = "The \"#{oldOption}\" configuration option has been deprecated. Please switch to using the option in section \"Executables\" (near the top) in subsection \"#{exeName}\" labelled \"#{newOption}\" in Atom-Beautify package settings."
+    @deprecate(deprecationMessage)
+
   ###
   Create temporary file
   ###
