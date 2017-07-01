@@ -225,6 +225,7 @@
       "atom-beautify:beautify-language-go",
       "atom-beautify:beautify-language-golang template",
       "atom-beautify:beautify-language-fortran",
+      "atom-beautify:beautify-language-fuse",
       "atom-beautify:beautify-language-handlebars",
       "atom-beautify:beautify-language-haskell",
       "atom-beautify:beautify-language-html",
