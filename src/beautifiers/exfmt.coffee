@@ -14,8 +14,11 @@ module.exports = class Exfmt extends Beautifier
       homepage: "https://github.com/lpil/exfmt"
       installation: "https://github.com/lpil/exfmt"
       version: {
-        args: ['help exfmt'],
+        args: ['help','exfmt'],
         parse: (text) -> text.match(/exfmt-(\d+\.\d+\.\d+)/)[1]
+      }
+      docker: {
+        image: "unibeautify/exfmt"
       }
     }
   ]
