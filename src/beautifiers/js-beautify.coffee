@@ -31,7 +31,7 @@ module.exports = class JSBeautify extends Beautifier
     return new @Promise((resolve, reject) =>
       try
         switch language
-          when "JSON", "JavaScript", "JSX"
+          when "JSON", "JavaScript", "JSX", "TSX"
             beautifyJS = require("js-beautify")
             text = beautifyJS(text, options)
             resolve text
