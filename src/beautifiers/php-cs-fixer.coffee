@@ -90,7 +90,7 @@ module.exports = class PHPCSFixer extends Beautifier
 
     # Find php-cs-fixer.phar script
     if options.cs_fixer_path
-      @deprecateOptionForExecutable("PHP - PHP-CS-Fixer Path (cs_fixer_path)", "PHP-CS-Fixer", "Path")
+      @deprecateOptionForExecutable("PHP-CS-Fixer", "PHP - PHP-CS-Fixer Path (cs_fixer_path)", "Path")
 
     @Promise.all([
       @which(options.cs_fixer_path) if options.cs_fixer_path

@@ -50,7 +50,7 @@ module.exports = class PHPCBF extends Beautifier
     phpcbf = @exe('phpcbf')
 
     if options.phpcbf_path
-      @deprecateOptionForExecutable("PHP - PHPCBF Path (phpcbf_path)", "PHPCBF", "Path")
+      @deprecateOptionForExecutable("PHPCBF", "PHP - PHPCBF Path (phpcbf_path)", "Path")
 
     # Find phpcbf.phar script
     @Promise.all([
