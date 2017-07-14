@@ -1,6 +1,10 @@
 # Next
 - ...
 
+# v0.30.4 (2017-07-14)
+- Fixes #1732. Improve deprecation message for old options for new Executables
+- Fixes #1751. Fix for latexindent v3
+
 # v0.30.3 (2017-06-21)
 - Improve command not found error message
 - Add goimports beautifier for Go language
