@@ -1,5 +1,5 @@
 # Next
-- ...
+- Fixes [#1638] (https://github.com/Glavin001/atom-beautify/issues/1638). Update typescript and typescript-formatter versions.
 
 # v0.30.4 (2017-07-14)
 - Fixes #1732. Improve deprecation message for old options for new Executables
