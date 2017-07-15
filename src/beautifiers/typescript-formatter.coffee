@@ -19,11 +19,11 @@ module.exports = class TypeScriptFormatter extends Beautifier
         opts = formatterUtils.createDefaultFormatCodeSettings()
 
         if options.indent_with_tabs
-          opts.ConvertTabsToSpaces = false
+          opts.convertTabsToSpaces = false
         else
-          opts.TabSize = options.tab_width or options.indent_size
-          opts.IndentSize = options.indent_size
-          opts.IndentStyle = 'space'
+          opts.tabSize = options.tab_width or options.indent_size
+          opts.indentSize = options.indent_size
+          opts.indentStyle = 'space'
 
         @verbose('typescript', text, opts)
         result = format('', text, opts)
