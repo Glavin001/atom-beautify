@@ -188,9 +188,6 @@ describe "BeautifyLanguages", ->
                         beautifyCompleted = false
                         completionFun = (text) ->
                           try
-                            logger.verbose(expectedTestPath, text)
-                            logger.verbose(expectedTestPath, text.message)
-                            logger.verbose(expectedTestPath, text.toString())
                             expect(text instanceof Error).not.toEqual(true, text.message or text.toString())
                             return beautifyCompleted = true if text instanceof Error
                           #   logger.verbose(expectedTestPath, text) if ext is ".less"

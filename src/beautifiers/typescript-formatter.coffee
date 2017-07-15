@@ -16,7 +16,7 @@ module.exports = class TypeScriptFormatter extends Beautifier
         formatterUtils = require("typescript-formatter/lib/utils")
         # @verbose('format', format, formatterUtils)
 
-        opts = formatterUtils.createDefaultFormatCodeOptions()
+        opts = formatterUtils.createDefaultFormatCodeSettings()
 
         if options.indent_with_tabs
           opts.ConvertTabsToSpaces = false
