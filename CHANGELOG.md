@@ -1,5 +1,5 @@
 # Next
-- ...
+- Fixes #1638. update type-formatter and Fixes indent size not supported
 
 # v0.30.4 (2017-07-14)
 - Fixes #1732. Improve deprecation message for old options for new Executables

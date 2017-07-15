@@ -1,56 +1,55 @@
 module XYZ {
-  interface I {
-   x: number,
-   y,
-   z
+    interface I {
+      x: number,
+  y,
+      z
+ }
+
+       var zZz = {
+    a: 123,
+ b: 456
+     };
+
+  enum En {
+         AB,
+     CD
   }
 
-    var zZz={
-        a: 123,
-        b: 456
-    };
+                 var y = 3;
 
-    enum En {
-        AB,
-        CD
-    }
-
-    var y = 3;
-
-    switch(y {
+  switch (y {
         case X:
-            console.log("x");
-            break;
-        default:
-            console.log("y");
-    }
+             console.log("x");
+                 break;
+                       default:
+                              console.log("y");
+                                   }
 
-    if (x === 3) {
-        if (y === 4) {
-            console.log("hey");
-        }
-        console.log("x");
+if (x === 3) {
+    if (y === 4) {
+        console.log("hey");
+            }
+           console.log("x");
         x = y.hey
-              .b
-              .c
-              .d;
+      .b
+     .c
+.d;
 
+      export class X {
+           private x: number;
 
-    export class X {
-        private x : number;
+         constructor() {
+          console.log("hi");
+     }
 
-        constructor() {
-            console.log("hi");
-        }
+      public mem() {
+               console.log("yes");
+       }
+   }
 
-        public mem() {
-            console.log("yes");
-        }
+  function xyz() {
+    function mem() {
+      console.log("yes");
     }
-
-    function xyz() {
-        function mem() {
-            console.log("yes");
-        }
-    }
+  }
 }
