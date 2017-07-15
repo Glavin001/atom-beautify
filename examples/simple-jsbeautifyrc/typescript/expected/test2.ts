@@ -29,11 +29,11 @@ module XYZ {
     if (y === 4) {
       console.log("hey");
     }
-  console.log("x");
-  x = y.hey
-    .b
-    .c
-    .d;
+    console.log("x");
+    x = y.hey
+      .b
+      .c
+      .d;
 
     export class X {
       private x: number;
