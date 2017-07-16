@@ -34,7 +34,7 @@ module.exports = class Rustfmt extends Beautifier
     else
       @run(program, ["--version"], help: help)
         .then((stdout) ->
-          if /^0\.(?:[0-4]\.[0-9])/.test(stdout.trim())
+          if /^0\.(?:[0-4]\.[0-9])(?!-nightly)/.test(stdout.trim())
             versionCheckState = false
             throw new Error("rustfmt version 0.5.0 or newer required")
           else
