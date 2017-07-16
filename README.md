@@ -107,7 +107,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Remark | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Rubocop | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/bbatsov/rubocop and follow the instructions. |
 | Ruby Beautify | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/erniebrodeur/ruby-beautify and follow the instructions. |
-| rustfmt | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/nrc/rustfmt and follow the instructions. |
+| rustfmt | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/rust-lang-nursery/rustfmt and follow the instructions. |
 | SassConvert | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [SassConvert (`sass-convert`)](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) with `docker pull unibeautify/sass-convert`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [SassConvert (`sass-convert`)](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) by following http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax<br/> |
 | sqlformat | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/andialbrecht/sqlparse and follow the instructions. |
 | stylish-haskell | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/jaspervdj/stylish-haskell and follow the instructions. |
@@ -171,7 +171,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | R | `R` |`.r`, `.R` | **[`formatR`](https://github.com/yihui/formatR)** |
 | Riot.js | `Riot.js`, `HTML (Riot Tag)` |`.tag` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Ruby | `Ruby`, `Ruby on Rails` |`.rb` | **[`Rubocop`](https://github.com/bbatsov/rubocop)**, [`Ruby Beautify`](https://github.com/erniebrodeur/ruby-beautify) |
-| Rust | `Rust` |`.rs`, `.rlib` | **[`rustfmt`](https://github.com/nrc/rustfmt)** |
+| Rust | `Rust` |`.rs`, `.rlib` | **[`rustfmt`](https://github.com/rust-lang-nursery/rustfmt)** |
 | Sass | `Sass` |`.sass` | **[`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax)** |
 | SCSS | `SCSS` |`.scss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | Spacebars | `Spacebars` | | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
