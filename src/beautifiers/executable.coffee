@@ -153,7 +153,7 @@ class Executable
         @debug('env:', env)
         @debug('PATH:', env.PATH)
         @debug('args', args)
-        args = this.relativizePaths(args)
+        args = this.relativizePaths(args, cwd)
         @debug('relativized args', args)
 
         exe = exePath ? exeName
@@ -212,8 +212,7 @@ class Executable
     args = _.flatten(args)
     Promise.all(args)
 
-  relativizePaths: (args) ->
-    tmpDir = os.tmpDir()
+  relativizePaths: (args, tmpDir) ->
     newArgs = args.map((arg) ->
       isTmpFile = (typeof arg is 'string' and not arg.includes(':') and \
         path.isAbsolute(arg) and path.dirname(arg).startsWith(tmpDir))
