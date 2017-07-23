@@ -1,6 +1,7 @@
 # Next
 - Fixes #1638. update type-formatter and Fixes indent size not supported
 - Add support for rustfmt-nightly
+- Fixes #1773 and #793. ruby-beautify with Rubocop now respects `Exclude` settings, and properly loads inherited config files (like `~/.rubocop.yml`)
 
 # v0.30.4 (2017-07-14)
 - Fixes #1732. Improve deprecation message for old options for new Executables
