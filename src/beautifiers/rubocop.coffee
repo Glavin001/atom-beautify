@@ -5,8 +5,6 @@ Requires https://github.com/bbatsov/rubocop
 "use strict"
 Beautifier = require('./beautifier')
 path = require('path')
-fs = require('fs')
-temp = require('temp').track()
 
 module.exports = class Rubocop extends Beautifier
   name: "Rubocop"
@@ -19,28 +17,11 @@ module.exports = class Rubocop extends Beautifier
       rubocop_path: true
   }
 
-  createTempFile: (originalFile) ->
-    new @Promise((resolve, reject) =>
-      tempOptions = {
-        prefix: "_beautify",
-        suffix: path.basename(originalFile),
-        dir: path.dirname(originalFile)}
-      temp.open(tempOptions, (err, info) =>
-        return reject(err) if err?
-        @debug('rubocopTempFile', info.path)
-        resolve(info.path)
-      )
-    ).disposer((filename) =>
-      if fs.existsSync(filename)
-        @debug("unlinking rubocop temp file", filename)
-        fs.unlink(filename)
-    )
-
   beautify: (text, language, options) ->
     editor = atom?.workspace?.getActiveTextEditor()
     if editor?
       fullPath = editor.getPath()
-      projectPath = atom.project.relativizePath(fullPath)[0]
+      [projectPath, relativePath] = atom.project.relativizePath(fullPath)
     else
       throw new Error("No active editor found!")
 
@@ -68,21 +49,20 @@ module.exports = class Rubocop extends Beautifier
       }
       tempConfig = @tempFile("rubocop-config", yaml.safeDump(config))
 
-    @Promise.using(@createTempFile(fullPath), (tempFileName) =>
-      new @Promise((resolve, reject) ->
-        fs.writeFile(tempFileName, text, 'utf8', (err) ->
-          return reject(err) if err?
-          resolve tempFileName
-        )
-      )
-      .then(=>
-        rubocopArguments = [
-          "--auto-correct"
-          "--force-exclusion"
-          tempFileName
-        ]
-        rubocopArguments.push("--config", tempConfig) if tempConfig?
-        @run(rubocopPath, rubocopArguments, {ignoreReturnCode: true, cwd: projectPath})
-      )
-      .then(=> @readFile(tempFileName))
+    rubocopArguments = [
+      "--auto-correct"
+      "--force-exclusion"
+      "--stdin", relativePath
+    ]
+    rubocopArguments.push("--config", tempConfig) if tempConfig?
+    @debug("rubocop arguments", rubocopArguments)
+
+    @run(rubocopPath, rubocopArguments, {
+      ignoreReturnCode: true,
+      cwd: projectPath,
+      onStdin: (stdin) -> stdin.end text
+    }).then((stdout) =>
+      @debug("rubocop output", stdout)
+      result = stdout.split("====================\n")
+      result[result.length - 1]
     )
