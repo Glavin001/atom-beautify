@@ -63,6 +63,9 @@ module.exports = class Rubocop extends Beautifier
       onStdin: (stdin) -> stdin.end text
     }).then((stdout) =>
       @debug("rubocop output", stdout)
+      # Rubocop output an error if stdout is empty
+      return text if stdout.length == 0
+
       result = stdout.split("====================\n")
       result[result.length - 1]
     )
