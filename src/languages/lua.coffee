@@ -15,6 +15,7 @@ module.exports = {
   ###
   extensions: [
     'lua'
+    'ttslua'
   ]
 
   defaultBeautifier: "Lua beautifier"
