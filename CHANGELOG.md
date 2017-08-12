@@ -1,6 +1,10 @@
 # Next
-- Fixes #1638. update type-formatter and Fixes indent size not supported
-- Add support for rustfmt-nightly
+- ...
+
+# v0.30.5 (2017-08-11)
+- Fix for [#1721](https://github.com/Glavin001/atom-beautify/issues/1721). Changes required due to TextBuffer.save becoming async in Atom 1.19
+- Fixes [#1638](https://github.com/Glavin001/atom-beautify/issues/1638). Update type-formatter and Fixes indent size not supported
+- See [#358](https://github.com/Glavin001/atom-beautify/issues/358). Add support for rustfmt-nightly
 
 # v0.30.4 (2017-07-14)
 - Fixes #1732. Improve deprecation message for old options for new Executables
