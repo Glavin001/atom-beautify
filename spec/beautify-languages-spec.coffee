@@ -49,7 +49,7 @@ describe "BeautifyLanguages", ->
     "mustache", "objective-c", "perl", "php",
     "python", "ruby", "sass", "sql", "svg",
     "xml", "csharp", "gfm", "marko",
-    "go", "html-swig", "lua"
+    "go", "html-swig", "lua", "blade"
     ]
   # All Atom packages that Atom Beautify is dependent on
   dependentPackages = [

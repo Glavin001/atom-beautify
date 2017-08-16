@@ -56,7 +56,7 @@ matrix:
 
 env:
   global:
-    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom language-lua"
+    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom language-lua language-blade"
     - PATH="/home/travis/gopath/bin:$HOME/.linuxbrew/bin:$PATH"
 
 addons:
