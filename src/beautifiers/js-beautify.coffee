@@ -6,7 +6,7 @@ module.exports = class JSBeautify extends Beautifier
   link: "https://github.com/beautify-web/js-beautify"
 
   options: {
-    # Blade: true
+    Blade: true
     HTML: true
     XML: true
     Handlebars: true
