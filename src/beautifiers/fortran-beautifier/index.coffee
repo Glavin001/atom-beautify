@@ -47,7 +47,7 @@ module.exports = class FortranBeautifier extends Beautifier
       ]
 
     if emacs_path
-      @deprecate("The \"emacs_path\" has been deprecated. Please switch to using the config with path \"Executables - Emacs - Path\" in Atom-Beautify package settings now.")
+      @deprecateOptionForExecutable("Emacs", "emacs_path", "Path")
       @run(emacs_path, args, {ignoreReturnCode: false})
         .then(=>
           @readFile(tempFile)

@@ -50,8 +50,7 @@ module.exports = class PHPCBF extends Beautifier
     phpcbf = @exe('phpcbf')
 
     if options.phpcbf_path
-      deprecationMessage = "The \"PHP - PHPCBF Path (phpcbf_path)\" configuration option has been deprecated. Please switch to using the option named \"Executables - PHPCBF - Path\" in Atom-Beautify package settings now."
-      @deprecate(deprecationMessage)
+      @deprecateOptionForExecutable("PHPCBF", "PHP - PHPCBF Path (phpcbf_path)", "Path")
 
     # Find phpcbf.phar script
     @Promise.all([

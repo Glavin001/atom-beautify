@@ -542,9 +542,10 @@ handleSaveEvent = ->
             # It will add a newline and keep the file from converging on a beautified form
             # and saving without emitting onDidSave event, because there were no changes.
             pendingPaths[filePath] = true
-            editor.save()
-            delete pendingPaths[filePath]
-            logger.verbose('Saved TextEditor.')
+            Promise.resolve(editor.save()).then(() ->
+              delete pendingPaths[filePath]
+              logger.verbose('Saved TextEditor.')
+            )
         )
         .catch((error) ->
           return showError(error)
