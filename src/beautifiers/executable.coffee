@@ -17,6 +17,7 @@ class Executable
   key: null
   homepage: null
   installation: null
+  additionalHelp: null
   versionArgs: ['--version']
   versionParse: (text) -> semver.clean(text)
   versionRunOptions: {}
@@ -30,6 +31,7 @@ class Executable
     @name = options.name
     @cmd = options.cmd
     @key = @cmd
+    @additionalHelp = options.additionalHelp
     @homepage = options.homepage
     @installation = options.installation
     @required = not options.optional
@@ -110,6 +112,7 @@ class Executable
           program: @cmd
           link: @installation or @homepage
           pathOption: "Executable - #{@name or @cmd} - Path"
+          additional: @additionalHelp
         }
         Promise.reject(@commandNotFoundError(@name or @cmd, help))
       )
@@ -138,6 +141,7 @@ class Executable
       program: @cmd
       link: @installation or @homepage
       pathOption: "Executable - #{@name or @cmd} - Path"
+      additional: @additionalHelp
     }
 
     # Resolve executable and all args
