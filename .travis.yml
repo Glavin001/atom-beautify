@@ -177,9 +177,9 @@ before_install:
       sudo dpkg -i erlang-solutions_1.0_all.deb;
       sudo apt-get update;
       sudo apt-get install erlang;
-      kiex install 1.4.5;
-      kiex use 1.4.5;
-      kiex default 1.4.5;
+      kiex install 1.5.1;
+      kiex use 1.5.1;
+      kiex default 1.5.1;
       [[ -s "$HOME/.kiex/scripts/kiex" ]] && source "$HOME/.kiex/scripts/kiex";
     fi
   - mix local.hex --force
