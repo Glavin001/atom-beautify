@@ -83,7 +83,7 @@ install:
   - cinst elixir -y
   - refreshenv
   - mix local.hex --force
-  - mix archive.install github lpil/exfmt --force
+  - mix archive.install github lpil/exfmt tag v0.4.0 --force
 
   # Ruby & Gem
   - SET PATH=C:\Ruby%RUBY_VERSION%\bin;C:\Ruby23-x64\DevKit\mingw\bin;%PATH%

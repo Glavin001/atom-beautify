@@ -183,4 +183,4 @@ before_install:
       [[ -s "$HOME/.kiex/scripts/kiex" ]] && source "$HOME/.kiex/scripts/kiex";
     fi
   - mix local.hex --force
-  - mix archive.install github lpil/exfmt --force
+  - mix archive.install github lpil/exfmt tag v0.4.0 --force
