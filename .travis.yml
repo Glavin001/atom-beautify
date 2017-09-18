@@ -109,10 +109,10 @@ before_install:
   # Python language support
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
   - pip install --upgrade pip
-  - pip install --upgrade autopep8
-  - pip install --upgrade isort
+  - pip install --user --upgrade autopep8
+  - pip install --user --upgrade isort
   # SQL language support
-  - pip install --upgrade sqlparse
+  - pip install --user --upgrade sqlparse
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       brew install uncrustify;
@@ -167,4 +167,4 @@ before_install:
   # Crystal
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
   # Bash
-  - pip install beautysh
+  - pip install --user beautysh
