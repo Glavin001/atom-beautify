@@ -46,7 +46,6 @@ module.exports = class PHPCSFixer extends Beautifier
       cs_fixer_path: true
       cs_fixer_version: true
       cs_fixer_config_file: true
-      allow_risky: true
       level: true
       fixers: true
 
@@ -68,8 +67,6 @@ module.exports = class PHPCSFixer extends Beautifier
       "fix"
       "--rules=#{options.rules}" if options.rules
       "--config=#{options.cs_fixer_config_file}" if options.cs_fixer_config_file
-      "--allow-risky=#{options.allow_risky}" if options.allow_risky
-      "--using-cache=no"
     ]
 
     isVersion1 = ((phpCsFixer.isInstalled and phpCsFixer.isVersion('1.x')) or \
