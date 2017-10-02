@@ -169,6 +169,10 @@ before_install:
       brew install opam;
     fi
   - opam init --auto-setup
+  # Init environment variables for opam
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      eval `opam config env`;
+    fi  
   - opam install --yes ocp-indent
   # Crystal
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
