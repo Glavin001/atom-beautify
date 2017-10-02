@@ -107,12 +107,22 @@ before_install:
       docker pull unibeautify/sass-convert;
     fi
   # Python language support
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
-  - pip install --upgrade pip
-  - pip install --upgrade autopep8
-  - pip install --upgrade isort
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      sudo chmod 777 -R /opt/python;
+      pip install --upgrade pip;
+      pip install --user --upgrade autopep8;
+      pip install --user --upgrade isort;
+    else
+      pip install --upgrade pip;
+      pip install --upgrade autopep8;
+      pip install --upgrade isort;
+    fi
   # SQL language support
-  - pip install --upgrade sqlparse
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      pip install --user --upgrade sqlparse;
+    else
+      pip install --upgrade sqlparse;
+    fi
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       brew install uncrustify;
@@ -163,8 +173,16 @@ before_install:
       brew install opam;
     fi
   - opam init --auto-setup
+  # Init environment variables for opam
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      eval `opam config env`;
+    fi  
   - opam install --yes ocp-indent
   # Crystal
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
   # Bash
-  - pip install beautysh
+  - if [[ "$TRAVIS_OS_NAME" == "linux"]]; then
+      pip install --user beautysh;
+    else
+      pip install beautysh;
+    fi
