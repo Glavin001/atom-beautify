@@ -407,7 +407,7 @@
     "goimports"
   ],
   "devDependencies": {
-    "coffeelint": "1.16.0"
+    "coffeelint": "2.0.0"
   },
   "scripts": {
     "build-options": "node script/build-options.js",
