@@ -115,7 +115,7 @@ before_install:
     else
       pip install --upgrade pip;
       pip install --upgrade autopep8;
-      pip install --upgrade isort;    
+      pip install --upgrade isort;
     fi
   # SQL language support
   - pip install --user --upgrade sqlparse
@@ -173,4 +173,8 @@ before_install:
   # Crystal
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
   # Bash
-  - pip install --user beautysh
+  - if [[ "$TRAVIS_OS_NAME" == "linux"]]; then
+      pip install --user beautysh;
+    else
+      pip install beautysh;
+    fi
