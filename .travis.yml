@@ -118,7 +118,11 @@ before_install:
       pip install --upgrade isort;
     fi
   # SQL language support
-  - pip install --user --upgrade sqlparse
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      pip install --user --upgrade sqlparse;
+    else
+      pip install --upgrade sqlparse;
+    fi
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       brew install uncrustify;
