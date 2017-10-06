@@ -6,6 +6,7 @@ module.exports = class JSBeautify extends Beautifier
   link: "https://github.com/beautify-web/js-beautify"
 
   options: {
+    Blade: true
     HTML: true
     XML: true
     Handlebars: true
@@ -42,7 +43,7 @@ module.exports = class JSBeautify extends Beautifier
             beautifyHTML = require("js-beautify").html
             text = beautifyHTML(text, options)
             resolve text
-          when "EJS", "HTML (Liquid)", "HTML", "XML", "Web Form/Control (C#)", "Web Handler (C#)"
+          when "Blade", "EJS", "HTML (Liquid)", "HTML", "XML", "Web Form/Control (C#)", "Web Handler (C#)"
             beautifyHTML = require("js-beautify").html
             text = beautifyHTML(text, options)
             @debug("Beautified HTML: #{text}")

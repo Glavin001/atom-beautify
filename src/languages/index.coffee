@@ -15,6 +15,7 @@ module.exports = class Languages
     "apex"
     "arduino"
     "bash"
+    "blade"
     "c-sharp"
     "c"
     "clojure"
