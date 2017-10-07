@@ -5,6 +5,7 @@ Requires https://github.com/bbatsov/rubocop
 "use strict"
 Beautifier = require('./beautifier')
 path = require('path')
+temp = require('temp').track()
 
 module.exports = class Rubocop extends Beautifier
   name: "Rubocop"
@@ -47,7 +48,7 @@ module.exports = class Rubocop extends Beautifier
     rubocopArguments = [
       "--auto-correct"
       "--force-exclusion"
-      "--stdin", relativePath
+      "--stdin", relativePath || temp.path({suffix: '.rb'})
     ]
     rubocopArguments.push("--config", tempConfig) if tempConfig?
     @debug("rubocop arguments", rubocopArguments)
