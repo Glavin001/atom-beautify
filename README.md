@@ -8,7 +8,7 @@
 
 | Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"> and <img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"> |
 | --- | --- |
-| [Travis CI: ![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) | [AppVeyor: ![AppVeyor branch](https://img.shields.io/appveyor/ci/Glavin001/atom-beautify/master.svg?style=flat-square)](https://ci.appveyor.com/project/Glavin001/atom-beautify) |
+| [Travis CI: ![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) | [AppVeyor: ![Build status](https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u/branch/master?svg=true)](https://ci.appveyor.com/project/Glavin001/atom-beautify/branch/master) |
 
 [![Throughput Graph](https://graphs.waffle.io/Glavin001/atom-beautify/throughput.svg)](https://waffle.io/Glavin001/atom-beautify/metrics)
 
@@ -155,7 +155,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript`, `JavaScript with JSX` |`.jsx`, `.js` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |
 | LaTeX | `BibTeX`, `LaTeX`, `TeX` |`.bib`, `.tex`, `.sty`, `.cls`, `.dtx`, `.ins`, `.bbx`, `.cbx` | **[`Latex Beautify`](https://github.com/cmhughes/latexindent.pl)** |
 | LESS | `LESS` |`.less` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js) |
-| Lua | `Lua` |`.lua` | **[`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee)** |
+| Lua | `Lua` |`.lua`, `.ttslua` | **[`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee)** |
 | Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Remark`](https://github.com/wooorm/remark) |
 | Marko | `Marko` |`.marko` | **[`Marko Beautifier`](https://github.com/marko-js/marko-prettyprint)** |
 | Mustache | `HTML (Mustache)` |`.mustache` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
