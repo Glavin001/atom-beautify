@@ -2,7 +2,7 @@ module.exports = {
 
   name: "UX Markup"
   namespace: "ux"
-  fallback: ['html']
+  fallback: ['xml']
 
   ###
   Supported Grammars
