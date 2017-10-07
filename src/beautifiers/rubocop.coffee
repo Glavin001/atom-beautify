@@ -17,13 +17,9 @@ module.exports = class Rubocop extends Beautifier
       rubocop_path: true
   }
 
-  beautify: (text, language, options) ->
-    editor = atom?.workspace?.getActiveTextEditor()
-    if editor?
-      fullPath = editor.getPath()
-      [projectPath, relativePath] = atom.project.relativizePath(fullPath)
-    else
-      throw new Error("No active editor found!")
+  beautify: (text, language, options, context) ->
+    fullPath = context.filePath
+    [projectPath, relativePath] = atom.project.relativizePath(fullPath)
 
     # Find the rubocop path
     rubocopPath = "rubocop"
