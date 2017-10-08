@@ -23,7 +23,6 @@ module.exports = class Rubocop extends Beautifier
     [projectPath, relativePath] = atom.project.relativizePath(fullPath)
 
     # Find the rubocop path
-    rubocopPath = "rubocop"
     @Promise.all([
       @which(options.rubocop_path) if options.rubocop_path
       @which('rubocop')
@@ -31,7 +30,7 @@ module.exports = class Rubocop extends Beautifier
     .then((paths) =>
       @debug('rubocop paths', paths)
       # Get first valid, absolute path
-      rubocopPath = paths.find((p) -> p and path.isAbsolute(p))
+      rubocopPath = paths.find((p) -> p and path.isAbsolute(p)) or "rubocop"
       @verbose('rubocopPath', rubocopPath)
       @debug('rubocopPath', rubocopPath, paths)
     )
