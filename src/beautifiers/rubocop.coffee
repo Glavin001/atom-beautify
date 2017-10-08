@@ -18,7 +18,7 @@ module.exports = class Rubocop extends Beautifier
   }
 
   beautify: (text, language, options, context) ->
-    fullPath = context.filePath
+    fullPath = context.filePath or ""
     [projectPath, _relativePath] = atom.project.relativizePath(fullPath)
 
     # Find the rubocop path
