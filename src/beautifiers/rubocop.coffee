@@ -5,7 +5,6 @@ Requires https://github.com/bbatsov/rubocop
 "use strict"
 Beautifier = require('./beautifier')
 path = require('path')
-temp = require('temp').track()
 
 module.exports = class Rubocop extends Beautifier
   name: "Rubocop"
@@ -20,7 +19,7 @@ module.exports = class Rubocop extends Beautifier
 
   beautify: (text, language, options, context) ->
     fullPath = context.filePath
-    [projectPath, relativePath] = atom.project.relativizePath(fullPath)
+    [projectPath, _relativePath] = atom.project.relativizePath(fullPath)
 
     # Find the rubocop path
     @Promise.all([
@@ -47,7 +46,7 @@ module.exports = class Rubocop extends Beautifier
       rubocopArguments = [
         "--auto-correct"
         "--force-exclusion"
-        "--stdin", relativePath || temp.path({suffix: '.rb'})
+        "--stdin", "atom-beautify.rb" # filename is required but not used
       ]
       rubocopArguments.push("--config", tempConfig) if tempConfig?
       @debug("rubocop arguments", rubocopArguments)
