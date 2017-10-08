@@ -33,35 +33,35 @@ module.exports = class Rubocop extends Beautifier
       rubocopPath = paths.find((p) -> p and path.isAbsolute(p)) or "rubocop"
       @verbose('rubocopPath', rubocopPath)
       @debug('rubocopPath', rubocopPath, paths)
-    )
 
-    # Find or generate a config file if non exists
-    configFile = @findFile(path.dirname(fullPath), ".rubocop.yml")
-    if !configFile?
-      yaml = require("yaml-front-matter")
-      config = {
-        "Style/IndentationWidth":
-          "Width": options.indent_size
-      }
-      tempConfig = @tempFile("rubocop-config", yaml.safeDump(config))
+      # Find or generate a config file if non exists
+      configFile = @findFile(path.dirname(fullPath), ".rubocop.yml")
+      if !configFile?
+        yaml = require("yaml-front-matter")
+        config = {
+          "Style/IndentationWidth":
+            "Width": options.indent_size
+        }
+        tempConfig = @tempFile("rubocop-config", yaml.safeDump(config))
 
-    rubocopArguments = [
-      "--auto-correct"
-      "--force-exclusion"
-      "--stdin", relativePath || temp.path({suffix: '.rb'})
-    ]
-    rubocopArguments.push("--config", tempConfig) if tempConfig?
-    @debug("rubocop arguments", rubocopArguments)
+      rubocopArguments = [
+        "--auto-correct"
+        "--force-exclusion"
+        "--stdin", relativePath || temp.path({suffix: '.rb'})
+      ]
+      rubocopArguments.push("--config", tempConfig) if tempConfig?
+      @debug("rubocop arguments", rubocopArguments)
 
-    @run(rubocopPath, rubocopArguments, {
-      ignoreReturnCode: true,
-      cwd: projectPath,
-      onStdin: (stdin) -> stdin.end text
-    }).then((stdout) =>
-      @debug("rubocop output", stdout)
-      # Rubocop output an error if stdout is empty
-      return text if stdout.length == 0
+      @run(rubocopPath, rubocopArguments, {
+        ignoreReturnCode: true,
+        cwd: projectPath,
+        onStdin: (stdin) -> stdin.end text
+      }).then((stdout) =>
+        @debug("rubocop output", stdout)
+        # Rubocop output an error if stdout is empty
+        return text if stdout.length == 0
 
-      result = stdout.split("====================\n")
-      result[result.length - 1]
+        result = stdout.split("====================\n")
+        result[result.length - 1]
+      )
     )
