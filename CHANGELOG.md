@@ -1,4 +1,5 @@
 # Next
+- See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
 - ...
 
 # v0.30.5 (2017-08-11)
