@@ -37,7 +37,8 @@ module.exports = class Rubocop extends Beautifier
     )
 
     # Find or generate a config file if non exists
-    if !@findFile(path.dirname(fullPath), ".rubocop.yml")?
+    configFile = @findFile(path.dirname(fullPath), ".rubocop.yml")
+    if !configFile?
       yaml = require("yaml-front-matter")
       config = {
         "Style/IndentationWidth":
