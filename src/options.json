@@ -4578,7 +4578,8 @@
       "Lua"
     ],
     "extensions": [
-      "lua"
+      "lua",
+      "ttslua"
     ],
     "properties": {
       "end_of_line": {
@@ -7229,8 +7230,7 @@
       "TSS"
     ],
     "extensions": [
-      "lua",
-      "ttslua"
+      "tss"
     ],
     "properties": {
       "indent_size": {
