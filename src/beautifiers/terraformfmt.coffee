@@ -20,5 +20,5 @@ module.exports = class Terraformfmt extends Beautifier
       tempFile = @tempFile("input", text)
       ])
       .then(=>
-         @readFile(tempFile)
+        @readFile(tempFile)
       )
