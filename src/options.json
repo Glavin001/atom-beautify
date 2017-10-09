@@ -6518,47 +6518,6 @@
       }
     }
   },
-   "terraform": {
-    "title": "Terraform",
-    "type": "object",
-    "description": "Options for language Terraform",
-    "collapsed": true,
-    "beautifiers": [
-      "terraformfmt"
-    ],
-    "grammars": [
-      "Terraform"
-    ],
-    "extensions": [
-      "tf"
-    ],
-    "properties": {
-      "disabled": {
-        "title": "Disable Beautifying Language",
-        "order": -3,
-        "type": "boolean",
-        "default": false,
-        "description": "Disable Rust Beautification"
-      },
-      "default_beautifier": {
-        "title": "Default Beautifier",
-        "order": -2,
-        "type": "string",
-        "default": "terraformfmt",
-        "description": "Default Beautifier to be used for Terraform",
-        "enum": [
-          "terraformfmt"
-        ]
-      },
-      "beautify_on_save": {
-        "title": "Beautify On Save",
-        "order": -1,
-        "type": "boolean",
-        "default": false,
-        "description": "Automatically beautify Terraform files on save"
-      }
-    }
-  },
   "sass": {
     "title": "Sass",
     "type": "object",
@@ -9166,6 +9125,340 @@
         "type": "boolean",
         "default": false,
         "description": "Automatically beautify YAML files on save"
+      }
+    }
+  },
+  "terraform": {
+    "title": "Terraform",
+    "type": "object",
+    "description": "Options for language Terraform",
+    "collapsed": true,
+    "beautifiers": [
+      "terraformfmt"
+    ],
+    "grammars": [
+      "Terraform"
+    ],
+    "extensions": [
+      "tf"
+    ],
+    "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by terraformfmt)",
+        "title": "Indent size",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "indent_char": {
+        "type": "string",
+        "default": null,
+        "description": "Indentation character (Supported by terraformfmt)",
+        "title": "Indent char",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "indent_char",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "indent_level": {
+        "type": "integer",
+        "default": 0,
+        "description": "Initial indentation level (Supported by terraformfmt)",
+        "title": "Indent level",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "indent_level",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "indent_with_tabs": {
+        "type": "boolean",
+        "default": null,
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by terraformfmt)",
+        "title": "Indent with tabs",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "indent_with_tabs",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "preserve_newlines": {
+        "type": "boolean",
+        "default": true,
+        "description": "Preserve line-breaks (Supported by terraformfmt)",
+        "title": "Preserve newlines",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "preserve_newlines",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "max_preserve_newlines": {
+        "type": "integer",
+        "default": 10,
+        "description": "Number of line-breaks to be preserved in one chunk (Supported by terraformfmt)",
+        "title": "Max preserve newlines",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "max_preserve_newlines",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "space_in_paren": {
+        "type": "boolean",
+        "default": false,
+        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by terraformfmt)",
+        "title": "Space in paren",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "space_in_paren",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "jslint_happy": {
+        "type": "boolean",
+        "default": false,
+        "description": "Enable jslint-stricter mode (Supported by terraformfmt)",
+        "title": "Jslint happy",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "jslint_happy",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "space_after_anon_function": {
+        "type": "boolean",
+        "default": false,
+        "description": "Add a space before an anonymous function's parens, ie. function () (Supported by terraformfmt)",
+        "title": "Space after anon function",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "space_after_anon_function",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "brace_style": {
+        "type": "string",
+        "default": "collapse",
+        "enum": [
+          "collapse",
+          "collapse-preserve-inline",
+          "expand",
+          "end-expand",
+          "none"
+        ],
+        "description": "[collapse|collapse-preserve-inline|expand|end-expand|none] (Supported by terraformfmt)",
+        "title": "Brace style",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "brace_style",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "break_chained_methods": {
+        "type": "boolean",
+        "default": false,
+        "description": "Break chained method calls across subsequent lines (Supported by terraformfmt)",
+        "title": "Break chained methods",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "break_chained_methods",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "keep_array_indentation": {
+        "type": "boolean",
+        "default": false,
+        "description": "Preserve array indentation (Supported by terraformfmt)",
+        "title": "Keep array indentation",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "keep_array_indentation",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "keep_function_indentation": {
+        "type": "boolean",
+        "default": false,
+        "description": " (Supported by terraformfmt)",
+        "title": "Keep function indentation",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "keep_function_indentation",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "space_before_conditional": {
+        "type": "boolean",
+        "default": true,
+        "description": " (Supported by terraformfmt)",
+        "title": "Space before conditional",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "space_before_conditional",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "eval_code": {
+        "type": "boolean",
+        "default": false,
+        "description": " (Supported by terraformfmt)",
+        "title": "Eval code",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "eval_code",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "unescape_strings": {
+        "type": "boolean",
+        "default": false,
+        "description": "Decode printable characters encoded in xNN notation (Supported by terraformfmt)",
+        "title": "Unescape strings",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "unescape_strings",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "wrap_line_length": {
+        "type": "integer",
+        "default": 0,
+        "description": "Wrap lines at next opportunity after N characters (Supported by terraformfmt)",
+        "title": "Wrap line length",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "wrap_line_length",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "end_with_newline": {
+        "type": "boolean",
+        "default": false,
+        "description": "End output with newline (Supported by terraformfmt)",
+        "title": "End with newline",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "end_with_newline",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "end_with_comma": {
+        "type": "boolean",
+        "default": false,
+        "description": "If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by terraformfmt)",
+        "title": "End with comma",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "end_with_comma",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "end_of_line": {
+        "type": "string",
+        "default": "System Default",
+        "enum": [
+          "CRLF",
+          "LF",
+          "System Default"
+        ],
+        "description": "Override EOL from line-ending-selector (Supported by terraformfmt)",
+        "title": "End of line",
+        "beautifiers": [
+          "terraformfmt"
+        ],
+        "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Terraform Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "terraformfmt",
+        "description": "Default Beautifier to be used for Terraform",
+        "enum": [
+          "terraformfmt"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Terraform files on save"
       }
     }
   },

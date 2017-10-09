@@ -271,7 +271,8 @@
       "atom-beautify:beautify-language-visualforce",
       "atom-beautify:beautify-language-xml",
       "atom-beautify:beautify-language-xtemplate",
-      "atom-beautify:beautify-language-yaml"
+      "atom-beautify:beautify-language-yaml",
+      "atom-beautify:beautify-language-terraform"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -404,7 +405,9 @@
     "nginx beautify",
     "golang template",
     "align-yaml",
-    "goimports"
+    "goimports",
+    "terraform",
+    "terraformfmt"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"
