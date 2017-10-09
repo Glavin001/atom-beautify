@@ -45,7 +45,7 @@ module.exports = class Gherkin extends Beautifier
         write_table: ->
           tempTable = @table
           transposedTable = tempTable[0].map (col, i) -> tempTable.map (row) -> row[i]
-          result = transposedTable.map (col) -> (col.reduce (a1, b1) -> `a1.length > b1.length ? a1 : b1`).length
+          result = transposedTable.map (col) -> (col.reduce (a1, b1) -> if a1.length > b1.length then a1 else b1).length
           for row in @table
             row = row.map (cell, i) ->
               cell + new Array(result[i] - cell.length + 1).join(' ')

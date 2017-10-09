@@ -2,6 +2,9 @@
 - See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
 - ...
 
+# v0.30.6 (2017-10-09)
+- Fix for [#986](https://github.com/Glavin001/atom-beautify/issues/986). Fix for Gherkin table formatting
+
 # v0.30.5 (2017-08-11)
 - Fix for [#1721](https://github.com/Glavin001/atom-beautify/issues/1721). Changes required due to TextBuffer.save becoming async in Atom 1.19
 - Fixes [#1638](https://github.com/Glavin001/atom-beautify/issues/1638). Update type-formatter and Fixes indent size not supported
