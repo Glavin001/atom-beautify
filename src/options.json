@@ -4578,8 +4578,7 @@
       "Lua"
     ],
     "extensions": [
-      "lua",
-      "ttslua"
+      "lua"
     ],
     "properties": {
       "end_of_line": {
@@ -6515,6 +6514,47 @@
         "type": "boolean",
         "default": false,
         "description": "Automatically beautify Rust files on save"
+      }
+    }
+  },
+   "terraform": {
+    "title": "Terraform",
+    "type": "object",
+    "description": "Options for language Terraform",
+    "collapsed": true,
+    "beautifiers": [
+      "terraformfmt"
+    ],
+    "grammars": [
+      "Terraform"
+    ],
+    "extensions": [
+      "tf"
+    ],
+    "properties": {
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Rust Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "terraformfmt",
+        "description": "Default Beautifier to be used for Terraform",
+        "enum": [
+          "terraformfmt"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Terraform files on save"
       }
     }
   },
