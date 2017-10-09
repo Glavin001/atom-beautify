@@ -7229,7 +7229,8 @@
       "TSS"
     ],
     "extensions": [
-      "tss"
+      "lua",
+      "ttslua"
     ],
     "properties": {
       "indent_size": {
