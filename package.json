@@ -179,7 +179,7 @@
     "node-dir": "0.1.17",
     "node-uuid": "1.4.8",
     "open": "0.0.5",
-    "prettydiff": "1.16.37",
+    "prettydiff2": "^2.2.7",
     "pug-beautify": "^0.1.1",
     "remark": "6.0.1",
     "season": "6.0.0",
@@ -426,7 +426,7 @@
         "typescript-formatter",
         "tidy-markdown",
         "underscore-plus",
-        "prettydiff"
+        "prettydiff2"
       ]
     }
   },
@@ -438,7 +438,7 @@
       "typescript-formatter",
       "tidy-markdown",
       "underscore-plus",
-      "prettydiff"
+      "prettydiff2"
     ]
   }
 }

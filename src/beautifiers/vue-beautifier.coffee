@@ -10,7 +10,7 @@ module.exports = class VueBeautifier extends Beautifier
 
   beautify: (text, language, options) ->
     return new @Promise((resolve, reject) =>
-      prettydiff = require("prettydiff")
+      prettydiff = require("prettydiff2")
       _ = require('lodash')
       regexp = /(^<(template|script|style)[^>]*>)((\s|\S)*?)^<\/\2>/gim
 
@@ -37,14 +37,14 @@ module.exports = class VueBeautifier extends Beautifier
                   lang: "scss"
                   mode: "beautify"
                 )
-                prettydiff.api(options)[0]
+                prettydiff(options)
               when "less"
                 options = _.merge(options,
                   source: text
                   lang: "less"
                   mode: "beautify"
                 )
-                prettydiff.api(options)[0]
+                prettydiff(options)
               when undefined
                 require("js-beautify").css(text, options)
               else

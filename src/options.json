@@ -4578,7 +4578,8 @@
       "Lua"
     ],
     "extensions": [
-      "lua"
+      "lua",
+      "ttslua"
     ],
     "properties": {
       "end_of_line": {

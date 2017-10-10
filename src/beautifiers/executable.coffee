@@ -133,7 +133,7 @@ class Executable
     @debug("Run: ", @cmd, args, options)
     { cmd, cwd, ignoreReturnCode, help, onStdin, returnStderr, returnStdoutOrStderr } = options
     exeName = cmd or @cmd
-    cwd ?= os.tmpDir()
+    cwd ?= os.tmpdir()
     help ?= {
       program: @cmd
       link: @installation or @homepage
@@ -213,7 +213,7 @@ class Executable
     Promise.all(args)
 
   relativizePaths: (args) ->
-    tmpDir = os.tmpDir()
+    tmpDir = os.tmpdir()
     newArgs = args.map((arg) ->
       isTmpFile = (typeof arg is 'string' and not arg.includes(':') and \
         path.isAbsolute(arg) and path.dirname(arg).startsWith(tmpDir))
@@ -410,7 +410,7 @@ class HybridExecutable extends Executable
     this.resolveArgs(args)
       .then((args) =>
         { cwd } = options
-        tmpDir = os.tmpDir()
+        tmpDir = os.tmpdir()
         pwd = fs.realpathSync(cwd or tmpDir)
         image = @dockerOptions.image
         workingDir = @dockerOptions.workingDir
