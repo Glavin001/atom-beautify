@@ -11,8 +11,6 @@ You can use [`codo`](https://github.com/coffeedoc/codo) to build your own docume
 After you make a change to language or beautifier `options` you will need to update the `options.json` file that is created on install.
 
 ```bash
-# Update src/options.json file to have new/changed options
-npm run postinstall
 # Update documentation to include information about those options
 npm run docs
 ```
