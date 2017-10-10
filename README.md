@@ -26,3 +26,11 @@ apm install atom-beautify
 ```
 
 Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
+
+## Contribute
+1. Clone the repository
+1. `cd 'atom-beautify'`
+1. Run `npm install`
+1. Run `apm link` (if necessary)
+1. Install [atom-typescript](https://atom.io/packages/atom-typescript) (if using Atom)
+1. Typescript files in `/src` will be compiled to Javascript and saved in `/lib` whenever a file is saved

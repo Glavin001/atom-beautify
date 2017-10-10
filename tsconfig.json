@@ -1,4 +1,5 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
         "module": "commonjs",
         "noImplicitAny": true,
@@ -7,13 +8,15 @@
         "sourceMap": true,
         "target": "ES6",
         "declaration": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "outDir": "lib"
     },
     "include": [
         "./declarations.d.ts",
         "./src/**/*.ts",
         "./script/**/*.ts",
-        "./test/**/*.ts"
+        "./test/**/*.ts",
+        "src"
     ],
     "exclude": [
         "./node_modules"
