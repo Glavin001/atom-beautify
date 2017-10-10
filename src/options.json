@@ -9415,6 +9415,22 @@
             "description": "Absolute path to the \"beautysh\" executable's binary/script."
           }
         }
+      },
+      "terraform": {
+        "key": "terraform",
+        "title": "Terraform",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Terraform executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"terraform\" executable's binary/script."
+          }
+        }
       }
     }
   }

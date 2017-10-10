@@ -14,11 +14,26 @@ module.exports = class Terraformfmt extends Beautifier
     Terraform: false
   }
 
+  executables: [
+    {
+      name: "Terraform"
+      cmd: "terraform"
+      homepage: "https://www.terraform.io"
+      installation: "https://www.terraform.io"
+      version: {
+        parse: (text) -> text.match(/Terraform v(\d+\.\d+\.\d+)/)[1]
+      }
+      docker: {
+        image: "hashicorp/terraform"
+      }
+    }
+  ]
+
   beautify: (text, language, options) ->
-    @run("terraform", [
+    @exe("terraform").run([
       "fmt"
       tempFile = @tempFile("input", text)
       ])
       .then(=>
-        @readFile(tempFile)
+         @readFile(tempFile)
       )
