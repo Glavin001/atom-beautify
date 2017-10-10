@@ -1,6 +1,6 @@
 {
   "name": "atom-beautify",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "version": "0.29.11",
   "private": true,
   "description": "Beautifier for Atom powered by Unibeautify",
