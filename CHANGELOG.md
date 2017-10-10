@@ -1,5 +1,5 @@
 # Next
-- See [](). Add support for Terraform fmt.
+- See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
 - See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
 - ...
 
