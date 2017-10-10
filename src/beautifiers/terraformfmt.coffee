@@ -11,7 +11,7 @@ module.exports = class Terraformfmt extends Beautifier
   isPreInstalled: false
 
   options: {
-    Terraform: true
+    Terraform: false
   }
 
   beautify: (text, language, options) ->
