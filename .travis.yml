@@ -186,3 +186,9 @@ before_install:
     else
       pip install beautysh;
     fi
+  # terraform
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install terraform;
+    else
+      docker pull hashicorp/terraform;
+    fi
