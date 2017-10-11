@@ -92,7 +92,7 @@ before_install:
       git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
     fi
   # Update Homebrew
-  # - brew update
+  - brew update
   - brew tap homebrew/dupes
   - brew tap homebrew/versions
   # Ruby language support
