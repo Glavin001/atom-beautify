@@ -379,7 +379,7 @@ class HybridExecutable extends Executable
         homepage: "https://www.docker.com/"
         installation: "https://www.docker.com/get-docker"
         version: {
-          parse: (text) -> text.match(/version [0]*([1-9]\d*).[0]*([1-9]\d*).[0]*([1-9]\d*)/).slice(1).join('.')
+          parse: (text) -> text.match(/version [0]*([1-9]\d*).[0]*([0-9]\d*).[0]*([0-9]\d*)/).slice(1).join('.')
         }
       })
     return @docker
