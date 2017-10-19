@@ -14,7 +14,7 @@ MULTI_LINE_OUTPUT_TABLE = {
   'NOQA': 6
 }
 
-format = (data, formaters) ->
+format = (data, formatters) ->
   return new Promise (resolve, reject) ->
     client = new net.Socket()
     client.on 'error', (error) ->
@@ -22,7 +22,7 @@ format = (data, formaters) ->
       reject(error)
     client.connect PORT, HOST, ->
       client.setEncoding('utf8')
-      client.write(JSON.stringify({'data': data, 'formaters': formaters}))
+      client.write(JSON.stringify({'data': data, 'formatters': formatters}))
       response = ''
       client.on 'data', (chunk) ->
         response += chunk
@@ -45,22 +45,22 @@ module.exports = class PythonBeautifier extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    formater = {'name': options.formater}
-    if options.formater == 'autopep8'
-      formater.config = {
+    formatter = {'name': options.formatter}
+    if options.formatter == 'autopep8'
+      formatter.config = {
         'ignore': options.ignore
         'max_line_length': options.max_line_length
       }
-    else if options.formater == 'yapf'
-      formater.config = {'style_config': options.style_config}
-    formaters = [formater]
+    else if options.formatter == 'yapf'
+      formatter.config = {'style_config': options.style_config}
+    formatters = [formatter]
     if options.sort_imports
       multi_line_output = MULTI_LINE_OUTPUT_TABLE[options.multi_line_output]
-      formaters.push
+      formatters.push
         'name': 'isort'
         'config': {'multi_line_output': multi_line_output}
     return new @Promise (resolve, reject) ->
-      format(text, formaters)
+      format(text, formatters)
       .then (data) ->
         resolve(data)
       .catch (error) ->

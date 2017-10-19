@@ -6108,7 +6108,7 @@
           "namespace": "python"
         }
       },
-      "formater": {
+      "formatter": {
         "type": "string",
         "default": "autopep8",
         "enum": [
@@ -6116,12 +6116,12 @@
           "yapf"
         ],
         "description": "formatter used by pybeautifier (Supported by autopep8, pybeautifier)",
-        "title": "Formater",
+        "title": "Formatter",
         "beautifiers": [
           "autopep8",
           "pybeautifier"
         ],
-        "key": "formater",
+        "key": "formatter",
         "language": {
           "name": "Python",
           "namespace": "python"
