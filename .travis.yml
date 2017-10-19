@@ -50,6 +50,7 @@ matrix:
     - os: osx
       env:
         - ATOM_CHANNEL=stable
+      rvm: 2.3.1
     # - os: osx
     #   env:
     #     - ATOM_CHANNEL=beta

@@ -100,7 +100,9 @@ fi
 
 if [ -d ./spec ]; then
   echo "Running specs..."
-  "$ATOM_SCRIPT_PATH" --test spec
+  "$ATOM_SCRIPT_PATH" --test spec/atom-beautify-spec.coffee
+  "$ATOM_SCRIPT_PATH" --test spec/beautifier-php-cs-fixer-spec.coffee
+  "$ATOM_SCRIPT_PATH" --test spec/beautify-languages-spec.coffee
 else
   echo "Missing spec folder! Please consider adding a test suite in `./spec`"
   exit 1
