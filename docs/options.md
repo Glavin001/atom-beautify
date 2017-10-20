@@ -10262,6 +10262,7 @@ Automatically beautify Puppet files on save
 | `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `cli_options` | :white_check_mark: | :white_check_mark: | :x: |
 | `formater` | :white_check_mark: | :white_check_mark: | :x: |
 | `ignore` | :white_check_mark: | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :white_check_mark: | :x: |
@@ -10328,6 +10329,32 @@ Automatically beautify Python files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Cli options](#cli-options) 
+
+**Namespace**: `python`
+
+**Key**: `cli_options`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+Override autopep8 config with CLI options (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "cli_options": true
+    }
+}
+```
 
 #####  [Formater](#formater) 
 
@@ -19902,6 +19929,32 @@ The amount of padding to add next to each line. (Supported by align-yaml)
 
 ### autopep8
 
+#####  [Cli options](#cli-options) 
+
+**Namespace**: `python`
+
+**Key**: `cli_options`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+Override autopep8 config with CLI options (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "cli_options": true
+    }
+}
+```
+
 #####  [Max line length](#max-line-length) 
 
 **Namespace**: `python`
@@ -20254,6 +20307,32 @@ Indentation size/length (Supported by formatR)
 
 
 ### pybeautifier
+
+#####  [Cli options](#cli-options) 
+
+**Namespace**: `python`
+
+**Key**: `cli_options`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+
+**Description**:
+
+Override autopep8 config with CLI options (Supported by autopep8, pybeautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "python": {
+        "cli_options": true
+    }
+}
+```
 
 #####  [Max line length](#max-line-length) 
 

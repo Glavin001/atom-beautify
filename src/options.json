@@ -6057,6 +6057,21 @@
       "py"
     ],
     "properties": {
+      "cli_options": {
+        "type": "boolean",
+        "default": true,
+        "description": "Override autopep8 config with CLI options (Supported by autopep8, pybeautifier)",
+        "title": "Cli options",
+        "beautifiers": [
+          "autopep8",
+          "pybeautifier"
+        ],
+        "key": "cli_options",
+        "language": {
+          "name": "Python",
+          "namespace": "python"
+        }
+      },
       "max_line_length": {
         "type": "integer",
         "default": 79,
