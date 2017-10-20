@@ -1,6 +1,7 @@
 # Next
 - See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
 - Fix for [#1888](https://github.com/Glavin001/atom-beautify/issues/1888). Allow 0 for minor and patch versions of Docker
+- See [#1897](https://github.com/Glavin001/atom-beautify/issues/1897). Add an option that allows autopep8 to use the user config file in `.config/pep8` than rather always overriding it with the CLI arguments.
 - ...
 
 # v0.30.5 (2017-08-11)
