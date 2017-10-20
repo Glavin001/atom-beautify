@@ -19,6 +19,10 @@ module.exports = {
   ]
 
   options:
+    cli_options:
+      type: 'boolean'
+      default: true
+      description: "Override autopep8 config with CLI options"
     max_line_length:
       type: 'integer'
       default: 79

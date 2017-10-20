@@ -49,9 +49,9 @@ module.exports = class Autopep8 extends Beautifier
     @exe("autopep8").run([
         tempFile = @tempFile("input", text)
         "-i"
-        ["--max-line-length", "#{options.max_line_length}"] if options.max_line_length?
-        ["--indent-size","#{options.indent_size}"] if options.indent_size?
-        ["--ignore","#{options.ignore.join(',')}"] if options.ignore?
+        ["--max-line-length", "#{options.max_line_length}"] if (options.max_line_length? && options.cli_options)
+        ["--indent-size","#{options.indent_size}"] if (options.indent_size? && options.cli_options)
+        ["--ignore","#{options.ignore.join(',')}"] if (options.ignore? && options.cli_options)
       ])
       .then(=>
         if options.sort_imports
