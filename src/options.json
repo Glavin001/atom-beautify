@@ -3302,6 +3302,20 @@
           "namespace": "js"
         }
       },
+      "unindent_chained_methods": {
+        "type": "boolean",
+        "default": false,
+        "description": "Don't indent chained method calls (Supported by JS Beautify)",
+        "title": "Unindent chained methods",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "unindent_chained_methods",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "break_chained_methods": {
         "type": "boolean",
         "default": false,

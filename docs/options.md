@@ -8,13 +8,13 @@ Configurable options for Atom Beautify.
 
 ---
 
-####  [General](#general) 
+####  [General](#general)
 
 **Description**:
 
 General options for Atom Beautify
 
-#####  [Analytics User Id](#analytics-user-id) 
+#####  [Analytics User Id](#analytics-user-id)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -31,7 +31,7 @@ Unique identifier for this user for tracking usage analytics
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Analytics User Id*" and change it to your desired configuration.
 
-#####  [Beautify Entire File On Save](#beautify-entire-file-on-save) 
+#####  [Beautify Entire File On Save](#beautify-entire-file-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -50,7 +50,7 @@ When beautifying on save, use the entire file, even if there is selected text in
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify Entire File On Save*" and change it to your desired configuration.
 
-#####  [Logger Level](#logger-level) 
+#####  [Logger Level](#logger-level)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -58,7 +58,7 @@ When beautifying on save, use the entire file, even if there is selected text in
 
 **Type**: `string`
 
-**Enum**:  `verbose`  `debug`  `info`  `warn`  `error` 
+**Enum**:  `verbose`  `debug`  `info`  `warn`  `error`
 
 **Description**:
 
@@ -71,7 +71,7 @@ Set the level for the logger
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Logger Level*" and change it to your desired configuration.
 
-#####  [Mute All Errors](#mute-all-errors) 
+#####  [Mute All Errors](#mute-all-errors)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -88,7 +88,7 @@ Do not show any/all errors when they occur
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Mute All Errors*" and change it to your desired configuration.
 
-#####  [Mute Unsupported Language Errors](#mute-unsupported-language-errors) 
+#####  [Mute Unsupported Language Errors](#mute-unsupported-language-errors)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -105,7 +105,7 @@ Do not show "Unsupported Language" errors when they occur
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Mute Unsupported Language Errors*" and change it to your desired configuration.
 
-#####  [Show Loading View](#show-loading-view) 
+#####  [Show Loading View](#show-loading-view)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -124,13 +124,13 @@ Show loading view when beautifying
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Show Loading View*" and change it to your desired configuration.
 
-####  [Executables](#executables) 
+####  [Executables](#executables)
 
 **Description**:
 
 Configure executables used by beautifiers.
 
-#####  [autopep8](#autopep8) 
+#####  [autopep8](#autopep8)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -147,7 +147,7 @@ Options for autopep8 executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*autopep8*" and change it to your desired configuration.
 
-#####  [beautysh](#beautysh) 
+#####  [beautysh](#beautysh)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -164,7 +164,7 @@ Options for beautysh executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*beautysh*" and change it to your desired configuration.
 
-#####  [ClangFormat](#clangformat) 
+#####  [ClangFormat](#clangformat)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -181,7 +181,7 @@ Options for ClangFormat executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*ClangFormat*" and change it to your desired configuration.
 
-#####  [Crystal](#crystal) 
+#####  [Crystal](#crystal)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -198,7 +198,7 @@ Options for Crystal executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Crystal*" and change it to your desired configuration.
 
-#####  [Dfmt](#dfmt) 
+#####  [Dfmt](#dfmt)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -215,7 +215,7 @@ Options for Dfmt executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Dfmt*" and change it to your desired configuration.
 
-#####  [elm-format](#elm-format) 
+#####  [elm-format](#elm-format)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -232,7 +232,7 @@ Options for elm-format executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*elm-format*" and change it to your desired configuration.
 
-#####  [Emacs](#emacs) 
+#####  [Emacs](#emacs)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -249,7 +249,7 @@ Options for Emacs executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Emacs*" and change it to your desired configuration.
 
-#####  [goimports](#goimports) 
+#####  [goimports](#goimports)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -266,7 +266,7 @@ Options for goimports executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*goimports*" and change it to your desired configuration.
 
-#####  [isort](#isort) 
+#####  [isort](#isort)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -283,7 +283,7 @@ Options for isort executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*isort*" and change it to your desired configuration.
 
-#####  [PHP](#php) 
+#####  [PHP](#php)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -300,7 +300,7 @@ Options for PHP executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*PHP*" and change it to your desired configuration.
 
-#####  [PHP-CS-Fixer](#php-cs-fixer) 
+#####  [PHP-CS-Fixer](#php-cs-fixer)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -317,7 +317,7 @@ Options for PHP-CS-Fixer executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*PHP-CS-Fixer*" and change it to your desired configuration.
 
-#####  [PHPCBF](#phpcbf) 
+#####  [PHPCBF](#phpcbf)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -334,7 +334,7 @@ Options for PHPCBF executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*PHPCBF*" and change it to your desired configuration.
 
-#####  [Rscript](#rscript) 
+#####  [Rscript](#rscript)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -351,7 +351,7 @@ Options for Rscript executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Rscript*" and change it to your desired configuration.
 
-#####  [SassConvert](#sassconvert) 
+#####  [SassConvert](#sassconvert)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -368,7 +368,7 @@ Options for SassConvert executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*SassConvert*" and change it to your desired configuration.
 
-#####  [Uncrustify](#uncrustify) 
+#####  [Uncrustify](#uncrustify)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -392,9 +392,9 @@ Supported options for each language.
 
 ---
 
-####  [Apex](#apex) 
+####  [Apex](#apex)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 | Option | Uncrustify |
 | --- | --- |
@@ -407,7 +407,7 @@ Supported options for each language.
 
 Options for language Apex
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -424,7 +424,7 @@ Disable Apex Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -432,7 +432,7 @@ Disable Apex Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`
 
 **Description**:
 
@@ -445,7 +445,7 @@ Default Beautifier to be used for Apex
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -462,7 +462,7 @@ Automatically beautify Apex files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `apex`
 
@@ -470,7 +470,7 @@ Automatically beautify Apex files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -486,9 +486,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [Arduino](#arduino) 
+####  [Arduino](#arduino)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 | Option | Uncrustify |
 | --- | --- |
@@ -501,7 +501,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language Arduino
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -518,7 +518,7 @@ Disable Arduino Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -526,7 +526,7 @@ Disable Arduino Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`
 
 **Description**:
 
@@ -539,7 +539,7 @@ Default Beautifier to be used for Arduino
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -556,7 +556,7 @@ Automatically beautify Arduino files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `arduino`
 
@@ -564,7 +564,7 @@ Automatically beautify Arduino files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -580,9 +580,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [Bash](#bash) 
+####  [Bash](#bash)
 
-**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+**Supported Beautifiers**:  [`beautysh`](#beautysh)
 
 | Option | beautysh |
 | --- | --- |
@@ -595,7 +595,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language Bash
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -612,7 +612,7 @@ Disable Bash Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -620,7 +620,7 @@ Disable Bash Beautification
 
 **Type**: `string`
 
-**Enum**:  `beautysh` 
+**Enum**:  `beautysh`
 
 **Description**:
 
@@ -633,7 +633,7 @@ Default Beautifier to be used for Bash
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -650,7 +650,7 @@ Automatically beautify Bash files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `bash`
 
@@ -660,7 +660,7 @@ Automatically beautify Bash files on save
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+**Supported Beautifiers**:  [`beautysh`](#beautysh)
 
 **Description**:
 
@@ -676,9 +676,9 @@ Indentation size/length (Supported by beautysh)
 }
 ```
 
-####  [C](#c) 
+####  [C](#c)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format)
 
 | Option | Uncrustify | clang-format |
 | --- | --- | --- |
@@ -691,7 +691,7 @@ Indentation size/length (Supported by beautysh)
 
 Options for language C
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -708,7 +708,7 @@ Disable C Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -716,7 +716,7 @@ Disable C Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify`  `clang-format` 
+**Enum**:  `Uncrustify`  `clang-format`
 
 **Description**:
 
@@ -729,7 +729,7 @@ Default Beautifier to be used for C
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -746,7 +746,7 @@ Automatically beautify C files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `c`
 
@@ -754,7 +754,7 @@ Automatically beautify C files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -770,9 +770,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [Coldfusion](#coldfusion) 
+####  [Coldfusion](#coldfusion)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -788,7 +788,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language Coldfusion
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -805,7 +805,7 @@ Disable Coldfusion Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -813,7 +813,7 @@ Disable Coldfusion Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -826,7 +826,7 @@ Default Beautifier to be used for Coldfusion
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -843,7 +843,7 @@ Automatically beautify Coldfusion files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `cfml`
 
@@ -853,7 +853,7 @@ Automatically beautify Coldfusion files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -869,7 +869,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `cfml`
 
@@ -879,7 +879,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -895,7 +895,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `cfml`
 
@@ -905,7 +905,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -921,7 +921,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `cfml`
 
@@ -931,7 +931,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -947,9 +947,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Clojure](#clojure) 
+####  [Clojure](#clojure)
 
-**Supported Beautifiers**:  [`cljfmt`](#cljfmt) 
+**Supported Beautifiers**:  [`cljfmt`](#cljfmt)
 
 | Option | cljfmt |
 | --- | --- |
@@ -961,7 +961,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Clojure
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -978,7 +978,7 @@ Disable Clojure Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -986,7 +986,7 @@ Disable Clojure Beautification
 
 **Type**: `string`
 
-**Enum**:  `cljfmt` 
+**Enum**:  `cljfmt`
 
 **Description**:
 
@@ -999,7 +999,7 @@ Default Beautifier to be used for Clojure
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1016,9 +1016,9 @@ Automatically beautify Clojure files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [CoffeeScript](#coffeescript) 
+####  [CoffeeScript](#coffeescript)
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 | Option | Coffee Formatter | coffee-fmt |
 | --- | --- | --- |
@@ -1050,7 +1050,7 @@ Automatically beautify Clojure files on save
 
 Options for language CoffeeScript
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1067,7 +1067,7 @@ Disable CoffeeScript Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1075,7 +1075,7 @@ Disable CoffeeScript Beautification
 
 **Type**: `string`
 
-**Enum**:  `Coffee Formatter`  `coffee-fmt` 
+**Enum**:  `Coffee Formatter`  `coffee-fmt`
 
 **Description**:
 
@@ -1088,7 +1088,7 @@ Default Beautifier to be used for CoffeeScript
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1105,7 +1105,7 @@ Automatically beautify CoffeeScript files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `js`
 
@@ -1115,9 +1115,9 @@ Automatically beautify CoffeeScript files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1133,7 +1133,7 @@ Automatically beautify CoffeeScript files on save
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -1141,7 +1141,7 @@ Automatically beautify CoffeeScript files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1157,7 +1157,7 @@ Break chained method calls across subsequent lines (Supported by Coffee Formatte
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -1167,9 +1167,9 @@ Break chained method calls across subsequent lines (Supported by Coffee Formatte
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1185,7 +1185,7 @@ Override EOL from line-ending-selector (Supported by Coffee Formatter)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -1193,7 +1193,7 @@ Override EOL from line-ending-selector (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1209,7 +1209,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `js`
 
@@ -1217,7 +1217,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1233,7 +1233,7 @@ End output with newline (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -1241,7 +1241,7 @@ End output with newline (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1257,7 +1257,7 @@ End output with newline (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -1267,7 +1267,7 @@ End output with newline (Supported by Coffee Formatter)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -1283,7 +1283,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -1291,7 +1291,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1307,7 +1307,7 @@ Initial indentation level (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -1317,7 +1317,7 @@ Initial indentation level (Supported by Coffee Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -1333,7 +1333,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -1341,7 +1341,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -1357,7 +1357,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -1365,7 +1365,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1381,7 +1381,7 @@ Enable jslint-stricter mode (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -1389,7 +1389,7 @@ Enable jslint-stricter mode (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1405,7 +1405,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -1413,7 +1413,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1429,7 +1429,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `js`
 
@@ -1439,7 +1439,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1455,7 +1455,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Coffee Formatte
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `js`
 
@@ -1465,7 +1465,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Coffee Formatte
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1481,7 +1481,7 @@ Preserve line-breaks (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -1489,7 +1489,7 @@ Preserve line-breaks (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1505,7 +1505,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -1515,7 +1515,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1531,7 +1531,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -1539,7 +1539,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1555,7 +1555,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -1563,7 +1563,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1579,7 +1579,7 @@ Decode printable characters encoded in xNN notation (Supported by Coffee Formatt
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `js`
 
@@ -1587,7 +1587,7 @@ Decode printable characters encoded in xNN notation (Supported by Coffee Formatt
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -1603,9 +1603,9 @@ Wrap lines at next opportunity after N characters (Supported by Coffee Formatter
 }
 ```
 
-####  [C++](#c-) 
+####  [C++](#c-)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format)
 
 | Option | Uncrustify | clang-format |
 | --- | --- | --- |
@@ -1618,7 +1618,7 @@ Wrap lines at next opportunity after N characters (Supported by Coffee Formatter
 
 Options for language C++
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1635,7 +1635,7 @@ Disable C++ Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1643,7 +1643,7 @@ Disable C++ Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify`  `clang-format` 
+**Enum**:  `Uncrustify`  `clang-format`
 
 **Description**:
 
@@ -1656,7 +1656,7 @@ Default Beautifier to be used for C++
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1673,7 +1673,7 @@ Automatically beautify C++ files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `cpp`
 
@@ -1681,7 +1681,7 @@ Automatically beautify C++ files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -1697,9 +1697,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [Crystal](#crystal) 
+####  [Crystal](#crystal)
 
-**Supported Beautifiers**:  [`Crystal`](#crystal) 
+**Supported Beautifiers**:  [`Crystal`](#crystal)
 
 | Option | Crystal |
 | --- | --- |
@@ -1711,7 +1711,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language Crystal
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1728,7 +1728,7 @@ Disable Crystal Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1736,7 +1736,7 @@ Disable Crystal Beautification
 
 **Type**: `string`
 
-**Enum**:  `Crystal` 
+**Enum**:  `Crystal`
 
 **Description**:
 
@@ -1749,7 +1749,7 @@ Default Beautifier to be used for Crystal
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1766,9 +1766,9 @@ Automatically beautify Crystal files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [C#](#c-) 
+####  [C#](#c-)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 | Option | Uncrustify |
 | --- | --- |
@@ -1781,7 +1781,7 @@ Automatically beautify Crystal files on save
 
 Options for language C#
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1798,7 +1798,7 @@ Disable C# Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1806,7 +1806,7 @@ Disable C# Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`
 
 **Description**:
 
@@ -1819,7 +1819,7 @@ Default Beautifier to be used for C#
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1836,7 +1836,7 @@ Automatically beautify C# files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `cs`
 
@@ -1844,7 +1844,7 @@ Automatically beautify C# files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -1860,9 +1860,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [CSS](#css) 
+####  [CSS](#css)
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)  [`SassConvert`](#sassconvert) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)  [`SassConvert`](#sassconvert)
 
 | Option | CSScomb | JS Beautify | Pretty Diff | SassConvert |
 | --- | --- | --- | --- | --- |
@@ -1888,7 +1888,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language CSS
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1905,7 +1905,7 @@ Disable CSS Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1913,7 +1913,7 @@ Disable CSS Beautification
 
 **Type**: `string`
 
-**Enum**:  `CSScomb`  `JS Beautify`  `Pretty Diff`  `SassConvert` 
+**Enum**:  `CSScomb`  `JS Beautify`  `Pretty Diff`  `SassConvert`
 
 **Description**:
 
@@ -1926,7 +1926,7 @@ Default Beautifier to be used for CSS
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -1943,7 +1943,7 @@ Automatically beautify CSS files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Align assignments](#align-assignments) 
+#####  [Align assignments](#align-assignments)
 
 **Namespace**: `css`
 
@@ -1951,7 +1951,7 @@ Automatically beautify CSS files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -1967,7 +1967,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 }
 ```
 
-#####  [comb custom config file](#comb-custom-config-file) 
+#####  [comb custom config file](#comb-custom-config-file)
 
 **Namespace**: `css`
 
@@ -1975,7 +1975,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -1991,7 +1991,7 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 }
 ```
 
-#####  [Convert quotes](#convert-quotes) 
+#####  [Convert quotes](#convert-quotes)
 
 **Namespace**: `css`
 
@@ -2001,9 +2001,9 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 
 **Type**: `string`
 
-**Enum**:  `none`  `double`  `single` 
+**Enum**:  `none`  `double`  `single`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2019,7 +2019,7 @@ Convert the quote characters delimiting strings from either double or single quo
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `css`
 
@@ -2027,7 +2027,7 @@ Convert the quote characters delimiting strings from either double or single quo
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2043,7 +2043,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Force indentation](#force-indentation) 
+#####  [Force indentation](#force-indentation)
 
 **Namespace**: `css`
 
@@ -2051,7 +2051,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2067,7 +2067,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `css`
 
@@ -2077,7 +2077,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2093,7 +2093,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent comments](#indent-comments) 
+#####  [Indent comments](#indent-comments)
 
 **Namespace**: `css`
 
@@ -2103,7 +2103,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2119,7 +2119,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `css`
 
@@ -2129,7 +2129,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2145,7 +2145,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Newline between rules](#newline-between-rules) 
+#####  [Newline between rules](#newline-between-rules)
 
 **Namespace**: `css`
 
@@ -2155,7 +2155,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2171,7 +2171,7 @@ Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [No lead zero](#no-lead-zero) 
+#####  [No lead zero](#no-lead-zero)
 
 **Namespace**: `css`
 
@@ -2179,7 +2179,7 @@ Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2195,7 +2195,7 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 }
 ```
 
-#####  [comb predefined config](#comb-predefined-config) 
+#####  [comb predefined config](#comb-predefined-config)
 
 **Namespace**: `css`
 
@@ -2205,9 +2205,9 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 
 **Type**: `string`
 
-**Enum**:  `csscomb`  `yandex`  `zen` 
+**Enum**:  `csscomb`  `yandex`  `zen`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -2223,7 +2223,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `css`
 
@@ -2231,7 +2231,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2247,7 +2247,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 }
 ```
 
-#####  [Selector separator newline](#selector-separator-newline) 
+#####  [Selector separator newline](#selector-separator-newline)
 
 **Namespace**: `css`
 
@@ -2255,7 +2255,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2271,7 +2271,7 @@ Add a newline between multiple selectors (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `css`
 
@@ -2279,7 +2279,7 @@ Add a newline between multiple selectors (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2295,9 +2295,9 @@ Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, P
 }
 ```
 
-####  [CSV](#csv) 
+####  [CSV](#csv)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -2309,7 +2309,7 @@ Maximum amount of characters per line (0 = disable) (Supported by JS Beautify, P
 
 Options for language CSV
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2326,7 +2326,7 @@ Disable CSV Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2334,7 +2334,7 @@ Disable CSV Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -2347,7 +2347,7 @@ Default Beautifier to be used for CSV
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2364,9 +2364,9 @@ Automatically beautify CSV files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [D](#d) 
+####  [D](#d)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`dfmt`](#dfmt) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`dfmt`](#dfmt)
 
 | Option | Uncrustify | dfmt |
 | --- | --- | --- |
@@ -2379,7 +2379,7 @@ Automatically beautify CSV files on save
 
 Options for language D
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2396,7 +2396,7 @@ Disable D Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2404,7 +2404,7 @@ Disable D Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify`  `dfmt` 
+**Enum**:  `Uncrustify`  `dfmt`
 
 **Description**:
 
@@ -2417,7 +2417,7 @@ Default Beautifier to be used for D
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2434,7 +2434,7 @@ Automatically beautify D files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `d`
 
@@ -2442,7 +2442,7 @@ Automatically beautify D files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -2458,9 +2458,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [EJS](#ejs) 
+####  [EJS](#ejs)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 | Option | JS Beautify | Pretty Diff |
 | --- | --- | --- |
@@ -2498,7 +2498,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language EJS
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2515,7 +2515,7 @@ Disable EJS Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2523,7 +2523,7 @@ Disable EJS Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff`
 
 **Description**:
 
@@ -2536,7 +2536,7 @@ Default Beautifier to be used for EJS
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -2553,7 +2553,7 @@ Automatically beautify EJS files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -2563,9 +2563,9 @@ Automatically beautify EJS files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2581,7 +2581,7 @@ Automatically beautify EJS files on save
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -2589,7 +2589,7 @@ Automatically beautify EJS files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2605,7 +2605,7 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -2615,9 +2615,9 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2633,7 +2633,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -2641,7 +2641,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2657,7 +2657,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -2665,7 +2665,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2681,7 +2681,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -2689,7 +2689,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2705,7 +2705,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -2715,7 +2715,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2735,7 +2735,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -2745,7 +2745,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2761,7 +2761,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -2769,7 +2769,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2785,7 +2785,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -2793,7 +2793,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2809,7 +2809,7 @@ Initial indentation level (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -2819,9 +2819,9 @@ Initial indentation level (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2837,7 +2837,7 @@ Initial indentation level (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -2847,7 +2847,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2863,7 +2863,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -2871,7 +2871,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -2887,7 +2887,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -2895,7 +2895,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2911,7 +2911,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -2919,7 +2919,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2935,7 +2935,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -2943,7 +2943,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2959,7 +2959,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -2969,7 +2969,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -2985,7 +2985,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -2995,7 +2995,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3011,7 +3011,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -3019,7 +3019,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3035,7 +3035,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -3045,7 +3045,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -3061,7 +3061,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -3069,7 +3069,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3085,7 +3085,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -3093,7 +3093,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -3109,7 +3109,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -3119,7 +3119,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -3204,7 +3204,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -3214,9 +3214,9 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -3232,7 +3232,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -3242,7 +3242,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -3258,7 +3258,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -3268,7 +3268,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3284,9 +3284,9 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-####  [Elm](#elm) 
+####  [Elm](#elm)
 
-**Supported Beautifiers**:  [`elm-format`](#elm-format) 
+**Supported Beautifiers**:  [`elm-format`](#elm-format)
 
 | Option | elm-format |
 | --- | --- |
@@ -3298,7 +3298,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 Options for language Elm
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3315,7 +3315,7 @@ Disable Elm Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3323,7 +3323,7 @@ Disable Elm Beautification
 
 **Type**: `string`
 
-**Enum**:  `elm-format` 
+**Enum**:  `elm-format`
 
 **Description**:
 
@@ -3336,7 +3336,7 @@ Default Beautifier to be used for Elm
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3353,9 +3353,9 @@ Automatically beautify Elm files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [ERB](#erb) 
+####  [ERB](#erb)
 
-**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff)
 
 | Option | HTML Beautifier | Pretty Diff |
 | --- | --- | --- |
@@ -3371,7 +3371,7 @@ Automatically beautify Elm files on save
 
 Options for language ERB
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3388,7 +3388,7 @@ Disable ERB Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3396,7 +3396,7 @@ Disable ERB Beautification
 
 **Type**: `string`
 
-**Enum**:  `HTML Beautifier`  `Pretty Diff` 
+**Enum**:  `HTML Beautifier`  `Pretty Diff`
 
 **Description**:
 
@@ -3409,7 +3409,7 @@ Default Beautifier to be used for ERB
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3426,7 +3426,7 @@ Automatically beautify ERB files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -3436,7 +3436,7 @@ Automatically beautify ERB files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3452,7 +3452,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -3462,7 +3462,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3478,7 +3478,7 @@ Indentation size/length (Supported by HTML Beautifier, Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -3488,7 +3488,7 @@ Indentation size/length (Supported by HTML Beautifier, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3504,7 +3504,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -3514,7 +3514,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -3530,9 +3530,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Erlang](#erlang) 
+####  [Erlang](#erlang)
 
-**Supported Beautifiers**:  [`erl_tidy`](#erl_tidy) 
+**Supported Beautifiers**:  [`erl_tidy`](#erl_tidy)
 
 | Option | erl_tidy |
 | --- | --- |
@@ -3544,7 +3544,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Erlang
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3561,7 +3561,7 @@ Disable Erlang Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3569,7 +3569,7 @@ Disable Erlang Beautification
 
 **Type**: `string`
 
-**Enum**:  `erl_tidy` 
+**Enum**:  `erl_tidy`
 
 **Description**:
 
@@ -3582,7 +3582,7 @@ Default Beautifier to be used for Erlang
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3599,9 +3599,9 @@ Automatically beautify Erlang files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [Fortran](#fortran) 
+####  [Fortran](#fortran)
 
-**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier)
 
 | Option | Fortran Beautifier |
 | --- | --- |
@@ -3615,7 +3615,7 @@ Automatically beautify Erlang files on save
 
 Options for language Fortran
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3632,7 +3632,7 @@ Disable Fortran Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3640,7 +3640,7 @@ Disable Fortran Beautification
 
 **Type**: `string`
 
-**Enum**:  `Fortran Beautifier` 
+**Enum**:  `Fortran Beautifier`
 
 **Description**:
 
@@ -3653,7 +3653,7 @@ Default Beautifier to be used for Fortran
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3670,7 +3670,7 @@ Automatically beautify Fortran files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Emacs path](#emacs-path) 
+#####  [Emacs path](#emacs-path)
 
 **Namespace**: `fortran`
 
@@ -3678,7 +3678,7 @@ Automatically beautify Fortran files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier)
 
 **Description**:
 
@@ -3694,7 +3694,7 @@ Path to the `emacs` executable (Supported by Fortran Beautifier)
 }
 ```
 
-#####  [Emacs script path](#emacs-script-path) 
+#####  [Emacs script path](#emacs-script-path)
 
 **Namespace**: `fortran`
 
@@ -3702,7 +3702,7 @@ Path to the `emacs` executable (Supported by Fortran Beautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier)
 
 **Description**:
 
@@ -3718,9 +3718,9 @@ Path to the emacs script (Supported by Fortran Beautifier)
 }
 ```
 
-####  [gherkin](#gherkin) 
+####  [gherkin](#gherkin)
 
-**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter)
 
 | Option | Gherkin formatter |
 | --- | --- |
@@ -3734,7 +3734,7 @@ Path to the emacs script (Supported by Fortran Beautifier)
 
 Options for language gherkin
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3751,7 +3751,7 @@ Disable gherkin Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3759,7 +3759,7 @@ Disable gherkin Beautification
 
 **Type**: `string`
 
-**Enum**:  `Gherkin formatter` 
+**Enum**:  `Gherkin formatter`
 
 **Description**:
 
@@ -3772,7 +3772,7 @@ Default Beautifier to be used for gherkin
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3789,7 +3789,7 @@ Automatically beautify gherkin files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `gherkin`
 
@@ -3799,7 +3799,7 @@ Automatically beautify gherkin files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter)
 
 **Description**:
 
@@ -3815,7 +3815,7 @@ Indentation character (Supported by Gherkin formatter)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `gherkin`
 
@@ -3825,7 +3825,7 @@ Indentation character (Supported by Gherkin formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter)
 
 **Description**:
 
@@ -3841,9 +3841,9 @@ Indentation size/length (Supported by Gherkin formatter)
 }
 ```
 
-####  [GLSL](#glsl) 
+####  [GLSL](#glsl)
 
-**Supported Beautifiers**:  [`clang-format`](#clang-format) 
+**Supported Beautifiers**:  [`clang-format`](#clang-format)
 
 | Option | clang-format |
 | --- | --- |
@@ -3856,7 +3856,7 @@ Indentation size/length (Supported by Gherkin formatter)
 
 Options for language GLSL
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3873,7 +3873,7 @@ Disable GLSL Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3881,7 +3881,7 @@ Disable GLSL Beautification
 
 **Type**: `string`
 
-**Enum**:  `clang-format` 
+**Enum**:  `clang-format`
 
 **Description**:
 
@@ -3894,7 +3894,7 @@ Default Beautifier to be used for GLSL
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3911,7 +3911,7 @@ Automatically beautify GLSL files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `glsl`
 
@@ -3919,7 +3919,7 @@ Automatically beautify GLSL files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`clang-format`](#clang-format) 
+**Supported Beautifiers**:  [`clang-format`](#clang-format)
 
 **Description**:
 
@@ -3935,9 +3935,9 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 }
 ```
 
-####  [Go](#go) 
+####  [Go](#go)
 
-**Supported Beautifiers**:  [`gofmt`](#gofmt)  [`goimports`](#goimports) 
+**Supported Beautifiers**:  [`gofmt`](#gofmt)  [`goimports`](#goimports)
 
 | Option | gofmt | goimports |
 | --- | --- | --- |
@@ -3949,7 +3949,7 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 
 Options for language Go
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3966,7 +3966,7 @@ Disable Go Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -3974,7 +3974,7 @@ Disable Go Beautification
 
 **Type**: `string`
 
-**Enum**:  `gofmt`  `goimports` 
+**Enum**:  `gofmt`  `goimports`
 
 **Description**:
 
@@ -3987,7 +3987,7 @@ Default Beautifier to be used for Go
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4004,9 +4004,9 @@ Automatically beautify Go files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [Golang Template](#golang-template) 
+####  [Golang Template](#golang-template)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -4022,7 +4022,7 @@ Automatically beautify Go files on save
 
 Options for language Golang Template
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4039,7 +4039,7 @@ Disable Golang Template Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4047,7 +4047,7 @@ Disable Golang Template Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -4060,7 +4060,7 @@ Default Beautifier to be used for Golang Template
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4077,7 +4077,7 @@ Automatically beautify Golang Template files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -4087,7 +4087,7 @@ Automatically beautify Golang Template files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4103,7 +4103,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -4113,7 +4113,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4129,7 +4129,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -4139,7 +4139,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4155,7 +4155,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -4165,7 +4165,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4181,9 +4181,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Handlebars](#handlebars) 
+####  [Handlebars](#handlebars)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 | Option | JS Beautify | Pretty Diff |
 | --- | --- | --- |
@@ -4208,7 +4208,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Handlebars
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4225,7 +4225,7 @@ Disable Handlebars Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4233,7 +4233,7 @@ Disable Handlebars Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff`
 
 **Description**:
 
@@ -4246,7 +4246,7 @@ Default Beautifier to be used for Handlebars
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4263,7 +4263,7 @@ Automatically beautify Handlebars files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -4273,9 +4273,9 @@ Automatically beautify Handlebars files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4291,7 +4291,7 @@ Automatically beautify Handlebars files on save
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -4299,7 +4299,7 @@ Automatically beautify Handlebars files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4315,7 +4315,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -4325,7 +4325,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4345,7 +4345,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -4355,7 +4355,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4371,7 +4371,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -4379,7 +4379,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4395,7 +4395,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -4405,9 +4405,9 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4423,7 +4423,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -4433,7 +4433,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4449,7 +4449,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -4459,7 +4459,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4475,7 +4475,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -4485,7 +4485,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4501,7 +4501,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -4511,7 +4511,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4596,7 +4596,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -4606,9 +4606,9 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4624,7 +4624,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -4634,7 +4634,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4650,7 +4650,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -4660,7 +4660,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4676,9 +4676,9 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-####  [Haskell](#haskell) 
+####  [Haskell](#haskell)
 
-**Supported Beautifiers**:  [`stylish-haskell`](#stylish-haskell) 
+**Supported Beautifiers**:  [`stylish-haskell`](#stylish-haskell)
 
 | Option | stylish-haskell |
 | --- | --- |
@@ -4690,7 +4690,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 Options for language Haskell
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4707,7 +4707,7 @@ Disable Haskell Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4715,7 +4715,7 @@ Disable Haskell Beautification
 
 **Type**: `string`
 
-**Enum**:  `stylish-haskell` 
+**Enum**:  `stylish-haskell`
 
 **Description**:
 
@@ -4728,7 +4728,7 @@ Default Beautifier to be used for Haskell
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4745,9 +4745,9 @@ Automatically beautify Haskell files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [HTML](#html) 
+####  [HTML](#html)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 | Option | JS Beautify | Pretty Diff |
 | --- | --- | --- |
@@ -4772,7 +4772,7 @@ Automatically beautify Haskell files on save
 
 Options for language HTML
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4789,7 +4789,7 @@ Disable HTML Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4797,7 +4797,7 @@ Disable HTML Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff`
 
 **Description**:
 
@@ -4810,7 +4810,7 @@ Default Beautifier to be used for HTML
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -4827,7 +4827,7 @@ Automatically beautify HTML files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -4837,9 +4837,9 @@ Automatically beautify HTML files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4855,7 +4855,7 @@ Automatically beautify HTML files on save
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -4863,7 +4863,7 @@ Automatically beautify HTML files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4879,7 +4879,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -4889,7 +4889,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4909,7 +4909,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -4919,7 +4919,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -4935,7 +4935,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -4943,7 +4943,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4959,7 +4959,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -4969,9 +4969,9 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -4987,7 +4987,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -4997,7 +4997,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5013,7 +5013,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -5023,7 +5023,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5039,7 +5039,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -5049,7 +5049,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5065,7 +5065,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -5075,7 +5075,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5160,7 +5160,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -5170,9 +5170,9 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5188,7 +5188,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -5198,7 +5198,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5214,7 +5214,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -5224,7 +5224,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5240,9 +5240,9 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-####  [Jade](#jade) 
+####  [Jade](#jade)
 
-**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify) 
+**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify)
 
 | Option | Pug Beautify |
 | --- | --- |
@@ -5256,7 +5256,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 Options for language Jade
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5273,7 +5273,7 @@ Disable Jade Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5281,7 +5281,7 @@ Disable Jade Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pug Beautify` 
+**Enum**:  `Pug Beautify`
 
 **Description**:
 
@@ -5294,7 +5294,7 @@ Default Beautifier to be used for Jade
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5311,7 +5311,7 @@ Automatically beautify Jade files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -5321,7 +5321,7 @@ Automatically beautify Jade files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify) 
+**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify)
 
 **Description**:
 
@@ -5337,7 +5337,7 @@ Indentation character (Supported by Pug Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -5347,7 +5347,7 @@ Indentation character (Supported by Pug Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify) 
+**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify)
 
 **Description**:
 
@@ -5363,9 +5363,9 @@ Indentation size/length (Supported by Pug Beautify)
 }
 ```
 
-####  [Java](#java) 
+####  [Java](#java)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 | Option | Uncrustify |
 | --- | --- |
@@ -5378,7 +5378,7 @@ Indentation size/length (Supported by Pug Beautify)
 
 Options for language Java
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5395,7 +5395,7 @@ Disable Java Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5403,7 +5403,7 @@ Disable Java Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`
 
 **Description**:
 
@@ -5416,7 +5416,7 @@ Default Beautifier to be used for Java
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5433,7 +5433,7 @@ Automatically beautify Java files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `java`
 
@@ -5441,7 +5441,7 @@ Automatically beautify Java files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -5457,9 +5457,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [JavaScript](#javascript) 
+####  [JavaScript](#javascript)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`JSCS Fixer`](#jscs-fixer)  [`ESLint Fixer`](#eslint-fixer)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`JSCS Fixer`](#jscs-fixer)  [`ESLint Fixer`](#eslint-fixer)  [`Pretty Diff`](#pretty-diff)
 
 | Option | ESLint Fixer | JS Beautify | JSCS Fixer | Pretty Diff |
 | --- | --- | --- | --- | --- |
@@ -5467,6 +5467,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :x: | :white_check_mark: | :x: | :x: |
+| `unindent_chained_methods` | :x: | :white_check_mark: | :x: | :x: |
 | `break_chained_methods` | :x: | :white_check_mark: | :x: | :white_check_mark: |
 | `end_of_line` | :x: | :white_check_mark: | :x: | :x: |
 | `end_with_comma` | :x: | :white_check_mark: | :x: | :white_check_mark: |
@@ -5491,7 +5492,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language JavaScript
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5508,7 +5509,7 @@ Disable JavaScript Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5516,7 +5517,7 @@ Disable JavaScript Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `JSCS Fixer`  `ESLint Fixer`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `JSCS Fixer`  `ESLint Fixer`  `Pretty Diff`
 
 **Description**:
 
@@ -5529,7 +5530,7 @@ Default Beautifier to be used for JavaScript
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -5546,7 +5547,7 @@ Automatically beautify JavaScript files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `js`
 
@@ -5556,9 +5557,9 @@ Automatically beautify JavaScript files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5574,7 +5575,7 @@ Automatically beautify JavaScript files on save
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -5582,7 +5583,7 @@ Automatically beautify JavaScript files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5598,7 +5599,7 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -5608,9 +5609,9 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5626,7 +5627,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -5634,7 +5635,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5650,7 +5651,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `js`
 
@@ -5658,7 +5659,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5674,7 +5675,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -5682,7 +5683,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5698,7 +5699,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -5708,7 +5709,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5724,7 +5725,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -5732,7 +5733,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5748,7 +5749,7 @@ Initial indentation level (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -5758,7 +5759,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5774,7 +5775,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -5782,7 +5783,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5798,7 +5799,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -5806,7 +5807,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5822,7 +5823,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -5830,7 +5831,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5846,7 +5847,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -5854,7 +5855,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5870,7 +5871,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `js`
 
@@ -5880,7 +5881,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5896,7 +5897,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `js`
 
@@ -5906,7 +5907,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5922,7 +5923,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -5930,7 +5931,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5946,7 +5947,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -5956,7 +5957,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -5972,7 +5973,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -5980,7 +5981,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -5996,7 +5997,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -6004,7 +6005,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6020,7 +6021,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `js`
 
@@ -6028,7 +6029,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6044,9 +6045,9 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 }
 ```
 
-####  [JSON](#json) 
+####  [JSON](#json)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 | Option | JS Beautify | Pretty Diff |
 | --- | --- | --- |
@@ -6078,7 +6079,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 
 Options for language JSON
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -6095,7 +6096,7 @@ Disable JSON Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -6103,7 +6104,7 @@ Disable JSON Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff`
 
 **Description**:
 
@@ -6116,7 +6117,7 @@ Default Beautifier to be used for JSON
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -6133,7 +6134,7 @@ Automatically beautify JSON files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `js`
 
@@ -6143,9 +6144,9 @@ Automatically beautify JSON files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6161,7 +6162,7 @@ Automatically beautify JSON files on save
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -6169,7 +6170,7 @@ Automatically beautify JSON files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6185,7 +6186,7 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -6195,9 +6196,9 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6213,7 +6214,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -6221,7 +6222,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6237,7 +6238,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `js`
 
@@ -6245,7 +6246,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6261,7 +6262,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -6269,7 +6270,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6285,7 +6286,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -6295,7 +6296,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6311,7 +6312,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -6319,7 +6320,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6335,7 +6336,7 @@ Initial indentation level (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -6345,7 +6346,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6361,7 +6362,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -6369,7 +6370,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6385,7 +6386,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -6393,7 +6394,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6409,7 +6410,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -6417,7 +6418,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6433,7 +6434,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -6441,7 +6442,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6457,7 +6458,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `js`
 
@@ -6467,7 +6468,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6483,7 +6484,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `js`
 
@@ -6493,7 +6494,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6509,7 +6510,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -6517,7 +6518,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6533,7 +6534,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -6543,7 +6544,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6559,7 +6560,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -6567,7 +6568,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6583,7 +6584,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -6591,7 +6592,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6607,7 +6608,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `js`
 
@@ -6615,7 +6616,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6631,9 +6632,9 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 }
 ```
 
-####  [JSX](#jsx) 
+####  [JSX](#jsx)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 | Option | JS Beautify | Pretty Diff |
 | --- | --- | --- |
@@ -6666,7 +6667,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 
 Options for language JSX
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -6683,7 +6684,7 @@ Disable JSX Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -6691,7 +6692,7 @@ Disable JSX Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff`
 
 **Description**:
 
@@ -6704,7 +6705,7 @@ Default Beautifier to be used for JSX
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -6721,7 +6722,7 @@ Automatically beautify JSX files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `js`
 
@@ -6731,9 +6732,9 @@ Automatically beautify JSX files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6749,7 +6750,7 @@ Automatically beautify JSX files on save
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -6757,7 +6758,7 @@ Automatically beautify JSX files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6773,7 +6774,7 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 }
 ```
 
-#####  [E4x](#e4x) 
+#####  [E4x](#e4x)
 
 **Namespace**: `jsx`
 
@@ -6783,7 +6784,7 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6799,7 +6800,7 @@ Support e4x/jsx syntax (Supported by JS Beautify)
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -6809,9 +6810,9 @@ Support e4x/jsx syntax (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6827,7 +6828,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -6835,7 +6836,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6851,7 +6852,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `js`
 
@@ -6859,7 +6860,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6875,7 +6876,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -6883,7 +6884,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6899,7 +6900,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -6909,7 +6910,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6925,7 +6926,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -6933,7 +6934,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -6949,7 +6950,7 @@ Initial indentation level (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -6959,7 +6960,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6975,7 +6976,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -6983,7 +6984,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -6999,7 +7000,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -7007,7 +7008,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -7023,7 +7024,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -7031,7 +7032,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -7047,7 +7048,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -7055,7 +7056,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -7071,7 +7072,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `js`
 
@@ -7081,7 +7082,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -7097,7 +7098,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `js`
 
@@ -7107,7 +7108,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7123,7 +7124,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -7131,7 +7132,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7147,7 +7148,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -7157,7 +7158,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -7173,7 +7174,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -7181,7 +7182,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7197,7 +7198,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -7205,7 +7206,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -7221,7 +7222,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `js`
 
@@ -7229,7 +7230,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7245,9 +7246,9 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 }
 ```
 
-####  [LaTeX](#latex) 
+####  [LaTeX](#latex)
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 | Option | Latex Beautify |
 | --- | --- |
@@ -7266,7 +7267,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 
 Options for language LaTeX
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7283,7 +7284,7 @@ Disable LaTeX Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7291,7 +7292,7 @@ Disable LaTeX Beautification
 
 **Type**: `string`
 
-**Enum**:  `Latex Beautify` 
+**Enum**:  `Latex Beautify`
 
 **Description**:
 
@@ -7304,7 +7305,7 @@ Default Beautifier to be used for LaTeX
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7321,7 +7322,7 @@ Automatically beautify LaTeX files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Align columns in environments](#align-columns-in-environments) 
+#####  [Align columns in environments](#align-columns-in-environments)
 
 **Namespace**: `latex`
 
@@ -7331,7 +7332,7 @@ Automatically beautify LaTeX files on save
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -7352,7 +7353,7 @@ Aligns columns by the alignment tabs for environments specified (Supported by La
 }
 ```
 
-#####  [Always look for split braces](#always-look-for-split-braces) 
+#####  [Always look for split braces](#always-look-for-split-braces)
 
 **Namespace**: `latex`
 
@@ -7362,7 +7363,7 @@ Aligns columns by the alignment tabs for environments specified (Supported by La
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -7378,7 +7379,7 @@ If `latexindent` should look for commands that split braces across lines (Suppor
 }
 ```
 
-#####  [Always look for split brackets](#always-look-for-split-brackets) 
+#####  [Always look for split brackets](#always-look-for-split-brackets)
 
 **Namespace**: `latex`
 
@@ -7386,7 +7387,7 @@ If `latexindent` should look for commands that split braces across lines (Suppor
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -7402,7 +7403,7 @@ If `latexindent` should look for commands that split brackets across lines (Supp
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `latex`
 
@@ -7412,7 +7413,7 @@ If `latexindent` should look for commands that split brackets across lines (Supp
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -7428,7 +7429,7 @@ Indentation character (Supported by Latex Beautify)
 }
 ```
 
-#####  [Indent preamble](#indent-preamble) 
+#####  [Indent preamble](#indent-preamble)
 
 **Namespace**: `latex`
 
@@ -7436,7 +7437,7 @@ Indentation character (Supported by Latex Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -7452,7 +7453,7 @@ Indent the preamble (Supported by Latex Beautify)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `latex`
 
@@ -7460,7 +7461,7 @@ Indent the preamble (Supported by Latex Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -7476,7 +7477,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by L
 }
 ```
 
-#####  [Remove trailing whitespace](#remove-trailing-whitespace) 
+#####  [Remove trailing whitespace](#remove-trailing-whitespace)
 
 **Namespace**: `latex`
 
@@ -7484,7 +7485,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by L
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -7500,9 +7501,9 @@ Remove trailing whitespace (Supported by Latex Beautify)
 }
 ```
 
-####  [LESS](#less) 
+####  [LESS](#less)
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff)
 
 | Option | CSScomb | Pretty Diff |
 | --- | --- | --- |
@@ -7526,7 +7527,7 @@ Remove trailing whitespace (Supported by Latex Beautify)
 
 Options for language LESS
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7543,7 +7544,7 @@ Disable LESS Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7551,7 +7552,7 @@ Disable LESS Beautification
 
 **Type**: `string`
 
-**Enum**:  `CSScomb`  `Pretty Diff` 
+**Enum**:  `CSScomb`  `Pretty Diff`
 
 **Description**:
 
@@ -7564,7 +7565,7 @@ Default Beautifier to be used for LESS
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7581,7 +7582,7 @@ Automatically beautify LESS files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Align assignments](#align-assignments) 
+#####  [Align assignments](#align-assignments)
 
 **Namespace**: `css`
 
@@ -7589,7 +7590,7 @@ Automatically beautify LESS files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7605,7 +7606,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 }
 ```
 
-#####  [comb custom config file](#comb-custom-config-file) 
+#####  [comb custom config file](#comb-custom-config-file)
 
 **Namespace**: `css`
 
@@ -7613,7 +7614,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -7629,7 +7630,7 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 }
 ```
 
-#####  [Convert quotes](#convert-quotes) 
+#####  [Convert quotes](#convert-quotes)
 
 **Namespace**: `css`
 
@@ -7639,9 +7640,9 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 
 **Type**: `string`
 
-**Enum**:  `none`  `double`  `single` 
+**Enum**:  `none`  `double`  `single`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7657,7 +7658,7 @@ Convert the quote characters delimiting strings from either double or single quo
 }
 ```
 
-#####  [Force indentation](#force-indentation) 
+#####  [Force indentation](#force-indentation)
 
 **Namespace**: `css`
 
@@ -7665,7 +7666,7 @@ Convert the quote characters delimiting strings from either double or single quo
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7681,7 +7682,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `css`
 
@@ -7691,7 +7692,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7707,7 +7708,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent comments](#indent-comments) 
+#####  [Indent comments](#indent-comments)
 
 **Namespace**: `css`
 
@@ -7717,7 +7718,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7733,7 +7734,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `css`
 
@@ -7743,7 +7744,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7759,7 +7760,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Newline between rules](#newline-between-rules) 
+#####  [Newline between rules](#newline-between-rules)
 
 **Namespace**: `css`
 
@@ -7769,7 +7770,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7785,7 +7786,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 }
 ```
 
-#####  [No lead zero](#no-lead-zero) 
+#####  [No lead zero](#no-lead-zero)
 
 **Namespace**: `css`
 
@@ -7793,7 +7794,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7809,7 +7810,7 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 }
 ```
 
-#####  [comb predefined config](#comb-predefined-config) 
+#####  [comb predefined config](#comb-predefined-config)
 
 **Namespace**: `css`
 
@@ -7819,9 +7820,9 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 
 **Type**: `string`
 
-**Enum**:  `csscomb`  `yandex`  `zen` 
+**Enum**:  `csscomb`  `yandex`  `zen`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -7837,7 +7838,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `css`
 
@@ -7845,7 +7846,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7861,7 +7862,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `css`
 
@@ -7869,7 +7870,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -7885,9 +7886,9 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 }
 ```
 
-####  [Lua](#lua) 
+####  [Lua](#lua)
 
-**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier)
 
 | Option | Lua beautifier |
 | --- | --- |
@@ -7900,7 +7901,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 Options for language Lua
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7917,7 +7918,7 @@ Disable Lua Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7925,7 +7926,7 @@ Disable Lua Beautification
 
 **Type**: `string`
 
-**Enum**:  `Lua beautifier` 
+**Enum**:  `Lua beautifier`
 
 **Description**:
 
@@ -7938,7 +7939,7 @@ Default Beautifier to be used for Lua
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -7955,7 +7956,7 @@ Automatically beautify Lua files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `lua`
 
@@ -7965,9 +7966,9 @@ Automatically beautify Lua files on save
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier)
 
 **Description**:
 
@@ -7983,9 +7984,9 @@ Override EOL from line-ending-selector (Supported by Lua beautifier)
 }
 ```
 
-####  [Markdown](#markdown) 
+####  [Markdown](#markdown)
 
-**Supported Beautifiers**:  [`Remark`](#remark)  [`Tidy Markdown`](#tidy-markdown) 
+**Supported Beautifiers**:  [`Remark`](#remark)  [`Tidy Markdown`](#tidy-markdown)
 
 | Option | Remark | Tidy Markdown |
 | --- | --- | --- |
@@ -8000,7 +8001,7 @@ Override EOL from line-ending-selector (Supported by Lua beautifier)
 
 Options for language Markdown
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8017,7 +8018,7 @@ Disable Markdown Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8025,7 +8026,7 @@ Disable Markdown Beautification
 
 **Type**: `string`
 
-**Enum**:  `Remark`  `Tidy Markdown` 
+**Enum**:  `Remark`  `Tidy Markdown`
 
 **Description**:
 
@@ -8038,7 +8039,7 @@ Default Beautifier to be used for Markdown
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8055,7 +8056,7 @@ Automatically beautify Markdown files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Commonmark](#commonmark) 
+#####  [Commonmark](#commonmark)
 
 **Namespace**: `markdown`
 
@@ -8063,7 +8064,7 @@ Automatically beautify Markdown files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Remark`](#remark) 
+**Supported Beautifiers**:  [`Remark`](#remark)
 
 **Description**:
 
@@ -8079,7 +8080,7 @@ Allows and disallows several constructs. (Supported by Remark)
 }
 ```
 
-#####  [Gfm](#gfm) 
+#####  [Gfm](#gfm)
 
 **Namespace**: `markdown`
 
@@ -8089,7 +8090,7 @@ Allows and disallows several constructs. (Supported by Remark)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Remark`](#remark) 
+**Supported Beautifiers**:  [`Remark`](#remark)
 
 **Description**:
 
@@ -8105,7 +8106,7 @@ GitHub Flavoured Markdown (Supported by Remark)
 }
 ```
 
-#####  [Yaml](#yaml) 
+#####  [Yaml](#yaml)
 
 **Namespace**: `markdown`
 
@@ -8115,7 +8116,7 @@ GitHub Flavoured Markdown (Supported by Remark)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Remark`](#remark) 
+**Supported Beautifiers**:  [`Remark`](#remark)
 
 **Description**:
 
@@ -8131,9 +8132,9 @@ Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax
 }
 ```
 
-####  [Marko](#marko) 
+####  [Marko](#marko)
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 | Option | Marko Beautifier |
 | --- | --- |
@@ -8159,7 +8160,7 @@ Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax
 
 Options for language Marko
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8176,7 +8177,7 @@ Disable Marko Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8184,7 +8185,7 @@ Disable Marko Beautification
 
 **Type**: `string`
 
-**Enum**:  `Marko Beautifier` 
+**Enum**:  `Marko Beautifier`
 
 **Description**:
 
@@ -8197,7 +8198,7 @@ Default Beautifier to be used for Marko
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8214,7 +8215,7 @@ Automatically beautify Marko files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -8224,9 +8225,9 @@ Automatically beautify Marko files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8242,7 +8243,7 @@ Automatically beautify Marko files on save
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -8250,7 +8251,7 @@ Automatically beautify Marko files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8266,7 +8267,7 @@ End output with newline (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -8276,7 +8277,7 @@ End output with newline (Supported by Marko Beautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8296,7 +8297,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -8306,7 +8307,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8322,7 +8323,7 @@ Indentation character (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -8330,7 +8331,7 @@ Indentation character (Supported by Marko Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8346,7 +8347,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -8356,9 +8357,9 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8374,7 +8375,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -8384,7 +8385,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8400,7 +8401,7 @@ Indentation size/length (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -8410,7 +8411,7 @@ Indentation size/length (Supported by Marko Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8426,7 +8427,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -8436,7 +8437,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8452,7 +8453,7 @@ Preserve line-breaks (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Syntax](#syntax) 
+#####  [Syntax](#syntax)
 
 **Namespace**: `marko`
 
@@ -8462,9 +8463,9 @@ Preserve line-breaks (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `html`  `concise` 
+**Enum**:  `html`  `concise`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8480,7 +8481,7 @@ Preserve line-breaks (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -8490,7 +8491,7 @@ Preserve line-breaks (Supported by Marko Beautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8575,7 +8576,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -8585,9 +8586,9 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8603,7 +8604,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -8613,7 +8614,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8629,7 +8630,7 @@ Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -8639,7 +8640,7 @@ Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -8655,9 +8656,9 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 }
 ```
 
-####  [Mustache](#mustache) 
+####  [Mustache](#mustache)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 | Option | JS Beautify | Pretty Diff |
 | --- | --- | --- |
@@ -8682,7 +8683,7 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 
 Options for language Mustache
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8699,7 +8700,7 @@ Disable Mustache Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8707,7 +8708,7 @@ Disable Mustache Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff`
 
 **Description**:
 
@@ -8720,7 +8721,7 @@ Default Beautifier to be used for Mustache
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -8737,7 +8738,7 @@ Automatically beautify Mustache files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -8747,9 +8748,9 @@ Automatically beautify Mustache files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -8765,7 +8766,7 @@ Automatically beautify Mustache files on save
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -8773,7 +8774,7 @@ Automatically beautify Mustache files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -8789,7 +8790,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -8799,7 +8800,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -8819,7 +8820,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -8829,7 +8830,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -8845,7 +8846,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -8853,7 +8854,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -8869,7 +8870,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -8879,9 +8880,9 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -8897,7 +8898,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -8907,7 +8908,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -8923,7 +8924,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -8933,7 +8934,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -8949,7 +8950,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -8959,7 +8960,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -8975,7 +8976,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -8985,7 +8986,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -9068,7 +9069,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -9078,9 +9079,9 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -9096,7 +9097,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -9106,7 +9107,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -9122,7 +9123,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -9132,7 +9133,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -9148,9 +9149,9 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-####  [Nginx](#nginx) 
+####  [Nginx](#nginx)
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 | Option | Nginx Beautify |
 | --- | --- |
@@ -9166,7 +9167,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 Options for language Nginx
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9183,7 +9184,7 @@ Disable Nginx Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9191,7 +9192,7 @@ Disable Nginx Beautification
 
 **Type**: `string`
 
-**Enum**:  `Nginx Beautify` 
+**Enum**:  `Nginx Beautify`
 
 **Description**:
 
@@ -9204,7 +9205,7 @@ Default Beautifier to be used for Nginx
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9221,7 +9222,7 @@ Automatically beautify Nginx files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Don&#x27;t join curly brackets](#don't-join-curly-brackets) 
+#####  [Don&#x27;t join curly brackets](#don't-join-curly-brackets)
 
 **Namespace**: `nginx`
 
@@ -9231,7 +9232,7 @@ Automatically beautify Nginx files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -9247,7 +9248,7 @@ Automatically beautify Nginx files on save
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `nginx`
 
@@ -9257,7 +9258,7 @@ Automatically beautify Nginx files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -9273,7 +9274,7 @@ Indentation character (Supported by Nginx Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `nginx`
 
@@ -9283,7 +9284,7 @@ Indentation character (Supported by Nginx Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -9299,7 +9300,7 @@ Indentation size/length (Supported by Nginx Beautify)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `nginx`
 
@@ -9307,7 +9308,7 @@ Indentation size/length (Supported by Nginx Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -9323,9 +9324,9 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 }
 ```
 
-####  [Nunjucks](#nunjucks) 
+####  [Nunjucks](#nunjucks)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -9341,7 +9342,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 
 Options for language Nunjucks
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9358,7 +9359,7 @@ Disable Nunjucks Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9366,7 +9367,7 @@ Disable Nunjucks Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -9379,7 +9380,7 @@ Default Beautifier to be used for Nunjucks
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9396,7 +9397,7 @@ Automatically beautify Nunjucks files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -9406,7 +9407,7 @@ Automatically beautify Nunjucks files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -9422,7 +9423,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -9432,7 +9433,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -9448,7 +9449,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -9458,7 +9459,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -9474,7 +9475,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -9484,7 +9485,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -9500,9 +9501,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Objective-C](#objective-c) 
+####  [Objective-C](#objective-c)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)  [`clang-format`](#clang-format)
 
 | Option | Uncrustify | clang-format |
 | --- | --- | --- |
@@ -9515,7 +9516,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Objective-C
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9532,7 +9533,7 @@ Disable Objective-C Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9540,7 +9541,7 @@ Disable Objective-C Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify`  `clang-format` 
+**Enum**:  `Uncrustify`  `clang-format`
 
 **Description**:
 
@@ -9553,7 +9554,7 @@ Default Beautifier to be used for Objective-C
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9570,7 +9571,7 @@ Automatically beautify Objective-C files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `objectivec`
 
@@ -9578,7 +9579,7 @@ Automatically beautify Objective-C files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -9594,9 +9595,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [OCaml](#ocaml) 
+####  [OCaml](#ocaml)
 
-**Supported Beautifiers**:  [`ocp-indent`](#ocp-indent) 
+**Supported Beautifiers**:  [`ocp-indent`](#ocp-indent)
 
 | Option | ocp-indent |
 | --- | --- |
@@ -9608,7 +9609,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language OCaml
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9625,7 +9626,7 @@ Disable OCaml Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9633,7 +9634,7 @@ Disable OCaml Beautification
 
 **Type**: `string`
 
-**Enum**:  `ocp-indent` 
+**Enum**:  `ocp-indent`
 
 **Description**:
 
@@ -9646,7 +9647,7 @@ Default Beautifier to be used for OCaml
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9663,9 +9664,9 @@ Automatically beautify OCaml files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [Pawn](#pawn) 
+####  [Pawn](#pawn)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 | Option | Uncrustify |
 | --- | --- |
@@ -9678,7 +9679,7 @@ Automatically beautify OCaml files on save
 
 Options for language Pawn
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9695,7 +9696,7 @@ Disable Pawn Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9703,7 +9704,7 @@ Disable Pawn Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`
 
 **Description**:
 
@@ -9716,7 +9717,7 @@ Default Beautifier to be used for Pawn
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9733,7 +9734,7 @@ Automatically beautify Pawn files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `pawn`
 
@@ -9741,7 +9742,7 @@ Automatically beautify Pawn files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -9757,9 +9758,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [Perl](#perl) 
+####  [Perl](#perl)
 
-**Supported Beautifiers**:  [`Perltidy`](#perltidy) 
+**Supported Beautifiers**:  [`Perltidy`](#perltidy)
 
 | Option | Perltidy |
 | --- | --- |
@@ -9772,7 +9773,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language Perl
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9789,7 +9790,7 @@ Disable Perl Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9797,7 +9798,7 @@ Disable Perl Beautification
 
 **Type**: `string`
 
-**Enum**:  `Perltidy` 
+**Enum**:  `Perltidy`
 
 **Description**:
 
@@ -9810,7 +9811,7 @@ Default Beautifier to be used for Perl
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9827,7 +9828,7 @@ Automatically beautify Perl files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Perltidy profile](#perltidy-profile) 
+#####  [Perltidy profile](#perltidy-profile)
 
 **Namespace**: `perl`
 
@@ -9835,7 +9836,7 @@ Automatically beautify Perl files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Perltidy`](#perltidy) 
+**Supported Beautifiers**:  [`Perltidy`](#perltidy)
 
 **Description**:
 
@@ -9851,9 +9852,9 @@ Specify a configuration file which will override the default name of .perltidyrc
 }
 ```
 
-####  [PHP](#php) 
+####  [PHP](#php)
 
-**Supported Beautifiers**:  [`hh_format`](#hh_format)  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`hh_format`](#hh_format)  [`PHP-CS-Fixer`](#php-cs-fixer)  [`PHPCBF`](#phpcbf)
 
 | Option | PHP-CS-Fixer | PHPCBF | hh_format |
 | --- | --- | --- | --- |
@@ -9875,7 +9876,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 
 Options for language PHP
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9892,7 +9893,7 @@ Disable PHP Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9900,7 +9901,7 @@ Disable PHP Beautification
 
 **Type**: `string`
 
-**Enum**:  `hh_format`  `PHP-CS-Fixer`  `PHPCBF` 
+**Enum**:  `hh_format`  `PHP-CS-Fixer`  `PHPCBF`
 
 **Description**:
 
@@ -9913,7 +9914,7 @@ Default Beautifier to be used for PHP
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -9930,7 +9931,7 @@ Automatically beautify PHP files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Allow risky rules](#allow-risky-rules) 
+#####  [Allow risky rules](#allow-risky-rules)
 
 **Namespace**: `php`
 
@@ -9940,9 +9941,9 @@ Automatically beautify PHP files on save
 
 **Type**: `string`
 
-**Enum**:  `no`  `yes` 
+**Enum**:  `no`  `yes`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -9958,7 +9959,7 @@ Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 }
 ```
 
-#####  [PHP-CS-Fixer Config File](#php-cs-fixer-config-file) 
+#####  [PHP-CS-Fixer Config File](#php-cs-fixer-config-file)
 
 **Namespace**: `php`
 
@@ -9966,7 +9967,7 @@ Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -9982,7 +9983,7 @@ Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if 
 }
 ```
 
-#####  [PHP-CS-Fixer Path](#php-cs-fixer-path) 
+#####  [PHP-CS-Fixer Path](#php-cs-fixer-path)
 
 **Namespace**: `php`
 
@@ -9990,7 +9991,7 @@ Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if 
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -10006,7 +10007,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
-#####  [PHP-CS-Fixer Version](#php-cs-fixer-version) 
+#####  [PHP-CS-Fixer Version](#php-cs-fixer-version)
 
 **Namespace**: `php`
 
@@ -10016,9 +10017,9 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Type**: `integer`
 
-**Enum**:  `1`  `2` 
+**Enum**:  `1`  `2`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -10034,7 +10035,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
-#####  [Fixers](#fixers) 
+#####  [Fixers](#fixers)
 
 **Namespace**: `php`
 
@@ -10042,7 +10043,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -10058,7 +10059,7 @@ Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only) (Suppor
 }
 ```
 
-#####  [Level](#level) 
+#####  [Level](#level)
 
 **Namespace**: `php`
 
@@ -10066,7 +10067,7 @@ Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only) (Suppor
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -10082,7 +10083,7 @@ By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 o
 }
 ```
 
-#####  [PHPCBF Path](#phpcbf-path) 
+#####  [PHPCBF Path](#phpcbf-path)
 
 **Namespace**: `php`
 
@@ -10090,7 +10091,7 @@ By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 o
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf)
 
 **Description**:
 
@@ -10106,7 +10107,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 }
 ```
 
-#####  [PHPCBF Version](#phpcbf-version) 
+#####  [PHPCBF Version](#phpcbf-version)
 
 **Namespace**: `php`
 
@@ -10116,9 +10117,9 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Type**: `integer`
 
-**Enum**:  `1`  `2`  `3` 
+**Enum**:  `1`  `2`  `3`
 
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf)
 
 **Description**:
 
@@ -10134,7 +10135,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 }
 ```
 
-#####  [Rules](#rules) 
+#####  [Rules](#rules)
 
 **Namespace**: `php`
 
@@ -10142,7 +10143,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -10158,7 +10159,7 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 }
 ```
 
-#####  [PHPCBF Standard](#phpcbf-standard) 
+#####  [PHPCBF Standard](#phpcbf-standard)
 
 **Namespace**: `php`
 
@@ -10168,7 +10169,7 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf)
 
 **Description**:
 
@@ -10184,9 +10185,9 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 }
 ```
 
-####  [Puppet](#puppet) 
+####  [Puppet](#puppet)
 
-**Supported Beautifiers**:  [`puppet-lint`](#puppet-lint) 
+**Supported Beautifiers**:  [`puppet-lint`](#puppet-lint)
 
 | Option | puppet-lint |
 | --- | --- |
@@ -10198,7 +10199,7 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 
 Options for language Puppet
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10215,7 +10216,7 @@ Disable Puppet Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10223,7 +10224,7 @@ Disable Puppet Beautification
 
 **Type**: `string`
 
-**Enum**:  `puppet-lint` 
+**Enum**:  `puppet-lint`
 
 **Description**:
 
@@ -10236,7 +10237,7 @@ Default Beautifier to be used for Puppet
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10253,9 +10254,9 @@ Automatically beautify Puppet files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [Python](#python) 
+####  [Python](#python)
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf)
 
 | Option | autopep8 | pybeautifier | yapf |
 | --- | --- | --- | --- |
@@ -10274,7 +10275,7 @@ Automatically beautify Puppet files on save
 
 Options for language Python
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10291,7 +10292,7 @@ Disable Python Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10299,7 +10300,7 @@ Disable Python Beautification
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `pybeautifier`  `yapf` 
+**Enum**:  `autopep8`  `pybeautifier`  `yapf`
 
 **Description**:
 
@@ -10312,7 +10313,7 @@ Default Beautifier to be used for Python
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10329,7 +10330,7 @@ Automatically beautify Python files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Formater](#formater) 
+#####  [Formater](#formater)
 
 **Namespace**: `python`
 
@@ -10339,9 +10340,9 @@ Automatically beautify Python files on save
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `yapf` 
+**Enum**:  `autopep8`  `yapf`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -10357,7 +10358,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Ignore](#ignore) 
+#####  [Ignore](#ignore)
 
 **Namespace**: `python`
 
@@ -10367,7 +10368,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -10385,7 +10386,7 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `python`
 
@@ -10395,7 +10396,7 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -10411,7 +10412,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Max line length](#max-line-length) 
+#####  [Max line length](#max-line-length)
 
 **Namespace**: `python`
 
@@ -10421,7 +10422,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -10437,7 +10438,7 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Multi line output](#multi-line-output) 
+#####  [Multi line output](#multi-line-output)
 
 **Namespace**: `python`
 
@@ -10447,9 +10448,9 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
+**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -10465,7 +10466,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 }
 ```
 
-#####  [Sort imports](#sort-imports) 
+#####  [Sort imports](#sort-imports)
 
 **Namespace**: `python`
 
@@ -10473,7 +10474,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -10489,7 +10490,7 @@ sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Style config](#style-config) 
+#####  [Style config](#style-config)
 
 **Namespace**: `python`
 
@@ -10499,7 +10500,7 @@ sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -10515,9 +10516,9 @@ formatting style used by yapf (Supported by autopep8, pybeautifier)
 }
 ```
 
-####  [R](#r) 
+####  [R](#r)
 
-**Supported Beautifiers**:  [`formatR`](#formatr) 
+**Supported Beautifiers**:  [`formatR`](#formatr)
 
 | Option | formatR |
 | --- | --- |
@@ -10530,7 +10531,7 @@ formatting style used by yapf (Supported by autopep8, pybeautifier)
 
 Options for language R
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10547,7 +10548,7 @@ Disable R Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10555,7 +10556,7 @@ Disable R Beautification
 
 **Type**: `string`
 
-**Enum**:  `formatR` 
+**Enum**:  `formatR`
 
 **Description**:
 
@@ -10568,7 +10569,7 @@ Default Beautifier to be used for R
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10585,7 +10586,7 @@ Automatically beautify R files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `r`
 
@@ -10595,7 +10596,7 @@ Automatically beautify R files on save
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`formatR`](#formatr) 
+**Supported Beautifiers**:  [`formatR`](#formatr)
 
 **Description**:
 
@@ -10611,9 +10612,9 @@ Indentation size/length (Supported by formatR)
 }
 ```
 
-####  [Riot.js](#riot.js) 
+####  [Riot.js](#riot.js)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -10629,7 +10630,7 @@ Indentation size/length (Supported by formatR)
 
 Options for language Riot.js
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10646,7 +10647,7 @@ Disable Riot.js Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10654,7 +10655,7 @@ Disable Riot.js Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -10667,7 +10668,7 @@ Default Beautifier to be used for Riot.js
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10684,7 +10685,7 @@ Automatically beautify Riot.js files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -10694,7 +10695,7 @@ Automatically beautify Riot.js files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -10710,7 +10711,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -10720,7 +10721,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -10736,7 +10737,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -10746,7 +10747,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -10762,7 +10763,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -10772,7 +10773,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -10788,9 +10789,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Ruby](#ruby) 
+####  [Ruby](#ruby)
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify)
 
 | Option | Rubocop | Ruby Beautify |
 | --- | --- | --- |
@@ -10805,7 +10806,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Ruby
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10822,7 +10823,7 @@ Disable Ruby Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10830,7 +10831,7 @@ Disable Ruby Beautification
 
 **Type**: `string`
 
-**Enum**:  `Rubocop`  `Ruby Beautify` 
+**Enum**:  `Rubocop`  `Ruby Beautify`
 
 **Description**:
 
@@ -10843,7 +10844,7 @@ Default Beautifier to be used for Ruby
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10860,7 +10861,7 @@ Automatically beautify Ruby files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `ruby`
 
@@ -10870,9 +10871,9 @@ Automatically beautify Ruby files on save
 
 **Type**: `string`
 
-**Enum**:  ` `  `	` 
+**Enum**:  ` `  `	`
 
-**Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify) 
+**Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify)
 
 **Description**:
 
@@ -10888,7 +10889,7 @@ Indentation character (Supported by Ruby Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `ruby`
 
@@ -10898,7 +10899,7 @@ Indentation character (Supported by Ruby Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify)
 
 **Description**:
 
@@ -10914,7 +10915,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 }
 ```
 
-#####  [Rubocop Path](#rubocop-path) 
+#####  [Rubocop Path](#rubocop-path)
 
 **Namespace**: `ruby`
 
@@ -10922,7 +10923,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)
 
 **Description**:
 
@@ -10938,9 +10939,9 @@ Path to the `rubocop` CLI executable (Supported by Rubocop)
 }
 ```
 
-####  [Rust](#rust) 
+####  [Rust](#rust)
 
-**Supported Beautifiers**:  [`rustfmt`](#rustfmt) 
+**Supported Beautifiers**:  [`rustfmt`](#rustfmt)
 
 | Option | rustfmt |
 | --- | --- |
@@ -10953,7 +10954,7 @@ Path to the `rubocop` CLI executable (Supported by Rubocop)
 
 Options for language Rust
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10970,7 +10971,7 @@ Disable Rust Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -10978,7 +10979,7 @@ Disable Rust Beautification
 
 **Type**: `string`
 
-**Enum**:  `rustfmt` 
+**Enum**:  `rustfmt`
 
 **Description**:
 
@@ -10991,7 +10992,7 @@ Default Beautifier to be used for Rust
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11008,7 +11009,7 @@ Automatically beautify Rust files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Rustfmt path](#rustfmt-path) 
+#####  [Rustfmt path](#rustfmt-path)
 
 **Namespace**: `rust`
 
@@ -11016,7 +11017,7 @@ Automatically beautify Rust files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`rustfmt`](#rustfmt) 
+**Supported Beautifiers**:  [`rustfmt`](#rustfmt)
 
 **Description**:
 
@@ -11032,9 +11033,9 @@ Path to rustfmt program (Supported by rustfmt)
 }
 ```
 
-####  [Sass](#sass) 
+####  [Sass](#sass)
 
-**Supported Beautifiers**:  [`SassConvert`](#sassconvert) 
+**Supported Beautifiers**:  [`SassConvert`](#sassconvert)
 
 | Option | SassConvert |
 | --- | --- |
@@ -11046,7 +11047,7 @@ Path to rustfmt program (Supported by rustfmt)
 
 Options for language Sass
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11063,7 +11064,7 @@ Disable Sass Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11071,7 +11072,7 @@ Disable Sass Beautification
 
 **Type**: `string`
 
-**Enum**:  `SassConvert` 
+**Enum**:  `SassConvert`
 
 **Description**:
 
@@ -11084,7 +11085,7 @@ Default Beautifier to be used for Sass
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11101,9 +11102,9 @@ Automatically beautify Sass files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-####  [SCSS](#scss) 
+####  [SCSS](#scss)
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff)  [`SassConvert`](#sassconvert) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)  [`Pretty Diff`](#pretty-diff)  [`SassConvert`](#sassconvert)
 
 | Option | CSScomb | Pretty Diff | SassConvert |
 | --- | --- | --- | --- |
@@ -11127,7 +11128,7 @@ Automatically beautify Sass files on save
 
 Options for language SCSS
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11144,7 +11145,7 @@ Disable SCSS Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11152,7 +11153,7 @@ Disable SCSS Beautification
 
 **Type**: `string`
 
-**Enum**:  `CSScomb`  `Pretty Diff`  `SassConvert` 
+**Enum**:  `CSScomb`  `Pretty Diff`  `SassConvert`
 
 **Description**:
 
@@ -11165,7 +11166,7 @@ Default Beautifier to be used for SCSS
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11182,7 +11183,7 @@ Automatically beautify SCSS files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Align assignments](#align-assignments) 
+#####  [Align assignments](#align-assignments)
 
 **Namespace**: `css`
 
@@ -11190,7 +11191,7 @@ Automatically beautify SCSS files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11206,7 +11207,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 }
 ```
 
-#####  [comb custom config file](#comb-custom-config-file) 
+#####  [comb custom config file](#comb-custom-config-file)
 
 **Namespace**: `css`
 
@@ -11214,7 +11215,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -11230,7 +11231,7 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 }
 ```
 
-#####  [Convert quotes](#convert-quotes) 
+#####  [Convert quotes](#convert-quotes)
 
 **Namespace**: `css`
 
@@ -11240,9 +11241,9 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 
 **Type**: `string`
 
-**Enum**:  `none`  `double`  `single` 
+**Enum**:  `none`  `double`  `single`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11258,7 +11259,7 @@ Convert the quote characters delimiting strings from either double or single quo
 }
 ```
 
-#####  [Force indentation](#force-indentation) 
+#####  [Force indentation](#force-indentation)
 
 **Namespace**: `css`
 
@@ -11266,7 +11267,7 @@ Convert the quote characters delimiting strings from either double or single quo
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11282,7 +11283,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `css`
 
@@ -11292,7 +11293,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11308,7 +11309,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent comments](#indent-comments) 
+#####  [Indent comments](#indent-comments)
 
 **Namespace**: `css`
 
@@ -11318,7 +11319,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11334,7 +11335,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `css`
 
@@ -11344,7 +11345,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11360,7 +11361,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Newline between rules](#newline-between-rules) 
+#####  [Newline between rules](#newline-between-rules)
 
 **Namespace**: `css`
 
@@ -11370,7 +11371,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11386,7 +11387,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 }
 ```
 
-#####  [No lead zero](#no-lead-zero) 
+#####  [No lead zero](#no-lead-zero)
 
 **Namespace**: `css`
 
@@ -11394,7 +11395,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11410,7 +11411,7 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 }
 ```
 
-#####  [comb predefined config](#comb-predefined-config) 
+#####  [comb predefined config](#comb-predefined-config)
 
 **Namespace**: `css`
 
@@ -11420,9 +11421,9 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 
 **Type**: `string`
 
-**Enum**:  `csscomb`  `yandex`  `zen` 
+**Enum**:  `csscomb`  `yandex`  `zen`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -11438,7 +11439,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `css`
 
@@ -11446,7 +11447,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11462,7 +11463,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `css`
 
@@ -11470,7 +11471,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11486,9 +11487,9 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 }
 ```
 
-####  [Spacebars](#spacebars) 
+####  [Spacebars](#spacebars)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -11504,7 +11505,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 Options for language Spacebars
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11521,7 +11522,7 @@ Disable Spacebars Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11529,7 +11530,7 @@ Disable Spacebars Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -11542,7 +11543,7 @@ Default Beautifier to be used for Spacebars
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11559,7 +11560,7 @@ Automatically beautify Spacebars files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -11569,7 +11570,7 @@ Automatically beautify Spacebars files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11585,7 +11586,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -11595,7 +11596,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11611,7 +11612,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -11621,7 +11622,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11637,7 +11638,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -11647,7 +11648,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11663,9 +11664,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [SQL](#sql) 
+####  [SQL](#sql)
 
-**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat)
 
 | Option | sqlformat |
 | --- | --- |
@@ -11680,7 +11681,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language SQL
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11697,7 +11698,7 @@ Disable SQL Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11705,7 +11706,7 @@ Disable SQL Beautification
 
 **Type**: `string`
 
-**Enum**:  `sqlformat` 
+**Enum**:  `sqlformat`
 
 **Description**:
 
@@ -11718,7 +11719,7 @@ Default Beautifier to be used for SQL
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11735,7 +11736,7 @@ Automatically beautify SQL files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Identifiers](#identifiers) 
+#####  [Identifiers](#identifiers)
 
 **Namespace**: `sql`
 
@@ -11745,9 +11746,9 @@ Automatically beautify SQL files on save
 
 **Type**: `string`
 
-**Enum**:  `unchanged`  `lower`  `upper`  `capitalize` 
+**Enum**:  `unchanged`  `lower`  `upper`  `capitalize`
 
-**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat)
 
 **Description**:
 
@@ -11763,7 +11764,7 @@ Change case of identifiers (Supported by sqlformat)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `sql`
 
@@ -11773,7 +11774,7 @@ Change case of identifiers (Supported by sqlformat)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat)
 
 **Description**:
 
@@ -11789,7 +11790,7 @@ Indentation size/length (Supported by sqlformat)
 }
 ```
 
-#####  [Keywords](#keywords) 
+#####  [Keywords](#keywords)
 
 **Namespace**: `sql`
 
@@ -11799,9 +11800,9 @@ Indentation size/length (Supported by sqlformat)
 
 **Type**: `string`
 
-**Enum**:  `unchanged`  `lower`  `upper`  `capitalize` 
+**Enum**:  `unchanged`  `lower`  `upper`  `capitalize`
 
-**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat)
 
 **Description**:
 
@@ -11817,9 +11818,9 @@ Change case of keywords (Supported by sqlformat)
 }
 ```
 
-####  [SVG](#svg) 
+####  [SVG](#svg)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -11835,7 +11836,7 @@ Change case of keywords (Supported by sqlformat)
 
 Options for language SVG
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11852,7 +11853,7 @@ Disable SVG Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11860,7 +11861,7 @@ Disable SVG Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -11873,7 +11874,7 @@ Default Beautifier to be used for SVG
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -11890,7 +11891,7 @@ Automatically beautify SVG files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -11900,7 +11901,7 @@ Automatically beautify SVG files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11916,7 +11917,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -11926,7 +11927,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11942,7 +11943,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -11952,7 +11953,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11968,7 +11969,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -11978,7 +11979,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -11994,9 +11995,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Swig](#swig) 
+####  [Swig](#swig)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -12012,7 +12013,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Swig
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12029,7 +12030,7 @@ Disable Swig Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12037,7 +12038,7 @@ Disable Swig Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -12050,7 +12051,7 @@ Default Beautifier to be used for Swig
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12067,7 +12068,7 @@ Automatically beautify Swig files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -12077,7 +12078,7 @@ Automatically beautify Swig files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12093,7 +12094,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -12103,7 +12104,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12119,7 +12120,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -12129,7 +12130,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12145,7 +12146,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -12155,7 +12156,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12171,9 +12172,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [TSS](#tss) 
+####  [TSS](#tss)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -12195,7 +12196,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language TSS
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12212,7 +12213,7 @@ Disable TSS Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12220,7 +12221,7 @@ Disable TSS Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -12233,7 +12234,7 @@ Default Beautifier to be used for TSS
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12250,7 +12251,7 @@ Automatically beautify TSS files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Align assignments](#align-assignments) 
+#####  [Align assignments](#align-assignments)
 
 **Namespace**: `css`
 
@@ -12258,7 +12259,7 @@ Automatically beautify TSS files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12274,7 +12275,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 }
 ```
 
-#####  [Convert quotes](#convert-quotes) 
+#####  [Convert quotes](#convert-quotes)
 
 **Namespace**: `css`
 
@@ -12284,9 +12285,9 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Type**: `string`
 
-**Enum**:  `none`  `double`  `single` 
+**Enum**:  `none`  `double`  `single`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12302,7 +12303,7 @@ Convert the quote characters delimiting strings from either double or single quo
 }
 ```
 
-#####  [Force indentation](#force-indentation) 
+#####  [Force indentation](#force-indentation)
 
 **Namespace**: `css`
 
@@ -12310,7 +12311,7 @@ Convert the quote characters delimiting strings from either double or single quo
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12326,7 +12327,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `css`
 
@@ -12336,7 +12337,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12352,7 +12353,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent comments](#indent-comments) 
+#####  [Indent comments](#indent-comments)
 
 **Namespace**: `css`
 
@@ -12362,7 +12363,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12378,7 +12379,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `css`
 
@@ -12388,7 +12389,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12404,7 +12405,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Newline between rules](#newline-between-rules) 
+#####  [Newline between rules](#newline-between-rules)
 
 **Namespace**: `css`
 
@@ -12414,7 +12415,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12430,7 +12431,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 }
 ```
 
-#####  [No lead zero](#no-lead-zero) 
+#####  [No lead zero](#no-lead-zero)
 
 **Namespace**: `css`
 
@@ -12438,7 +12439,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12454,7 +12455,7 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `css`
 
@@ -12462,7 +12463,7 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12478,7 +12479,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `css`
 
@@ -12486,7 +12487,7 @@ Retain empty lines. Consecutive empty lines will be converted to a single empty 
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12502,9 +12503,9 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 }
 ```
 
-####  [Twig](#twig) 
+####  [Twig](#twig)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -12525,7 +12526,7 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 Options for language Twig
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12542,7 +12543,7 @@ Disable Twig Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12550,7 +12551,7 @@ Disable Twig Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -12563,7 +12564,7 @@ Default Beautifier to be used for Twig
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12580,7 +12581,7 @@ Automatically beautify Twig files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -12588,7 +12589,7 @@ Automatically beautify Twig files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12604,7 +12605,7 @@ Break chained method calls across subsequent lines (Supported by Pretty Diff)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -12612,7 +12613,7 @@ Break chained method calls across subsequent lines (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12628,7 +12629,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -12638,7 +12639,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12654,7 +12655,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -12664,7 +12665,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12680,7 +12681,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -12688,7 +12689,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12704,7 +12705,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by P
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -12714,7 +12715,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by P
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12730,7 +12731,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -12738,7 +12739,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12754,7 +12755,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -12762,7 +12763,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12778,7 +12779,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -12788,7 +12789,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -12804,9 +12805,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [TypeScript](#typescript) 
+####  [TypeScript](#typescript)
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 | Option | TypeScript Formatter |
 | --- | --- |
@@ -12838,7 +12839,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language TypeScript
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12855,7 +12856,7 @@ Disable TypeScript Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12863,7 +12864,7 @@ Disable TypeScript Beautification
 
 **Type**: `string`
 
-**Enum**:  `TypeScript Formatter` 
+**Enum**:  `TypeScript Formatter`
 
 **Description**:
 
@@ -12876,7 +12877,7 @@ Default Beautifier to be used for TypeScript
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -12893,7 +12894,7 @@ Automatically beautify TypeScript files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `js`
 
@@ -12903,9 +12904,9 @@ Automatically beautify TypeScript files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -12921,7 +12922,7 @@ Automatically beautify TypeScript files on save
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -12929,7 +12930,7 @@ Automatically beautify TypeScript files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -12945,7 +12946,7 @@ Break chained method calls across subsequent lines (Supported by TypeScript Form
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -12955,9 +12956,9 @@ Break chained method calls across subsequent lines (Supported by TypeScript Form
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -12973,7 +12974,7 @@ Override EOL from line-ending-selector (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -12981,7 +12982,7 @@ Override EOL from line-ending-selector (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -12997,7 +12998,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `js`
 
@@ -13005,7 +13006,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13021,7 +13022,7 @@ End output with newline (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -13029,7 +13030,7 @@ End output with newline (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13045,7 +13046,7 @@ End output with newline (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -13055,7 +13056,7 @@ End output with newline (Supported by TypeScript Formatter)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13071,7 +13072,7 @@ Indentation character (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -13079,7 +13080,7 @@ Indentation character (Supported by TypeScript Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13095,7 +13096,7 @@ Initial indentation level (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -13105,7 +13106,7 @@ Initial indentation level (Supported by TypeScript Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13121,7 +13122,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -13129,7 +13130,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13145,7 +13146,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by T
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -13153,7 +13154,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by T
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13169,7 +13170,7 @@ Enable jslint-stricter mode (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -13177,7 +13178,7 @@ Enable jslint-stricter mode (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13193,7 +13194,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -13201,7 +13202,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13217,7 +13218,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `js`
 
@@ -13227,7 +13228,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13243,7 +13244,7 @@ Number of line-breaks to be preserved in one chunk (Supported by TypeScript Form
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `js`
 
@@ -13253,7 +13254,7 @@ Number of line-breaks to be preserved in one chunk (Supported by TypeScript Form
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13269,7 +13270,7 @@ Preserve line-breaks (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -13277,7 +13278,7 @@ Preserve line-breaks (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13293,7 +13294,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -13303,7 +13304,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13319,7 +13320,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -13327,7 +13328,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13343,7 +13344,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by TypeScript Formatte
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -13351,7 +13352,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by TypeScript Formatte
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13367,7 +13368,7 @@ Decode printable characters encoded in xNN notation (Supported by TypeScript For
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `js`
 
@@ -13375,7 +13376,7 @@ Decode printable characters encoded in xNN notation (Supported by TypeScript For
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -13391,9 +13392,9 @@ Wrap lines at next opportunity after N characters (Supported by TypeScript Forma
 }
 ```
 
-####  [UX Markup](#ux-markup) 
+####  [UX Markup](#ux-markup)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -13409,7 +13410,7 @@ Wrap lines at next opportunity after N characters (Supported by TypeScript Forma
 
 Options for language UX Markup
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13426,7 +13427,7 @@ Disable UX Markup Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13434,7 +13435,7 @@ Disable UX Markup Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -13447,7 +13448,7 @@ Default Beautifier to be used for UX Markup
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13464,7 +13465,7 @@ Automatically beautify UX Markup files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -13474,7 +13475,7 @@ Automatically beautify UX Markup files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13490,7 +13491,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -13500,7 +13501,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13516,7 +13517,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -13526,7 +13527,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13542,7 +13543,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -13552,7 +13553,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13568,9 +13569,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Vala](#vala) 
+####  [Vala](#vala)
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 | Option | Uncrustify |
 | --- | --- |
@@ -13583,7 +13584,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Vala
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13600,7 +13601,7 @@ Disable Vala Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13608,7 +13609,7 @@ Disable Vala Beautification
 
 **Type**: `string`
 
-**Enum**:  `Uncrustify` 
+**Enum**:  `Uncrustify`
 
 **Description**:
 
@@ -13621,7 +13622,7 @@ Default Beautifier to be used for Vala
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13638,7 +13639,7 @@ Automatically beautify Vala files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `vala`
 
@@ -13646,7 +13647,7 @@ Automatically beautify Vala files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -13662,9 +13663,9 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
-####  [Visualforce](#visualforce) 
+####  [Visualforce](#visualforce)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -13680,7 +13681,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 Options for language Visualforce
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13697,7 +13698,7 @@ Disable Visualforce Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13705,7 +13706,7 @@ Disable Visualforce Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -13718,7 +13719,7 @@ Default Beautifier to be used for Visualforce
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13735,7 +13736,7 @@ Automatically beautify Visualforce files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -13745,7 +13746,7 @@ Automatically beautify Visualforce files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13761,7 +13762,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -13771,7 +13772,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13787,7 +13788,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -13797,7 +13798,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13813,7 +13814,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -13823,7 +13824,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -13839,9 +13840,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [Vue](#vue) 
+####  [Vue](#vue)
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 | Option | Vue Beautifier |
 | --- | --- |
@@ -13879,7 +13880,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language Vue
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13896,7 +13897,7 @@ Disable Vue Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13904,7 +13905,7 @@ Disable Vue Beautification
 
 **Type**: `string`
 
-**Enum**:  `Vue Beautifier` 
+**Enum**:  `Vue Beautifier`
 
 **Description**:
 
@@ -13917,7 +13918,7 @@ Default Beautifier to be used for Vue
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -13934,7 +13935,7 @@ Automatically beautify Vue files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -13944,9 +13945,9 @@ Automatically beautify Vue files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -13962,7 +13963,7 @@ Automatically beautify Vue files on save
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -13970,7 +13971,7 @@ Automatically beautify Vue files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -13986,7 +13987,7 @@ Break chained method calls across subsequent lines (Supported by Vue Beautifier)
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -13996,9 +13997,9 @@ Break chained method calls across subsequent lines (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14014,7 +14015,7 @@ Override EOL from line-ending-selector (Supported by Vue Beautifier)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -14022,7 +14023,7 @@ Override EOL from line-ending-selector (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14038,7 +14039,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -14046,7 +14047,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14062,7 +14063,7 @@ End output with newline (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -14070,7 +14071,7 @@ End output with newline (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14086,7 +14087,7 @@ End output with newline (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -14096,7 +14097,7 @@ End output with newline (Supported by Vue Beautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14116,7 +14117,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -14126,7 +14127,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14142,7 +14143,7 @@ Indentation character (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -14150,7 +14151,7 @@ Indentation character (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14166,7 +14167,7 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -14174,7 +14175,7 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14190,7 +14191,7 @@ Initial indentation level (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -14200,9 +14201,9 @@ Initial indentation level (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14218,7 +14219,7 @@ Initial indentation level (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -14228,7 +14229,7 @@ Initial indentation level (Supported by Vue Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14244,7 +14245,7 @@ Indentation size/length (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -14252,7 +14253,7 @@ Indentation size/length (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14268,7 +14269,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by V
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -14276,7 +14277,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by V
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14292,7 +14293,7 @@ Enable jslint-stricter mode (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -14300,7 +14301,7 @@ Enable jslint-stricter mode (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14316,7 +14317,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -14324,7 +14325,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14340,7 +14341,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -14350,7 +14351,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14366,7 +14367,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -14376,7 +14377,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14392,7 +14393,7 @@ Preserve line-breaks (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -14400,7 +14401,7 @@ Preserve line-breaks (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14416,7 +14417,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -14426,7 +14427,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14442,7 +14443,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -14450,7 +14451,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14466,7 +14467,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -14474,7 +14475,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14490,7 +14491,7 @@ Decode printable characters encoded in xNN notation (Supported by Vue Beautifier
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -14500,7 +14501,7 @@ Decode printable characters encoded in xNN notation (Supported by Vue Beautifier
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14585,7 +14586,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -14595,9 +14596,9 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14613,7 +14614,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -14623,7 +14624,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14639,7 +14640,7 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -14649,7 +14650,7 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -14665,9 +14666,9 @@ Maximum characters per line (0 disables) (Supported by Vue Beautifier)
 }
 ```
 
-####  [XML](#xml) 
+####  [XML](#xml)
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 | Option | JS Beautify | Pretty Diff |
 | --- | --- | --- |
@@ -14692,7 +14693,7 @@ Maximum characters per line (0 disables) (Supported by Vue Beautifier)
 
 Options for language XML
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -14709,7 +14710,7 @@ Disable XML Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -14717,7 +14718,7 @@ Disable XML Beautification
 
 **Type**: `string`
 
-**Enum**:  `JS Beautify`  `Pretty Diff` 
+**Enum**:  `JS Beautify`  `Pretty Diff`
 
 **Description**:
 
@@ -14730,7 +14731,7 @@ Default Beautifier to be used for XML
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -14747,7 +14748,7 @@ Automatically beautify XML files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -14757,9 +14758,9 @@ Automatically beautify XML files on save
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -14775,7 +14776,7 @@ Automatically beautify XML files on save
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -14783,7 +14784,7 @@ Automatically beautify XML files on save
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -14799,7 +14800,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -14809,7 +14810,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -14829,7 +14830,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -14839,7 +14840,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -14855,7 +14856,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -14863,7 +14864,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -14879,7 +14880,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -14889,9 +14890,9 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -14907,7 +14908,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -14917,7 +14918,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -14933,7 +14934,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -14943,7 +14944,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -14959,7 +14960,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -14969,7 +14970,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -14985,7 +14986,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -14995,7 +14996,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -15080,7 +15081,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -15090,9 +15091,9 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -15108,7 +15109,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -15118,7 +15119,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -15134,7 +15135,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -15144,7 +15145,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -15160,9 +15161,9 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-####  [XTemplate](#xtemplate) 
+####  [XTemplate](#xtemplate)
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 | Option | Pretty Diff |
 | --- | --- |
@@ -15178,7 +15179,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 Options for language XTemplate
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -15195,7 +15196,7 @@ Disable XTemplate Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -15203,7 +15204,7 @@ Disable XTemplate Beautification
 
 **Type**: `string`
 
-**Enum**:  `Pretty Diff` 
+**Enum**:  `Pretty Diff`
 
 **Description**:
 
@@ -15216,7 +15217,7 @@ Default Beautifier to be used for XTemplate
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -15233,7 +15234,7 @@ Automatically beautify XTemplate files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -15243,7 +15244,7 @@ Automatically beautify XTemplate files on save
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -15259,7 +15260,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -15269,7 +15270,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -15285,7 +15286,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -15295,7 +15296,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -15311,7 +15312,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -15321,7 +15322,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -15337,9 +15338,9 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-####  [YAML](#yaml) 
+####  [YAML](#yaml)
 
-**Supported Beautifiers**:  [`align-yaml`](#align-yaml) 
+**Supported Beautifiers**:  [`align-yaml`](#align-yaml)
 
 | Option | align-yaml |
 | --- | --- |
@@ -15352,7 +15353,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 Options for language YAML
 
-#####  [Disable Beautifying Language](#disable-beautifying-language) 
+#####  [Disable Beautifying Language](#disable-beautifying-language)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -15369,7 +15370,7 @@ Disable YAML Beautification
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
 
-#####  [Default Beautifier](#default-beautifier) 
+#####  [Default Beautifier](#default-beautifier)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -15377,7 +15378,7 @@ Disable YAML Beautification
 
 **Type**: `string`
 
-**Enum**:  `align-yaml` 
+**Enum**:  `align-yaml`
 
 **Description**:
 
@@ -15390,7 +15391,7 @@ Default Beautifier to be used for YAML
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Default Beautifier*" and change it to your desired configuration.
 
-#####  [Beautify On Save](#beautify-on-save) 
+#####  [Beautify On Save](#beautify-on-save)
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
@@ -15407,7 +15408,7 @@ Automatically beautify YAML files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Padding](#padding) 
+#####  [Padding](#padding)
 
 **Namespace**: `yaml`
 
@@ -15415,7 +15416,7 @@ Automatically beautify YAML files on save
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`align-yaml`](#align-yaml) 
+**Supported Beautifiers**:  [`align-yaml`](#align-yaml)
 
 **Description**:
 
@@ -15440,7 +15441,7 @@ Supported options for each beautifier.
 
 ### CSScomb
 
-#####  [comb custom config file](#comb-custom-config-file) 
+#####  [comb custom config file](#comb-custom-config-file)
 
 **Namespace**: `css`
 
@@ -15448,7 +15449,7 @@ Supported options for each beautifier.
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -15464,7 +15465,7 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 }
 ```
 
-#####  [comb predefined config](#comb-predefined-config) 
+#####  [comb predefined config](#comb-predefined-config)
 
 **Namespace**: `css`
 
@@ -15474,9 +15475,9 @@ Path to custom CSScomb config file, used in absence of a `.csscomb.json` or `.cs
 
 **Type**: `string`
 
-**Enum**:  `csscomb`  `yandex`  `zen` 
+**Enum**:  `csscomb`  `yandex`  `zen`
 
-**Supported Beautifiers**:  [`CSScomb`](#csscomb) 
+**Supported Beautifiers**:  [`CSScomb`](#csscomb)
 
 **Description**:
 
@@ -15495,7 +15496,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 
 ### Coffee Formatter
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -15505,7 +15506,7 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -15521,7 +15522,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -15531,7 +15532,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -15547,7 +15548,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -15555,7 +15556,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15571,7 +15572,7 @@ Initial indentation level (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -15579,7 +15580,7 @@ Initial indentation level (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -15595,7 +15596,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `js`
 
@@ -15605,7 +15606,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15621,7 +15622,7 @@ Preserve line-breaks (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `js`
 
@@ -15631,7 +15632,7 @@ Preserve line-breaks (Supported by Coffee Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15647,7 +15648,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Coffee Formatte
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -15655,7 +15656,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Coffee Formatte
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15671,7 +15672,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -15679,7 +15680,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15695,7 +15696,7 @@ Enable jslint-stricter mode (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -15703,7 +15704,7 @@ Enable jslint-stricter mode (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15719,7 +15720,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `js`
 
@@ -15729,9 +15730,9 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15747,7 +15748,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -15755,7 +15756,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15771,7 +15772,7 @@ Break chained method calls across subsequent lines (Supported by Coffee Formatte
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -15779,7 +15780,7 @@ Break chained method calls across subsequent lines (Supported by Coffee Formatte
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15795,7 +15796,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -15803,7 +15804,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15819,7 +15820,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -15829,7 +15830,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15845,7 +15846,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -15853,7 +15854,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15869,7 +15870,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -15877,7 +15878,7 @@ Preserve array indentation (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15893,7 +15894,7 @@ Decode printable characters encoded in xNN notation (Supported by Coffee Formatt
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `js`
 
@@ -15901,7 +15902,7 @@ Decode printable characters encoded in xNN notation (Supported by Coffee Formatt
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15917,7 +15918,7 @@ Wrap lines at next opportunity after N characters (Supported by Coffee Formatter
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `js`
 
@@ -15925,7 +15926,7 @@ Wrap lines at next opportunity after N characters (Supported by Coffee Formatter
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15941,7 +15942,7 @@ End output with newline (Supported by Coffee Formatter)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -15949,7 +15950,7 @@ End output with newline (Supported by Coffee Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15965,7 +15966,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -15975,9 +15976,9 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)
 
 **Description**:
 
@@ -15996,7 +15997,7 @@ Override EOL from line-ending-selector (Supported by Coffee Formatter)
 
 ### Fortran Beautifier
 
-#####  [Emacs path](#emacs-path) 
+#####  [Emacs path](#emacs-path)
 
 **Namespace**: `fortran`
 
@@ -16004,7 +16005,7 @@ Override EOL from line-ending-selector (Supported by Coffee Formatter)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier)
 
 **Description**:
 
@@ -16020,7 +16021,7 @@ Path to the `emacs` executable (Supported by Fortran Beautifier)
 }
 ```
 
-#####  [Emacs script path](#emacs-script-path) 
+#####  [Emacs script path](#emacs-script-path)
 
 **Namespace**: `fortran`
 
@@ -16028,7 +16029,7 @@ Path to the `emacs` executable (Supported by Fortran Beautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier) 
+**Supported Beautifiers**:  [`Fortran Beautifier`](#fortran-beautifier)
 
 **Description**:
 
@@ -16047,7 +16048,7 @@ Path to the emacs script (Supported by Fortran Beautifier)
 
 ### Gherkin formatter
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `gherkin`
 
@@ -16057,7 +16058,7 @@ Path to the emacs script (Supported by Fortran Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter)
 
 **Description**:
 
@@ -16073,7 +16074,7 @@ Indentation size/length (Supported by Gherkin formatter)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `gherkin`
 
@@ -16083,7 +16084,7 @@ Indentation size/length (Supported by Gherkin formatter)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter) 
+**Supported Beautifiers**:  [`Gherkin formatter`](#gherkin-formatter)
 
 **Description**:
 
@@ -16102,7 +16103,7 @@ Indentation character (Supported by Gherkin formatter)
 
 ### HTML Beautifier
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -16112,7 +16113,7 @@ Indentation character (Supported by Gherkin formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`HTML Beautifier`](#html-beautifier)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16131,7 +16132,7 @@ Indentation size/length (Supported by HTML Beautifier, Pretty Diff)
 
 ### JS Beautify
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -16141,7 +16142,7 @@ Indentation size/length (Supported by HTML Beautifier, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16157,7 +16158,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -16167,7 +16168,7 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16183,7 +16184,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Selector separator newline](#selector-separator-newline) 
+#####  [Selector separator newline](#selector-separator-newline)
 
 **Namespace**: `css`
 
@@ -16191,7 +16192,7 @@ Indentation character (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16207,7 +16208,7 @@ Add a newline between multiple selectors (Supported by JS Beautify)
 }
 ```
 
-#####  [Newline between rules](#newline-between-rules) 
+#####  [Newline between rules](#newline-between-rules)
 
 **Namespace**: `css`
 
@@ -16217,7 +16218,7 @@ Add a newline between multiple selectors (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16233,7 +16234,7 @@ Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -16243,7 +16244,7 @@ Add a newline between CSS rules (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16259,7 +16260,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -16269,7 +16270,7 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16285,7 +16286,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -16293,7 +16294,7 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16309,7 +16310,7 @@ End output with newline (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -16317,7 +16318,7 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16333,7 +16334,7 @@ Initial indentation level (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -16341,7 +16342,7 @@ Initial indentation level (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16357,7 +16358,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -16367,7 +16368,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16383,7 +16384,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -16391,7 +16392,7 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16407,7 +16408,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -16415,7 +16416,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by JS Beautify, Pretty
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16431,7 +16432,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -16439,7 +16440,7 @@ Enable jslint-stricter mode (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16455,7 +16456,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -16465,9 +16466,9 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16483,7 +16484,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -16491,7 +16492,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16507,7 +16508,7 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -16515,7 +16516,7 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16531,7 +16532,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -16539,7 +16540,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16555,7 +16556,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -16565,7 +16566,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16581,7 +16582,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -16589,7 +16590,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16605,7 +16606,7 @@ Preserve array indentation (Supported by JS Beautify)
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -16613,7 +16614,7 @@ Preserve array indentation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16629,7 +16630,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -16637,7 +16638,7 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -16653,7 +16654,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -16663,9 +16664,9 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16681,7 +16682,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -16689,7 +16690,7 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16705,7 +16706,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -16715,9 +16716,9 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16733,7 +16734,7 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -16743,9 +16744,9 @@ Indent <head> and <body> sections. (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16761,7 +16762,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -16771,7 +16772,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16787,7 +16788,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -16797,7 +16798,7 @@ Indent wrapped attributes to after N characters (Supported by JS Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16882,7 +16883,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -16892,7 +16893,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16912,7 +16913,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 }
 ```
 
-#####  [E4x](#e4x) 
+#####  [E4x](#e4x)
 
 **Namespace**: `jsx`
 
@@ -16922,7 +16923,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
 
 **Description**:
 
@@ -16941,7 +16942,7 @@ Support e4x/jsx syntax (Supported by JS Beautify)
 
 ### Latex Beautify
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `latex`
 
@@ -16951,7 +16952,7 @@ Support e4x/jsx syntax (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -16967,7 +16968,7 @@ Indentation character (Supported by Latex Beautify)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `latex`
 
@@ -16975,7 +16976,7 @@ Indentation character (Supported by Latex Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -16991,7 +16992,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by L
 }
 ```
 
-#####  [Indent preamble](#indent-preamble) 
+#####  [Indent preamble](#indent-preamble)
 
 **Namespace**: `latex`
 
@@ -16999,7 +17000,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by L
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -17015,7 +17016,7 @@ Indent the preamble (Supported by Latex Beautify)
 }
 ```
 
-#####  [Always look for split braces](#always-look-for-split-braces) 
+#####  [Always look for split braces](#always-look-for-split-braces)
 
 **Namespace**: `latex`
 
@@ -17025,7 +17026,7 @@ Indent the preamble (Supported by Latex Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -17041,7 +17042,7 @@ If `latexindent` should look for commands that split braces across lines (Suppor
 }
 ```
 
-#####  [Always look for split brackets](#always-look-for-split-brackets) 
+#####  [Always look for split brackets](#always-look-for-split-brackets)
 
 **Namespace**: `latex`
 
@@ -17049,7 +17050,7 @@ If `latexindent` should look for commands that split braces across lines (Suppor
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -17065,7 +17066,7 @@ If `latexindent` should look for commands that split brackets across lines (Supp
 }
 ```
 
-#####  [Remove trailing whitespace](#remove-trailing-whitespace) 
+#####  [Remove trailing whitespace](#remove-trailing-whitespace)
 
 **Namespace**: `latex`
 
@@ -17073,7 +17074,7 @@ If `latexindent` should look for commands that split brackets across lines (Supp
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -17089,7 +17090,7 @@ Remove trailing whitespace (Supported by Latex Beautify)
 }
 ```
 
-#####  [Align columns in environments](#align-columns-in-environments) 
+#####  [Align columns in environments](#align-columns-in-environments)
 
 **Namespace**: `latex`
 
@@ -17099,7 +17100,7 @@ Remove trailing whitespace (Supported by Latex Beautify)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify) 
+**Supported Beautifiers**:  [`Latex Beautify`](#latex-beautify)
 
 **Description**:
 
@@ -17123,7 +17124,7 @@ Aligns columns by the alignment tabs for environments specified (Supported by La
 
 ### Lua beautifier
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `lua`
 
@@ -17133,9 +17134,9 @@ Aligns columns by the alignment tabs for environments specified (Supported by La
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier)
 
 **Description**:
 
@@ -17154,7 +17155,7 @@ Override EOL from line-ending-selector (Supported by Lua beautifier)
 
 ### Marko Beautifier
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -17164,7 +17165,7 @@ Override EOL from line-ending-selector (Supported by Lua beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17180,7 +17181,7 @@ Indentation size/length (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -17190,7 +17191,7 @@ Indentation size/length (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17206,7 +17207,7 @@ Indentation character (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Syntax](#syntax) 
+#####  [Syntax](#syntax)
 
 **Namespace**: `marko`
 
@@ -17216,9 +17217,9 @@ Indentation character (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `html`  `concise` 
+**Enum**:  `html`  `concise`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17234,7 +17235,7 @@ Indentation character (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -17242,7 +17243,7 @@ Indentation character (Supported by Marko Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17258,7 +17259,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -17268,9 +17269,9 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17286,7 +17287,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -17296,9 +17297,9 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17314,7 +17315,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -17324,7 +17325,7 @@ Indent <head> and <body> sections. (Supported by Marko Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17340,7 +17341,7 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -17350,9 +17351,9 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17368,7 +17369,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -17378,7 +17379,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17394,7 +17395,7 @@ Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -17404,7 +17405,7 @@ Indent wrapped attributes to after N characters (Supported by Marko Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17420,7 +17421,7 @@ Preserve line-breaks (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -17430,7 +17431,7 @@ Preserve line-breaks (Supported by Marko Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17446,7 +17447,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -17456,7 +17457,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17541,7 +17542,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -17549,7 +17550,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17565,7 +17566,7 @@ End output with newline (Supported by Marko Beautifier)
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -17575,7 +17576,7 @@ End output with newline (Supported by Marko Beautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier)
 
 **Description**:
 
@@ -17598,7 +17599,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 ### Nginx Beautify
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `nginx`
 
@@ -17608,7 +17609,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -17624,7 +17625,7 @@ Indentation size/length (Supported by Nginx Beautify)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `nginx`
 
@@ -17634,7 +17635,7 @@ Indentation size/length (Supported by Nginx Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -17650,7 +17651,7 @@ Indentation character (Supported by Nginx Beautify)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `nginx`
 
@@ -17658,7 +17659,7 @@ Indentation character (Supported by Nginx Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -17674,7 +17675,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 }
 ```
 
-#####  [Don&#x27;t join curly brackets](#don't-join-curly-brackets) 
+#####  [Don&#x27;t join curly brackets](#don't-join-curly-brackets)
 
 **Namespace**: `nginx`
 
@@ -17684,7 +17685,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify) 
+**Supported Beautifiers**:  [`Nginx Beautify`](#nginx-beautify)
 
 **Description**:
 
@@ -17703,7 +17704,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 
 ### PHP-CS-Fixer
 
-#####  [PHP-CS-Fixer Path](#php-cs-fixer-path) 
+#####  [PHP-CS-Fixer Path](#php-cs-fixer-path)
 
 **Namespace**: `php`
 
@@ -17711,7 +17712,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by N
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -17727,7 +17728,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
-#####  [PHP-CS-Fixer Version](#php-cs-fixer-version) 
+#####  [PHP-CS-Fixer Version](#php-cs-fixer-version)
 
 **Namespace**: `php`
 
@@ -17737,9 +17738,9 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Type**: `integer`
 
-**Enum**:  `1`  `2` 
+**Enum**:  `1`  `2`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -17755,7 +17756,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 }
 ```
 
-#####  [PHP-CS-Fixer Config File](#php-cs-fixer-config-file) 
+#####  [PHP-CS-Fixer Config File](#php-cs-fixer-config-file)
 
 **Namespace**: `php`
 
@@ -17763,7 +17764,7 @@ Absolute path to the `php-cs-fixer` CLI executable (Supported by PHP-CS-Fixer)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -17779,7 +17780,7 @@ Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if 
 }
 ```
 
-#####  [Fixers](#fixers) 
+#####  [Fixers](#fixers)
 
 **Namespace**: `php`
 
@@ -17787,7 +17788,7 @@ Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if 
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -17803,7 +17804,7 @@ Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only) (Suppor
 }
 ```
 
-#####  [Level](#level) 
+#####  [Level](#level)
 
 **Namespace**: `php`
 
@@ -17811,7 +17812,7 @@ Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only) (Suppor
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -17827,7 +17828,7 @@ By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 o
 }
 ```
 
-#####  [Rules](#rules) 
+#####  [Rules](#rules)
 
 **Namespace**: `php`
 
@@ -17835,7 +17836,7 @@ By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 o
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -17851,7 +17852,7 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 }
 ```
 
-#####  [Allow risky rules](#allow-risky-rules) 
+#####  [Allow risky rules](#allow-risky-rules)
 
 **Namespace**: `php`
 
@@ -17861,9 +17862,9 @@ Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only) (Sup
 
 **Type**: `string`
 
-**Enum**:  `no`  `yes` 
+**Enum**:  `no`  `yes`
 
-**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer) 
+**Supported Beautifiers**:  [`PHP-CS-Fixer`](#php-cs-fixer)
 
 **Description**:
 
@@ -17882,7 +17883,7 @@ Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 
 ### PHPCBF
 
-#####  [PHPCBF Path](#phpcbf-path) 
+#####  [PHPCBF Path](#phpcbf-path)
 
 **Namespace**: `php`
 
@@ -17890,7 +17891,7 @@ Allow risky rules to be applied (PHP-CS-Fixer 2 only) (Supported by PHP-CS-Fixer
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf)
 
 **Description**:
 
@@ -17906,7 +17907,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 }
 ```
 
-#####  [PHPCBF Version](#phpcbf-version) 
+#####  [PHPCBF Version](#phpcbf-version)
 
 **Namespace**: `php`
 
@@ -17916,9 +17917,9 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Type**: `integer`
 
-**Enum**:  `1`  `2`  `3` 
+**Enum**:  `1`  `2`  `3`
 
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf)
 
 **Description**:
 
@@ -17934,7 +17935,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 }
 ```
 
-#####  [PHPCBF Standard](#phpcbf-standard) 
+#####  [PHPCBF Standard](#phpcbf-standard)
 
 **Namespace**: `php`
 
@@ -17944,7 +17945,7 @@ Path to the `phpcbf` CLI executable (Supported by PHPCBF)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`PHPCBF`](#phpcbf) 
+**Supported Beautifiers**:  [`PHPCBF`](#phpcbf)
 
 **Description**:
 
@@ -17963,7 +17964,7 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 
 ### Perltidy
 
-#####  [Perltidy profile](#perltidy-profile) 
+#####  [Perltidy profile](#perltidy-profile)
 
 **Namespace**: `perl`
 
@@ -17971,7 +17972,7 @@ Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS ru
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Perltidy`](#perltidy) 
+**Supported Beautifiers**:  [`Perltidy`](#perltidy)
 
 **Description**:
 
@@ -17990,7 +17991,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 
 ### Pretty Diff
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -18000,7 +18001,7 @@ Specify a configuration file which will override the default name of .perltidyrc
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18016,7 +18017,7 @@ Indentation size/length (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -18026,7 +18027,7 @@ Indentation size/length (Supported by Pretty Diff)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18042,7 +18043,7 @@ Indentation character (Supported by Pretty Diff)
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -18052,7 +18053,7 @@ Indentation character (Supported by Pretty Diff)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18068,7 +18069,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -18078,7 +18079,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18094,7 +18095,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 }
 ```
 
-#####  [Newline between rules](#newline-between-rules) 
+#####  [Newline between rules](#newline-between-rules)
 
 **Namespace**: `css`
 
@@ -18104,7 +18105,7 @@ Preserve line-breaks (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18120,7 +18121,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 }
 ```
 
-#####  [Indent comments](#indent-comments) 
+#####  [Indent comments](#indent-comments)
 
 **Namespace**: `css`
 
@@ -18130,7 +18131,7 @@ Add a newline between CSS rules (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18146,7 +18147,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 }
 ```
 
-#####  [Force indentation](#force-indentation) 
+#####  [Force indentation](#force-indentation)
 
 **Namespace**: `css`
 
@@ -18154,7 +18155,7 @@ Determines whether comments should be indented. (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18170,7 +18171,7 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 }
 ```
 
-#####  [Convert quotes](#convert-quotes) 
+#####  [Convert quotes](#convert-quotes)
 
 **Namespace**: `css`
 
@@ -18180,9 +18181,9 @@ if indentation should be forcefully applied to markup even if it disruptively ad
 
 **Type**: `string`
 
-**Enum**:  `none`  `double`  `single` 
+**Enum**:  `none`  `double`  `single`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18198,7 +18199,7 @@ Convert the quote characters delimiting strings from either double or single quo
 }
 ```
 
-#####  [Align assignments](#align-assignments) 
+#####  [Align assignments](#align-assignments)
 
 **Namespace**: `css`
 
@@ -18206,7 +18207,7 @@ Convert the quote characters delimiting strings from either double or single quo
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18222,7 +18223,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 }
 ```
 
-#####  [No lead zero](#no-lead-zero) 
+#####  [No lead zero](#no-lead-zero)
 
 **Namespace**: `css`
 
@@ -18230,7 +18231,7 @@ If lists of assignments or properties should be vertically aligned for faster an
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18246,7 +18247,7 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -18254,7 +18255,7 @@ If in CSS values leading 0s immediately preceding a decimal should be removed or
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18270,7 +18271,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by P
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -18278,7 +18279,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by P
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18294,7 +18295,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -18302,7 +18303,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18318,7 +18319,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -18326,7 +18327,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18342,7 +18343,7 @@ Break chained method calls across subsequent lines (Supported by Pretty Diff)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -18350,7 +18351,7 @@ Break chained method calls across subsequent lines (Supported by Pretty Diff)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)
 
 **Description**:
 
@@ -18369,7 +18370,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 ### Pug Beautify
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -18379,7 +18380,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify) 
+**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify)
 
 **Description**:
 
@@ -18395,7 +18396,7 @@ Indentation size/length (Supported by Pug Beautify)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -18405,7 +18406,7 @@ Indentation size/length (Supported by Pug Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify) 
+**Supported Beautifiers**:  [`Pug Beautify`](#pug-beautify)
 
 **Description**:
 
@@ -18424,7 +18425,7 @@ Indentation character (Supported by Pug Beautify)
 
 ### Remark
 
-#####  [Gfm](#gfm) 
+#####  [Gfm](#gfm)
 
 **Namespace**: `markdown`
 
@@ -18434,7 +18435,7 @@ Indentation character (Supported by Pug Beautify)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Remark`](#remark) 
+**Supported Beautifiers**:  [`Remark`](#remark)
 
 **Description**:
 
@@ -18450,7 +18451,7 @@ GitHub Flavoured Markdown (Supported by Remark)
 }
 ```
 
-#####  [Yaml](#yaml) 
+#####  [Yaml](#yaml)
 
 **Namespace**: `markdown`
 
@@ -18460,7 +18461,7 @@ GitHub Flavoured Markdown (Supported by Remark)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Remark`](#remark) 
+**Supported Beautifiers**:  [`Remark`](#remark)
 
 **Description**:
 
@@ -18476,7 +18477,7 @@ Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax
 }
 ```
 
-#####  [Commonmark](#commonmark) 
+#####  [Commonmark](#commonmark)
 
 **Namespace**: `markdown`
 
@@ -18484,7 +18485,7 @@ Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Remark`](#remark) 
+**Supported Beautifiers**:  [`Remark`](#remark)
 
 **Description**:
 
@@ -18503,7 +18504,7 @@ Allows and disallows several constructs. (Supported by Remark)
 
 ### Rubocop
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `ruby`
 
@@ -18513,7 +18514,7 @@ Allows and disallows several constructs. (Supported by Remark)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify)
 
 **Description**:
 
@@ -18529,7 +18530,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 }
 ```
 
-#####  [Rubocop Path](#rubocop-path) 
+#####  [Rubocop Path](#rubocop-path)
 
 **Namespace**: `ruby`
 
@@ -18537,7 +18538,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)
 
 **Description**:
 
@@ -18556,7 +18557,7 @@ Path to the `rubocop` CLI executable (Supported by Rubocop)
 
 ### Ruby Beautify
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `ruby`
 
@@ -18566,7 +18567,7 @@ Path to the `rubocop` CLI executable (Supported by Rubocop)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify) 
+**Supported Beautifiers**:  [`Rubocop`](#rubocop)  [`Ruby Beautify`](#ruby-beautify)
 
 **Description**:
 
@@ -18582,7 +18583,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `ruby`
 
@@ -18592,9 +18593,9 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 
 **Type**: `string`
 
-**Enum**:  ` `  `	` 
+**Enum**:  ` `  `	`
 
-**Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify) 
+**Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify)
 
 **Description**:
 
@@ -18613,7 +18614,7 @@ Indentation character (Supported by Ruby Beautify)
 
 ### TypeScript Formatter
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -18623,7 +18624,7 @@ Indentation character (Supported by Ruby Beautify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18639,7 +18640,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -18649,7 +18650,7 @@ Indentation size/length (Supported by TypeScript Formatter)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18665,7 +18666,7 @@ Indentation character (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -18673,7 +18674,7 @@ Indentation character (Supported by TypeScript Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18689,7 +18690,7 @@ Initial indentation level (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -18697,7 +18698,7 @@ Initial indentation level (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18713,7 +18714,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by T
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `js`
 
@@ -18723,7 +18724,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by T
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18739,7 +18740,7 @@ Preserve line-breaks (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `js`
 
@@ -18749,7 +18750,7 @@ Preserve line-breaks (Supported by TypeScript Formatter)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18765,7 +18766,7 @@ Number of line-breaks to be preserved in one chunk (Supported by TypeScript Form
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -18773,7 +18774,7 @@ Number of line-breaks to be preserved in one chunk (Supported by TypeScript Form
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18789,7 +18790,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by TypeScript Formatte
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -18797,7 +18798,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by TypeScript Formatte
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18813,7 +18814,7 @@ Enable jslint-stricter mode (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -18821,7 +18822,7 @@ Enable jslint-stricter mode (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18837,7 +18838,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `js`
 
@@ -18847,9 +18848,9 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18865,7 +18866,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -18873,7 +18874,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18889,7 +18890,7 @@ Break chained method calls across subsequent lines (Supported by TypeScript Form
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -18897,7 +18898,7 @@ Break chained method calls across subsequent lines (Supported by TypeScript Form
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18913,7 +18914,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -18921,7 +18922,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18937,7 +18938,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -18947,7 +18948,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18963,7 +18964,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -18971,7 +18972,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -18987,7 +18988,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -18995,7 +18996,7 @@ Preserve array indentation (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -19011,7 +19012,7 @@ Decode printable characters encoded in xNN notation (Supported by TypeScript For
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `js`
 
@@ -19019,7 +19020,7 @@ Decode printable characters encoded in xNN notation (Supported by TypeScript For
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -19035,7 +19036,7 @@ Wrap lines at next opportunity after N characters (Supported by TypeScript Forma
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `js`
 
@@ -19043,7 +19044,7 @@ Wrap lines at next opportunity after N characters (Supported by TypeScript Forma
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -19059,7 +19060,7 @@ End output with newline (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -19067,7 +19068,7 @@ End output with newline (Supported by TypeScript Formatter)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -19083,7 +19084,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -19093,9 +19094,9 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter)
 
 **Description**:
 
@@ -19114,7 +19115,7 @@ Override EOL from line-ending-selector (Supported by TypeScript Formatter)
 
 ### Uncrustify
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `vala`
 
@@ -19122,7 +19123,7 @@ Override EOL from line-ending-selector (Supported by TypeScript Formatter)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Uncrustify`](#uncrustify) 
+**Supported Beautifiers**:  [`Uncrustify`](#uncrustify)
 
 **Description**:
 
@@ -19141,7 +19142,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ### Vue Beautifier
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `html`
 
@@ -19151,7 +19152,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19167,7 +19168,7 @@ Indentation size/length (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `html`
 
@@ -19177,7 +19178,7 @@ Indentation size/length (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19193,7 +19194,7 @@ Indentation character (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent level](#indent-level) 
+#####  [Indent level](#indent-level)
 
 **Namespace**: `js`
 
@@ -19201,7 +19202,7 @@ Indentation character (Supported by Vue Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19217,7 +19218,7 @@ Initial indentation level (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -19225,7 +19226,7 @@ Initial indentation level (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19241,7 +19242,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by V
 }
 ```
 
-#####  [Preserve newlines](#preserve-newlines) 
+#####  [Preserve newlines](#preserve-newlines)
 
 **Namespace**: `html`
 
@@ -19251,7 +19252,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by V
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19267,7 +19268,7 @@ Preserve line-breaks (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Max preserve newlines](#max-preserve-newlines)
 
 **Namespace**: `html`
 
@@ -19277,7 +19278,7 @@ Preserve line-breaks (Supported by Vue Beautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19293,7 +19294,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Space in paren](#space-in-paren) 
+#####  [Space in paren](#space-in-paren)
 
 **Namespace**: `js`
 
@@ -19301,7 +19302,7 @@ Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19317,7 +19318,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Jslint happy](#jslint-happy) 
+#####  [Jslint happy](#jslint-happy)
 
 **Namespace**: `js`
 
@@ -19325,7 +19326,7 @@ Add padding spaces within paren, ie. f( a, b ) (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19341,7 +19342,7 @@ Enable jslint-stricter mode (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Space after anon function](#space-after-anon-function) 
+#####  [Space after anon function](#space-after-anon-function)
 
 **Namespace**: `js`
 
@@ -19349,7 +19350,7 @@ Enable jslint-stricter mode (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19365,7 +19366,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Brace style](#brace-style) 
+#####  [Brace style](#brace-style)
 
 **Namespace**: `html`
 
@@ -19375,9 +19376,9 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `string`
 
-**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none` 
+**Enum**:  `collapse`  `collapse-preserve-inline`  `expand`  `end-expand`  `none`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19393,7 +19394,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 }
 ```
 
-#####  [Break chained methods](#break-chained-methods) 
+#####  [Break chained methods](#break-chained-methods)
 
 **Namespace**: `js`
 
@@ -19401,7 +19402,7 @@ Add a space before an anonymous function's parens, ie. function () (Supported by
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19417,7 +19418,7 @@ Break chained method calls across subsequent lines (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Keep array indentation](#keep-array-indentation) 
+#####  [Keep array indentation](#keep-array-indentation)
 
 **Namespace**: `js`
 
@@ -19425,7 +19426,7 @@ Break chained method calls across subsequent lines (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19441,7 +19442,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Keep function indentation](#keep-function-indentation) 
+#####  [Keep function indentation](#keep-function-indentation)
 
 **Namespace**: `js`
 
@@ -19449,7 +19450,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19465,7 +19466,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Space before conditional](#space-before-conditional) 
+#####  [Space before conditional](#space-before-conditional)
 
 **Namespace**: `js`
 
@@ -19475,7 +19476,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19491,7 +19492,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Eval code](#eval-code) 
+#####  [Eval code](#eval-code)
 
 **Namespace**: `js`
 
@@ -19499,7 +19500,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19515,7 +19516,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Unescape strings](#unescape-strings) 
+#####  [Unescape strings](#unescape-strings)
 
 **Namespace**: `js`
 
@@ -19523,7 +19524,7 @@ Preserve array indentation (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19539,7 +19540,7 @@ Decode printable characters encoded in xNN notation (Supported by Vue Beautifier
 }
 ```
 
-#####  [Wrap line length](#wrap-line-length) 
+#####  [Wrap line length](#wrap-line-length)
 
 **Namespace**: `html`
 
@@ -19549,7 +19550,7 @@ Decode printable characters encoded in xNN notation (Supported by Vue Beautifier
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19565,7 +19566,7 @@ Maximum characters per line (0 disables) (Supported by Vue Beautifier)
 }
 ```
 
-#####  [End with newline](#end-with-newline) 
+#####  [End with newline](#end-with-newline)
 
 **Namespace**: `html`
 
@@ -19573,7 +19574,7 @@ Maximum characters per line (0 disables) (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19589,7 +19590,7 @@ End output with newline (Supported by Vue Beautifier)
 }
 ```
 
-#####  [End with comma](#end-with-comma) 
+#####  [End with comma](#end-with-comma)
 
 **Namespace**: `js`
 
@@ -19597,7 +19598,7 @@ End output with newline (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19613,7 +19614,7 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 }
 ```
 
-#####  [End of line](#end-of-line) 
+#####  [End of line](#end-of-line)
 
 **Namespace**: `js`
 
@@ -19623,9 +19624,9 @@ If a terminating comma should be inserted into arrays, object literals, and dest
 
 **Type**: `string`
 
-**Enum**:  `CRLF`  `LF`  `System Default` 
+**Enum**:  `CRLF`  `LF`  `System Default`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19641,7 +19642,7 @@ Override EOL from line-ending-selector (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent inner html](#indent-inner-html) 
+#####  [Indent inner html](#indent-inner-html)
 
 **Namespace**: `html`
 
@@ -19649,7 +19650,7 @@ Override EOL from line-ending-selector (Supported by Vue Beautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19665,7 +19666,7 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Indent scripts](#indent-scripts) 
+#####  [Indent scripts](#indent-scripts)
 
 **Namespace**: `html`
 
@@ -19675,9 +19676,9 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `keep`  `separate`  `normal` 
+**Enum**:  `keep`  `separate`  `normal`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19693,7 +19694,7 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Wrap attributes](#wrap-attributes) 
+#####  [Wrap attributes](#wrap-attributes)
 
 **Namespace**: `html`
 
@@ -19703,9 +19704,9 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19721,7 +19722,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 }
 ```
 
-#####  [Wrap attributes indent size](#wrap-attributes-indent-size) 
+#####  [Wrap attributes indent size](#wrap-attributes-indent-size)
 
 **Namespace**: `html`
 
@@ -19731,7 +19732,7 @@ Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19747,7 +19748,7 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Unformatted](#unformatted) 
+#####  [Unformatted](#unformatted)
 
 **Namespace**: `html`
 
@@ -19757,7 +19758,7 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19842,7 +19843,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
 }
 ```
 
-#####  [Extra liners](#extra-liners) 
+#####  [Extra liners](#extra-liners)
 
 **Namespace**: `html`
 
@@ -19852,7 +19853,7 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier)
 
 **Description**:
 
@@ -19875,7 +19876,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 ### align-yaml
 
-#####  [Padding](#padding) 
+#####  [Padding](#padding)
 
 **Namespace**: `yaml`
 
@@ -19883,7 +19884,7 @@ List of tags (defaults to [head,body,/html] that should have an extra newline be
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`align-yaml`](#align-yaml) 
+**Supported Beautifiers**:  [`align-yaml`](#align-yaml)
 
 **Description**:
 
@@ -19902,7 +19903,7 @@ The amount of padding to add next to each line. (Supported by align-yaml)
 
 ### autopep8
 
-#####  [Max line length](#max-line-length) 
+#####  [Max line length](#max-line-length)
 
 **Namespace**: `python`
 
@@ -19912,7 +19913,7 @@ The amount of padding to add next to each line. (Supported by align-yaml)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -19928,7 +19929,7 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `python`
 
@@ -19938,7 +19939,7 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -19954,7 +19955,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Ignore](#ignore) 
+#####  [Ignore](#ignore)
 
 **Namespace**: `python`
 
@@ -19964,7 +19965,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -19982,7 +19983,7 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Formater](#formater) 
+#####  [Formater](#formater)
 
 **Namespace**: `python`
 
@@ -19992,9 +19993,9 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `yapf` 
+**Enum**:  `autopep8`  `yapf`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20010,7 +20011,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Style config](#style-config) 
+#####  [Style config](#style-config)
 
 **Namespace**: `python`
 
@@ -20020,7 +20021,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20036,7 +20037,7 @@ formatting style used by yapf (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Sort imports](#sort-imports) 
+#####  [Sort imports](#sort-imports)
 
 **Namespace**: `python`
 
@@ -20044,7 +20045,7 @@ formatting style used by yapf (Supported by autopep8, pybeautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20060,7 +20061,7 @@ sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Multi line output](#multi-line-output) 
+#####  [Multi line output](#multi-line-output)
 
 **Namespace**: `python`
 
@@ -20070,9 +20071,9 @@ sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
+**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20091,7 +20092,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 
 ### beautysh
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `bash`
 
@@ -20101,7 +20102,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+**Supported Beautifiers**:  [`beautysh`](#beautysh)
 
 **Description**:
 
@@ -20120,7 +20121,7 @@ Indentation size/length (Supported by beautysh)
 
 ### clang-format
 
-#####  [Config Path](#config-path) 
+#####  [Config Path](#config-path)
 
 **Namespace**: `glsl`
 
@@ -20128,7 +20129,7 @@ Indentation size/length (Supported by beautysh)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`clang-format`](#clang-format) 
+**Supported Beautifiers**:  [`clang-format`](#clang-format)
 
 **Description**:
 
@@ -20147,7 +20148,7 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 
 ### coffee-fmt
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `js`
 
@@ -20157,7 +20158,7 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -20173,7 +20174,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 }
 ```
 
-#####  [Indent char](#indent-char) 
+#####  [Indent char](#indent-char)
 
 **Namespace**: `js`
 
@@ -20183,7 +20184,7 @@ Indentation size/length (Supported by Coffee Formatter, coffee-fmt)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -20199,7 +20200,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 }
 ```
 
-#####  [Indent with tabs](#indent-with-tabs) 
+#####  [Indent with tabs](#indent-with-tabs)
 
 **Namespace**: `js`
 
@@ -20207,7 +20208,7 @@ Indentation character (Supported by Coffee Formatter, coffee-fmt)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt) 
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter)  [`coffee-fmt`](#coffee-fmt)
 
 **Description**:
 
@@ -20226,7 +20227,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 
 ### formatR
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `r`
 
@@ -20236,7 +20237,7 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by C
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`formatR`](#formatr) 
+**Supported Beautifiers**:  [`formatR`](#formatr)
 
 **Description**:
 
@@ -20255,7 +20256,7 @@ Indentation size/length (Supported by formatR)
 
 ### pybeautifier
 
-#####  [Max line length](#max-line-length) 
+#####  [Max line length](#max-line-length)
 
 **Namespace**: `python`
 
@@ -20265,7 +20266,7 @@ Indentation size/length (Supported by formatR)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20281,7 +20282,7 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `python`
 
@@ -20291,7 +20292,7 @@ set maximum allowed line length (Supported by autopep8, pybeautifier)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20307,7 +20308,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Ignore](#ignore) 
+#####  [Ignore](#ignore)
 
 **Namespace**: `python`
 
@@ -20317,7 +20318,7 @@ Indentation size/length (Supported by autopep8, pybeautifier)
 
 **Type**: `array`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20335,7 +20336,7 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Formater](#formater) 
+#####  [Formater](#formater)
 
 **Namespace**: `python`
 
@@ -20345,9 +20346,9 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `yapf` 
+**Enum**:  `autopep8`  `yapf`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20363,7 +20364,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Style config](#style-config) 
+#####  [Style config](#style-config)
 
 **Namespace**: `python`
 
@@ -20373,7 +20374,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20389,7 +20390,7 @@ formatting style used by yapf (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Sort imports](#sort-imports) 
+#####  [Sort imports](#sort-imports)
 
 **Namespace**: `python`
 
@@ -20397,7 +20398,7 @@ formatting style used by yapf (Supported by autopep8, pybeautifier)
 
 **Type**: `boolean`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20413,7 +20414,7 @@ sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Multi line output](#multi-line-output) 
+#####  [Multi line output](#multi-line-output)
 
 **Namespace**: `python`
 
@@ -20423,9 +20424,9 @@ sort imports (requires isort installed) (Supported by autopep8, pybeautifier)
 
 **Type**: `string`
 
-**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA` 
+**Enum**:  `Grid`  `Vertical`  `Hanging Indent`  `Vertical Hanging Indent`  `Hanging Grid`  `Hanging Grid Grouped`  `NOQA`
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)
 
 **Description**:
 
@@ -20444,7 +20445,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 
 ### rustfmt
 
-#####  [Rustfmt path](#rustfmt-path) 
+#####  [Rustfmt path](#rustfmt-path)
 
 **Namespace**: `rust`
 
@@ -20452,7 +20453,7 @@ defines how from imports wrap (requires isort installed) (Supported by autopep8,
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`rustfmt`](#rustfmt) 
+**Supported Beautifiers**:  [`rustfmt`](#rustfmt)
 
 **Description**:
 
@@ -20471,7 +20472,7 @@ Path to rustfmt program (Supported by rustfmt)
 
 ### sqlformat
 
-#####  [Indent size](#indent-size) 
+#####  [Indent size](#indent-size)
 
 **Namespace**: `sql`
 
@@ -20481,7 +20482,7 @@ Path to rustfmt program (Supported by rustfmt)
 
 **Type**: `integer`
 
-**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat)
 
 **Description**:
 
@@ -20497,7 +20498,7 @@ Indentation size/length (Supported by sqlformat)
 }
 ```
 
-#####  [Keywords](#keywords) 
+#####  [Keywords](#keywords)
 
 **Namespace**: `sql`
 
@@ -20507,9 +20508,9 @@ Indentation size/length (Supported by sqlformat)
 
 **Type**: `string`
 
-**Enum**:  `unchanged`  `lower`  `upper`  `capitalize` 
+**Enum**:  `unchanged`  `lower`  `upper`  `capitalize`
 
-**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat)
 
 **Description**:
 
@@ -20525,7 +20526,7 @@ Change case of keywords (Supported by sqlformat)
 }
 ```
 
-#####  [Identifiers](#identifiers) 
+#####  [Identifiers](#identifiers)
 
 **Namespace**: `sql`
 
@@ -20535,9 +20536,9 @@ Change case of keywords (Supported by sqlformat)
 
 **Type**: `string`
 
-**Enum**:  `unchanged`  `lower`  `upper`  `capitalize` 
+**Enum**:  `unchanged`  `lower`  `upper`  `capitalize`
 
-**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat)
 
 **Description**:
 
@@ -20552,5 +20553,3 @@ Change case of identifiers (Supported by sqlformat)
     }
 }
 ```
-
-
