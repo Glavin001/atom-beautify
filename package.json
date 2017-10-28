@@ -150,6 +150,11 @@
     {
       "name": "Steven Zeck",
       "url": "https://github.com/szeck87"
+    },
+    {
+      "name": "Christian Kjær Laustsen",
+      "email": "ckl@codetalk.io",
+      "url": "https://github.com/Tehnix"
     }
   ],
   "engines": {
@@ -340,6 +345,8 @@
     "gherkin",
     "fortran",
     "haskell",
+    "hindent",
+    "brittany",
     "jade",
     "jsx",
     "latex",
