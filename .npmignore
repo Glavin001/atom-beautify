@@ -7,3 +7,4 @@ examples/
 .travis.yml
 appveyor.yml
 *.md
+src/

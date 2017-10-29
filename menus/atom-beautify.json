@@ -1,0 +1,34 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Beautify editor contents",
+        "command": "atom-beautify:beautify-editor"
+      },
+      {
+        "label": "Debug Atom Beautify",
+        "command": "atom-beautify:help-debug-editor"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Atom Beautify",
+          "submenu": [
+            {
+              "label": "Beautify editor contents",
+              "command": "atom-beautify:beautify-editor"
+            },
+            {
+              "label": "Debug Atom Beautify",
+              "command": "atom-beautify:help-debug-editor"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
