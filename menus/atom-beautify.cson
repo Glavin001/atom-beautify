@@ -25,6 +25,10 @@
                 'label': 'Debug'
                 'command': 'atom-beautify:help-debug-editor'
               }
+              {
+                'label': 'Settings'
+                'command': 'atom-beautify:open-settings'
+              }
           ]
       ]
   }

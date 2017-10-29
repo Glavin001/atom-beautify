@@ -556,6 +556,9 @@ handleSaveEvent = ->
     )
     plugin.subscriptions.add disposable
 
+openSettings = ->
+  atom.workspace.open('atom://config/packages/atom-beautify')
+
 getUnsupportedOptions = ->
   settings = atom.config.get('atom-beautify')
   schema = atom.config.getSchema('atom-beautify')
@@ -622,6 +625,7 @@ plugin.activate = ->
   @subscriptions.add handleSaveEvent()
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:beautify-editor", beautify
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
+  @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:open-settings", openSettings
   @subscriptions.add atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
   @subscriptions.add atom.commands.add ".tree-view .directory .name", "atom-beautify:beautify-directory", beautifyDirectory
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:migrate-settings", plugin.migrateSettings

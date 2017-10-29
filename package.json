@@ -146,6 +146,10 @@
     {
       "name": "Kamontat Chantrachirathumrong",
       "url": "https://github.com/kamontat"
+    },
+    {
+      "name": "Steven Zeck",
+      "url": "https://github.com/szeck87"
     }
   ],
   "engines": {
@@ -204,6 +208,7 @@
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
       "atom-beautify:beautify-editor",
+      "atom-beautify:open-settings",
       "atom-beautify:migrate-settings",
       "core:save",
       "core:save-as",
