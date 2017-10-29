@@ -45,7 +45,7 @@ Atom Package: https://atom.io/packages/atom-beautify
 apm install atom-beautify
 ```
 
-Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
+Or Settings/Preferences ➔ Install ➔ Search for `atom-beautify`
 
 ### Important Notice: Analytics
 
