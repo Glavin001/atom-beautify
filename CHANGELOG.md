@@ -1,4 +1,5 @@
 # Next
+- See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
 - See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
 - Fix for [#1888](https://github.com/Glavin001/atom-beautify/issues/1888). Allow 0 for minor and patch versions of Docker
 - Add Settings to atom-beautify in Packages menu [#1869](https://github.com/Glavin001/atom-beautify/issues/1869)

@@ -80,6 +80,7 @@ module.exports = class Beautifiers extends EventEmitter
     'marko-beautifier'
     'formatR'
     'beautysh'
+    'terraformfmt'
   ]
 
   ###
