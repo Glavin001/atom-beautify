@@ -50,7 +50,6 @@ matrix:
     - os: osx
       env:
         - ATOM_CHANNEL=stable
-      rvm: 2.1.10
     # - os: osx
     #   env:
     #     - ATOM_CHANNEL=beta
@@ -98,7 +97,7 @@ before_install:
   - brew tap homebrew/versions
   # Ruby language support
   # - gem install ruby-beautify --verbose
-  - gem install rubocop
+  # - gem install rubocop
   - gem install htmlbeautifier
   - gem install puppet-lint
   # Sass language support
