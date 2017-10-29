@@ -8,7 +8,6 @@ Beautifier = require('./beautifier')
 module.exports = class Terraformfmt extends Beautifier
   name: "terraformfmt"
   link: "https://www.terraform.io/docs/commands/fmt.html"
-  isPreInstalled: false
 
   options: {
     Terraform: false
