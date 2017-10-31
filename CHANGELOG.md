@@ -1,9 +1,17 @@
 # Next
-- See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
 - ...
 
-# v0.30.6 (2017-10-09)
+# v0.30.7 (2017-10-31)
 - Fix for [#986](https://github.com/Glavin001/atom-beautify/issues/986). Fix for Gherkin table formatting
+
+# v0.30.6 (2017-10-30)
+- See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
+- See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
+- Fix for [#1888](https://github.com/Glavin001/atom-beautify/issues/1888). Allow 0 for minor and patch versions of Docker
+- Add Atom-Beautify package settings menu item to Packages menu [#1869](https://github.com/Glavin001/atom-beautify/issues/1869)
+- Add `.ttslua` file extension to Lua language
+- Fix [#1638]. Update TypeScript Formatter dependency
+- Fix [#1833] `os.tmpDir` deprecation warning
 
 # v0.30.5 (2017-08-11)
 - Fix for [#1721](https://github.com/Glavin001/atom-beautify/issues/1721). Changes required due to TextBuffer.save becoming async in Atom 1.19

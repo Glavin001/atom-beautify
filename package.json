@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.30.5",
+  "version": "0.30.6",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
   "repository": {
@@ -146,6 +146,10 @@
     {
       "name": "Kamontat Chantrachirathumrong",
       "url": "https://github.com/kamontat"
+    },
+    {
+      "name": "Steven Zeck",
+      "url": "https://github.com/szeck87"
     }
   ],
   "engines": {
@@ -204,6 +208,7 @@
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
       "atom-beautify:beautify-editor",
+      "atom-beautify:open-settings",
       "atom-beautify:migrate-settings",
       "core:save",
       "core:save-as",
@@ -271,7 +276,8 @@
       "atom-beautify:beautify-language-visualforce",
       "atom-beautify:beautify-language-xml",
       "atom-beautify:beautify-language-xtemplate",
-      "atom-beautify:beautify-language-yaml"
+      "atom-beautify:beautify-language-yaml",
+      "atom-beautify:beautify-language-terraform"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -404,7 +410,9 @@
     "nginx beautify",
     "golang template",
     "align-yaml",
-    "goimports"
+    "goimports",
+    "terraform",
+    "terraformfmt"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"
