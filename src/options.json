@@ -6914,6 +6914,20 @@
           "namespace": "sql"
         }
       },
+      "reindent": {
+        "type": "boolean",
+        "default": true,
+        "description": "Change indentations of the statements. Uncheck this option to preserve indentation (Supported by sqlformat)",
+        "title": "Reindent",
+        "beautifiers": [
+          "sqlformat"
+        ],
+        "key": "reindent",
+        "language": {
+          "name": "SQL",
+          "namespace": "sql"
+        }
+      },
       "keywords": {
         "type": "string",
         "default": "upper",
