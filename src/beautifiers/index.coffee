@@ -42,6 +42,7 @@ module.exports = class Beautifiers extends EventEmitter
     'cljfmt'
     'clang-format'
     'crystal'
+    'ds-beautify'
     'dfmt'
     'elm-format'
     'hh_format'
