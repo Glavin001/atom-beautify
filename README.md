@@ -319,7 +319,7 @@ See [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
 ## Contributing
 
-See [`contributing.md`](contributing.md).
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 [See all contributors on GitHub](../../graphs/contributors).
 
