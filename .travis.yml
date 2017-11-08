@@ -97,7 +97,7 @@ before_install:
   - brew tap homebrew/versions
   # Ruby language support
   # - gem install ruby-beautify --verbose
-  - gem install rubocop
+  # - gem install rubocop
   - gem install htmlbeautifier
   - gem install puppet-lint
   # Sass language support
@@ -185,4 +185,10 @@ before_install:
       pip install --user beautysh;
     else
       pip install beautysh;
+    fi
+  # terraform
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew install terraform;
+    else
+      docker pull hashicorp/terraform;
     fi
