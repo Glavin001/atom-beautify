@@ -1,5 +1,5 @@
 # Next
-- ...
+- Add hindent and brittany beautifiers for haskell
 
 # v0.30.6 (2017-10-30)
 - See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
@@ -9,7 +9,6 @@
 - Add `.ttslua` file extension to Lua language
 - Fix [#1638]. Update TypeScript Formatter dependency
 - Fix [#1833] `os.tmpDir` deprecation warning
-- Add hindent and brittany beautifiers for haskell
 
 # v0.30.5 (2017-08-11)
 - Fix for [#1721](https://github.com/Glavin001/atom-beautify/issues/1721). Changes required due to TextBuffer.save becoming async in Atom 1.19
