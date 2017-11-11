@@ -46,15 +46,34 @@ export class AtomBeautify {
     private handleSaveEvent(): CompositeDisposable {
       return atom.workspace.observeTextEditors((editor: IEditor) => {
         const disposable: CompositeDisposable = editor.getBuffer().onWillSave(({ path: filePath }: { path: string }) =>
-          this.beautifyOnSaveHandler({path: filePath})
+          this.beautifyOnSaveHandler({filePath: filePath}, editor)
         );
         return this.subscriptions.add(disposable);
       });
     }
 
-    private beautifyOnSaveHandler({ path }: { path: string }) {
-      console.log("Beautify file on save", path);
-      Promise.resolve();
+    private beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: IEditor) {
+      let fileExtension = path.extname(filePath).substr(1);
+      if (editor.getPath() === undefined) {
+        editor.getBuffer().setPath(filePath);
+      }
+      const grammarName = editor.getGrammar().name;
+      let text = editor.getText();
+      //TODO Get beautify on save option from Atom settings
+      let beautifyOnSave = true;
+      console.log("Beautify file on save", {filePath, fileExtension, text, grammarName});
+      if (beautifyOnSave) {
+        return this.unibeautify.beautify({
+          fileExtension,
+          atomGrammar: grammarName,
+          options: {},
+          text: text
+        }).then((result) => {
+          editor.setText(result);
+        }).catch(error => {
+          this.showError(error);
+        });
+      }
     }
 
     private beautifyEditor(event: CustomEvent) {
@@ -80,6 +99,8 @@ export class AtomBeautify {
         text: text,
       }).then((result) => {
         editor.setText(result);
+      }).catch(error => {
+        this.showError(error);
       });
     }
 
