@@ -1,14 +1,10 @@
 # :lipstick: [atom-beautify](https://github.com/Glavin001/atom-beautify)
 
-| Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"> and <img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"> |
-| --- | --- |
-| [![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) | [![Build status](https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u?svg=true)](https://ci.appveyor.com/project/Glavin001/atom-beautify) |
-
-
-[![Gitter chat](https://img.shields.io/badge/gitter-Glavin001%2Fatom--beautify-1dce73.svg)](https://gitter.im/Glavin001/atom-beautify)
+[![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) [![Build status](https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u/branch/master?svg=true)](https://ci.appveyor.com/project/Glavin001/atom-beautify/branch/master)
+[![apm](https://img.shields.io/apm/dm/atom-beautify.svg)](https://atom.io/packages/atom-beautify)
+[![GitHub issues](https://img.shields.io/github/issues/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/issues)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Glavin001/atom-beautify.svg)](https://greenkeeper.io/)
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X2RK5DKN6YXPJ&lc=CA&item_name=Atom%2dBeautify&item_number=atom%2dbeautify&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
-
-[![Throughput Graph](https://graphs.waffle.io/Glavin001/atom-beautify/throughput.svg)](https://waffle.io/Glavin001/atom-beautify/metrics)
 
 > Beautifier for Atom powered by [Unibeautify](https://github.com/Unibeautify/unibeautify)
 
@@ -19,18 +15,14 @@
 
 ## Installation
 
-Atom Package: https://atom.io/packages/atom-beautify
+Settings/Preferences &rarr; Install &rarr; Search for `atom-beautify`
 
-```bash
+Or
+
+```
 apm install atom-beautify
 ```
 
-Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
+## Contributing
 
-## Contribute
-1. Clone the repository
-2. `cd 'atom-beautify'`
-3. Run `npm install`
-4. Run `apm link` (if necessary)
-5. Install [atom-typescript](https://atom.io/packages/atom-typescript) (if using Atom)
-6. Typescript files in `/src` will be compiled to Javascript and saved in `/dist` whenever a file is saved
+See [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md).
