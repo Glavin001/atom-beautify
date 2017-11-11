@@ -21,7 +21,6 @@ export class AtomBeautify {
         this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:open-settings", this.openSettings.bind(this)));
         this.subscriptions.add(atom.commands.add(".tree-view .file .name", "atom-beautify:beautify-file", this.beautifyFile.bind(this)));
         this.subscriptions.add(atom.commands.add(".tree-view .directory .name", "atom-beautify:beautify-directory", this.beautifyDirectory.bind(this)));
-
     }
 
     public deactivate(): void {
@@ -46,8 +45,7 @@ export class AtomBeautify {
     */
     private handleSaveEvent(): CompositeDisposable {
       return atom.workspace.observeTextEditors((editor: IEditor) => {
-        const disposable: CompositeDisposable = editor.onDidSave(({ path: filePath }: { path: string }) =>
-          // TODO: Implement debouncing
+        const disposable: CompositeDisposable = editor.getBuffer().onWillSave(({ path: filePath }: { path: string }) =>
           this.beautifyOnSaveHandler({path: filePath})
         );
         return this.subscriptions.add(disposable);
@@ -56,6 +54,7 @@ export class AtomBeautify {
 
     private beautifyOnSaveHandler({ path }: { path: string }) {
       console.log("Beautify file on save", path);
+      Promise.resolve();
     }
 
     private beautifyEditor(event: CustomEvent) {
