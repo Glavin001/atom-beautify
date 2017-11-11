@@ -138,7 +138,7 @@
   "devDependencies": {
     "@types/event-kit": "^2.0.2",
     "@types/lodash": "^4.14.36",
-    "@types/node": "^6.0.41",
+    "@types/node": "^8.0.50",
     "@types/atom": "^1.21.4",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
