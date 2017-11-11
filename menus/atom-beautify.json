@@ -2,12 +2,18 @@
   "context-menu": {
     "atom-text-editor": [
       {
+        "type": "separator"
+      },
+      {
         "label": "Beautify editor contents",
         "command": "atom-beautify:beautify-editor"
       },
       {
         "label": "Debug Atom Beautify",
         "command": "atom-beautify:help-debug-editor"
+      },
+      {
+        "type": "separator"
       }
     ]
   },
