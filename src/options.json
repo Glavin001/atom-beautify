@@ -9320,6 +9320,22 @@
           }
         }
       },
+      "ocp-indent": {
+        "key": "ocp-indent",
+        "title": "ocp-indent",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for ocp-indent executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"ocp-indent\" executable's binary/script."
+          }
+        }
+      },
       "php": {
         "key": "php",
         "title": "PHP",
