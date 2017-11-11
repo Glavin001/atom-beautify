@@ -17,9 +17,9 @@ module.exports = class OCPIndent extends Beautifier
       version: {
         parse: (text) ->
           try
-            text.match(/version (\d+\.\d+\.\d+)/)[1]
+            text.match(/(\d+\.\d+\.\d+)/)[1]
           catch
-            text.match(/version (\d+\.\d+)/)[1] + ".0"
+            text.match(/(\d+\.\d+)/)[1] + ".0"
       }
       docker: {
         image: "unibeautify/ocp-indent"
