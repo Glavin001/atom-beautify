@@ -19,12 +19,16 @@
           "label": "Atom Beautify",
           "submenu": [
             {
-              "label": "Beautify editor contents",
+              "label": "Beautify",
               "command": "atom-beautify:beautify-editor"
             },
             {
-              "label": "Debug Atom Beautify",
+              "label": "Debug",
               "command": "atom-beautify:help-debug-editor"
+            },
+            {
+              "label": "Settings",
+              "command": "atom-beautify:open-settings"
             }
           ]
         }

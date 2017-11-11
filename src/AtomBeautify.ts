@@ -1,5 +1,5 @@
 import { newUnibeautify, Unibeautify, Beautifier, Language } from "unibeautify";
-import { CompositeDisposable, Disposable } from "atom";
+import { Disposable, CompositeDisposable } from "atom";
 import Config from "./config";
 import * as Promise from "bluebird";
 import * as path from "path";
@@ -18,6 +18,7 @@ export class AtomBeautify {
         this.subscriptions.add(this.handleSaveEvent());
         this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:beautify-editor", this.beautifyEditor.bind(this)));
         this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:help-debug-editor", this.debug.bind(this)));
+        this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:open-settings", this.openSettings.bind(this)));
         this.subscriptions.add(atom.commands.add(".tree-view .file .name", "atom-beautify:beautify-file", this.beautifyFile.bind(this)));
         this.subscriptions.add(atom.commands.add(".tree-view .directory .name", "atom-beautify:beautify-directory", this.beautifyDirectory.bind(this)));
 
@@ -95,14 +96,20 @@ export class AtomBeautify {
 
     }
 
+    private openSettings() {
+      atom.workspace.open('atom://config/packages/atom-beautify');
+    }
+
     // ===== Helpers =====
     private getLoadedLanguages() {
       return this.unibeautify.getLoadedLanguages();
     }
+
     private getScrollTop(editor: any): any {
       const view = atom.views.getView(editor);
       return view && view.getScrollTop();
     }
+
     private setScrollTop(editor: any, value: any): void {
       const view = atom.views.getView(editor);
       view && view.setScrollTop(value);
@@ -141,6 +148,5 @@ export class AtomBeautify {
         });
       }
     };
-
 
 };
