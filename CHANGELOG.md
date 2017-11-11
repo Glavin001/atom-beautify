@@ -1,5 +1,5 @@
 # Next
-- ...
+- Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
 
 # v0.30.6 (2017-10-30)
 - See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
