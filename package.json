@@ -166,7 +166,7 @@
     "coffee-script": "^1.12.6",
     "csscomb": "^4.2.0",
     "diff": "^3.2.0",
-    "editorconfig": "^0.13.2",
+    "editorconfig": "^0.14.2",
     "eslint": "^4.0.0",
     "event-kit": "^2.3.0",
     "expand-home-dir": "0.0.3",
