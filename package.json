@@ -415,7 +415,7 @@
     "terraformfmt"
   ],
   "devDependencies": {
-    "coffeelint": "1.16.0"
+    "coffeelint": "2.0.7"
   },
   "scripts": {
     "build-options": "node script/build-options.js",
