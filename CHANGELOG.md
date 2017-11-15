@@ -1,5 +1,5 @@
 # Next
-- ...
+- Add support for MagicPython grammar [#1851](https://github.com/Glavin001/atom-beautify/issues/1851)
 
 # v0.30.6 (2017-10-30)
 - See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
