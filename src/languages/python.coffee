@@ -8,7 +8,8 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "Python"
+    "Python",
+    "MagicPython"
   ]
 
   ###
