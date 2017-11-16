@@ -74,6 +74,7 @@ addons:
     - ocaml
     - camlp4
     - opam
+    - aspcud
     - php5-cli
     - golang
 
