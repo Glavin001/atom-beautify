@@ -135,7 +135,7 @@ beautify = ({ editor, onSave, language }) ->
       else
         error = new Error("Unsupported beautification result '#{text}'.")
         showError(error)
-        return reject(error)
+        return setTimeout(-> resolve(text), 0)
 
       # else
       # console.log "Already Beautiful!"
