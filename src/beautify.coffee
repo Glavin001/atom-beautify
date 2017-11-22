@@ -96,9 +96,10 @@ beautify = ({ editor, onSave, language }) ->
       if not text?
         # Do nothing, is undefined
         # console.log 'beautifyCompleted'
+        return resolve(text)
       else if text instanceof Error
         showError(text)
-        return reject(text)
+        return resolve(text)
       else if typeof text is "string"
         if oldText isnt text
 
@@ -127,15 +128,18 @@ beautify = ({ editor, onSave, language }) ->
           # otherwise setScrollTop is not working, probably because the cursor
           # addition happens asynchronously
           setTimeout ( ->
-
             # console.log "setScrollTop"
             setScrollTop editor, origScrollTop
             return resolve(text)
           ), 0
+        else
+          return setTimeout(() ->
+            resolve(text)
+          , 0)
       else
         error = new Error("Unsupported beautification result '#{text}'.")
         showError(error)
-        return setTimeout(-> resolve(text), 0)
+        return resolve(text)
 
       # else
       # console.log "Already Beautiful!"
