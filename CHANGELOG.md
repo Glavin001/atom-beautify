@@ -1,6 +1,9 @@
 # Next
 - ...
 
+# v0.30.7 (2017-11-21)
+- Refactor handleSaveEvent to use onWillSave async ([#1924](https://github.com/Glavin001/atom-beautify/pull/1924), [#1895](https://github.com/Glavin001/atom-beautify/issues/1895))
+
 # v0.30.6 (2017-10-30)
 - See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
 - See [#881](https://github.com/Glavin001/atom-beautify/issues/881). Update to Prettydiff version 2!
