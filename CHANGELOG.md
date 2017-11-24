@@ -1,5 +1,5 @@
 # Next
-- ...
+- Add the option to indent Bash with tabs [#1951](https://github.com/Glavin001/atom-beautify/issues/1951)
 
 # v0.30.9 (2017-11-22)
 - Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.

@@ -27,5 +27,9 @@ module.exports = {
       default: null
       minimum: 0
       description: "Indentation size/length"
+    use_tabs:
+      type: 'boolean'
+      default: null
+      description: "Use tabs for indentation"
 
 }
