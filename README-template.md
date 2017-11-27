@@ -1,4 +1,5 @@
 # :lipstick: [{{package.name}}](https://github.com/Glavin001/atom-beautify)
+[![apm](https://img.shields.io/apm/dm/atom-beautify.svg)](https://atom.io/packages/atom-beautify)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Glavin001/atom-beautify.svg)](https://greenkeeper.io/)
 [![GitHub issues](https://img.shields.io/github/issues/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/issues)
 [![GitHub stars](https://img.shields.io/github/stars/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/stargazers)
@@ -202,6 +203,8 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](examples/nested-jsbeautifyrc/.j
 See [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
 ## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 [See all contributors on GitHub](../../graphs/contributors).
 

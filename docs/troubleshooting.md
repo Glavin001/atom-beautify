@@ -16,3 +16,9 @@ The debugging results will be copied to your clipboard.
 3. Create a file in your new Gist called `debug.md`.  
 4. Paste your debugging results from Atom beautify into `debug.md` file in your Gist.  
 5. Add a link to your Gist in your new Issue.
+
+## Common Issues
+
+> I receive an error when I try to install or update Atom Beautify
+
+Run `apm clean` from your terminal, then retry

@@ -1,8 +1,17 @@
 # Next
 - ...
 
-# v0.30.7 (2017-10-31)
+# v0.30.10 (2017-11-27)
 - Fix for [#986](https://github.com/Glavin001/atom-beautify/issues/986). Fix for Gherkin table formatting
+
+# v0.30.9 (2017-11-22)
+- Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
+
+# v0.30.8 (2017-11-22)
+- Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
+
+# v0.30.7 (2017-11-21)
+- Refactor handleSaveEvent to use onWillSave async ([#1924](https://github.com/Glavin001/atom-beautify/pull/1924), [#1895](https://github.com/Glavin001/atom-beautify/issues/1895))
 
 # v0.30.6 (2017-10-30)
 - See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
