@@ -138,6 +138,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | CSS | `CSS` |`.css` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | CSV | `CSV` |`.csv` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | D | `D` |`.d` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)**, [`dfmt`](https://github.com/Hackerpilot/dfmt) |
+| Edge | `Edge` |`.edge` |  |
 | EJS | `EJS`, `JavaScript Template`, `HTML (Angular)` |`.ejs` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Elm | `Elm` |`.elm` | **[`elm-format`](https://github.com/avh4/elm-format)** |
 | ERB | `HTML (Ruby - ERB)`, `HTML (Rails)` |`.erb` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`HTML Beautifier`](https://github.com/threedaymonk/htmlbeautifier) |

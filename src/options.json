@@ -1243,6 +1243,42 @@
       }
     }
   },
+  "edge": {
+    "title": "Edge",
+    "type": "object",
+    "description": "Options for language Edge",
+    "collapsed": true,
+    "beautifiers": [],
+    "grammars": [
+      "Edge"
+    ],
+    "extensions": [
+      "edge"
+    ],
+    "properties": {
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Edge Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "description": "Default Beautifier to be used for Edge",
+        "enum": []
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Edge files on save"
+      }
+    }
+  },
   "ejs": {
     "title": "EJS",
     "type": "object",

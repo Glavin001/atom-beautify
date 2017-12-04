@@ -1,5 +1,5 @@
 # Next
-- ...
+- Add support  Edge (`.edge`) language
 
 # v0.30.9 (2017-11-22)
 - Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
