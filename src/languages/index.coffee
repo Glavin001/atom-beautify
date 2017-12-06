@@ -79,6 +79,7 @@ module.exports = class Languages
     "xtemplate"
     "yaml"
     "terraform"
+    "verilog"
   ]
 
   ###

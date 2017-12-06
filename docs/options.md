@@ -13851,6 +13851,100 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 }
 ```
 
+####  [Verilog](#verilog) 
+
+**Supported Beautifiers**:  [`Emacs Verilog Mode`](#emacs-verilog-mode) 
+
+| Option | Emacs Verilog Mode |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `emacs_script_path` | :white_check_mark: |
+
+**Description**:
+
+Options for language Verilog
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable Verilog Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `Emacs Verilog Mode`
+
+**Type**: `string`
+
+**Enum**:  `Emacs Verilog Mode` 
+
+**Description**:
+
+Default Beautifier to be used for Verilog
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify Verilog files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Emacs script path](#emacs-script-path) 
+
+**Namespace**: `verilog`
+
+**Key**: `emacs_script_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Emacs Verilog Mode`](#emacs-verilog-mode) 
+
+**Description**:
+
+Path to emacs init.el script with formatting settings. (Leave blank to use default one) (Supported by Emacs Verilog Mode)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "verilog": {
+        "emacs_script_path": ""
+    }
+}
+```
+
 ####  [Visualforce](#visualforce) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -16178,6 +16272,33 @@ Override EOL from line-ending-selector (Supported by Coffee Formatter)
 {
     "js": {
         "end_of_line": "System Default"
+    }
+}
+```
+
+
+### Emacs Verilog Mode
+
+#####  [Emacs script path](#emacs-script-path) 
+
+**Namespace**: `verilog`
+
+**Key**: `emacs_script_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Emacs Verilog Mode`](#emacs-verilog-mode) 
+
+**Description**:
+
+Path to emacs init.el script with formatting settings. (Leave blank to use default one) (Supported by Emacs Verilog Mode)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "verilog": {
+        "emacs_script_path": ""
     }
 }
 ```

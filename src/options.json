@@ -9210,6 +9210,63 @@
       }
     }
   },
+  "verilog": {
+    "title": "Verilog",
+    "type": "object",
+    "description": "Options for language Verilog",
+    "collapsed": true,
+    "beautifiers": [
+      "Emacs Verilog Mode"
+    ],
+    "grammars": [
+      "Verilog"
+    ],
+    "extensions": [
+      "svh",
+      "v",
+      "sv"
+    ],
+    "properties": {
+      "emacs_script_path": {
+        "type": "string",
+        "default": "",
+        "description": "Path to emacs init.el script with formatting settings. (Leave blank to use default one) (Supported by Emacs Verilog Mode)",
+        "title": "Emacs script path",
+        "beautifiers": [
+          "Emacs Verilog Mode"
+        ],
+        "key": "emacs_script_path",
+        "language": {
+          "name": "Verilog",
+          "namespace": "verilog"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Verilog Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "Emacs Verilog Mode",
+        "description": "Default Beautifier to be used for Verilog",
+        "enum": [
+          "Emacs Verilog Mode"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Verilog files on save"
+      }
+    }
+  },
   "executables": {
     "title": "Executables",
     "type": "object",

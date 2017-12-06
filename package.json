@@ -150,6 +150,10 @@
     {
       "name": "Steven Zeck",
       "url": "https://github.com/szeck87"
+    },
+    {
+      "name": "Andrew Andrianov",
+      "url": "https://github.com/nekromant"
     }
   ],
   "engines": {
@@ -278,7 +282,8 @@
       "atom-beautify:beautify-language-xtemplate",
       "atom-beautify:beautify-language-yaml",
       "atom-beautify:beautify-language-terraform",
-      "atom-beautify:beautify-language-tsx"
+      "atom-beautify:beautify-language-tsx",
+      "atom-beautify:beautify-language-verilog"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -414,7 +419,9 @@
     "goimports",
     "terraform",
     "terraformfmt",
-    "tsx"
+    "tsx",
+    "verilog",
+    "emacs verilog mode"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"
