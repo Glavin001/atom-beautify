@@ -52,6 +52,7 @@ module.exports = class Beautifiers extends EventEmitter
     'goimports'
     'latex-beautify'
     'fortran-beautifier'
+    'vhdl-beautifier'
     'js-beautify'
     'jscs'
     'eslint'

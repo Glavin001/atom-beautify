@@ -73,6 +73,7 @@ module.exports = class Languages
     "ux_markup"
     "vala"
     "vue"
+    "vhdl"
     "visualforce"
     "xml"
     "xtemplate"
