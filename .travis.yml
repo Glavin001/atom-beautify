@@ -88,6 +88,7 @@ cache:
 
 before_install:
   # Install Homebrew on Linux
+  - python -m ensurepip
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
     fi
