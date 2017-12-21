@@ -4686,6 +4686,21 @@
           "namespace": "markdown"
         }
       },
+      "beautifyCodeBlocks": {
+        "type": "boolean",
+        "default": false,
+        "description": "Look for fenced code blocks (e.g. ```js) and beautify them using corresponding language rules (Supported by Remark, Tidy Markdown)",
+        "title": "Beautify Code Blocks",
+        "beautifiers": [
+          "Remark",
+          "Tidy Markdown"
+        ],
+        "key": "beautifyCodeBlocks",
+        "language": {
+          "name": "Markdown",
+          "namespace": "markdown"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,

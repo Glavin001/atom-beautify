@@ -33,4 +33,8 @@ module.exports = {
       type: 'boolean'
       default: false
       description: 'Allows and disallows several constructs.'
+    beautifyCodeBlocks:
+      type: 'boolean'
+      default: false
+      description: 'Look for fenced code blocks (e.g. ```js) and beautify them using corresponding language rules'
 }

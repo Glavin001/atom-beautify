@@ -1,13 +1,12 @@
 # global atom
 "use strict"
 pkg = require('../package')
+beautifier = require('./beautifier')
 
 # Dependencies
 plugin = module.exports
 {CompositeDisposable} = require 'event-kit'
 _ = require("lodash")
-Beautifiers = require("./beautifiers")
-beautifier = new Beautifiers()
 defaultLanguageOptions = beautifier.options
 logger = require('./logger')(__filename)
 Promise = require('bluebird')

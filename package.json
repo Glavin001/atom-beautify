@@ -171,6 +171,7 @@
     "event-kit": "^2.3.0",
     "expand-home-dir": "0.0.3",
     "extend": "^3.0.1",
+    "gfm-code-blocks": "^1.0.0",
     "gherkin": "^2.12.2",
     "handlebars": "^4.0.10",
     "js-beautify": "^1.6.14",
