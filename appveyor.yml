@@ -98,6 +98,10 @@ install:
   - cinst emacs -y
   - where emacs
 
+  # terraform
+  - cinst terraform -y
+  - where terraform
+
   # FIXME: Enable allowEmptyChecksums, until someone fixes the checksum issue of php
   - choco feature enable -n allowEmptyChecksums
   # PHP

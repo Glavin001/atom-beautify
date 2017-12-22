@@ -1,4 +1,5 @@
 # :lipstick: [atom-beautify](https://github.com/Glavin001/atom-beautify)
+[![apm](https://img.shields.io/apm/dm/atom-beautify.svg)](https://atom.io/packages/atom-beautify)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Glavin001/atom-beautify.svg)](https://greenkeeper.io/)
 [![GitHub issues](https://img.shields.io/github/issues/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/issues)
 [![GitHub stars](https://img.shields.io/github/stars/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/stargazers)
@@ -45,7 +46,7 @@ Atom Package: https://atom.io/packages/atom-beautify
 apm install atom-beautify
 ```
 
-Or Settings/Preferences ➔ Packages ➔ Search for `atom-beautify`
+Or Settings/Preferences ➔ Install ➔ Search for `atom-beautify`
 
 ### Important Notice: Analytics
 
@@ -111,6 +112,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | SassConvert | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [SassConvert (`sass-convert`)](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) with `docker pull unibeautify/sass-convert`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [SassConvert (`sass-convert`)](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) by following http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax<br/> |
 | sqlformat | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/andialbrecht/sqlparse and follow the instructions. |
 | stylish-haskell | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/jaspervdj/stylish-haskell and follow the instructions. |
+| terraformfmt | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [Terraform (`terraform`)](https://www.terraform.io) with `docker pull hashicorp/terraform`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [Terraform (`terraform`)](https://www.terraform.io) by following https://www.terraform.io<br/> |
 | Tidy Markdown | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | TypeScript Formatter | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Uncrustify | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [Uncrustify (`uncrustify`)](http://uncrustify.sourceforge.net/) with `docker pull unibeautify/uncrustify`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [Uncrustify (`uncrustify`)](http://uncrustify.sourceforge.net/) by following https://github.com/uncrustify/uncrustify<br/> |
@@ -178,6 +180,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | SQL | `SQL (Rails)`, `SQL` |`.sql` | **[`sqlformat`](https://github.com/andialbrecht/sqlparse)** |
 | SVG | `SVG` |`.svg` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Swig | `HTML (Swig)`, `SWIG` |`.swig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
+| Terraform | `Terraform` |`.tf` | **[`terraformfmt`](https://www.terraform.io/docs/commands/fmt.html)** |
 | TSS | `TSS` |`.tss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Twig | `HTML (Twig)` |`.twig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | TypeScript | `TypeScript` |`.ts` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
@@ -315,6 +318,8 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](examples/nested-jsbeautifyrc/.j
 See [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
 ## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 [See all contributors on GitHub](../../graphs/contributors).
 

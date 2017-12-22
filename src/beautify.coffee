@@ -96,9 +96,10 @@ beautify = ({ editor, onSave, language }) ->
       if not text?
         # Do nothing, is undefined
         # console.log 'beautifyCompleted'
+        return resolve(text)
       else if text instanceof Error
         showError(text)
-        return reject(text)
+        return resolve(text)
       else if typeof text is "string"
         if oldText isnt text
 
@@ -127,15 +128,18 @@ beautify = ({ editor, onSave, language }) ->
           # otherwise setScrollTop is not working, probably because the cursor
           # addition happens asynchronously
           setTimeout ( ->
-
             # console.log "setScrollTop"
             setScrollTop editor, origScrollTop
             return resolve(text)
           ), 0
+        else
+          return setTimeout(() ->
+            resolve(text)
+          , 0)
       else
         error = new Error("Unsupported beautification result '#{text}'.")
         showError(error)
-        return reject(error)
+        return resolve(text)
 
       # else
       # console.log "Already Beautiful!"
@@ -506,20 +510,17 @@ debug = () ->
 
 handleSaveEvent = ->
   atom.workspace.observeTextEditors (editor) ->
-    pendingPaths = {}
     beautifyOnSaveHandler = ({path: filePath}) ->
-      logger.verbose('Should beautify on this save?')
-      if pendingPaths[filePath]
-        logger.verbose("Editor with file path #{filePath} already beautified!")
-        return
-      buffer = editor.getBuffer()
       path ?= require('path')
-      # Get Grammar
-      grammar = editor.getGrammar().name
       # Get file extension
       fileExtension = path.extname(filePath)
       # Remove prefix "." (period) in fileExtension
       fileExtension = fileExtension.substr(1)
+      # Set path of buffer for unsaved files
+      if editor.getPath() is undefined
+        editor.getBuffer().setPath(filePath)
+      # Get Grammar from the editor
+      grammar = editor.getGrammar().name
       # Get language
       languages = beautifier.languages.getLanguages({grammar, extension: fileExtension})
       if languages.length < 1
@@ -535,26 +536,17 @@ handleSaveEvent = ->
         beautify({editor, onSave: true})
         .then(() ->
           logger.verbose('Done beautifying file', filePath)
-          if editor.isAlive() is true
-            logger.verbose('Saving TextEditor...')
-            # Store the filePath to prevent infinite looping
-            # When Whitespace package has option "Ensure Single Trailing Newline" enabled
-            # It will add a newline and keep the file from converging on a beautified form
-            # and saving without emitting onDidSave event, because there were no changes.
-            pendingPaths[filePath] = true
-            Promise.resolve(editor.save()).then(() ->
-              delete pendingPaths[filePath]
-              logger.verbose('Saved TextEditor.')
-            )
         )
         .catch((error) ->
           return showError(error)
         )
-    disposable = editor.onDidSave(({path : filePath}) ->
-      # TODO: Implement debouncing
+    disposable = editor.getBuffer().onWillSave(({path: filePath}) ->
       beautifyOnSaveHandler({path: filePath})
     )
     plugin.subscriptions.add disposable
+
+openSettings = ->
+  atom.workspace.open('atom://config/packages/atom-beautify')
 
 getUnsupportedOptions = ->
   settings = atom.config.get('atom-beautify')
@@ -622,6 +614,7 @@ plugin.activate = ->
   @subscriptions.add handleSaveEvent()
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:beautify-editor", beautify
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:help-debug-editor", debug
+  @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:open-settings", openSettings
   @subscriptions.add atom.commands.add ".tree-view .file .name", "atom-beautify:beautify-file", beautifyFile
   @subscriptions.add atom.commands.add ".tree-view .directory .name", "atom-beautify:beautify-directory", beautifyDirectory
   @subscriptions.add atom.commands.add "atom-workspace", "atom-beautify:migrate-settings", plugin.migrateSettings

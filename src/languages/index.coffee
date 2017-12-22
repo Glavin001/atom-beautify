@@ -77,6 +77,7 @@ module.exports = class Languages
     "xml"
     "xtemplate"
     "yaml"
+    "terraform"
   ]
 
   ###
