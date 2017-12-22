@@ -35,15 +35,15 @@ module.exports = class Remark extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    logger = @logger;
+    logger = @logger
     return new @Promise((resolve, reject) ->
       try
         remark = require 'remark'
         cleanMarkdown = remark().process(text, options).toString()
         if options.beautifyCodeBlocks
           beautifyCodeBlocks(cleanMarkdown, logger)
-            .then((t) => resolve(t))
-            .catch((e) => reject(e))
+            .then((t) -> resolve(t))
+            .catch((e) -> reject(e))
         else
           resolve cleanMarkdown
       catch err

@@ -13,14 +13,14 @@ module.exports = class TidyMarkdown extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    logger = @logger;
+    logger = @logger
     return new @Promise((resolve, reject) ->
       tidyMarkdown = require 'tidy-markdown'
       cleanMarkdown = tidyMarkdown(text, logger)
       if options.beautifyCodeBlocks
         beautifyCodeBlocks(cleanMarkdown)
-          .then((t) => resolve(t))
-          .catch((e) => reject(e))
+          .then((t) -> resolve(t))
+          .catch((e) -> reject(e))
       else
         resolve(cleanMarkdown)
     )

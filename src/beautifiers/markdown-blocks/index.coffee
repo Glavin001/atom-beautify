@@ -26,23 +26,23 @@ module.exports = (text, logger) ->
             resolve(null)
           else
             beautifier.beautify(code, allOptions, grammarName, filePath)
-              .then((cleanCode) =>
-                  if cleanCode
-                    resolve({
-                      block: [codePrefix, cleanCode, codeSuffix].join('\n')
-                      originalStart: originalStart
-                      originalEnd: originalEnd
-                    })
-                  else
-                    resolve(null)
+              .then((cleanCode) ->
+                if cleanCode
+                  resolve({
+                    block: [codePrefix, cleanCode, codeSuffix].join('\n')
+                    originalStart: originalStart
+                    originalEnd: originalEnd
+                  })
+                else
+                  resolve(null)
               )
-              .catch((e) =>
+              .catch((e) ->
                 logger.verbose "error while beautifying #{code.substring(0, 200)}...", e
                 resolve(null)
               )
           ))
-    Promise.all(beautifyBlockPromises).then((cleanCodeBlocks) =>
-      cleanCodeBlocks.reverse((b) -> !!b).forEach((codeBlock) =>
+    Promise.all(beautifyBlockPromises).then((cleanCodeBlocks) ->
+      cleanCodeBlocks.reverse((b) -> !!b).forEach((codeBlock) ->
         if (codeBlock)
           cleanMarkdown = cleanMarkdown.substring(0, codeBlock.originalStart) + codeBlock.block + cleanMarkdown.substring(codeBlock.originalEnd)
       )
