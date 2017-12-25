@@ -65,6 +65,18 @@ Thank you.
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
 
+### Poll: Improving installation of third-party beautifiers
+
+Many users are experiencing issues when installing third party beautifiers (e.g. Uncrustify, PHP-CS-Fixer, and many more).
+A possible solution is a "cloud" service which provides remote access to these beautifiers. Atom-Beautify would then communicate with these services, allowing for zero-installation beautification.
+
+Please let us know what you think!
+
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet/vote)
+
 ## Beautifiers
 
 Some of the supported beautifiers are developed for Node.js and are automatically installed when Atom-Beautify is installed. However, other beautifiers are command-line interface (CLI) applications and require you to manually install them.
