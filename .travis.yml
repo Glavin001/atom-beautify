@@ -113,15 +113,15 @@ before_install:
       pip install --user --upgrade autopep8;
       pip install --user --upgrade isort;
     else
-      pip install --upgrade pip;
-      pip install --upgrade autopep8;
-      pip install --upgrade isort;
+      pip2 install --upgrade pip2;
+      pip2 install --upgrade autopep8;
+      pip2 install --upgrade isort;
     fi
   # SQL language support
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       pip install --user --upgrade sqlparse;
     else
-      pip install --upgrade sqlparse;
+      pip2 install --upgrade sqlparse;
     fi
   # Java, C, C++, C#, Objective-C, D, Pawn, Vala
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
@@ -184,7 +184,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       pip install --user beautysh;
     else
-      pip install beautysh;
+      pip2 install beautysh;
     fi
   # terraform
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
