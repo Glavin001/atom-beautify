@@ -277,7 +277,8 @@
       "atom-beautify:beautify-language-xml",
       "atom-beautify:beautify-language-xtemplate",
       "atom-beautify:beautify-language-yaml",
-      "atom-beautify:beautify-language-terraform"
+      "atom-beautify:beautify-language-terraform",
+      "atom-beautify:beautify-language-gn"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -412,7 +413,8 @@
     "align-yaml",
     "goimports",
     "terraform",
-    "terraformfmt"
+    "terraformfmt",
+    "gn"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"

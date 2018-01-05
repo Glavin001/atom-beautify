@@ -101,6 +101,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | formatR | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [Rscript (`rscript`)](https://github.com/yihui/formatR) with `docker pull unibeautify/rscript`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [Rscript (`rscript`)](https://github.com/yihui/formatR) by following https://github.com/yihui/formatR<br/> |
 | Fortran Beautifier | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [Emacs (`emacs`)](https://www.gnu.org/software/emacs/) by following https://www.gnu.org/software/emacs/<br/> |
 | Gherkin formatter | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
+| GN | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [gn (`gn`)](https://chromium.googlesource.com/chromium/src/tools/gn) by following https://www.chromium.org/developers/how-tos/get-the-code<br/> |
 | gofmt | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://golang.org/cmd/gofmt/ and follow the instructions. |
 | goimports | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [goimports (`goimports`)](https://godoc.org/golang.org/x/tools/cmd/goimports) with `docker pull unibeautify/goimports`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [goimports (`goimports`)](https://godoc.org/golang.org/x/tools/cmd/goimports) by following https://godoc.org/golang.org/x/tools/cmd/goimports<br/> |
 | hh_format | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://hhvm.com/ and follow the instructions. |
@@ -159,6 +160,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Fortran | `Fortran - Modern` |`.f90`, `.F90`, `.f95`, `.F95`, `.f03`, `.F03`, `.f08`, `.F08` | **[`Fortran Beautifier`](https://www.gnu.org/software/emacs/)** |
 | gherkin | `Gherkin` |`.feature` | **[`Gherkin formatter`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/gherkin.coffee)** |
 | GLSL | `C`, `opencl`, `GLSL` |`.vert`, `.frag` | **[`clang-format`](https://clang.llvm.org/docs/ClangFormat.html)** |
+| GN | `gn` |`.gn`, `.gni` | **[`GN`](https://chromium.googlesource.com/chromium/src/tools/gn)** |
 | Go | `Go` |`.go` | **[`gofmt`](https://golang.org/cmd/gofmt/)**, [`goimports`](https://godoc.org/golang.org/x/tools/cmd/goimports) |
 | Golang Template | `HTML (Go)`, `Go Template` |`.gohtml` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Handlebars | `Handlebars`, `HTML (Handlebars)` |`.hbs`, `.handlebars` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |

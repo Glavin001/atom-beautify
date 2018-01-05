@@ -2079,6 +2079,48 @@
       }
     }
   },
+  "gn": {
+    "title": "GN",
+    "type": "object",
+    "description": "Options for language GN",
+    "collapsed": true,
+    "beautifiers": [
+      "GN"
+    ],
+    "grammars": [
+      "gn"
+    ],
+    "extensions": [
+      "gn",
+      "gni"
+    ],
+    "properties": {
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable GN Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "GN",
+        "description": "Default Beautifier to be used for GN",
+        "enum": [
+          "GN"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify GN files on save"
+      }
+    }
+  },
   "go": {
     "title": "Go",
     "type": "object",
@@ -9285,6 +9327,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"elm-format\" executable's binary/script."
+          }
+        }
+      },
+      "gn": {
+        "key": "gn",
+        "title": "gn",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for gn executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"gn\" executable's binary/script."
           }
         }
       },

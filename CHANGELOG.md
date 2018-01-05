@@ -1,4 +1,5 @@
 # Next
+- Add GN language and beautifier
 - ...
 
 # v0.30.9 (2017-11-22)
