@@ -29,7 +29,7 @@ module.exports = class PuppetFix extends Beautifier
   ]
 
   beautify: (text, language, options) ->
-    @exe("puppet-lint", [
+    @exe("puppet-lint").run([
       '--fix'
       tempFile = @tempFile("input", text)
       ], {
