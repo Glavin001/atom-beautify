@@ -108,8 +108,8 @@
     "atom": ">=1.6.0 <2.0.0"
   },
   "dependencies": {
-    "bluebird": "^3.4.6",
-    "unibeautify": "^0.1.5"
+    "bluebird": "^3.5.1",
+    "unibeautify": "^0.2.0"
   },
   "activationCommands": {
     "atom-workspace": [
@@ -136,12 +136,12 @@
     "clean"
   ],
   "devDependencies": {
-    "@types/event-kit": "^2.0.2",
-    "@types/lodash": "^4.14.36",
-    "@types/node": "^8.0.50",
-    "@types/atom": "^1.21.4",
+    "@types/event-kit": "^2.0.4",
+    "@types/lodash": "^4.14.92",
+    "@types/node": "^8.1.4",
+    "@types/atom": "^1.23.1",
     "tslint": "^5.8.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.6.2"
   },
   "scripts": {
     "start": "tsc --watch"
