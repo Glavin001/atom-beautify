@@ -117,7 +117,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | PHPCBF | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) with `docker pull unibeautify/phpcbf`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) by following https://github.com/squizlabs/PHP_CodeSniffer#installation<br/> |
 | Pretty Diff | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Pug Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
-| puppet-lint | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://puppet-lint.com/ and follow the instructions. |
+| puppet-lint | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) with `docker pull unibeautify/puppet-lint`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) by following http://puppet-lint.com/<br/> |
 | pybeautifier | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/guyskk/pybeautifier and follow the instructions. |
 | Remark | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Rubocop | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/bbatsov/rubocop and follow the instructions. |
