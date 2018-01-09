@@ -3,6 +3,11 @@
 generateFakePath = (codeBlockFileExtension) ->
   return 'fakepath.' + codeBlockFileExtension
 
+cleanCodeBlockReducer = (text, cleanCodeBlock) ->
+  if (cleanCodeBlock && text)
+    return text.substring(0, cleanCodeBlock.originalStart) + cleanCodeBlock.block + text.substring(cleanCodeBlock.originalEnd)
+  return text
+
 module.exports = (text, logger) ->
   return new @Promise((resolve, reject) ->
     extractCodeBlocks = require 'gfm-code-blocks'
@@ -45,11 +50,7 @@ module.exports = (text, logger) ->
       )
     )
     Promise.all(beautifyBlockPromises).then((cleanCodeBlocks) ->
-      cleanMarkdown = text
-      cleanCodeBlocks.reverse((b) -> !!b).forEach((codeBlock) ->
-        if (codeBlock)
-          cleanMarkdown = cleanMarkdown.substring(0, codeBlock.originalStart) + codeBlock.block + cleanMarkdown.substring(codeBlock.originalEnd)
-      )
-      resolve(cleanMarkdown)
+      cleanText = cleanCodeBlocks.reverse((b) -> !!b).reduce(cleanCodeBlockReducer, text)
+      resolve(cleanText)
     )
   )
