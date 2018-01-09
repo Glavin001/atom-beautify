@@ -4697,7 +4697,7 @@
         "title": "Default Beautifier",
         "order": -2,
         "type": "string",
-        "default": "Tidy Markdown",
+        "default": "Remark",
         "description": "Default Beautifier to be used for Markdown",
         "enum": [
           "Remark",

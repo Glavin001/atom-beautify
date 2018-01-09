@@ -8072,7 +8072,7 @@ Disable Markdown Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `Tidy Markdown`
+**Default**: `Remark`
 
 **Type**: `string`
 
