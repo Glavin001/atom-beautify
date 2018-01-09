@@ -19,8 +19,8 @@ module.exports = class TidyMarkdown extends Beautifier
       cleanMarkdown = tidyMarkdown(text, logger)
       if options.beautifyCodeBlocks
         beautifyCodeBlocks(cleanMarkdown)
-          .then((t) -> resolve(t))
-          .catch((e) -> reject(e))
+          .then(resolve)
+          .catch(reject)
       else
         resolve(cleanMarkdown)
     )

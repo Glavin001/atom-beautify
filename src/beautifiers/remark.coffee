@@ -42,8 +42,8 @@ module.exports = class Remark extends Beautifier
         cleanMarkdown = remark().process(text, options).toString()
         if options.beautifyCodeBlocks
           beautifyCodeBlocks(cleanMarkdown, logger)
-            .then((t) -> resolve(t))
-            .catch((e) -> reject(e))
+            .then(resolve)
+            .catch(reject)
         else
           resolve cleanMarkdown
       catch err

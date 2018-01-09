@@ -1,52 +1,55 @@
+{ guessCodeBlockFileExtension } = require('./languages')
+
+generateFakePath = (codeBlockFileExtension) ->
+  return 'fakepath.' + codeBlockFileExtension
+
 module.exports = (text, logger) ->
   return new @Promise((resolve, reject) ->
     extractCodeBlocks = require 'gfm-code-blocks'
     beautifier = require '../../beautifier'
-    cleanMarkdown = text
-    codeBlocks = extractCodeBlocks(cleanMarkdown)
-    beautifyBlockPromises = []
-    for codeBlock in codeBlocks
-      codeLanguage = codeBlock.lang.match(/^[\w\d]+/)?[0]
-      logger.verbose "Beautify code block #{codeLanguage}"
-      if !codeLanguage
-        beautifyBlockPromises.push(null)
-      else
-        beautifyBlockPromises.push(new @Promise((resolve, reject) ->
-          linesInBlock = codeBlock.block.split('\n')
-          codePrefix = linesInBlock[0]
-          codeSuffix = linesInBlock[linesInBlock.length - 1]
-          code = linesInBlock.slice(1, linesInBlock.length - 1).join('\n')
-          filePath = 'fakepath.' + codeLanguage
-          grammar = atom.grammars.selectGrammar(filePath, code)
-          grammarName = grammar.name
-          allOptions = beautifier.getOptionsForPath(filePath)
-          originalStart = codeBlock.start
-          originalEnd = codeBlock.end
-          if grammarName == 'Null Grammar'
-            resolve(null)
-          else
-            beautifier.beautify(code, allOptions, grammarName, filePath)
-              .then((cleanCode) ->
-                if cleanCode
-                  resolve({
-                    block: [codePrefix, cleanCode, codeSuffix].join('\n')
-                    originalStart: originalStart
-                    originalEnd: originalEnd
-                  })
-                else
-                  resolve(null)
-              )
-              .catch((e) ->
-                logger.verbose "error while beautifying #{code.substring(0, 200)}...", e
-                resolve(null)
-              )
-          ))
+    codeBlocks = extractCodeBlocks(text)
+    beautifyBlockPromises = codeBlocks.map((codeBlock) ->
+      codeBlockFileExtension = guessCodeBlockFileExtension(codeBlock)
+      logger.verbose "Beautify code block #{codeBlockFileExtension}"
+      if !codeBlockFileExtension
+        return null
+      return new @Promise((resolveCodeBlock, rejectCodeBlock) ->
+        linesInCodeBlock = codeBlock.block.split('\n')
+        codePrefix = linesInCodeBlock[0]
+        codeSuffix = linesInCodeBlock[linesInCodeBlock.length - 1]
+        code = linesInCodeBlock.slice(1, linesInCodeBlock.length - 1).join('\n')
+        filePath = generateFakePath(codeBlockFileExtension)
+        grammar = atom.grammars.selectGrammar(filePath, code)
+        grammarName = grammar.name
+        allOptions = beautifier.getOptionsForPath(filePath)
+        originalStart = codeBlock.start
+        originalEnd = codeBlock.end
+        if grammarName == 'Null Grammar'
+          resolveCodeBlock(null)
+        else
+          beautifier.beautify(code, allOptions, grammarName, filePath)
+          .then((cleanCode) ->
+            if cleanCode
+              resolveCodeBlock({
+                block: [codePrefix, cleanCode, codeSuffix].join('\n')
+                originalStart: originalStart
+                originalEnd: originalEnd
+              })
+            else
+              resolveCodeBlock(null)
+            )
+          .catch((e) ->
+            logger.verbose "error while beautifying #{code.substring(0, 200)}...", e
+            resolveCodeBlock(null)
+          )
+      )
+    )
     Promise.all(beautifyBlockPromises).then((cleanCodeBlocks) ->
+      cleanMarkdown = text
       cleanCodeBlocks.reverse((b) -> !!b).forEach((codeBlock) ->
         if (codeBlock)
           cleanMarkdown = cleanMarkdown.substring(0, codeBlock.originalStart) + codeBlock.block + cleanMarkdown.substring(codeBlock.originalEnd)
       )
-    ).then(->
       resolve(cleanMarkdown)
     )
   )
