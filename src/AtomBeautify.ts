@@ -53,32 +53,34 @@ export class AtomBeautify {
     }
 
     private beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: IEditor) {
-      let fileExtension = path.extname(filePath).substr(1);
-      if (editor.getPath() === undefined) {
-        editor.getBuffer().setPath(filePath);
-      }
-      const grammarName = editor.getGrammar().name;
-      let text: string = null;
-      if(!atom.config.get("atom-beautify.general.beautifyEntireFileOnSave") &&  !!editor.getSelectedText()) {
-        text = editor.getSelectedText();
-      }
-      else {
-        text = editor.getText();
-      }
-      //TODO Get beautify on save option from Atom settings
-      let beautifyOnSave = true;
-      console.log("Beautify file on save", {filePath, fileExtension, text, grammarName});
-      if (beautifyOnSave) {
-        return this.unibeautify.beautify({
-          fileExtension,
-          atomGrammar: grammarName,
-          options: {},
-          text: text
-        }).then((result) => {
-          editor.setText(result);
-        }).catch(error => {
-          this.showError(error);
-        });
+      if(atom.config.get("atom-beautify.general.beautifyOnSave")) {
+        let fileExtension = path.extname(filePath).substr(1);
+        if (editor.getPath() === undefined) {
+          editor.getBuffer().setPath(filePath);
+        }
+        const grammarName = editor.getGrammar().name;
+        let text: string = null;
+        if(!atom.config.get("atom-beautify.general.beautifyEntireFileOnSave") &&  !!editor.getSelectedText()) {
+          text = editor.getSelectedText();
+        }
+        else {
+          text = editor.getText();
+        }
+        //TODO Get beautify on save option from Atom settings
+        let beautifyOnSave = true;
+        console.log("Beautify file on save", {filePath, fileExtension, text, grammarName});
+        if (beautifyOnSave) {
+          return this.unibeautify.beautify({
+            fileExtension,
+            atomGrammar: grammarName,
+            options: {},
+            text: text
+          }).then((result) => {
+            editor.setText(result);
+          }).catch(error => {
+            this.showError(error);
+          });
+        }
       }
     }
 
