@@ -1,4 +1,5 @@
 # Next
+- Switch to external [`Remark CLI`](https://github.com/remarkjs/remark/tree/master/packages/remark-cli) and thus allow for user-defined config with `remarkrc` ([#965](https://github.com/Glavin001/atom-beautify/issues/965))
 - Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
 
 # v0.30.9 (2017-11-22)

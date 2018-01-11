@@ -4686,6 +4686,20 @@
           "namespace": "markdown"
         }
       },
+      "search_for_configuration": {
+        "type": "boolean",
+        "default": false,
+        "description": "Searches for `remarkrc` file and respects rules in it. If set, **Commonmark**, **Gfm** and **Yaml** options are ignored (Supported by Remark)",
+        "title": "Search for configuration",
+        "beautifiers": [
+          "Remark"
+        ],
+        "key": "search_for_configuration",
+        "language": {
+          "name": "Markdown",
+          "namespace": "markdown"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -9397,6 +9411,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"puppet-lint\" executable's binary/script."
+          }
+        }
+      },
+      "remark": {
+        "key": "remark",
+        "title": "Remark CLI",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Remark CLI executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"remark\" executable's binary/script."
           }
         }
       },

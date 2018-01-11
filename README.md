@@ -120,7 +120,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Pug Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | puppet-lint | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) with `docker pull unibeautify/puppet-lint`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) by following http://puppet-lint.com/<br/> |
 | pybeautifier | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/guyskk/pybeautifier and follow the instructions. |
-| Remark | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
+| Remark | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [Remark CLI (`remark`)](https://github.com/remarkjs/remark) by following https://github.com/remarkjs/remark/tree/master/packages/remark-cli#installation<br/> |
 | Rubocop | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/bbatsov/rubocop and follow the instructions. |
 | Ruby Beautify | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/erniebrodeur/ruby-beautify and follow the instructions. |
 | rustfmt | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/rust-lang-nursery/rustfmt and follow the instructions. |
@@ -173,7 +173,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | LaTeX | `BibTeX`, `LaTeX`, `TeX` |`.bib`, `.tex`, `.sty`, `.cls`, `.dtx`, `.ins`, `.bbx`, `.cbx` | **[`Latex Beautify`](https://github.com/cmhughes/latexindent.pl)** |
 | LESS | `LESS` |`.less` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js) |
 | Lua | `Lua` |`.lua`, `.ttslua` | **[`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee)** |
-| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Remark`](https://github.com/wooorm/remark) |
+| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Remark`](https://github.com/remarkjs/remark) |
 | Marko | `Marko` |`.marko` | **[`Marko Beautifier`](https://github.com/marko-js/marko-prettyprint)** |
 | Mustache | `HTML (Mustache)` |`.mustache` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Nginx | `nginx` |`.conf` | **[`Nginx Beautify`](https://github.com/denysvitali/nginxbeautify)** |
