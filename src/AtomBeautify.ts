@@ -54,10 +54,10 @@ export class AtomBeautify {
 
     private beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: IEditor) {
       if(atom.config.get("atom-beautify.general.beautifyOnSave")) {
-        let fileExtension = path.extname(filePath).substr(1);
         if (editor.getPath() === undefined) {
           editor.getBuffer().setPath(filePath);
         }
+        let fileExtension = path.extname(filePath).substr(1);
         const grammarName = editor.getGrammar().name;
         let text: string = null;
         if(!atom.config.get("atom-beautify.general.beautifyEntireFileOnSave") &&  !!editor.getSelectedText()) {
@@ -66,7 +66,7 @@ export class AtomBeautify {
         else {
           text = editor.getText();
         }
-        //TODO Get beautify on save option from Atom settings
+        //TODO Get beautify on save option for individual language from Atom settings
         let beautifyOnSave = true;
         console.log("Beautify file on save", {filePath, fileExtension, text, grammarName});
         if (beautifyOnSave) {
@@ -86,20 +86,15 @@ export class AtomBeautify {
 
     private beautifyEditor(event: CustomEvent) {
       const editor: IEditor = atom.workspace.getActiveTextEditor();
-      let text: string = null;
-      // FIXME
-      const forceEntireFile = false;
-      const isSelection = false;
-      if (!forceEntireFile && isSelection) {
-        text = editor.getSelectedText();
-      } else {
-        text = editor.getText();
-      }
+      let text: string = editor.getText();
       const grammarName = editor.getGrammar().name;
       const editedFilePath: string = editor.getPath();
-      let fileExtension = path.extname(editedFilePath);
-      // Remove prefix "." (period) in fileExtension
-      fileExtension = fileExtension.substr(1);
+      let fileExtension: string = null;
+      if(editedFilePath) {
+        fileExtension = path.extname(editedFilePath);
+        // Remove prefix "." (period) in fileExtension
+        fileExtension = fileExtension.substr(1);
+      }
       return this.unibeautify.beautify({
         fileExtension,
         atomGrammar: grammarName,
