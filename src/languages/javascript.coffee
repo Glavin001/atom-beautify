@@ -112,5 +112,9 @@ module.exports = {
       type: 'boolean'
       default: false
       description: "Insert spaces between brackets in object literals"
+    errors_only:
+      type: 'boolean'
+      default: false
+      description: "Fix errors but leave warnings"
 
 }

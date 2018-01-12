@@ -9,7 +9,8 @@ module.exports = class ESLintFixer extends Beautifier
   link: "https://github.com/eslint/eslint"
 
   options: {
-    JavaScript: false
+    JavaScript:
+      errors_only: true
     Vue: false
   }
 
@@ -23,9 +24,16 @@ module.exports = class ESLintFixer extends Beautifier
       allowUnsafeNewFunction ->
         importPath = Path.join(projectPath, 'node_modules', 'eslint')
         try
-          CLIEngine = require(importPath).CLIEngine
+          try
+            eslint = require(importPath)
+          catch
+            eslint = require('eslint')
 
-          cli = new CLIEngine(fix: true, cwd: projectPath)
+          fix = true
+          if options.errors_only
+            fix = (rule) -> rule.severity is 2
+
+          cli = new eslint.CLIEngine(fix: fix, cwd: projectPath)
           result = cli.executeOnText(text).results[0]
 
           resolve result.output
