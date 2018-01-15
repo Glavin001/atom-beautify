@@ -276,7 +276,7 @@ module.exports = class Beautifiers extends EventEmitter
       logger.error(error)
 
 
-  beautify : (text, allOptions, grammar, filePath, {onSave, language} = {}) ->
+  beautify : (text, allOptions, grammar, filePath, {onSave, language, textIsNotEntireFile} = {}) ->
     return Promise.all(allOptions)
     .then((allOptions) =>
       return new Promise((resolve, reject) =>
@@ -347,6 +347,7 @@ module.exports = class Beautifiers extends EventEmitter
             context =
               filePath: filePath
               fileExtension: fileExtension
+              textIsNotEntireFile: !!textIsNotEntireFile
 
             startTime = new Date()
             beautifier.loadExecutables()

@@ -1,5 +1,6 @@
 # Next
 - Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
+- Introduce internal flag `textIsNotEntireFile` inside `context` argument for `beautify()`; this should help some beautifiers such as `elm-formatter` correctly beautify file fragments in future (e.g. avoid adding unexpected imports, extra new lines, etc.)
 
 # v0.30.9 (2017-11-22)
 - Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.

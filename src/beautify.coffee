@@ -168,11 +168,14 @@ beautify = ({ editor, onSave, language }) ->
 
     # Get current editor's text
     text = undefined
+    textIsNotEntireFile = false
     if not forceEntireFile and isSelection
       text = editor.getSelectedText()
+      textIsNotEntireFile = editor.getSelectedText().length < editor.getText().length
     else
       text = editor.getText()
     oldText = text
+    logger.verbose('textIsNotEntireFile', textIsNotEntireFile)
 
 
     # Get Grammar
@@ -181,7 +184,7 @@ beautify = ({ editor, onSave, language }) ->
 
     # Finally, beautify!
     try
-      beautifier.beautify(text, allOptions, grammarName, editedFilePath, onSave: onSave, language: language)
+      beautifier.beautify(text, allOptions, grammarName, editedFilePath, onSave: onSave, language: language, textIsNotEntireFile: textIsNotEntireFile )
       .then(beautifyCompleted)
       .catch(beautifyCompleted)
     catch e
