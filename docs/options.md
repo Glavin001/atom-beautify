@@ -7946,6 +7946,8 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
 | `end_of_line` | :white_check_mark: |
+| `indent_char` | :white_check_mark: |
+| `indent_size` | :white_check_mark: |
 
 **Description**:
 
@@ -8030,6 +8032,58 @@ Override EOL from line-ending-selector (Supported by Lua beautifier)
 {
     "lua": {
         "end_of_line": "System Default"
+    }
+}
+```
+
+#####  [Indent char](#indent-char) 
+
+**Namespace**: `lua`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+Indentation character (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "indent_char": " "
+    }
+}
+```
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `lua`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+Indentation size/length (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "indent_size": 4
     }
 }
 ```
@@ -17242,6 +17296,58 @@ Aligns columns by the alignment tabs for environments specified (Supported by La
 
 
 ### Lua beautifier
+
+#####  [Indent size](#indent-size) 
+
+**Namespace**: `lua`
+
+**Key**: `indent_size`
+
+**Default**: `4`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+Indentation size/length (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "indent_size": 4
+    }
+}
+```
+
+#####  [Indent char](#indent-char) 
+
+**Namespace**: `lua`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`Lua beautifier`](#lua-beautifier) 
+
+**Description**:
+
+Indentation character (Supported by Lua beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "lua": {
+        "indent_char": " "
+    }
+}
+```
 
 #####  [End of line](#end-of-line) 
 
