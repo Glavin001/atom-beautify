@@ -11,6 +11,8 @@ notifications:
 
 script: sh build-package.sh
 
+language: generic
+
 cache:
   timeout: 1000
 
