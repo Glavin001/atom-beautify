@@ -158,7 +158,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | LaTeX | `BibTeX`, `LaTeX`, `TeX` |`.bib`, `.tex`, `.sty`, `.cls`, `.dtx`, `.ins`, `.bbx`, `.cbx` | **[`Latex Beautify`](https://github.com/cmhughes/latexindent.pl)** |
 | LESS | `LESS` |`.less` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js) |
 | Lua | `Lua` |`.lua`, `.ttslua` | **[`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee)** |
-| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Remark`](https://github.com/wooorm/remark) |
+| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Remark`](https://github.com/remarkjs/remark) |
 | Marko | `Marko` |`.marko` | **[`Marko Beautifier`](https://github.com/marko-js/marko-prettyprint)** |
 | Mustache | `HTML (Mustache)` |`.mustache` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Nginx | `nginx` |`.conf` | **[`Nginx Beautify`](https://github.com/denysvitali/nginxbeautify)** |
