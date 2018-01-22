@@ -181,7 +181,6 @@
     "nginxbeautify": "^2.0.1",
     "node-cljfmt": "0.5.3",
     "node-dir": "0.1.17",
-    "node-uuid": "1.4.8",
     "open": "0.0.5",
     "prettydiff2": "^2.2.7",
     "pug-beautify": "^0.1.1",
@@ -197,6 +196,7 @@
     "typescript-formatter": "5.2.0",
     "underscore-plus": "^1.6.6",
     "universal-analytics": "0.4.13",
+    "uuid": "^3.1.0",
     "which": "1.2.14",
     "winston": "2.3.1",
     "yaml-front-matter": "3.4.0"
@@ -420,7 +420,7 @@
   "scripts": {
     "build-options": "node script/build-options.js",
     "docs": "npm run build-options && coffee docs/",
-    "prepublish": "npm run docs",
+    "prepare": "npm run docs",
     "lint": "coffeelint src/ spec/",
     "code-docs": "codo && open docs/code/index.html",
     "test": "atom --test spec"
