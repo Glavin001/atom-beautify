@@ -12,7 +12,7 @@ module.exports = class TypeScriptFormatter extends Beautifier
     return new @Promise((resolve, reject) =>
 
       try
-        format = require("typescript-formatter/lib/formatter").default
+        format = require("typescript-formatter/lib/formatter").format
         formatterUtils = require("typescript-formatter/lib/utils")
         # @verbose('format', format, formatterUtils)
 
