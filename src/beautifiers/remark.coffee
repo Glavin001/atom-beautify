@@ -3,7 +3,7 @@ Beautifier = require('./beautifier')
 
 module.exports = class Remark extends Beautifier
   name: "Remark"
-  link: "https://github.com/wooorm/remark"
+  link: "https://github.com/remarkjs/remark"
   options: {
     _: {
       gfm: true
@@ -35,9 +35,11 @@ module.exports = class Remark extends Beautifier
   beautify: (text, language, options) ->
     return new @Promise((resolve, reject) ->
       try
-        remark = require 'remark'
-        cleanMarkdown = remark().process(text, options).toString()
-        resolve cleanMarkdown
+        remark = require('remark')
+        remark().use(settings:
+          commonmark: true).process text, (err, file) ->
+            cleanMarkdown = String(file)
+            resolve cleanMarkdown
       catch err
         @error("Remark error: #{err}")
         reject(err)
