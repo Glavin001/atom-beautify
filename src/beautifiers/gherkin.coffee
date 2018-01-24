@@ -17,6 +17,7 @@ module.exports = class Gherkin extends Beautifier
     logger = @logger
     return new @Promise((resolve, reject) ->
       recorder = {
+        table: []
         lines: []
         tags: []
         comments: []
@@ -40,6 +41,16 @@ module.exports = class Gherkin extends Beautifier
         write_tags: (indent = 0) ->
           if @tags.length > 0
             @write_indented(@tags.splice(0, @tags.length).join(' '), indent)
+
+        write_table: ->
+          tempTable = @table
+          transposedTable = tempTable[0].map (col, i) -> tempTable.map (row) -> row[i]
+          result = transposedTable.map (col) -> (col.reduce (a1, b1) -> if a1.length > b1.length then a1 else b1).length
+          for row in @table
+            row = row.map (cell, i) ->
+              cell + new Array(result[i] - cell.length + 1).join(' ')
+            @write_indented("| #{row.join(' | ')} |", 3)
+          @table = []
 
         comment: (value, line) ->
           logger.verbose({token: 'comment', value: value.trim(), line: line})
@@ -67,7 +78,8 @@ module.exports = class Gherkin extends Beautifier
 
         scenario: (keyword, name, description, line) ->
           logger.verbose({token: 'scenario', keyword: keyword, name: name, description: description, line: line})
-
+          if @table.length > 0
+            @write_table()
           @write_blank()
           @write_comments(1)
           @write_tags(1)
@@ -76,7 +88,8 @@ module.exports = class Gherkin extends Beautifier
 
         scenario_outline: (keyword, name, description, line) ->
           logger.verbose({token: 'outline', keyword: keyword, name: name, description: description, line: line})
-
+          if @table.length > 0
+            @write_table()
           @write_blank()
           @write_comments(1)
           @write_tags(1)
@@ -85,7 +98,8 @@ module.exports = class Gherkin extends Beautifier
 
         examples: (keyword, name, description, line) ->
           logger.verbose({token: 'examples', keyword: keyword, name: name, description: description, line: line})
-
+          if @table.length > 0
+            @write_table()
           @write_blank()
           @write_comments(2)
           @write_tags(2)
@@ -94,6 +108,8 @@ module.exports = class Gherkin extends Beautifier
 
         step: (keyword, name, line) ->
           logger.verbose({token: 'step', keyword: keyword, name: name, line: line})
+          if @table.length > 0
+            @write_table()
 
           @write_comments(2)
           @write_indented("#{keyword}#{name}", 2)
@@ -107,15 +123,14 @@ module.exports = class Gherkin extends Beautifier
 
         row: (cells, line) ->
           logger.verbose({token: 'row', cells: cells, line: line})
-
-          # TODO: need to collect rows so that we can align the vertical pipes to the widest columns
-          # See Gherkin::Formatter::PrettyFormatter#table(rows)
           @write_comments(3)
-          @write_indented("| #{cells.join(' | ')} |", 3)
+          @table.push(cells.map (cell) -> cell.replace /\|/, "\\|")
 
         eof: () ->
           logger.verbose({token: 'eof'})
           # If there were any comments left, treat them as step comments.
+          if @table.length > 0
+            @write_table()
           @write_comments(2)
       }
 
