@@ -5,6 +5,10 @@ if [ "$TRAVIS_OS_NAME" != "osx" ]; then
     export DISPLAY=":99"
 fi
 
+echo "Gem Info"
+bundle info puppet-lint
+bundle info sass
+
 echo "Using Atom version:"
 "$ATOM_SCRIPT_NAME" -v
 echo "Using APM version:"
