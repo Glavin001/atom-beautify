@@ -29,7 +29,10 @@ module.exports = {
       type: 'string'
       default: null
       description: "Indentation character"
-      enum: [" ", "\t"]
+      enum: [
+        {value: " ", description: "Space"}
+        {value: "\t", description: "Tab"}
+      ]
     rubocop_path:
       title: "Rubocop Path"
       type: 'string'

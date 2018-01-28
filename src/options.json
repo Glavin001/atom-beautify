@@ -6408,8 +6408,14 @@
         "default": null,
         "description": "Indentation character (Supported by Ruby Beautify)",
         "enum": [
-          " ",
-          "\t"
+          {
+            "value": " ",
+            "description": "Space"
+          },
+          {
+            "value": "\t",
+            "description": "Tab"
+          }
         ],
         "title": "Indent char",
         "beautifiers": [

@@ -10921,7 +10921,7 @@ Automatically beautify Ruby files on save
 
 **Type**: `string`
 
-**Enum**:  ` `  `	` 
+**Enum**:  `[object Object]`  `[object Object]` 
 
 **Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify) 
 
@@ -18712,7 +18712,7 @@ Indentation size/length (Supported by Rubocop, Ruby Beautify)
 
 **Type**: `string`
 
-**Enum**:  ` `  `	` 
+**Enum**:  `[object Object]`  `[object Object]` 
 
 **Supported Beautifiers**:  [`Ruby Beautify`](#ruby-beautify) 
 
