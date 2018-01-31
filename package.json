@@ -1,16 +1,10 @@
 {
-  "name": "atom-beautify",
+  "name": "beautify",
   "main": "./src/beautify",
   "version": "0.30.9",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Glavin001/atom-beautify.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Glavin001/atom-beautify/issues"
-  },
+  "repository": "https://github.com/seanlopez2/atom-beautify.git",
   "license": "MIT",
   "author": {
     "name": "Glavin Wiechert",
