@@ -45,13 +45,13 @@
 
 ## Installation
 
-Atom Package: https://atom.io/packages/atom-beautify
+Atom Package: https://atom.io/packages/beautify
 
 ```bash
-apm install atom-beautify
+apm install beautify
 ```
 
-Or Settings/Preferences ➔ Install ➔ Search for `atom-beautify`
+Or Settings/Preferences ➔ Install ➔ Search for `beautify`
 
 ### Important Notice: Analytics
 
