@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./dist/index.js",
-  "version": "0.29.11",
+  "version": "1.0.0",
   "private": true,
   "description": "Beautifier for Atom powered by Unibeautify",
   "repository": {
@@ -19,89 +19,9 @@
   },
   "contributors": [
     {
-      "name": "Donald Pipowitch",
-      "email": "pipo@senaeh.de",
-      "url": "https://github.com/donaldpipowitch"
-    },
-    {
-      "name": "László Károlyi",
-      "url": "https://github.com/karolyi"
-    },
-    {
-      "name": "Marco Tanzi",
-      "url": "https://github.com/mtanzi"
-    },
-    {
-      "name": "gvn lazar suntop",
-      "url": "https://github.com/gvn"
-    },
-    {
-      "name": "Vadim K.",
-      "url": "https://github.com/vadirn"
-    },
-    {
-      "name": "Filipe Silva",
-      "url": "https://github.com/filipesilva"
-    },
-    {
-      "name": "Ramón Cahenzli",
-      "url": "https://github.com/psy-q"
-    },
-    {
-      "name": "Clemens Damke",
-      "url": "https://github.com/Cortys"
-    },
-    {
-      "name": "Zhang YANG",
-      "url": "https://github.com/ProgramFan"
-    },
-    {
-      "name": "Daniel Bayley",
-      "url": "https://github.com/danielbayley"
-    },
-    {
-      "name": "Murphy Randle",
-      "url": "https://github.com/splodingsocks"
-    },
-    {
-      "name": "Luis Arias",
-      "url": "https://github.com/kaaloo"
-    },
-    {
-      "name": "Bati Sengul",
-      "url": "https://github.com/Focus"
-    },
-    {
-      "name": "Dheepak Krishnamurthy",
-      "url": "https://github.com/kdheepak89"
-    },
-    {
-      "name": "Ayoub Adib",
-      "url": "https://github.com/ayoubdev"
-    },
-    {
-      "name": "Frederic Delbos",
-      "url": "https://github.com/fdelbos"
-    },
-    {
-      "name": "Patrick Steele-Idem",
-      "url": "https://github.com/psteeleidem"
-    },
-    {
-      "name": "Joost van Doorn",
-      "url": "https://github.com/JoostvDoorn"
-    },
-    {
-      "name": "Arman Yessenamanov",
-      "url": "https://github.com/yesenarman"
-    },
-    {
-      "name": "Sebastian DiLorenzo",
-      "url": "https://github.com/Sebastian-D"
-    },
-    {
-      "name": "Émile Bergeron",
-      "url": "https://github.com/emileber"
+      "name": "Steven Zeck",
+      "email": "steven.zeck@gmail.com",
+      "url": "https://github.com/szeck87"
     }
   ],
   "engines": {
@@ -137,21 +57,15 @@
   ],
   "devDependencies": {
     "@types/event-kit": "^2.0.4",
-    "@types/lodash": "^4.14.92",
+    "@types/lodash": "^4.14.100",
     "@types/node": "^8.1.4",
-    "@types/atom": "^1.23.1",
-    "@types/bluebird": "^3.5.19",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "@types/atom": "^1.23.3",
+    "@types/bluebird": "^3.5.20",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.1",
+    "webpack": "^3.10.0"
   },
   "scripts": {
     "start": "tsc --watch"
-  },
-  "consumedServices": {
-    "unibeautify": {
-      "versions": {
-        "^1.0.0": "consumeBeautifier"
-      }
-    }
   }
 }
