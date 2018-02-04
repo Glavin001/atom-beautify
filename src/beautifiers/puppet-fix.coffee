@@ -8,21 +8,28 @@ module.exports = class PuppetFix extends Beautifier
   # this is what displays as your Default Beautifier in Language Config
   name: "puppet-lint"
   link: "http://puppet-lint.com/"
-  isPreInstalled: false
 
   options: {
     Puppet: true
   }
 
-  cli: (options) ->
-    if not options.puppet_path?
-      return new Error("'puppet-lint' path is not set!" +
-        " Please set this in the Atom Beautify package settings.")
-    else
-      return options.puppet_path
+  executables: [
+    {
+      name: "puppet-lint"
+      cmd: "puppet-lint"
+      homepage: "http://puppet-lint.com/"
+      installation: "http://puppet-lint.com/"
+      version: {
+        parse: (text) -> text.match(/puppet-lint (\d+\.\d+\.\d+)/)[1]
+      }
+      docker: {
+        image: "unibeautify/puppet-lint"
+      }
+    }
+  ]
 
   beautify: (text, language, options) ->
-    @run("puppet-lint", [
+    @exe("puppet-lint").run([
       '--fix'
       tempFile = @tempFile("input", text)
       ], {
