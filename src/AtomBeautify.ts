@@ -3,6 +3,7 @@ import { Disposable, CompositeDisposable } from "atom";
 import Config from "./config";
 import * as Promise from "bluebird";
 import * as path from "path";
+import * as _ from "lodash";
 
 declare const atom: any;
 declare type IEditor = any;
@@ -36,8 +37,7 @@ export class AtomBeautify {
     }
 
     public get config() {
-        console.log("config");
-        return Config;
+        return _.merge(Config, require('./options.json'));
     }
 
     /**

@@ -6,7 +6,7 @@
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "target": "ES6",
+        "target": "ES2017",
         "declaration": true,
         "moduleResolution": "node",
         "outDir": "dist"
@@ -14,7 +14,7 @@
     "include": [
         "./declarations.d.ts",
         "./src/**/*.ts",
-        "./script/**/*.ts",
+        "./scripts/**/*.ts",
         "./test/**/*.ts"
     ],
     "exclude": [
