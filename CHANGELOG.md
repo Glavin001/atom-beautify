@@ -1,5 +1,15 @@
 # Next
-- Add "Reindent" option for sqlformat. See #1926.
+- Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
+- Add "Reindent" option for sqlformat. See [#1926](https://github.com/Glavin001/atom-beautify/pull/1926).
+
+# v0.30.9 (2017-11-22)
+- Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
+
+# v0.30.8 (2017-11-22)
+- Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
+
+# v0.30.7 (2017-11-21)
+- Refactor handleSaveEvent to use onWillSave async ([#1924](https://github.com/Glavin001/atom-beautify/pull/1924), [#1895](https://github.com/Glavin001/atom-beautify/issues/1895))
 
 # v0.30.6 (2017-10-30)
 - See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.

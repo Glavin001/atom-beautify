@@ -9334,6 +9334,22 @@
           }
         }
       },
+      "ocp-indent": {
+        "key": "ocp-indent",
+        "title": "ocp-indent",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for ocp-indent executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"ocp-indent\" executable's binary/script."
+          }
+        }
+      },
       "php": {
         "key": "php",
         "title": "PHP",
@@ -9379,6 +9395,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"phpcbf\" executable's binary/script."
+          }
+        }
+      },
+      "puppet-lint": {
+        "key": "puppet-lint",
+        "title": "puppet-lint",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for puppet-lint executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"puppet-lint\" executable's binary/script."
           }
         }
       },
