@@ -6,13 +6,14 @@ module.exports = class TypeScriptFormatter extends Beautifier
   link: "https://github.com/vvakame/typescript-formatter"
   options: {
     TypeScript: true
+    TSX: true
   }
 
   beautify: (text, language, options) ->
     return new @Promise((resolve, reject) =>
 
       try
-        format = require("typescript-formatter/lib/formatter").default
+        format = require("typescript-formatter/lib/formatter").format
         formatterUtils = require("typescript-formatter/lib/utils")
         # @verbose('format', format, formatterUtils)
 
