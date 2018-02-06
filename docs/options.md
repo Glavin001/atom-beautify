@@ -368,6 +368,23 @@ Options for puppet-lint executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*puppet-lint*" and change it to your desired configuration.
 
+#####  [Remark CLI](#remark-cli) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for Remark CLI executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Remark CLI*" and change it to your desired configuration.
+
 #####  [Rscript](#rscript) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -8045,6 +8062,7 @@ Override EOL from line-ending-selector (Supported by Lua beautifier)
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `commonmark` | :white_check_mark: | :x: |
 | `gfm` | :white_check_mark: | :x: |
+| `search_for_configuration` | :white_check_mark: | :x: |
 | `yaml` | :white_check_mark: | :x: |
 
 **Description**:
@@ -8152,6 +8170,30 @@ GitHub Flavoured Markdown (Supported by Remark)
 {
     "markdown": {
         "gfm": true
+    }
+}
+```
+
+#####  [Search for configuration](#search-for-configuration) 
+
+**Namespace**: `markdown`
+
+**Key**: `search_for_configuration`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+Searches for `remarkrc` file and respects rules in it. If set, **Commonmark**, **Gfm** and **Yaml** options are ignored (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "search_for_configuration": false
     }
 }
 ```
@@ -18685,6 +18727,30 @@ Allows and disallows several constructs. (Supported by Remark)
 {
     "markdown": {
         "commonmark": false
+    }
+}
+```
+
+#####  [Search for configuration](#search-for-configuration) 
+
+**Namespace**: `markdown`
+
+**Key**: `search_for_configuration`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Remark`](#remark) 
+
+**Description**:
+
+Searches for `remarkrc` file and respects rules in it. If set, **Commonmark**, **Gfm** and **Yaml** options are ignored (Supported by Remark)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "markdown": {
+        "search_for_configuration": false
     }
 }
 ```

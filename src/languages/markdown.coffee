@@ -33,4 +33,8 @@ module.exports = {
       type: 'boolean'
       default: false
       description: 'Allows and disallows several constructs.'
+    search_for_configuration:
+      type: 'boolean'
+      default: false
+      description: 'Searches for `remarkrc` file and respects rules in it. If set, **Commonmark**, **Gfm** and **Yaml** options are ignored'
 }
