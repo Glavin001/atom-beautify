@@ -60,6 +60,7 @@ module.exports = class PrettyDiff extends Beautifier
     SCSS: true
     JSON: true
     TSS: true
+    TSX: true
     Twig: true
     LESS: true
     Swig: true

@@ -7371,6 +7371,7 @@
     "description": "Options for language TSX",
     "collapsed": true,
     "beautifiers": [
+      "Pretty Diff",
       "TypeScript Formatter"
     ],
     "grammars": [
@@ -7391,9 +7392,10 @@
         "title": "Default Beautifier",
         "order": -2,
         "type": "string",
-        "default": "TypeScript Formatter",
+        "default": "Pretty Diff",
         "description": "Default Beautifier to be used for TSX",
         "enum": [
+          "Pretty Diff",
           "TypeScript Formatter"
         ]
       },
