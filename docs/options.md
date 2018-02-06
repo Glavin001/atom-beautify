@@ -14030,39 +14030,39 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 ####  [Vue](#vue) 
 
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+**Supported Beautifiers**:  [`ESLint Fixer`](#eslint-fixer)  [`Vue Beautifier`](#vue-beautifier) 
 
-| Option | Vue Beautifier |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
-| `brace_style` | :white_check_mark: |
-| `break_chained_methods` | :white_check_mark: |
-| `end_of_line` | :white_check_mark: |
-| `end_with_comma` | :white_check_mark: |
-| `end_with_newline` | :white_check_mark: |
-| `eval_code` | :white_check_mark: |
-| `extra_liners` | :white_check_mark: |
-| `indent_char` | :white_check_mark: |
-| `indent_inner_html` | :white_check_mark: |
-| `indent_level` | :white_check_mark: |
-| `indent_scripts` | :white_check_mark: |
-| `indent_size` | :white_check_mark: |
-| `indent_with_tabs` | :white_check_mark: |
-| `jslint_happy` | :white_check_mark: |
-| `keep_array_indentation` | :white_check_mark: |
-| `keep_function_indentation` | :white_check_mark: |
-| `max_preserve_newlines` | :white_check_mark: |
-| `preserve_newlines` | :white_check_mark: |
-| `space_after_anon_function` | :white_check_mark: |
-| `space_before_conditional` | :white_check_mark: |
-| `space_in_paren` | :white_check_mark: |
-| `unescape_strings` | :white_check_mark: |
-| `unformatted` | :white_check_mark: |
-| `wrap_attributes` | :white_check_mark: |
-| `wrap_attributes_indent_size` | :white_check_mark: |
-| `wrap_line_length` | :white_check_mark: |
+| Option | ESLint Fixer | Vue Beautifier |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :x: | :white_check_mark: |
+| `break_chained_methods` | :x: | :white_check_mark: |
+| `end_of_line` | :x: | :white_check_mark: |
+| `end_with_comma` | :x: | :white_check_mark: |
+| `end_with_newline` | :x: | :white_check_mark: |
+| `eval_code` | :x: | :white_check_mark: |
+| `extra_liners` | :x: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: |
+| `indent_inner_html` | :x: | :white_check_mark: |
+| `indent_level` | :x: | :white_check_mark: |
+| `indent_scripts` | :x: | :white_check_mark: |
+| `indent_size` | :x: | :white_check_mark: |
+| `indent_with_tabs` | :x: | :white_check_mark: |
+| `jslint_happy` | :x: | :white_check_mark: |
+| `keep_array_indentation` | :x: | :white_check_mark: |
+| `keep_function_indentation` | :x: | :white_check_mark: |
+| `max_preserve_newlines` | :x: | :white_check_mark: |
+| `preserve_newlines` | :x: | :white_check_mark: |
+| `space_after_anon_function` | :x: | :white_check_mark: |
+| `space_before_conditional` | :x: | :white_check_mark: |
+| `space_in_paren` | :x: | :white_check_mark: |
+| `unescape_strings` | :x: | :white_check_mark: |
+| `unformatted` | :x: | :white_check_mark: |
+| `wrap_attributes` | :x: | :white_check_mark: |
+| `wrap_attributes_indent_size` | :x: | :white_check_mark: |
+| `wrap_line_length` | :x: | :white_check_mark: |
 
 **Description**:
 
@@ -14093,7 +14093,7 @@ Disable Vue Beautification
 
 **Type**: `string`
 
-**Enum**:  `Vue Beautifier` 
+**Enum**:  `ESLint Fixer`  `Vue Beautifier` 
 
 **Description**:
 

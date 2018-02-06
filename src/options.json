@@ -8068,6 +8068,7 @@
     "description": "Options for language Vue",
     "collapsed": true,
     "beautifiers": [
+      "ESLint Fixer",
       "Vue Beautifier"
     ],
     "grammars": [
@@ -8559,6 +8560,7 @@
         "default": "Vue Beautifier",
         "description": "Default Beautifier to be used for Vue",
         "enum": [
+          "ESLint Fixer",
           "Vue Beautifier"
         ]
       },
