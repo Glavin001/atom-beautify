@@ -68,6 +68,7 @@ module.exports = class Languages
     "svg"
     "swig"
     "tss"
+    "tsx"
     "twig"
     "typescript"
     "ux_markup"
