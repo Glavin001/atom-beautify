@@ -194,7 +194,7 @@
     "temp": "^0.8.3",
     "tidy-markdown": "2.0.4",
     "typescript": "^2.6.2",
-    "typescript-formatter": "5.2.0",
+    "typescript-formatter": "^7.0.0",
     "underscore-plus": "^1.6.6",
     "universal-analytics": "^0.4.16",
     "which": "^1.3.0",
@@ -277,7 +277,8 @@
       "atom-beautify:beautify-language-xml",
       "atom-beautify:beautify-language-xtemplate",
       "atom-beautify:beautify-language-yaml",
-      "atom-beautify:beautify-language-terraform"
+      "atom-beautify:beautify-language-terraform",
+      "atom-beautify:beautify-language-tsx"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -412,7 +413,8 @@
     "align-yaml",
     "goimports",
     "terraform",
-    "terraformfmt"
+    "terraformfmt",
+    "tsx"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"
