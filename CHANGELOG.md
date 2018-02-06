@@ -1,7 +1,13 @@
 # Next
 - Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
 - See [#601](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for tsx files
-- Switch to Remark as a default markdown beautifier due to a more active state of its community compared to Tidy Markdown
+- Switch to Remark as a default markdown beautifier due to a more active state of its community compared to Tidy Markdown ([#2004](https://github.com/Glavin001/atom-beautify/pull/2004)).
+  This is a __breaking change__ for Tidy Markdown users:
+     - list indentation is now four characters per level (three spaces after `-` for unordered lists and two spaces after `N.` in ordered lists)
+     - the contents of frontmatter are no longer formatted
+
+  You can easily switch back to the old behaviour by choosing _Tidy Markdown_ in package preferences.
+  Alternatively, you can customise Remark beautifier with `.jsbeautifyrc` (see [available options](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify#options)).
 
 # v0.30.9 (2017-11-22)
 - Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
