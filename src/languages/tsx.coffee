@@ -18,4 +18,6 @@ module.exports = {
     "tsx"
   ]
 
+  defaultBeautifier: "Pretty Diff"
+
 }

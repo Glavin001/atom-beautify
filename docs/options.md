@@ -12624,13 +12624,13 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
 
 ####  [TSX](#tsx) 
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff)  [`TypeScript Formatter`](#typescript-formatter) 
 
-| Option | TypeScript Formatter |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
+| Option | Pretty Diff | TypeScript Formatter |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -12657,11 +12657,11 @@ Disable TSX Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `TypeScript Formatter`
+**Default**: `Pretty Diff`
 
 **Type**: `string`
 
-**Enum**:  `TypeScript Formatter` 
+**Enum**:  `Pretty Diff`  `TypeScript Formatter` 
 
 **Description**:
 
