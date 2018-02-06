@@ -26,8 +26,13 @@ module.exports = class TypeScriptFormatter extends Beautifier
           opts.indentSize = options.indent_size
           opts.indentStyle = 'space'
 
+        if language is "TSX"
+          fileName = 'test.tsx'
+        else
+          fileName = ''
+
         @verbose('typescript', text, opts)
-        result = format('', text, opts)
+        result = format(fileName, text, opts)
         @verbose(result)
         resolve result
       catch e
