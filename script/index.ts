@@ -8,7 +8,7 @@ import Unibeautify, {
 import * as _ from "lodash";
 let path = require('path');
 let fs = require('fs');
-import beautifiers from "./beautifiers";
+import beautifiers from "../src/beautifiers";
 
 Unibeautify.loadBeautifiers(beautifiers);
 writeOptionsJson();

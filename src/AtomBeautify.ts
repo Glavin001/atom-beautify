@@ -1,4 +1,5 @@
 import { newUnibeautify, Unibeautify, Beautifier, Language } from "unibeautify";
+import beautifiers from "./beautifiers";
 import { Disposable, CompositeDisposable } from "atom";
 import Config from "./config";
 import * as Promise from "bluebird";
@@ -15,6 +16,7 @@ export class AtomBeautify {
     public activate(state: any): void {
         console.log("activated!!");
         this.unibeautify = newUnibeautify();
+        this.unibeautify.loadBeautifiers(beautifiers);
         this.subscriptions = new CompositeDisposable();
         this.subscriptions.add(this.handleSaveEvent());
         this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:beautify-editor", this.beautifyEditor.bind(this)));
@@ -26,14 +28,6 @@ export class AtomBeautify {
 
     public deactivate(): void {
         return this.subscriptions.dispose();
-    }
-
-    public consumeBeautifier(beautifiers: Beautifier | Beautifier[]) {
-        if (!Array.isArray(beautifiers)) {
-          beautifiers = [beautifiers];
-        }
-        console.log("beautifiers", beautifiers);
-        this.unibeautify.loadBeautifiers(beautifiers);
     }
 
     public get config() {
