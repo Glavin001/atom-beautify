@@ -1,12 +1,12 @@
 class Test extends React.Component<Foo> {
-  render() {
+render()          {
     return (
       <div className="class">
-    <h2 className="anotherClass">
+    <h2 className=         "anotherClass">
           {this.foo.bar}
         </h2>
-        {this.foo.bar.children}
-                </div>
-    );
-  }
+{this.foo.bar.children}
+                              </div>
+                            );
+}
 }
