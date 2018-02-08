@@ -9,6 +9,8 @@ echo "Using Atom version:"
 "$ATOM_SCRIPT_NAME" -v
 echo "Using APM version:"
 "$APM_SCRIPT_NAME" -v
+echo "Path:"
+echo $PATH
 
 echo "Downloading package dependencies..."
 "$APM_SCRIPT_NAME" clean
