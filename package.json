@@ -417,7 +417,7 @@
     "tsx"
   ],
   "devDependencies": {
-    "coffeelint": "1.16.0"
+    "coffeelint": "2.1.0"
   },
   "scripts": {
     "build-options": "node script/build-options.js",
