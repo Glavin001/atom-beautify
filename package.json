@@ -112,14 +112,6 @@
   "engines": {
     "atom": ">=1.6.0 <2.0.0"
   },
-  "dependencies": {
-    "bluebird": "^3.5.1",
-    "unibeautify": "^0.5.0",
-    "@unibeautify/beautifier-eslint": "^0.1.0",
-    "@unibeautify/beautifier-prettydiff": "^0.3.0",
-    "@unibeautify/beautifier-prettier": "^0.5.0",
-    "@unibeautify/beautifier-js-beautify": "^0.2.0"
-  },
   "activationCommands": {
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
@@ -144,16 +136,28 @@
     "pretty",
     "clean"
   ],
+  "dependencies": {
+    "@unibeautify/beautifier-eslint": "^0.2.0",
+    "@unibeautify/beautifier-js-beautify": "^0.3.0",
+    "@unibeautify/beautifier-prettier": "^0.6.0",
+    "@unibeautify/beautifier-prettydiff": "^0.4.0",
+    "bluebird": "^3.5.1",
+    "eslint": "^4.17.0",
+    "js-beautify": "^1.7.5",
+    "prettier": "^1.10.2",
+    "prettydiff2": "^2.2.7",
+    "unibeautify": "^0.7.0"
+  },
   "devDependencies": {
     "@types/atom": "^1.23.3",
     "@types/bluebird": "^3.5.20",
     "@types/event-kit": "^2.0.4",
     "@types/lodash": "^4.14.102",
-    "@types/node": "^8.5.10",
+    "@types/node": "^8.9.3",
     "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.11.0"
   },
   "scripts": {
     "start": "tsc --watch",

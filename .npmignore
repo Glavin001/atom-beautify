@@ -4,6 +4,7 @@ npm-debug.log
 spec/
 docs/
 examples/
+script/
 .travis.yml
 appveyor.yml
 *.md

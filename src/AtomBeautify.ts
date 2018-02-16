@@ -118,10 +118,6 @@ export class AtomBeautify {
     }
 
     // ===== Helpers =====
-    private getLoadedLanguages() {
-      return this.unibeautify.getLoadedLanguages();
-    }
-
     private getScrollTop(editor: any): any {
       const view = atom.views.getView(editor);
       return view && view.getScrollTop();
