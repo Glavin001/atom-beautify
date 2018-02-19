@@ -642,6 +642,20 @@
           "namespace": "js"
         }
       },
+      "bracket_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by Coffee Formatter)",
+        "title": "Bracket spacing",
+        "beautifiers": [
+          "Coffee Formatter"
+        ],
+        "key": "bracket_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -1560,6 +1574,20 @@
           "JS Beautify"
         ],
         "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "bracket_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
+        "title": "Bracket spacing",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "bracket_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -3155,10 +3183,11 @@
         "type": "integer",
         "default": null,
         "minimum": 0,
-        "description": "Indentation size/length (Supported by JS Beautify, Pretty Diff)",
+        "description": "Indentation size/length (Supported by JS Beautify, Prettier, Pretty Diff)",
         "title": "Indent size",
         "beautifiers": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ],
         "key": "indent_size",
@@ -3199,10 +3228,11 @@
       "indent_with_tabs": {
         "type": "boolean",
         "default": null,
-        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by JS Beautify, Pretty Diff)",
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by JS Beautify, Prettier, Pretty Diff)",
         "title": "Indent with tabs",
         "beautifiers": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ],
         "key": "indent_with_tabs",
@@ -3448,6 +3478,21 @@
           "JS Beautify"
         ],
         "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "bracket_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify, Prettier)",
+        "title": "Bracket spacing",
+        "beautifiers": [
+          "JS Beautify",
+          "Prettier"
+        ],
+        "key": "bracket_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -3797,6 +3842,20 @@
           "JS Beautify"
         ],
         "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "bracket_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
+        "title": "Bracket spacing",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "bracket_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -4161,6 +4220,20 @@
           "JS Beautify"
         ],
         "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "bracket_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
+        "title": "Bracket spacing",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "bracket_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -7894,6 +7967,20 @@
           "namespace": "js"
         }
       },
+      "bracket_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by TypeScript Formatter)",
+        "title": "Bracket spacing",
+        "beautifiers": [
+          "TypeScript Formatter"
+        ],
+        "key": "bracket_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -8378,6 +8465,20 @@
           "Vue Beautifier"
         ],
         "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "bracket_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by Vue Beautifier)",
+        "title": "Bracket spacing",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "bracket_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"

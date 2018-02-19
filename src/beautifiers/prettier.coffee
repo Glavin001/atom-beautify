@@ -7,7 +7,11 @@ module.exports = class Prettier extends Beautifier
   name: "Prettier"
   link: "https://github.com/prettier/prettier"
   options: {
-    JavaScript: false
+    _:
+      tabWidth: "indent_size"
+      useTabs: "indent_with_tabs"
+    JavaScript:
+      bracketSpacing: "bracket_spacing"
     CSS: false
     LESS: false
     SCSS: false
@@ -28,8 +32,7 @@ module.exports = class Prettier extends Beautifier
 
       try
         result = prettier.format(text, {
-          tabWidth: options.indent_size,
-          useTabs: options.indent_with_tabs
+          options
           parser
         });
         resolve result
