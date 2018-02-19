@@ -1077,7 +1077,6 @@ Automatically beautify Clojure files on save
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
-| `bracket_spacing` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :x: |
 | `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :x: |
@@ -1091,6 +1090,7 @@ Automatically beautify Clojure files on save
 | `keep_array_indentation` | :white_check_mark: | :x: |
 | `keep_function_indentation` | :white_check_mark: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: |
+| `object_curly_spacing` | :white_check_mark: | :x: |
 | `preserve_newlines` | :white_check_mark: | :x: |
 | `space_after_anon_function` | :white_check_mark: | :x: |
 | `space_before_conditional` | :white_check_mark: | :x: |
@@ -1181,30 +1181,6 @@ Automatically beautify CoffeeScript files on save
 {
     "js": {
         "brace_style": "collapse"
-    }
-}
-```
-
-#####  [Bracket spacing](#bracket-spacing) 
-
-**Namespace**: `js`
-
-**Key**: `bracket_spacing`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
-
-**Description**:
-
-Insert spaces between brackets in object literals (Supported by Coffee Formatter)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "js": {
-        "bracket_spacing": false
     }
 }
 ```
@@ -1527,6 +1503,30 @@ Number of line-breaks to be preserved in one chunk (Supported by Coffee Formatte
 {
     "js": {
         "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Object curly spacing](#object-curly-spacing) 
+
+**Namespace**: `js`
+
+**Key**: `object_curly_spacing`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Coffee Formatter`](#coffee-formatter) 
+
+**Description**:
+
+Insert spaces between brackets in object literals (Supported by Coffee Formatter)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "object_curly_spacing": false
     }
 }
 ```
@@ -2544,7 +2544,6 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
-| `bracket_spacing` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
 | `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
@@ -2561,6 +2560,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `keep_array_indentation` | :white_check_mark: | :x: |
 | `keep_function_indentation` | :white_check_mark: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: |
+| `object_curly_spacing` | :white_check_mark: | :x: |
 | `preserve_newlines` | :white_check_mark: | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: | :white_check_mark: |
 | `space_before_conditional` | :white_check_mark: | :x: |
@@ -2654,30 +2654,6 @@ Automatically beautify EJS files on save
 {
     "html": {
         "brace_style": "collapse"
-    }
-}
-```
-
-#####  [Bracket spacing](#bracket-spacing) 
-
-**Namespace**: `js`
-
-**Key**: `bracket_spacing`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Insert spaces between brackets in object literals (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "js": {
-        "bracket_spacing": false
     }
 }
 ```
@@ -3082,6 +3058,30 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 {
     "html": {
         "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Object curly spacing](#object-curly-spacing) 
+
+**Namespace**: `js`
+
+**Key**: `object_curly_spacing`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Insert spaces between brackets in object literals (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "object_curly_spacing": false
     }
 }
 ```
@@ -5568,13 +5568,12 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :x: | :white_check_mark: | :x: | :x: | :x: |
-| `bracket_spacing` | :x: | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | `break_chained_methods` | :x: | :white_check_mark: | :x: | :x: | :white_check_mark: |
 | `end_of_line` | :x: | :white_check_mark: | :x: | :x: | :x: |
 | `end_with_comma` | :x: | :white_check_mark: | :x: | :x: | :white_check_mark: |
 | `end_with_newline` | :x: | :white_check_mark: | :x: | :x: | :x: |
 | `eval_code` | :x: | :white_check_mark: | :x: | :x: | :x: |
-| `indent_char` | :x: | :white_check_mark: | :x: | :x: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
 | `indent_level` | :x: | :white_check_mark: | :x: | :x: | :x: |
 | `indent_size` | :x: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
 | `indent_with_tabs` | :x: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
@@ -5582,6 +5581,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `keep_array_indentation` | :x: | :white_check_mark: | :x: | :x: | :x: |
 | `keep_function_indentation` | :x: | :white_check_mark: | :x: | :x: | :x: |
 | `max_preserve_newlines` | :x: | :white_check_mark: | :x: | :x: | :x: |
+| `object_curly_spacing` | :x: | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | `preserve_newlines` | :x: | :white_check_mark: | :x: | :x: | :white_check_mark: |
 | `space_after_anon_function` | :x: | :white_check_mark: | :x: | :x: | :white_check_mark: |
 | `space_before_conditional` | :x: | :white_check_mark: | :x: | :x: | :x: |
@@ -5672,30 +5672,6 @@ Automatically beautify JavaScript files on save
 {
     "js": {
         "brace_style": "collapse"
-    }
-}
-```
-
-#####  [Bracket spacing](#bracket-spacing) 
-
-**Namespace**: `js`
-
-**Key**: `bracket_spacing`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Prettier`](#prettier) 
-
-**Description**:
-
-Insert spaces between brackets in object literals (Supported by JS Beautify, Prettier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "js": {
-        "bracket_spacing": false
     }
 }
 ```
@@ -5834,11 +5810,11 @@ End output with newline (Supported by JS Beautify)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Prettier`](#prettier)  [`Pretty Diff`](#pretty-diff) 
 
 **Description**:
 
-Indentation character (Supported by JS Beautify, Pretty Diff)
+Indentation character (Supported by JS Beautify, Prettier, Pretty Diff)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -6022,6 +5998,30 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
+#####  [Object curly spacing](#object-curly-spacing) 
+
+**Namespace**: `js`
+
+**Key**: `object_curly_spacing`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Prettier`](#prettier) 
+
+**Description**:
+
+Insert spaces between brackets in object literals (Supported by JS Beautify, Prettier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "object_curly_spacing": false
+    }
+}
+```
+
 #####  [Preserve newlines](#preserve-newlines) 
 
 **Namespace**: `js`
@@ -6180,7 +6180,6 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: | :x: |
-| `bracket_spacing` | :white_check_mark: | :x: | :x: |
 | `break_chained_methods` | :white_check_mark: | :x: | :white_check_mark: |
 | `end_of_line` | :white_check_mark: | :x: | :x: |
 | `end_with_comma` | :white_check_mark: | :x: | :white_check_mark: |
@@ -6194,6 +6193,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `keep_array_indentation` | :white_check_mark: | :x: | :x: |
 | `keep_function_indentation` | :white_check_mark: | :x: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: | :x: |
+| `object_curly_spacing` | :white_check_mark: | :x: | :x: |
 | `preserve_newlines` | :white_check_mark: | :x: | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: | :x: | :white_check_mark: |
 | `space_before_conditional` | :white_check_mark: | :x: | :x: |
@@ -6284,30 +6284,6 @@ Automatically beautify JSON files on save
 {
     "js": {
         "brace_style": "collapse"
-    }
-}
-```
-
-#####  [Bracket spacing](#bracket-spacing) 
-
-**Namespace**: `js`
-
-**Key**: `bracket_spacing`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Insert spaces between brackets in object literals (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "js": {
-        "bracket_spacing": false
     }
 }
 ```
@@ -6634,6 +6610,30 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 }
 ```
 
+#####  [Object curly spacing](#object-curly-spacing) 
+
+**Namespace**: `js`
+
+**Key**: `object_curly_spacing`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Insert spaces between brackets in object literals (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "object_curly_spacing": false
+    }
+}
+```
+
 #####  [Preserve newlines](#preserve-newlines) 
 
 **Namespace**: `js`
@@ -6792,7 +6792,6 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
-| `bracket_spacing` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
 | `e4x` | :white_check_mark: | :x: |
 | `end_of_line` | :white_check_mark: | :x: |
@@ -6807,6 +6806,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `keep_array_indentation` | :white_check_mark: | :x: |
 | `keep_function_indentation` | :white_check_mark: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: |
+| `object_curly_spacing` | :white_check_mark: | :x: |
 | `preserve_newlines` | :white_check_mark: | :white_check_mark: |
 | `space_after_anon_function` | :white_check_mark: | :white_check_mark: |
 | `space_before_conditional` | :white_check_mark: | :x: |
@@ -6897,30 +6897,6 @@ Automatically beautify JSX files on save
 {
     "js": {
         "brace_style": "collapse"
-    }
-}
-```
-
-#####  [Bracket spacing](#bracket-spacing) 
-
-**Namespace**: `js`
-
-**Key**: `bracket_spacing`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Insert spaces between brackets in object literals (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "js": {
-        "bracket_spacing": false
     }
 }
 ```
@@ -7269,6 +7245,30 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 {
     "js": {
         "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Object curly spacing](#object-curly-spacing) 
+
+**Namespace**: `js`
+
+**Key**: `object_curly_spacing`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Insert spaces between brackets in object literals (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "object_curly_spacing": false
     }
 }
 ```
@@ -13120,34 +13120,34 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 
 ####  [TypeScript](#typescript) 
 
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+**Supported Beautifiers**:  [`Prettier`](#prettier)  [`TypeScript Formatter`](#typescript-formatter) 
 
-| Option | TypeScript Formatter |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
-| `brace_style` | :white_check_mark: |
-| `bracket_spacing` | :white_check_mark: |
-| `break_chained_methods` | :white_check_mark: |
-| `end_of_line` | :white_check_mark: |
-| `end_with_comma` | :white_check_mark: |
-| `end_with_newline` | :white_check_mark: |
-| `eval_code` | :white_check_mark: |
-| `indent_char` | :white_check_mark: |
-| `indent_level` | :white_check_mark: |
-| `indent_size` | :white_check_mark: |
-| `indent_with_tabs` | :white_check_mark: |
-| `jslint_happy` | :white_check_mark: |
-| `keep_array_indentation` | :white_check_mark: |
-| `keep_function_indentation` | :white_check_mark: |
-| `max_preserve_newlines` | :white_check_mark: |
-| `preserve_newlines` | :white_check_mark: |
-| `space_after_anon_function` | :white_check_mark: |
-| `space_before_conditional` | :white_check_mark: |
-| `space_in_paren` | :white_check_mark: |
-| `unescape_strings` | :white_check_mark: |
-| `wrap_line_length` | :white_check_mark: |
+| Option | Prettier | TypeScript Formatter |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
+| `brace_style` | :x: | :white_check_mark: |
+| `break_chained_methods` | :x: | :white_check_mark: |
+| `end_of_line` | :x: | :white_check_mark: |
+| `end_with_comma` | :x: | :white_check_mark: |
+| `end_with_newline` | :x: | :white_check_mark: |
+| `eval_code` | :x: | :white_check_mark: |
+| `indent_char` | :x: | :white_check_mark: |
+| `indent_level` | :x: | :white_check_mark: |
+| `indent_size` | :x: | :white_check_mark: |
+| `indent_with_tabs` | :x: | :white_check_mark: |
+| `jslint_happy` | :x: | :white_check_mark: |
+| `keep_array_indentation` | :x: | :white_check_mark: |
+| `keep_function_indentation` | :x: | :white_check_mark: |
+| `max_preserve_newlines` | :x: | :white_check_mark: |
+| `object_curly_spacing` | :x: | :white_check_mark: |
+| `preserve_newlines` | :x: | :white_check_mark: |
+| `space_after_anon_function` | :x: | :white_check_mark: |
+| `space_before_conditional` | :x: | :white_check_mark: |
+| `space_in_paren` | :x: | :white_check_mark: |
+| `unescape_strings` | :x: | :white_check_mark: |
+| `wrap_line_length` | :x: | :white_check_mark: |
 
 **Description**:
 
@@ -13174,11 +13174,11 @@ Disable TypeScript Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `TypeScript Formatter`
+**Default**: `Prettier`
 
 **Type**: `string`
 
-**Enum**:  `TypeScript Formatter` 
+**Enum**:  `Prettier`  `TypeScript Formatter` 
 
 **Description**:
 
@@ -13232,30 +13232,6 @@ Automatically beautify TypeScript files on save
 {
     "js": {
         "brace_style": "collapse"
-    }
-}
-```
-
-#####  [Bracket spacing](#bracket-spacing) 
-
-**Namespace**: `js`
-
-**Key**: `bracket_spacing`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
-
-**Description**:
-
-Insert spaces between brackets in object literals (Supported by TypeScript Formatter)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "js": {
-        "bracket_spacing": false
     }
 }
 ```
@@ -13578,6 +13554,30 @@ Number of line-breaks to be preserved in one chunk (Supported by TypeScript Form
 {
     "js": {
         "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Object curly spacing](#object-curly-spacing) 
+
+**Namespace**: `js`
+
+**Key**: `object_curly_spacing`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+
+**Description**:
+
+Insert spaces between brackets in object literals (Supported by TypeScript Formatter)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "object_curly_spacing": false
     }
 }
 ```
@@ -14188,7 +14188,6 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :x: | :white_check_mark: |
-| `bracket_spacing` | :x: | :white_check_mark: |
 | `break_chained_methods` | :x: | :white_check_mark: |
 | `end_of_line` | :x: | :white_check_mark: |
 | `end_with_comma` | :x: | :white_check_mark: |
@@ -14205,6 +14204,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `keep_array_indentation` | :x: | :white_check_mark: |
 | `keep_function_indentation` | :x: | :white_check_mark: |
 | `max_preserve_newlines` | :x: | :white_check_mark: |
+| `object_curly_spacing` | :x: | :white_check_mark: |
 | `preserve_newlines` | :x: | :white_check_mark: |
 | `space_after_anon_function` | :x: | :white_check_mark: |
 | `space_before_conditional` | :x: | :white_check_mark: |
@@ -14298,30 +14298,6 @@ Automatically beautify Vue files on save
 {
     "html": {
         "brace_style": "collapse"
-    }
-}
-```
-
-#####  [Bracket spacing](#bracket-spacing) 
-
-**Namespace**: `js`
-
-**Key**: `bracket_spacing`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
-
-**Description**:
-
-Insert spaces between brackets in object literals (Supported by Vue Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "js": {
-        "bracket_spacing": false
     }
 }
 ```
@@ -14726,6 +14702,30 @@ Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)
 {
     "html": {
         "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Object curly spacing](#object-curly-spacing) 
+
+**Namespace**: `js`
+
+**Key**: `object_curly_spacing`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Insert spaces between brackets in object literals (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "object_curly_spacing": false
     }
 }
 ```
@@ -16357,11 +16357,11 @@ Override EOL from line-ending-selector (Supported by Coffee Formatter)
 }
 ```
 
-#####  [Bracket spacing](#bracket-spacing) 
+#####  [Object curly spacing](#object-curly-spacing) 
 
 **Namespace**: `js`
 
-**Key**: `bracket_spacing`
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
@@ -16376,7 +16376,7 @@ Insert spaces between brackets in object literals (Supported by Coffee Formatter
 ```json
 {
     "js": {
-        "bracket_spacing": false
+        "object_curly_spacing": false
     }
 }
 ```
@@ -17069,11 +17069,11 @@ Override EOL from line-ending-selector (Supported by JS Beautify)
 }
 ```
 
-#####  [Bracket spacing](#bracket-spacing) 
+#####  [Object curly spacing](#object-curly-spacing) 
 
 **Namespace**: `js`
 
-**Key**: `bracket_spacing`
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
@@ -17088,7 +17088,7 @@ Insert spaces between brackets in object literals (Supported by JS Beautify)
 ```json
 {
     "js": {
-        "bracket_spacing": false
+        "object_curly_spacing": false
     }
 }
 ```
@@ -18428,6 +18428,32 @@ Indentation size/length (Supported by JS Beautify, Prettier, Pretty Diff)
 }
 ```
 
+#####  [Indent char](#indent-char) 
+
+**Namespace**: `js`
+
+**Key**: `indent_char`
+
+**Default**: ` `
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Prettier`](#prettier)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Indentation character (Supported by JS Beautify, Prettier, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "indent_char": " "
+    }
+}
+```
+
 #####  [Indent with tabs](#indent-with-tabs) 
 
 **Namespace**: `js`
@@ -18452,11 +18478,11 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 }
 ```
 
-#####  [Bracket spacing](#bracket-spacing) 
+#####  [Object curly spacing](#object-curly-spacing) 
 
 **Namespace**: `js`
 
-**Key**: `bracket_spacing`
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
@@ -18471,7 +18497,7 @@ Insert spaces between brackets in object literals (Supported by JS Beautify, Pre
 ```json
 {
     "js": {
-        "bracket_spacing": false
+        "object_curly_spacing": false
     }
 }
 ```
@@ -19600,11 +19626,11 @@ Override EOL from line-ending-selector (Supported by TypeScript Formatter)
 }
 ```
 
-#####  [Bracket spacing](#bracket-spacing) 
+#####  [Object curly spacing](#object-curly-spacing) 
 
 **Namespace**: `js`
 
-**Key**: `bracket_spacing`
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
@@ -19619,7 +19645,7 @@ Insert spaces between brackets in object literals (Supported by TypeScript Forma
 ```json
 {
     "js": {
-        "bracket_spacing": false
+        "object_curly_spacing": false
     }
 }
 ```
@@ -20154,11 +20180,11 @@ Override EOL from line-ending-selector (Supported by Vue Beautifier)
 }
 ```
 
-#####  [Bracket spacing](#bracket-spacing) 
+#####  [Object curly spacing](#object-curly-spacing) 
 
 **Namespace**: `js`
 
-**Key**: `bracket_spacing`
+**Key**: `object_curly_spacing`
 
 **Type**: `boolean`
 
@@ -20173,7 +20199,7 @@ Insert spaces between brackets in object literals (Supported by Vue Beautifier)
 ```json
 {
     "js": {
-        "bracket_spacing": false
+        "object_curly_spacing": false
     }
 }
 ```

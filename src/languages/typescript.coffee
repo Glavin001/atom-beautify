@@ -18,4 +18,6 @@ module.exports = {
     "ts"
   ]
 
+  defaultBeautifier: "TypeScript Formatter"
+
 }

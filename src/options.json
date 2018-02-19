@@ -642,15 +642,15 @@
           "namespace": "js"
         }
       },
-      "bracket_spacing": {
+      "object_curly_spacing": {
         "type": "boolean",
         "default": false,
         "description": "Insert spaces between brackets in object literals (Supported by Coffee Formatter)",
-        "title": "Bracket spacing",
+        "title": "Object curly spacing",
         "beautifiers": [
           "Coffee Formatter"
         ],
-        "key": "bracket_spacing",
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -1579,15 +1579,15 @@
           "namespace": "js"
         }
       },
-      "bracket_spacing": {
+      "object_curly_spacing": {
         "type": "boolean",
         "default": false,
         "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
-        "title": "Bracket spacing",
+        "title": "Object curly spacing",
         "beautifiers": [
           "JS Beautify"
         ],
-        "key": "bracket_spacing",
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -3199,10 +3199,11 @@
       "indent_char": {
         "type": "string",
         "default": null,
-        "description": "Indentation character (Supported by JS Beautify, Pretty Diff)",
+        "description": "Indentation character (Supported by JS Beautify, Prettier, Pretty Diff)",
         "title": "Indent char",
         "beautifiers": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ],
         "key": "indent_char",
@@ -3483,16 +3484,16 @@
           "namespace": "js"
         }
       },
-      "bracket_spacing": {
+      "object_curly_spacing": {
         "type": "boolean",
         "default": false,
         "description": "Insert spaces between brackets in object literals (Supported by JS Beautify, Prettier)",
-        "title": "Bracket spacing",
+        "title": "Object curly spacing",
         "beautifiers": [
           "JS Beautify",
           "Prettier"
         ],
-        "key": "bracket_spacing",
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -3847,15 +3848,15 @@
           "namespace": "js"
         }
       },
-      "bracket_spacing": {
+      "object_curly_spacing": {
         "type": "boolean",
         "default": false,
         "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
-        "title": "Bracket spacing",
+        "title": "Object curly spacing",
         "beautifiers": [
           "JS Beautify"
         ],
-        "key": "bracket_spacing",
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -4225,15 +4226,15 @@
           "namespace": "js"
         }
       },
-      "bracket_spacing": {
+      "object_curly_spacing": {
         "type": "boolean",
         "default": false,
         "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
-        "title": "Bracket spacing",
+        "title": "Object curly spacing",
         "beautifiers": [
           "JS Beautify"
         ],
-        "key": "bracket_spacing",
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -7665,6 +7666,7 @@
     "description": "Options for language TypeScript",
     "collapsed": true,
     "beautifiers": [
+      "Prettier",
       "TypeScript Formatter"
     ],
     "grammars": [
@@ -7967,15 +7969,15 @@
           "namespace": "js"
         }
       },
-      "bracket_spacing": {
+      "object_curly_spacing": {
         "type": "boolean",
         "default": false,
         "description": "Insert spaces between brackets in object literals (Supported by TypeScript Formatter)",
-        "title": "Bracket spacing",
+        "title": "Object curly spacing",
         "beautifiers": [
           "TypeScript Formatter"
         ],
-        "key": "bracket_spacing",
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -7992,9 +7994,10 @@
         "title": "Default Beautifier",
         "order": -2,
         "type": "string",
-        "default": "TypeScript Formatter",
+        "default": "Prettier",
         "description": "Default Beautifier to be used for TypeScript",
         "enum": [
+          "Prettier",
           "TypeScript Formatter"
         ]
       },
@@ -8470,15 +8473,15 @@
           "namespace": "js"
         }
       },
-      "bracket_spacing": {
+      "object_curly_spacing": {
         "type": "boolean",
         "default": false,
         "description": "Insert spaces between brackets in object literals (Supported by Vue Beautifier)",
-        "title": "Bracket spacing",
+        "title": "Object curly spacing",
         "beautifiers": [
           "Vue Beautifier"
         ],
-        "key": "bracket_spacing",
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"

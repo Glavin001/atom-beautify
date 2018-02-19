@@ -202,7 +202,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | TSS | `TSS` |`.tss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | TSX | `TypeScriptReact` |`.tsx` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
 | Twig | `HTML (Twig)` |`.twig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
-| TypeScript | `TypeScript` |`.ts` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
+| TypeScript | `TypeScript` |`.ts` | **[`Prettier`](https://github.com/prettier/prettier)**, [`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter) |
 | UX Markup | `UX` |`.ux` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Vala | `Vala` |`.vala`, `.vapi` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
 | Visualforce | `Visualforce` |`.page` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
