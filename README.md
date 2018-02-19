@@ -118,6 +118,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Perltidy | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://perltidy.sourceforge.net/ and follow the instructions. |
 | PHP-CS-Fixer | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) with `docker pull unibeautify/php-cs-fixer`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) by following https://github.com/FriendsOfPHP/PHP-CS-Fixer#installation<br/> |
 | PHPCBF | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) with `docker pull unibeautify/phpcbf`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) by following https://github.com/squizlabs/PHP_CodeSniffer#installation<br/> |
+| Prettier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Pretty Diff | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Pug Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | puppet-lint | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) with `docker pull unibeautify/puppet-lint`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) by following http://puppet-lint.com/<br/> |
@@ -152,7 +153,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | C++ | `C++` |`.h`, `.hh`, `.cc`, `.cpp`, `.cxx`, `.C`, `.cu`, `.c++`, `.hpp`, `.hxx`, `.h++`, `.cuh` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)**, [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
 | Crystal | `Crystal` |`.cr` | **[`Crystal`](http://crystal-lang.org)** |
 | C# | `C#` |`.cs` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
-| CSS | `CSS` |`.css` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
+| CSS | `CSS` |`.css` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Prettier`](https://github.com/prettier/prettier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | CSV | `CSV` |`.csv` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | D | `D` |`.d` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)**, [`dfmt`](https://github.com/Hackerpilot/dfmt) |
 | EJS | `EJS`, `JavaScript Template`, `HTML (Angular)` |`.ejs` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
@@ -169,13 +170,13 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | HTML | `HTML` |`.html` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Jade | `Jade`, `Pug` |`.jade`, `.pug` | **[`Pug Beautify`](https://github.com/vingorius/pug-beautify)** |
 | Java | `Java` |`.java` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
-| JavaScript | `JavaScript` |`.js` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`ESLint Fixer`](https://github.com/eslint/eslint), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
-| JSON | `JSON` |`.json` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
+| JavaScript | `JavaScript` |`.js` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`ESLint Fixer`](https://github.com/eslint/eslint), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Prettier`](https://github.com/prettier/prettier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
+| JSON | `JSON` |`.json` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Prettier`](https://github.com/prettier/prettier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript`, `JavaScript with JSX` |`.jsx`, `.js` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |
 | LaTeX | `BibTeX`, `LaTeX`, `TeX` |`.bib`, `.tex`, `.sty`, `.cls`, `.dtx`, `.ins`, `.bbx`, `.cbx` | **[`Latex Beautify`](https://github.com/cmhughes/latexindent.pl)** |
-| LESS | `LESS` |`.less` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js) |
+| LESS | `LESS` |`.less` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Prettier`](https://github.com/prettier/prettier) |
 | Lua | `Lua` |`.lua`, `.ttslua` | **[`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee)** |
-| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Remark`](https://github.com/wooorm/remark) |
+| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Prettier`](https://github.com/prettier/prettier), [`Remark`](https://github.com/wooorm/remark) |
 | Marko | `Marko` |`.marko` | **[`Marko Beautifier`](https://github.com/marko-js/marko-prettyprint)** |
 | Mustache | `HTML (Mustache)` |`.mustache` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Nginx | `nginx` |`.conf` | **[`Nginx Beautify`](https://github.com/denysvitali/nginxbeautify)** |
@@ -192,7 +193,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Ruby | `Ruby`, `Ruby on Rails` |`.rb` | **[`Rubocop`](https://github.com/bbatsov/rubocop)**, [`Ruby Beautify`](https://github.com/erniebrodeur/ruby-beautify) |
 | Rust | `Rust` |`.rs`, `.rlib` | **[`rustfmt`](https://github.com/rust-lang-nursery/rustfmt)** |
 | Sass | `Sass` |`.sass` | **[`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax)** |
-| SCSS | `SCSS` |`.scss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
+| SCSS | `SCSS` |`.scss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Prettier`](https://github.com/prettier/prettier), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | Spacebars | `Spacebars` | | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | SQL | `SQL (Rails)`, `SQL` |`.sql` | **[`sqlformat`](https://github.com/andialbrecht/sqlparse)** |
 | SVG | `SVG` |`.svg` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
@@ -205,7 +206,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | UX Markup | `UX` |`.ux` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Vala | `Vala` |`.vala`, `.vapi` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
 | Visualforce | `Visualforce` |`.page` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
-| Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)** |
+| Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)**, [`Prettier`](https://github.com/prettier/prettier) |
 | XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe`, `.config` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |
 | XTemplate | `XTemplate` |`.xtemplate` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | YAML | `YAML` |`.yml`, `.yaml` | **[`align-yaml`](https://github.com/jonschlinkert/align-yaml)** |

@@ -61,6 +61,7 @@ module.exports = class Beautifiers extends EventEmitter
     'perltidy'
     'php-cs-fixer'
     'phpcbf'
+    'prettier'
     'prettydiff'
     'pybeautifier'
     'pug-beautify'

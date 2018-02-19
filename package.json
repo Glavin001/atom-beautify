@@ -183,6 +183,7 @@
     "node-dir": "0.1.17",
     "node-uuid": "1.4.8",
     "open": "0.0.5",
+    "prettier": "^1.10.2",
     "prettydiff2": "^2.2.7",
     "pug-beautify": "^0.1.1",
     "remark": "6.0.1",
@@ -414,7 +415,8 @@
     "goimports",
     "terraform",
     "terraformfmt",
-    "tsx"
+    "tsx",
+    "prettier"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"

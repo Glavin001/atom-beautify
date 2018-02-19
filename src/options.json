@@ -893,6 +893,7 @@
     "beautifiers": [
       "CSScomb",
       "JS Beautify",
+      "Prettier",
       "Pretty Diff",
       "SassConvert"
     ],
@@ -1132,6 +1133,7 @@
         "enum": [
           "CSScomb",
           "JS Beautify",
+          "Prettier",
           "Pretty Diff",
           "SassConvert"
         ]
@@ -3139,6 +3141,7 @@
       "JS Beautify",
       "JSCS Fixer",
       "ESLint Fixer",
+      "Prettier",
       "Pretty Diff"
     ],
     "grammars": [
@@ -3467,6 +3470,7 @@
           "JS Beautify",
           "JSCS Fixer",
           "ESLint Fixer",
+          "Prettier",
           "Pretty Diff"
         ]
       },
@@ -3486,6 +3490,7 @@
     "collapsed": true,
     "beautifiers": [
       "JS Beautify",
+      "Prettier",
       "Pretty Diff"
     ],
     "grammars": [
@@ -3812,6 +3817,7 @@
         "description": "Default Beautifier to be used for JSON",
         "enum": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ]
       },
@@ -4350,6 +4356,7 @@
     "collapsed": true,
     "beautifiers": [
       "CSScomb",
+      "Prettier",
       "Pretty Diff"
     ],
     "grammars": [
@@ -4554,6 +4561,7 @@
         "description": "Default Beautifier to be used for LESS",
         "enum": [
           "CSScomb",
+          "Prettier",
           "Pretty Diff"
         ]
       },
@@ -4633,6 +4641,7 @@
     "description": "Options for language Markdown",
     "collapsed": true,
     "beautifiers": [
+      "Prettier",
       "Remark",
       "Tidy Markdown"
     ],
@@ -4700,6 +4709,7 @@
         "default": "Tidy Markdown",
         "description": "Default Beautifier to be used for Markdown",
         "enum": [
+          "Prettier",
           "Remark",
           "Tidy Markdown"
         ]
@@ -6566,6 +6576,7 @@
     "collapsed": true,
     "beautifiers": [
       "CSScomb",
+      "Prettier",
       "Pretty Diff",
       "SassConvert"
     ],
@@ -6771,6 +6782,7 @@
         "description": "Default Beautifier to be used for SCSS",
         "enum": [
           "CSScomb",
+          "Prettier",
           "Pretty Diff",
           "SassConvert"
         ]
@@ -8068,6 +8080,7 @@
     "description": "Options for language Vue",
     "collapsed": true,
     "beautifiers": [
+      "Prettier",
       "Vue Beautifier"
     ],
     "grammars": [
@@ -8559,6 +8572,7 @@
         "default": "Vue Beautifier",
         "description": "Default Beautifier to be used for Vue",
         "enum": [
+          "Prettier",
           "Vue Beautifier"
         ]
       },
