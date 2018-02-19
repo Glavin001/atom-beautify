@@ -9,9 +9,12 @@ module.exports = class Prettier extends Beautifier
   options: {
     _:
       tabWidth: "indent_size"
-      useTabs: "indent_with_tabs"
+      useTabs: ["indent_with_tabs", "indent_char", (indent_with_tabs, indent_char) ->
+        return (indent_with_tabs is true) or (indent_char is "\t")
+      ]
     JavaScript:
-      bracketSpacing: "bracket_spacing"
+      bracketSpacing: "object_curly_spacing"
+    TypeScript: false
     CSS: false
     LESS: false
     SCSS: false

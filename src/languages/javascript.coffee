@@ -108,7 +108,7 @@ module.exports = {
       default: "System Default"
       enum: ["CRLF","LF","System Default"]
       description: "Override EOL from line-ending-selector"
-    bracket_spacing:
+    object_curly_spacing:
       type: 'boolean'
       default: false
       description: "Insert spaces between brackets in object literals"
