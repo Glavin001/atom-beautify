@@ -34,7 +34,7 @@ module.exports = class Prettier extends Beautifier
         result = prettier.format(text, {
           options
           parser
-        });
+        })
         resolve result
       catch err
         reject(err)
