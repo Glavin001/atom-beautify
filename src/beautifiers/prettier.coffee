@@ -2,6 +2,7 @@
 
 Beautifier = require('./beautifier')
 prettier = require("prettier")
+path = require("path")
 
 module.exports = class Prettier extends Beautifier
   name: "Prettier"
@@ -23,7 +24,7 @@ module.exports = class Prettier extends Beautifier
     Markdown: false
   }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, context) ->
     return new @Promise((resolve, reject) ->
       _ = require('lodash')
 
@@ -33,7 +34,7 @@ module.exports = class Prettier extends Beautifier
       else
         reject(new Error("Unknown language for Prettier"))
 
-      filePath = atom.workspace.getActiveTextEditor().getPath()
+      filePath = context.filePath and path.dirname context.filePath
 
       try
         prettier.resolveConfig(filePath).then((configOptions) ->
