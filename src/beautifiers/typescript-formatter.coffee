@@ -5,7 +5,7 @@ module.exports = class TypeScriptFormatter extends Beautifier
   name: "TypeScript Formatter"
   link: "https://github.com/vvakame/typescript-formatter"
   options: {
-    TypeScript: true
+    TypeScript: false
     TSX: true
   }
 
