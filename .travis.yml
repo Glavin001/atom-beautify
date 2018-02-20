@@ -82,9 +82,9 @@ before_install:
   # CoffeeScript
   - npm install coffee-formatter
   # OCaml
-  - opam init --auto-setup
+  # - opam init --auto-setup
   # Init environment variables for opam
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      eval `opam config env`;
-    fi
-  - opam install --yes ocp-indent
+  # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+  #    eval `opam config env`;
+  #  fi
+  # - opam install --yes ocp-indent
