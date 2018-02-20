@@ -33,12 +33,14 @@ module.exports = class Prettier extends Beautifier
       else
         reject(new Error("Unknown language for Prettier"))
 
+      filePath = atom.workspace.getActiveTextEditor().getPath()
+
       try
-        result = prettier.format(text, {
-          options
-          parser
-        })
-        resolve result
+        prettier.resolveConfig(filePath).then((configOptions) ->
+          result = prettier.format(text, configOptions or options, parser)
+          prettier.clearConfigCache()
+          resolve result
+        )
       catch err
         reject(err)
     )
