@@ -9,7 +9,10 @@ module.exports = class TypeScriptFormatter extends Beautifier
       indent_with_tabs: true
       tab_width: true
       indent_size: true
-    TSX: true
+    TSX:
+      indent_with_tabs: true
+      tab_width: true
+      indent_size: true
   }
 
   beautify: (text, language, options) ->
