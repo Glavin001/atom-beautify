@@ -6,7 +6,7 @@ module.exports = class VueBeautifier extends Beautifier
   link: "https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee"
 
   options:
-    Vue: false
+    Vue: true
 
   beautify: (text, language, options) ->
     return new @Promise((resolve, reject) =>

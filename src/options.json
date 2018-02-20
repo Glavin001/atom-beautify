@@ -7409,6 +7409,35 @@
       "ts"
     ],
     "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by TypeScript Formatter)",
+        "title": "Indent size",
+        "beautifiers": [
+          "TypeScript Formatter"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "indent_with_tabs": {
+        "type": "boolean",
+        "default": null,
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by TypeScript Formatter)",
+        "title": "Indent with tabs",
+        "beautifiers": [
+          "TypeScript Formatter"
+        ],
+        "key": "indent_with_tabs",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -7606,6 +7635,488 @@
       "vue"
     ],
     "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by Vue Beautifier)",
+        "title": "Indent size",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_char": {
+        "type": "string",
+        "default": null,
+        "description": "Indentation character (Supported by Vue Beautifier)",
+        "title": "Indent char",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_char",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_level": {
+        "type": "integer",
+        "default": 0,
+        "description": "Initial indentation level (Supported by Vue Beautifier)",
+        "title": "Indent level",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_level",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "indent_with_tabs": {
+        "type": "boolean",
+        "default": null,
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Vue Beautifier)",
+        "title": "Indent with tabs",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_with_tabs",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "preserve_newlines": {
+        "type": "boolean",
+        "default": true,
+        "description": "Preserve line-breaks (Supported by Vue Beautifier)",
+        "title": "Preserve newlines",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "max_preserve_newlines": {
+        "type": "integer",
+        "default": 10,
+        "description": "Number of line-breaks to be preserved in one chunk (Supported by Vue Beautifier)",
+        "title": "Max preserve newlines",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "max_preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "space_in_paren": {
+        "type": "boolean",
+        "default": false,
+        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by Vue Beautifier)",
+        "title": "Space in paren",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "space_in_paren",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "jslint_happy": {
+        "type": "boolean",
+        "default": false,
+        "description": "Enable jslint-stricter mode (Supported by Vue Beautifier)",
+        "title": "Jslint happy",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "jslint_happy",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "space_after_anon_function": {
+        "type": "boolean",
+        "default": false,
+        "description": "Add a space before an anonymous function's parens, ie. function () (Supported by Vue Beautifier)",
+        "title": "Space after anon function",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "space_after_anon_function",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "brace_style": {
+        "type": "string",
+        "default": "collapse",
+        "enum": [
+          "collapse",
+          "collapse-preserve-inline",
+          "expand",
+          "end-expand",
+          "none"
+        ],
+        "description": "[collapse|expand|end-expand|none] (Supported by Vue Beautifier)",
+        "title": "Brace style",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "brace_style",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "break_chained_methods": {
+        "type": "boolean",
+        "default": false,
+        "description": "Break chained method calls across subsequent lines (Supported by Vue Beautifier)",
+        "title": "Break chained methods",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "break_chained_methods",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "keep_array_indentation": {
+        "type": "boolean",
+        "default": false,
+        "description": "Preserve array indentation (Supported by Vue Beautifier)",
+        "title": "Keep array indentation",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "keep_array_indentation",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "keep_function_indentation": {
+        "type": "boolean",
+        "default": false,
+        "description": " (Supported by Vue Beautifier)",
+        "title": "Keep function indentation",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "keep_function_indentation",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "space_before_conditional": {
+        "type": "boolean",
+        "default": true,
+        "description": " (Supported by Vue Beautifier)",
+        "title": "Space before conditional",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "space_before_conditional",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "eval_code": {
+        "type": "boolean",
+        "default": false,
+        "description": " (Supported by Vue Beautifier)",
+        "title": "Eval code",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "eval_code",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "unescape_strings": {
+        "type": "boolean",
+        "default": false,
+        "description": "Decode printable characters encoded in xNN notation (Supported by Vue Beautifier)",
+        "title": "Unescape strings",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "unescape_strings",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "wrap_line_length": {
+        "type": "integer",
+        "default": 250,
+        "description": "Maximum characters per line (0 disables) (Supported by Vue Beautifier)",
+        "title": "Wrap line length",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "wrap_line_length",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "end_with_newline": {
+        "type": "boolean",
+        "default": false,
+        "description": "End output with newline (Supported by Vue Beautifier)",
+        "title": "End with newline",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "end_with_newline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "end_with_comma": {
+        "type": "boolean",
+        "default": false,
+        "description": "If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by Vue Beautifier)",
+        "title": "End with comma",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "end_with_comma",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "end_of_line": {
+        "type": "string",
+        "default": "System Default",
+        "enum": [
+          "CRLF",
+          "LF",
+          "System Default"
+        ],
+        "description": "Override EOL from line-ending-selector (Supported by Vue Beautifier)",
+        "title": "End of line",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "object_curly_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by Vue Beautifier)",
+        "title": "Object curly spacing",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "indent_inner_html": {
+        "type": "boolean",
+        "default": false,
+        "description": "Indent <head> and <body> sections. (Supported by Vue Beautifier)",
+        "title": "Indent inner html",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_inner_html",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_scripts": {
+        "type": "string",
+        "default": "normal",
+        "enum": [
+          "keep",
+          "separate",
+          "normal"
+        ],
+        "description": "[keep|separate|normal] (Supported by Vue Beautifier)",
+        "title": "Indent scripts",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "indent_scripts",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_attributes": {
+        "type": "string",
+        "default": "auto",
+        "enum": [
+          "auto",
+          "force",
+          "force-aligned",
+          "force-expand-multiline"
+        ],
+        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)",
+        "title": "Wrap attributes",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "wrap_attributes",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_attributes_indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indent wrapped attributes to after N characters (Supported by Vue Beautifier)",
+        "title": "Wrap attributes indent size",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "wrap_attributes_indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "unformatted": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by Vue Beautifier)",
+        "title": "Unformatted",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "extra_liners": {
+        "type": "array",
+        "default": [
+          "head",
+          "body",
+          "/html"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by Vue Beautifier)",
+        "title": "Extra liners",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "extra_liners",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
