@@ -1,5 +1,6 @@
 # Next
 - Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
+- See [#601](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for tsx files
 - Fix Beauify File option for .lua files
 
 # v0.30.9 (2017-11-22)

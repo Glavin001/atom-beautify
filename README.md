@@ -8,7 +8,7 @@
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X2RK5DKN6YXPJ&lc=CA&item_name=Atom%2dBeautify&item_number=atom%2dbeautify&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/unibeautify)
 
-**Sign up for Unibeautify Bot: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
+**Sign up for Unibeautify CI: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
 
 **Help improve Atom-Beautify by completing the quick questionnaire: [https://goo.gl/iEHBNr](https://goo.gl/iEHBNr)**
 
@@ -199,6 +199,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Swig | `HTML (Swig)`, `SWIG` |`.swig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Terraform | `Terraform` |`.tf` | **[`terraformfmt`](https://www.terraform.io/docs/commands/fmt.html)** |
 | TSS | `TSS` |`.tss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
+| TSX | `TypeScriptReact` |`.tsx` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
 | Twig | `HTML (Twig)` |`.twig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | TypeScript | `TypeScript` |`.ts` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
 | UX Markup | `UX` |`.ux` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
