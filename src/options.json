@@ -7369,6 +7369,47 @@
       }
     }
   },
+  "tsx": {
+    "title": "TSX",
+    "type": "object",
+    "description": "Options for language TSX",
+    "collapsed": true,
+    "beautifiers": [
+      "TypeScript Formatter"
+    ],
+    "grammars": [
+      "TypeScriptReact"
+    ],
+    "extensions": [
+      "tsx"
+    ],
+    "properties": {
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable TSX Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "TypeScript Formatter",
+        "description": "Default Beautifier to be used for TSX",
+        "enum": [
+          "TypeScript Formatter"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify TSX files on save"
+      }
+    }
+  },
   "twig": {
     "title": "Twig",
     "type": "object",
@@ -9324,6 +9365,22 @@
           }
         }
       },
+      "ocp-indent": {
+        "key": "ocp-indent",
+        "title": "ocp-indent",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for ocp-indent executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"ocp-indent\" executable's binary/script."
+          }
+        }
+      },
       "php": {
         "key": "php",
         "title": "PHP",
@@ -9369,6 +9426,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"phpcbf\" executable's binary/script."
+          }
+        }
+      },
+      "puppet-lint": {
+        "key": "puppet-lint",
+        "title": "puppet-lint",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for puppet-lint executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"puppet-lint\" executable's binary/script."
           }
         }
       },

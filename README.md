@@ -6,6 +6,11 @@
 [![Gitter](https://img.shields.io/gitter/room/Glavin001/atom-beautify.svg?style=flat-square)](https://gitter.im/Glavin001/atom-beautify)
 [![Bountysource](https://img.shields.io/bountysource/team/atom-beautify/activity.svg?style=flat-square)](https://www.bountysource.com/teams/atom-beautify)
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X2RK5DKN6YXPJ&lc=CA&item_name=Atom%2dBeautify&item_number=atom%2dbeautify&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/unibeautify)
+
+**Sign up for Unibeautify CI: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
+
+**Help improve Atom-Beautify by completing the quick questionnaire: [https://goo.gl/iEHBNr](https://goo.gl/iEHBNr)**
 
 | Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"> and <img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"> |
 | --- | --- |
@@ -65,6 +70,18 @@ Thank you.
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
 
+### Poll: Improving installation of third-party beautifiers
+
+Many users are experiencing issues when installing third party beautifiers (e.g. Uncrustify, PHP-CS-Fixer, and many more).
+A possible solution is a "cloud" service which provides remote access to these beautifiers. Atom-Beautify would then communicate with these services, allowing for zero-installation beautification.
+
+Please let us know what you think!
+
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet/vote)
+
 ## Beautifiers
 
 Some of the supported beautifiers are developed for Node.js and are automatically installed when Atom-Beautify is installed. However, other beautifiers are command-line interface (CLI) applications and require you to manually install them.
@@ -99,13 +116,13 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Lua beautifier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Marko Beautifier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Nginx Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
-| ocp-indent | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://www.typerex.org/ocp-indent.html and follow the instructions. |
+| ocp-indent | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [ocp-indent (`ocp-indent`)](https://www.typerex.org/ocp-indent.html) with `docker pull unibeautify/ocp-indent`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [ocp-indent (`ocp-indent`)](https://www.typerex.org/ocp-indent.html) by following https://www.typerex.org/ocp-indent.html#installation<br/> |
 | Perltidy | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://perltidy.sourceforge.net/ and follow the instructions. |
 | PHP-CS-Fixer | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) with `docker pull unibeautify/php-cs-fixer`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) by following https://github.com/FriendsOfPHP/PHP-CS-Fixer#installation<br/> |
 | PHPCBF | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) with `docker pull unibeautify/phpcbf`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) by following https://github.com/squizlabs/PHP_CodeSniffer#installation<br/> |
 | Pretty Diff | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Pug Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
-| puppet-lint | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://puppet-lint.com/ and follow the instructions. |
+| puppet-lint | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) with `docker pull unibeautify/puppet-lint`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) by following http://puppet-lint.com/<br/> |
 | pybeautifier | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/guyskk/pybeautifier and follow the instructions. |
 | Remark | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Rubocop | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/bbatsov/rubocop and follow the instructions. |
@@ -184,6 +201,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Swig | `HTML (Swig)`, `SWIG` |`.swig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Terraform | `Terraform` |`.tf` | **[`terraformfmt`](https://www.terraform.io/docs/commands/fmt.html)** |
 | TSS | `TSS` |`.tss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
+| TSX | `TypeScriptReact` |`.tsx` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
 | Twig | `HTML (Twig)` |`.twig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | TypeScript | `TypeScript` |`.ts` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
 | UX Markup | `UX` |`.ux` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |

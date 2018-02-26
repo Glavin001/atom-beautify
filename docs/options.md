@@ -283,6 +283,23 @@ Options for isort executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*isort*" and change it to your desired configuration.
 
+#####  [ocp-indent](#ocp-indent) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for ocp-indent executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*ocp-indent*" and change it to your desired configuration.
+
 #####  [PHP](#php) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -333,6 +350,23 @@ Options for PHPCBF executable.
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*PHPCBF*" and change it to your desired configuration.
+
+#####  [puppet-lint](#puppet-lint) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for puppet-lint executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*puppet-lint*" and change it to your desired configuration.
 
 #####  [Rscript](#rscript) 
 
@@ -12587,6 +12621,75 @@ Maximum amount of characters per line (0 = disable) (Supported by Pretty Diff)
     }
 }
 ```
+
+####  [TSX](#tsx) 
+
+**Supported Beautifiers**:  [`TypeScript Formatter`](#typescript-formatter) 
+
+| Option | TypeScript Formatter |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+
+**Description**:
+
+Options for language TSX
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable TSX Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `TypeScript Formatter`
+
+**Type**: `string`
+
+**Enum**:  `TypeScript Formatter` 
+
+**Description**:
+
+Default Beautifier to be used for TSX
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify TSX files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
 ####  [Twig](#twig) 
 
