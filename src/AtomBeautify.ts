@@ -1,14 +1,12 @@
 import { newUnibeautify, Unibeautify, Beautifier, Language } from "unibeautify";
+import * as Atom from "atom";
 import beautifiers from "./beautifiers";
-import { Disposable, CompositeDisposable } from "atom";
+import { CompositeDisposable } from "atom";
 import Config from "./config";
 import * as Promise from "bluebird";
 import * as path from "path";
 import * as _ from "lodash";
 const pkg = require("../package");
-
-declare const atom: any;
-declare type IEditor = any;
 
 export class AtomBeautify {
     private unibeautify: Unibeautify;
@@ -32,11 +30,11 @@ export class AtomBeautify {
     }
 
     public get config() {
-        return _.merge(Config, require('./options.json'));
+        return _.merge(Config, require("./options.json"));
     }
 
     private handleSaveEvent(): CompositeDisposable {
-      return atom.workspace.observeTextEditors((editor: IEditor) => {
+      return atom.workspace.observeTextEditors((editor: Atom.TextEditor) => {
         const disposable: CompositeDisposable = editor.getBuffer().onWillSave(({ path: filePath }: { path: string }) =>
           this.beautifyOnSaveHandler({filePath: filePath}, editor)
         );
@@ -44,21 +42,20 @@ export class AtomBeautify {
       });
     }
 
-    private beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: IEditor) {
-      if(atom.config.get("atom-beautify.general.beautifyOnSave")) {
+    private beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: Atom.TextEditor) {
+      if (atom.config.get("atom-beautify.general.beautifyOnSave")) {
         if (editor.getPath() === undefined) {
           editor.getBuffer().setPath(filePath);
         }
         const grammarName = editor.getGrammar().name;
         const fileExtension = path.extname(filePath).substr(1);
         let text: string = null;
-        if(!atom.config.get("atom-beautify.general.beautifyEntireFileOnSave") &&  !!editor.getSelectedText()) {
+        if (!atom.config.get("atom-beautify.general.beautifyEntireFileOnSave") &&  !!editor.getSelectedText()) {
           text = editor.getSelectedText();
-        }
-        else {
+        } else {
           text = editor.getText();
         }
-        //TODO Get beautify on save option for individual language from Atom settings
+        // TODO Get beautify on save option for individual language from Atom settings
         const beautifyOnSave = true;
         console.log("Beautify file on save", {filePath, fileExtension, text, grammarName});
         if (beautifyOnSave) {
@@ -77,7 +74,7 @@ export class AtomBeautify {
     }
 
     private beautifyEditor() {
-      const editor: IEditor = atom.workspace.getActiveTextEditor();
+      const editor: Atom.TextEditor = atom.workspace.getActiveTextEditor();
       const grammarName = editor.getGrammar().name;
       let text: string = null;
       if (!!editor.getSelectedText()) {
@@ -102,19 +99,19 @@ export class AtomBeautify {
     }
 
     private beautifyFile() {
-
+      // TODO
     }
 
     private beautifyDirectory() {
-
+      // TODO
     }
 
     private debug() {
-
+      // TODO
     }
 
     private openSettings() {
-      atom.workspace.open('atom://config/packages/atom-beautify');
+      atom.workspace.open("atom://config/packages/atom-beautify");
     }
 
     // ===== Helpers =====
@@ -125,30 +122,30 @@ export class AtomBeautify {
 
     private setScrollTop(editor: any, value: any): void {
       const view = atom.views.getView(editor);
-      view && view.setScrollTop(value);
+      view.setScrollTop(value);
     }
 
-    private getCursors(editor: any) {
-      const cursors: any[] = editor.getCursors();
-      let posArray: any[] = [];
-      for (let j = 0, len = cursors.length; j < len; j++) {
-        const cursor: any = cursors[j];
-        const bufferPosition: any = cursor.getBufferPosition();
-        posArray.push([bufferPosition.row, bufferPosition.column]);
-      }
-      return posArray;
-    };
-
-    private setCursors(editor: any, posArray: any[]) {
-      for (let i = 0, j = 0, len = posArray.length; j < len; i = ++j) {
-        const bufferPosition = posArray[i];
-        if (i === 0) {
-          editor.setCursorBufferPosition(bufferPosition);
-          continue;
-        }
-        editor.addCursorAtBufferPosition(bufferPosition);
-      }
-    };
+    // private getCursors(editor: any) {
+    //   const cursors: any[] = editor.getCursors();
+    //   let posArray: any[] = [];
+    //   for (let j = 0, len = cursors.length; j < len; j++) {
+    //     const cursor: any = cursors[j];
+    //     const bufferPosition: any = cursor.getBufferPosition();
+    //     posArray.push([bufferPosition.row, bufferPosition.column]);
+    //   }
+    //   return posArray;
+    // }
+    //
+    // private setCursors(editor: any, posArray: any[]) {
+    //   for (let i = 0, j = 0, len = posArray.length; j < len; i = ++j) {
+    //     const bufferPosition = posArray[i];
+    //     if (i === 0) {
+    //       editor.setCursorBufferPosition(bufferPosition);
+    //       continue;
+    //     }
+    //     editor.addCursorAtBufferPosition(bufferPosition);
+    //   }
+    // }
 
     private showError(error: any, show: boolean = false) {
       if (show || !atom.config.get("atom-beautify.general.muteAllErrors")) {
@@ -160,6 +157,6 @@ export class AtomBeautify {
           dismissable: true
         });
       }
-    };
+    }
 
-};
+}

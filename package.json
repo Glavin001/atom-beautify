@@ -137,30 +137,35 @@
     "clean"
   ],
   "dependencies": {
-    "@unibeautify/beautifier-eslint": "^0.2.0",
-    "@unibeautify/beautifier-js-beautify": "^0.3.0",
-    "@unibeautify/beautifier-prettier": "^0.6.0",
-    "@unibeautify/beautifier-prettydiff": "^0.4.0",
+    "@unibeautify/beautifier-eslint": "^0.3.0",
+    "@unibeautify/beautifier-js-beautify": "^0.3.1",
+    "@unibeautify/beautifier-prettier": "^0.7.3",
+    "@unibeautify/beautifier-prettydiff": "^0.5.2",
     "bluebird": "^3.5.1",
-    "eslint": "^4.17.0",
+    "eslint": "^4.18.1",
     "js-beautify": "^1.7.5",
     "prettier": "^1.10.2",
     "prettydiff2": "^2.2.7",
-    "unibeautify": "^0.7.0"
+    "unibeautify": "^0.9.2"
   },
   "devDependencies": {
-    "@types/atom": "^1.23.3",
+    "@types/atom": "^1.24.0",
     "@types/bluebird": "^3.5.20",
     "@types/event-kit": "^2.0.4",
-    "@types/lodash": "^4.14.102",
-    "@types/node": "^8.9.3",
-    "ts-node": "^4.1.0",
+    "@types/lodash": "^4.14.104",
+    "@types/node": "^9.4.6",
+    "npm-run-all": "^4.1.2",
+    "ts-node": "^5.0.0",
     "tslint": "^5.9.1",
-    "typescript": "^2.7.1",
-    "webpack": "^3.11.0"
+    "tslint-clean-code": "^0.2.4",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.7.2"
   },
   "scripts": {
-    "start": "tsc --watch",
-    "docs": "ts-node script/index"
+    "build": "npm-run-all lint compile docs",
+    "compile": "tsc",
+    "docs": "ts-node script/index",
+    "lint": "tslint {src,test}/**/*.ts",
+    "start": "tsc --watch"
   }
 }
