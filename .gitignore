@@ -1,5 +1,6 @@
 # Project
 *.js
+!jest.config.js
 *.js.map
 src/*.d.ts
 dist/

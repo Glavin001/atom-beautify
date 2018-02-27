@@ -15,7 +15,7 @@
         "./declarations.d.ts",
         "./src/**/*.ts",
         "./scripts/**/*.ts",
-        "./test/**/*.ts"
+        "./spec/*.ts"
     ],
     "exclude": [
         "./node_modules"

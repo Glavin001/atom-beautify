@@ -1,7 +1,7 @@
-import { newUnibeautify, Unibeautify, Beautifier, Language } from "unibeautify";
+import {newUnibeautify, Unibeautify, Beautifier, Language} from "unibeautify";
 import * as Atom from "atom";
 import beautifiers from "./beautifiers";
-import { CompositeDisposable } from "atom";
+import { CompositeDisposable, Disposable } from "atom";
 import Config from "./config";
 import * as Promise from "bluebird";
 import * as path from "path";
@@ -33,12 +33,14 @@ export class AtomBeautify {
         return _.merge(Config, require("./options.json"));
     }
 
-    private handleSaveEvent(): CompositeDisposable {
+    private handleSaveEvent() {
       return atom.workspace.observeTextEditors((editor: Atom.TextEditor) => {
-        const disposable: CompositeDisposable = editor.getBuffer().onWillSave(({ path: filePath }: { path: string }) =>
-          this.beautifyOnSaveHandler({filePath: filePath}, editor)
-        );
-        return this.subscriptions.add(disposable);
+        const onWillSaveHandler = ({path: filePath}: {
+          path: string
+        }) => this.beautifyOnSaveHandler({
+          filePath: filePath
+        }, editor);
+        return this.subscriptions.add(editor.getBuffer().onWillSave(onWillSaveHandler as any));
       });
     }
 
