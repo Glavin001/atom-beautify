@@ -2,7 +2,6 @@
   "name": "atom-beautify",
   "main": "./dist/index.js",
   "version": "1.0.0",
-  "private": true,
   "description": "Beautifier for Atom powered by Unibeautify",
   "repository": {
     "type": "git",
