@@ -150,14 +150,16 @@
     "unibeautify": "^0.9.3"
   },
   "devDependencies": {
-    "@types/atom": "^1.24.0",
+    "@types/atom": "^1.24.1",
     "@types/bluebird": "^3.5.20",
     "@types/event-kit": "^2.0.4",
     "@types/jest": "^22.1.3",
     "@types/lodash": "^4.14.104",
     "@types/node": "^9.4.6",
     "atom-test-runner-jest": "^0.1.3",
+    "babel-jest": "^22.4.1",
     "jest": "^22.4.2",
+    "jest-preset-atom": "^0.1.5",
     "npm-run-all": "^4.1.2",
     "ts-jest": "^22.4.0",
     "ts-node": "^5.0.0",

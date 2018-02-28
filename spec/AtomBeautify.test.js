@@ -1,5 +1,7 @@
-describe("My Delightful Package", () => {
-  it("knows about all of Atom's loaded packages", () => {
+
+
+describe("atom-beautify", () => {
+  it('activates atom-beautify package', () => {
     const packages = atom.packages.getLoadedPackages();
     expect(packages).toMatchSnapshot();
   })
