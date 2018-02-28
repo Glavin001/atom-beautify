@@ -112,9 +112,6 @@
     "atom": ">=1.21.0 <2.0.0"
   },
   "atomTestRunner": "atom-test-runner-jest",
-  "jest": {
-    "preset": "jest-preset-atom"
-  },
   "activationCommands": {
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
