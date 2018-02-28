@@ -9,5 +9,5 @@ module.exports = {
   // collectCoverage: true,
   // coverageReporters: ["json", "lcov", "text", "html"]
   preset: "jest-preset-atom",
-  testEnvironment: "jest-preset-atom/environment"
+  // testEnvironment: "jest-preset-atom/environment"
 };
