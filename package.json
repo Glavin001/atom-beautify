@@ -169,10 +169,11 @@
     "typescript": "^2.7.2"
   },
   "scripts": {
-    "build": "npm-run-all lint compile docs",
+    "build": "npm-run-all lint compile test docs",
     "compile": "tsc",
     "docs": "ts-node script/index",
     "lint": "tslint {src,spec}/**/*.ts",
-    "start": "tsc --watch"
+    "start": "tsc --watch",
+    "test": "atom --test spec"
   }
 }
