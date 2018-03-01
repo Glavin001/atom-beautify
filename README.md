@@ -6,6 +6,11 @@
 [![Gitter](https://img.shields.io/gitter/room/Glavin001/atom-beautify.svg?style=flat-square)](https://gitter.im/Glavin001/atom-beautify)
 [![Bountysource](https://img.shields.io/bountysource/team/atom-beautify/activity.svg?style=flat-square)](https://www.bountysource.com/teams/atom-beautify)
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X2RK5DKN6YXPJ&lc=CA&item_name=Atom%2dBeautify&item_number=atom%2dbeautify&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/unibeautify)
+
+**Sign up for Unibeautify CI: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
+
+**Help improve Atom-Beautify by completing the quick questionnaire: [https://goo.gl/iEHBNr](https://goo.gl/iEHBNr)**
 
 | Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"> and <img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"> |
 | --- | --- |
@@ -65,6 +70,18 @@ Thank you.
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
 
+### Poll: Improving installation of third-party beautifiers
+
+Many users are experiencing issues when installing third party beautifiers (e.g. Uncrustify, PHP-CS-Fixer, and many more).
+A possible solution is a "cloud" service which provides remote access to these beautifiers. Atom-Beautify would then communicate with these services, allowing for zero-installation beautification.
+
+Please let us know what you think!
+
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet/vote)
+
 ## Beautifiers
 
 Some of the supported beautifiers are developed for Node.js and are automatically installed when Atom-Beautify is installed. However, other beautifiers are command-line interface (CLI) applications and require you to manually install them.
@@ -97,13 +114,14 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Lua beautifier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Marko Beautifier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Nginx Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
-| ocp-indent | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://www.typerex.org/ocp-indent.html and follow the instructions. |
+| ocp-indent | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [ocp-indent (`ocp-indent`)](https://www.typerex.org/ocp-indent.html) with `docker pull unibeautify/ocp-indent`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [ocp-indent (`ocp-indent`)](https://www.typerex.org/ocp-indent.html) by following https://www.typerex.org/ocp-indent.html#installation<br/> |
 | Perltidy | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://perltidy.sourceforge.net/ and follow the instructions. |
 | PHP-CS-Fixer | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) with `docker pull unibeautify/php-cs-fixer`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) by following https://github.com/FriendsOfPHP/PHP-CS-Fixer#installation<br/> |
 | PHPCBF | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) with `docker pull unibeautify/phpcbf`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHPCBF (`phpcbf`)](https://github.com/squizlabs/PHP_CodeSniffer) by following https://github.com/squizlabs/PHP_CodeSniffer#installation<br/> |
+| Prettier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Pretty Diff | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Pug Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
-| puppet-lint | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://puppet-lint.com/ and follow the instructions. |
+| puppet-lint | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) with `docker pull unibeautify/puppet-lint`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [puppet-lint (`puppet-lint`)](http://puppet-lint.com/) by following http://puppet-lint.com/<br/> |
 | pybeautifier | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/guyskk/pybeautifier and follow the instructions. |
 | Remark | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Rubocop | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/bbatsov/rubocop and follow the instructions. |
@@ -135,7 +153,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | C++ | `C++` |`.h`, `.hh`, `.cc`, `.cpp`, `.cxx`, `.C`, `.cu`, `.c++`, `.hpp`, `.hxx`, `.h++`, `.cuh` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)**, [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
 | Crystal | `Crystal` |`.cr` | **[`Crystal`](http://crystal-lang.org)** |
 | C# | `C#` |`.cs` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
-| CSS | `CSS` |`.css` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
+| CSS | `CSS` |`.css` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Prettier`](https://github.com/prettier/prettier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | CSV | `CSV` |`.csv` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | D | `D` |`.d` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)**, [`dfmt`](https://github.com/Hackerpilot/dfmt) |
 | EJS | `EJS`, `JavaScript Template`, `HTML (Angular)` |`.ejs` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
@@ -152,13 +170,13 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | HTML | `HTML` |`.html` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Jade | `Jade`, `Pug` |`.jade`, `.pug` | **[`Pug Beautify`](https://github.com/vingorius/pug-beautify)** |
 | Java | `Java` |`.java` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
-| JavaScript | `JavaScript` |`.js` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`ESLint Fixer`](https://github.com/eslint/eslint), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
-| JSON | `JSON` |`.json` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
+| JavaScript | `JavaScript` |`.js` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`ESLint Fixer`](https://github.com/eslint/eslint), [`JSCS Fixer`](https://github.com/jscs-dev/node-jscs/), [`Prettier`](https://github.com/prettier/prettier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
+| JSON | `JSON` |`.json` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Prettier`](https://github.com/prettier/prettier), [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | JSX | `JSX`, `JavaScript (JSX)`, `Babel ES6 JavaScript`, `JavaScript with JSX` |`.jsx`, `.js` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |
 | LaTeX | `BibTeX`, `LaTeX`, `TeX` |`.bib`, `.tex`, `.sty`, `.cls`, `.dtx`, `.ins`, `.bbx`, `.cbx` | **[`Latex Beautify`](https://github.com/cmhughes/latexindent.pl)** |
-| LESS | `LESS` |`.less` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js) |
+| LESS | `LESS` |`.less` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Prettier`](https://github.com/prettier/prettier) |
 | Lua | `Lua` |`.lua`, `.ttslua` | **[`Lua beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/lua-beautifier/beautifier.coffee)** |
-| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Remark`](https://github.com/wooorm/remark) |
+| Markdown | `GitHub Markdown` |`.markdown`, `.md` | **[`Tidy Markdown`](https://github.com/slang800/tidy-markdown)**, [`Prettier`](https://github.com/prettier/prettier), [`Remark`](https://github.com/wooorm/remark) |
 | Marko | `Marko` |`.marko` | **[`Marko Beautifier`](https://github.com/marko-js/marko-prettyprint)** |
 | Mustache | `HTML (Mustache)` |`.mustache` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Nginx | `nginx` |`.conf` | **[`Nginx Beautify`](https://github.com/denysvitali/nginxbeautify)** |
@@ -175,19 +193,20 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Ruby | `Ruby`, `Ruby on Rails` |`.rb` | **[`Rubocop`](https://github.com/bbatsov/rubocop)**, [`Ruby Beautify`](https://github.com/erniebrodeur/ruby-beautify) |
 | Rust | `Rust` |`.rs`, `.rlib` | **[`rustfmt`](https://github.com/rust-lang-nursery/rustfmt)** |
 | Sass | `Sass` |`.sass` | **[`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax)** |
-| SCSS | `SCSS` |`.scss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
+| SCSS | `SCSS` |`.scss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`CSScomb`](https://github.com/csscomb/csscomb.js), [`Prettier`](https://github.com/prettier/prettier), [`SassConvert`](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) |
 | Spacebars | `Spacebars` | | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | SQL | `SQL (Rails)`, `SQL` |`.sql` | **[`sqlformat`](https://github.com/andialbrecht/sqlparse)** |
 | SVG | `SVG` |`.svg` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Swig | `HTML (Swig)`, `SWIG` |`.swig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Terraform | `Terraform` |`.tf` | **[`terraformfmt`](https://www.terraform.io/docs/commands/fmt.html)** |
 | TSS | `TSS` |`.tss` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
+| TSX | `TypeScriptReact` |`.tsx` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
 | Twig | `HTML (Twig)` |`.twig` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
-| TypeScript | `TypeScript` |`.ts` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)** |
+| TypeScript | `TypeScript` |`.ts` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)**, [`Prettier`](https://github.com/prettier/prettier) |
 | UX Markup | `UX` |`.ux` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Vala | `Vala` |`.vala`, `.vapi` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
 | Visualforce | `Visualforce` |`.page` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
-| Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)** |
+| Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)**, [`Prettier`](https://github.com/prettier/prettier) |
 | XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe`, `.config` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |
 | XTemplate | `XTemplate` |`.xtemplate` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | YAML | `YAML` |`.yml`, `.yaml` | **[`align-yaml`](https://github.com/jonschlinkert/align-yaml)** |

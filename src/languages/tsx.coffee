@@ -1,23 +1,21 @@
 module.exports = {
 
-  name: "TypeScript"
-  namespace: "typescript"
+  name: "TSX"
+  namespace: "tsx"
   fallback: ['js']
 
   ###
   Supported Grammars
   ###
   grammars: [
-    "TypeScript"
+    "TypeScriptReact"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    "ts"
+    "tsx"
   ]
-
-  defaultBeautifier: "TypeScript Formatter"
 
 }

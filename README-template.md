@@ -6,6 +6,11 @@
 [![Gitter](https://img.shields.io/gitter/room/Glavin001/atom-beautify.svg?style=flat-square)](https://gitter.im/Glavin001/atom-beautify)
 [![Bountysource](https://img.shields.io/bountysource/team/atom-beautify/activity.svg?style=flat-square)](https://www.bountysource.com/teams/atom-beautify)
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X2RK5DKN6YXPJ&lc=CA&item_name=Atom%2dBeautify&item_number=atom%2dbeautify&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/unibeautify)
+
+**Sign up for Unibeautify CI: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
+
+**Help improve Atom-Beautify by completing the quick questionnaire: [https://goo.gl/iEHBNr](https://goo.gl/iEHBNr)**
 
 | Mac OS <img src="https://cloud.githubusercontent.com/assets/1885333/17059766/2530c9d8-4ffd-11e6-9529-3fa47dbff616.png" width="50px"> and <img src="https://cloud.githubusercontent.com/assets/1885333/17059750/11c4474e-4ffd-11e6-89e1-2486ca5b3234.png" width="100px"> | <img src="https://cloud.githubusercontent.com/assets/1885333/17059763/206a7d4a-4ffd-11e6-859e-7856902fb300.png" width="100px"> |
 | --- | --- |
@@ -64,6 +69,18 @@ Thank you.
 
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
+
+### Poll: Improving installation of third-party beautifiers
+
+Many users are experiencing issues when installing third party beautifiers (e.g. Uncrustify, PHP-CS-Fixer, and many more).
+A possible solution is a "cloud" service which provides remote access to these beautifiers. Atom-Beautify would then communicate with these services, allowing for zero-installation beautification.
+
+Please let us know what you think!
+
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/Yes%2C%20cloud%20solution%20would%20be%20great!/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20enjoy%20manually%20installing%20beautifiers/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20am%20happy%20using%20Docker/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BY57P9ACSDQASVT7KYZKZESK/No%2C%20I%20do%20not%20want%20to%20send%20me%20code%20over%20the%20Internet/vote)
 
 ## Beautifiers
 

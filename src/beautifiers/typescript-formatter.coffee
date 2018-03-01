@@ -5,14 +5,21 @@ module.exports = class TypeScriptFormatter extends Beautifier
   name: "TypeScript Formatter"
   link: "https://github.com/vvakame/typescript-formatter"
   options: {
-    TypeScript: true
+    TypeScript:
+      indent_with_tabs: true
+      tab_width: true
+      indent_size: true
+    TSX:
+      indent_with_tabs: true
+      tab_width: true
+      indent_size: true
   }
 
   beautify: (text, language, options) ->
     return new @Promise((resolve, reject) =>
 
       try
-        format = require("typescript-formatter/lib/formatter").default
+        format = require("typescript-formatter/lib/formatter").format
         formatterUtils = require("typescript-formatter/lib/utils")
         # @verbose('format', format, formatterUtils)
 
@@ -25,8 +32,13 @@ module.exports = class TypeScriptFormatter extends Beautifier
           opts.indentSize = options.indent_size
           opts.indentStyle = 'space'
 
+        if language is "TSX"
+          fileName = 'test.tsx'
+        else
+          fileName = ''
+
         @verbose('typescript', text, opts)
-        result = format('', text, opts)
+        result = format(fileName, text, opts)
         @verbose(result)
         resolve result
       catch e
