@@ -1,141 +1,42 @@
+### Project specific config ###
+language: generic
+
+env:
+  global:
+    - APM_TEST_PACKAGES=""
+    - ATOM_LINT_WITH_BUNDLED_NODE="true"
+
+  matrix:
+    - ATOM_CHANNEL=stable
+    - ATOM_CHANNEL=beta
+
+os:
+  - linux
+  - osx
+
+### Generic setup follows ###
+script:
+  - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
+  - chmod u+x build-package.sh
+  - ./build-package.sh
+  - npm run build
+
 notifications:
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/a7cbe520877895f3154a
-    on_success: change  # options: [always|never|change] default: always
-    on_failure: always  # options: [always|never|change] default: always
-    on_start: true     # default: false
   email:
     on_success: never
     on_failure: change
 
-script: sh build-package.sh
-
 git:
   depth: 10
 
-php:
-  - '5.6'
-python:
-  - '2.7'
-go:
-  - release
+sudo: false
 
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      sudo: require
-      env:
-        - ATOM_CHANNEL=stable
-    - os: linux
-      dist: trusty
-      sudo: require
-      env:
-        - ATOM_CHANNEL=beta
-    - os: osx
-      env:
-        - ATOM_CHANNEL=stable
-    - os: osx
-      env:
-        - ATOM_CHANNEL=beta
-
-env:
-  global:
-    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom language-lua"
-    - PATH="/home/travis/gopath/bin:$HOME/.linuxbrew/bin:$PATH"
+dist: trusty
 
 addons:
   apt:
-    sources:
-    - sourceline: 'deb http://dist.crystal-lang.org/apt crystal main'
-    - sourceline: 'deb http://ppa.launchpad.net/avsm/ppa/ubuntu trusty main'
-    - sourceline: 'deb http://ppa.launchpad.net/ubuntu-lxc/lxd-stable/ubuntu trusty main'
     packages:
     - build-essential
-    - git
-    - libgnome-keyring-dev
     - fakeroot
-    - crystal
-    - ocaml
-    - camlp4
-    - opam
-    - php5-cli
-    - golang
-
-cache:
-  pip: true
-  bundler: true
-  directories:
-    - vendor/bundle # gems are installed here, https://docs.travis-ci.com/user/languages/ruby/#Dependency-Management
-    - node_modules
-    - $HOME/.atom
-    - $HOME/.stack
-
-before_install:
-  # Install Homebrew on Linux
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
-    fi
-  # Update Homebrew
-  - brew update
-  - brew tap homebrew/dupes
-  - brew tap homebrew/versions
-  # Ruby language support
-  # - gem install ruby-beautify --verbose
-  - gem install rubocop
-  - gem install htmlbeautifier
-  - gem install puppet-lint
-  # Sass language support
-  - gem install sass
-  # Python language support
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install python; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chmod 777 -R /opt/python; fi
-  - pip install --upgrade pip
-  - pip install --upgrade autopep8
-  - pip install --upgrade isort
-  # SQL language support
-  - pip install --upgrade sqlparse
-  # Java, C, C++, C#, Objective-C, D, Pawn, Vala
-  - brew install uncrustify
-  # R
-  - brew tap homebrew/science
-  - brew install r
-  # PHP
-  - brew tap homebrew/homebrew-php
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install php56 || true;
-      brew gist-logs php56 || true;
-      echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini;
-      brew install php-cs-fixer || true;
-      brew gist-logs php-cs-fixer || true;
-    fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      wget http://get.sensiolabs.org/php-cs-fixer.phar -O php-cs-fixer;
-      chmod a+x php-cs-fixer;
-      mv php-cs-fixer $HOME/.linuxbrew/bin/php-cs-fixer;
-    fi
-  # CoffeeScript
-  - npm install coffee-formatter
-  # Haskell
-  # - brew install haskell-stack
-  # - stack setup
-  # - stack install stylish-haskell
-  # Elm
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-mac-x64.tgz;
-      tar xvzf /tmp/elm-format.tgz -C /usr/local/bin;
-    fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.2.0-alpha/elm-format-0.2.0-alpha-linux-x64.tgz;
-      tar xvzf /tmp/elm-format.tgz -C $HOME/.linuxbrew/bin;
-    fi
-  # OCaml
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install ocaml;
-      brew install opam;
-    fi
-  - opam init --auto-setup
-  - opam install --yes ocp-indent
-  # Crystal
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
+    - git
+    - libsecret-1-dev

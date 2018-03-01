@@ -1,0 +1,19 @@
+---
+_:
+  indent_char: " "
+  indent_size: 2
+TypeScript:
+  indent_char: " "
+  indent_size: 2
+JavaScript:
+  indent_char: " "
+  indent_size: 2
+CSS:
+  indent_char: " "
+  indent_size: 2
+HTML:
+  indent_char: " "
+  indent_size: 2
+JSON:
+  indent_char: " "
+  indent_size: 2

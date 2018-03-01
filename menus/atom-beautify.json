@@ -2,12 +2,18 @@
   "context-menu": {
     "atom-text-editor": [
       {
+        "type": "separator"
+      },
+      {
         "label": "Beautify editor contents",
         "command": "atom-beautify:beautify-editor"
       },
       {
         "label": "Debug Atom Beautify",
         "command": "atom-beautify:help-debug-editor"
+      },
+      {
+        "type": "separator"
       }
     ]
   },
@@ -19,12 +25,16 @@
           "label": "Atom Beautify",
           "submenu": [
             {
-              "label": "Beautify editor contents",
+              "label": "Beautify",
               "command": "atom-beautify:beautify-editor"
             },
             {
-              "label": "Debug Atom Beautify",
+              "label": "Debug",
               "command": "atom-beautify:help-debug-editor"
+            },
+            {
+              "label": "Settings",
+              "command": "atom-beautify:open-settings"
             }
           ]
         }

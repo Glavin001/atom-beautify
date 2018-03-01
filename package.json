@@ -1,8 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./dist/index.js",
-  "version": "0.29.11",
-  "private": true,
+  "version": "1.0.0",
   "description": "Beautifier for Atom powered by Unibeautify",
   "repository": {
     "type": "git",
@@ -18,6 +17,11 @@
     "url": "https://github.com/Glavin001"
   },
   "contributors": [
+    {
+      "name": "Steven Zeck",
+      "email": "steven.zeck@gmail.com",
+      "url": "https://github.com/szeck87"
+    },
     {
       "name": "Donald Pipowitch",
       "email": "pipo@senaeh.de",
@@ -105,17 +109,14 @@
     }
   ],
   "engines": {
-    "atom": ">=1.6.0 <2.0.0"
+    "atom": ">=1.21.0 <2.0.0"
   },
-  "dependencies": {
-    "bluebird": "^3.4.6",
-    "typescript": "^2.5.3",
-    "unibeautify": "^0.1.5"
-  },
+  "atomTestRunner": "atom-test-runner-jest",
   "activationCommands": {
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
       "atom-beautify:beautify-editor",
+      "atom-beautify:open-settings",
       "core:save",
       "core:save-as"
     ],
@@ -135,22 +136,42 @@
     "pretty",
     "clean"
   ],
+  "dependencies": {
+    "@unibeautify/beautifier-eslint": "^0.4.0",
+    "@unibeautify/beautifier-js-beautify": "^0.3.1",
+    "@unibeautify/beautifier-prettier": "^0.7.3",
+    "@unibeautify/beautifier-prettydiff": "^0.5.2",
+    "bluebird": "^3.5.1",
+    "eslint": "^4.18.1",
+    "js-beautify": "^1.7.5",
+    "prettier": "^1.10.2",
+    "prettydiff2": "^2.2.7",
+    "unibeautify": "^0.9.3"
+  },
   "devDependencies": {
-    "@types/event-kit": "^1.2.29",
-    "@types/lodash": "^4.14.36",
-    "@types/node": "^6.0.41",
-    "@types/atom": "^1.21.4",
-    "tslint": "^3.15.1",
-    "typescript": "^2.5.3"
+    "@types/atom": "^1.24.1",
+    "@types/bluebird": "^3.5.20",
+    "@types/event-kit": "^2.0.4",
+    "@types/jest": "^22.1.3",
+    "@types/lodash": "^4.14.104",
+    "@types/node": "^9.4.6",
+    "atom-test-runner-jest": "^0.1.3",
+    "jest": "^22.4.2",
+    "jest-preset-atom": "^0.1.9",
+    "npm-run-all": "^4.1.2",
+    "ts-jest": "^22.4.0",
+    "ts-node": "^5.0.0",
+    "tslint": "^5.9.1",
+    "tslint-clean-code": "^0.2.5",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.7.2"
   },
   "scripts": {
-    "start": "tsc --watch"
-  },
-  "consumedServices": {
-    "unibeautify": {
-      "versions": {
-        "^1.0.0": "consumeBeautifier"
-      }
-    }
+    "build": "npm-run-all lint compile docs",
+    "compile": "tsc",
+    "docs": "ts-node script/index",
+    "lint": "tslint {src,spec}/**/*.ts",
+    "start": "tsc --watch",
+    "test": "atom --test spec"
   }
 }
