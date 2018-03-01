@@ -2,7 +2,7 @@ module.exports = {
 
   name: "TSX"
   namespace: "tsx"
-  fallback: ['ts']
+  fallback: ['js']
 
   ###
   Supported Grammars

@@ -5,8 +5,14 @@ module.exports = class TypeScriptFormatter extends Beautifier
   name: "TypeScript Formatter"
   link: "https://github.com/vvakame/typescript-formatter"
   options: {
-    TypeScript: true
-    TSX: true
+    TypeScript:
+      indent_with_tabs: true
+      tab_width: true
+      indent_size: true
+    TSX:
+      indent_with_tabs: true
+      tab_width: true
+      indent_size: true
   }
 
   beautify: (text, language, options) ->
