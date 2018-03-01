@@ -1,7 +1,9 @@
 # Next
+- Fixes [#1773](https://github.com/Glavin001/atom-beautify/issues/1773) and [#793](https://github.com/Glavin001/atom-beautify/issues/793). ruby-beautify with Rubocop now respects `Exclude` settings, and properly loads inherited config files (like `~/.rubocop.yml`)
 - Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
 - See [#601](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for tsx files
 - See [#1497](https://github.com/Glavin001/atom-beautify/issues/1497) and [#802](https://github.com/Glavin001/atom-beautify/issues/802)
+- ...
 
 # v0.30.9 (2017-11-22)
 - Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
