@@ -214,7 +214,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Verilog | `Verilog` |`.svh`, `.v`, `.sv` | **[`Emacs Verilog Mode`](https://www.veripool.org/projects/verilog-mode/)** |
 | VHDL | `VHDL 2008` |`.vhd`, `.VHD` | **[`VHDL Beautifier`](https://www.gnu.org/software/emacs/)** |
 | Visualforce | `Visualforce` |`.page` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
-| Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)**, [`Prettier`](https://github.com/prettier/prettier) |
+| Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)**, [`ESLint Fixer`](https://github.com/eslint/eslint), [`Prettier`](https://github.com/prettier/prettier) |
 | XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe`, `.config` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |
 | XTemplate | `XTemplate` |`.xtemplate` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | YAML | `YAML` |`.yml`, `.yaml` | **[`align-yaml`](https://github.com/jonschlinkert/align-yaml)** |
