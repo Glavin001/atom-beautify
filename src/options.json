@@ -8193,12 +8193,12 @@
     }
   },
   "vhdl": {
-    "title": "Vhdl",
+    "title": "VHDL",
     "type": "object",
-    "description": "Options for language Vhdl",
+    "description": "Options for language VHDL",
     "collapsed": true,
     "beautifiers": [
-      "Vhdl Beautifier"
+      "VHDL Beautifier"
     ],
     "grammars": [
       "VHDL 2008"
@@ -8208,31 +8208,17 @@
       "VHD"
     ],
     "properties": {
-      "emacs_path": {
-        "type": "string",
-        "default": "",
-        "description": "Path to the `emacs` executable (Supported by Vhdl Beautifier)",
-        "title": "Emacs path",
-        "beautifiers": [
-          "Vhdl Beautifier"
-        ],
-        "key": "emacs_path",
-        "language": {
-          "name": "Vhdl",
-          "namespace": "vhdl"
-        }
-      },
       "emacs_script_path": {
         "type": "string",
         "default": "",
-        "description": "Path to the emacs script (Supported by Vhdl Beautifier)",
+        "description": "Path to the emacs script (Supported by VHDL Beautifier)",
         "title": "Emacs script path",
         "beautifiers": [
-          "Vhdl Beautifier"
+          "VHDL Beautifier"
         ],
         "key": "emacs_script_path",
         "language": {
-          "name": "Vhdl",
+          "name": "VHDL",
           "namespace": "vhdl"
         }
       },
@@ -8241,16 +8227,16 @@
         "order": -3,
         "type": "boolean",
         "default": false,
-        "description": "Disable Vhdl Beautification"
+        "description": "Disable VHDL Beautification"
       },
       "default_beautifier": {
         "title": "Default Beautifier",
         "order": -2,
         "type": "string",
-        "default": "Vhdl Beautifier",
-        "description": "Default Beautifier to be used for Vhdl",
+        "default": "VHDL Beautifier",
+        "description": "Default Beautifier to be used for VHDL",
         "enum": [
-          "Vhdl Beautifier"
+          "VHDL Beautifier"
         ]
       },
       "beautify_on_save": {
@@ -8258,7 +8244,7 @@
         "order": -1,
         "type": "boolean",
         "default": false,
-        "description": "Automatically beautify Vhdl files on save"
+        "description": "Automatically beautify VHDL files on save"
       }
     }
   },

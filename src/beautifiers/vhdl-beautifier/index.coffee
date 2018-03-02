@@ -7,7 +7,7 @@ Beautifier = require('../beautifier')
 path = require("path")
 
 module.exports = class VhdlBeautifier extends Beautifier
-  name: "Vhdl Beautifier"
+  name: "VHDL Beautifier"
   link: "https://www.gnu.org/software/emacs/"
   executables: [
     {
@@ -22,14 +22,15 @@ module.exports = class VhdlBeautifier extends Beautifier
   ]
 
   options: {
-    Vhdl: true
+    VHDL: {
+      emacs_script_path: true
+    }
   }
 
   beautify: (text, language, options) ->
     @debug('vhdl-beautifier', options)
     emacs = @exe("emacs")
 
-    emacs_path = options.emacs_path
     emacs_script_path = options.emacs_script_path
 
     if not emacs_script_path
@@ -46,14 +47,7 @@ module.exports = class VhdlBeautifier extends Beautifier
       tempFile = @tempFile("temp", text)
       ]
 
-    if emacs_path
-      @deprecateOptionForExecutable("Emacs", "emacs_path", "Path")
-      @run(emacs_path, args, {ignoreReturnCode: false})
-        .then(=>
-          @readFile(tempFile)
-        )
-    else
-      emacs.run(args, {ignoreReturnCode: false})
-        .then(=>
-          @readFile(tempFile)
-        )
+    emacs.run(args, {ignoreReturnCode: false})
+      .then(=>
+        @readFile(tempFile)
+      )

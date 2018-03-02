@@ -13219,21 +13219,20 @@ Path to emacs init.el script with formatting settings. (Leave blank to use defau
 }
 ```
 
-####  [Vhdl](#vhdl) 
+####  [VHDL](#vhdl) 
 
-**Supported Beautifiers**:  [`Vhdl Beautifier`](#vhdl-beautifier) 
+**Supported Beautifiers**:  [`VHDL Beautifier`](#vhdl-beautifier) 
 
-| Option | Vhdl Beautifier |
+| Option | VHDL Beautifier |
 | --- | --- |
 | `disabled` | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
-| `emacs_path` | :white_check_mark: |
 | `emacs_script_path` | :white_check_mark: |
 
 **Description**:
 
-Options for language Vhdl
+Options for language VHDL
 
 #####  [Disable Beautifying Language](#disable-beautifying-language) 
 
@@ -13243,7 +13242,7 @@ Options for language Vhdl
 
 **Description**:
 
-Disable Vhdl Beautification
+Disable VHDL Beautification
 
 **How to Configure**
 
@@ -13256,15 +13255,15 @@ Disable Vhdl Beautification
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
 
-**Default**: `Vhdl Beautifier`
+**Default**: `VHDL Beautifier`
 
 **Type**: `string`
 
-**Enum**:  `Vhdl Beautifier` 
+**Enum**:  `VHDL Beautifier` 
 
 **Description**:
 
-Default Beautifier to be used for Vhdl
+Default Beautifier to be used for VHDL
 
 **How to Configure**
 
@@ -13281,7 +13280,7 @@ Default Beautifier to be used for Vhdl
 
 **Description**:
 
-Automatically beautify Vhdl files on save
+Automatically beautify VHDL files on save
 
 **How to Configure**
 
@@ -13289,30 +13288,6 @@ Automatically beautify Vhdl files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
-
-#####  [Emacs path](#emacs-path) 
-
-**Namespace**: `vhdl`
-
-**Key**: `emacs_path`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`Vhdl Beautifier`](#vhdl-beautifier) 
-
-**Description**:
-
-Path to the `emacs` executable (Supported by Vhdl Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "vhdl": {
-        "emacs_path": ""
-    }
-}
-```
 
 #####  [Emacs script path](#emacs-script-path) 
 
@@ -13322,11 +13297,11 @@ Path to the `emacs` executable (Supported by Vhdl Beautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Vhdl Beautifier`](#vhdl-beautifier) 
+**Supported Beautifiers**:  [`VHDL Beautifier`](#vhdl-beautifier) 
 
 **Description**:
 
-Path to the emacs script (Supported by Vhdl Beautifier)
+Path to the emacs script (Supported by VHDL Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -18045,31 +18020,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 ```
 
 
-### Vhdl Beautifier
-
-#####  [Emacs path](#emacs-path) 
-
-**Namespace**: `vhdl`
-
-**Key**: `emacs_path`
-
-**Type**: `string`
-
-**Supported Beautifiers**:  [`Vhdl Beautifier`](#vhdl-beautifier) 
-
-**Description**:
-
-Path to the `emacs` executable (Supported by Vhdl Beautifier)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "vhdl": {
-        "emacs_path": ""
-    }
-}
-```
+### VHDL Beautifier
 
 #####  [Emacs script path](#emacs-script-path) 
 
@@ -18079,11 +18030,11 @@ Path to the `emacs` executable (Supported by Vhdl Beautifier)
 
 **Type**: `string`
 
-**Supported Beautifiers**:  [`Vhdl Beautifier`](#vhdl-beautifier) 
+**Supported Beautifiers**:  [`VHDL Beautifier`](#vhdl-beautifier) 
 
 **Description**:
 
-Path to the emacs script (Supported by Vhdl Beautifier)
+Path to the emacs script (Supported by VHDL Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 

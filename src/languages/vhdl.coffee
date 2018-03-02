@@ -1,6 +1,6 @@
 module.exports = {
 
-  name: "Vhdl"
+  name: "VHDL"
   namespace: "vhdl"
 
   ###
@@ -22,11 +22,6 @@ module.exports = {
 
   ###
   options:
-    # JavaScript
-    emacs_path:
-      type: 'string'
-      default: ""
-      description: "Path to the `emacs` executable"
     emacs_script_path:
       type: 'string'
       default: ""
