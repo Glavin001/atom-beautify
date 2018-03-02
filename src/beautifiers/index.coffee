@@ -266,8 +266,8 @@ module.exports = class Beautifiers extends EventEmitter
         logger.info("Analytics is enabled.")
         # Setup Analytics
         unless atom.config.get("atom-beautify.general._analyticsUserId")
-          uuid = require("node-uuid")
-          atom.config.set "atom-beautify.general._analyticsUserId", uuid.v4()
+          uuidv4 = require("uuid/v4")
+          atom.config.set "atom-beautify.general._analyticsUserId", uuidv4()
         # Setup Analytics User Id
         userId = atom.config.get("atom-beautify.general._analyticsUserId")
         @analytics ?= new ua(trackingId, userId, {
