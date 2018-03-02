@@ -19,6 +19,7 @@ module.exports = {
   ###
   extensions: [
     "jsx",
+    "tsx",
     "js"
   ]
 
