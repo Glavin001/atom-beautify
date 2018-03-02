@@ -450,6 +450,7 @@
     "gn"
   ],
   "devDependencies": {
+    "codo": "^2.1.2",
     "coffeelint": "2.1.0"
   },
   "scripts": {

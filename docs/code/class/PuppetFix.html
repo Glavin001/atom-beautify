@@ -71,6 +71,29 @@
 }</code></pre>
     
   </dd>
+  <dt id='executables-variable'>
+    executables
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>[
+  {
+    name: &quot;puppet-lint&quot;,
+    cmd: &quot;puppet-lint&quot;,
+    homepage: &quot;http:&#47;&#47;puppet-lint.com&#47;&quot;,
+    installation: &quot;http:&#47;&#47;puppet-lint.com&#47;&quot;,
+    version: {
+      parse: function(text) {
+        return text.match(&#47;puppet-lint (\d+\.\d+\.\d+)&#47;)[1];
+      }
+    },
+    docker: {
+      image: &quot;unibeautify&#47;puppet-lint&quot;
+    }
+  }
+]</code></pre>
+    
+  </dd>
 </dl>
       <h3 class='inherited'>
         Variable inherited from
@@ -80,26 +103,14 @@
         <a href='../class/Beautifier.html#Promise-variable'>Promise</a>
         <a href='../class/Beautifier.html#name-variable'>name</a>
         <a href='../class/Beautifier.html#options-variable'>options</a>
+        <a href='../class/Beautifier.html#executables-variable'>executables</a>
+        <a href='../class/Beautifier.html#_exe-variable'>_exe</a>
         <a href='../class/Beautifier.html#languages-variable'>languages</a>
         <a href='../class/Beautifier.html#beautify-variable'>beautify</a>
-        <a href='../class/Beautifier.html#_envCache-variable'>_envCache</a>
-        <a href='../class/Beautifier.html#_envCacheDate-variable'>_envCacheDate</a>
-        <a href='../class/Beautifier.html#_envCacheExpiry-variable'>_envCacheExpiry</a>
         <a href='../class/Beautifier.html#logger-variable'>logger</a>
       </p>
       <h2>Instance Method Summary</h2>
       <ul class='summary'>
-  <li>
-    <span class='signature'>
-      <a href='#cli-dynamic'>
-        #
-(void)
-<b>cli</b><span>(options)</span>
-      </a>
-    </span>
-    <span class='desc'>
-    </span>
-  </li>
   <li>
     <span class='signature'>
       <a href='#beautify-dynamic'>
@@ -119,29 +130,22 @@
           <a href='../class/Beautifier.html'>Beautifier</a>
         </h3>
         <p class='inherited'>
+          <a href='../class/Beautifier.html#isPreInstalled-dynamic'>#isPreInstalled</a>
+          <a href='../class/Beautifier.html#loadExecutables-dynamic'>#loadExecutables</a>
+          <a href='../class/Beautifier.html#exe-dynamic'>#exe</a>
           <a href='../class/Beautifier.html#deprecate-dynamic'>#deprecate</a>
+          <a href='../class/Beautifier.html#deprecateOptionForExecutable-dynamic'>#deprecateOptionForExecutable</a>
           <a href='../class/Beautifier.html#tempFile-dynamic'>#tempFile</a>
           <a href='../class/Beautifier.html#readFile-dynamic'>#readFile</a>
           <a href='../class/Beautifier.html#findFile-dynamic'>#findFile</a>
-          <a href='../class/Beautifier.html#getShellEnvironment-dynamic'>#getShellEnvironment</a>
+          <a href='../class/Beautifier.html#getDefaultLineEnding-dynamic'>#getDefaultLineEnding</a>
           <a href='../class/Beautifier.html#which-dynamic'>#which</a>
-          <a href='../class/Beautifier.html#commandNotFoundError-dynamic'>#commandNotFoundError</a>
           <a href='../class/Beautifier.html#run-dynamic'>#run</a>
-          <a href='../class/Beautifier.html#spawn-dynamic'>#spawn</a>
           <a href='../class/Beautifier.html#setupLogger-dynamic'>#setupLogger</a>
         </p>
       </h2>
       <h2>Instance Method Details</h2>
       <div class='methods'>
-  <div class='method_details'>
-    <p class='signature' id='cli-dynamic'>
-      #
-(void)
-<b>cli</b><span>(options)</span>
-      <br>
-    </p>
-    
-  </div>
   <div class='method_details'>
     <p class='signature' id='beautify-dynamic'>
       #

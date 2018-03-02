@@ -52,12 +52,20 @@
   &#47;*
   Supported Grammars
    *&#47;
-  grammars: [&quot;JSX&quot;, &quot;JavaScript (JSX)&quot;, &quot;Babel ES6 JavaScript&quot;],
+  grammars: [&quot;JSX&quot;, &quot;JavaScript (JSX)&quot;, &quot;Babel ES6 JavaScript&quot;, &quot;JavaScript with JSX&quot;],
 
   &#47;*
   Supported extensions
    *&#47;
-  extensions: [&quot;jsx&quot;, &quot;js&quot;]
+  extensions: [&quot;jsx&quot;, &quot;js&quot;],
+  defaultBeautifier: &quot;Pretty Diff&quot;,
+  options: {
+    e4x: {
+      type: &#39;boolean&#39;,
+      &quot;default&quot;: true,
+      description: &quot;Support e4x&#47;jsx syntax&quot;
+    }
+  }
 }</code></pre>
     
   </dd>

@@ -46,7 +46,7 @@
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>[&#39;uncrustify&#39;, &#39;autopep8&#39;, &#39;brittany&#39;, &#39;coffee-formatter&#39;, &#39;coffee-fmt&#39;, &#39;cljfmt&#39;, &#39;clang-format&#39;, &#39;crystal&#39;, &#39;dfmt&#39;, &#39;elm-format&#39;, &#39;htmlbeautifier&#39;, &#39;csscomb&#39;, &#39;gherkin&#39;, &#39;gofmt&#39;, &#39;latex-beautify&#39;, &#39;fortran-beautifier&#39;, &#39;hindent&#39;, &#39;js-beautify&#39;, &#39;jscs&#39;, &#39;lua-beautifier&#39;, &#39;ocp-indent&#39;, &#39;perltidy&#39;, &#39;php-cs-fixer&#39;, &#39;phpcbf&#39;, &#39;prettydiff&#39;, &#39;pug-beautify&#39;, &#39;puppet-fix&#39;, &#39;remark&#39;, &#39;rubocop&#39;, &#39;ruby-beautify&#39;, &#39;rustfmt&#39;, &#39;sass-convert&#39;, &#39;sqlformat&#39;, &#39;stylish-haskell&#39;, &#39;tidy-markdown&#39;, &#39;typescript-formatter&#39;, &#39;vue-beautifier&#39;, &#39;yapf&#39;, &#39;erl_tidy&#39;, &#39;marko-beautifier&#39;, &#39;formatR&#39;, &#39;beautysh&#39;]</code></pre>
+    <pre><code class='coffeescript'>[&#39;uncrustify&#39;, &#39;align-yaml&#39;, &#39;autopep8&#39;, &#39;brittany&#39;, &#39;coffee-formatter&#39;, &#39;coffee-fmt&#39;, &#39;cljfmt&#39;, &#39;clang-format&#39;, &#39;crystal&#39;, &#39;dfmt&#39;, &#39;elm-format&#39;, &#39;hh_format&#39;, &#39;htmlbeautifier&#39;, &#39;csscomb&#39;, &#39;gherkin&#39;, &#39;gn&#39;, &#39;gofmt&#39;, &#39;goimports&#39;, &#39;latex-beautify&#39;, &#39;fortran-beautifier&#39;, &#39;hindent&#39;, &#39;vhdl-beautifier&#39;, &#39;js-beautify&#39;, &#39;jscs&#39;, &#39;eslint&#39;, &#39;lua-beautifier&#39;, &#39;nginx-beautify&#39;, &#39;ocp-indent&#39;, &#39;perltidy&#39;, &#39;php-cs-fixer&#39;, &#39;phpcbf&#39;, &#39;prettier&#39;, &#39;prettydiff&#39;, &#39;pybeautifier&#39;, &#39;pug-beautify&#39;, &#39;puppet-fix&#39;, &#39;remark&#39;, &#39;rubocop&#39;, &#39;ruby-beautify&#39;, &#39;rustfmt&#39;, &#39;sass-convert&#39;, &#39;sqlformat&#39;, &#39;stylish-haskell&#39;, &#39;tidy-markdown&#39;, &#39;typescript-formatter&#39;, &#39;vue-beautifier&#39;, &#39;yapf&#39;, &#39;erl_tidy&#39;, &#39;marko-beautifier&#39;, &#39;formatR&#39;, &#39;beautysh&#39;, &#39;terraformfmt&#39;, &#39;verilog-mode&#39;]</code></pre>
     <div class='docstring'>
   <p>List of beautifier names</p><p>To register a beautifier add its name here</p>
 </div>
@@ -83,11 +83,22 @@
   </dt>
   <dd>
     <pre><code class='coffeescript'>{}</code></pre>
-
+    
   </dd>
 </dl>
       <h2>Instance Method Summary</h2>
       <ul class='summary'>
+  <li>
+    <span class='signature'>
+      <a href='#loadOptions-dynamic'>
+        #
+(void)
+<b>loadOptions</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
   <li>
     <span class='signature'>
       <a href='#encodeURI-dynamic'>
@@ -97,7 +108,7 @@
       </a>
     </span>
     <span class='desc'>
-      From <a href="https://github.com/atom/notifications/blob/01779ade79e7196f1603b8c1fa31716aa4a33911/lib/notification-issue.coffee#L130">https://github.com/atom/notifications/blob/01779ade79e7196f1603b8c1fa31716aa4a33911/lib/notification-issue.coffee#L130</a>
+      From <a href="https://github.com/atom/notifications/blob/01779ade79e7196f1603b8c1fa31716aa4a33911/lib/notification-issue.coffee#L130">https://github.com/atom/notifications/blob/01779ade79e7196f1603b8c1fa31716aa4a33911/lib/notification-issue.coffee#L130</a> 
     </span>
   </li>
   <li>
@@ -117,6 +128,28 @@
         #
 (void)
 <b>getBeautifierForLanguage</b><span>(language)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getExtension-dynamic'>
+        #
+(void)
+<b>getExtension</b><span>(filePath)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getLanguages-dynamic'>
+        #
+(void)
+<b>getLanguages</b><span>(grammar, filePath)</span>
       </a>
     </span>
     <span class='desc'>
@@ -193,7 +226,7 @@
       <a href='#beautify-dynamic'>
         #
 (void)
-<b>beautify</b><span>(text, allOptions, grammar, filePath, {onSave} = {})</span>
+<b>beautify</b><span>(text, allOptions, grammar, filePath, {onSave, language} = {})</span>
       </a>
     </span>
     <span class='desc'>
@@ -208,7 +241,7 @@
       </a>
     </span>
     <span class='desc'>
-      CLI
+      CLI 
     </span>
   </li>
   <li>
@@ -269,7 +302,7 @@ lookups when liniting an entire project
       </a>
     </span>
     <span class='desc'>
-      Look for .jsbeautifierrc in file and home path, check env variables
+      Look for .jsbeautifierrc in file and home path, check env variables 
     </span>
   </li>
   <li>
@@ -326,6 +359,15 @@ lookups when liniting an entire project
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
+    <p class='signature' id='loadOptions-dynamic'>
+      #
+(void)
+<b>loadOptions</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
     <p class='signature' id='encodeURI-dynamic'>
       #
 (void)
@@ -345,7 +387,7 @@ lookups when liniting an entire project
 <b>getBeautifiers</b><span>(language)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='getBeautifierForLanguage-dynamic'>
@@ -354,7 +396,25 @@ lookups when liniting an entire project
 <b>getBeautifierForLanguage</b><span>(language)</span>
       <br>
     </p>
-
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getExtension-dynamic'>
+      #
+(void)
+<b>getExtension</b><span>(filePath)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getLanguages-dynamic'>
+      #
+(void)
+<b>getLanguages</b><span>(grammar, filePath)</span>
+      <br>
+    </p>
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='getLanguage-dynamic'>
@@ -363,7 +423,7 @@ lookups when liniting an entire project
 <b>getLanguage</b><span>(grammar, filePath)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='getOptionsForLanguage-dynamic'>
@@ -372,7 +432,7 @@ lookups when liniting an entire project
 <b>getOptionsForLanguage</b><span>(allOptions, language)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='transformOptions-dynamic'>
@@ -381,7 +441,7 @@ lookups when liniting an entire project
 <b>transformOptions</b><span>(beautifier, languageName, options)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='trackEvent-dynamic'>
@@ -390,7 +450,7 @@ lookups when liniting an entire project
 <b>trackEvent</b><span>(payload)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='trackTiming-dynamic'>
@@ -399,7 +459,7 @@ lookups when liniting an entire project
 <b>trackTiming</b><span>(payload)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='track-dynamic'>
@@ -408,16 +468,16 @@ lookups when liniting an entire project
 <b>track</b><span>(type, payload)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='beautify-dynamic'>
       #
 (void)
-<b>beautify</b><span>(text, allOptions, grammar, filePath, {onSave} = {})</span>
+<b>beautify</b><span>(text, allOptions, grammar, filePath, {onSave, language} = {})</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='getUserHome-dynamic'>
@@ -439,7 +499,7 @@ lookups when liniting an entire project
 <b>verifyExists</b><span>(fullPath)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='findFile-dynamic'>
@@ -511,7 +571,7 @@ or in the home directory. Configuration files are named
 <b>getConfigOptionsFromSettings</b><span>(langs)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='getConfig-dynamic'>
@@ -533,7 +593,7 @@ or in the home directory. Configuration files are named
 <b>getOptionsForPath</b><span>(editedFilePath, editor)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='isNestedOptions-dynamic'>
@@ -542,7 +602,7 @@ or in the home directory. Configuration files are named
 <b>isNestedOptions</b><span>(currOptions)</span>
       <br>
     </p>
-
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='getOptions-dynamic'>
@@ -552,7 +612,7 @@ or in the home directory. Configuration files are named
       <span class='bound note'>Bound</span>
       <br>
     </p>
-
+    
   </div>
 </div>
     </div>
