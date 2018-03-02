@@ -11387,6 +11387,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `identifiers` | :white_check_mark: |
 | `indent_size` | :white_check_mark: |
 | `keywords` | :white_check_mark: |
+| `reindent` | :white_check_mark: |
 
 **Description**:
 
@@ -11525,6 +11526,32 @@ Change case of keywords (Supported by sqlformat)
 {
     "sql": {
         "keywords": "upper"
+    }
+}
+```
+
+#####  [Reindent](#reindent) 
+
+**Namespace**: `sql`
+
+**Key**: `reindent`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+
+**Description**:
+
+Change indentations of the statements. Uncheck this option to preserve indentation (Supported by sqlformat)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "sql": {
+        "reindent": true
     }
 }
 ```
@@ -19156,6 +19183,32 @@ Indentation size/length (Supported by sqlformat)
 {
     "sql": {
         "indent_size": 4
+    }
+}
+```
+
+#####  [Reindent](#reindent) 
+
+**Namespace**: `sql`
+
+**Key**: `reindent`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`sqlformat`](#sqlformat) 
+
+**Description**:
+
+Change indentations of the statements. Uncheck this option to preserve indentation (Supported by sqlformat)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "sql": {
+        "reindent": true
     }
 }
 ```

@@ -1,4 +1,5 @@
 # Next
+- Add "Reindent" option for sqlformat. See [#1926](https://github.com/Glavin001/atom-beautify/pull/1926).
 - Add hindent and brittany beautifiers for haskell
 - Breaking change to `pybeautifier`: Fix typo, change `formater` to `formatter`. See [#1898](https://github.com/Glavin001/atom-beautify/pull/1898).
 - Fixes [#1773](https://github.com/Glavin001/atom-beautify/issues/1773) and [#793](https://github.com/Glavin001/atom-beautify/issues/793). ruby-beautify with Rubocop now respects `Exclude` settings, and properly loads inherited config files (like `~/.rubocop.yml`)
