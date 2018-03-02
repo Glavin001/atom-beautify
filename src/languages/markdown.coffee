@@ -18,7 +18,7 @@ module.exports = {
     "md"
   ]
 
-  defaultBeautifier: "Tidy Markdown"
+  defaultBeautifier: "Remark"
 
   options:
     gfm:
