@@ -54,6 +54,7 @@ describe "BeautifyLanguages", ->
   dependentPackages = [
     'autocomplete-plus'
     'fuse'
+    'react'
     # 'linter'
     #   'atom-typescript' # it logs too much...
   ]

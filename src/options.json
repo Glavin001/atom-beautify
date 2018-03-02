@@ -350,10 +350,9 @@
         "type": "integer",
         "default": null,
         "minimum": 0,
-        "description": "Indentation size/length (Supported by Coffee Formatter, coffee-fmt)",
+        "description": "Indentation size/length (Supported by coffee-fmt)",
         "title": "Indent size",
         "beautifiers": [
-          "Coffee Formatter",
           "coffee-fmt"
         ],
         "key": "indent_size",
@@ -365,10 +364,9 @@
       "indent_char": {
         "type": "string",
         "default": null,
-        "description": "Indentation character (Supported by Coffee Formatter, coffee-fmt)",
+        "description": "Indentation character (Supported by coffee-fmt)",
         "title": "Indent char",
         "beautifiers": [
-          "Coffee Formatter",
           "coffee-fmt"
         ],
         "key": "indent_char",
@@ -377,266 +375,15 @@
           "namespace": "js"
         }
       },
-      "indent_level": {
-        "type": "integer",
-        "default": 0,
-        "description": "Initial indentation level (Supported by Coffee Formatter)",
-        "title": "Indent level",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "indent_level",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
       "indent_with_tabs": {
         "type": "boolean",
         "default": null,
-        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by Coffee Formatter, coffee-fmt)",
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by coffee-fmt)",
         "title": "Indent with tabs",
         "beautifiers": [
-          "Coffee Formatter",
           "coffee-fmt"
         ],
         "key": "indent_with_tabs",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "preserve_newlines": {
-        "type": "boolean",
-        "default": true,
-        "description": "Preserve line-breaks (Supported by Coffee Formatter)",
-        "title": "Preserve newlines",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "preserve_newlines",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "max_preserve_newlines": {
-        "type": "integer",
-        "default": 10,
-        "description": "Number of line-breaks to be preserved in one chunk (Supported by Coffee Formatter)",
-        "title": "Max preserve newlines",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "max_preserve_newlines",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "space_in_paren": {
-        "type": "boolean",
-        "default": false,
-        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by Coffee Formatter)",
-        "title": "Space in paren",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "space_in_paren",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "jslint_happy": {
-        "type": "boolean",
-        "default": false,
-        "description": "Enable jslint-stricter mode (Supported by Coffee Formatter)",
-        "title": "Jslint happy",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "jslint_happy",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "space_after_anon_function": {
-        "type": "boolean",
-        "default": false,
-        "description": "Add a space before an anonymous function's parens, ie. function () (Supported by Coffee Formatter)",
-        "title": "Space after anon function",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "space_after_anon_function",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "brace_style": {
-        "type": "string",
-        "default": "collapse",
-        "enum": [
-          "collapse",
-          "collapse-preserve-inline",
-          "expand",
-          "end-expand",
-          "none"
-        ],
-        "description": "[collapse|collapse-preserve-inline|expand|end-expand|none] (Supported by Coffee Formatter)",
-        "title": "Brace style",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "brace_style",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "break_chained_methods": {
-        "type": "boolean",
-        "default": false,
-        "description": "Break chained method calls across subsequent lines (Supported by Coffee Formatter)",
-        "title": "Break chained methods",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "break_chained_methods",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "keep_array_indentation": {
-        "type": "boolean",
-        "default": false,
-        "description": "Preserve array indentation (Supported by Coffee Formatter)",
-        "title": "Keep array indentation",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "keep_array_indentation",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "keep_function_indentation": {
-        "type": "boolean",
-        "default": false,
-        "description": " (Supported by Coffee Formatter)",
-        "title": "Keep function indentation",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "keep_function_indentation",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "space_before_conditional": {
-        "type": "boolean",
-        "default": true,
-        "description": " (Supported by Coffee Formatter)",
-        "title": "Space before conditional",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "space_before_conditional",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "eval_code": {
-        "type": "boolean",
-        "default": false,
-        "description": " (Supported by Coffee Formatter)",
-        "title": "Eval code",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "eval_code",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "unescape_strings": {
-        "type": "boolean",
-        "default": false,
-        "description": "Decode printable characters encoded in xNN notation (Supported by Coffee Formatter)",
-        "title": "Unescape strings",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "unescape_strings",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "wrap_line_length": {
-        "type": "integer",
-        "default": 0,
-        "description": "Wrap lines at next opportunity after N characters (Supported by Coffee Formatter)",
-        "title": "Wrap line length",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "wrap_line_length",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "end_with_newline": {
-        "type": "boolean",
-        "default": false,
-        "description": "End output with newline (Supported by Coffee Formatter)",
-        "title": "End with newline",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "end_with_newline",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "end_with_comma": {
-        "type": "boolean",
-        "default": false,
-        "description": "If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by Coffee Formatter)",
-        "title": "End with comma",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "end_with_comma",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "end_of_line": {
-        "type": "string",
-        "default": "System Default",
-        "enum": [
-          "CRLF",
-          "LF",
-          "System Default"
-        ],
-        "description": "Override EOL from line-ending-selector (Supported by Coffee Formatter)",
-        "title": "End of line",
-        "beautifiers": [
-          "Coffee Formatter"
-        ],
-        "key": "end_of_line",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -893,6 +640,7 @@
     "beautifiers": [
       "CSScomb",
       "JS Beautify",
+      "Prettier",
       "Pretty Diff",
       "SassConvert"
     ],
@@ -1132,6 +880,7 @@
         "enum": [
           "CSScomb",
           "JS Beautify",
+          "Prettier",
           "Pretty Diff",
           "SassConvert"
         ]
@@ -1558,6 +1307,20 @@
           "JS Beautify"
         ],
         "key": "end_of_line",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "object_curly_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
+        "title": "Object curly spacing",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "object_curly_spacing",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -2632,6 +2395,8 @@
     "description": "Options for language Haskell",
     "collapsed": true,
     "beautifiers": [
+      "brittany",
+      "hindent",
       "stylish-haskell"
     ],
     "grammars": [
@@ -2655,6 +2420,8 @@
         "default": "stylish-haskell",
         "description": "Default Beautifier to be used for Haskell",
         "enum": [
+          "brittany",
+          "hindent",
           "stylish-haskell"
         ]
       },
@@ -3139,6 +2906,7 @@
       "JS Beautify",
       "JSCS Fixer",
       "ESLint Fixer",
+      "Prettier",
       "Pretty Diff"
     ],
     "grammars": [
@@ -3152,10 +2920,11 @@
         "type": "integer",
         "default": null,
         "minimum": 0,
-        "description": "Indentation size/length (Supported by JS Beautify, Pretty Diff)",
+        "description": "Indentation size/length (Supported by JS Beautify, Prettier, Pretty Diff)",
         "title": "Indent size",
         "beautifiers": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ],
         "key": "indent_size",
@@ -3167,10 +2936,11 @@
       "indent_char": {
         "type": "string",
         "default": null,
-        "description": "Indentation character (Supported by JS Beautify, Pretty Diff)",
+        "description": "Indentation character (Supported by JS Beautify, Prettier, Pretty Diff)",
         "title": "Indent char",
         "beautifiers": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ],
         "key": "indent_char",
@@ -3196,10 +2966,11 @@
       "indent_with_tabs": {
         "type": "boolean",
         "default": null,
-        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by JS Beautify, Pretty Diff)",
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by JS Beautify, Prettier, Pretty Diff)",
         "title": "Indent with tabs",
         "beautifiers": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ],
         "key": "indent_with_tabs",
@@ -3450,6 +3221,21 @@
           "namespace": "js"
         }
       },
+      "object_curly_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify, Prettier)",
+        "title": "Object curly spacing",
+        "beautifiers": [
+          "JS Beautify",
+          "Prettier"
+        ],
+        "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -3467,6 +3253,7 @@
           "JS Beautify",
           "JSCS Fixer",
           "ESLint Fixer",
+          "Prettier",
           "Pretty Diff"
         ]
       },
@@ -3486,6 +3273,7 @@
     "collapsed": true,
     "beautifiers": [
       "JS Beautify",
+      "Prettier",
       "Pretty Diff"
     ],
     "grammars": [
@@ -3797,6 +3585,20 @@
           "namespace": "js"
         }
       },
+      "object_curly_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
+        "title": "Object curly spacing",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -3812,6 +3614,7 @@
         "description": "Default Beautifier to be used for JSON",
         "enum": [
           "JS Beautify",
+          "Prettier",
           "Pretty Diff"
         ]
       },
@@ -4160,6 +3963,20 @@
           "namespace": "js"
         }
       },
+      "object_curly_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by JS Beautify)",
+        "title": "Object curly spacing",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -4350,6 +4167,7 @@
     "collapsed": true,
     "beautifiers": [
       "CSScomb",
+      "Prettier",
       "Pretty Diff"
     ],
     "grammars": [
@@ -4554,6 +4372,7 @@
         "description": "Default Beautifier to be used for LESS",
         "enum": [
           "CSScomb",
+          "Prettier",
           "Pretty Diff"
         ]
       },
@@ -4633,6 +4452,7 @@
     "description": "Options for language Markdown",
     "collapsed": true,
     "beautifiers": [
+      "Prettier",
       "Remark",
       "Tidy Markdown"
     ],
@@ -4700,6 +4520,7 @@
         "default": "Tidy Markdown",
         "description": "Default Beautifier to be used for Markdown",
         "enum": [
+          "Prettier",
           "Remark",
           "Tidy Markdown"
         ]
@@ -6109,7 +5930,7 @@
           "namespace": "python"
         }
       },
-      "formater": {
+      "formatter": {
         "type": "string",
         "default": "autopep8",
         "enum": [
@@ -6117,12 +5938,12 @@
           "yapf"
         ],
         "description": "formatter used by pybeautifier (Supported by autopep8, pybeautifier)",
-        "title": "Formater",
+        "title": "Formatter",
         "beautifiers": [
           "autopep8",
           "pybeautifier"
         ],
-        "key": "formater",
+        "key": "formatter",
         "language": {
           "name": "Python",
           "namespace": "python"
@@ -6567,6 +6388,7 @@
     "collapsed": true,
     "beautifiers": [
       "CSScomb",
+      "Prettier",
       "Pretty Diff",
       "SassConvert"
     ],
@@ -6772,6 +6594,7 @@
         "description": "Default Beautifier to be used for SCSS",
         "enum": [
           "CSScomb",
+          "Prettier",
           "Pretty Diff",
           "SassConvert"
         ]
@@ -6910,6 +6733,20 @@
           "sqlformat"
         ],
         "key": "indent_size",
+        "language": {
+          "name": "SQL",
+          "namespace": "sql"
+        }
+      },
+      "reindent": {
+        "type": "boolean",
+        "default": true,
+        "description": "Change indentations of the statements. Uncheck this option to preserve indentation (Supported by sqlformat)",
+        "title": "Reindent",
+        "beautifiers": [
+          "sqlformat"
+        ],
+        "key": "reindent",
         "language": {
           "name": "SQL",
           "namespace": "sql"
@@ -7366,6 +7203,76 @@
       }
     }
   },
+  "tsx": {
+    "title": "TSX",
+    "type": "object",
+    "description": "Options for language TSX",
+    "collapsed": true,
+    "beautifiers": [
+      "TypeScript Formatter"
+    ],
+    "grammars": [
+      "TypeScriptReact"
+    ],
+    "extensions": [
+      "tsx"
+    ],
+    "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by TypeScript Formatter)",
+        "title": "Indent size",
+        "beautifiers": [
+          "TypeScript Formatter"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "indent_with_tabs": {
+        "type": "boolean",
+        "default": null,
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by TypeScript Formatter)",
+        "title": "Indent with tabs",
+        "beautifiers": [
+          "TypeScript Formatter"
+        ],
+        "key": "indent_with_tabs",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable TSX Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "TypeScript Formatter",
+        "description": "Default Beautifier to be used for TSX",
+        "enum": [
+          "TypeScript Formatter"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify TSX files on save"
+      }
+    }
+  },
   "twig": {
     "title": "Twig",
     "type": "object",
@@ -7540,6 +7447,7 @@
     "description": "Options for language TypeScript",
     "collapsed": true,
     "beautifiers": [
+      "Prettier",
       "TypeScript Formatter"
     ],
     "grammars": [
@@ -7564,34 +7472,6 @@
           "namespace": "js"
         }
       },
-      "indent_char": {
-        "type": "string",
-        "default": null,
-        "description": "Indentation character (Supported by TypeScript Formatter)",
-        "title": "Indent char",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "indent_char",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "indent_level": {
-        "type": "integer",
-        "default": 0,
-        "description": "Initial indentation level (Supported by TypeScript Formatter)",
-        "title": "Indent level",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "indent_level",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
       "indent_with_tabs": {
         "type": "boolean",
         "default": null,
@@ -7601,242 +7481,6 @@
           "TypeScript Formatter"
         ],
         "key": "indent_with_tabs",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "preserve_newlines": {
-        "type": "boolean",
-        "default": true,
-        "description": "Preserve line-breaks (Supported by TypeScript Formatter)",
-        "title": "Preserve newlines",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "preserve_newlines",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "max_preserve_newlines": {
-        "type": "integer",
-        "default": 10,
-        "description": "Number of line-breaks to be preserved in one chunk (Supported by TypeScript Formatter)",
-        "title": "Max preserve newlines",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "max_preserve_newlines",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "space_in_paren": {
-        "type": "boolean",
-        "default": false,
-        "description": "Add padding spaces within paren, ie. f( a, b ) (Supported by TypeScript Formatter)",
-        "title": "Space in paren",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "space_in_paren",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "jslint_happy": {
-        "type": "boolean",
-        "default": false,
-        "description": "Enable jslint-stricter mode (Supported by TypeScript Formatter)",
-        "title": "Jslint happy",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "jslint_happy",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "space_after_anon_function": {
-        "type": "boolean",
-        "default": false,
-        "description": "Add a space before an anonymous function's parens, ie. function () (Supported by TypeScript Formatter)",
-        "title": "Space after anon function",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "space_after_anon_function",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "brace_style": {
-        "type": "string",
-        "default": "collapse",
-        "enum": [
-          "collapse",
-          "collapse-preserve-inline",
-          "expand",
-          "end-expand",
-          "none"
-        ],
-        "description": "[collapse|collapse-preserve-inline|expand|end-expand|none] (Supported by TypeScript Formatter)",
-        "title": "Brace style",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "brace_style",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "break_chained_methods": {
-        "type": "boolean",
-        "default": false,
-        "description": "Break chained method calls across subsequent lines (Supported by TypeScript Formatter)",
-        "title": "Break chained methods",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "break_chained_methods",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "keep_array_indentation": {
-        "type": "boolean",
-        "default": false,
-        "description": "Preserve array indentation (Supported by TypeScript Formatter)",
-        "title": "Keep array indentation",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "keep_array_indentation",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "keep_function_indentation": {
-        "type": "boolean",
-        "default": false,
-        "description": " (Supported by TypeScript Formatter)",
-        "title": "Keep function indentation",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "keep_function_indentation",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "space_before_conditional": {
-        "type": "boolean",
-        "default": true,
-        "description": " (Supported by TypeScript Formatter)",
-        "title": "Space before conditional",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "space_before_conditional",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "eval_code": {
-        "type": "boolean",
-        "default": false,
-        "description": " (Supported by TypeScript Formatter)",
-        "title": "Eval code",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "eval_code",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "unescape_strings": {
-        "type": "boolean",
-        "default": false,
-        "description": "Decode printable characters encoded in xNN notation (Supported by TypeScript Formatter)",
-        "title": "Unescape strings",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "unescape_strings",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "wrap_line_length": {
-        "type": "integer",
-        "default": 0,
-        "description": "Wrap lines at next opportunity after N characters (Supported by TypeScript Formatter)",
-        "title": "Wrap line length",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "wrap_line_length",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "end_with_newline": {
-        "type": "boolean",
-        "default": false,
-        "description": "End output with newline (Supported by TypeScript Formatter)",
-        "title": "End with newline",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "end_with_newline",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "end_with_comma": {
-        "type": "boolean",
-        "default": false,
-        "description": "If a terminating comma should be inserted into arrays, object literals, and destructured objects. (Supported by TypeScript Formatter)",
-        "title": "End with comma",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "end_with_comma",
-        "language": {
-          "name": "JavaScript",
-          "namespace": "js"
-        }
-      },
-      "end_of_line": {
-        "type": "string",
-        "default": "System Default",
-        "enum": [
-          "CRLF",
-          "LF",
-          "System Default"
-        ],
-        "description": "Override EOL from line-ending-selector (Supported by TypeScript Formatter)",
-        "title": "End of line",
-        "beautifiers": [
-          "TypeScript Formatter"
-        ],
-        "key": "end_of_line",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -7856,6 +7500,7 @@
         "default": "TypeScript Formatter",
         "description": "Default Beautifier to be used for TypeScript",
         "enum": [
+          "Prettier",
           "TypeScript Formatter"
         ]
       },
@@ -8028,6 +7673,7 @@
     "description": "Options for language Vue",
     "collapsed": true,
     "beautifiers": [
+      "Prettier",
       "Vue Beautifier"
     ],
     "grammars": [
@@ -8330,6 +7976,20 @@
           "namespace": "js"
         }
       },
+      "object_curly_spacing": {
+        "type": "boolean",
+        "default": false,
+        "description": "Insert spaces between brackets in object literals (Supported by Vue Beautifier)",
+        "title": "Object curly spacing",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "indent_inner_html": {
         "type": "boolean",
         "default": false,
@@ -8519,6 +8179,7 @@
         "default": "Vue Beautifier",
         "description": "Default Beautifier to be used for Vue",
         "enum": [
+          "Prettier",
           "Vue Beautifier"
         ]
       },
@@ -9321,6 +8982,22 @@
           }
         }
       },
+      "ocp-indent": {
+        "key": "ocp-indent",
+        "title": "ocp-indent",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for ocp-indent executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"ocp-indent\" executable's binary/script."
+          }
+        }
+      },
       "php": {
         "key": "php",
         "title": "PHP",
@@ -9366,6 +9043,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"phpcbf\" executable's binary/script."
+          }
+        }
+      },
+      "puppet-lint": {
+        "key": "puppet-lint",
+        "title": "puppet-lint",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for puppet-lint executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"puppet-lint\" executable's binary/script."
           }
         }
       },

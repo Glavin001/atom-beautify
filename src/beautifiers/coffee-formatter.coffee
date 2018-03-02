@@ -7,7 +7,7 @@ module.exports = class CoffeeFormatter extends Beautifier
   link: "https://github.com/Glavin001/Coffee-Formatter"
 
   options: {
-    CoffeeScript: true
+    CoffeeScript: false
   }
 
   beautify: (text, language, options) ->

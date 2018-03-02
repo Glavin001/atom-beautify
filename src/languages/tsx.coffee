@@ -1,24 +1,21 @@
 module.exports = {
 
-  name: "Haskell"
-  namespace: "haskell"
+  name: "TSX"
+  namespace: "tsx"
+  fallback: ['js']
 
   ###
   Supported Grammars
   ###
   grammars: [
-    "Haskell"
+    "TypeScriptReact"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    "hs"
+    "tsx"
   ]
-
-  defaultBeautifier: "stylish-haskell"
-
-  options: []
 
 }

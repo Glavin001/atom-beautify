@@ -1,5 +1,23 @@
 # Next
 - Add support for MagicPython grammar [#1851](https://github.com/Glavin001/atom-beautify/issues/1851)
+- Add "Reindent" option for sqlformat. See [#1926](https://github.com/Glavin001/atom-beautify/pull/1926).
+- Add hindent and brittany beautifiers for haskell
+- Breaking change to `pybeautifier`: Fix typo, change `formater` to `formatter`. See [#1898](https://github.com/Glavin001/atom-beautify/pull/1898).
+- Fixes [#1773](https://github.com/Glavin001/atom-beautify/issues/1773) and [#793](https://github.com/Glavin001/atom-beautify/issues/793). ruby-beautify with Rubocop now respects `Exclude` settings, and properly loads inherited config files (like `~/.rubocop.yml`)
+- Add hindent and brittany beautifiers for haskell
+- Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
+- See [#601](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for tsx files
+- See [#1497](https://github.com/Glavin001/atom-beautify/issues/1497) and [#802](https://github.com/Glavin001/atom-beautify/issues/802)
+- ...
+
+# v0.30.9 (2017-11-22)
+- Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
+
+# v0.30.8 (2017-11-22)
+- Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
+
+# v0.30.7 (2017-11-21)
+- Refactor handleSaveEvent to use onWillSave async ([#1924](https://github.com/Glavin001/atom-beautify/pull/1924), [#1895](https://github.com/Glavin001/atom-beautify/issues/1895))
 
 # v0.30.6 (2017-10-30)
 - See [#645](https://github.com/Glavin001/atom-beautify/issues/645). Add support for Terraform fmt.
