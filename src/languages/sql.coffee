@@ -26,6 +26,10 @@ module.exports = {
       default: null
       minimum: 0
       description: "Indentation size/length"
+    reindent:
+      type: 'boolean'
+      default: true
+      description: "Change indentations of the statements. Uncheck this option to preserve indentation"
     keywords:
       type: 'string'
       default: "upper"

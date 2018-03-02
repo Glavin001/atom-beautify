@@ -37,6 +37,7 @@ module.exports = class Beautifiers extends EventEmitter
     'uncrustify'
     'align-yaml'
     'autopep8'
+    'brittany'
     'coffee-formatter'
     'coffee-fmt'
     'cljfmt'
@@ -48,10 +49,13 @@ module.exports = class Beautifiers extends EventEmitter
     'htmlbeautifier'
     'csscomb'
     'gherkin'
+    'gn'
     'gofmt'
     'goimports'
     'latex-beautify'
     'fortran-beautifier'
+    'hindent'
+    'vhdl-beautifier'
     'js-beautify'
     'jscs'
     'eslint'
@@ -61,6 +65,7 @@ module.exports = class Beautifiers extends EventEmitter
     'perltidy'
     'php-cs-fixer'
     'phpcbf'
+    'prettier'
     'prettydiff'
     'pybeautifier'
     'pug-beautify'
@@ -81,6 +86,7 @@ module.exports = class Beautifiers extends EventEmitter
     'formatR'
     'beautysh'
     'terraformfmt'
+    'verilog-mode'
   ]
 
   ###
@@ -260,8 +266,8 @@ module.exports = class Beautifiers extends EventEmitter
         logger.info("Analytics is enabled.")
         # Setup Analytics
         unless atom.config.get("atom-beautify.general._analyticsUserId")
-          uuid = require("node-uuid")
-          atom.config.set "atom-beautify.general._analyticsUserId", uuid.v4()
+          uuidv4 = require("uuid/v4")
+          atom.config.set "atom-beautify.general._analyticsUserId", uuidv4()
         # Setup Analytics User Id
         userId = atom.config.get("atom-beautify.general._analyticsUserId")
         @analytics ?= new ua(trackingId, userId, {

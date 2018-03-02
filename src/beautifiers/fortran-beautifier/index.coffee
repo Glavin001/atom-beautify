@@ -36,7 +36,7 @@ module.exports = class FortranBeautifier extends Beautifier
       emacs_script_path = path.resolve(__dirname, "emacs-fortran-formating-script.lisp")
 
     @debug('fortran-beautifier', 'emacs script path: ' + emacs_script_path)
-
+    
     args = [
       '--batch'
       '-l'

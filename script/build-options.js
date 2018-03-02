@@ -9,7 +9,7 @@ _ = require('lodash');
 
 _plus = require('underscore-plus');
 
-require("coffee-script/register");
+require("coffeescript/register");
 
 logger = require('../src/logger')(__filename)
 
