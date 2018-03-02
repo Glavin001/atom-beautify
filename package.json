@@ -152,13 +152,12 @@
     "@types/atom": "^1.24.1",
     "@types/bluebird": "^3.5.20",
     "@types/event-kit": "^2.0.4",
-    "@types/jest": "^22.1.3",
+    "@types/jest": "^22.1.4",
     "@types/lodash": "^4.14.104",
     "@types/node": "^9.4.6",
     "atom-test-runner-jest": "^0.1.3",
     "jest": "^22.4.2",
     "jest-preset-atom": "^0.1.9",
-    "npm-run-all": "^4.1.2",
     "ts-jest": "^22.4.0",
     "ts-node": "^5.0.0",
     "tslint": "^5.9.1",
@@ -167,7 +166,7 @@
     "typescript": "^2.7.2"
   },
   "scripts": {
-    "build": "npm-run-all lint compile docs",
+    "build": "npm run lint && npm run compile && npm run docs",
     "compile": "tsc",
     "docs": "ts-node script/index",
     "lint": "tslint {src,spec}/**/*.ts",
