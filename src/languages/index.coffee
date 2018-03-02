@@ -31,6 +31,7 @@ module.exports = class Languages
     "erlang"
     "gherkin"
     "glsl"
+    "gn"
     "go"
     "gohtml"
     "fortran"

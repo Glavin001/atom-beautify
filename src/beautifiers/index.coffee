@@ -49,6 +49,7 @@ module.exports = class Beautifiers extends EventEmitter
     'htmlbeautifier'
     'csscomb'
     'gherkin'
+    'gn'
     'gofmt'
     'goimports'
     'latex-beautify'
