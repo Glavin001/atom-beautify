@@ -2417,7 +2417,7 @@
         "title": "Default Beautifier",
         "order": -2,
         "type": "string",
-        "default": "brittany",
+        "default": "stylish-haskell",
         "description": "Default Beautifier to be used for Haskell",
         "enum": [
           "brittany",

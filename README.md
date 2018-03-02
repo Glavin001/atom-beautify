@@ -168,7 +168,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Go | `Go` |`.go` | **[`gofmt`](https://golang.org/cmd/gofmt/)**, [`goimports`](https://godoc.org/golang.org/x/tools/cmd/goimports) |
 | Golang Template | `HTML (Go)`, `Go Template` |`.gohtml` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Handlebars | `Handlebars`, `HTML (Handlebars)` |`.hbs`, `.handlebars` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
-| Haskell | `Haskell` |`.hs` | **[`brittany`](https://github.com/lspitzner/brittany)**, [`hindent`](https://github.com/commercialhaskell/hindent), [`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell) |
+| Haskell | `Haskell` |`.hs` | **[`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell)**, [`brittany`](https://github.com/lspitzner/brittany), [`hindent`](https://github.com/commercialhaskell/hindent) |
 | HTML | `HTML` |`.html` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Jade | `Jade`, `Pug` |`.jade`, `.pug` | **[`Pug Beautify`](https://github.com/vingorius/pug-beautify)** |
 | Java | `Java` |`.java` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
