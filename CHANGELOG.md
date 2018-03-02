@@ -1,4 +1,7 @@
 # Next
+- ...
+
+# v0.31.0 (2018-03-02)
 - See [#2026](https://github.com/Glavin001/atom-beautify/issues/2026) Add Vue support to ESLint Fixer beautifier. Should be used with [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue).
 - Fix Beauify File option for .lua files
 - Switch to Remark as a default markdown beautifier due to a more active state of its community compared to Tidy Markdown ([#2004](https://github.com/Glavin001/atom-beautify/pull/2004)).
@@ -21,7 +24,6 @@
 - Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
 - See [#601](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for tsx files
 - See [#1497](https://github.com/Glavin001/atom-beautify/issues/1497) and [#802](https://github.com/Glavin001/atom-beautify/issues/802)
-- ...
 
 # v0.30.9 (2017-11-22)
 - Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
