@@ -9974,7 +9974,7 @@ Automatically beautify Puppet files on save
 | `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `formater` | :white_check_mark: | :white_check_mark: | :x: |
+| `formatter` | :white_check_mark: | :white_check_mark: | :x: |
 | `ignore` | :white_check_mark: | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :white_check_mark: | :x: |
 | `max_line_length` | :white_check_mark: | :white_check_mark: | :x: |
@@ -10041,11 +10041,11 @@ Automatically beautify Python files on save
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
 
-#####  [Formater](#formater) 
+#####  [Formatter](#formatter) 
 
 **Namespace**: `python`
 
-**Key**: `formater`
+**Key**: `formatter`
 
 **Default**: `autopep8`
 
@@ -10064,7 +10064,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 ```json
 {
     "python": {
-        "formater": "autopep8"
+        "formatter": "autopep8"
     }
 }
 ```
@@ -18645,11 +18645,11 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Formater](#formater) 
+#####  [Formatter](#formatter) 
 
 **Namespace**: `python`
 
-**Key**: `formater`
+**Key**: `formatter`
 
 **Default**: `autopep8`
 
@@ -18668,7 +18668,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 ```json
 {
     "python": {
-        "formater": "autopep8"
+        "formatter": "autopep8"
     }
 }
 ```
@@ -18998,11 +18998,11 @@ do not fix these errors/warnings (Supported by autopep8, pybeautifier)
 }
 ```
 
-#####  [Formater](#formater) 
+#####  [Formatter](#formatter) 
 
 **Namespace**: `python`
 
-**Key**: `formater`
+**Key**: `formatter`
 
 **Default**: `autopep8`
 
@@ -19021,7 +19021,7 @@ formatter used by pybeautifier (Supported by autopep8, pybeautifier)
 ```json
 {
     "python": {
-        "formater": "autopep8"
+        "formatter": "autopep8"
     }
 }
 ```
