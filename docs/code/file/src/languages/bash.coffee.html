@@ -39,22 +39,6 @@
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='scope-variable'>
-    scope
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>[&#39;source.sh&#39;, &#39;source.bash&#39;]</code></pre>
-    
-  </dd>
-  <dt id='defaultIndentSize-variable'>
-    defaultIndentSize
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? tabLength : 1)</code></pre>
-    
-  </dd>
   <dt id='module.exports-variable'>
     module.exports
     =
@@ -63,6 +47,7 @@
     <pre><code class='coffeescript'>{
   name: &quot;Bash&quot;,
   namespace: &quot;bash&quot;,
+  scope: [&#39;source.sh&#39;, &#39;source.bash&#39;],
 
   &#47;*
   Supported Grammars
@@ -77,9 +62,14 @@
   options: {
     indent_size: {
       type: &#39;integer&#39;,
-      &quot;default&quot;: defaultIndentSize,
+      &quot;default&quot;: null,
       minimum: 0,
       description: &quot;Indentation size&#47;length&quot;
+    },
+    indent_with_tabs: {
+      type: &#39;boolean&#39;,
+      &quot;default&quot;: null,
+      description: &quot;Indentation uses tabs, overrides `Indent Size` and `Indent Char`&quot;
     }
   }
 }</code></pre>

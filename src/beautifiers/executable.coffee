@@ -418,7 +418,7 @@ class HybridExecutable extends Executable
         rootPath = '/mountedRoot'
         newArgs = args.map((arg) ->
           if (typeof arg is 'string' and not arg.includes(':') \
-            and path.isAbsolute(arg) and not path.dirname(arg).startsWith(tmpDir))
+            and path.isAbsolute(arg) and not path.dirname(arg).startsWith(tmpDir)) \
             then path.join(rootPath, arg) else arg
         )
 

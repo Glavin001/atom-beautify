@@ -39,34 +39,6 @@
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='scope-variable'>
-    scope
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>[&#39;text.marko&#39;]</code></pre>
-    <div class='docstring'>
-  <p>Get Atom defaults</p>
-</div>
-<div class='tags'>
-</div>
-  </dd>
-  <dt id='defaultIndentSize-variable'>
-    defaultIndentSize
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? tabLength : 4)</code></pre>
-    
-  </dd>
-  <dt id='defaultIndentChar-variable'>
-    defaultIndentChar
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? &quot; &quot; : &quot;\t&quot;)</code></pre>
-    
-  </dd>
   <dt id='module.exports-variable'>
     module.exports
     =
@@ -76,6 +48,7 @@
   name: &quot;Marko&quot;,
   namespace: &quot;marko&quot;,
   fallback: [&#39;html&#39;],
+  scope: [&#39;text.marko&#39;],
 
   &#47;*
   Supported Grammars
@@ -89,13 +62,13 @@
   options: {
     indent_size: {
       type: &#39;integer&#39;,
-      &quot;default&quot;: defaultIndentSize,
+      &quot;default&quot;: null,
       minimum: 0,
       description: &quot;Indentation size&#47;length&quot;
     },
     indent_char: {
       type: &#39;string&#39;,
-      &quot;default&quot;: defaultIndentChar,
+      &quot;default&quot;: null,
       description: &quot;Indentation character&quot;
     },
     syntax: {

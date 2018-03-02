@@ -450,7 +450,8 @@
     "gn"
   ],
   "devDependencies": {
-    "coffeelint": "1.16.0"
+    "codo": "^2.1.2",
+    "coffeelint": "2.1.0"
   },
   "scripts": {
     "build-options": "node script/build-options.js",

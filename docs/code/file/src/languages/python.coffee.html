@@ -39,34 +39,6 @@
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='scope-variable'>
-    scope
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>[&#39;source.python&#39;]</code></pre>
-    <div class='docstring'>
-  <p>Get Atom defaults</p>
-</div>
-<div class='tags'>
-</div>
-  </dd>
-  <dt id='defaultIndentSize-variable'>
-    defaultIndentSize
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? tabLength : 1)</code></pre>
-    
-  </dd>
-  <dt id='defaultIndentChar-variable'>
-    defaultIndentChar
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? &quot; &quot; : &quot;\t&quot;)</code></pre>
-    
-  </dd>
   <dt id='module.exports-variable'>
     module.exports
     =
@@ -75,11 +47,12 @@
     <pre><code class='coffeescript'>{
   name: &quot;Python&quot;,
   namespace: &quot;python&quot;,
+  scope: [&#39;source.python&#39;],
 
   &#47;*
   Supported Grammars
    *&#47;
-  grammars: [&quot;Python&quot;],
+  grammars: [&quot;Python&quot;, &quot;MagicPython&quot;],
 
   &#47;*
   Supported extensions
@@ -93,7 +66,7 @@
     },
     indent_size: {
       type: &#39;integer&#39;,
-      &quot;default&quot;: defaultIndentSize,
+      &quot;default&quot;: null,
       minimum: 0,
       description: &quot;Indentation size&#47;length&quot;
     },
@@ -105,10 +78,27 @@
       },
       description: &quot;do not fix these errors&#47;warnings&quot;
     },
+    formatter: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &#39;autopep8&#39;,
+      &quot;enum&quot;: [&#39;autopep8&#39;, &#39;yapf&#39;],
+      description: &quot;formatter used by pybeautifier&quot;
+    },
+    style_config: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &#39;pep8&#39;,
+      description: &quot;formatting style used by yapf&quot;
+    },
     sort_imports: {
       type: &#39;boolean&#39;,
       &quot;default&quot;: false,
       description: &quot;sort imports (requires isort installed)&quot;
+    },
+    multi_line_output: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &#39;Hanging Grid Grouped&#39;,
+      &quot;enum&quot;: [&#39;Grid&#39;, &#39;Vertical&#39;, &#39;Hanging Indent&#39;, &#39;Vertical Hanging Indent&#39;, &#39;Hanging Grid&#39;, &#39;Hanging Grid Grouped&#39;, &#39;NOQA&#39;],
+      description: &quot;defines how from imports wrap (requires isort installed)&quot;
     }
   }
 }</code></pre>
