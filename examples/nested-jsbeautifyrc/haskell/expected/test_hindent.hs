@@ -1,14 +1,16 @@
 {-# LANGUAGE OverloadedStrings #-}
+
 module TypeFun where
-import    Foo
+
 import Bar
 import qualified Baz as Bang
 import Data.Typeable
+import Foo
 
-data Person = Person {
-  name :: String,
-  address :: String
-}
+data Person = Person
+  { name :: String
+  , address :: String
+  }
 
 main :: IO ()
 main = do

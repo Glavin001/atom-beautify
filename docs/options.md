@@ -4315,13 +4315,13 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 ####  [Haskell](#haskell) 
 
-**Supported Beautifiers**:  [`stylish-haskell`](#stylish-haskell) 
+**Supported Beautifiers**:  [`brittany`](#brittany)  [`hindent`](#hindent)  [`stylish-haskell`](#stylish-haskell) 
 
-| Option | stylish-haskell |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
+| Option | brittany | hindent | stylish-haskell |
+| --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -4352,7 +4352,7 @@ Disable Haskell Beautification
 
 **Type**: `string`
 
-**Enum**:  `stylish-haskell` 
+**Enum**:  `brittany`  `hindent`  `stylish-haskell` 
 
 **Description**:
 
