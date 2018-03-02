@@ -100,6 +100,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | CSScomb | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | dfmt | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [Dfmt (`dfmt`)](https://github.com/Hackerpilot/dfmt) by following https://github.com/dlang-community/dfmt#building<br/> |
 | elm-format | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [elm-format (`elm-format`)](https://github.com/avh4/elm-format) with `docker pull unibeautify/elm-format`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [elm-format (`elm-format`)](https://github.com/avh4/elm-format) by following https://github.com/avh4/elm-format#installation-<br/> |
+| Emacs Verilog Mode | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [Emacs (`emacs`)](https://www.gnu.org/software/emacs/) by following https://www.gnu.org/software/emacs/<br/> |
 | erl_tidy | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://erlang.org/doc/man/erl_tidy.html and follow the instructions. |
 | ESLint Fixer | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | formatR | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [Rscript (`rscript`)](https://github.com/yihui/formatR) with `docker pull unibeautify/rscript`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [Rscript (`rscript`)](https://github.com/yihui/formatR) by following https://github.com/yihui/formatR<br/> |
@@ -207,6 +208,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | TypeScript | `TypeScript` |`.ts` | **[`TypeScript Formatter`](https://github.com/vvakame/typescript-formatter)**, [`Prettier`](https://github.com/prettier/prettier) |
 | UX Markup | `UX` |`.ux` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Vala | `Vala` |`.vala`, `.vapi` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
+| Verilog | `Verilog` |`.svh`, `.v`, `.sv` | **[`Emacs Verilog Mode`](https://www.veripool.org/projects/verilog-mode/)** |
 | Visualforce | `Visualforce` |`.page` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)**, [`Prettier`](https://github.com/prettier/prettier) |
 | XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe`, `.config` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |

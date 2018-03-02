@@ -159,6 +159,10 @@
     {
       "name": "Faheel Ahmad",
       "url": "https://github.com/faheel"
+    },
+    {
+      "name": "Andrew Andrianov",
+      "url": "https://github.com/nekromant"
     }
   ],
   "engines": {
@@ -288,7 +292,8 @@
       "atom-beautify:beautify-language-xtemplate",
       "atom-beautify:beautify-language-yaml",
       "atom-beautify:beautify-language-terraform",
-      "atom-beautify:beautify-language-tsx"
+      "atom-beautify:beautify-language-tsx",
+      "atom-beautify:beautify-language-verilog"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -427,7 +432,9 @@
     "terraform",
     "terraformfmt",
     "tsx",
-    "prettier"
+    "prettier",
+    "verilog",
+    "emacs verilog mode"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"

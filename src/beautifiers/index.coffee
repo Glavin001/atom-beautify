@@ -84,6 +84,7 @@ module.exports = class Beautifiers extends EventEmitter
     'formatR'
     'beautysh'
     'terraformfmt'
+    'verilog-mode'
   ]
 
   ###

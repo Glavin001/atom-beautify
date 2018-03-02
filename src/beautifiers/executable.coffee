@@ -130,7 +130,7 @@ class Executable
   Run command-line interface command
   ###
   run: (args, options = {}) ->
-    @debug("Run: ", @cmd, args, options)
+    console.log("Run: ", @cmd, args, options)
     { cmd, cwd, ignoreReturnCode, help, onStdin, returnStderr, returnStdoutOrStderr } = options
     exeName = cmd or @cmd
     cwd ?= os.tmpdir()
