@@ -8192,6 +8192,62 @@
       }
     }
   },
+  "vhdl": {
+    "title": "VHDL",
+    "type": "object",
+    "description": "Options for language VHDL",
+    "collapsed": true,
+    "beautifiers": [
+      "VHDL Beautifier"
+    ],
+    "grammars": [
+      "VHDL 2008"
+    ],
+    "extensions": [
+      "vhd",
+      "VHD"
+    ],
+    "properties": {
+      "emacs_script_path": {
+        "type": "string",
+        "default": "",
+        "description": "Path to the emacs script (Supported by VHDL Beautifier)",
+        "title": "Emacs script path",
+        "beautifiers": [
+          "VHDL Beautifier"
+        ],
+        "key": "emacs_script_path",
+        "language": {
+          "name": "VHDL",
+          "namespace": "vhdl"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable VHDL Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "VHDL Beautifier",
+        "description": "Default Beautifier to be used for VHDL",
+        "enum": [
+          "VHDL Beautifier"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify VHDL files on save"
+      }
+    }
+  },
   "visualforce": {
     "title": "Visualforce",
     "type": "object",

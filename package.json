@@ -293,7 +293,8 @@
       "atom-beautify:beautify-language-yaml",
       "atom-beautify:beautify-language-terraform",
       "atom-beautify:beautify-language-tsx",
-      "atom-beautify:beautify-language-verilog"
+      "atom-beautify:beautify-language-verilog",
+      "atom-beautify:beautify-language-vhdl"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -434,7 +435,9 @@
     "tsx",
     "prettier",
     "verilog",
-    "emacs verilog mode"
+    "emacs verilog mode",
+    "vhdl",
+    "vhdl beautifier"
   ],
   "devDependencies": {
     "coffeelint": "1.16.0"

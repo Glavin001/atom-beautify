@@ -13219,6 +13219,100 @@ Path to emacs init.el script with formatting settings. (Leave blank to use defau
 }
 ```
 
+####  [VHDL](#vhdl) 
+
+**Supported Beautifiers**:  [`VHDL Beautifier`](#vhdl-beautifier) 
+
+| Option | VHDL Beautifier |
+| --- | --- |
+| `disabled` | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: |
+| `emacs_script_path` | :white_check_mark: |
+
+**Description**:
+
+Options for language VHDL
+
+#####  [Disable Beautifying Language](#disable-beautifying-language) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Disable VHDL Beautification
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Disable Beautifying Language*" and change it to your desired configuration.
+
+#####  [Default Beautifier](#default-beautifier) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Default**: `VHDL Beautifier`
+
+**Type**: `string`
+
+**Enum**:  `VHDL Beautifier` 
+
+**Description**:
+
+Default Beautifier to be used for VHDL
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Default Beautifier*" and change it to your desired configuration.
+
+#####  [Beautify On Save](#beautify-on-save) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `boolean`
+
+**Description**:
+
+Automatically beautify VHDL files on save
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Emacs script path](#emacs-script-path) 
+
+**Namespace**: `vhdl`
+
+**Key**: `emacs_script_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`VHDL Beautifier`](#vhdl-beautifier) 
+
+**Description**:
+
+Path to the emacs script (Supported by VHDL Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "vhdl": {
+        "emacs_script_path": ""
+    }
+}
+```
+
 ####  [Visualforce](#visualforce) 
 
 **Supported Beautifiers**:  [`Pretty Diff`](#pretty-diff) 
@@ -17921,6 +18015,33 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 {
     "vala": {
         "configPath": ""
+    }
+}
+```
+
+
+### VHDL Beautifier
+
+#####  [Emacs script path](#emacs-script-path) 
+
+**Namespace**: `vhdl`
+
+**Key**: `emacs_script_path`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`VHDL Beautifier`](#vhdl-beautifier) 
+
+**Description**:
+
+Path to the emacs script (Supported by VHDL Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "vhdl": {
+        "emacs_script_path": ""
     }
 }
 ```

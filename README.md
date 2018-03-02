@@ -137,6 +137,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Tidy Markdown | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | TypeScript Formatter | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Uncrustify | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [Uncrustify (`uncrustify`)](http://uncrustify.sourceforge.net/) with `docker pull unibeautify/uncrustify`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [Uncrustify (`uncrustify`)](http://uncrustify.sourceforge.net/) by following https://github.com/uncrustify/uncrustify<br/> |
+| VHDL Beautifier | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [Emacs (`emacs`)](https://www.gnu.org/software/emacs/) by following https://www.gnu.org/software/emacs/<br/> |
 | Vue Beautifier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | yapf | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/google/yapf and follow the instructions. |
 
@@ -209,6 +210,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | UX Markup | `UX` |`.ux` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Vala | `Vala` |`.vala`, `.vapi` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
 | Verilog | `Verilog` |`.svh`, `.v`, `.sv` | **[`Emacs Verilog Mode`](https://www.veripool.org/projects/verilog-mode/)** |
+| VHDL | `VHDL 2008` |`.vhd`, `.VHD` | **[`VHDL Beautifier`](https://www.gnu.org/software/emacs/)** |
 | Visualforce | `Visualforce` |`.page` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Vue | `Vue Component` |`.vue` | **[`Vue Beautifier`](https://github.com/Glavin001/atom-beautify/blob/master/src/beautifiers/vue-beautifier.coffee)**, [`Prettier`](https://github.com/prettier/prettier) |
 | XML | `SLD`, `XML`, `XHTML`, `XSD`, `XSL`, `JSP`, `GSP` |`.sld`, `.xml`, `.xhtml`, `.xsd`, `.xsl`, `.jsp`, `.gsp`, `.plist`, `.recipe`, `.config` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)**, [`JS Beautify`](https://github.com/beautify-web/js-beautify) |

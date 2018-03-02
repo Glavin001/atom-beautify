@@ -54,6 +54,7 @@ module.exports = class Beautifiers extends EventEmitter
     'latex-beautify'
     'fortran-beautifier'
     'hindent'
+    'vhdl-beautifier'
     'js-beautify'
     'jscs'
     'eslint'
