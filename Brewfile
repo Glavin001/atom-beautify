@@ -1,4 +1,3 @@
-tap 'homebrew/science'
 tap 'homebrew/php'
 tap 'caskroom/versions'
 brew 'uncrustify'

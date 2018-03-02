@@ -13,15 +13,12 @@ pets:
 - bat
 match: !!js/regexp /pattern/gim
 run: !!js/function function() { }
-
-
-
 ---
 
-- item
--  item
+-   item
+-   item
 -   item
 
-1. one
+1.  one
 2.  two
-2.   three
+3.  three

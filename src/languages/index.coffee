@@ -31,6 +31,7 @@ module.exports = class Languages
     "erlang"
     "gherkin"
     "glsl"
+    "gn"
     "go"
     "gohtml"
     "fortran"
@@ -68,16 +69,19 @@ module.exports = class Languages
     "svg"
     "swig"
     "tss"
+    "tsx"
     "twig"
     "typescript"
     "ux_markup"
     "vala"
     "vue"
+    "vhdl"
     "visualforce"
     "xml"
     "xtemplate"
     "yaml"
     "terraform"
+    "verilog"
   ]
 
   ###

@@ -37,6 +37,7 @@ module.exports = class Beautifiers extends EventEmitter
     'uncrustify'
     'align-yaml'
     'autopep8'
+    'brittany'
     'coffee-formatter'
     'coffee-fmt'
     'cljfmt'
@@ -48,10 +49,13 @@ module.exports = class Beautifiers extends EventEmitter
     'htmlbeautifier'
     'csscomb'
     'gherkin'
+    'gn'
     'gofmt'
     'goimports'
     'latex-beautify'
     'fortran-beautifier'
+    'hindent'
+    'vhdl-beautifier'
     'js-beautify'
     'jscs'
     'eslint'
@@ -61,6 +65,7 @@ module.exports = class Beautifiers extends EventEmitter
     'perltidy'
     'php-cs-fixer'
     'phpcbf'
+    'prettier'
     'prettydiff'
     'pybeautifier'
     'pug-beautify'
@@ -81,6 +86,7 @@ module.exports = class Beautifiers extends EventEmitter
     'formatR'
     'beautysh'
     'terraformfmt'
+    'verilog-mode'
   ]
 
   ###
