@@ -11,7 +11,7 @@ module.exports = class Hindent extends Beautifier
   isPreInstalled: false
 
   options: {
-    Haskell: true
+    Haskell: false
   }
 
   beautify: (text, language, options) ->
