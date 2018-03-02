@@ -1,4 +1,5 @@
 # Next
+- Fix Beauify File option for .lua files
 - Switch to Remark as a default markdown beautifier due to a more active state of its community compared to Tidy Markdown ([#2004](https://github.com/Glavin001/atom-beautify/pull/2004)).
   This is a __breaking change__ for Tidy Markdown users:
      - list indentation is now four characters per level (three spaces after `-` for unordered lists and two spaces after `N.` in ordered lists)

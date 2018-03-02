@@ -4457,6 +4457,35 @@
       "ttslua"
     ],
     "properties": {
+      "indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by Lua beautifier)",
+        "title": "Indent size",
+        "beautifiers": [
+          "Lua beautifier"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "Lua",
+          "namespace": "lua"
+        }
+      },
+      "indent_char": {
+        "type": "string",
+        "default": null,
+        "description": "Indentation character (Supported by Lua beautifier)",
+        "title": "Indent char",
+        "beautifiers": [
+          "Lua beautifier"
+        ],
+        "key": "indent_char",
+        "language": {
+          "name": "Lua",
+          "namespace": "lua"
+        }
+      },
       "end_of_line": {
         "type": "string",
         "default": "System Default",
