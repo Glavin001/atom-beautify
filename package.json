@@ -180,7 +180,7 @@
     "bluebird": "^3.5.1",
     "coffee-fmt": "^0.12.0",
     "coffee-formatter": "^0.1.2",
-    "coffee-script": "^1.12.6",
+    "coffeescript": "^1.12.6",
     "csscomb": "^4.2.0",
     "diff": "^3.4.0",
     "editorconfig": "^0.15.0",
