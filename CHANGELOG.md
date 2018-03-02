@@ -1,7 +1,7 @@
 # Next
 - ...
 
-# v0.31.0 (2018-03-02)
+# v0.32.0 (2018-03-02)
 - See [#2026](https://github.com/Glavin001/atom-beautify/issues/2026) Add Vue support to ESLint Fixer beautifier. Should be used with [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue).
 - Fix Beauify File option for .lua files
 - Switch to Remark as a default markdown beautifier due to a more active state of its community compared to Tidy Markdown ([#2004](https://github.com/Glavin001/atom-beautify/pull/2004)).
