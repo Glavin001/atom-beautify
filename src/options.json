@@ -7758,6 +7758,7 @@
     "description": "Options for language Vue",
     "collapsed": true,
     "beautifiers": [
+      "ESLint Fixer",
       "Prettier",
       "Vue Beautifier"
     ],
@@ -8264,6 +8265,7 @@
         "default": "Vue Beautifier",
         "description": "Default Beautifier to be used for Vue",
         "enum": [
+          "ESLint Fixer",
           "Prettier",
           "Vue Beautifier"
         ]
