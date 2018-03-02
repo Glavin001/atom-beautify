@@ -146,6 +146,20 @@
           "namespace": "bash"
         }
       },
+      "indent_with_tabs": {
+        "type": "boolean",
+        "default": null,
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by beautysh)",
+        "title": "Indent with tabs",
+        "beautifiers": [
+          "beautysh"
+        ],
+        "key": "indent_with_tabs",
+        "language": {
+          "name": "Bash",
+          "namespace": "bash"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,

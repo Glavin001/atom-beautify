@@ -1,4 +1,5 @@
 # Next
+- Add the option to indent Bash with tabs [#1951](https://github.com/Glavin001/atom-beautify/issues/1951)
 - See [#1980](https://github.com/Glavin001/atom-beautify/pull/1980). Add VHDL beautifier and language support.
 - Implement Verilog/SystemVerilog beautification via emacs verilog-mode
 - Add support for MagicPython grammar [#1851](https://github.com/Glavin001/atom-beautify/issues/1851)

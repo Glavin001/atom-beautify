@@ -641,6 +641,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
 | `indent_size` | :white_check_mark: |
+| `indent_with_tabs` | :white_check_mark: |
 
 **Description**:
 
@@ -723,6 +724,30 @@ Indentation size/length (Supported by beautysh)
 {
     "bash": {
         "indent_size": 4
+    }
+}
+```
+
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `bash`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by beautysh)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "bash": {
+        "indent_with_tabs": false
     }
 }
 ```
@@ -19045,6 +19070,30 @@ Indentation size/length (Supported by beautysh)
 {
     "bash": {
         "indent_size": 4
+    }
+}
+```
+
+#####  [Indent with tabs](#indent-with-tabs) 
+
+**Namespace**: `bash`
+
+**Key**: `indent_with_tabs`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`beautysh`](#beautysh) 
+
+**Description**:
+
+Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by beautysh)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "bash": {
+        "indent_with_tabs": false
     }
 }
 ```
