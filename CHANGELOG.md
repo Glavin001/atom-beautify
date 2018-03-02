@@ -40,7 +40,7 @@
 - Fix for [#1888](https://github.com/Glavin001/atom-beautify/issues/1888). Allow 0 for minor and patch versions of Docker
 - Add Atom-Beautify package settings menu item to Packages menu [#1869](https://github.com/Glavin001/atom-beautify/issues/1869)
 - Add `.ttslua` file extension to Lua language
-- Fix [#1638]. Update TypeScript Formatter dependency
+- Fix [#1638](https://github.com/Glavin001/atom-beautify/issues/1638). Update TypeScript Formatter dependency
 - Fix [#1833] `os.tmpDir` deprecation warning
 
 # v0.30.5 (2017-08-11)
