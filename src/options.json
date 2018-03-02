@@ -2395,6 +2395,8 @@
     "description": "Options for language Haskell",
     "collapsed": true,
     "beautifiers": [
+      "brittany",
+      "hindent",
       "stylish-haskell"
     ],
     "grammars": [
@@ -2415,9 +2417,11 @@
         "title": "Default Beautifier",
         "order": -2,
         "type": "string",
-        "default": "stylish-haskell",
+        "default": "brittany",
         "description": "Default Beautifier to be used for Haskell",
         "enum": [
+          "brittany",
+          "hindent",
           "stylish-haskell"
         ]
       },

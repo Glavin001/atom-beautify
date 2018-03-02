@@ -91,6 +91,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | align-yaml | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | autopep8 | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [autopep8 (`autopep8`)](https://github.com/hhatto/autopep8) with `docker pull unibeautify/autopep8`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [autopep8 (`autopep8`)](https://github.com/hhatto/autopep8) by following https://github.com/hhatto/autopep8#installation<br/>2. Install [isort (`isort`)](https://github.com/timothycrosley/isort) by following https://github.com/timothycrosley/isort#installing-isort<br/> |
 | beautysh | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [beautysh (`beautysh`)](https://github.com/bemeurer/beautysh) with `docker pull unibeautify/beautysh`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [beautysh (`beautysh`)](https://github.com/bemeurer/beautysh) by following https://github.com/bemeurer/beautysh#installation<br/> |
+| brittany | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/lspitzner/brittany and follow the instructions. |
 | clang-format | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [ClangFormat (`clang-format`)](https://clang.llvm.org/docs/ClangFormat.html) with `docker pull unibeautify/clang-format`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [ClangFormat (`clang-format`)](https://clang.llvm.org/docs/ClangFormat.html) by following https://clang.llvm.org/docs/ClangFormat.html<br/> |
 | cljfmt | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Coffee Formatter | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
@@ -107,6 +108,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | gofmt | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://golang.org/cmd/gofmt/ and follow the instructions. |
 | goimports | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [goimports (`goimports`)](https://godoc.org/golang.org/x/tools/cmd/goimports) with `docker pull unibeautify/goimports`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [goimports (`goimports`)](https://godoc.org/golang.org/x/tools/cmd/goimports) by following https://godoc.org/golang.org/x/tools/cmd/goimports<br/> |
 | hh_format | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://hhvm.com/ and follow the instructions. |
+| hindent | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/commercialhaskell/hindent and follow the instructions. |
 | HTML Beautifier | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to https://github.com/threedaymonk/htmlbeautifier and follow the instructions. |
 | JS Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | JSCS Fixer | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
@@ -166,7 +168,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Go | `Go` |`.go` | **[`gofmt`](https://golang.org/cmd/gofmt/)**, [`goimports`](https://godoc.org/golang.org/x/tools/cmd/goimports) |
 | Golang Template | `HTML (Go)`, `Go Template` |`.gohtml` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Handlebars | `Handlebars`, `HTML (Handlebars)` |`.hbs`, `.handlebars` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
-| Haskell | `Haskell` |`.hs` | **[`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell)** |
+| Haskell | `Haskell` |`.hs` | **[`brittany`](https://github.com/lspitzner/brittany)**, [`hindent`](https://github.com/commercialhaskell/hindent), [`stylish-haskell`](https://github.com/jaspervdj/stylish-haskell) |
 | HTML | `HTML` |`.html` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)**, [`Pretty Diff`](https://github.com/prettydiff/prettydiff) |
 | Jade | `Jade`, `Pug` |`.jade`, `.pug` | **[`Pug Beautify`](https://github.com/vingorius/pug-beautify)** |
 | Java | `Java` |`.java` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |

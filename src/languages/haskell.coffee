@@ -17,6 +17,8 @@ module.exports = {
     "hs"
   ]
 
+  defaultBeautifier: "stylish-haskell"
+
   options: []
 
 }
