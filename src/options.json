@@ -146,15 +146,15 @@
           "namespace": "bash"
         }
       },
-	    "use_tabs": {
+      "indent_with_tabs": {
         "type": "boolean",
         "default": null,
-        "description": "Use tabs instead of spaces for indentation, overrides `Indent Size` (Supported by beautysh)",
+        "description": "Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by beautysh)",
         "title": "Indent with tabs",
         "beautifiers": [
           "beautysh"
         ],
-        "key": "use_tabs",
+        "key": "indent_with_tabs",
         "language": {
           "name": "Bash",
           "namespace": "bash"

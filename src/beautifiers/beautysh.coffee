@@ -24,13 +24,13 @@ module.exports = class BashBeautify extends Beautifier
   options: {
     Bash:
       indent_size: true
-      use_tabs: true
+      indent_with_tabs: true
   }
 
   beautify: (text, language, options) ->
     beautysh = @exe("beautysh")
     file = @tempFile("input", text)
-    tabs = options.use_tabs
+    tabs = options.indent_with_tabs
     if tabs is true
       beautysh.run([ '-t', '-f', file ])
         .then(=> @readFile file)
