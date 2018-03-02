@@ -1,4 +1,5 @@
 # Next
+- Add support for MagicPython grammar [#1851](https://github.com/Glavin001/atom-beautify/issues/1851)
 - Add "Reindent" option for sqlformat. See [#1926](https://github.com/Glavin001/atom-beautify/pull/1926).
 - Add hindent and brittany beautifiers for haskell
 - Breaking change to `pybeautifier`: Fix typo, change `formater` to `formatter`. See [#1898](https://github.com/Glavin001/atom-beautify/pull/1898).

@@ -189,7 +189,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Perl | `Perl`, `Perl 6` |`.pl`, `.PL`, `.pm`, `.pod`, `.t` | **[`Perltidy`](http://perltidy.sourceforge.net/)** |
 | PHP | `PHP` |`.php`, `.module`, `.inc` | **[`PHP-CS-Fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer)**, [`PHPCBF`](http://php.net/manual/en/install.php), [`hh_format`](http://hhvm.com/) |
 | Puppet | `Puppet` |`.pp` | **[`puppet-lint`](http://puppet-lint.com/)** |
-| Python | `Python` |`.py` | **[`autopep8`](https://github.com/hhatto/autopep8)**, [`pybeautifier`](https://github.com/guyskk/pybeautifier), [`yapf`](https://github.com/google/yapf) |
+| Python | `Python`, `MagicPython` |`.py` | **[`autopep8`](https://github.com/hhatto/autopep8)**, [`pybeautifier`](https://github.com/guyskk/pybeautifier), [`yapf`](https://github.com/google/yapf) |
 | R | `R` |`.r`, `.R` | **[`formatR`](https://github.com/yihui/formatR)** |
 | Riot.js | `Riot.js`, `HTML (Riot Tag)` |`.tag` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Ruby | `Ruby`, `Ruby on Rails` |`.rb` | **[`Rubocop`](https://github.com/bbatsov/rubocop)**, [`Ruby Beautify`](https://github.com/erniebrodeur/ruby-beautify) |

@@ -5872,7 +5872,8 @@
       "yapf"
     ],
     "grammars": [
-      "Python"
+      "Python",
+      "MagicPython"
     ],
     "extensions": [
       "py"

@@ -43,6 +43,7 @@ addons:
     - fakeroot
     - crystal
     - camlp4
+    - aspcud
     - php5-cli
     - golang
 
