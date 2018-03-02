@@ -25,6 +25,6 @@ module.exports = class Lua extends Beautifier
     indent = indentChar.repeat(indentSize)
     new @Promise (resolve, reject) ->
       try
-        resolve(format(text, indent, @warn, options));
+        resolve(format(text, indent, @warn, options))
       catch error
         reject error
