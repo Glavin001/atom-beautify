@@ -1,5 +1,5 @@
 # Next
-- ...
+- Fix "Reindent" option for sqlformat.
 
 # v0.32.0 (2018-03-02)
 - See [#2026](https://github.com/Glavin001/atom-beautify/issues/2026) Add Vue support to ESLint Fixer beautifier. Should be used with [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue).
