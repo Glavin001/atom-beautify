@@ -456,6 +456,7 @@
     "prepare": "npm run docs",
     "lint": "coffeelint src/ spec/",
     "code-docs": "codo && open docs/code/index.html",
+    "pretest": "npm lint",
     "test": "atom --test spec"
   },
   "config": {
