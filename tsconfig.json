@@ -12,11 +12,10 @@
     },
     "include": [
         "./declarations.d.ts",
-        "./src/**/*.ts",
-        "./scripts/**/*.ts",
-        "./spec/*.ts"
+        "./src/**/*.ts"
     ],
     "exclude": [
-        "./node_modules"
+        "./node_modules",
+        "./dist/"
     ]
 }
