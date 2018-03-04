@@ -80,8 +80,6 @@ before_install:
   - Rscript --version
   # PHP
   - composer install
-  # NPM Version
-  - npm i -g npm@5.7
   # OCaml
   # - opam init --auto-setup
   # Init environment variables for opam
