@@ -88,10 +88,17 @@ export class AtomBeautify {
       if (editor.getPath()) {
         fileExtension = path.extname(editor.getPath()).substr(1);
       }
+      const langs: Language[] = this.unibeautify.findLanguages({
+        atomGrammar: grammarName,
+        extension: fileExtension
+      });
+      const language = langs.length > 0 ? langs[0] : null;
       return this.unibeautify.beautify({
         fileExtension,
         atomGrammar: grammarName,
-        options: {},
+        options: {
+          [language.name]: this.getConfigFromSettings(language.name)
+        },
         text: text,
       }).then((result) => {
         editor.setText(result);
@@ -110,6 +117,11 @@ export class AtomBeautify {
 
     private debug() {
       // TODO
+    }
+
+    private getConfigFromSettings(language: string) {
+      const config = atom.config.get("atom-beautify");
+      return _.get(config, language.toLowerCase());
     }
 
     private openSettings() {
