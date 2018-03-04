@@ -1,5 +1,6 @@
 # Next
 - Update Prettier to 1.11.1. (#2060)
+- Fix package.json repository field (#2062)
 - ...
 
 # v0.32.0 (2018-03-02)
