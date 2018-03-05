@@ -33,6 +33,10 @@ module.exports = class Rubocop extends Beautifier
     fullPath = context.filePath or ""
     [projectPath, _relativePath] = atom.project.relativizePath(fullPath)
 
+    # Deprecate options.rubocop_path
+    if options.rubocop_path
+      @deprecateOptionForExecutable("Rubocop", "Ruby - Rubocop Path (rubocop_path)", "Path")
+
     # Find the rubocop path
     @Promise.all([
       @which(options.rubocop_path) if options.rubocop_path
@@ -60,14 +64,18 @@ module.exports = class Rubocop extends Beautifier
         "--force-exclusion"
         "--stdin", "atom-beautify.rb" # filename is required but not used
       ]
-      rubocopArguments.push("--config", tempConfig) if tempConfig?
-      @debug("rubocop arguments", rubocopArguments)
-
-      @exe("rubocop").run(rubocopArguments, {
+      exeOptions = {
         ignoreReturnCode: true,
         cwd: projectPath if configFile?,
         onStdin: (stdin) -> stdin.end text
-      }).then((stdout) =>
+      }
+      rubocopArguments.push("--config", tempConfig) if tempConfig?
+      @debug("rubocop arguments", rubocopArguments)
+
+      (if options.rubocop_path then \
+        @run(rubocopPath, rubocopArguments, exeOptions) else \
+        @exe("rubocop").run(rubocopArguments, exeOptions)
+      ).then((stdout) =>
         @debug("rubocop output", stdout)
         # Rubocop output an error if stdout is empty
         return text if stdout.length == 0
