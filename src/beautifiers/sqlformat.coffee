@@ -17,7 +17,7 @@ module.exports = class Sqlformat extends Beautifier
   beautify: (text, language, options) ->
     @run("sqlformat", [
       @tempFile("input", text)
-      "--reindent" if (options.reindent? && options.reindent == true)
+      "--reindent" if options.reindent is true
       "--indent_width=#{options.indent_size}" if options.indent_size?
       "--keywords=#{options.keywords}" if (options.keywords? && options.keywords != 'unchanged')
       "--identifiers=#{options.identifiers}" if (options.identifiers? && options.identifiers != 'unchanged')
