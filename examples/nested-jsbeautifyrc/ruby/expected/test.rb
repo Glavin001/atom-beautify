@@ -15,6 +15,6 @@ hash = { hosts: [
 
 ],
 
-         logger: mylog,	# This enables callback logging!
+         logger: mylog, # This enables callback logging!
 
          max_reconnect_attempts: 5 }
