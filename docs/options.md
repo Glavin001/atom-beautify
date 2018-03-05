@@ -402,6 +402,23 @@ Options for Rscript executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Rscript*" and change it to your desired configuration.
 
+#####  [Rubocop](#rubocop) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for Rubocop executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*Rubocop*" and change it to your desired configuration.
+
 #####  [SassConvert](#sassconvert) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.

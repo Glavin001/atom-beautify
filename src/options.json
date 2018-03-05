@@ -9278,6 +9278,22 @@
           }
         }
       },
+      "rubocop": {
+        "key": "rubocop",
+        "title": "Rubocop",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for Rubocop executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"rubocop\" executable's binary/script."
+          }
+        }
+      },
       "sass-convert": {
         "key": "sass-convert",
         "title": "SassConvert",
