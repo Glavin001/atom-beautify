@@ -14,7 +14,7 @@ Unibeautify.loadBeautifiers(beautifiers);
 writeOptionsJson();
 
 function buildOptions() {
-  let options: any = {};
+  let options: AtomConfigRegistry = {};
   const languages = Unibeautify.supportedLanguages;
   languages.forEach(lang => {
     const langName: string = lang.name.toLowerCase();
@@ -38,7 +38,7 @@ function buildOptions() {
 }
 
 function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
-  let languageOptions: any = {};
+  let languageOptions: AtomConfigRegistry = {};
   let optionsForLanguage: OptionsRegistry = Unibeautify.getOptionsSupportedForLanguage(language);
   const options: OptionsRegistry[] = (Unibeautify as any).options;
   Object.keys(optionsForLanguage).forEach(key => {
@@ -59,6 +59,7 @@ function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
     title: "Beautifiers",
     type: "array",
     default: beautifiers,
+    description: `Comma separated list of beautifiers to apply when beautifying ${language.name} code`,
     items: {
       type: "string"
     }
@@ -82,4 +83,28 @@ function writeOptionsJson() {
       throw error;
     }
   });
+}
+
+interface AtomConfig {
+  title: string;
+  type: "string" | "boolean" | "integer" | "array" | "object";
+  default?: any;
+  description: string;
+  enum?: any[];
+  minimum?: number;
+  maximum?: number;
+  items?: {
+    type: string
+  };
+  collapsed?: boolean;
+  scope?: string;
+  beautifiers?: String[];
+  grammars?: string[];
+  extensions?: string[];
+  properties?: any;
+  order?: number;
+}
+
+interface AtomConfigRegistry {
+  [key: string]: AtomConfig;
 }
