@@ -63,6 +63,13 @@ function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
       type: "string"
     }
   }
+  languageOptions["beautify_on_save"] = {
+    title: `Beautify ${language.name} On Save`,
+    type: "boolean",
+    default: false,
+    description: `Automatically beautify ${language.name} files on save`,
+    order: -1
+  }
   return languageOptions;
 }
 

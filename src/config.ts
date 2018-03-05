@@ -29,7 +29,7 @@ export default {
                 title: "Beautify On Save",
                 type: "boolean",
                 "default": true,
-                description: "When saving a file, the contents will be beautified."
+                description: "When saving a file, the contents will be beautified (unchecking will override individual language setting)."
             },
             beautifyEntireFileOnSave: {
                 title: "Beautify Entire File On Save",
