@@ -80,8 +80,6 @@ before_install:
   - Rscript --version
   # PHP
   - composer install
-  # CoffeeScript
-  - npm install coffee-formatter
   # OCaml
   # - opam init --auto-setup
   # Init environment variables for opam
