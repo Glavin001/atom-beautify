@@ -17,6 +17,18 @@ module.exports = class Rubocop extends Beautifier
       rubocop_path: true
   }
 
+  executables: [
+    {
+      name: "Rubocop"
+      cmd: "rubocop"
+      homepage: "http://rubocop.readthedocs.io/"
+      installation: "http://rubocop.readthedocs.io/en/latest/installation/"
+      version: {
+        parse: (text) -> text.match(/(\d+\.\d+\.\d+)/)[1]
+      }
+    }
+  ]
+
   beautify: (text, language, options, context) ->
     fullPath = context.filePath or ""
     [projectPath, _relativePath] = atom.project.relativizePath(fullPath)
@@ -51,9 +63,9 @@ module.exports = class Rubocop extends Beautifier
       rubocopArguments.push("--config", tempConfig) if tempConfig?
       @debug("rubocop arguments", rubocopArguments)
 
-      @run(rubocopPath, rubocopArguments, {
+      @exe("rubocop").run(rubocopArguments, {
         ignoreReturnCode: true,
-        cwd: projectPath,
+        cwd: projectPath if configFile?,
         onStdin: (stdin) -> stdin.end text
       }).then((stdout) =>
         @debug("rubocop output", stdout)
