@@ -45,40 +45,38 @@ export class AtomBeautify {
     }
 
     private beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: Atom.TextEditor) {
-      if (atom.config.get("atom-beautify.general.beautifyOnSave")) {
-        const grammarName = editor.getGrammar().name;
-        const fileExtension = path.extname(filePath).substr(1);
-        const langs: Language[] = this.unibeautify.findLanguages({
-          atomGrammar: grammarName,
-          extension: fileExtension
-        });
-        const language = langs.length > 0 ? langs[0] : null;
-        const config = this.getConfigFromSettings(language.name);
-        const beautifyOnSave = Boolean(config && config.beautify_on_save);
-        if (beautifyOnSave) {
-          if (editor.getPath() === undefined) {
-            editor.getBuffer().setPath(filePath);
-          }
-          let text: string = null;
-          if (!atom.config.get("atom-beautify.general.beautifyEntireFileOnSave") &&  !!editor.getSelectedText()) {
-            text = editor.getSelectedText();
-          } else {
-            text = editor.getText();
-          }
-          console.log("Beautify file on save", {filePath, fileExtension, text, grammarName});
-          return this.unibeautify.beautify({
-            fileExtension,
-            atomGrammar: grammarName,
-            options: {
-              [language.name]: config
-            },
-            text: text
-          }).then((result) => {
-            editor.setText(result);
-          }).catch(error => {
-            this.showError(error);
-          });
+      const grammarName = editor.getGrammar().name;
+      const fileExtension = path.extname(filePath).substr(1);
+      const langs: Language[] = this.unibeautify.findLanguages({
+        atomGrammar: grammarName,
+        extension: fileExtension
+      });
+      const language = langs.length > 0 ? langs[0] : null;
+      const config = this.getConfigFromSettings(language.name);
+      const beautifyOnSave = Boolean(config && config.beautify_on_save);
+      if (beautifyOnSave) {
+        if (editor.getPath() === undefined) {
+          editor.getBuffer().setPath(filePath);
         }
+        let text: string = null;
+        if (!atom.config.get("atom-beautify.general.beautifyEntireFileOnSave") &&  !!editor.getSelectedText()) {
+          text = editor.getSelectedText();
+        } else {
+          text = editor.getText();
+        }
+        console.log("Beautify file on save", {filePath, fileExtension, text, grammarName});
+        return this.unibeautify.beautify({
+          fileExtension,
+          atomGrammar: grammarName,
+          options: {
+            [language.name]: config
+          },
+          text: text
+        }).then((result) => {
+          editor.setText(result);
+        }).catch(error => {
+          this.showError(error);
+        });
       }
     }
 
