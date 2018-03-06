@@ -31,6 +31,7 @@ module.exports = class Prettier extends Beautifier
       prettierLanguage = _.find(prettier.getSupportInfo().languages, 'name': language)
       if prettierLanguage
         parser = prettierLanguage.parsers[0]
+        options.parser = parser
       else
         reject(new Error("Unknown language for Prettier"))
 
@@ -38,7 +39,7 @@ module.exports = class Prettier extends Beautifier
 
       try
         prettier.resolveConfig(filePath).then((configOptions) ->
-          result = prettier.format(text, configOptions or options, parser)
+          result = prettier.format(text, configOptions or options)
           prettier.clearConfigCache()
           resolve result
         )
