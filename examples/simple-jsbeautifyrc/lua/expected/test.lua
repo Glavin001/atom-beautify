@@ -19,7 +19,7 @@ function aaa(a, b, c)
   -- comment 2     1231
   -- comment 1     123 123 123123 12
   -- [[ comment 1    ]]
-    --[[
+  --[[
         muli comments
             ssss
             @asdasd   sad

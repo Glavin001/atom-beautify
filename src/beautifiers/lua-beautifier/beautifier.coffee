@@ -53,7 +53,7 @@ module.exports = (str, indent, warn_fn, opts = {}) ->
       else
         return line
     res1 = line.match(/\[(=*)\[/)
-    if res1
+    if res1 and (not new RegExp("\\]#{'='.repeat res1[1].length}\\]").test line)
       $template = res1[1].length + 1
     if !$template_flag
       line = line.trim()
@@ -62,9 +62,9 @@ module.exports = (str, indent, warn_fn, opts = {}) ->
     if !line.length
       return ''
     raw_line = line
-    line = line.replace(/(['"])[^\1]*?\1/, '')
+    line = line.replace(/(['"])[^\1]*?\1/g, '')
     # remove all quoted fragments for proper bracket processing
-    line = line.replace(/\s*--.+/, '')
+    line = line.replace(/\s*--.+$/, '')
     # remove all comments; this ignores long bracket style comments
     if /^((local )?function|repeat|while)\b/.test(line) and !/\bend\s*[\),;]*$/.test(line) or /\b(then|do)$/.test(line) and !/^elseif\b/.test(line) or /^if\b/.test(line) and /\bthen\b/.test(line) and !/\bend$/.test(line) or /\bfunction ?(?:\w+ )?\([^\)]*\)$/.test(line) and !/\bend$/.test(line)
       $nextIndent = $currIndent + 1
