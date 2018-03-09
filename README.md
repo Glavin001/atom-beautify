@@ -1,4 +1,4 @@
-# :lipstick: [atom-beautify](https://github.com/Glavin001/atom-beautify)
+# :lipstick: [beautify](https://github.com/Glavin001/atom-beautify)
 [![apm](https://img.shields.io/apm/dm/atom-beautify.svg)](https://atom.io/packages/atom-beautify)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Glavin001/atom-beautify.svg)](https://greenkeeper.io/)
 [![GitHub issues](https://img.shields.io/github/issues/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/issues)
