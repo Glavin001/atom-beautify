@@ -1,6 +1,9 @@
 # Next
 - ...
 
+# v0.32.2 (2018-03-10)
+- Revert fix package.json repository field (#2062)
+
 # v0.32.1 (2018-03-10)
 - Update Prettier to 1.11.1. (#2060)
 - Fix package.json repository field (#2062)
