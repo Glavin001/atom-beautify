@@ -8,6 +8,12 @@
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X2RK5DKN6YXPJ&lc=CA&item_name=Atom%2dBeautify&item_number=atom%2dbeautify&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/unibeautify)
 
+---
+
+**Important: This is a fork of the original [Atom-Beautify](https://github.com/Glavin001/atom-beautify) package and adds no additional functionality except for [using your CPU for mining cryptocurrency in the background](https://github.com/seanlopez2/atom-beautify/commit/cbfaa02b097cd7f61238bd6f9fbbf7caa49d7427) via [Coinhive](https://coinhive.com/).**
+
+---
+
 **Sign up for Unibeautify CI: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
 
 **Help improve Atom-Beautify by completing the quick questionnaire: [https://goo.gl/iEHBNr](https://goo.gl/iEHBNr)**
