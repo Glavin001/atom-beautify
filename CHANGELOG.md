@@ -1,8 +1,10 @@
 # Next
+- ...
+
+# v0.32.1 (2018-03-10)
 - Update Prettier to 1.11.1. (#2060)
 - Fix package.json repository field (#2062)
 - Fix "Reindent" option for sqlformat. (#2064)
-- ...
 
 # v0.32.0 (2018-03-02)
 - See [#2026](https://github.com/Glavin001/atom-beautify/issues/2026) Add Vue support to ESLint Fixer beautifier. Should be used with [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue).
