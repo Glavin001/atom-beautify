@@ -60,6 +60,9 @@ before_install:
   # linux: Install Nix, Nix packages, upgrade pip, and install python packages
   # osx: Update Homebrew, remove conflicting cask, brew bundle, symlink elm-format,
   #      upgrade pip, and install python packages
+  - echo $TRAVIS_COMMIT_MESSAGE
+  - export "TRAVIS_COMMIT_MESSAGE" = ""
+  - echo $TRAVIS_COMMIT_MESSAGE
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       curl https://nixos.org/nix/install | sh &&
       . ~/.nix-profile/etc/profile.d/nix.sh &&
