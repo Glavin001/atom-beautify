@@ -146,15 +146,15 @@
     "js-beautify": "^1.7.5",
     "prettier": "^1.10.2",
     "prettydiff2": "^2.2.7",
-    "unibeautify": "^0.10.0"
+    "unibeautify": "^0.10.1"
   },
   "devDependencies": {
-    "@types/atom": "^1.24.1",
+    "@types/atom": "^1.24.4",
     "@types/bluebird": "^3.5.20",
     "@types/event-kit": "^2.0.4",
-    "@types/jest": "^22.1.4",
+    "@types/jest": "^22.2.0",
     "@types/lodash": "^4.14.104",
-    "@types/node": "^9.4.6",
+    "@types/node": "^9.4.7",
     "atom-test-runner-jest": "^0.1.3",
     "jest": "^22.4.2",
     "jest-preset-atom": "^0.1.9",
