@@ -303,7 +303,8 @@
       "atom-beautify:beautify-language-tsx",
       "atom-beautify:beautify-language-verilog",
       "atom-beautify:beautify-language-vhdl",
-      "atom-beautify:beautify-language-gn"
+      "atom-beautify:beautify-language-gn",
+      "atom-beautify:beautify-language-blade"
     ],
     ".tree-view .file .name": [
       "atom-beautify:beautify-file"
@@ -447,7 +448,8 @@
     "emacs verilog mode",
     "vhdl",
     "vhdl beautifier",
-    "gn"
+    "gn",
+    "blade"
   ],
   "devDependencies": {
     "codo": "^2.1.2",

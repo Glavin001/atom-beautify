@@ -186,6 +186,327 @@
       }
     }
   },
+  "blade": {
+    "title": "Blade",
+    "type": "object",
+    "description": "Options for language Blade",
+    "collapsed": true,
+    "beautifiers": [
+      "JS Beautify"
+    ],
+    "grammars": [
+      "Blade"
+    ],
+    "extensions": [
+      "blade.php"
+    ],
+    "properties": {
+      "indent_inner_html": {
+        "type": "boolean",
+        "default": false,
+        "description": "Indent <head> and <body> sections. (Supported by JS Beautify)",
+        "title": "Indent inner html",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "indent_inner_html",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indentation size/length (Supported by JS Beautify)",
+        "title": "Indent size",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_char": {
+        "type": "string",
+        "default": null,
+        "description": "Indentation character (Supported by JS Beautify)",
+        "title": "Indent char",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "indent_char",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "brace_style": {
+        "type": "string",
+        "default": "collapse",
+        "enum": [
+          "collapse",
+          "expand",
+          "end-expand",
+          "none"
+        ],
+        "description": "[collapse|expand|end-expand|none] (Supported by JS Beautify)",
+        "title": "Brace style",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "brace_style",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "indent_scripts": {
+        "type": "string",
+        "default": "normal",
+        "enum": [
+          "keep",
+          "separate",
+          "normal"
+        ],
+        "description": "[keep|separate|normal] (Supported by JS Beautify)",
+        "title": "Indent scripts",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "indent_scripts",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_line_length": {
+        "type": "integer",
+        "default": 250,
+        "description": "Maximum characters per line (0 disables) (Supported by JS Beautify)",
+        "title": "Wrap line length",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "wrap_line_length",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_attributes": {
+        "type": "string",
+        "default": "auto",
+        "enum": [
+          "auto",
+          "force",
+          "force-aligned",
+          "force-expand-multiline"
+        ],
+        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
+        "title": "Wrap attributes",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "wrap_attributes",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "wrap_attributes_indent_size": {
+        "type": "integer",
+        "default": null,
+        "minimum": 0,
+        "description": "Indent wrapped attributes to after N characters (Supported by JS Beautify)",
+        "title": "Wrap attributes indent size",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "wrap_attributes_indent_size",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "preserve_newlines": {
+        "type": "boolean",
+        "default": true,
+        "description": "Preserve line-breaks (Supported by JS Beautify)",
+        "title": "Preserve newlines",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "max_preserve_newlines": {
+        "type": "integer",
+        "default": 10,
+        "description": "Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)",
+        "title": "Max preserve newlines",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "max_preserve_newlines",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "unformatted": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "small",
+          "strike",
+          "tt",
+          "pre",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)",
+        "title": "Unformatted",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "end_with_newline": {
+        "type": "boolean",
+        "default": false,
+        "description": "End output with newline (Supported by JS Beautify)",
+        "title": "End with newline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "end_with_newline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "extra_liners": {
+        "type": "array",
+        "default": [
+          "head",
+          "body",
+          "/html"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags (defaults to [head,body,/html] that should have an extra newline before them. (Supported by JS Beautify)",
+        "title": "Extra liners",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "extra_liners",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "disabled": {
+        "title": "Disable Beautifying Language",
+        "order": -3,
+        "type": "boolean",
+        "default": false,
+        "description": "Disable Blade Beautification"
+      },
+      "default_beautifier": {
+        "title": "Default Beautifier",
+        "order": -2,
+        "type": "string",
+        "default": "JS Beautify",
+        "description": "Default Beautifier to be used for Blade",
+        "enum": [
+          "JS Beautify"
+        ]
+      },
+      "beautify_on_save": {
+        "title": "Beautify On Save",
+        "order": -1,
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically beautify Blade files on save"
+      }
+    }
+  },
   "cs": {
     "title": "C#",
     "type": "object",
