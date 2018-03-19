@@ -2,7 +2,7 @@ module.exports = {
 
   name: "Blade"
   namespace: "blade"
-  fallback: ["html", "php"]
+  fallback: ["html"]
 
   ###
   Supported Grammars
