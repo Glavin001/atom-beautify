@@ -5,7 +5,7 @@
 </head>
 
 <body>
-  @section('sidebar')  This is the {{ $mater }} sidebar.
+  @section('sidebar') This is the {{ $mater }} sidebar.
   @show
 
   <div class="container">
@@ -13,17 +13,17 @@
   </div>
 
   @component('alert')
-  @slot('title')  Forbidden
+  @slot('title') Forbidden
   @endslot
   <strong>Whoops!</strong> Something went wrong!
   @endcomponent
 
-  @foreach  ($users as $user)
-  @if  ($user->type == 1)
+  @foreach ($users as $user)
+  @if ($user->type == 1)
   @continue
   @endif
   <li>{{ $user->name }}</li>
-  @if  ($user->number == 5)
+  @if ($user->number == 5)
   @break
   @endif
   @endforeach
