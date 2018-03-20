@@ -67,12 +67,10 @@ before_install:
       curl https://nixos.org/nix/install | sh &&
       . ~/.nix-profile/etc/profile.d/nix.sh &&
       nix-env -i uncrustify R elm-format terraform atom atom-beta opam &&
-      pip install --upgrade pip &&
       pip install --user -r requirements.txt;
     elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       brew update && brew cask zap oclint && brew bundle &&
       ln -s /usr/local/bin/elm-format-0.17 /usr/local/bin/elm-format &&
-      pip2 install --upgrade pip &&
       pip2 install -r requirements.txt;
     else
       echo Error:TRAVIS_OS_NAME && exit 1;
