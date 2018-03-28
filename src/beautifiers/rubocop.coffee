@@ -81,7 +81,7 @@ module.exports = class Rubocop extends Beautifier
         # Rubocop output an error if stdout is empty
         return text if stdout.length == 0
 
-        result = stdout.split("====================" + os.EOL)
+        result = stdout.split("====================")
         result[result.length - 1]
       )
     )
