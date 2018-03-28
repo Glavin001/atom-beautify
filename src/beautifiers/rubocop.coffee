@@ -5,6 +5,7 @@ Requires https://github.com/bbatsov/rubocop
 "use strict"
 Beautifier = require('./beautifier')
 path = require('path')
+os = require('os')
 
 module.exports = class Rubocop extends Beautifier
   name: "Rubocop"
@@ -80,7 +81,7 @@ module.exports = class Rubocop extends Beautifier
         # Rubocop output an error if stdout is empty
         return text if stdout.length == 0
 
-        result = stdout.split("====================\n")
+        result = stdout.split("====================" + os.EOL)
         result[result.length - 1]
       )
     )
