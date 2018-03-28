@@ -81,6 +81,8 @@ module.exports = class Rubocop extends Beautifier
         return text if stdout.length == 0
 
         result = stdout.split("====================\n")
+        result = stdout.split("====================\r\n") if result.length == 1
+
         result[result.length - 1]
       )
     )
