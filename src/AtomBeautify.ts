@@ -188,7 +188,7 @@ export class AtomBeautify {
       const configExplorer = cosmiconfig("unibeautify", {rcExtensions: true});
       return await configExplorer
             .load(filePath)
-            .then((result: any) => (result.config[language] ? result.config[language] : configSettings))
+            .then((result: any) => ((result && result.config[language]) ? result.config[language] : configSettings))
             .catch((error: any) => (console.error(error)));
     }
 
