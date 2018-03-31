@@ -93,8 +93,9 @@ export class AtomBeautify {
         text = editor.getText();
       }
       let fileExtension: string = null;
-      if (editor.getPath()) {
-        fileExtension = path.extname(editor.getPath()).substr(1);
+      const editorPath = editor.getPath();
+      if (editorPath) {
+        fileExtension = path.extname(editorPath).substr(1);
       }
       const langs: Language[] = this.unibeautify.findLanguages({
         atomGrammar: grammarName,
@@ -102,7 +103,7 @@ export class AtomBeautify {
       });
       const language = langs.length > 0 ? langs[0] : null;
       const configSettings = this.getConfigFromSettings(language.name);
-      const beautifySettings = await this.unibeautifyConfiguration(configSettings);
+      const beautifySettings = await this.unibeautifyConfiguration(configSettings, editorPath, language.name);
       return this.unibeautify.beautify({
         fileExtension,
         atomGrammar: grammarName,
@@ -183,11 +184,11 @@ export class AtomBeautify {
       }
     }
 
-    private async unibeautifyConfiguration(configSettings: any): Promise<any> {
+    private async unibeautifyConfiguration(configSettings: any, filePath: string, language: string): Promise<any> {
       const configExplorer = cosmiconfig("unibeautify", {rcExtensions: true});
       return await configExplorer
-            .load()
-            .then((result: any) => (result ? result.config : configSettings))
+            .load(filePath)
+            .then((result: any) => (result.config[language] ? result.config[language] : configSettings))
             .catch((error: any) => (console.error(error)));
     }
 
