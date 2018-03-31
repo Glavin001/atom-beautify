@@ -142,6 +142,7 @@
     "@unibeautify/beautifier-prettier": "^0.7.5",
     "@unibeautify/beautifier-prettydiff": "^0.5.3",
     "bluebird": "^3.5.1",
+    "cosmiconfig": "^4.0.0",
     "eslint": "^4.19.1",
     "js-beautify": "^1.7.5",
     "prettier": "^1.11.1",

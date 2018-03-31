@@ -3,10 +3,10 @@ import * as Atom from "atom";
 import beautifiers from "./beautifiers";
 import { CompositeDisposable, Disposable } from "atom";
 import Config from "./config";
-import * as Promise from "bluebird";
 import * as path from "path";
 import * as _ from "lodash";
 const pkg = require("../package");
+const cosmiconfig = require("cosmiconfig");
 
 export class AtomBeautify {
     private unibeautify: Unibeautify;
@@ -52,6 +52,9 @@ export class AtomBeautify {
         extension: fileExtension
       });
       const language = langs.length > 0 ? langs[0] : null;
+      if (!language) {
+        return;
+      }
       const config = this.getConfigFromSettings(language.name);
       const beautifyOnSave = Boolean(config && config.beautify_on_save);
       if (beautifyOnSave) {
@@ -80,7 +83,7 @@ export class AtomBeautify {
       }
     }
 
-    private beautifyEditor() {
+    private async beautifyEditor() {
       const editor: Atom.TextEditor = atom.workspace.getActiveTextEditor();
       const grammarName = editor.getGrammar().name;
       let text: string = null;
@@ -98,11 +101,13 @@ export class AtomBeautify {
         extension: fileExtension
       });
       const language = langs.length > 0 ? langs[0] : null;
+      const configSettings = this.getConfigFromSettings(language.name);
+      const beautifySettings = await this.unibeautifyConfiguration(configSettings);
       return this.unibeautify.beautify({
         fileExtension,
         atomGrammar: grammarName,
         options: {
-          [language.name]: this.getConfigFromSettings(language.name)
+          [language.name]: beautifySettings
         },
         text: text,
       }).then((result) => {
@@ -176,6 +181,14 @@ export class AtomBeautify {
           dismissable: true
         });
       }
+    }
+
+    private async unibeautifyConfiguration(configSettings: any): Promise<any> {
+      const configExplorer = cosmiconfig("unibeautify", {rcExtensions: true});
+      return await configExplorer
+            .load()
+            .then((result: any) => (result ? result.config : configSettings))
+            .catch((error: any) => (console.error(error)));
     }
 
 }
