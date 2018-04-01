@@ -90,7 +90,6 @@ export class AtomBeautify {
         options: beautifySettings,
         text
       };
-      console.log("Cursors: ", this.getCursors(editor));
       return this.beautify(editor, beautifyData);
     }
 
