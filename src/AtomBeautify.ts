@@ -61,7 +61,7 @@ export class AtomBeautify {
           text = editor.getText();
         }
         console.log("Beautify file on save", {filePath, text, languageInfo});
-        const beautifySettings = await this.unibeautifyConfiguration(filePath, languageInfo.language);
+        const beautifySettings = await this.unibeautifyConfiguration(filePath);
         const beautifyData: BeautifyData = {
           languageName: languageInfo.language.name,
           fileExtension: languageInfo.fileExtension,
@@ -82,7 +82,7 @@ export class AtomBeautify {
       } else {
         text = editor.getText();
       }
-      const beautifySettings = await this.unibeautifyConfiguration(editor.getPath(), languageInfo.language);
+      const beautifySettings = await this.unibeautifyConfiguration(editor.getPath());
       const beautifyData: BeautifyData = {
         languageName: languageInfo.language.name,
         fileExtension: languageInfo.fileExtension,
@@ -164,7 +164,7 @@ export class AtomBeautify {
       }
     }
 
-    private async unibeautifyConfiguration(filePath: string, language: Language): Promise<LanguageOptionValues> {
+    private async unibeautifyConfiguration(filePath: string): Promise<LanguageOptionValues> {
       try {
         const explorerOptions: Cosmiconfig.Options = {
           rcExtensions: true,
