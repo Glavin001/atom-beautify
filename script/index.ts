@@ -17,7 +17,7 @@ function buildOptions() {
   let options: AtomConfigRegistry = {};
   const languages = Unibeautify.supportedLanguages;
   languages.forEach(lang => {
-    const langName: string = lang.name.toLowerCase();
+    const langName: string = lang.name;
     if (!options[langName]) {
       const beautifiers = Unibeautify.getBeautifiersForLanguage(lang).map(beautifier => beautifier.name);
       const languageOptions = buildOptionsForLanguage(lang, beautifiers);
@@ -55,7 +55,7 @@ function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
       items: option.items
     };
   })
-  languageOptions["Beautifiers"] = {
+  languageOptions["beautifiers"] = {
     title: "Beautifiers",
     type: "array",
     default: beautifiers,

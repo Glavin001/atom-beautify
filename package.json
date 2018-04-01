@@ -152,6 +152,7 @@
   "devDependencies": {
     "@types/atom": "^1.25.0",
     "@types/bluebird": "^3.5.20",
+    "@types/cosmiconfig": "^4.0.0",
     "@types/event-kit": "^2.4.0",
     "@types/jest": "^22.2.2",
     "@types/lodash": "^4.14.106",
