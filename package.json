@@ -147,7 +147,8 @@
     "js-beautify": "^1.7.5",
     "prettier": "^1.11.1",
     "prettydiff2": "^2.2.7",
-    "unibeautify": "^0.10.1"
+    "unibeautify": "^0.10.1",
+    "winston": "^3.0.0-rc4"
   },
   "devDependencies": {
     "@types/atom": "^1.25.0",
