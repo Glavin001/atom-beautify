@@ -4,7 +4,7 @@ labelColor: f7c6c7
 
 commentText: >
   Please follow the [issue template](https://github.com/Glavin001/atom-beautify/blob/master/ISSUE_TEMPLATE.md) provided. 
-  More specifically, adding a link to the 
+  More specifically, update the original comment for this issue by adding a link to the 
   required [debug.md](https://github.com/Glavin001/atom-beautify/blob/master/docs/troubleshooting.md#how-to-create-debugmd-gist)
   gist which includes debugging information that answers our most commonly asked questions.
   Thank you.
