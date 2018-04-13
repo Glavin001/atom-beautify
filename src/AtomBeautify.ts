@@ -6,13 +6,14 @@ import Config from "./config";
 import * as path from "path";
 import * as _ from "lodash";
 import * as cosmiconfig from "cosmiconfig";
+import { logger } from "./logger";
 
 export class AtomBeautify {
     private unibeautify: Unibeautify;
     private subscriptions: CompositeDisposable;
 
     public activate(state: any): void {
-        console.log("activated!!");
+        logger.info("activated!");
         this.unibeautify = newUnibeautify();
         this.unibeautify.loadBeautifiers(beautifiers);
         this.subscriptions = new CompositeDisposable();
@@ -119,6 +120,7 @@ export class AtomBeautify {
     }
 
     private openSettings() {
+      logger.info("Hey");
       atom.workspace.open("atom://config/packages/atom-beautify");
     }
 

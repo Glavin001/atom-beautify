@@ -2,7 +2,11 @@ const winston = require("winston");
 import { format, TransformableInfo } from "logform";
 // import * as winston from "winston";
 
-const levels = {
+interface Levels {
+  [text: string]: number;
+}
+
+const npmLevels: Levels = {
   error: 0,
   warn: 1,
   info: 2,
@@ -17,7 +21,7 @@ const logFormat = format.printf((info: TransformableInfo) => {
 
 const transports = {
   console: new winston.transports.Console({
-    level: levels.error
+    level: "debug"
   })
 };
 
@@ -32,7 +36,7 @@ export const logger = winston.createLogger({
 });
 
 transports.console.on("logged", (info: TransformableInfo) => {
-  if (levels[getAtomConfigLevel()] >= levels[info.level]) {
+  if (npmLevels[getAtomConfigLevel()] >= npmLevels[info.level]) {
     console.log(outputFormat(info));
   }
 });
