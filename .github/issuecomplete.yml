@@ -9,7 +9,7 @@ commentText: >
   gist which includes debugging information that answers our most commonly asked questions.
   Thank you.
 
-checkCheckboxes: false
+checkCheckboxes: true
 
 keywords:
   - gist.github.com
