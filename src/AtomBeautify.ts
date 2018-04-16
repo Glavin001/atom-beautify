@@ -47,7 +47,7 @@ export class AtomBeautify {
     private async beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: Atom.TextEditor) {
       const languageInfo = this.languageInEditor(editor, filePath);
       if (!languageInfo.language) {
-        this.showError(`${languageInfo.language} is not supported`);
+        this.showError(new Error("Language could not be found or is not supported"));
       }
       const config = this.configFromSettings(languageInfo.language);
       const beautifyOnSave = Boolean(config && config.beautify_on_save);
@@ -56,12 +56,12 @@ export class AtomBeautify {
           editor.getBuffer().setPath(filePath);
         }
         let text: string = null;
-        if (!this.configFromSettings().general.beautifyEntireFileOnSave &&  !!editor.getSelectedText()) {
+        if (!this.configFromSettings().general.beautifyEntireFileOnSave && !!editor.getSelectedText()) {
           text = editor.getSelectedText();
         } else {
           text = editor.getText();
         }
-        console.log("Beautify file on save", {filePath, text, languageInfo});
+        logger.debug("Beautify file on save", {filePath, text, languageInfo});
         const beautifySettings = await this.unibeautifyConfiguration(filePath);
         const beautifyData: BeautifyData = {
           languageName: languageInfo.language.name,
@@ -120,7 +120,6 @@ export class AtomBeautify {
     }
 
     private openSettings() {
-      logger.info("Hey");
       atom.workspace.open("atom://config/packages/atom-beautify");
     }
 
@@ -154,10 +153,10 @@ export class AtomBeautify {
     //   }
     // }
 
-    private showError(error: any, show: boolean = false): Atom.Notification {
+    private showError(error: Error, show: boolean = false): Atom.Notification {
       if (show || !this.configFromSettings().general.muteAllErrors) {
-        const stack: any = error.stack;
-        const detail: string = error.description || error.message;
+        const stack: string = error.stack;
+        const detail: string = `${error.name}: ${error.message}`;
         return atom.notifications.addError(error.message, {
           stack: stack,
           detail: detail,
@@ -182,6 +181,7 @@ export class AtomBeautify {
           return _.unset(atomConfig, "general") ? atomConfig : {};
         }
       } catch (error) {
+        this.showError(error);
         return Promise.reject(error);
       }
     }
