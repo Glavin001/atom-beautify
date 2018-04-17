@@ -63,10 +63,12 @@ export class AtomBeautify {
         }
         logger.debug("Beautify file on save", {filePath, text, languageInfo});
         const beautifySettings = await this.unibeautifyConfiguration(filePath);
+        const [projectPath] = atom.project.relativizePath(editor.getPath());
         const beautifyData: BeautifyData = {
           languageName: languageInfo.language.name,
           fileExtension: languageInfo.fileExtension,
           filePath: filePath,
+          projectPath: projectPath,
           options: beautifySettings,
           text
         };
@@ -84,10 +86,12 @@ export class AtomBeautify {
         text = editor.getText();
       }
       const beautifySettings = await this.unibeautifyConfiguration(editor.getPath());
+      const [projectPath] = atom.project.relativizePath(editor.getPath());
       const beautifyData: BeautifyData = {
         languageName: languageInfo.language.name,
         fileExtension: languageInfo.fileExtension,
         filePath: editor.getPath(),
+        projectPath: projectPath,
         options: beautifySettings,
         text
       };
@@ -191,9 +195,8 @@ export class AtomBeautify {
       let fileExtension;
       if (!filePath) {
         filePath = editor.getPath();
-      } else {
-        fileExtension = path.extname(filePath).substr(1);
       }
+      fileExtension = path.extname(filePath).substr(1);
       const langs: Language[] = this.unibeautify.findLanguages({
         atomGrammar: grammarName,
         extension: fileExtension
