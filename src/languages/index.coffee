@@ -64,6 +64,7 @@ module.exports = class Languages
     "rust"
     "sass"
     "scss"
+    "smarty"
     "spacebars"
     "sql"
     "svg"
