@@ -22,6 +22,7 @@ export class AtomBeautify {
         this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:help-debug-editor", this.debug.bind(this)));
         this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:open-settings", this.openSettings.bind(this)));
         this.subscriptions.add(atom.commands.add(".tree-view .file .name", "atom-beautify:beautify-file", this.beautifyFile.bind(this)));
+        // tslint:disable-next-line:max-line-length
         this.subscriptions.add(atom.commands.add(".tree-view .directory .name", "atom-beautify:beautify-directory", this.beautifyDirectory.bind(this)));
     }
 
@@ -47,7 +48,7 @@ export class AtomBeautify {
     private async beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: Atom.TextEditor) {
       const languageInfo = this.languageInEditor(editor, filePath);
       if (!languageInfo.language) {
-        this.showError(new Error("Language could not be found or is not supported"));
+        return this.showError(new Error("Language could not be found or is not supported"));
       }
       const config = this.configFromSettings(languageInfo.language);
       const beautifyOnSave = Boolean(config && config.beautify_on_save);
@@ -55,20 +56,20 @@ export class AtomBeautify {
         if (editor.getPath() === undefined) {
           editor.getBuffer().setPath(filePath);
         }
-        let text: string = null;
+        let text: string;
         if (!this.configFromSettings().general.beautifyEntireFileOnSave && !!editor.getSelectedText()) {
           text = editor.getSelectedText();
         } else {
           text = editor.getText();
         }
-        logger.debug("Beautify file on save", {filePath, text, languageInfo});
+        logger.info("Beautify file on save", {filePath, text, languageInfo});
         const beautifySettings = await this.unibeautifyConfiguration(filePath);
-        const [projectPath] = atom.project.relativizePath(editor.getPath());
+        const [projectPath] = atom.project.relativizePath(editor.getPath() || filePath);
         const beautifyData: BeautifyData = {
           languageName: languageInfo.language.name,
           fileExtension: languageInfo.fileExtension,
           filePath: filePath,
-          projectPath: projectPath,
+          projectPath: projectPath || undefined,
           options: beautifySettings,
           text
         };
@@ -77,21 +78,27 @@ export class AtomBeautify {
     }
 
     private async beautifyEditor() {
-      const editor: Atom.TextEditor = atom.workspace.getActiveTextEditor();
+      const editor = atom.workspace.getActiveTextEditor();
+      if (editor === undefined) {
+        return this.showError(new Error("No active editor was found"));
+      }
       const languageInfo = this.languageInEditor(editor);
-      let text: string = null;
+      if (!languageInfo.language) {
+        return this.showError(new Error("Language could not be found or is not supported"));
+      }
+      let text: string;
       if (!!editor.getSelectedText()) {
         text = editor.getSelectedText();
       } else {
         text = editor.getText();
       }
-      const beautifySettings = await this.unibeautifyConfiguration(editor.getPath());
-      const [projectPath] = atom.project.relativizePath(editor.getPath());
+      const beautifySettings = await this.unibeautifyConfiguration(editor.getPath() || "");
+      const [projectPath] = atom.project.relativizePath(editor.getPath() || "");
       const beautifyData: BeautifyData = {
         languageName: languageInfo.language.name,
         fileExtension: languageInfo.fileExtension,
-        filePath: editor.getPath(),
-        projectPath: projectPath,
+        filePath: editor.getPath() || undefined,
+        projectPath: projectPath || undefined,
         options: beautifySettings,
         text
       };
@@ -157,10 +164,10 @@ export class AtomBeautify {
     //   }
     // }
 
-    private showError(error: Error, show: boolean = false): Atom.Notification {
-      if (show || !this.configFromSettings().general.muteAllErrors) {
-        const stack: string = error.stack;
-        const detail: string = `${error.name}: ${error.message}`;
+    private showError(error: Error): Atom.Notification | undefined {
+      if (!this.configFromSettings().general.muteAllErrors) {
+        const stack = error.stack;
+        const detail = `${error.name}: ${error.message}`;
         return atom.notifications.addError(error.message, {
           stack: stack,
           detail: detail,
@@ -196,7 +203,9 @@ export class AtomBeautify {
       if (!filePath) {
         filePath = editor.getPath();
       }
-      fileExtension = path.extname(filePath).substr(1);
+      if (filePath) {
+        fileExtension = path.extname(filePath).substr(1);
+      }
       const langs: Language[] = this.unibeautify.findLanguages({
         atomGrammar: grammarName,
         extension: fileExtension

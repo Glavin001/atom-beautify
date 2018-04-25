@@ -37,6 +37,7 @@ export const logger = winston.createLogger({
 
 transports.console.on("logged", (info: TransformableInfo) => {
   if (npmLevels[getAtomConfigLevel()] >= npmLevels[info.level]) {
+    // tslint:disable-next-line:no-console
     console.log(outputFormat(info));
   }
 });

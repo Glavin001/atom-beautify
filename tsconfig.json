@@ -1,21 +1,23 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": false,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "target": "ES2017",
-        "declaration": true,
-        "moduleResolution": "node",
-        "outDir": "dist"
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": false,
+      "preserveConstEnums": true,
+      "strictNullChecks": true,
+      "sourceMap": true,
+      "target": "ES2017",
+      "declaration": true,
+      "moduleResolution": "node",
+      "outDir": "dist",
+      "baseUrl": "."
     },
     "include": [
-        "./declarations.d.ts",
-        "./src/**/*.ts"
+      "./declarations.d.ts",
+      "./src/**/*.ts"
     ],
     "exclude": [
-        "./node_modules",
-        "./dist/"
+      "./node_modules",
+      "./dist/"
     ]
 }

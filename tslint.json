@@ -123,7 +123,7 @@
         ],
         "max-line-length": [
             true,
-            500
+            140
         ],
         "max-func-args": [
             true,
@@ -154,6 +154,7 @@
             true,
             "debug",
             "info",
+            "log",
             "time",
             "timeEnd",
             "trace"
@@ -174,7 +175,7 @@
         "no-empty-interface": true,
         "no-empty-line-after-opening-brace": false,
         "no-exec-script": true,
-        "no-flag-args": false,
+        "no-flag-args": true,
         "no-floating-promises": false,
         "no-for-in": true,
         "no-for-in-array": false,
