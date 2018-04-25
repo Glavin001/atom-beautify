@@ -1,5 +1,6 @@
 # Next
-- ...
+- FIX [#1739](https://github.com/Glavin001/atom-beautify/issues/1739) Fallback to included eslint
+- Add option to only fix errors with eslint
 
 # v0.32.2 (2018-03-10)
 - Revert fix package.json repository field (#2062)

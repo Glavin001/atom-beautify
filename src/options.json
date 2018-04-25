@@ -1340,6 +1340,20 @@
           "namespace": "js"
         }
       },
+      "errors_only": {
+        "type": "boolean",
+        "default": false,
+        "description": "Fix errors but leave warnings (Supported by JS Beautify)",
+        "title": "Errors only",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "errors_only",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "indent_inner_html": {
         "type": "boolean",
         "default": false,
@@ -3292,6 +3306,21 @@
           "namespace": "js"
         }
       },
+      "errors_only": {
+        "type": "boolean",
+        "default": false,
+        "description": "Fix errors but leave warnings (Supported by JS Beautify, ESLint Fixer)",
+        "title": "Errors only",
+        "beautifiers": [
+          "JS Beautify",
+          "ESLint Fixer"
+        ],
+        "key": "errors_only",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -3650,6 +3679,20 @@
           "JS Beautify"
         ],
         "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "errors_only": {
+        "type": "boolean",
+        "default": false,
+        "description": "Fix errors but leave warnings (Supported by JS Beautify)",
+        "title": "Errors only",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "errors_only",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -4028,6 +4071,20 @@
           "JS Beautify"
         ],
         "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "errors_only": {
+        "type": "boolean",
+        "default": false,
+        "description": "Fix errors but leave warnings (Supported by JS Beautify)",
+        "title": "Errors only",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "errors_only",
         "language": {
           "name": "JavaScript",
           "namespace": "js"
@@ -8071,6 +8128,20 @@
           "Vue Beautifier"
         ],
         "key": "object_curly_spacing",
+        "language": {
+          "name": "JavaScript",
+          "namespace": "js"
+        }
+      },
+      "errors_only": {
+        "type": "boolean",
+        "default": false,
+        "description": "Fix errors but leave warnings (Supported by Vue Beautifier)",
+        "title": "Errors only",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "errors_only",
         "language": {
           "name": "JavaScript",
           "namespace": "js"

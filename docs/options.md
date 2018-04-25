@@ -2143,6 +2143,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
+| `errors_only` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
 | `extra_liners` | :white_check_mark: | :x: |
 | `indent_char` | :white_check_mark: | :white_check_mark: |
@@ -2349,6 +2350,30 @@ End output with newline (Supported by JS Beautify)
 {
     "html": {
         "end_with_newline": false
+    }
+}
+```
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
     }
 }
 ```
@@ -5236,6 +5261,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `end_of_line` | :x: | :white_check_mark: | :x: | :x: | :x: |
 | `end_with_comma` | :x: | :white_check_mark: | :x: | :x: | :white_check_mark: |
 | `end_with_newline` | :x: | :white_check_mark: | :x: | :x: | :x: |
+| `errors_only` | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: |
 | `eval_code` | :x: | :white_check_mark: | :x: | :x: | :x: |
 | `indent_char` | :x: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
 | `indent_level` | :x: | :white_check_mark: | :x: | :x: | :x: |
@@ -5436,6 +5462,30 @@ End output with newline (Supported by JS Beautify)
 {
     "js": {
         "end_with_newline": false
+    }
+}
+```
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`ESLint Fixer`](#eslint-fixer) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by JS Beautify, ESLint Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
     }
 }
 ```
@@ -5848,6 +5898,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `end_of_line` | :white_check_mark: | :x: | :x: |
 | `end_with_comma` | :white_check_mark: | :x: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: | :x: |
+| `errors_only` | :white_check_mark: | :x: | :x: |
 | `eval_code` | :white_check_mark: | :x: | :x: |
 | `indent_char` | :white_check_mark: | :x: | :white_check_mark: |
 | `indent_level` | :white_check_mark: | :x: | :x: |
@@ -6048,6 +6099,30 @@ End output with newline (Supported by JS Beautify)
 {
     "js": {
         "end_with_newline": false
+    }
+}
+```
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
     }
 }
 ```
@@ -6461,6 +6536,7 @@ Wrap lines at next opportunity after N characters (Supported by JS Beautify, Pre
 | `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
+| `errors_only` | :white_check_mark: | :x: |
 | `eval_code` | :white_check_mark: | :x: |
 | `indent_char` | :white_check_mark: | :white_check_mark: |
 | `indent_level` | :white_check_mark: | :x: |
@@ -6687,6 +6763,30 @@ End output with newline (Supported by JS Beautify)
 {
     "js": {
         "end_with_newline": false
+    }
+}
+```
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
     }
 }
 ```
@@ -13686,6 +13786,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `end_of_line` | :x: | :x: | :white_check_mark: |
 | `end_with_comma` | :x: | :x: | :white_check_mark: |
 | `end_with_newline` | :x: | :x: | :white_check_mark: |
+| `errors_only` | :x: | :x: | :white_check_mark: |
 | `eval_code` | :x: | :x: | :white_check_mark: |
 | `extra_liners` | :x: | :x: | :white_check_mark: |
 | `indent_char` | :x: | :x: | :white_check_mark: |
@@ -13892,6 +13993,30 @@ End output with newline (Supported by Vue Beautifier)
 {
     "html": {
         "end_with_newline": false
+    }
+}
+```
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
     }
 }
 ```
@@ -15351,6 +15476,33 @@ Used if neither a project or custom config file exists. (Supported by CSScomb)
 ```
 
 
+### ESLint Fixer
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`ESLint Fixer`](#eslint-fixer) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by JS Beautify, ESLint Fixer)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
+    }
+}
+```
+
+
 ### Emacs Verilog Mode
 
 #####  [Emacs script path](#emacs-script-path) 
@@ -16085,6 +16237,30 @@ Insert spaces between brackets in object literals (Supported by JS Beautify)
 {
     "js": {
         "object_curly_spacing": false
+    }
+}
+```
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
     }
 }
 ```
@@ -18803,6 +18979,30 @@ Insert spaces between brackets in object literals (Supported by Vue Beautifier)
 {
     "js": {
         "object_curly_spacing": false
+    }
+}
+```
+
+#####  [Errors only](#errors-only) 
+
+**Namespace**: `js`
+
+**Key**: `errors_only`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+Fix errors but leave warnings (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "errors_only": false
     }
 }
 ```
