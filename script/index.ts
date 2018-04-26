@@ -26,8 +26,17 @@ function writeOptionsJson() {
 
 function buildOptions() {
   const options: AtomConfigRegistry = {};
+  const exeOptions = buildExeOptions();
+  options.Executables = {
+    title: "Executables",
+    description: "Configure paths for executables",
+    type: "object",
+    collapsed: true,
+    order: 0,
+    properties: exeOptions
+  };
   const languages = Unibeautify.supportedLanguages;
-  languages.forEach(lang => {
+  languages.forEach((lang, index) => {
     const langName: string = lang.name;
     if (!options[langName]) {
       const beautifiers = Unibeautify.getBeautifiersForLanguage(lang).map(beautifier => beautifier.name);
@@ -37,6 +46,7 @@ function buildOptions() {
         type: "object",
         description: `Options for language ${lang.name}`,
         collapsed: true,
+        order: index + 1,
         scope: lang.textMateScope,
         beautifiers: beautifiers,
         grammars: lang.atomGrammars,
@@ -46,6 +56,27 @@ function buildOptions() {
     }
   });
   return options;
+}
+
+function buildExeOptions() {
+  const exeOptions: AtomConfigRegistry = {};
+  beautifiers.forEach(beautifier => {
+    const dependencies = beautifier.dependencies;
+    if (dependencies && dependencies.length !== 0) {
+      dependencies.forEach(dependency => {
+        if (dependency.type === "exec") {
+          const dependencyName = dependency.name;
+          exeOptions[dependencyName] = {
+            title: dependencyName,
+            type: "string",
+            description: `Path to the ${dependencyName} program executable`,
+            default: ""
+          };
+        }
+      });
+    }
+  });
+  return exeOptions;
 }
 
 function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
