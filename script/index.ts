@@ -14,69 +14,56 @@ Unibeautify.loadBeautifiers(beautifiers);
 writeOptionsJson();
 
 function writeOptionsJson() {
-  const languageOptions = buildOptions();
-  const optionsString = JSON.stringify(languageOptions, null, 2);
+  const languageOptions = buildLanguageOptions();
+  const languages = {
+    title: "Languages",
+    description: "Configure languages",
+    type: "object",
+    collapsed: true,
+    order: 1,
+    properties: languageOptions
+  };
+  const beautifierOptions = buildBeautifierOptions();
+  const beautifiers = {
+    title: "Beautifiers",
+    description: "Configure beautifiers",
+    type: "object",
+    collapsed: true,
+    order: 2,
+    properties: beautifierOptions
+  };
+  const allOptions = JSON.stringify({languages, beautifiers}, null, 2);
   const outputFile = path.resolve(__dirname, "../dist/options.json");
-  fs.writeFile(outputFile, optionsString, (error: Error) => {
+  fs.writeFile(outputFile, allOptions, (error: Error) => {
     if (error) {
       throw error;
     }
   });
 }
 
-function buildOptions() {
-  const options: AtomConfigRegistry = {};
-  const exeOptions = buildExeOptions();
-  options.Executables = {
-    title: "Executables",
-    description: "Configure paths for executables",
-    type: "object",
-    collapsed: true,
-    order: 0,
-    properties: exeOptions
-  };
+function buildLanguageOptions() {
+  const languageOptions: AtomConfigRegistry = {};
   const languages = Unibeautify.supportedLanguages;
   languages.forEach((lang, index) => {
     const langName: string = lang.name;
-    if (!options[langName]) {
+    if (!languageOptions[langName]) {
       const beautifiers = Unibeautify.getBeautifiersForLanguage(lang).map(beautifier => beautifier.name);
-      const languageOptions = buildOptionsForLanguage(lang, beautifiers);
-      options[langName] = {
+      const languageProperties = buildOptionsForLanguage(lang, beautifiers);
+      languageOptions[langName] = {
         title: lang.name,
         type: "object",
         description: `Options for language ${lang.name}`,
         collapsed: true,
-        order: index + 1,
+        order: index,
         scope: lang.textMateScope,
         beautifiers: beautifiers,
         grammars: lang.atomGrammars,
         extensions: lang.extensions,
-        properties: languageOptions
+        properties: languageProperties
       };
     }
   });
-  return options;
-}
-
-function buildExeOptions() {
-  const exeOptions: AtomConfigRegistry = {};
-  beautifiers.forEach(beautifier => {
-    const dependencies = beautifier.dependencies;
-    if (dependencies && dependencies.length !== 0) {
-      dependencies.forEach(dependency => {
-        if (dependency.type === "exec") {
-          const dependencyName = dependency.name;
-          exeOptions[dependencyName] = {
-            title: dependencyName,
-            type: "string",
-            description: `Path to the ${dependencyName} program executable`,
-            default: ""
-          };
-        }
-      });
-    }
-  });
-  return exeOptions;
+  return languageOptions;
 }
 
 function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
@@ -114,6 +101,46 @@ function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
     order: -1
   };
   return languageOptions;
+}
+
+function buildBeautifierOptions() {
+  const beautifierOptions: AtomConfigRegistry = {};
+  beautifiers.forEach((beautifier, index) => {
+    const beautifierProperties = buildOptionsForBeautifier(beautifier);
+    beautifierOptions[beautifier.name] = {
+      title: beautifier.name,
+      description: `Configure ${beautifier.name}`,
+      type: "object",
+      collapsed: true,
+      order: index,
+      properties: beautifierProperties
+    };
+  });
+  return beautifierOptions;
+}
+
+function buildOptionsForBeautifier(beautifier: Beautifier) {
+  const beautifierOptions: AtomConfigRegistry = {};
+  beautifierOptions.prefer_beautifier_config = {
+    title: `Prefer ${beautifier.name} Config`,
+    type: "boolean",
+    description: `Use ${beautifier.name} config file in place of Atom or Unibeautify settings`,
+    default: false
+  };
+  const dependencies = beautifier.dependencies;
+  if (dependencies && dependencies.length !== 0) {
+    dependencies.forEach(dependency => {
+      if (dependency.type === "exec") {
+        beautifierOptions.executable_path = {
+          title: dependency.name,
+          type: "string",
+          description: `Path to the ${dependency.name} program executable`,
+          default: ""
+        };
+      }
+    });
+  }
+  return beautifierOptions;
 }
 
 // tslint:disable:no-reserved-keywords
