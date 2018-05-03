@@ -13,7 +13,7 @@ export class AtomBeautify {
     private subscriptions: CompositeDisposable;
 
     public activate(state: any): void {
-        logger.info("activated!");
+        logger.info("Atom Beautify activated with beautifiers", {beautifiers});
         this.unibeautify = newUnibeautify();
         this.unibeautify.loadBeautifiers(beautifiers);
         this.subscriptions = new CompositeDisposable();
@@ -144,7 +144,7 @@ export class AtomBeautify {
           }
         });
       });
-      logger.info("Language/Beautifier Info", languageConfig);
+      logger.info("Language/Beautifier Info", {languageConfig});
       return languageConfig;
     }
 
