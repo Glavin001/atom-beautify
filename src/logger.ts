@@ -21,7 +21,7 @@ const logFormat = format.printf((info: TransformableInfo) => {
 
 const transports = {
   console: new winston.transports.Console({
-    level: "debug"
+    level: getAtomConfigLevel()
   })
 };
 
@@ -35,15 +35,15 @@ export const logger = winston.createLogger({
   ]
 });
 
-transports.console.on("logged", (info: TransformableInfo) => {
-  if (npmLevels[getAtomConfigLevel()] >= npmLevels[info.level]) {
-    // tslint:disable-next-line:no-console
-    console.log(outputFormat(info));
-  }
-});
+// transports.console.on("logged", (info: TransformableInfo) => {
+//   if (npmLevels[getAtomConfigLevel()] >= npmLevels[info.level]) {
+//     // tslint:disable-next-line:no-console
+//     console.log(outputFormat(info), info.meta);
+//   }
+// });
 
 function outputFormat(info: TransformableInfo): string {
-  return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
+  return `${info.timestamp} ${info.label} [${info.level}]: ${info.message}`;
 }
 
 function getAtomConfigLevel(): string {

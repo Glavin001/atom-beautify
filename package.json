@@ -163,7 +163,7 @@
     "jest-preset-atom": "^0.2.2",
     "rimraf": "^2.6.2",
     "ts-jest": "^22.4.4",
-    "ts-node": "^6.0.0",
+    "ts-node": "^6.0.2",
     "tslint": "^5.9.1",
     "tslint-clean-code": "^0.2.7",
     "tslint-microsoft-contrib": "^5.0.3",
@@ -178,5 +178,8 @@
     "prepublishOnly": "npm run build",
     "start": "tsc --watch",
     "test": "atom --test spec"
-  }
+  },
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ]  
 }

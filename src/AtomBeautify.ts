@@ -50,14 +50,12 @@ export class AtomBeautify {
       if (!languageInfo.language) {
         return this.showError(new Error("Language could not be found or is not supported"));
       }
-      const config = this.configFromSettings(languageInfo.language);
-      const beautifyOnSave = Boolean(config && config.beautify_on_save);
-      if (beautifyOnSave) {
+      if (this.isBeautifyOnSave(languageInfo.language)) {
         if (editor.getPath() === undefined) {
           editor.getBuffer().setPath(filePath);
         }
         let text: string;
-        if (!this.configFromSettings().general.beautifyEntireFileOnSave && !!editor.getSelectedText()) {
+        if (!this.baseConfig.general.beautifyEntireFileOnSave && !!editor.getSelectedText()) {
           text = editor.getSelectedText();
         } else {
           text = editor.getText();
@@ -84,6 +82,7 @@ export class AtomBeautify {
       }
       const languageInfo = this.languageInEditor(editor);
       if (!languageInfo.language) {
+        logger.error(`Language info not found for ${languageInfo}`);
         return this.showError(new Error("Language could not be found or is not supported"));
       }
       let text: string;
@@ -109,6 +108,7 @@ export class AtomBeautify {
       return this.unibeautify.beautify(data).then((result) => {
         editor.setText(result);
       }).catch(error => {
+        logger.error(error);
         this.showError(error);
       });
     }
@@ -125,9 +125,32 @@ export class AtomBeautify {
       // TODO
     }
 
-    private configFromSettings(language?: Language) {
-      const config = atom.config.get("atom-beautify");
-      return language ? _.get(config, language.name) : config;
+    private get baseConfig() {
+      return atom.config.get("atom-beautify");
+    }
+
+    private configFromSettings() {
+      const languageConfig = this.baseConfig.languages;
+      const beautifierConfig = this.baseConfig.beautifiers;
+      Object.keys(languageConfig).forEach(language => {
+        const beautifiers = languageConfig[language].beautifiers;
+        beautifiers.forEach((beautifier: any) => {
+          // tslint:disable
+          languageConfig[language][beautifier] = {
+            prefer_beautifier_config: beautifierConfig[beautifier].prefer_beautifier_config,
+            [beautifier]: {
+              path: beautifierConfig[beautifier].executable_path
+            }
+          }
+        });
+      });
+      logger.info("Language/Beautifier Info", languageConfig);
+      return languageConfig;
+    }
+
+    private isBeautifyOnSave(language: Language): Boolean {
+      const languageConfig = this.baseConfig.languages;
+      return Boolean(_.get(languageConfig, language.name).beautify_on_save);
     }
 
     private openSettings() {
@@ -165,7 +188,7 @@ export class AtomBeautify {
     // }
 
     private showError(error: Error): Atom.Notification | undefined {
-      if (!this.configFromSettings().general.muteAllErrors) {
+      if (!this.baseConfig.general.muteAllErrors) {
         const stack = error.stack;
         const detail = `${error.name}: ${error.message}`;
         return atom.notifications.addError(error.message, {
@@ -188,8 +211,7 @@ export class AtomBeautify {
         if (fileConfig) {
           return fileConfig;
         } else {
-          const atomConfig = this.configFromSettings();
-          return _.unset(atomConfig, "general") ? atomConfig : {};
+          return this.configFromSettings();
         }
       } catch (error) {
         this.showError(error);
