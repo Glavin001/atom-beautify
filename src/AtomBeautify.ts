@@ -6,7 +6,8 @@ import Config from "./config";
 import * as path from "path";
 import * as _ from "lodash";
 import * as cosmiconfig from "cosmiconfig";
-import { logger } from "./logger";
+import { Logger } from "./logger";
+const logger = Logger(__filename);
 
 export class AtomBeautify {
     private unibeautify: Unibeautify;

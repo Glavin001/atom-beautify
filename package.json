@@ -147,6 +147,7 @@
     "js-beautify": "^1.7.5",
     "prettier": "^1.12.1",
     "prettydiff2": "^2.2.7",
+    "triple-beam": "^1.2.0",
     "unibeautify": "^0.13.1",
     "winston": "^3.0.0-rc5"
   },
@@ -164,7 +165,7 @@
     "rimraf": "^2.6.2",
     "ts-jest": "^22.4.4",
     "ts-node": "^6.0.2",
-    "tslint": "^5.9.1",
+    "tslint": "^5.10.0",
     "tslint-clean-code": "^0.2.7",
     "tslint-microsoft-contrib": "^5.0.3",
     "typescript": "^2.8.3"
@@ -181,5 +182,5 @@
   },
   "activationHooks": [
     "core:loaded-shell-environment"
-  ]  
+  ]
 }

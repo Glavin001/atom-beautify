@@ -1,78 +1,55 @@
-const winston = require("winston");
 import { format, TransformableInfo } from "logform";
-// import * as winston from "winston";
+import * as path from "path";
+const winston = require("winston");
+const { LEVEL, MESSAGE } = require("triple-beam");
 
-// interface Levels {
-//   [text: string]: number;
-// }
-//
-// const npmLevels: Levels = {
-//   error: 0,
-//   warn: 1,
-//   info: 2,
-//   verbose: 3,
-//   debug: 4,
-//   silly: 5
-// };
-
-// const logFormat = format.printf((info: TransformableInfo) => {
-//   return outputFormat(info);
-// });
-
-// tslint:disable:no-console
-const transports = {
-  console: new winston.transports.Console({
-    log(info: TransformableInfo, callback: { (): void; (): void; }) {
-      setImmediate(() => this.emit("logged", info));
-      if (this.stderrLevels[info.level]) {
-        if (Object.keys(info.metadata).length) {
-          console.error(info.message, info.metadata);
-        } else {
-          console.error(info.message);
-        }
-        if (callback) {
-          callback();
-        }
-        return;
-      }
-      if (Object.keys(info.metadata).length) {
-        console.log(info.message, info.metadata);
-      } else {
-        console.log(info.message);
-      }
-      if (callback) {
-        callback();
-      }
-      return;
-    }
-  })
+export const Logger = (file: string) => {
+  return winston.createLogger({
+    transports: [
+      new winston.transports.Console({
+        log(info: TransformableInfo, callback: { (): void; (): void; }) {
+          setImmediate(() => this.emit("logged", info));
+          if (this.stderrLevels[info[LEVEL]]) {
+            if (Object.keys(info.metadata).length) {
+              console.error(info[MESSAGE], info.metadata);
+            } else {
+              console.error(info[MESSAGE]);
+            }
+            if (callback) {
+              callback();
+            }
+            return;
+          }
+          if (Object.keys(info.metadata).length) {
+            // tslint:disable-next-line:no-console
+            console.log(info[MESSAGE], info.metadata);
+          } else {
+            // tslint:disable-next-line:no-console
+            console.log(info[MESSAGE]);
+          }
+          if (callback) {
+            callback();
+          }
+          return;
+        },
+        format: winston.format.combine(
+          format.timestamp({
+            format: "YYYY-MM-DD hh:mm:ss.SSS A"
+          }),
+          format.label({
+            label: path.basename(file)
+          }),
+          format.metadata({
+            fillExcept: ["message", "label", "level", "timestamp"]
+          }),
+          format.printf((info: TransformableInfo) => {
+            return `${info.timestamp} ${info.label} [${info.level}]: ${info.message}`;
+          })
+        ),
+      })
+    ]
+  });
 };
-
-export const logger = winston.createLogger({
-  format: format.combine(
-    format.timestamp({ format: "YYYY-MM-DD hh:mm:ss.SSS A" }),
-    format.metadata({
-      fillExcept: ["message", "label", "level", "timestamp"]
-    }),
-    format.printf((info: TransformableInfo) => {
-      return `${info.timestamp} ${info.label} [${info.level}]: ${info.message}`;
-    })
-  ),
-  transports: [
-    transports.console
-  ]
-});
-
-// transports.console.on("logged", (info: TransformableInfo) => {
-//   if (npmLevels[getAtomConfigLevel()] >= npmLevels[info.level]) {
-//     // tslint:disable-next-line:no-console
-//     console.log(outputFormat(info), info.meta);
-//   }
-// });
-
-// function outputFormat(info: TransformableInfo): string {
-//   return `${info.timestamp} ${info.label} [${info.level}]: ${info.message}`;
-// }
 
 function getAtomConfigLevel(): string {
   return atom.config.get("atom-beautify.general.loggerLevel") || "warn";
