@@ -8,3 +8,4 @@ language-elm
 language-puppet
 fuse
 react
+language-blade

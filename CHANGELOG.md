@@ -1,5 +1,5 @@
 # Next
-- ...
+- Issue [#448](https://github.com/Glavin001/atom-beautify/issues/448) Add support for Laravel Blade templates (beta)
 
 # v0.32.2 (2018-03-10)
 - Revert fix package.json repository field (#2062)

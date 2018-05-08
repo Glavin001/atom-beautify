@@ -153,6 +153,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Apex | `Apex` |`.cls`, `.trigger` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
 | Arduino | `Arduino` |`.ino`, `.pde` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
 | Bash | `Shell Script` |`.bash`, `.sh` | **[`beautysh`](https://github.com/bemeurer/beautysh)** |
+| Blade | `Blade` |`.blade.php` | **[`JS Beautify`](https://github.com/beautify-web/js-beautify)** |
 | C | `C`, `opencl` |`.h`, `.c`, `.cl` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)**, [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
 | Coldfusion | `html` |`.cfm`, `.cfml`, `.cfc` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Clojure | `Clojure` |`.clj`, `.cljs`, `.edn` | **[`cljfmt`](https://github.com/snoe/node-cljfmt)** |
