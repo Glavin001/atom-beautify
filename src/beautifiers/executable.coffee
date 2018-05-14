@@ -49,6 +49,7 @@ class Executable
       .then(() => @)
       .catch((error) =>
         if not @.required
+          @verbose("Not required")
           @
         else
           Promise.reject(error)
@@ -366,6 +367,7 @@ class HybridExecutable extends Executable
 
   constructor: (options) ->
     super(options)
+    @verbose("HybridExecutable Options", options)
     if options.docker?
       @dockerOptions = Object.assign({}, @dockerOptions, options.docker)
       @docker = @constructor.dockerExecutable()
@@ -389,18 +391,32 @@ class HybridExecutable extends Executable
     super()
       .catch((error) =>
         return Promise.reject(error) if not @docker?
-        @docker.init()
-          .then(=> @runImage(@versionArgs, @versionRunOptions))
-          .then((text) => @saveVersion(text))
-          .then(() => @installedWithDocker = true)
-          .then(=> @)
-          .catch((dockerError) =>
-            @debug(dockerError)
-            Promise.reject(error)
-          )
+        return @
+      )
+      .then(() =>
+        shouldTryWithDocker = not @isInstalled and @docker?
+        @verbose("Executable shouldTryWithDocker", shouldTryWithDocker, @isInstalled, @docker?)
+        if shouldTryWithDocker
+          return @initDocker()
+        return @
+      )
+
+  initDocker: () ->
+    @docker.init()
+      .then(=> @runImage(@versionArgs, @versionRunOptions))
+      .then((text) => @saveVersion(text))
+      .then(() => @installedWithDocker = true)
+      .then(=> @)
+      .catch((dockerError) =>
+        @debug(dockerError)
+        Promise.reject(error)
       )
 
   run: (args, options = {}) ->
+    @verbose("Running HybridExecutable")
+    @verbose("installedWithDocker", @installedWithDocker)
+    @verbose("docker", @docker)
+    @verbose("docker.isInstalled", @docker and @docker.isInstalled)
     if @installedWithDocker and @docker and @docker.isInstalled
       return @runImage(args, options)
     super(args, options)
@@ -430,7 +446,7 @@ class HybridExecutable extends Executable
             image,
             newArgs
           ],
-          options
+          Object.assign({}, options, { cmd: undefined })
         )
       )
 
