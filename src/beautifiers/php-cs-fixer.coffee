@@ -105,7 +105,7 @@ module.exports = class PHPCSFixer extends Beautifier
       isPhpScript = (finalPhpCsFixerPath.indexOf(".phar") isnt -1) or (finalPhpCsFixerPath.indexOf(".php") isnt -1)
       @verbose('isPhpScript', isPhpScript)
 
-      if finalPhpCsFixerPath and isPhpScript
+      if not phpCsFixer.isInstalled and finalPhpCsFixerPath and isPhpScript
         php.run([finalPhpCsFixerPath, phpCsFixerOptions, tempFile], runOptions)
           .then(=>
             @readFile(tempFile)
