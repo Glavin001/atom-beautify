@@ -7,7 +7,7 @@ describe("Atom Beautify", () => {
     await promise;
   });
 
-  it("atom-beautify package is activated", () => {
+  test("atom-beautify package is activated", () => {
     expect(atom.packages.isPackageActive("atom-beautify")).toEqual(true);
   });
 

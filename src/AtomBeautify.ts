@@ -5,7 +5,7 @@ import { CompositeDisposable, Disposable } from "atom";
 import Config from "./config";
 import * as path from "path";
 import * as _ from "lodash";
-import * as cosmiconfig from "cosmiconfig";
+import cosmiconfig, { ExplorerOptions } from "cosmiconfig";
 import { Logger } from "./logger";
 const logger = Logger(__filename);
 
@@ -202,15 +202,12 @@ export class AtomBeautify {
 
     private async unibeautifyConfiguration(filePath: string): Promise<LanguageOptionValues> {
       try {
-        const explorerOptions: Cosmiconfig.Options = {
-          rcExtensions: true,
-        };
-        const configExplorer = cosmiconfig("unibeautify", explorerOptions);
+        const configExplorer = cosmiconfig("unibeautify", {});
         const fileConfig = await configExplorer
-              .load(filePath)
+              .search(filePath)
               .then(result => (result ? result.config : undefined));
         if (fileConfig) {
-          return fileConfig;
+          return fileConfig as any;
         } else {
           return this.configFromSettings();
         }
