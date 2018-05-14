@@ -1,5 +1,8 @@
 # Next
+
+# v0.32.3 (2018-05-14)
 - Issue [#448](https://github.com/Glavin001/atom-beautify/issues/448) Add support for Laravel Blade templates (beta)
+- Fix Docker Executable with optional Executable, PHP-CS-Fixer ([#2129](https://github.com/Glavin001/atom-beautify/pull/2129))
 
 # v0.32.2 (2018-03-10)
 - Revert fix package.json repository field (#2062)
