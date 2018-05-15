@@ -67,7 +67,8 @@ module.exports = class PHPCSFixer extends Beautifier
     phpCsFixerOptions = [
       "fix"
       "--rules=#{options.rules}" if options.rules
-      "--config=#{options.cs_fixer_config_file}" if options.cs_fixer_config_file
+      "--config" if options.cs_fixer_config_file
+      "#{options.cs_fixer_config_file}" if options.cs_fixer_config_file
       "--allow-risky=#{options.allow_risky}" if options.allow_risky
       "--using-cache=no"
     ]
