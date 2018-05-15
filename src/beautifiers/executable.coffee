@@ -409,7 +409,7 @@ class HybridExecutable extends Executable
       .then(=> @)
       .catch((dockerError) =>
         @debug(dockerError)
-        Promise.reject(error)
+        Promise.reject(dockerError)
       )
 
   run: (args, options = {}) ->
