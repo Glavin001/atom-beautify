@@ -389,6 +389,9 @@ class HybridExecutable extends Executable
   installedWithDocker: false
   init: () ->
     super()
+      .then(() =>
+        return @
+      )
       .catch((error) =>
         return Promise.reject(error) if not @docker?
         return @
@@ -400,6 +403,13 @@ class HybridExecutable extends Executable
           return @initDocker()
         return @
       )
+      .catch((error) =>
+        if not @.required
+          @verbose("Not required")
+          @
+        else
+          Promise.reject(error)
+      )
 
   initDocker: () ->
     @docker.init()
@@ -409,7 +419,7 @@ class HybridExecutable extends Executable
       .then(=> @)
       .catch((dockerError) =>
         @debug(dockerError)
-        Promise.reject(error)
+        Promise.reject(dockerError)
       )
 
   run: (args, options = {}) ->
