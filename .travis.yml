@@ -66,7 +66,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       curl https://nixos.org/nix/install | sh &&
       . ~/.nix-profile/etc/profile.d/nix.sh &&
-      nix-env -i uncrustify R elm-format terraform atom atom-beta opam &&
+      nix-env -i uncrustify R elm-format terraform atom atom-beta &&
       pip install --user -r requirements.txt;
     elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       brew update && brew cask zap oclint && brew bundle &&
