@@ -1,5 +1,9 @@
 # Next
 
+# v0.32.4 (2018-05-15)
+- Fix php-cs-fixer not running when using `.phar` files ([#2134](https://github.com/Glavin001/atom-beautify/pull/2134))
+- Fix error `Error is not defined` ([#2134](https://github.com/Glavin001/atom-beautify/pull/2134))
+
 # v0.32.3 (2018-05-14)
 - Issue [#448](https://github.com/Glavin001/atom-beautify/issues/448) Add support for Laravel Blade templates (beta)
 - Fix Docker Executable with optional Executable, PHP-CS-Fixer ([#2129](https://github.com/Glavin001/atom-beautify/pull/2129))
