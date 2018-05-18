@@ -7,7 +7,7 @@ module.exports = {
   ###
   See SQF Syntax
   https://community.bistudio.com/wiki/SQF_syntax
-  ###
+  ####
   ###
   Supported Grammars
   ###
