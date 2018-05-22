@@ -1,19 +1,16 @@
 ---
-_:
-  indent_char: " "
-  indent_size: 2
 TypeScript:
+  beautifiers: ["Prettier"]
+  align_assignments: false
+  arrow_parens: "as-needed"
+  break_chained_methods: true
+  end_with_comma: true
+  end_with_semicolon: true
   indent_char: " "
   indent_size: 2
-JavaScript:
-  indent_char: " "
-  indent_size: 2
-CSS:
-  indent_char: " "
-  indent_size: 2
-HTML:
-  indent_char: " "
-  indent_size: 2
-JSON:
-  indent_char: " "
-  indent_size: 2
+  jsx_brackets: false
+  multiline_ternary: true
+  object_curly_spacing: true
+  quotes: "double"
+  space_after_anon_function: false
+  wrap_line_length: 80

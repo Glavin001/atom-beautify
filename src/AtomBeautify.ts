@@ -229,7 +229,10 @@ export class AtomBeautify {
         atomGrammar: grammarName,
         extension: fileExtension
       });
-      const languageName = languages[0].name;
+      let languageName;
+      if (languages.length > 0) {
+        languageName = languages[0].name;
+      }
       return { languageName, grammarName, fileExtension };
     }
 
