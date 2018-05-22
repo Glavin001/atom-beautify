@@ -4,6 +4,7 @@ Requires https://github.com/FriendsOfPHP/phpcbf
 
 "use strict"
 Beautifier = require('./beautifier')
+path = require('path')
 
 module.exports = class PHPCBF extends Beautifier
   name: "PHPCBF"
