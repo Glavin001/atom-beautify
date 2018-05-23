@@ -1,5 +1,6 @@
 "use strict"
 Beautifier = require('./beautifier')
+beautifyCodeBlocks = require './markdown-blocks'
 
 module.exports = class Remark extends Beautifier
   name: "Remark"
@@ -28,16 +29,23 @@ module.exports = class Remark extends Beautifier
       strong: true
       emphasis: true
       position: true
+      beautifyCodeBlocks: true
     }
     Markdown: true
   }
 
   beautify: (text, language, options) ->
+    logger = @logger
     return new @Promise((resolve, reject) ->
       try
         remark = require 'remark'
         cleanMarkdown = remark().process(text, options).toString()
-        resolve cleanMarkdown
+        if options.beautifyCodeBlocks
+          beautifyCodeBlocks(cleanMarkdown, logger)
+            .then(resolve)
+            .catch(reject)
+        else
+          resolve cleanMarkdown
       catch err
         @error("Remark error: #{err}")
         reject(err)
