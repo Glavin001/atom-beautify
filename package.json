@@ -4,10 +4,7 @@
   "version": "0.32.4",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Glavin001/atom-beautify.git"
-  },
+  "repository": "https://github.com/Glavin001/atom-beautify.git",
   "bugs": {
     "url": "https://github.com/Glavin001/atom-beautify/issues"
   },
