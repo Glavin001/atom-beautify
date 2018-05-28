@@ -1,5 +1,10 @@
 # Next
 
+# v0.32.5 (2018-05-28)
+- Fixes an issue with Rubocop not working on Windows ([#2092](https://github.com/Glavin001/atom-beautify/issues/2092))
+- Fixes an issue with PHPCBF not running when specifying a path to it ([#2140](https://github.com/Glavin001/atom-beautify/issues/2140))
+- Fixes the repository link to Atom Beautify within Atom's settings ([#2086](https://github.com/Glavin001/atom-beautify/pull/2086))
+
 # v0.32.4 (2018-05-15)
 - Fix php-cs-fixer not running when using `.phar` files ([#2134](https://github.com/Glavin001/atom-beautify/pull/2134))
 - Fix error `Error is not defined` ([#2134](https://github.com/Glavin001/atom-beautify/pull/2134))
