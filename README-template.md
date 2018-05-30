@@ -4,7 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/issues)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Glavin001/atom-beautify.svg)](https://greenkeeper.io/)
 
-[![Slack](https://unibeautify-slack.herokuapp.com/badge.svg)](https://unibeautify-slack.herokuapp.com/)
+[![Slack](https://unibeautify-slack.glitch.me/badge.svg)](https://unibeautify-slack.glitch.me/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/unibeautify.svg?style=social&label=Follow)](https://twitter.com/unibeautify)
 [![Gitter](https://img.shields.io/gitter/room/Glavin001/atom-beautify.svg?style=flat-square)](https://gitter.im/Glavin001/atom-beautify)
 [![Bountysource](https://img.shields.io/bountysource/team/atom-beautify/activity.svg?style=flat-square)](https://www.bountysource.com/teams/atom-beautify)
