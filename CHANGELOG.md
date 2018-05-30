@@ -1,4 +1,5 @@
 # Next
+- Fixes an issue where Atom Beautify would display a Docker error instead of an executable error ([#2146](https://github.com/Glavin001/atom-beautify/issues/2146))
 
 # v0.32.5 (2018-05-28)
 - Fixes an issue with Rubocop not working on Windows ([#2092](https://github.com/Glavin001/atom-beautify/issues/2092))
