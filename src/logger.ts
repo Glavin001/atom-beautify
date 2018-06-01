@@ -1,10 +1,11 @@
 import { format, TransformableInfo } from "logform";
 import * as path from "path";
-const winston = require("winston");
+import * as winston from "winston";
 const { LEVEL, MESSAGE } = require("triple-beam");
 
 export const Logger = (file: string) => {
   return winston.createLogger({
+    level: getAtomConfigLevel(),
     transports: [
       new winston.transports.Console({
         log(info: TransformableInfo, callback: { (): void; (): void; }) {
