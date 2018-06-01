@@ -1,10 +1,10 @@
-import {newUnibeautify, Unibeautify, Beautifier, Language, LanguageOptionValues, BeautifyData} from "unibeautify";
+import {newUnibeautify, Unibeautify, Language, LanguageOptionValues, BeautifyData} from "unibeautify";
 import beautifiers from "./beautifiers";
-import { TextEditor, Cursor, Point, Range, Notification, CompositeDisposable, Disposable } from "atom";
+import { TextEditor, Cursor, Point, Range, Notification, CompositeDisposable } from "atom";
 import Config from "./config";
 import * as path from "path";
 import _ from "lodash";
-import cosmiconfig, { ExplorerOptions } from "cosmiconfig";
+import cosmiconfig from "cosmiconfig";
 import { Logger } from "./logger";
 const logger = Logger(__filename);
 
@@ -51,7 +51,7 @@ export class AtomBeautify {
 
     // Method that handles beautify on save
     private beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: TextEditor) {
-      const { languageName, grammarName, fileExtension } = this.languagesForEditor(editor, filePath);
+      const { languageName, atomGrammar, fileExtension } = this.languagesForEditor(editor, filePath);
       if (!languageName) {
         return this.showError(new Error("Language could not be found or is not supported"));
       }
@@ -66,6 +66,7 @@ export class AtomBeautify {
           const beautifyData: BeautifyData = {
             languageName,
             fileExtension,
+            atomGrammar,
             filePath,
             projectPath: projectPath || undefined,
             options: beautifyOptions,
@@ -84,7 +85,7 @@ export class AtomBeautify {
       if (editor === undefined) {
         return this.showError(new Error("No active editor was found"));
       }
-      const { languageName, grammarName, fileExtension } = this.languagesForEditor(editor);
+      const { languageName, atomGrammar, fileExtension } = this.languagesForEditor(editor);
       if (!languageName) {
         logger.error(`Language info not found for ${languageName}`);
         return this.showError(new Error("Language could not be found or is not supported"));
@@ -95,6 +96,7 @@ export class AtomBeautify {
         const beautifyData: BeautifyData = {
           languageName,
           fileExtension,
+          atomGrammar,
           filePath: editor.getPath() || undefined,
           projectPath: projectPath || undefined,
           options: beautifyOptions,
@@ -126,6 +128,7 @@ export class AtomBeautify {
     // On save format service provider
     public provideOnSaveCodeFormat() {
       return {
+        // tslint:disable-next-line:no-empty
         formatOnSave: (editor: TextEditor) => {},
         priority: 1,
         grammarScopes: []
@@ -135,6 +138,7 @@ export class AtomBeautify {
     // Manual trigger format service provider
     public provideFileCodeFormat() {
       return {
+        // tslint:disable-next-line:no-empty
         formatEntireFile: (editor: TextEditor, range: Range) => {},
         priority: 1,
         grammarScopes: []
@@ -144,6 +148,7 @@ export class AtomBeautify {
     // Range format service provider
     public provideRangeCodeFormat() {
       return {
+        // tslint:disable-next-line:no-empty
         formatCode: (editor: TextEditor, range: Range) => {},
         priority: 1,
         grammarScopes: []
@@ -165,7 +170,10 @@ export class AtomBeautify {
     // Check if a language is configured to beautify on save
     private isBeautifyOnSave(language: string): Boolean {
       const languageConfig = this.baseConfig.languages;
-      return Boolean(_.get(languageConfig, language).beautify_on_save);
+      if (languageConfig.hasOwnProperty(language)) {
+        return Boolean(_.get(languageConfig, language).beautify_on_save);
+      }
+      return false;
     }
 
     // Open Settings from the top menu
@@ -188,15 +196,14 @@ export class AtomBeautify {
 
     // Retrieve the settings from Unibeautify config, or from Atom Settings if can't be found
     private beautifyOptions(filePath: string): Promise<LanguageOptionValues> {
-      try {
         const configExplorer = cosmiconfig("unibeautify", {});
         return configExplorer
-              .search(filePath)
-              .then(result => (result ? result.config : this.atomSettings));
-      } catch (error) {
-        this.showError(error);
-        return Promise.reject(error);
-      }
+        .search(filePath)
+        .then(result => (result ? result.config : this.atomSettings))
+        .catch((error) => {
+          this.showError(error);
+          Promise.reject(error);
+        });
     }
 
     // Retrieve config for Atom Beautify from Atom settings
@@ -220,20 +227,20 @@ export class AtomBeautify {
 
     // Get language information from the editor
     private languagesForEditor(editor: TextEditor, filePath?: string) {
-      const grammarName = editor.getGrammar().name;
+      const atomGrammar = editor.getGrammar().name;
       if (!filePath) {
         filePath = editor.getPath();
       }
       const fileExtension = filePath ? path.extname(filePath).slice(1) : undefined;
       const languages: Language[] = this.unibeautify.findLanguages({
-        atomGrammar: grammarName,
+        atomGrammar,
         extension: fileExtension
       });
       let languageName;
       if (languages.length > 0) {
         languageName = languages[0].name;
       }
-      return { languageName, grammarName, fileExtension };
+      return { languageName, atomGrammar, fileExtension };
     }
 
     // ===== Helpers =====
