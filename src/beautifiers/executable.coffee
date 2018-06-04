@@ -394,13 +394,13 @@ class HybridExecutable extends Executable
       )
       .catch((error) =>
         return Promise.reject(error) if not @docker?
-        return @
+        return Promise.resolve(error)
       )
-      .then(() =>
+      .then((errorOrThis) =>
         shouldTryWithDocker = not @isInstalled and @docker?
         @verbose("Executable shouldTryWithDocker", shouldTryWithDocker, @isInstalled, @docker?)
         if shouldTryWithDocker
-          return @initDocker()
+          return @initDocker().catch(() => Promise.reject(errorOrThis))
         return @
       )
       .catch((error) =>
@@ -459,6 +459,5 @@ class HybridExecutable extends Executable
           Object.assign({}, options, { cmd: undefined })
         )
       )
-
 
 module.exports = HybridExecutable
