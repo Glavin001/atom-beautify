@@ -3,6 +3,7 @@
 Beautifier = require('./beautifier')
 Path = require('path')
 {allowUnsafeNewFunction} = require 'loophole'
+requireg = require('requireg');
 
 module.exports = class ESLintFixer extends Beautifier
   name: "ESLint Fixer"
@@ -24,10 +25,10 @@ module.exports = class ESLintFixer extends Beautifier
         importPath = Path.join(projectPath, 'node_modules', 'eslint')
         eslint = null
         try
-          eslint = require(importPath)
+          eslint = requireg('eslint')
         catch
           try
-            eslint = requireg('eslint')
+            eslint = require(importPath)
           catch
             try
               eslint = require('eslint')
