@@ -400,7 +400,7 @@ class HybridExecutable extends Executable
         shouldTryWithDocker = not @isInstalled and @docker?
         @verbose("Executable shouldTryWithDocker", shouldTryWithDocker, @isInstalled, @docker?)
         if shouldTryWithDocker
-          return @initDocker().catch(() => Promise.reject(errorOrThis))
+          return @initDocker().catch(() -> Promise.reject(errorOrThis))
         return @
       )
       .catch((error) =>
