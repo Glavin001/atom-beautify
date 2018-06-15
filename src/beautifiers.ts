@@ -5,6 +5,12 @@ import jsBeautify from "@unibeautify/beautifier-js-beautify";
 import eslint from "@unibeautify/beautifier-eslint";
 import phpCsFixer from "@unibeautify/beautifier-php-cs-fixer";
 
-const beautifiers: Beautifier[] = <any[]>[prettier, jsBeautify, prettyDiff, eslint, phpCsFixer];
+const beautifiers: Beautifier[] = <any[]>[
+  prettier,
+  jsBeautify,
+  prettyDiff,
+  eslint,
+  phpCsFixer,
+];
 
 export default beautifiers;

@@ -8,7 +8,7 @@ export const Logger = (file: string) => {
     level: getAtomConfigLevel(),
     transports: [
       new winston.transports.Console({
-        log(info: TransformableInfo, callback: { (): void; (): void; }) {
+        log(info: TransformableInfo, callback: { (): void; (): void }) {
           setImmediate(() => this.emit("logged", info));
           if (this.stderrLevels[info[LEVEL]]) {
             if (Object.keys(info.metadata).length) {
@@ -35,20 +35,22 @@ export const Logger = (file: string) => {
         },
         format: winston.format.combine(
           format.timestamp({
-            format: "YYYY-MM-DD hh:mm:ss.SSS A"
+            format: "YYYY-MM-DD hh:mm:ss.SSS A",
           }),
           format.label({
-            label: path.basename(file)
+            label: path.basename(file),
           }),
           format.metadata({
-            fillExcept: ["message", "label", "level", "timestamp"]
+            fillExcept: ["message", "label", "level", "timestamp"],
           }),
           format.printf((info: TransformableInfo) => {
-            return `${info.timestamp} ${info.label} [${info.level}]: ${info.message}`;
+            return `${info.timestamp} ${info.label} [${info.level}]: ${
+              info.message
+            }`;
           })
         ),
-      })
-    ]
+      }),
+    ],
   });
 };
 
