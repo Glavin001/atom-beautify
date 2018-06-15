@@ -13,7 +13,7 @@ export class AtomBeautify {
     private subscriptions: CompositeDisposable;
 
     // Activates the Atom Beautify package
-    public activate(state: any): void {
+    public activate(): void {
         logger.info("Atom Beautify activated with beautifiers", {beautifiers});
         this.unibeautify = newUnibeautify();
         this.unibeautify.loadBeautifiers(beautifiers);
