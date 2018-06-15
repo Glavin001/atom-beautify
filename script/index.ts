@@ -21,7 +21,7 @@ function writeOptionsJson() {
     type: "object",
     collapsed: true,
     order: 1,
-    properties: languageOptions
+    properties: languageOptions,
   };
   const beautifierOptions = buildBeautifierOptions();
   const beautifiers = {
@@ -30,9 +30,9 @@ function writeOptionsJson() {
     type: "object",
     collapsed: true,
     order: 2,
-    properties: beautifierOptions
+    properties: beautifierOptions,
   };
-  const allOptions = JSON.stringify({languages, beautifiers}, null, 2);
+  const allOptions = JSON.stringify({ languages, beautifiers }, null, 2);
   const outputFile = path.resolve(__dirname, "../dist/options.json");
   fs.writeFile(outputFile, allOptions, (error: Error) => {
     if (error) {
@@ -47,7 +47,9 @@ function buildLanguageOptions() {
   languages.forEach((lang, index) => {
     const langName: string = lang.name;
     if (!languageOptions[langName]) {
-      const beautifiers = Unibeautify.getBeautifiersForLanguage(lang).map(beautifier => beautifier.name);
+      const beautifiers = Unibeautify.getBeautifiersForLanguage(lang).map(
+        beautifier => beautifier.name
+      );
       const languageProperties = buildOptionsForLanguage(lang, beautifiers);
       languageOptions[langName] = {
         title: lang.name,
@@ -59,7 +61,7 @@ function buildLanguageOptions() {
         beautifiers: beautifiers,
         grammars: lang.atomGrammars,
         extensions: lang.extensions,
-        properties: languageProperties
+        properties: languageProperties,
       };
     }
   });
@@ -68,11 +70,18 @@ function buildLanguageOptions() {
 
 function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
   const languageOptions: AtomConfigRegistry = {};
-  const optionsForLanguage: OptionsRegistry = Unibeautify.getOptionsSupportedForLanguage(language);
+  const optionsForLanguage: OptionsRegistry = Unibeautify.getOptionsSupportedForLanguage(
+    language
+  );
   const options: OptionsRegistry[] = (Unibeautify as any).options;
   Object.keys(optionsForLanguage).forEach(key => {
     const option: Option = optionsForLanguage[key];
-    const title = option.title ? option.title : key.split("_").map(_.capitalize).join(" ");
+    const title = option.title
+      ? option.title
+      : key
+          .split("_")
+          .map(_.capitalize)
+          .join(" ");
     languageOptions[key] = {
       title: title,
       type: option.type,
@@ -81,24 +90,26 @@ function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
       enum: option.enum,
       minimum: option.minimum,
       maximum: option.maximum,
-      items: option.items
+      items: option.items,
     };
   });
   languageOptions.beautifiers = {
     title: "Beautifiers",
     type: "array",
     default: beautifiers,
-    description: `Comma separated list of beautifiers to apply when beautifying ${language.name} code`,
+    description: `Comma separated list of beautifiers to apply when beautifying ${
+      language.name
+    } code`,
     items: {
-      type: "string"
-    }
+      type: "string",
+    },
   };
   languageOptions.beautify_on_save = {
     title: `Beautify ${language.name} On Save`,
     type: "boolean",
     default: false,
     description: `Automatically beautify ${language.name} files on save`,
-    order: -1
+    order: -1,
   };
   return languageOptions;
 }
@@ -113,7 +124,7 @@ function buildBeautifierOptions() {
       type: "object",
       collapsed: true,
       order: index,
-      properties: beautifierProperties
+      properties: beautifierProperties,
     };
   });
   return beautifierOptions;
@@ -124,8 +135,10 @@ function buildOptionsForBeautifier(beautifier: Beautifier) {
   beautifierOptions.prefer_beautifier_config = {
     title: `Prefer ${beautifier.name} Config`,
     type: "boolean",
-    description: `Use ${beautifier.name} config file in place of Atom or Unibeautify settings`,
-    default: false
+    description: `Use ${
+      beautifier.name
+    } config file in place of Atom or Unibeautify settings`,
+    default: false,
   };
   const dependencies = beautifier.dependencies;
   if (dependencies && dependencies.length !== 0) {
@@ -135,7 +148,7 @@ function buildOptionsForBeautifier(beautifier: Beautifier) {
           title: dependency.name,
           type: "string",
           description: `Path to the ${dependency.name} program executable`,
-          default: ""
+          default: "",
         };
       }
     });
@@ -153,7 +166,7 @@ interface AtomConfig {
   minimum?: number;
   maximum?: number;
   items?: {
-    type: string
+    type: string;
   };
   collapsed?: boolean;
   scope?: string;
