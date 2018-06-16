@@ -31,42 +31,40 @@ export class AtomBeautify {
     this.unibeautify = newUnibeautify();
     this.unibeautify.loadBeautifiers(beautifiers);
     this.subscriptions = new CompositeDisposable();
-    this.subscriptions.add(this.handleSaveEvent());
     this.subscriptions.add(
+      this.handleSaveEvent(),
       atom.commands.add(
         "atom-workspace",
         "atom-beautify:beautify-editor",
         this.beautifyEditor.bind(this)
-      )
-    );
-    this.subscriptions.add(
+      ),
       atom.commands.add(
         "atom-workspace",
         "atom-beautify:help-debug-editor",
         this.debug.bind(this)
-      )
-    );
-    this.subscriptions.add(
+      ),
       atom.commands.add(
         "atom-workspace",
         "atom-beautify:open-settings",
         this.openSettings.bind(this)
-      )
-    );
-    this.subscriptions.add(
+      ),
       atom.commands.add(
         ".tree-view .file .name",
         "atom-beautify:beautify-file",
         this.beautifyFile.bind(this)
-      )
-    );
-    // tslint:disable-next-line:max-line-length
-    this.subscriptions.add(
+      ),
       atom.commands.add(
         ".tree-view .directory .name",
         "atom-beautify:beautify-directory",
         this.beautifyDirectory.bind(this)
-      )
+      ),
+      atom.config.onDidChange(
+        "atom-beautify.general.loggerLevel",
+        (values: {oldValue: string; newValue: string}) => {
+          logger.level = values.newValue;
+          logger.info(`Logger level changed from ${values.oldValue} to ${values.newValue}`);
+        },
+      ),
     );
   }
 
@@ -77,7 +75,7 @@ export class AtomBeautify {
 
   // Retrieve the configuration options for Atom Beautify to display in Atom Settings
   public get config() {
-    return _.merge(Config, require("./options.json"));
+    return Object.assign(Config, require("./options.json"));
   }
 
   // Register the handleSaveEvent to add as a subscription
@@ -112,9 +110,6 @@ export class AtomBeautify {
       );
     }
     if (this.isBeautifyOnSave(languageName)) {
-      // if (editor.getPath() === undefined) {
-      //   editor.getBuffer().setPath(filePath);
-      // }
       const text = this.textInEditor(editor);
       const [projectPath] = atom.project.relativizePath(filePath);
       logger.info("Beautify file on save", { filePath, text, languageName });
@@ -139,6 +134,7 @@ export class AtomBeautify {
   private beautifyEditor() {
     const editor = atom.workspace.getActiveTextEditor();
     if (editor === undefined) {
+      logger.error("No active editor was found");
       return this.showError(new Error("No active editor was found"));
     }
     const {
@@ -182,6 +178,7 @@ export class AtomBeautify {
 
   // Calls Unibeautify's beautify method
   private beautify(data: BeautifyData): Promise<string> {
+    logger.info("Beautifying with", { data });
     return this.unibeautify.beautify(data).catch(error => {
       logger.error(error);
       this.showError(error);
@@ -286,7 +283,6 @@ export class AtomBeautify {
         };
       });
     });
-    logger.info("Language/Beautifier Info", { languageConfig });
     return languageConfig;
   }
 
@@ -333,14 +329,17 @@ export class AtomBeautify {
     });
   }
 
-  // private setCursors(editor: any, posArray: any[]) {
-  //   for (let i = 0, j = 0, len = posArray.length; j < len; i = ++j) {
-  //     const bufferPosition = posArray[i];
-  //     if (i === 0) {
-  //       editor.setCursorBufferPosition(bufferPosition);
-  //       continue;
-  //     }
-  //     editor.addCursorAtBufferPosition(bufferPosition);
-  //   }
-  // }
+  private setCursors(editor: any, posArray: any[]) {
+    // tslint:disable-next-line
+    for (let i = 0, j = 0, len = posArray.length; j < len; i = ++j) {
+    // tslint:disable-next-line:id-length
+      const bufferPosition = posArray[i];
+      // tslint:disable-next-line:id-length
+      if (i === 0) {
+        editor.setCursorBufferPosition(bufferPosition);
+        continue;
+      }
+      editor.addCursorAtBufferPosition(bufferPosition);
+    }
+  }
 }
