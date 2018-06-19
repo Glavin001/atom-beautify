@@ -15,6 +15,18 @@
       {
         "type": "separator"
       }
+    ],
+    ".tree-view .full-menu .file": [
+      {
+        "type": "separator"
+      },
+      {
+        "label": "Beautify file",
+        "command": "atom-beautify:beautify-file"
+      },
+      {
+        "type": "separator"
+      }
     ]
   },
   "menu": [

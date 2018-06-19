@@ -216,8 +216,10 @@ export class AtomBeautify {
     };
   }
 
-  private beautifyFile() {
-    // TODO
+  private beautifyFile({ target }: { target: any }) {
+    logger.info(target.dataset.path);
+    const filePath = target.dataset.path;
+    return this.showError(new Error("Could not beautify file"));
   }
 
   private beautifyDirectory() {
