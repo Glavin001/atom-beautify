@@ -83,7 +83,7 @@ module.exports = class Languages
     "xml"
     "xtemplate"
     "yaml"
-    'marko'
+    "marko"
   ]
 
   ###
