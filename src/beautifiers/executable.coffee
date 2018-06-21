@@ -49,6 +49,7 @@ class Executable
       .then(() => @)
       .catch((error) =>
         if not @.required
+          @verbose("Not required")
           @
         else
           Promise.reject(error)
@@ -366,6 +367,7 @@ class HybridExecutable extends Executable
 
   constructor: (options) ->
     super(options)
+    @verbose("HybridExecutable Options", options)
     if options.docker?
       @dockerOptions = Object.assign({}, @dockerOptions, options.docker)
       @docker = @constructor.dockerExecutable()
@@ -387,20 +389,44 @@ class HybridExecutable extends Executable
   installedWithDocker: false
   init: () ->
     super()
+      .then(() =>
+        return @
+      )
       .catch((error) =>
         return Promise.reject(error) if not @docker?
-        @docker.init()
-          .then(=> @runImage(@versionArgs, @versionRunOptions))
-          .then((text) => @saveVersion(text))
-          .then(() => @installedWithDocker = true)
-          .then(=> @)
-          .catch((dockerError) =>
-            @debug(dockerError)
-            Promise.reject(error)
-          )
+        return Promise.resolve(error)
+      )
+      .then((errorOrThis) =>
+        shouldTryWithDocker = not @isInstalled and @docker?
+        @verbose("Executable shouldTryWithDocker", shouldTryWithDocker, @isInstalled, @docker?)
+        if shouldTryWithDocker
+          return @initDocker().catch(() -> Promise.reject(errorOrThis))
+        return @
+      )
+      .catch((error) =>
+        if not @.required
+          @verbose("Not required")
+          @
+        else
+          Promise.reject(error)
+      )
+
+  initDocker: () ->
+    @docker.init()
+      .then(=> @runImage(@versionArgs, @versionRunOptions))
+      .then((text) => @saveVersion(text))
+      .then(() => @installedWithDocker = true)
+      .then(=> @)
+      .catch((dockerError) =>
+        @debug(dockerError)
+        Promise.reject(dockerError)
       )
 
   run: (args, options = {}) ->
+    @verbose("Running HybridExecutable")
+    @verbose("installedWithDocker", @installedWithDocker)
+    @verbose("docker", @docker)
+    @verbose("docker.isInstalled", @docker and @docker.isInstalled)
     if @installedWithDocker and @docker and @docker.isInstalled
       return @runImage(args, options)
     super(args, options)
@@ -418,7 +444,7 @@ class HybridExecutable extends Executable
         rootPath = '/mountedRoot'
         newArgs = args.map((arg) ->
           if (typeof arg is 'string' and not arg.includes(':') \
-            and path.isAbsolute(arg) and not path.dirname(arg).startsWith(tmpDir))
+            and path.isAbsolute(arg) and not path.dirname(arg).startsWith(tmpDir)) \
             then path.join(rootPath, arg) else arg
         )
 
@@ -430,9 +456,8 @@ class HybridExecutable extends Executable
             image,
             newArgs
           ],
-          options
+          Object.assign({}, options, { cmd: undefined })
         )
       )
-
 
 module.exports = HybridExecutable

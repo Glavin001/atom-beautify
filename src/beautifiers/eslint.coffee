@@ -10,6 +10,7 @@ module.exports = class ESLintFixer extends Beautifier
 
   options: {
     JavaScript: false
+    Vue: false
   }
 
   beautify: (text, language, options) ->

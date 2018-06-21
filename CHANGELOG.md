@@ -1,5 +1,51 @@
 # Next
-- Add support  Edge (`.edge`) language
+- Fixes an issue where Atom Beautify would display a Docker error instead of an executable error ([#2146](https://github.com/Glavin001/atom-beautify/issues/2146))
+- Fixes Rubocop not excluding files with an exact pattern match (`db/schema.rb` vs `db/**/*`)
+
+# v0.32.5 (2018-05-28)
+- Fixes an issue with Rubocop not working on Windows ([#2092](https://github.com/Glavin001/atom-beautify/issues/2092))
+- Fixes an issue with PHPCBF not running when specifying a path to it ([#2140](https://github.com/Glavin001/atom-beautify/issues/2140))
+- Fixes the repository link to Atom Beautify within Atom's settings ([#2086](https://github.com/Glavin001/atom-beautify/pull/2086))
+
+# v0.32.4 (2018-05-15)
+- Fix php-cs-fixer not running when using `.phar` files ([#2134](https://github.com/Glavin001/atom-beautify/pull/2134))
+- Fix error `Error is not defined` ([#2134](https://github.com/Glavin001/atom-beautify/pull/2134))
+
+# v0.32.3 (2018-05-14)
+- Issue [#448](https://github.com/Glavin001/atom-beautify/issues/448) Add support for Laravel Blade templates (beta)
+- Fix Docker Executable with optional Executable, PHP-CS-Fixer ([#2129](https://github.com/Glavin001/atom-beautify/pull/2129))
+
+# v0.32.2 (2018-03-10)
+- Revert fix package.json repository field (#2062)
+
+# v0.32.1 (2018-03-10)
+- Update Prettier to 1.11.1. (#2060)
+- Fix package.json repository field (#2062)
+- Fix "Reindent" option for sqlformat. (#2064)
+
+# v0.32.0 (2018-03-02)
+- See [#2026](https://github.com/Glavin001/atom-beautify/issues/2026) Add Vue support to ESLint Fixer beautifier. Should be used with [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue).
+- Fix Beauify File option for .lua files
+- Switch to Remark as a default markdown beautifier due to a more active state of its community compared to Tidy Markdown ([#2004](https://github.com/Glavin001/atom-beautify/pull/2004)).
+  This is a __breaking change__ for Tidy Markdown users:
+     - list indentation is now four characters per level (three spaces after `-` for unordered lists and two spaces after `N.` in ordered lists)
+     - the contents of frontmatter are no longer formatted
+
+  You can easily switch back to the old behaviour by choosing _Tidy Markdown_ in package preferences.
+  Alternatively, you can customise Remark beautifier with `.jsbeautifyrc` (see [available options](https://github.com/remarkjs/remark/tree/master/packages/remark-stringify#options)).
+- Add GN language and beautifier
+- Add the option to indent Bash with tabs [#1951](https://github.com/Glavin001/atom-beautify/issues/1951)
+- See [#1980](https://github.com/Glavin001/atom-beautify/pull/1980). Add VHDL beautifier and language support.
+- Implement Verilog/SystemVerilog beautification via emacs verilog-mode
+- Add support for MagicPython grammar [#1851](https://github.com/Glavin001/atom-beautify/issues/1851)
+- Add "Reindent" option for sqlformat. See [#1926](https://github.com/Glavin001/atom-beautify/pull/1926).
+- Add hindent and brittany beautifiers for haskell
+- Breaking change to `pybeautifier`: Fix typo, change `formater` to `formatter`. See [#1898](https://github.com/Glavin001/atom-beautify/pull/1898).
+- Fixes [#1773](https://github.com/Glavin001/atom-beautify/issues/1773) and [#793](https://github.com/Glavin001/atom-beautify/issues/793). ruby-beautify with Rubocop now respects `Exclude` settings, and properly loads inherited config files (like `~/.rubocop.yml`)
+- Add hindent and brittany beautifiers for haskell
+- Fix [#1862](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for ocp-indent as an executable
+- See [#601](https://github.com/Glavin001/atom-beautify/issues/1862) Add support for tsx files
+- See [#1497](https://github.com/Glavin001/atom-beautify/issues/1497) and [#802](https://github.com/Glavin001/atom-beautify/issues/802)
 
 # v0.30.9 (2017-11-22)
 - Fix [#1949](https://github.com/Glavin001/atom-beautify/issues/1949): Fix beautify on save when text has not changed.
@@ -16,8 +62,8 @@
 - Fix for [#1888](https://github.com/Glavin001/atom-beautify/issues/1888). Allow 0 for minor and patch versions of Docker
 - Add Atom-Beautify package settings menu item to Packages menu [#1869](https://github.com/Glavin001/atom-beautify/issues/1869)
 - Add `.ttslua` file extension to Lua language
-- Fix [#1638]. Update TypeScript Formatter dependency
-- Fix [#1833] `os.tmpDir` deprecation warning
+- Fix [#1638](https://github.com/Glavin001/atom-beautify/issues/1638). Update TypeScript Formatter dependency
+- Fix [#1833](https://github.com/Glavin001/atom-beautify/issues/1833) `os.tmpDir` deprecation warning
 
 # v0.30.5 (2017-08-11)
 - Fix for [#1721](https://github.com/Glavin001/atom-beautify/issues/1721). Changes required due to TextBuffer.save becoming async in Atom 1.19

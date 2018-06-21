@@ -8,7 +8,8 @@ module.exports = {
   Supported Grammars
   ###
   grammars: [
-    "Python"
+    "Python",
+    "MagicPython"
   ]
 
   ###
@@ -34,7 +35,7 @@ module.exports = {
       items:
         type: 'string'
       description: "do not fix these errors/warnings"
-    formater:
+    formatter:
       type: 'string'
       default: 'autopep8'
       enum: ['autopep8', 'yapf']

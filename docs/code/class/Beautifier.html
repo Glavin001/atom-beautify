@@ -35,8 +35,10 @@
       </table>
       <h2>Direct Known Subclasses</h2>
       <p class='children'>
+        <a href='../class/AlignYaml.html'>AlignYaml</a>
         <a href='../class/Autopep8.html'>Autopep8</a>
         <a href='../class/BashBeautify.html'>BashBeautify</a>
+        <a href='../class/Brittany.html'>Brittany</a>
         <a href='../class/ClangFormat.html'>ClangFormat</a>
         <a href='../class/Cljfmt.html'>Cljfmt</a>
         <a href='../class/CoffeeFmt.html'>CoffeeFmt</a>
@@ -46,23 +48,31 @@
         <a href='../class/Dfmt.html'>Dfmt</a>
         <a href='../class/ElmFormat.html'>ElmFormat</a>
         <a href='../class/ErlTidy.html'>ErlTidy</a>
+        <a href='../class/ESLintFixer.html'>ESLintFixer</a>
         <a href='../class/R.html'>R</a>
         <a href='../class/FortranBeautifier.html'>FortranBeautifier</a>
         <a href='../class/Gherkin.html'>Gherkin</a>
+        <a href='../class/GN.html'>GN</a>
         <a href='../class/Gofmt.html'>Gofmt</a>
+        <a href='../class/Goimports.html'>Goimports</a>
+        <a href='../class/HhFormat.html'>HhFormat</a>
+        <a href='../class/Hindent.html'>Hindent</a>
         <a href='../class/HTMLBeautifier.html'>HTMLBeautifier</a>
         <a href='../class/JSBeautify.html'>JSBeautify</a>
         <a href='../class/JSCSFixer.html'>JSCSFixer</a>
         <a href='../class/LatexBeautify.html'>LatexBeautify</a>
         <a href='../class/Lua.html'>Lua</a>
         <a href='../class/MarkoBeautifier.html'>MarkoBeautifier</a>
+        <a href='../class/NginxBeautify.html'>NginxBeautify</a>
         <a href='../class/OCPIndent.html'>OCPIndent</a>
         <a href='../class/PerlTidy.html'>PerlTidy</a>
         <a href='../class/PHPCSFixer.html'>PHPCSFixer</a>
         <a href='../class/PHPCBF.html'>PHPCBF</a>
+        <a href='../class/Prettier.html'>Prettier</a>
         <a href='../class/PrettyDiff.html'>PrettyDiff</a>
         <a href='../class/PugBeautify.html'>PugBeautify</a>
         <a href='../class/PuppetFix.html'>PuppetFix</a>
+        <a href='../class/PythonBeautifier.html'>PythonBeautifier</a>
         <a href='../class/Remark.html'>Remark</a>
         <a href='../class/Rubocop.html'>Rubocop</a>
         <a href='../class/RubyBeautify.html'>RubyBeautify</a>
@@ -70,9 +80,12 @@
         <a href='../class/SassConvert.html'>SassConvert</a>
         <a href='../class/Sqlformat.html'>Sqlformat</a>
         <a href='../class/StylishHaskell.html'>StylishHaskell</a>
+        <a href='../class/Terraformfmt.html'>Terraformfmt</a>
         <a href='../class/TidyMarkdown.html'>TidyMarkdown</a>
         <a href='../class/TypeScriptFormatter.html'>TypeScriptFormatter</a>
         <a href='../class/Uncrustify.html'>Uncrustify</a>
+        <a href='../class/EmacsVerilogMode.html'>EmacsVerilogMode</a>
+        <a href='../class/VhdlBeautifier.html'>VhdlBeautifier</a>
         <a href='../class/VueBeautifier.html'>VueBeautifier</a>
         <a href='../class/Yapf.html'>Yapf</a>
       </p>
@@ -121,6 +134,22 @@
 <div class='tags'>
 </div>
   </dd>
+  <dt id='executables-variable'>
+    executables
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>[]</code></pre>
+    
+  </dd>
+  <dt id='_exe-variable'>
+    _exe
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>{}</code></pre>
+    
+  </dd>
   <dt id='languages-variable'>
     languages
     =
@@ -145,35 +174,6 @@
 <div class='tags'>
 </div>
   </dd>
-  <dt id='_envCache-variable'>
-    _envCache
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>null</code></pre>
-    <div class='docstring'>
-  <p>Get Shell Environment variables</p><p>Special thank you to @ioquatix
-See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63">https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-runner.coffee#L45-L63</a></p>
-</div>
-<div class='tags'>
-</div>
-  </dd>
-  <dt id='_envCacheDate-variable'>
-    _envCacheDate
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>null</code></pre>
-    
-  </dd>
-  <dt id='_envCacheExpiry-variable'>
-    _envCacheExpiry
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>10000</code></pre>
-    
-  </dd>
   <dt id='logger-variable'>
     logger
     =
@@ -191,6 +191,40 @@ See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-ru
       <ul class='summary'>
   <li>
     <span class='signature'>
+      <a href='#isPreInstalled-dynamic'>
+        #
+(void)
+<b>isPreInstalled</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Is the beautifier a command-line interface beautifier? 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#loadExecutables-dynamic'>
+        #
+(void)
+<b>loadExecutables</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#exe-dynamic'>
+        #
+(void)
+<b>exe</b><span>(cmd)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
       <a href='#deprecate-dynamic'>
         #
 (void)
@@ -199,6 +233,17 @@ See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-ru
     </span>
     <span class='desc'>
       Show deprecation warning to user. 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#deprecateOptionForExecutable-dynamic'>
+        #
+(void)
+<b>deprecateOptionForExecutable</b><span>(exeName, oldOption, newOption)</span>
+      </a>
+    </span>
+    <span class='desc'>
     </span>
   </li>
   <li>
@@ -239,13 +284,15 @@ See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-ru
   </li>
   <li>
     <span class='signature'>
-      <a href='#getShellEnvironment-dynamic'>
+      <a href='#getDefaultLineEnding-dynamic'>
         #
 (void)
-<b>getShellEnvironment</b><span>()</span>
+<b>getDefaultLineEnding</b><span>(crlf, lf, optionEol)</span>
       </a>
     </span>
     <span class='desc'>
+      Retrieves the default line ending based upon the Atom configuration  <code>line-ending-selector.defaultLineEnding</code>.
+
     </span>
   </li>
   <li>
@@ -262,20 +309,6 @@ See <a href="https://github.com/ioquatix/script-runner/blob/v1.5.0/lib/script-ru
   </li>
   <li>
     <span class='signature'>
-      <a href='#commandNotFoundError-dynamic'>
-        #
-(void)
-<b>commandNotFoundError</b><span>(exe, help)</span>
-      </a>
-    </span>
-    <span class='desc'>
-      Add help to error.description Note: error.description is not officially used in JavaScript,
-however it is used internally for Atom Beautify when displaying errors.
-
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
       <a href='#run-dynamic'>
         #
 (void)
@@ -284,18 +317,6 @@ however it is used internally for Atom Beautify when displaying errors.
     </span>
     <span class='desc'>
       Run command-line interface command 
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#spawn-dynamic'>
-        #
-(void)
-<b>spawn</b><span>(exe, args, options, onStdin)</span>
-      </a>
-    </span>
-    <span class='desc'>
-      Spawn 
     </span>
   </li>
   <li>
@@ -330,6 +351,37 @@ however it is used internally for Atom Beautify when displaying errors.
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
+    <p class='signature' id='isPreInstalled-dynamic'>
+      #
+(void)
+<b>isPreInstalled</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Is the beautifier a command-line interface beautifier?</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='loadExecutables-dynamic'>
+      #
+(void)
+<b>loadExecutables</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='exe-dynamic'>
+      #
+(void)
+<b>exe</b><span>(cmd)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
     <p class='signature' id='deprecate-dynamic'>
       #
 (void)
@@ -341,6 +393,15 @@ however it is used internally for Atom Beautify when displaying errors.
 </div>
 <div class='tags'>
 </div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='deprecateOptionForExecutable-dynamic'>
+      #
+(void)
+<b>deprecateOptionForExecutable</b><span>(exeName, oldOption, newOption)</span>
+      <br>
+    </p>
+    
   </div>
   <div class='method_details'>
     <p class='signature' id='tempFile-dynamic'>
@@ -382,13 +443,25 @@ however it is used internally for Atom Beautify when displaying errors.
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='getShellEnvironment-dynamic'>
+    <p class='signature' id='getDefaultLineEnding-dynamic'>
       #
 (void)
-<b>getShellEnvironment</b><span>()</span>
+<b>getDefaultLineEnding</b><span>(crlf, lf, optionEol)</span>
       <br>
     </p>
-    
+    <div class='docstring'>
+  <p>Retrieves the default line ending based upon the Atom configuration
+ <code>line-ending-selector.defaultLineEnding</code>. If the Atom configuration
+ indicates &quot;OS Default&quot;, the <code>process.platform</code> is queried, returning
+ CRLF for Windows systems and LF for all other systems.
+Code modified from atom/line-ending-selector
+returns: The correct line-ending character sequence based upon the Atom
+ configuration, or <code>null</code> if the Atom line ending configuration was not
+ recognized.
+see: <a href="https://github.com/atom/line-ending-selector/blob/master/lib/main.js">https://github.com/atom/line-ending-selector/blob/master/lib/main.js</a></p>
+</div>
+<div class='tags'>
+</div>
   </div>
   <div class='method_details'>
     <p class='signature' id='which-dynamic'>
@@ -407,20 +480,6 @@ See <a href="https://github.com/isaacs/node-which">https://github.com/isaacs/nod
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='commandNotFoundError-dynamic'>
-      #
-(void)
-<b>commandNotFoundError</b><span>(exe, help)</span>
-      <br>
-    </p>
-    <div class='docstring'>
-  <p>Add help to error.description</p><p>Note: error.description is not officially used in JavaScript,
-however it is used internally for Atom Beautify when displaying errors.</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
     <p class='signature' id='run-dynamic'>
       #
 (void)
@@ -429,19 +488,6 @@ however it is used internally for Atom Beautify when displaying errors.</p>
     </p>
     <div class='docstring'>
   <p>Run command-line interface command</p>
-</div>
-<div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='spawn-dynamic'>
-      #
-(void)
-<b>spawn</b><span>(exe, args, options, onStdin)</span>
-      <br>
-    </p>
-    <div class='docstring'>
-  <p>Spawn</p>
 </div>
 <div class='tags'>
 </div>

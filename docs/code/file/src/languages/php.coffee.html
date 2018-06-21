@@ -57,22 +57,47 @@
   Supported extensions
    *&#47;
   extensions: [&quot;php&quot;, &quot;module&quot;, &quot;inc&quot;],
+  defaultBeautifier: &quot;PHP-CS-Fixer&quot;,
   options: {
     cs_fixer_path: {
       title: &quot;PHP-CS-Fixer Path&quot;,
       type: &#39;string&#39;,
       &quot;default&quot;: &quot;&quot;,
-      description: &quot;Path to the `php-cs-fixer` CLI executable&quot;
+      description: &quot;Absolute path to the `php-cs-fixer` CLI executable&quot;
+    },
+    cs_fixer_version: {
+      title: &quot;PHP-CS-Fixer Version&quot;,
+      type: &#39;integer&#39;,
+      &quot;default&quot;: 2,
+      &quot;enum&quot;: [1, 2]
+    },
+    cs_fixer_config_file: {
+      title: &quot;PHP-CS-Fixer Config File&quot;,
+      type: &#39;string&#39;,
+      &quot;default&quot;: &quot;&quot;,
+      description: &quot;Path to php-cs-fixer config file. Will use local `.php_cs` or `.php_cs.dist` if found in the working directory or project root.&quot;
     },
     fixers: {
       type: &#39;string&#39;,
       &quot;default&quot;: &quot;&quot;,
-      description: &quot;Add fixer(s). i.e. linefeed,-short_tag,indentation&quot;
+      description: &quot;Add fixer(s). i.e. linefeed,-short_tag,indentation (PHP-CS-Fixer 1 only)&quot;
     },
     level: {
       type: &#39;string&#39;,
       &quot;default&quot;: &quot;&quot;,
-      description: &quot;By default, all PSR-2 fixers and some additional ones are run.&quot;
+      description: &quot;By default, all PSR-2 fixers and some additional ones are run. (PHP-CS-Fixer 1 only)&quot;
+    },
+    rules: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &quot;&quot;,
+      description: &quot;Add rule(s). i.e. line_ending,-full_opening_tag,@PSR2 (PHP-CS-Fixer 2 only)&quot;
+    },
+    allow_risky: {
+      title: &quot;Allow risky rules&quot;,
+      type: &#39;string&#39;,
+      &quot;default&quot;: &quot;no&quot;,
+      &quot;enum&quot;: [&quot;no&quot;, &quot;yes&quot;],
+      description: &quot;Allow risky rules to be applied (PHP-CS-Fixer 2 only)&quot;
     },
     phpcbf_path: {
       title: &quot;PHPCBF Path&quot;,
@@ -80,11 +105,17 @@
       &quot;default&quot;: &quot;&quot;,
       description: &quot;Path to the `phpcbf` CLI executable&quot;
     },
+    phpcbf_version: {
+      title: &quot;PHPCBF Version&quot;,
+      type: &#39;integer&#39;,
+      &quot;default&quot;: 2,
+      &quot;enum&quot;: [1, 2, 3]
+    },
     standard: {
       title: &quot;PHPCBF Standard&quot;,
       type: &#39;string&#39;,
-      &quot;default&quot;: &quot;&quot;,
-      description: &quot;Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules&quot;
+      &quot;default&quot;: &quot;PEAR&quot;,
+      description: &quot;Standard name Squiz, PSR2, PSR1, PHPCS, PEAR, Zend, MySource... or path to CS rules. Will use local `phpcs.xml`, `phpcs.xml.dist`, `phpcs.ruleset.xml` or `ruleset.xml` if found in the project root.&quot;
     }
   }
 }</code></pre>

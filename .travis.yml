@@ -11,53 +11,24 @@ notifications:
 
 script: sh build-package.sh
 
+language: generic
+
+cache:
+  timeout: 1000
+
 git:
-  depth: 10
+  depth: 1
 
-php:
-  - '5.6'
-python:
-  - '2.7'
-go:
-  - release
-
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      sudo: required
-      services:
-        - docker
-      env:
-        - ATOM_CHANNEL=stable
-    - os: linux
-      dist: trusty
-      sudo: required
-      services:
-        - docker
-      env:
-        - ATOM_CHANNEL=beta
-    # - os: linux
-    #   dist: trusty
-    #   sudo: require
-    #   env:
-    #     - ATOM_CHANNEL=stable
-    # - os: linux
-    #   dist: trusty
-    #   sudo: require
-    #   env:
-    #     - ATOM_CHANNEL=beta
-    - os: osx
-      env:
-        - ATOM_CHANNEL=stable
-    # - os: osx
-    #   env:
-    #     - ATOM_CHANNEL=beta
+os:
+  - linux
+  - osx
+sudo: required
 
 env:
   global:
-    - APM_TEST_PACKAGES="language-marko language-html-swig language-svg language-d mavensmate-atom language-lua language-puppet fuse"
-    - PATH="/home/travis/gopath/bin:$HOME/.linuxbrew/bin:$PATH"
+  matrix:
+    - ATOM_SCRIPT_NAME=atom-beta APM_SCRIPT_NAME=apm-beta
+    - ATOM_SCRIPT_NAME=atom APM_SCRIPT_NAME=apm
 
 addons:
   apt:
@@ -71,9 +42,8 @@ addons:
     - libgnome-keyring-dev
     - fakeroot
     - crystal
-    - ocaml
     - camlp4
-    - opam
+    - aspcud
     - php5-cli
     - golang
 
@@ -84,111 +54,37 @@ cache:
     - vendor/bundle # gems are installed here, https://docs.travis-ci.com/user/languages/ruby/#Dependency-Management
     - node_modules
     - $HOME/.atom
-    - $HOME/.stack
+    - $HOME/.opam
 
 before_install:
-  # Install Homebrew on Linux
+  # linux: Install Nix, Nix packages, upgrade pip, and install python packages
+  # osx: Update Homebrew, remove conflicting cask, brew bundle, symlink elm-format,
+  #      upgrade pip, and install python packages
+  - echo $TRAVIS_COMMIT_MESSAGE
+  - export TRAVIS_COMMIT_MESSAGE=""
+  - echo $TRAVIS_COMMIT_MESSAGE
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      git clone --depth=1 https://github.com/Linuxbrew/brew.git ~/.linuxbrew || true;
+      curl https://nixos.org/nix/install | sh &&
+      . ~/.nix-profile/etc/profile.d/nix.sh &&
+      nix-env -i uncrustify R elm-format terraform atom atom-beta &&
+      pip install --user -r requirements.txt;
+    elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew update && brew cask zap oclint && brew bundle &&
+      ln -s /usr/local/bin/elm-format-0.17 /usr/local/bin/elm-format &&
+      pip2 install -r requirements.txt;
+    else
+      echo Error:TRAVIS_OS_NAME && exit 1;
     fi
-  # Update Homebrew
-  - brew update
-  - brew tap homebrew/dupes
-  - brew tap homebrew/versions
   # Ruby language support
-  # - gem install ruby-beautify --verbose
-  # - gem install rubocop
-  - gem install htmlbeautifier
-  - gem install puppet-lint
-  # Sass language support
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      gem install sass;
-    else
-      docker pull unibeautify/sass-convert;
-    fi
-  # Python language support
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      sudo chmod 777 -R /opt/python;
-      pip install --upgrade pip;
-      pip install --user --upgrade autopep8;
-      pip install --user --upgrade isort;
-    else
-      pip install --upgrade pip;
-      pip install --upgrade autopep8;
-      pip install --upgrade isort;
-    fi
-  # SQL language support
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      pip install --user --upgrade sqlparse;
-    else
-      pip install --upgrade sqlparse;
-    fi
-  # Java, C, C++, C#, Objective-C, D, Pawn, Vala
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install uncrustify;
-    else
-      docker pull unibeautify/uncrustify;
-    fi
+  - bundle install
   # R
-  - brew tap homebrew/science
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install r;
-      rscript --version;
-    else
-      docker pull unibeautify/rscript;
-    fi
+  - Rscript --version
   # PHP
-  - brew tap homebrew/homebrew-php
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install php56 || true;
-      brew gist-logs php56 || true;
-      echo -e "\n[Phar]\nphar.readonly = Off\n" >> /usr/local/etc/php/5.6/php.ini;
-      brew install php-cs-fixer || true;
-      brew gist-logs php-cs-fixer || true;
-    fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      wget http://get.sensiolabs.org/php-cs-fixer.phar -O php-cs-fixer;
-      chmod a+x php-cs-fixer;
-      mv php-cs-fixer $HOME/.linuxbrew/bin/php-cs-fixer;
-    fi
-  # CoffeeScript
-  - npm install coffee-formatter
-  # Haskell
-  # - brew install haskell-stack
-  # - stack setup
-  # - stack install stylish-haskell
-  # Elm
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      curl -L -o /tmp/elm-format.tgz
-      https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.17-0.7.0-exp-mac-x64.tgz;
-      tar xvzf /tmp/elm-format.tgz -C /usr/local/bin;
-    fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      curl -L -o /tmp/elm-format.tgz https://github.com/avh4/elm-format/releases/download/0.7.0-exp/elm-format-0.17-0.7.0-exp-linux-x64.tgz;
-      tar xvzf /tmp/elm-format.tgz -C $HOME/.linuxbrew/bin;
-    fi
+  - composer install
   # OCaml
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install ocaml;
-      brew install opam;
-    fi
-  - opam init --auto-setup
+  # - opam init --auto-setup
   # Init environment variables for opam
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      eval `opam config env`;
-    fi
-  - opam install --yes ocp-indent
-  # Crystal
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install crystal-lang; fi
-  # Bash
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      pip install --user beautysh;
-    else
-      pip install beautysh;
-    fi
-  # terraform
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install terraform;
-    else
-      docker pull hashicorp/terraform;
-    fi
+  # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+  #    eval `opam config env`;
+  #  fi
+  # - opam install --yes ocp-indent

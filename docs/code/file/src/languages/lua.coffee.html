@@ -56,8 +56,27 @@
   &#47;*
   Supported extensions
    *&#47;
-  extensions: [&#39;lua&#39;],
-  defaultBeautifier: &quot;Lua beautifier&quot;
+  extensions: [&#39;lua&#39;, &#39;ttslua&#39;],
+  defaultBeautifier: &quot;Lua beautifier&quot;,
+  options: {
+    indent_size: {
+      type: &#39;integer&#39;,
+      &quot;default&quot;: null,
+      minimum: 0,
+      description: &quot;Indentation size&#47;length&quot;
+    },
+    indent_char: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: null,
+      description: &quot;Indentation character&quot;
+    },
+    end_of_line: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &quot;System Default&quot;,
+      &quot;enum&quot;: [&quot;CRLF&quot;, &quot;LF&quot;, &quot;System Default&quot;],
+      description: &quot;Override EOL from line-ending-selector&quot;
+    }
+  }
 }</code></pre>
     
   </dd>

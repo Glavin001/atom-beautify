@@ -39,34 +39,6 @@
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='scope-variable'>
-    scope
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>[&#39;source.js&#39;]</code></pre>
-    <div class='docstring'>
-  <p>Get Atom defaults</p>
-</div>
-<div class='tags'>
-</div>
-  </dd>
-  <dt id='defaultIndentSize-variable'>
-    defaultIndentSize
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? tabLength : 1)</code></pre>
-    
-  </dd>
-  <dt id='defaultIndentChar-variable'>
-    defaultIndentChar
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? &quot; &quot; : &quot;\t&quot;)</code></pre>
-    
-  </dd>
   <dt id='module.exports-variable'>
     module.exports
     =
@@ -75,16 +47,17 @@
     <pre><code class='coffeescript'>{
   name: &quot;LaTeX&quot;,
   namespace: &quot;latex&quot;,
+  scope: [&#39;source.tex&#39;],
 
   &#47;*
   Supported Grammars
    *&#47;
-  grammars: [&quot;LaTeX&quot;],
+  grammars: [&quot;BibTeX&quot;, &quot;LaTeX&quot;, &quot;TeX&quot;],
 
   &#47;*
   Supported extensions
    *&#47;
-  extensions: [&quot;tex&quot;],
+  extensions: [&quot;bib&quot;, &quot;tex&quot;, &quot;sty&quot;, &quot;cls&quot;, &quot;dtx&quot;, &quot;ins&quot;, &quot;bbx&quot;, &quot;cbx&quot;],
   defaultBeautifier: &quot;Latex Beautify&quot;,
 
   &#47;*
@@ -92,18 +65,18 @@
   options: {
     indent_char: {
       type: &#39;string&#39;,
-      &quot;default&quot;: defaultIndentChar,
+      &quot;default&quot;: null,
       description: &quot;Indentation character&quot;
     },
     indent_with_tabs: {
       type: &#39;boolean&#39;,
-      &quot;default&quot;: true,
+      &quot;default&quot;: null,
       description: &quot;Indentation uses tabs, overrides `Indent Size` and `Indent Char`&quot;
     },
     indent_preamble: {
       type: &#39;boolean&#39;,
       &quot;default&quot;: false,
-      description: &quot;Indent the preable&quot;
+      description: &quot;Indent the preamble&quot;
     },
     always_look_for_split_braces: {
       type: &#39;boolean&#39;,
@@ -123,7 +96,7 @@
     align_columns_in_environments: {
       type: &#39;array&#39;,
       &quot;default&quot;: [&quot;tabular&quot;, &quot;matrix&quot;, &quot;bmatrix&quot;, &quot;pmatrix&quot;],
-      decription: &quot;Aligns columns by the alignment tabs for environments specified&quot;
+      description: &quot;Aligns columns by the alignment tabs for environments specified&quot;
     }
   }
 }</code></pre>

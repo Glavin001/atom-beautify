@@ -34,23 +34,475 @@
         </p>
       </nav>
       <div id='filecontents'>
-        <h1 id="dev">dev</h1>
+        <h1 id="next">Next</h1>
 <ul>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/issues/2026">#2026</a> Add Vue support to ESLint Fixer beautifier. Should be used with <a href="https://github.com/vuejs/eslint-plugin-vue">eslint-plugin-vue</a>.</li>
+<li>Fix Beauify File option for .lua files</li>
+<li><p>Switch to Remark as a default markdown beautifier due to a more active state of its community compared to Tidy Markdown (<a href="https://github.com/Glavin001/atom-beautify/pull/2004">#2004</a>).
+This is a <strong>breaking change</strong> for Tidy Markdown users:</p><ul>
+<li>list indentation is now four characters per level (three spaces after <code>-</code> for unordered lists and two spaces after <code>N.</code> in ordered lists)</li>
+<li>the contents of frontmatter are no longer formatted</li>
+</ul><p>You can easily switch back to the old behaviour by choosing <em>Tidy Markdown</em> in package preferences.
+Alternatively, you can customise Remark beautifier with <code>.jsbeautifyrc</code> (see <a href="https://github.com/remarkjs/remark/tree/master/packages/remark-stringify#options">available options</a>).</p></li>
+<li>Add GN language and beautifier</li>
+<li>Add the option to indent Bash with tabs <a href="https://github.com/Glavin001/atom-beautify/issues/1951">#1951</a></li>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/pull/1980">#1980</a>. Add VHDL beautifier and language support.</li>
+<li>Implement Verilog/SystemVerilog beautification via emacs verilog-mode</li>
+<li>Add support for MagicPython grammar <a href="https://github.com/Glavin001/atom-beautify/issues/1851">#1851</a></li>
+<li>Add &quot;Reindent&quot; option for sqlformat. See <a href="https://github.com/Glavin001/atom-beautify/pull/1926">#1926</a>.</li>
+<li>Add hindent and brittany beautifiers for haskell</li>
+<li>Breaking change to <code>pybeautifier</code>: Fix typo, change <code>formater</code> to <code>formatter</code>. See <a href="https://github.com/Glavin001/atom-beautify/pull/1898">#1898</a>.</li>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1773">#1773</a> and <a href="https://github.com/Glavin001/atom-beautify/issues/793">#793</a>. ruby-beautify with Rubocop now respects <code>Exclude</code> settings, and properly loads inherited config files (like <code>~/.rubocop.yml</code>)</li>
+<li>Add hindent and brittany beautifiers for haskell</li>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1862">#1862</a> Add support for ocp-indent as an executable</li>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/issues/1862">#601</a> Add support for tsx files</li>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/issues/1497">#1497</a> and <a href="https://github.com/Glavin001/atom-beautify/issues/802">#802</a></li>
+<li>...</li>
+</ul>
+<h1 id="v0-30-9-2017-11-22-">v0.30.9 (2017-11-22)</h1>
+<ul>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1949">#1949</a>: Fix beautify on save when text has not changed.</li>
+</ul>
+<h1 id="v0-30-8-2017-11-22-">v0.30.8 (2017-11-22)</h1>
+<ul>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1949">#1949</a>: Fix beautify on save when text has not changed.</li>
+</ul>
+<h1 id="v0-30-7-2017-11-21-">v0.30.7 (2017-11-21)</h1>
+<ul>
+<li>Refactor handleSaveEvent to use onWillSave async (<a href="https://github.com/Glavin001/atom-beautify/pull/1924">#1924</a>, <a href="https://github.com/Glavin001/atom-beautify/issues/1895">#1895</a>)</li>
+</ul>
+<h1 id="v0-30-6-2017-10-30-">v0.30.6 (2017-10-30)</h1>
+<ul>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/issues/645">#645</a>. Add support for Terraform fmt.</li>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/issues/881">#881</a>. Update to Prettydiff version 2!</li>
+<li>Fix for <a href="https://github.com/Glavin001/atom-beautify/issues/1888">#1888</a>. Allow 0 for minor and patch versions of Docker</li>
+<li>Add Atom-Beautify package settings menu item to Packages menu <a href="https://github.com/Glavin001/atom-beautify/issues/1869">#1869</a></li>
+<li>Add <code>.ttslua</code> file extension to Lua language</li>
+<li>Fix [#1638]. Update TypeScript Formatter dependency</li>
+<li>Fix [#1833] <code>os.tmpDir</code> deprecation warning</li>
+</ul>
+<h1 id="v0-30-5-2017-08-11-">v0.30.5 (2017-08-11)</h1>
+<ul>
+<li>Fix for <a href="https://github.com/Glavin001/atom-beautify/issues/1721">#1721</a>. Changes required due to TextBuffer.save becoming async in Atom 1.19</li>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1638">#1638</a>. Update type-formatter and Fixes indent size not supported</li>
+<li>See <a href="https://github.com/Glavin001/atom-beautify/issues/358">#358</a>. Add support for rustfmt-nightly</li>
+</ul>
+<h1 id="v0-30-4-2017-07-14-">v0.30.4 (2017-07-14)</h1>
+<ul>
+<li>Fixes #1732. Improve deprecation message for old options for new Executables</li>
+<li>Fixes #1751. Fix for latexindent v3</li>
+</ul>
+<h1 id="v0-30-3-2017-06-21-">v0.30.3 (2017-06-21)</h1>
+<ul>
+<li>Improve command not found error message</li>
+<li>Add goimports beautifier for Go language</li>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1728">#1728</a>. Remove Shell-Env from Executable, use Atom&#39;s process.env instead. See <a href="https://github.com/Glavin001/atom-beautify/pull/1735">#1735</a>.</li>
+</ul>
+<h1 id="v0-30-2-2017-06-20-">v0.30.2 (2017-06-20)</h1>
+<ul>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1030">#1030</a>. Add support for alpha versions of autopep8</li>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1725">#1725</a>. Fix version parsing of PHP executable</li>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1730">#1730</a>. Correctly parse PHPCBF version and improve handling of Executable</li>
+</ul>
+<h1 id="v0-30-1-2017-06-19-">v0.30.1 (2017-06-19)</h1>
+<ul>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1703">#1703</a>. Now Fortran 2003/2008 file extensions are available for Fortran beautifier.</li>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1030">#1030</a>. Autopep8 Executable did not handle older and newer versions.</li>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1725">#1725</a>. Improve PHP-CS-Fixer support with handling script path
+Detect if the executable path is either .phar (PHP) or not and
+run the executable PHP-CS-Fixer differently considering.</li>
+</ul>
+<h1 id="v0-30-0-2017-06-17-">v0.30.0 (2017-06-17)</h1>
+<ul>
+<li>Close <a href="https://github.com/Glavin001/atom-beautify/issues/1687">#1687</a>. Introducing Executables with Docker support! Executables wrap any non-preinstalled application, check if it is installed, and provide additional configuration options, including Docker support! See <a href="https://github.com/Glavin001/atom-beautify/issues/1687">#1687</a> for more information.</li>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1652">#1652</a> and <a href="https://github.com/Glavin001/atom-beautify/issues/1653">#1653</a>. Add <code>.rb</code> to temp files passed in to the <code>rubocop</code> executable so they are not excluded.</li>
+<li>Fixes <a href="https://github.com/Glavin001/atom-beautify/issues/1361">#1361</a>. Add file extension to temporary files for Uncrustify beautifier</li>
+<li>Fixed #1613 and #1588. Add EOL, scientific notation, and adjust whitespace support for Lua Beautifier</li>
+</ul>
+<h1 id="v0-29-26-2017-05-28-">v0.29.26 (2017-05-28)</h1>
+<ul>
+<li>Fix #116. Switch from setText to setTextViaDiff, preserve folds</li>
+<li>Add more perl filetypes (#1603)</li>
+<li>Add more LaTeX extensions (#1617)</li>
+<li>Don&#39;t specify file extension when requiring modules (#1631)</li>
+<li>Update CSSComb to v4.0.1. (#1660)</li>
+<li>Fix #1682. Removed --no-patch flag from phpcbf beautifier version 3 (#1683)</li>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1524">#1524</a>. Add PHP-CS-Fixer config file setting and improve automatic detection of standard config files. See <a href="https://github.com/Glavin001/atom-beautify/pull/1661">#1661</a></li>
+<li>Add .php extension to temp files (#1649)</li>
+<li>Add support for files with &#39;.config&#39; extension. Add extension to the XML language to support XML config files. (#1285)</li>
+</ul>
+<h1 id="v0-29-25-2017-05-12-">v0.29.25 (2017-05-12)</h1>
+<ul>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1547">#1547</a>, <a href="https://github.com/Glavin001/atom-beautify/issues/1630">#1630</a>. Update CSSComb to latest version.</li>
+</ul>
+<h1 id="v0-29-24-2017-05-06-">v0.29.24 (2017-05-06)</h1>
+<ul>
+<li>Fix <a href="https://github.com/Glavin001/atom-beautify/issues/1643">#1643</a>. Add PHPCBF Version setting and remove &quot;--no-patch&quot; option from version 3.0 of PHPCBF. See <a href="https://github.com/Glavin001/atom-beautify/pull/1645">#1645</a>.</li>
+<li>Close <a href="https://github.com/Glavin001/atom-beautify/issues/27">#27</a>. Add commands for beautifying a specific language</li>
+<li>Add &quot;Allow Risky&quot; option for PHP-CS-Fixer. See <a href="https://github.com/Glavin001/atom-beautify/pull/1614">#1614</a></li>
+<li>Set Yaml padding default value to 0, removing Atom warning message &quot;&#39;atom-beautify.yaml.padding&#39; could not set the default.&quot;  See <a href="https://github.com/Glavin001/atom-beautify/issues/1647">#1647</a>.</li>
+</ul>
+<h1 id="v0-29-23-2017-04-20-">v0.29.23 (2017-04-20)</h1>
+<ul>
+<li>See #1607. Add support for PHP-CS-Fixer 1, along with version 2.</li>
+<li>Closes #1179. Replace atom-beautify.general.analytics option with configuration option</li>
+<li>Add more LaTeX extensions</li>
+</ul>
+<h1 id="v0-29-3-to-v0-29-22-2016-04-16-to-2017-04-15-">v0.29.3 to v0.29.22 (2016-04-16 to 2017-04-15)</h1>
+<ul>
+<li>Add support for additional wrap attribute options of js-beautify (html): force-aligned and force-expand-multiline.</li>
+<li>Update to <code>remark</code>&#39;s new API and fix <a href="https://github.com/Glavin001/atom-beautify/issues/1196">#1196</a></li>
 <li>Add beautifier for the Lua language.</li>
 <li>Add <a href="https://github.com/OCamlPro/ocp-indent">ocp-indent</a> beautifier for the OCaml language.</li>
 <li>Add <a href="https://github.com/avh4/elm-format">elm-format</a> beautifier for the Elm language.</li>
 <li>Add <a href="http://clang.llvm.org/docs/ClangFormat.html">clang-format</a> beautifier for C/C++/Obj-C languages.</li>
 <li>Add <a href="http://github.com/google/yapf">yapf</a> beautifier for Python.</li>
-<li>Closes [#776] (<a href="https://github.com/Glavin001/atom-beautify/issues/776">https://github.com/Glavin001/atom-beautify/issues/776</a>) Add support for <code>collapse-preserve-inline</code> brace_style for javascript.</li>
+<li>Add <a href="https://github.com/eslint/eslint">ESLint</a> beautifier for Javascript</li>
+<li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/776">#776</a> Add support for <code>collapse-preserve-inline</code> brace_style for javascript.</li>
 <li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/786">#786</a> YAPF configuration files are ignored.</li>
 <li>Fix phpcbf hanging issue by closing stdin. See <a href="https://github.com/Glavin001/atom-beautify/issues/893">#893</a></li>
 <li>Add warning notification when parsing <code>.jsbeautifyrc</code> as JSON or YAML fails. See <a href="https://github.com/Glavin001/atom-beautify/issues/1106">#1106</a></li>
 <li>Add support for PrettyDiff&#39;s <em>bracepadding</em> option in JavaScript. See <a href="https://github.com/Glavin001/atom-beautify/issues/1157">#1157</a></li>
-</ul>
-<h1 id="v0-29-0">v0.29.0</h1>
-<ul>
 <li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/447">#447</a>. Improved Handlebars language support</li>
 <li>Closes <a href="https://github.com/Glavin001/atom-beautify/issues/384">#384</a>. Add <a href="https://github.com/cmhughes/latexindent.pl">latexindent.pl</a> beautifier for LaTeX language</li>
+</ul>
+<h1 id="v0-29-2-2016-04-08-">v0.29.2 (2016-04-08)</h1>
+<ul>
+<li>See #924. Add more verbose debugging to beautifyFilePath</li>
+<li>See #864. Fix Logger to use renamed loggerLevel setting key</li>
+<li>See #919. Remove options from analytics tracking</li>
+<li>See #916. allow beatify <code>*.pug</code> files</li>
+<li>Closes #905. Add Handlebars support to Pretty Diff beautifier</li>
+</ul>
+<h1 id="v0-29-2-2016-04-08-">v0.29.2 (2016-04-08)</h1>
+<ul>
+<li>See #898. Improve notification for unsupported settings</li>
+</ul>
+<h1 id="v0-29-1-2016-04-04-">v0.29.1 (2016-04-04)</h1>
+<ul>
+<li>Fixes #891. Fix build-options postinstall script for Window</li>
+</ul>
+<h1 id="v0-29-0-2016-03-01-">v0.29.0 (2016-03-01)</h1>
+<ul>
+<li>Fix deprecation warnings triggered by TextEditor methods. #885</li>
+<li>See #864. Add Migration command from old option keys to new keys</li>
+<li>See #713. Better settings and performance. #864</li>
+<li>See #876, #679. Build beautifier options postinstall instead of activate</li>
+<li>See #717. Remove unsupported options for Coldfusion language</li>
+<li>See #405, #782. Improve description of Beautify Entire File On Save option</li>
+<li>Fixes #758. Add XTemplate support to Pretty Diff beautifier</li>
+<li>Fixes #766. Change default beautifier of Riotjs to Pretty Diff</li>
+<li>Revert &quot;Revert &quot;Organize settings/options into groups that will be collapsable&quot;&quot;</li>
+</ul>
+<h1 id="v0-28-28-2016-03-30-">v0.28.28 (2016-03-30)</h1>
+<ul>
+<li>Closes #199. Add Jade/Pug beautify support</li>
+<li>Fixes #879. Fix circular structure in JSON config/settings</li>
+<li>Fix yapf style issue. #856</li>
+<li>Adds LaTeX language support. #845</li>
+<li>Added opencl language support. #872</li>
+</ul>
+<h1 id="v0-28-27-2016-03-27-">v0.28.27 (2016-03-27)</h1>
+<ul>
+<li>Fixes #868. Update expand-home-dir to v0.0.3</li>
+<li>Tabs changed to literal and default to using tabs</li>
+</ul>
+<h1 id="v0-28-26-2016-03-03-">v0.28.26 (2016-03-03)</h1>
+<ul>
+<li>See #839, #844. Add test for unique language namespaces</li>
+<li>Update Lodash to v4.6.1</li>
+<li>Update Pretty Diff to v1.16.27</li>
+<li>Remove Haskell tests because it takes so long to install</li>
+</ul>
+<h1 id="v0-28-25-2016-03-02-">v0.28.25 (2016-03-02)</h1>
+<ul>
+<li>Fixes #839. Throw error if languages have same namespace</li>
+<li>Implements #384</li>
+<li>Basic implementation for latex with latexindent.pl</li>
+<li>See #828, #757, #731, #750. Fix Riot.js support,</li>
+</ul>
+<h1 id="v0-28-24-2016-02-25-">v0.28.24 (2016-02-25)</h1>
+<ul>
+<li>Revert &quot;Organize settings/options into groups that will be collapsable&quot;</li>
+</ul>
+<h1 id="v0-28-23-2016-02-25-">v0.28.23 (2016-02-25)</h1>
+<ul>
+<li>Updating riotjs.coffee. #766</li>
+<li>Include Apex extension: &quot;trigger&quot;. See #825</li>
+<li>Organize settings/options into groups that will be collapsable</li>
+<li>Fix PHPCBF error when path to executable is not set. #823</li>
+<li>See #733. Add language-d for testing and &quot;d&quot; extension to language file</li>
+<li>Rust - Add ability to read rustfmt.toml</li>
+<li>[#776] Bump jsbeautify to 1.6.2.  Add support for collapse-preserve-inline</li>
+<li>PHPCBF (PHP_CodeSniffer) + Remark for Markdown support</li>
+<li>Adds &#39;unchanged&#39; option to the SQL beautifier</li>
+<li>See #524. Added pretty diff ternaryline option</li>
+<li>Add Apex language support</li>
+<li>add: remark for markdown</li>
+<li>adding support for phpcbf</li>
+</ul>
+<h1 id="v0-28-22-2016-02-08-">v0.28.22 (2016-02-08)</h1>
+<ul>
+<li>adding support for grammar SLD. #763</li>
+<li>adding XHTML file extension as an XML grammar. #756</li>
+<li>Adding language Riot.js. #757</li>
+<li>Adding support for new HTML templating language: XTemplate. #758</li>
+</ul>
+<h1 id="v0-28-21-2016-01-12-">v0.28.21 (2016-01-12)</h1>
+<ul>
+<li>Fixes #736. Change unformatted option default value to match js-beautify</li>
+<li>Improve Help Debug Editor with options for language &amp; beautifier</li>
+</ul>
+<h1 id="v0-28-20-2016-01-11-">v0.28.20 (2016-01-11)</h1>
+<ul>
+<li>Update Prettydiff dependency to 1.16.5</li>
+<li>Add support for Elm. #700</li>
+<li>Add Optional Path for Rubocop. #676</li>
+<li>Set ignoreResponseCode to true in yapf.coffee. #671</li>
+<li>added import sorting using isort + small yapf fix</li>
+</ul>
+<h1 id="v0-28-19-2015-11-19-">v0.28.19 (2015-11-19)</h1>
+<ul>
+<li>Improved &quot;Help Debug Editor&quot; command. Result diff, shorten log path</li>
+</ul>
+<h1 id="v0-28-18-2015-11-14-">v0.28.18 (2015-11-14)</h1>
+<ul>
+<li>See #535. Change on save check from editor.alive to editor.isAlive()</li>
+<li>Closes #535. Do not restore editor positions if editor is destroyed.</li>
+<li>Update Pretty Diff to v1.15.16 &amp; fix JSX test</li>
+</ul>
+<h1 id="v0-28-17-2015-11-08-">v0.28.17 (2015-11-08)</h1>
+<ul>
+<li>Improve CSScomb support</li>
+<li>YAPF fix. See #631</li>
+<li>PR #594 Fixing test for issue #524</li>
+<li>See #524. Added support for methodchain setting in prettydiff.</li>
+<li>JSP support via beautifying as XML in Pretty Diff</li>
+<li>Support dynamically reloading custom file .csscomb.json file changes</li>
+</ul>
+<h1 id="v0-28-16-2015-10-29-">v0.28.16 (2015-10-29)</h1>
+<ul>
+<li>See #629. Support stylish-haskell</li>
+</ul>
+<h1 id="v0-28-15-2015-10-25-">v0.28.15 (2015-10-25)</h1>
+<ul>
+<li>Fixes #428. Switch to event-kit, replacing emissary</li>
+<li>See #600. Fix README link to Keymaps In-Depth docs</li>
+<li>See #546. Add two beautifiers: clang-format and yapf</li>
+</ul>
+<h1 id="v0-28-14-2015-09-22-">v0.28.14 (2015-09-22)</h1>
+<ul>
+<li>Close #561. Default prettydiff comments to indent</li>
+</ul>
+<h1 id="v0-28-13-2015-09-22-">v0.28.13 (2015-09-22)</h1>
+<ul>
+<li>Closes #559. Add support for XSL and XSD grammars and file extensions</li>
+</ul>
+<h1 id="v0-28-12-2015-09-10-">v0.28.12 (2015-09-10)</h1>
+<ul>
+<li>See #524, #534. Add end_with_comma option to JavaScript using Pretty Diff</li>
+<li>See #524 and #543. Add no_lead_zero to CSS with Pretty Diff support</li>
+<li>Add extra_liners option from js-beautify in Settings View. See #540</li>
+<li>Closes #529. Improve documentation generation for package options</li>
+</ul>
+<h1 id="v0-28-11-2015-08-10-">v0.28.11 (2015-08-10)</h1>
+<ul>
+<li>Properly dispose of event subscriptions. #501</li>
+<li>Fixes #496. Update Pretty Diff and fix adding two spaces incorrectly</li>
+<li>Properly dispose of all subscriptions</li>
+</ul>
+<h1 id="v0-28-10-2015-08-05-">v0.28.10 (2015-08-05)</h1>
+<ul>
+<li>Handle language being null in Help Debug Editor command. #497</li>
+</ul>
+<h1 id="v0-28-9-2015-07-17-">v0.28.9 (2015-07-17)</h1>
+<ul>
+<li>add language scopes to atom language config gets. #436</li>
+<li>Fixes #479. Fix handling perltidy_profile option when it is an empty string</li>
+<li>:bug: fix the race condition in beautify on save for setting cursor positions. #476</li>
+<li>Add Gherkin grammar support. #377</li>
+<li>Add Arduino language. #469</li>
+</ul>
+<h1 id="v0-28-8-2015-06-26-">v0.28.8 (2015-06-26)</h1>
+<ul>
+<li>Beautify Swig templates with handlebars instead of markup. See #464</li>
+<li>Closes #447. Improved Handlebars language support</li>
+<li>Add SVG support. #449</li>
+<li>Added support of .rubocop.yml file in project root. #414</li>
+</ul>
+<h1 id="v0-28-7-2015-06-26-">v0.28.7 (2015-06-26)</h1>
+<ul>
+<li>Add JSCS Fixer beautifier. #412</li>
+<li>Fix option, indent_size, to work with ruby-beautify</li>
+</ul>
+<h1 id="v0-28-6-2015-06-25-">v0.28.6 (2015-06-25)</h1>
+<ul>
+<li>Closes #410. Add space_after_anon_function option to Pretty Diff</li>
+<li>Add more logging to beautifiers</li>
+<li>Add final options, package settings, language detected to Help Debug Editor. See #413. This extra info would be useful</li>
+</ul>
+<h1 id="v0-28-5-2015-06-14-">v0.28.5 (2015-06-14)</h1>
+<ul>
+<li>Handle Windows command not found error being different. See #397</li>
+<li>Fix Windows spawn issues, switch to cross-spawn</li>
+<li>Fixes #397. sqlformat should not be able to be found and used.</li>
+</ul>
+<h1 id="v0-28-4-2015-06-12-">v0.28.4 (2015-06-12)</h1>
+<ul>
+<li>See #390. Revert previous commit to fix PHP-CS-Fixer and rubocop</li>
+<li>See #390. Use global php-cs-fixer on Windows without running within php</li>
+<li>See #213. Disable <code>Beautify Directory</code> command from menus</li>
+<li>See #213. Add OK/Cancel buttons to Beautify Directory command</li>
+<li>See #213. Add warning to beautify-directory</li>
+</ul>
+<h1 id="v0-28-3-2015-06-11-">v0.28.3 (2015-06-11)</h1>
+<ul>
+<li>Closes #264. Choose Pretty Diff beautifier as default for ERB</li>
+<li>Add indent_size option to htmlbeautifier</li>
+<li>Make Pretty Diff default beautifier for ERB</li>
+<li>See #394. Improve error message when program cannot be found</li>
+<li>Closes #142. Add options (tabs, spaces, indent_count) for Ruby-Beautify</li>
+</ul>
+<h1 id="v0-28-2-2015-06-10-">v0.28.2 (2015-06-10)</h1>
+<ul>
+<li>Update all package dependencies</li>
+<li>Fix typo in beautify-languages-spec causing failing tests to pass</li>
+<li>Closes #341. Add indent_size option to Rubocop beautifier</li>
+</ul>
+<h1 id="v0-28-1-2015-06-10-">v0.28.1 (2015-06-10)</h1>
+<ul>
+<li>Fixes #327. Only show beautify progress view when actually beautifying</li>
+<li>Closes #369. Allow JS Beautify to be used for XML language</li>
+<li>Add in-page links to documentation, to beautifiers, etc</li>
+</ul>
+<h1 id="v0-28-0-2015-06-08-">v0.28.0 (2015-06-08)</h1>
+<ul>
+<li>Generate documentation for available options for each beautifier</li>
+<li>Closes #297, #265. Add missing Pretty Diff options for CSS/SCSS/Sass/LESS</li>
+</ul>
+<h1 id="v0-27-13-2015-06-08-">v0.27.13 (2015-06-08)</h1>
+<ul>
+<li>Retrieve/use absolute path of executable within Beautifier::run. See #375.</li>
+<li>Add missing package dependencies for atom-typescript package</li>
+<li>See #375. Install htmlbeautifier, php-cs-fixer, emacs for Windows CI</li>
+</ul>
+<h1 id="v0-27-12-2015-06-06-">v0.27.12 (2015-06-06)</h1>
+<ul>
+<li>Closes #309. Add language Twig and use Pretty Diff beautifier.</li>
+</ul>
+<h1 id="v0-27-11-2015-06-06-">v0.27.11 (2015-06-06)</h1>
+<ul>
+<li>See #311. Show installation instructions when beautifiers are missing<ul>
+<li>autopep8</li>
+<li>perltidy</li>
+<li>ruby-beautify</li>
+<li>sqlformat</li>
+<li>uncrustify</li>
+</ul>
+</li>
+<li>See #358. Add Rustfmt beautifier for Rust language support</li>
+<li>See #311. Closes #288. Show installation and setup instructions when cannot find php-cs-fixer</li>
+<li>Closes #311. Show more informative error when beautifier not found</li>
+</ul>
+<h1 id="v0-27-10-2015-06-01-">v0.27.10 (2015-06-01)</h1>
+<ul>
+<li>Add Fortran language support (#383)</li>
+<li>See #375. Add Python, Pip, autopep8 installation to AppVeyor</li>
+</ul>
+<h1 id="v0-27-9-2015-05-28-">v0.27.9 (2015-05-28)</h1>
+<ul>
+<li>Fixes #370. Nest EditorConfig options under <code>_default</code> namespace</li>
+<li>See #370. Resolve promises in allOptions for Help Debug Editor</li>
+<li>Update package dependencies.</li>
+</ul>
+<h1 id="v0-27-8-2015-05-22-">v0.27.8 (2015-05-22)</h1>
+<ul>
+<li>Fixes #338. Restore cursor and scroll position for beautify on save</li>
+<li>See #372. Update engines field in package.json</li>
+<li>See #372. Fix deprecation, call ::getActiveTextEditor instead. Closes #366.</li>
+<li>See #372. Fix deprecation, switch to using atom-space-pen-views</li>
+</ul>
+<h1 id="v0-27-7-2015-05-27-">v0.27.7 (2015-05-27)</h1>
+<ul>
+<li>Fixes #370. Allow Promises in allOptions for beautification</li>
+</ul>
+<h1 id="v0-27-6-2015-05-22-">v0.27.6 (2015-05-22)</h1>
+<ul>
+<li>Enable typescript-formatter defaults</li>
+</ul>
+<h1 id="v0-27-5-2015-05-21-">v0.27.5 (2015-05-21)</h1>
+<ul>
+<li>Closes #349. Add Visualforce language and use Pretty Diff beautifier</li>
+<li>Add check for when Language or Beautifier is not found in tests</li>
+</ul>
+<h1 id="v0-27-4-2015-05-20-">v0.27.4 (2015-05-20)</h1>
+<ul>
+<li>See #144. Add JSX language tests</li>
+<li>Fixes #353. Fix support for extensions with getLanguages</li>
+<li>Add .js to the extensions supported by the JSX language</li>
+<li>fixes #144 for good</li>
+</ul>
+<h1 id="v0-27-3-2015-05-20-">v0.27.3 (2015-05-20)</h1>
+<ul>
+<li>Fixes #288. Add custom command for PHP-CS-Fixer on Windows</li>
+<li>Closes #350. Add grammar HTML (Angular) to Embedded JavaScript language</li>
+<li>Update and fix Titanium Style Sheets tests</li>
+<li>Closes #351. Update TypeScript beautification tests</li>
+<li>fix typescript support</li>
+</ul>
+<h1 id="v0-27-2-2015-05-19-">v0.27.2 (2015-05-19)</h1>
+<ul>
+<li>Closes #346. Merge options for language namespace, fallbacks, <code>_default</code></li>
+<li>Update coffee-fmt to v0.10.2 and beautify internal source code</li>
+<li>Closes #323. Add language Swig with grammar HTML (Swig)</li>
+<li>Add debugging logs to JS-Beautify and Coffee-Fmt beautifiers</li>
+<li>Update package dependencies.</li>
+<li>Closes #332. Remove deprecated &quot;Beautify: Beautify Editor&quot; command</li>
+<li>Add debugging logs to JS-Beautify and Coffee-Fmt beautifiers</li>
+<li>Update package dependencies</li>
+<li>Closes #332. Remove deprecated &quot;Beautify: Beautify Editor&quot; command</li>
+<li>See #144. Add JavaScript (JSX) grammar to JSX language</li>
+</ul>
+<h1 id="v0-27-1-2015-05-07-">v0.27.1 (2015-05-07)</h1>
+<ul>
+<li>Fixes #314. Beauify On Save will save then beautify the file on disk</li>
+</ul>
+<h1 id="v0-27-0-2015-05-06-">v0.27.0 (2015-05-06)</h1>
+<ul>
+<li>Closes #178. Change commands&#39; namespace from &quot;beautify&quot; to &quot;atom-beautify&quot;</li>
+<li>Closes #308. Beautify On Save is opt-in for each language</li>
+<li>See #296. Add package option for setting logger level</li>
+</ul>
+<h1 id="v0-26-4-2015-05-05-">v0.26.4 (2015-05-05)</h1>
+<ul>
+<li>See #317. Use Warning notification, improve message for unsupported lang</li>
+<li>Closes #317. Switch from addFatalError to addError for showing errors</li>
+<li>Fixes #289. Remove deprecated subscription call to TextBuffer.on</li>
+<li>Update to PHP-CS-Fixer 1.7 and fix broken PHP tests</li>
+<li>Unify the look of the Gitter badge.</li>
+</ul>
+<h1 id="v0-26-4-2015-05-04-">v0.26.4 (2015-05-04)</h1>
+<ul>
+<li>Fixes #305. Beautify input in single temp file for HTMLBeautifier</li>
+</ul>
+<h1 id="v0-26-3-2015-05-04-">v0.26.3 (2015-05-04)</h1>
+<ul>
+<li>Closes #296. Add logging to <code>Help Debug Editor</code> command</li>
+<li>See #296. Add Logging API to Beautifier</li>
+<li>Update PHP tests to new PHP-CS-Fixer expected style</li>
+</ul>
+<h1 id="v0-26-2-2015-05-03-">v0.26.2 (2015-05-03)</h1>
+<ul>
+<li>Remove Pandoc installation and ignore errors for Homebrew-PHP with Travis CI</li>
+<li>Update autopep8 and update failing Python test to pass</li>
+<li>See #294. Add missing argument to PHP-CS-Fixer beautifier</li>
+<li>Add support for beautifiers ignoring CLI return code</li>
+<li>Properly handle errors in spec tests with Promises</li>
+</ul>
+<h1 id="v0-26-1-2015-05-03-">v0.26.1 (2015-05-03)</h1>
+<ul>
+<li>Fixes #301. Fix autopep8 beautifier&#39;s arguments</li>
+<li>See #292. Add more Markdown with YAML Front Matter tests</li>
 </ul>
 <h1 id="v0-26-0-2015-05-03-">v0.26.0 (2015-05-03)</h1>
 <ul>
@@ -479,9 +931,7 @@ editor&#39;s file to root, &quot;/&quot;)</li>
 <ul>
 <li>public release</li>
 <li>beautify JS, HTML and CSS files based on current editor settings</li>
-</ul>
-<!--- The following link definition list is generated by PimpMyChangelog --->
-
+</ul><p><!--- The following link definition list is generated by PimpMyChangelog ---></p>
       </div>
     </div>
     <div id='footer'>

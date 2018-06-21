@@ -67,7 +67,8 @@ module.exports = class PHPCSFixer extends Beautifier
     phpCsFixerOptions = [
       "fix"
       "--rules=#{options.rules}" if options.rules
-      "--config=#{options.cs_fixer_config_file}" if options.cs_fixer_config_file
+      "--config" if options.cs_fixer_config_file
+      "#{options.cs_fixer_config_file}" if options.cs_fixer_config_file
       "--allow-risky=#{options.allow_risky}" if options.allow_risky
       "--using-cache=no"
     ]
@@ -105,7 +106,7 @@ module.exports = class PHPCSFixer extends Beautifier
       isPhpScript = (finalPhpCsFixerPath.indexOf(".phar") isnt -1) or (finalPhpCsFixerPath.indexOf(".php") isnt -1)
       @verbose('isPhpScript', isPhpScript)
 
-      if finalPhpCsFixerPath and isPhpScript
+      if not phpCsFixer.isInstalled and finalPhpCsFixerPath and isPhpScript
         php.run([finalPhpCsFixerPath, phpCsFixerOptions, tempFile], runOptions)
           .then(=>
             @readFile(tempFile)

@@ -39,34 +39,6 @@
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='scope-variable'>
-    scope
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>[&#39;source.js&#39;]</code></pre>
-    <div class='docstring'>
-  <p>Get Atom defaults</p>
-</div>
-<div class='tags'>
-</div>
-  </dd>
-  <dt id='defaultIndentSize-variable'>
-    defaultIndentSize
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? tabLength : 1)</code></pre>
-    
-  </dd>
-  <dt id='defaultIndentChar-variable'>
-    defaultIndentChar
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>(softTabs ? &quot; &quot; : &quot;\t&quot;)</code></pre>
-    
-  </dd>
   <dt id='module.exports-variable'>
     module.exports
     =
@@ -75,6 +47,7 @@
     <pre><code class='coffeescript'>{
   name: &quot;JavaScript&quot;,
   namespace: &quot;js&quot;,
+  scope: [&#39;source.js&#39;],
 
   &#47;*
   Supported Grammars
@@ -96,13 +69,13 @@
      *&#47;
     indent_size: {
       type: &#39;integer&#39;,
-      &quot;default&quot;: defaultIndentSize,
+      &quot;default&quot;: null,
       minimum: 0,
       description: &quot;Indentation size&#47;length&quot;
     },
     indent_char: {
       type: &#39;string&#39;,
-      &quot;default&quot;: defaultIndentChar,
+      &quot;default&quot;: null,
       description: &quot;Indentation character&quot;
     },
     indent_level: {
@@ -112,7 +85,7 @@
     },
     indent_with_tabs: {
       type: &#39;boolean&#39;,
-      &quot;default&quot;: defaultIndentWithTabs,
+      &quot;default&quot;: null,
       description: &quot;Indentation uses tabs, overrides `Indent Size` and `Indent Char`&quot;
     },
     preserve_newlines: {
@@ -190,6 +163,17 @@
       type: &#39;boolean&#39;,
       &quot;default&quot;: false,
       description: &quot;If a terminating comma should be inserted into arrays, object literals, and destructured objects.&quot;
+    },
+    end_of_line: {
+      type: &#39;string&#39;,
+      &quot;default&quot;: &quot;System Default&quot;,
+      &quot;enum&quot;: [&quot;CRLF&quot;, &quot;LF&quot;, &quot;System Default&quot;],
+      description: &quot;Override EOL from line-ending-selector&quot;
+    },
+    object_curly_spacing: {
+      type: &#39;boolean&#39;,
+      &quot;default&quot;: false,
+      description: &quot;Insert spaces between brackets in object literals&quot;
     }
   }
 }</code></pre>

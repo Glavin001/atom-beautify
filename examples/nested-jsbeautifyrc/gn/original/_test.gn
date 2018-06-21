@@ -1,0 +1,18 @@
+shared_library("test") {
+
+# NOSORT
+sources = [
+  "z.cc",
+  "a.cc",
+]
+
+
+deps=["//abc:deps"]
+  include_dirs = [
+    ".",
+  ]
+  
+  if (is_win) {
+    sources += ["b.cpp","a.cpp"]
+  }
+}

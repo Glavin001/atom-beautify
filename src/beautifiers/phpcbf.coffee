@@ -4,6 +4,7 @@ Requires https://github.com/FriendsOfPHP/phpcbf
 
 "use strict"
 Beautifier = require('./beautifier')
+path = require('path')
 
 module.exports = class PHPCBF extends Beautifier
   name: "PHPCBF"
@@ -23,6 +24,7 @@ module.exports = class PHPCBF extends Beautifier
       cmd: "phpcbf"
       homepage: "https://github.com/squizlabs/PHP_CodeSniffer"
       installation: "https://github.com/squizlabs/PHP_CodeSniffer#installation"
+      optional: true
       version: {
         parse: (text) -> text.match(/version (\d+\.\d+\.\d+)/)[1]
       }

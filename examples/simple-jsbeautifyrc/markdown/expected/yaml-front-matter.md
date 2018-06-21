@@ -1,7 +1,8 @@
 ---
-layout: default
-title: this is my title
-description: this is my description
+layout:          default
+title:        this is my title
+description:     this is my description
 ---
 
-test ing
+ test
+   ing
