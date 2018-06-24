@@ -20,6 +20,7 @@ script:
   - chmod u+x build-package.sh
   - ./build-package.sh
   - npm run build
+  - npm test
 
 notifications:
   email:

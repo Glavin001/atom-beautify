@@ -16,8 +16,8 @@ import {
 } from "atom";
 import Config from "./config";
 import * as path from "path";
-import _ from "lodash";
-import cosmiconfig from "cosmiconfig";
+import * as _ from "lodash";
+import * as cosmiconfig from "cosmiconfig";
 import { Logger } from "./logger";
 const logger = Logger(__filename);
 
@@ -134,7 +134,6 @@ export class AtomBeautify {
   private beautifyEditor() {
     const editor = atom.workspace.getActiveTextEditor();
     if (editor === undefined) {
-      logger.error("No active editor was found");
       return this.showError(new Error("No active editor was found"));
     }
     const {
@@ -143,7 +142,6 @@ export class AtomBeautify {
       fileExtension,
     } = this.languagesForEditor(editor);
     if (!languageName) {
-      logger.error(`Language info not found for ${languageName}`);
       return this.showError(
         new Error("Language could not be found or is not supported")
       );
@@ -180,7 +178,6 @@ export class AtomBeautify {
   private beautify(data: BeautifyData): Promise<string> {
     logger.info("Beautifying with", { data });
     return this.unibeautify.beautify(data).catch(error => {
-      logger.error(error);
       this.showError(error);
       return Promise.reject(error);
     });
@@ -246,6 +243,7 @@ export class AtomBeautify {
 
   // Show error in the Atom notification area
   private showError(error: Error): Notification | undefined {
+    logger.error(error);
     if (!this.baseConfig.general.muteAllErrors) {
       const stack = error.stack;
       const detail = `${error.name}: ${error.message}`;

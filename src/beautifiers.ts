@@ -4,6 +4,7 @@ import prettier from "@unibeautify/beautifier-prettier";
 import jsBeautify from "@unibeautify/beautifier-js-beautify";
 import eslint from "@unibeautify/beautifier-eslint";
 import phpCsFixer from "@unibeautify/beautifier-php-cs-fixer";
+import phpCodeSniffer from "@unibeautify/beautifier-php-codesniffer";
 
 const beautifiers: Beautifier[] = <any[]>[
   prettier,
@@ -11,6 +12,7 @@ const beautifiers: Beautifier[] = <any[]>[
   prettyDiff,
   eslint,
   phpCsFixer,
+  phpCodeSniffer,
 ];
 
 export default beautifiers;

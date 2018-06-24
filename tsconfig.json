@@ -10,8 +10,7 @@
       "declaration": true,
       "moduleResolution": "node",
       "outDir": "dist",
-      "baseUrl": ".",
-      "esModuleInterop": true
+      "baseUrl": "."
     },
     "include": [
       "./declarations.d.ts",
