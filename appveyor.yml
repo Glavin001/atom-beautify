@@ -25,6 +25,9 @@ install:
   - pip install -r requirements.txt
 
   # Gemfile Install
+  - set PATH=C:\Ruby24-x64\bin;%PATH%
+  - ruby -v
+  - gem update --system
   - bundle install
 
   # PHP
