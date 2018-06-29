@@ -176,7 +176,6 @@
   "dependencies": {
     "align-yaml": "^0.1.8",
     "async": "^2.6.0",
-    "atom-message-panel": "^1.3.0",
     "atom-space-pen-views": "^2.2.0",
     "bluebird": "^3.5.1",
     "coffee-fmt": "^0.12.0",
@@ -199,7 +198,6 @@
     "nginxbeautify": "^2.0.1",
     "node-cljfmt": "0.5.3",
     "node-dir": "0.1.17",
-    "open": "0.0.5",
     "prettier": "^1.11.1",
     "prettydiff2": "^2.2.7",
     "pug-beautify": "^0.1.1",
@@ -207,7 +205,6 @@
     "season": "^6.0.2",
     "semver": "^5.5.0",
     "shell-env": "^0.3.0",
-    "space-pen": "5.1.2",
     "strip-json-comments": "^2.0.1",
     "temp": "^0.8.3",
     "tidy-markdown": "2.0.4",
@@ -449,7 +446,6 @@
     "blade"
   ],
   "devDependencies": {
-    "codo": "^2.1.2",
     "coffeelint": "2.1.0"
   },
   "scripts": {

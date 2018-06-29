@@ -287,7 +287,6 @@ beautifyDirectory = ({target}) ->
 
 debug = () ->
   try
-    open = require("open")
     fs ?= require "fs"
 
     plugin.checkUnsupportedOptions()
