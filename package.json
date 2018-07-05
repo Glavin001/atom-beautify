@@ -218,7 +218,8 @@
     "uuid": "^3.1.0",
     "which": "^1.3.0",
     "winston": "^2.4.0",
-    "yaml-front-matter": "3.4.1"
+    "yaml-front-matter": "3.4.1",
+    "snyk": "^1.88.1"
   },
   "activationHooks": [
     "core:loaded-shell-environment"
@@ -455,11 +456,12 @@
   "scripts": {
     "build-options": "node script/build-options.js",
     "docs": "npm run build-options && coffee docs/",
-    "prepare": "npm run docs",
+    "prepare": "npm run snyk-protect; npm run docs",
     "lint": "coffeelint src/ spec/",
     "code-docs": "codo && open docs/code/index.html",
     "pretest": "npm run lint",
-    "test": "atom --test spec"
+    "test": "atom --test spec",
+    "snyk-protect": "snyk protect"
   },
   "config": {
     "next-update": {
@@ -484,5 +486,6 @@
       "underscore-plus",
       "prettydiff2"
     ]
-  }
+  },
+  "snyk": true
 }
