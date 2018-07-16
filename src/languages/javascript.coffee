@@ -1,21 +1,25 @@
 module.exports = {
 
-  name: "JavaScript"
-  namespace: "js"
+  name: "Status Quo Script"
+  namespace: "sqf"
   scope: ['source.js']
 
+  ###
+  See SQF Syntax
+  https://community.bistudio.com/wiki/SQF_syntax
+  ####
   ###
   Supported Grammars
   ###
   grammars: [
-    "JavaScript"
+    "StatusQuoScript"
   ]
 
   ###
   Supported extensions
   ###
   extensions: [
-    "js"
+    "sqf"
   ]
 
   defaultBeautifier: "JS Beautify"
@@ -23,7 +27,7 @@ module.exports = {
   ###
   ###
   options:
-    # JavaScript
+    # StatusQuoScript
     indent_size:
       type: 'integer'
       default: null
