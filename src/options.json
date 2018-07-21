@@ -9301,7 +9301,8 @@
     "description": "Options for language Verilog",
     "collapsed": true,
     "beautifiers": [
-      "Emacs Verilog Mode"
+      "Emacs Verilog Mode",
+      "Verilog iStyle Formatter"
     ],
     "grammars": [
       "Verilog"
@@ -9326,6 +9327,20 @@
           "namespace": "verilog"
         }
       },
+      "command_args": {
+        "type": "string",
+        "default": "--style=gnu",
+        "description": "Args for iStyle command.",
+        "title": "iStyle command args",
+        "beautifiers": [
+          "Verilog iStyle Formatter"
+        ],
+        "key": "command_args",
+        "language": {
+          "name": "Verilog",
+          "namespace": "verilog"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
@@ -9340,7 +9355,8 @@
         "default": "Emacs Verilog Mode",
         "description": "Default Beautifier to be used for Verilog",
         "enum": [
-          "Emacs Verilog Mode"
+          "Emacs Verilog Mode",
+          "Verilog iStyle Formatter"
         ]
       },
       "beautify_on_save": {
