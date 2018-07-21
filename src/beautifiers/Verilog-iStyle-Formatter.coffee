@@ -1,5 +1,5 @@
 ###
-Requires emacs with verilog-mode https://www.veripool.org/wiki/verilog-mode
+Requires emacs with istyle-verilog-formatter https://github.com/feilongfl/istyle-verilog-formatter/releases
 ###
 
 "use strict"
@@ -13,8 +13,8 @@ module.exports = class EmacsVerilogMode extends Beautifier
     {
       name: "iStyle-verilog-formatter"
       cmd: "iStyle"
-      homepage: "https://github.com/thomasrussellmurphy/istyle-verilog-formatter"
-      installation: "https://github.com/thomasrussellmurphy/istyle-verilog-formatter"
+      homepage: "https://github.com/feilongfl/istyle-verilog-formatter"
+      installation: "https://github.com/feilongfl/istyle-verilog-formatter/releases"
       version: {
         parse: (text) -> text.match(/iStyle (\d+\.\d+(?:\.\d+)?)/)[1]
       }
@@ -26,12 +26,12 @@ module.exports = class EmacsVerilogMode extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    # command_args = options.command_args
+    command_args = options.command_args
 
     console.log("loaded verilog istyle!")
 
-    # if not command_args
-    command_args = '--style=gnu'
+    if not command_args
+      command_args = '--style=gnu'
 
     @debug('verilog-beautifier', 'command_args: ' + command_args)
 
