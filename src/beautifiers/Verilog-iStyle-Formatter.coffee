@@ -1,5 +1,5 @@
 ###
-Requires emacs with istyle-verilog-formatter https://github.com/feilongfl/istyle-verilog-formatter/releases
+Requires iStyle with istyle-verilog-formatter https://github.com/feilongfl/istyle-verilog-formatter/releases
 ###
 
 "use strict"
