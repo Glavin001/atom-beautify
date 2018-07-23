@@ -26,21 +26,28 @@ module.exports = class EmacsVerilogMode extends Beautifier
   }
 
   beautify: (text, language, options) ->
-    command_args = options.command_args
+    iStyle_format_style = options.iStyle_format_style
+    iStyle_command_args_text = options.iStyle_command_args
+    iStyle_command_args = iStyle_command_args_text.split " " if iStyle_command_args_text?
 
-    console.log("loaded verilog istyle!")
 
-    if not command_args
-      command_args = '--style=gnu'
+    if not iStyle_format_style
+      iStyle_format_style = 'kr'
 
-    @debug('verilog-beautifier', 'command_args: ' + command_args)
+    iStyle_format_style = '--style=' + iStyle_format_style
+
+    @debug('verilog-beautifier', 'iStyle_format_style: ' + iStyle_format_style)
+    @debug('verilog-beautifier', 'iStyle_command_args_text: ' + iStyle_command_args_text)
 
     tempFile = @tempFile("input", text)
 
     args = [
-      command_args
+      iStyle_format_style
       tempFile
       ]
+
+    args.push(iStyle_command_args) if iStyle_command_args[0] != ""
+
 
     @debug('verilog-beautifier', 'istyle args: ' + args)
 

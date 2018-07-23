@@ -9327,15 +9327,34 @@
           "namespace": "verilog"
         }
       },
-      "command_args": {
+      "iStyle_format_style": {
         "type": "string",
-        "default": "--style=gnu",
-        "description": "Args for iStyle command.",
+        "default": "kr",
+        "enum": [
+          "kr",
+          "gnu",
+          "ansi"
+        ],
+        "description": "iStyle format style,you can choose gnu,kr or ansi.",
+        "title": "iStyle format style",
+        "beautifiers": [
+          "Verilog iStyle Formatter"
+        ],
+        "key": "iStyle_format_style",
+        "language": {
+          "name": "Verilog",
+          "namespace": "verilog"
+        }
+      },
+      "iStyle_command_args": {
+        "type": "string",
+        "default": "",
+        "description": "iStyle args.",
         "title": "iStyle command args",
         "beautifiers": [
           "Verilog iStyle Formatter"
         ],
-        "key": "command_args",
+        "key": "iStyle_command_args",
         "language": {
           "name": "Verilog",
           "namespace": "verilog"
