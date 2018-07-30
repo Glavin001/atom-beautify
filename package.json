@@ -168,6 +168,10 @@
     {
       "name": "Kohei Hiraga",
       "url": "https://github.com/range3"
+    },
+    {
+      "name": "Arlo Shallit",
+      "url": "https://github.com/arl-o"
     }
   ],
   "engines": {
@@ -446,7 +450,8 @@
     "vhdl",
     "vhdl beautifier",
     "gn",
-    "blade"
+    "blade",
+    "black"
   ],
   "devDependencies": {
     "codo": "^2.1.2",

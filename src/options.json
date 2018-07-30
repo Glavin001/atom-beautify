@@ -6274,6 +6274,7 @@
     ],
     "beautifiers": [
       "autopep8",
+      "black",
       "pybeautifier",
       "yapf"
     ],
@@ -6424,6 +6425,7 @@
         "description": "Default Beautifier to be used for Python",
         "enum": [
           "autopep8",
+          "black",
           "pybeautifier",
           "yapf"
         ]
@@ -9436,6 +9438,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"crystal\" executable's binary/script."
+          }
+        }
+      },
+      "black": {
+        "key": "black",
+        "title": "black",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for black executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"black\" executable's binary/script."
           }
         }
       },
