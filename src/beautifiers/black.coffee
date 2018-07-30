@@ -15,7 +15,7 @@ module.exports = class Black extends Beautifier
       homepage: "https://github.com/ambv/black"
       installation: "https://github.com/ambv/black#installation"
       version: {
-        parse: (text) -> 
+        parse: (text) ->
           # Try to read beta values, eg "black, version 18.6b4" -> 18.6.4
           try
             text.match(/black, version (\d+\.\d+)/)[1] + "." + text.match(/b(\d+)$/)[1]
