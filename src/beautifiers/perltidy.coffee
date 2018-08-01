@@ -3,6 +3,7 @@ Requires [perltidy](http://perltidy.sourceforge.net)
 ###
 "use strict"
 Beautifier = require('./beautifier')
+path = require('path')
 
 module.exports = class PerlTidy extends Beautifier
   name: "Perltidy"
@@ -20,7 +21,16 @@ module.exports = class PerlTidy extends Beautifier
     else
       return options.perltidy_path
 
-  beautify: (text, language, options) ->
+  configFiles = ['.perltidyrc']
+  beautify: (text, language, options, context) ->
+        # Find a config file in the working directory if a custom one was not provided
+        if not options.perltidy_profile
+          options.perltidy_profile = if context? and context.filePath? then @findFile(path.dirname(context.filePath), configFiles)
+
+        # Try again to find a config file in the project root
+        if not options.perltidy_profile
+          options.perltidy_profile = @findFile(atom.project.getPaths()[0], configFiles)
+          
     @run("perltidy", [
       '--standard-output'
       '--standard-error-output'
