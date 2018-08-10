@@ -1,4 +1,4 @@
-# Next
+# v0.32.6 (2018-08-10)
 - Fixes an issue where Atom Beautify would display a Docker error instead of an executable error ([#2146](https://github.com/Glavin001/atom-beautify/issues/2146))
 - Fixes Rubocop not excluding files with an exact pattern match (`db/schema.rb` vs `db/**/*`)
 
