@@ -300,6 +300,23 @@ Options for isort executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*isort*" and change it to your desired configuration.
 
+#####  [ocamlformat](#ocamlformat) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for ocamlformat executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*ocamlformat*" and change it to your desired configuration.
+
 #####  [ocp-indent](#ocp-indent) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -9985,13 +10002,13 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [OCaml](#ocaml) 
 
-**Supported Beautifiers**:  [`ocp-indent`](#ocp-indent) 
+**Supported Beautifiers**:  [`ocp-indent`](#ocp-indent)  [`ocamlformat`](#ocamlformat) 
 
-| Option | ocp-indent |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
+| Option | ocamlformat | ocp-indent |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -10022,7 +10039,7 @@ Disable OCaml Beautification
 
 **Type**: `string`
 
-**Enum**:  `ocp-indent` 
+**Enum**:  `ocp-indent`  `ocamlformat` 
 
 **Description**:
 
