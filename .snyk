@@ -1,0 +1,14 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - coffee-fmt > lodash:
+        patched: '2018-07-05T04:03:08.305Z'
+    - jscs > lodash:
+        patched: '2018-07-05T04:03:08.305Z'
+    - jscs > jscs-jsdoc > jsdoctypeparser > lodash:
+        patched: '2018-07-05T04:03:08.305Z'
+    - jscs > xmlbuilder > lodash:
+        patched: '2018-07-05T04:03:08.305Z'
