@@ -302,11 +302,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
         "title": "Wrap attributes",
         "beautifiers": [
           "JS Beautify"
@@ -435,12 +436,110 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)",
         "title": "Unformatted",
         "beautifiers": [
           "JS Beautify"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)",
+        "title": "Inline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"
@@ -1699,11 +1798,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
         "title": "Wrap attributes",
         "beautifiers": [
           "JS Beautify"
@@ -1804,12 +1904,110 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)",
         "title": "Unformatted",
         "beautifiers": [
           "JS Beautify"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)",
+        "title": "Inline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"
@@ -2559,11 +2757,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
         "title": "Wrap attributes",
         "beautifiers": [
           "JS Beautify"
@@ -2693,12 +2892,110 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)",
         "title": "Unformatted",
         "beautifiers": [
           "JS Beautify"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)",
+        "title": "Inline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"
@@ -2934,11 +3231,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
         "title": "Wrap attributes",
         "beautifiers": [
           "JS Beautify"
@@ -3068,12 +3366,110 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)",
         "title": "Unformatted",
         "beautifiers": [
           "JS Beautify"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)",
+        "title": "Inline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"
@@ -5077,11 +5473,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)",
         "title": "Wrap attributes",
         "beautifiers": [
           "Marko Beautifier"
@@ -5210,12 +5607,110 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by Marko Beautifier)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Marko Beautifier)",
         "title": "Unformatted",
         "beautifiers": [
           "Marko Beautifier"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by Marko Beautifier)",
+        "title": "Inline",
+        "beautifiers": [
+          "Marko Beautifier"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by Marko Beautifier)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "Marko Beautifier"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"
@@ -5402,11 +5897,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
         "title": "Wrap attributes",
         "beautifiers": [
           "JS Beautify"
@@ -5534,12 +6030,109 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)",
         "title": "Unformatted",
         "beautifiers": [
           "JS Beautify"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)",
+        "title": "Inline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"
@@ -8435,11 +9028,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)",
         "title": "Wrap attributes",
         "beautifiers": [
           "Vue Beautifier"
@@ -8540,12 +9134,110 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by Vue Beautifier)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Vue Beautifier)",
         "title": "Unformatted",
         "beautifiers": [
           "Vue Beautifier"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by Vue Beautifier)",
+        "title": "Inline",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by Vue Beautifier)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "Vue Beautifier"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"
@@ -8889,11 +9581,12 @@
         "default": "auto",
         "enum": [
           "auto",
+          "aligned-multiple",
           "force",
           "force-aligned",
           "force-expand-multiline"
         ],
-        "description": "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
+        "description": "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)",
         "title": "Wrap attributes",
         "beautifiers": [
           "JS Beautify"
@@ -9023,12 +9716,110 @@
         "items": {
           "type": "string"
         },
-        "description": "List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)",
+        "description": "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)",
         "title": "Unformatted",
         "beautifiers": [
           "JS Beautify"
         ],
         "key": "unformatted",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "inline": {
+        "type": "array",
+        "default": [
+          "a",
+          "abbr",
+          "area",
+          "audio",
+          "b",
+          "bdi",
+          "bdo",
+          "br",
+          "button",
+          "canvas",
+          "cite",
+          "code",
+          "data",
+          "datalist",
+          "del",
+          "dfn",
+          "em",
+          "embed",
+          "i",
+          "iframe",
+          "img",
+          "input",
+          "ins",
+          "kbd",
+          "keygen",
+          "label",
+          "map",
+          "mark",
+          "math",
+          "meter",
+          "noscript",
+          "object",
+          "output",
+          "progress",
+          "q",
+          "ruby",
+          "s",
+          "samp",
+          "select",
+          "small",
+          "span",
+          "strong",
+          "sub",
+          "sup",
+          "svg",
+          "template",
+          "textarea",
+          "time",
+          "u",
+          "var",
+          "video",
+          "wbr",
+          "text",
+          "acronym",
+          "address",
+          "big",
+          "dt",
+          "ins",
+          "strike",
+          "tt"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)",
+        "title": "Inline",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "inline",
+        "language": {
+          "name": "HTML",
+          "namespace": "html"
+        }
+      },
+      "content_unformatted": {
+        "type": "array",
+        "default": [
+          "pre",
+          "textarea"
+        ],
+        "items": {
+          "type": "string"
+        },
+        "description": "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)",
+        "title": "Content unformatted",
+        "beautifiers": [
+          "JS Beautify"
+        ],
+        "key": "content_unformatted",
         "language": {
           "name": "HTML",
           "namespace": "html"

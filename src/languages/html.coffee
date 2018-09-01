@@ -49,8 +49,8 @@ module.exports = {
     wrap_attributes:
       type: 'string'
       default: "auto"
-      enum: ["auto", "force", "force-aligned", "force-expand-multiline"]
-      description: "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline]"
+      enum: ["auto", "aligned-multiple", "force", "force-aligned", "force-expand-multiline"]
+      description: "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline]"
     wrap_attributes_indent_size:
       type: 'integer'
       default: null
@@ -79,7 +79,27 @@ module.exports = {
         ]
       items:
         type: 'string'
-      description: "List of tags (defaults to inline) that should not be reformatted"
+      description: "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior."
+    inline:
+      type: 'array'
+      default: [
+            'a', 'abbr', 'area', 'audio', 'b', 'bdi', 'bdo', 'br', 'button', 'canvas', 'cite',
+            'code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'iframe', 'img',
+            'input', 'ins', 'kbd', 'keygen', 'label', 'map', 'mark', 'math', 'meter', 'noscript',
+            'object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'select', 'small',
+            'span', 'strong', 'sub', 'sup', 'svg', 'template', 'textarea', 'time', 'u', 'var',
+            'video', 'wbr', 'text',
+            'acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt'
+        ]
+      items:
+        type: 'string'
+      description: "List of inline tags. Behaves similar to text content, will not wrap without whitespace."
+    content_unformatted:
+      type: 'array'
+      default: [ 'pre', 'textarea' ]
+      items:
+        type: 'string'
+      description: "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not."
     end_with_newline:
       type: 'boolean'
       default: false

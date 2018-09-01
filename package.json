@@ -168,6 +168,10 @@
     {
       "name": "Kohei Hiraga",
       "url": "https://github.com/range3"
+    },
+    {
+      "name": "Liam Newman",
+      "url": "https://github.com/bitwiseman"
     }
   ],
   "engines": {
@@ -191,7 +195,7 @@
     "extend": "^3.0.1",
     "gherkin": "^2.12.2",
     "handlebars": "^4.0.11",
-    "js-beautify": "~1.7.5",
+    "js-beautify": "^1.8.1",
     "jscs": "^3.0.7",
     "lodash": "^4.17.4",
     "loophole": "^1.1.0",
