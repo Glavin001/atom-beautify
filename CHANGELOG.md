@@ -1,3 +1,6 @@
+# v0.33.1 (2018-09-09)
+- Remove dependency marko-prettyprint in an effort to resolve installation and update issues
+
 # v0.33.0 (2018-08-10)
 - Fixes an issue where Atom Beautify would display a Docker error instead of an executable error ([#2146](https://github.com/Glavin001/atom-beautify/issues/2146))
 - Fixes Rubocop not excluding files with an exact pattern match (`db/schema.rb` vs `db/**/*`)
