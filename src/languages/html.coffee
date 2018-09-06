@@ -79,7 +79,7 @@ module.exports = {
         ]
       items:
         type: 'string'
-      description: "(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior."
+      description: "(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior."
     inline:
       type: 'array'
       default: [
