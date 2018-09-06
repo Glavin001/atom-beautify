@@ -1,3 +1,7 @@
+
+# v0.33.2 (2018-09-09)
+- Added `inline` and `content_unformatted` options from `js-beautify` html settings and cleared `unformatted`.  This is a breaking change, but a general improvement in the behavior to more accurately beautify html.
+
 # v0.33.1 (2018-09-09)
 - Remove dependency marko-prettyprint in an effort to resolve installation and update issues
 

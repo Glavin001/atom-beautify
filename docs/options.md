@@ -1230,91 +1230,20 @@ Preserve line-breaks (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -3542,91 +3471,20 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -5121,91 +4979,20 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -5803,91 +5590,20 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -9465,91 +9181,20 @@ Preserve line-breaks (Supported by Marko Beautifier)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Marko Beautifier)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -10077,89 +9722,20 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -15674,91 +15250,20 @@ Decode printable characters encoded in xNN notation (Supported by Vue Beautifier
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Vue Beautifier)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -16287,91 +15792,20 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -17223,91 +16657,20 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -18466,91 +17829,20 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Marko Beautifier)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -20589,91 +19881,20 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
 **Description**:
 
-(Depracated for most scenarios) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Vue Beautifier)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
