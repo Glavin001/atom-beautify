@@ -66,17 +66,7 @@ module.exports = {
       description: "Number of line-breaks to be preserved in one chunk"
     unformatted:
       type: 'array'
-      default: [
-            'a', 'abbr', 'area', 'audio', 'b', 'bdi', 'bdo', 'br', 'button', 'canvas', 'cite',
-            'code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'iframe', 'img',
-            'input', 'ins', 'kbd', 'keygen', 'label', 'map', 'mark', 'math', 'meter', 'noscript',
-            'object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'select', 'small',
-            'span', 'strong', 'sub', 'sup', 'svg', 'template', 'textarea', 'time', 'u', 'var',
-            'video', 'wbr', 'text',
-            'acronym', 'address', 'big', 'dt', 'ins', 'small', 'strike', 'tt',
-            'pre',
-            'h1', 'h2', 'h3', 'h4', 'h5', 'h6'
-        ]
+      default: []
       items:
         type: 'string'
       description: "(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior."
