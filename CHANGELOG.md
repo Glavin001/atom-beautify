@@ -1,6 +1,6 @@
 
-# v0.33.2 (2018-09-09)
-- Added `inline` and `content_unformatted` options from `js-beautify` html settings and cleared `unformatted`.  This is a breaking change, but a general improvement in the behavior to more accurately beautify html.
+# v0.33.2 (2018-09-12)
+- (BREAKING CHANGE) Added `inline` and `content_unformatted` options from `js-beautify` html settings and cleared `unformatted`.  Breaking change but generally improves the behavior to more accurately beautify html. ([#2210](https://github.com/Glavin001/atom-beautify/issues/2210), [#2215](https://github.com/Glavin001/atom-beautify/pull/2215), [js-beautify#1407](https://github.com/beautify-web/js-beautify/pull/1407)) 
 
 # v0.33.1 (2018-09-09)
 - Remove dependency marko-prettyprint in an effort to resolve installation and update issues
