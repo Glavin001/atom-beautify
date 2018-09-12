@@ -449,7 +449,8 @@
     "vhdl",
     "vhdl beautifier",
     "gn",
-    "blade"
+    "blade",
+    "ocamlformat"
   ],
   "devDependencies": {
     "codo": "^2.1.2",

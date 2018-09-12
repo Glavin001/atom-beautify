@@ -6056,7 +6056,8 @@
     "description": "Options for language OCaml",
     "collapsed": true,
     "beautifiers": [
-      "ocp-indent"
+      "ocp-indent",
+      "ocamlformat"
     ],
     "grammars": [
       "OCaml"
@@ -6079,7 +6080,8 @@
         "default": "ocp-indent",
         "description": "Default Beautifier to be used for OCaml",
         "enum": [
-          "ocp-indent"
+          "ocp-indent",
+          "ocamlformat"
         ]
       },
       "beautify_on_save": {
@@ -9917,6 +9919,22 @@
             "type": "string",
             "default": "",
             "description": "Absolute path to the \"terraform\" executable's binary/script."
+          }
+        }
+      },
+      "ocamlformat": {
+        "key": "ocamlformat",
+        "title": "ocamlformat",
+        "type": "object",
+        "collapsed": true,
+        "description": "Options for ocamlformat executable.",
+        "properties": {
+          "path": {
+            "key": "path",
+            "title": "Binary/Script Path",
+            "type": "string",
+            "default": "",
+            "description": "Absolute path to the \"ocamlformat\" executable's binary/script."
           }
         }
       }
