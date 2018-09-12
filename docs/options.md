@@ -164,6 +164,23 @@ Options for beautysh executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*beautysh*" and change it to your desired configuration.
 
+#####  [black](#black) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for black executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*black*" and change it to your desired configuration.
+
 #####  [ClangFormat](#clangformat) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -10944,20 +10961,20 @@ Automatically beautify Puppet files on save
 
 ####  [Python](#python) 
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`black`](#black)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
 
-| Option | autopep8 | pybeautifier | yapf |
-| --- | --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `formatter` | :white_check_mark: | :white_check_mark: | :x: |
-| `ignore` | :white_check_mark: | :white_check_mark: | :x: |
-| `indent_size` | :white_check_mark: | :white_check_mark: | :x: |
-| `max_line_length` | :white_check_mark: | :white_check_mark: | :x: |
-| `multi_line_output` | :white_check_mark: | :white_check_mark: | :x: |
-| `sort_imports` | :white_check_mark: | :white_check_mark: | :x: |
-| `style_config` | :white_check_mark: | :white_check_mark: | :x: |
+| Option | autopep8 | black | pybeautifier | yapf |
+| --- | --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `formatter` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `ignore` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `max_line_length` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `multi_line_output` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `sort_imports` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `style_config` | :white_check_mark: | :x: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -10988,7 +11005,7 @@ Disable Python Beautification
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `pybeautifier`  `yapf` 
+**Enum**:  `autopep8`  `black`  `pybeautifier`  `yapf` 
 
 **Description**:
 

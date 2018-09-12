@@ -170,6 +170,10 @@
       "url": "https://github.com/range3"
     },
     {
+      "name": "Arlo Shallit",
+      "url": "https://github.com/arl-o"
+    },
+    {
       "name": "Liam Newman",
       "url": "https://github.com/bitwiseman"
     }
@@ -450,6 +454,7 @@
     "vhdl beautifier",
     "gn",
     "blade",
+    "black",
     "ocamlformat"
   ],
   "devDependencies": {
