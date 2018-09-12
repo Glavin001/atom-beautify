@@ -41,8 +41,6 @@ addons:
     - git
     - libgnome-keyring-dev
     - fakeroot
-    - crystal
-    - camlp4
     - aspcud
     - php5-cli
     - golang

@@ -164,6 +164,23 @@ Options for beautysh executable.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*beautysh*" and change it to your desired configuration.
 
+#####  [black](#black) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for black executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*black*" and change it to your desired configuration.
+
 #####  [ClangFormat](#clangformat) 
 
 **Important**: This option is only configurable from within Atom Beautify's setting panel.
@@ -299,6 +316,23 @@ Options for isort executable.
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*isort*" and change it to your desired configuration.
+
+#####  [ocamlformat](#ocamlformat) 
+
+**Important**: This option is only configurable from within Atom Beautify's setting panel.
+
+**Type**: `object`
+
+**Description**:
+
+Options for ocamlformat executable.
+
+**How to Configure**
+
+1. You can open the [Settings View](https://github.com/atom/settings-view) by navigating to
+*Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
+2. Go into *Packages* and search for "*Atom Beautify*" package.
+3. Find the option "*ocamlformat*" and change it to your desired configuration.
 
 #####  [ocp-indent](#ocp-indent) 
 
@@ -796,12 +830,14 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by b
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
 | `brace_style` | :white_check_mark: |
+| `content_unformatted` | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: |
 | `extra_liners` | :white_check_mark: |
 | `indent_char` | :white_check_mark: |
 | `indent_inner_html` | :white_check_mark: |
 | `indent_scripts` | :white_check_mark: |
 | `indent_size` | :white_check_mark: |
+| `inline` | :white_check_mark: |
 | `max_preserve_newlines` | :white_check_mark: |
 | `preserve_newlines` | :white_check_mark: |
 | `unformatted` | :white_check_mark: |
@@ -892,6 +928,35 @@ Automatically beautify Blade files on save
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -1054,65 +1119,13 @@ Indentation size/length (Supported by JS Beautify)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Inline](#inline) 
 
 **Namespace**: `html`
 
-**Key**: `max_preserve_newlines`
+**Key**: `inline`
 
-**Default**: `10`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "max_preserve_newlines": 10
-    }
-}
-```
-
-#####  [Preserve newlines](#preserve-newlines) 
-
-**Namespace**: `html`
-
-**Key**: `preserve_newlines`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Preserve line-breaks (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "preserve_newlines": true
-    }
-}
-```
-
-#####  [Unformatted](#unformatted) 
-
-**Namespace**: `html`
-
-**Key**: `unformatted`
-
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
 
 **Type**: `array`
 
@@ -1120,14 +1133,14 @@ Preserve line-breaks (Supported by JS Beautify)
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -1186,17 +1199,85 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "big",
             "dt",
             "ins",
-            "small",
             "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "tt"
         ]
+    }
+}
+```
+
+#####  [Max preserve newlines](#max-preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Unformatted](#unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `unformatted`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
     }
 }
 ```
@@ -1211,13 +1292,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -2635,6 +2716,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
 | `break_chained_methods` | :white_check_mark: | :white_check_mark: |
+| `content_unformatted` | :white_check_mark: | :x: |
 | `end_of_line` | :white_check_mark: | :x: |
 | `end_with_comma` | :white_check_mark: | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: | :x: |
@@ -2646,6 +2728,7 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 | `indent_scripts` | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :white_check_mark: |
 | `indent_with_tabs` | :white_check_mark: | :white_check_mark: |
+| `inline` | :white_check_mark: | :x: |
 | `jslint_happy` | :white_check_mark: | :x: |
 | `keep_array_indentation` | :white_check_mark: | :x: |
 | `keep_function_indentation` | :white_check_mark: | :x: |
@@ -2768,6 +2851,35 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -3054,6 +3166,93 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by J
 }
 ```
 
+#####  [Inline](#inline) 
+
+**Namespace**: `html`
+
+**Key**: `inline`
+
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "inline": [
+            "a",
+            "abbr",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
+            "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
+            "sub",
+            "sup",
+            "svg",
+            "template",
+            "textarea",
+            "time",
+            "u",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
+            "address",
+            "big",
+            "dt",
+            "ins",
+            "strike",
+            "tt"
+        ]
+    }
+}
+```
+
 #####  [Jslint happy](#jslint-happy) 
 
 **Namespace**: `js`
@@ -3306,91 +3505,20 @@ Decode printable characters encoded in xNN notation (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -3405,13 +3533,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -4451,12 +4579,14 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
+| `content_unformatted` | :white_check_mark: | :x: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `extra_liners` | :white_check_mark: | :x: |
 | `indent_char` | :white_check_mark: | :white_check_mark: |
 | `indent_inner_html` | :white_check_mark: | :x: |
 | `indent_scripts` | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :white_check_mark: |
+| `inline` | :white_check_mark: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: |
 | `preserve_newlines` | :white_check_mark: | :white_check_mark: |
 | `unformatted` | :white_check_mark: | :x: |
@@ -4547,6 +4677,35 @@ Automatically beautify Handlebars files on save
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -4709,65 +4868,13 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Inline](#inline) 
 
 **Namespace**: `html`
 
-**Key**: `max_preserve_newlines`
+**Key**: `inline`
 
-**Default**: `10`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "max_preserve_newlines": 10
-    }
-}
-```
-
-#####  [Preserve newlines](#preserve-newlines) 
-
-**Namespace**: `html`
-
-**Key**: `preserve_newlines`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "preserve_newlines": true
-    }
-}
-```
-
-#####  [Unformatted](#unformatted) 
-
-**Namespace**: `html`
-
-**Key**: `unformatted`
-
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
 
 **Type**: `array`
 
@@ -4775,14 +4882,14 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -4841,17 +4948,85 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "big",
             "dt",
             "ins",
-            "small",
             "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "tt"
         ]
+    }
+}
+```
+
+#####  [Max preserve newlines](#max-preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Unformatted](#unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `unformatted`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
     }
 }
 ```
@@ -4866,13 +5041,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -5015,12 +5190,14 @@ Automatically beautify Haskell files on save
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
+| `content_unformatted` | :white_check_mark: | :x: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `extra_liners` | :white_check_mark: | :x: |
 | `indent_char` | :white_check_mark: | :white_check_mark: |
 | `indent_inner_html` | :white_check_mark: | :x: |
 | `indent_scripts` | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :white_check_mark: |
+| `inline` | :white_check_mark: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: |
 | `preserve_newlines` | :white_check_mark: | :white_check_mark: |
 | `unformatted` | :white_check_mark: | :x: |
@@ -5111,6 +5288,35 @@ Automatically beautify HTML files on save
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -5273,65 +5479,13 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Inline](#inline) 
 
 **Namespace**: `html`
 
-**Key**: `max_preserve_newlines`
+**Key**: `inline`
 
-**Default**: `10`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "max_preserve_newlines": 10
-    }
-}
-```
-
-#####  [Preserve newlines](#preserve-newlines) 
-
-**Namespace**: `html`
-
-**Key**: `preserve_newlines`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "preserve_newlines": true
-    }
-}
-```
-
-#####  [Unformatted](#unformatted) 
-
-**Namespace**: `html`
-
-**Key**: `unformatted`
-
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
 
 **Type**: `array`
 
@@ -5339,14 +5493,14 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -5405,17 +5559,85 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "big",
             "dt",
             "ins",
-            "small",
             "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "tt"
         ]
+    }
+}
+```
+
+#####  [Max preserve newlines](#max-preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Unformatted](#unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `unformatted`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
     }
 }
 ```
@@ -5430,13 +5652,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -8530,12 +8752,14 @@ Enables raw YAML front matter to be detected (thus ignoring markdown-like syntax
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
 | `brace_style` | :white_check_mark: |
+| `content_unformatted` | :white_check_mark: |
 | `end_with_newline` | :white_check_mark: |
 | `extra_liners` | :white_check_mark: |
 | `indent_char` | :white_check_mark: |
 | `indent_inner_html` | :white_check_mark: |
 | `indent_scripts` | :white_check_mark: |
 | `indent_size` | :white_check_mark: |
+| `inline` | :white_check_mark: |
 | `max_preserve_newlines` | :white_check_mark: |
 | `preserve_newlines` | :white_check_mark: |
 | `syntax` | :white_check_mark: |
@@ -8627,6 +8851,35 @@ Automatically beautify Marko files on save
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -8789,6 +9042,93 @@ Indentation size/length (Supported by Marko Beautifier)
 }
 ```
 
+#####  [Inline](#inline) 
+
+**Namespace**: `html`
+
+**Key**: `inline`
+
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "inline": [
+            "a",
+            "abbr",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
+            "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
+            "sub",
+            "sup",
+            "svg",
+            "template",
+            "textarea",
+            "time",
+            "u",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
+            "address",
+            "big",
+            "dt",
+            "ins",
+            "strike",
+            "tt"
+        ]
+    }
+}
+```
+
 #####  [Max preserve newlines](#max-preserve-newlines) 
 
 **Namespace**: `html`
@@ -8875,91 +9215,20 @@ Preserve line-breaks (Supported by Marko Beautifier)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by Marko Beautifier)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -8974,13 +9243,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9054,12 +9323,14 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
+| `content_unformatted` | :white_check_mark: | :x: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `extra_liners` | :white_check_mark: | :x: |
 | `indent_char` | :white_check_mark: | :white_check_mark: |
 | `indent_inner_html` | :white_check_mark: | :x: |
 | `indent_scripts` | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :white_check_mark: |
+| `inline` | :white_check_mark: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: |
 | `preserve_newlines` | :white_check_mark: | :white_check_mark: |
 | `unformatted` | :white_check_mark: | :x: |
@@ -9150,6 +9421,35 @@ Automatically beautify Mustache files on save
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -9312,65 +9612,13 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Inline](#inline) 
 
 **Namespace**: `html`
 
-**Key**: `max_preserve_newlines`
+**Key**: `inline`
 
-**Default**: `10`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "max_preserve_newlines": 10
-    }
-}
-```
-
-#####  [Preserve newlines](#preserve-newlines) 
-
-**Namespace**: `html`
-
-**Key**: `preserve_newlines`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "preserve_newlines": true
-    }
-}
-```
-
-#####  [Unformatted](#unformatted) 
-
-**Namespace**: `html`
-
-**Key**: `unformatted`
-
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,strike,tt`
 
 **Type**: `array`
 
@@ -9378,14 +9626,14 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -9444,15 +9692,84 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "big",
             "dt",
             "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "tt"
         ]
+    }
+}
+```
+
+#####  [Max preserve newlines](#max-preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Unformatted](#unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `unformatted`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
     }
 }
 ```
@@ -9467,13 +9784,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -9985,13 +10302,13 @@ Path to uncrustify config file. i.e. uncrustify.cfg (Supported by Uncrustify)
 
 ####  [OCaml](#ocaml) 
 
-**Supported Beautifiers**:  [`ocp-indent`](#ocp-indent) 
+**Supported Beautifiers**:  [`ocp-indent`](#ocp-indent)  [`ocamlformat`](#ocamlformat) 
 
-| Option | ocp-indent |
-| --- | --- |
-| `disabled` | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: |
+| Option | ocamlformat | ocp-indent |
+| --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 
 **Description**:
 
@@ -10022,7 +10339,7 @@ Disable OCaml Beautification
 
 **Type**: `string`
 
-**Enum**:  `ocp-indent` 
+**Enum**:  `ocp-indent`  `ocamlformat` 
 
 **Description**:
 
@@ -10644,20 +10961,20 @@ Automatically beautify Puppet files on save
 
 ####  [Python](#python) 
 
-**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
+**Supported Beautifiers**:  [`autopep8`](#autopep8)  [`black`](#black)  [`pybeautifier`](#pybeautifier)  [`yapf`](#yapf) 
 
-| Option | autopep8 | pybeautifier | yapf |
-| --- | --- | --- | --- |
-| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `formatter` | :white_check_mark: | :white_check_mark: | :x: |
-| `ignore` | :white_check_mark: | :white_check_mark: | :x: |
-| `indent_size` | :white_check_mark: | :white_check_mark: | :x: |
-| `max_line_length` | :white_check_mark: | :white_check_mark: | :x: |
-| `multi_line_output` | :white_check_mark: | :white_check_mark: | :x: |
-| `sort_imports` | :white_check_mark: | :white_check_mark: | :x: |
-| `style_config` | :white_check_mark: | :white_check_mark: | :x: |
+| Option | autopep8 | black | pybeautifier | yapf |
+| --- | --- | --- | --- | --- |
+| `disabled` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `default_beautifier` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `formatter` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `ignore` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `indent_size` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `max_line_length` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `multi_line_output` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `sort_imports` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `style_config` | :white_check_mark: | :x: | :white_check_mark: | :x: |
 
 **Description**:
 
@@ -10688,7 +11005,7 @@ Disable Python Beautification
 
 **Type**: `string`
 
-**Enum**:  `autopep8`  `pybeautifier`  `yapf` 
+**Enum**:  `autopep8`  `black`  `pybeautifier`  `yapf` 
 
 **Description**:
 
@@ -14178,6 +14495,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :x: | :x: | :white_check_mark: |
 | `break_chained_methods` | :x: | :x: | :white_check_mark: |
+| `content_unformatted` | :x: | :x: | :white_check_mark: |
 | `end_of_line` | :x: | :x: | :white_check_mark: |
 | `end_with_comma` | :x: | :x: | :white_check_mark: |
 | `end_with_newline` | :x: | :x: | :white_check_mark: |
@@ -14189,6 +14507,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `indent_scripts` | :x: | :x: | :white_check_mark: |
 | `indent_size` | :x: | :x: | :white_check_mark: |
 | `indent_with_tabs` | :x: | :x: | :white_check_mark: |
+| `inline` | :x: | :x: | :white_check_mark: |
 | `jslint_happy` | :x: | :x: | :white_check_mark: |
 | `keep_array_indentation` | :x: | :x: | :white_check_mark: |
 | `keep_function_indentation` | :x: | :x: | :white_check_mark: |
@@ -14311,6 +14630,35 @@ Break chained method calls across subsequent lines (Supported by Vue Beautifier)
 {
     "js": {
         "break_chained_methods": false
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -14597,6 +14945,93 @@ Indentation uses tabs, overrides `Indent Size` and `Indent Char` (Supported by V
 }
 ```
 
+#####  [Inline](#inline) 
+
+**Namespace**: `html`
+
+**Key**: `inline`
+
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "inline": [
+            "a",
+            "abbr",
+            "area",
+            "audio",
+            "b",
+            "bdi",
+            "bdo",
+            "br",
+            "button",
+            "canvas",
+            "cite",
+            "code",
+            "data",
+            "datalist",
+            "del",
+            "dfn",
+            "em",
+            "embed",
+            "i",
+            "iframe",
+            "img",
+            "input",
+            "ins",
+            "kbd",
+            "keygen",
+            "label",
+            "map",
+            "mark",
+            "math",
+            "meter",
+            "noscript",
+            "object",
+            "output",
+            "progress",
+            "q",
+            "ruby",
+            "s",
+            "samp",
+            "select",
+            "small",
+            "span",
+            "strong",
+            "sub",
+            "sup",
+            "svg",
+            "template",
+            "textarea",
+            "time",
+            "u",
+            "var",
+            "video",
+            "wbr",
+            "text",
+            "acronym",
+            "address",
+            "big",
+            "dt",
+            "ins",
+            "strike",
+            "tt"
+        ]
+    }
+}
+```
+
 #####  [Jslint happy](#jslint-happy) 
 
 **Namespace**: `js`
@@ -14849,91 +15284,20 @@ Decode printable characters encoded in xNN notation (Supported by Vue Beautifier
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
-
 **Type**: `array`
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by Vue Beautifier)
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
-            "a",
-            "abbr",
-            "area",
-            "audio",
-            "b",
-            "bdi",
-            "bdo",
-            "br",
-            "button",
-            "canvas",
-            "cite",
-            "code",
-            "data",
-            "datalist",
-            "del",
-            "dfn",
-            "em",
-            "embed",
-            "i",
-            "iframe",
-            "img",
-            "input",
-            "ins",
-            "kbd",
-            "keygen",
-            "label",
-            "map",
-            "mark",
-            "math",
-            "meter",
-            "noscript",
-            "object",
-            "output",
-            "progress",
-            "q",
-            "ruby",
-            "s",
-            "samp",
-            "select",
-            "small",
-            "span",
-            "strong",
-            "sub",
-            "sup",
-            "svg",
-            "template",
-            "textarea",
-            "time",
-            "u",
-            "var",
-            "video",
-            "wbr",
-            "text",
-            "acronym",
-            "address",
-            "big",
-            "dt",
-            "ins",
-            "small",
-            "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-        ]
+        "unformatted": []
     }
 }
 ```
@@ -14948,13 +15312,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -15028,12 +15392,14 @@ Maximum characters per line (0 disables) (Supported by Vue Beautifier)
 | `default_beautifier` | :white_check_mark: | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: | :white_check_mark: |
 | `brace_style` | :white_check_mark: | :x: |
+| `content_unformatted` | :white_check_mark: | :x: |
 | `end_with_newline` | :white_check_mark: | :x: |
 | `extra_liners` | :white_check_mark: | :x: |
 | `indent_char` | :white_check_mark: | :white_check_mark: |
 | `indent_inner_html` | :white_check_mark: | :x: |
 | `indent_scripts` | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :white_check_mark: |
+| `inline` | :white_check_mark: | :x: |
 | `max_preserve_newlines` | :white_check_mark: | :x: |
 | `preserve_newlines` | :white_check_mark: | :white_check_mark: |
 | `unformatted` | :white_check_mark: | :x: |
@@ -15124,6 +15490,35 @@ Automatically beautify XML files on save
 {
     "html": {
         "brace_style": "collapse"
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
     }
 }
 ```
@@ -15286,65 +15681,13 @@ Indentation size/length (Supported by JS Beautify, Pretty Diff)
 }
 ```
 
-#####  [Max preserve newlines](#max-preserve-newlines) 
+#####  [Inline](#inline) 
 
 **Namespace**: `html`
 
-**Key**: `max_preserve_newlines`
+**Key**: `inline`
 
-**Default**: `10`
-
-**Type**: `integer`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
-
-**Description**:
-
-Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "max_preserve_newlines": 10
-    }
-}
-```
-
-#####  [Preserve newlines](#preserve-newlines) 
-
-**Namespace**: `html`
-
-**Key**: `preserve_newlines`
-
-**Default**: `true`
-
-**Type**: `boolean`
-
-**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
-
-**Description**:
-
-Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
-
-**Example `.jsbeautifyrc` Configuration**
-
-```json
-{
-    "html": {
-        "preserve_newlines": true
-    }
-}
-```
-
-#####  [Unformatted](#unformatted) 
-
-**Namespace**: `html`
-
-**Key**: `unformatted`
-
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
 
 **Type**: `array`
 
@@ -15352,14 +15695,14 @@ Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -15418,17 +15761,85 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "big",
             "dt",
             "ins",
-            "small",
             "strike",
-            "tt",
-            "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "tt"
         ]
+    }
+}
+```
+
+#####  [Max preserve newlines](#max-preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `max_preserve_newlines`
+
+**Default**: `10`
+
+**Type**: `integer`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "max_preserve_newlines": 10
+    }
+}
+```
+
+#####  [Preserve newlines](#preserve-newlines) 
+
+**Namespace**: `html`
+
+**Key**: `preserve_newlines`
+
+**Default**: `true`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)  [`Pretty Diff`](#pretty-diff) 
+
+**Description**:
+
+Preserve line-breaks (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "preserve_newlines": true
+    }
+}
+```
+
+#####  [Unformatted](#unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `unformatted`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
     }
 }
 ```
@@ -15443,13 +15854,13 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16178,13 +16589,13 @@ Maximum characters per line (0 disables) (Supported by JS Beautify, Pretty Diff)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -16280,7 +16691,31 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
+    }
+}
+```
+
+#####  [Inline](#inline) 
+
+**Namespace**: `html`
+
+**Key**: `inline`
+
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
 
 **Type**: `array`
 
@@ -16288,14 +16723,14 @@ Number of line-breaks to be preserved in one chunk (Supported by JS Beautify)
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by JS Beautify)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by JS Beautify)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -16354,16 +16789,37 @@ List of tags (defaults to inline) that should not be reformatted (Supported by J
             "big",
             "dt",
             "ins",
-            "small",
             "strike",
-            "tt",
+            "tt"
+        ]
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by JS Beautify)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
             "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "textarea"
         ]
     }
 }
@@ -17305,13 +17761,13 @@ Maximum characters per line (0 disables) (Supported by Marko Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -17407,7 +17863,31 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
+    }
+}
+```
+
+#####  [Inline](#inline) 
+
+**Namespace**: `html`
+
+**Key**: `inline`
+
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
 
 **Type**: `array`
 
@@ -17415,14 +17895,14 @@ Number of line-breaks to be preserved in one chunk (Supported by Marko Beautifie
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by Marko Beautifier)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by Marko Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -17481,16 +17961,37 @@ List of tags (defaults to inline) that should not be reformatted (Supported by M
             "big",
             "dt",
             "ins",
-            "small",
             "strike",
-            "tt",
+            "tt"
+        ]
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Marko Beautifier`](#marko-beautifier) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by Marko Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
             "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "textarea"
         ]
     }
 }
@@ -19364,13 +19865,13 @@ Indent <head> and <body> sections. (Supported by Vue Beautifier)
 
 **Type**: `string`
 
-**Enum**:  `auto`  `force`  `force-aligned`  `force-expand-multiline` 
+**Enum**:  `auto`  `aligned-multiple`  `force`  `force-aligned`  `force-expand-multiline` 
 
 **Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
 
 **Description**:
 
-Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)
+Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline] (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
@@ -19414,7 +19915,31 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 
 **Key**: `unformatted`
 
-**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,small,strike,tt,pre,h1,h2,h3,h4,h5,h6`
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior. (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "unformatted": []
+    }
+}
+```
+
+#####  [Inline](#inline) 
+
+**Namespace**: `html`
+
+**Key**: `inline`
+
+**Default**: `a,abbr,area,audio,b,bdi,bdo,br,button,canvas,cite,code,data,datalist,del,dfn,em,embed,i,iframe,img,input,ins,kbd,keygen,label,map,mark,math,meter,noscript,object,output,progress,q,ruby,s,samp,select,small,span,strong,sub,sup,svg,template,textarea,time,u,var,video,wbr,text,acronym,address,big,dt,ins,strike,tt`
 
 **Type**: `array`
 
@@ -19422,14 +19947,14 @@ Indent wrapped attributes to after N characters (Supported by Vue Beautifier)
 
 **Description**:
 
-List of tags (defaults to inline) that should not be reformatted (Supported by Vue Beautifier)
+List of inline tags. Behaves similar to text content, will not wrap without whitespace. (Supported by Vue Beautifier)
 
 **Example `.jsbeautifyrc` Configuration**
 
 ```json
 {
     "html": {
-        "unformatted": [
+        "inline": [
             "a",
             "abbr",
             "area",
@@ -19488,16 +20013,37 @@ List of tags (defaults to inline) that should not be reformatted (Supported by V
             "big",
             "dt",
             "ins",
-            "small",
             "strike",
-            "tt",
+            "tt"
+        ]
+    }
+}
+```
+
+#####  [Content unformatted](#content-unformatted) 
+
+**Namespace**: `html`
+
+**Key**: `content_unformatted`
+
+**Default**: `pre,textarea`
+
+**Type**: `array`
+
+**Supported Beautifiers**:  [`Vue Beautifier`](#vue-beautifier) 
+
+**Description**:
+
+List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not. (Supported by Vue Beautifier)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "html": {
+        "content_unformatted": [
             "pre",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
+            "textarea"
         ]
     }
 }

@@ -49,8 +49,8 @@ module.exports = {
     wrap_attributes:
       type: 'string'
       default: "auto"
-      enum: ["auto", "force", "force-aligned", "force-expand-multiline"]
-      description: "Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline]"
+      enum: ["auto", "aligned-multiple", "force", "force-aligned", "force-expand-multiline"]
+      description: "Wrap attributes to new lines [auto|aligned-multiple|force|force-aligned|force-expand-multiline]"
     wrap_attributes_indent_size:
       type: 'integer'
       default: null
@@ -66,6 +66,12 @@ module.exports = {
       description: "Number of line-breaks to be preserved in one chunk"
     unformatted:
       type: 'array'
+      default: []
+      items:
+        type: 'string'
+      description: "(Deprecated for most scenarios - consider inline or content_unformatted) List of tags that should not be reformatted at all.  NOTE: Set this to [] to get improved beautifier behavior."
+    inline:
+      type: 'array'
       default: [
             'a', 'abbr', 'area', 'audio', 'b', 'bdi', 'bdo', 'br', 'button', 'canvas', 'cite',
             'code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'iframe', 'img',
@@ -73,13 +79,17 @@ module.exports = {
             'object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'select', 'small',
             'span', 'strong', 'sub', 'sup', 'svg', 'template', 'textarea', 'time', 'u', 'var',
             'video', 'wbr', 'text',
-            'acronym', 'address', 'big', 'dt', 'ins', 'small', 'strike', 'tt',
-            'pre',
-            'h1', 'h2', 'h3', 'h4', 'h5', 'h6'
+            'acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt'
         ]
       items:
         type: 'string'
-      description: "List of tags (defaults to inline) that should not be reformatted"
+      description: "List of inline tags. Behaves similar to text content, will not wrap without whitespace."
+    content_unformatted:
+      type: 'array'
+      default: [ 'pre', 'textarea' ]
+      items:
+        type: 'string'
+      description: "List of tags whose contents should not be reformatted. Attributes will be reformatted, inner html will not."
     end_with_newline:
       type: 'boolean'
       default: false
