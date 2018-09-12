@@ -5,7 +5,8 @@
 </head>
 
 <body>
-  @section('sidebar') This is the {{ $mater }} sidebar.
+  @section('sidebar')
+  This is the {{ $mater }} sidebar.
   @show
 
   <div class="container">
@@ -13,7 +14,8 @@
   </div>
 
   @component('alert')
-  @slot('title') Forbidden
+  @slot('title')
+  Forbidden
   @endslot
   <strong>Whoops!</strong> Something went wrong!
   @endcomponent

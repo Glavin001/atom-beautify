@@ -1,7 +1,7 @@
 {
   "name": "atom-beautify",
   "main": "./src/beautify",
-  "version": "0.32.5",
+  "version": "0.33.1",
   "private": true,
   "description": "Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom",
   "repository": "https://github.com/Glavin001/atom-beautify.git",
@@ -172,6 +172,10 @@
     {
       "name": "Arlo Shallit",
       "url": "https://github.com/arl-o"
+    },
+    {
+      "name": "Liam Newman",
+      "url": "https://github.com/bitwiseman"
     }
   ],
   "engines": {
@@ -195,11 +199,10 @@
     "extend": "^3.0.1",
     "gherkin": "^2.12.2",
     "handlebars": "^4.0.11",
-    "js-beautify": "^1.7.5",
+    "js-beautify": "^1.8.1",
     "jscs": "^3.0.7",
     "lodash": "^4.17.4",
     "loophole": "^1.1.0",
-    "marko-prettyprint": "^1.4.0",
     "nginxbeautify": "^2.0.1",
     "node-cljfmt": "0.5.3",
     "node-dir": "0.1.17",
@@ -451,7 +454,8 @@
     "vhdl beautifier",
     "gn",
     "blade",
-    "black"
+    "black",
+    "ocamlformat"
   ],
   "devDependencies": {
     "codo": "^2.1.2",

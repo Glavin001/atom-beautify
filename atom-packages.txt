@@ -1,4 +1,3 @@
-language-marko
 language-html-swig
 language-svg
 language-d

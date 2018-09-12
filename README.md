@@ -121,6 +121,7 @@ Some of the supported beautifiers are developed for Node.js and are automaticall
 | Lua beautifier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Marko Beautifier | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
 | Nginx Beautify | :white_check_mark: | :ok_hand: Not necessary | :smiley: Nothing! |
+| ocamlformat | :warning: 1 executable | :x: No Docker support | :bookmark_tabs: Manually:<br/>1. Install [ocamlformat (`ocamlformat`)](https://github.com/ocaml-ppx/ocamlformat) by following https://github.com/ocaml-ppx/ocamlformat#installation<br/> |
 | ocp-indent | :warning: 1 executable | :white_check_mark: :100:% of executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [ocp-indent (`ocp-indent`)](https://www.typerex.org/ocp-indent.html) with `docker pull unibeautify/ocp-indent`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [ocp-indent (`ocp-indent`)](https://www.typerex.org/ocp-indent.html) by following https://www.typerex.org/ocp-indent.html#installation<br/> |
 | Perltidy | :warning: Manual installation | :construction: Not an executable | :page_facing_up: Go to http://perltidy.sourceforge.net/ and follow the instructions. |
 | PHP-CS-Fixer | :warning: 2 executables | :warning: Only 1 of 2 executables | :whale: With [Docker](https://www.docker.com/):<br/>1. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) with `docker pull unibeautify/php-cs-fixer`<br/><br/>:bookmark_tabs: Manually:<br/>1. Install [PHP (`php`)](http://php.net/) by following http://php.net/manual/en/install.php<br/>2. Install [PHP-CS-Fixer (`php-cs-fixer`)](https://github.com/FriendsOfPHP/PHP-CS-Fixer) by following https://github.com/FriendsOfPHP/PHP-CS-Fixer#installation<br/> |
@@ -192,7 +193,7 @@ See [all supported options in the documentation at  `docs/options.md`](docs/opti
 | Nginx | `nginx` |`.conf` | **[`Nginx Beautify`](https://github.com/denysvitali/nginxbeautify)** |
 | Nunjucks | `Nunjucks`, `Nunjucks Templates`, `HTML (Nunjucks Templates)` |`.njk`, `.nunjucks` | **[`Pretty Diff`](https://github.com/prettydiff/prettydiff)** |
 | Objective-C | `Objective-C`, `Objective-C++` |`.m`, `.mm`, `.h` | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)**, [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) |
-| OCaml | `OCaml` |`.ml` | **[`ocp-indent`](https://www.typerex.org/ocp-indent.html)** |
+| OCaml | `OCaml` |`.ml` | **[`ocp-indent`](https://www.typerex.org/ocp-indent.html)**, [`ocamlformat`](https://github.com/ocaml-ppx/ocamlformat) |
 | Pawn | `Pawn` | | **[`Uncrustify`](https://github.com/uncrustify/uncrustify)** |
 | Perl | `Perl`, `Perl 6` |`.pl`, `.PL`, `.pm`, `.pod`, `.t` | **[`Perltidy`](http://perltidy.sourceforge.net/)** |
 | PHP | `PHP` |`.php`, `.module`, `.inc` | **[`PHP-CS-Fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer)**, [`PHPCBF`](http://php.net/manual/en/install.php), [`hh_format`](http://hhvm.com/) |

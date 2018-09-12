@@ -88,6 +88,7 @@ module.exports = class Beautifiers extends EventEmitter
     'beautysh'
     'terraformfmt'
     'verilog-mode'
+    'ocamlformat'
   ]
 
   ###

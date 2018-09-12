@@ -46,7 +46,7 @@ describe "BeautifyLanguages", ->
   allLanguages = [
     "blade", "c", "clojure", "coffee-script", "css", "csharp", "d",
     "gfm", "go", "html", "html-swig", "java", "javascript",
-    "json", "less", "lua", "marko", "mustache", "objective-c",
+    "json", "less", "lua", "mustache", "objective-c",
     "perl", "php", "python", "ruby", "sass", "sql",
     "svg", "xml"
     ]
