@@ -10,7 +10,11 @@
 [![Bountysource](https://img.shields.io/bountysource/team/atom-beautify/activity.svg?style=flat-square)](https://www.bountysource.com/teams/atom-beautify)
 [![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X2RK5DKN6YXPJ&lc=CA&item_name=Atom%2dBeautify&item_number=atom%2dbeautify&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 
+<!--
 **Sign up for Unibeautify CI: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
+-->
+
+[:tada: **Install Unibeautify CI for GitHub** :tada:](https://github.com/apps/unibeautify-ci)
 
 **Help improve Atom-Beautify by completing the quick questionnaire: [https://goo.gl/iEHBNr](https://goo.gl/iEHBNr)**
 
@@ -55,6 +59,8 @@ apm install atom-beautify
 
 Or Settings/Preferences ➔ Install ➔ Search for `atom-beautify`
 
+[:tada: **Install Unibeautify CI for GitHub** :tada:](https://github.com/apps/unibeautify-ci)
+
 ### Important Notice: Analytics
 
 [Atom-Beautify respects the `core.telemetryConsent` configuration option from Atom editor.](https://github.com/Glavin001/atom-beautify/issues/1179)
@@ -71,6 +77,8 @@ Thank you.
 
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
+
+[:tada: **Install Unibeautify CI for GitHub** :tada:](https://github.com/apps/unibeautify-ci)
 
 ### Poll: Improving installation of third-party beautifiers
 
