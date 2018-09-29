@@ -450,6 +450,7 @@ class HybridExecutable extends Executable
 
         @docker.run([
             "run",
+            "--rm",
             "--volume", "#{pwd}:#{workingDir}",
             "--volume", "#{path.resolve('/')}:#{rootPath}",
             "--workdir", workingDir,

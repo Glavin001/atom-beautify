@@ -1,3 +1,12 @@
+# v0.33.3 (2018-09-28)
+
+- Fix [#2204](https://github.com/Glavin001/atom-beautify/issues/2204). Auto-remove docker containers after run.
+
+You can clean up old Docker containers by running:
+
+```bash
+docker ps --all | grep "unibeautify/" | awk '{ print $1 }' | xargs docker rm
+```
 
 # v0.33.2 (2018-09-26)
 - (BREAKING CHANGE) Added `inline` and `content_unformatted` options from `js-beautify` html settings and cleared `unformatted`.  Breaking change but generally improves the behavior to more accurately beautify html. ([#2210](https://github.com/Glavin001/atom-beautify/issues/2210), [#2215](https://github.com/Glavin001/atom-beautify/pull/2215), [js-beautify#1407](https://github.com/beautify-web/js-beautify/pull/1407))
