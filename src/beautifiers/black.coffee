@@ -32,7 +32,7 @@ module.exports = class Black extends Beautifier
   beautify: (text, language, options, context) ->
     cwd = context.filePath and path.dirname context.filePath
     # `-` as filename reads from stdin
-    @exe("black").run(["-"], {
+    @exe("black").run(["-l", options.max_line_length, "-"], {
       cwd: cwd
       onStdin: (stdin) ->
         stdin.end text
