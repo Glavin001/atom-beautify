@@ -10971,7 +10971,7 @@ Automatically beautify Puppet files on save
 | `formatter` | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | `ignore` | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | `indent_size` | :white_check_mark: | :x: | :white_check_mark: | :x: |
-| `max_line_length` | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| `max_line_length` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
 | `multi_line_output` | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | `sort_imports` | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | `style_config` | :white_check_mark: | :x: | :white_check_mark: | :x: |
