@@ -47,14 +47,15 @@ module.exports = class Black extends Beautifier
       onStdin: (stdin) ->
         stdin.end text
     })
-    .then(=>
+    .then((stdout) =>
+        console.log stdout
         if options.sort_imports
             filePath = context.filePath
             projectPath = atom?.project.relativizePath(filePath)[0]
             @exe("isort").run(["-sp", projectPath, "-"], {
                 cwd: cwd
                 onStdin: (stdin) ->
-                    stdin.end text
+                    stdin.end stdout
             })
     )
 
