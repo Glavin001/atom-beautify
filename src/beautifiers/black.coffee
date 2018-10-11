@@ -23,6 +23,16 @@ module.exports = class Black extends Beautifier
             text.match(/black, version (\d+\.\d+)/)[1] + ".0"
       }
     }
+    {
+      name: "isort"
+      cmd: "isort"
+      optional: true
+      homepage: "https://github.com/timothycrosley/isort"
+      installation: "https://github.com/timothycrosley/isort#installing-isort"
+      version: {
+        parse: (text) -> text.match(/VERSION (\d+\.\d+\.\d+)/)[1]
+      }
+    }
   ]
 
   options: {
@@ -37,3 +47,14 @@ module.exports = class Black extends Beautifier
       onStdin: (stdin) ->
         stdin.end text
     })
+    .then(=>
+        if options.sort_imports
+            filePath = context.filePath
+            projectPath = atom?.project.relativizePath(filePath)[0]
+            @exe("isort").run(["-sp", projectPath, "-"], {
+                cwd: cwd
+                onStdin: (stdin) ->
+                    stdin.end text
+            })
+    )
+
