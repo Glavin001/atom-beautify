@@ -28,9 +28,10 @@ module.exports = class OCamlFormat extends Beautifier
     OCaml: true
   }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, context) ->
+    fileExtension = context.fileExtension
     @run("ocamlformat", [
-      @tempFile("input", text)
+      @tempFile("input", text, fileExtension and ".#{fileExtension}")
       ], {
         help: {
           link: "https://github.com/ocaml-ppx/ocamlformat"
