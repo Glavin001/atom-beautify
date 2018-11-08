@@ -21,16 +21,18 @@ Cloning
 
 1. Clone the repository
 2. Switch to the `unibeautify` branch
-3. Run `apm link` in your terminal or command prompt from the atom-beautify folder
-4. Restart Atom
+3. Run `npm run build`
+4. Run `apm link` in your terminal or command prompt from the atom-beautify folder
+5. Restart Atom
 
 Downloading
 
 1. Switch to the unibeautify branch in GitHub
 2. Use the Download Zip button to download
 3. Un-zip the file
-4. Run `apm link` in your terminal or command prompt from the atom-beautify folder
-5. Restart Atom
+4. Run `npm run build`
+5. Run `apm link` in your terminal or command prompt from the atom-beautify folder
+6. Restart Atom
 
 Note that previous settings will not carry over to the new version as of now. Please try it out and submit feedback.
 
