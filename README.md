@@ -13,6 +13,27 @@
 | Original HTML | Beautified HTML |
 | ![image](https://cloud.githubusercontent.com/assets/1885333/16542727/db52adc6-408a-11e6-824e-04aed06bd2f7.png) | ![image](https://cloud.githubusercontent.com/assets/1885333/16542728/dcac3700-408a-11e6-8e35-9c8fc4432edc.png) |
 
+## Try the Unibeautify Version
+
+To test out atom-beautify with Unibeautify at its core, follow these steps:
+
+Cloning
+
+1. Clone the repository
+2. Switch to the `unibeautify` branch
+3. Run `apm link` in your terminal or command prompt from the atom-beautify folder
+4. Restart Atom
+
+Downloading
+
+1. Switch to the unibeautify branch in GitHub
+2. Use the Download Zip button to download
+3. Un-zip the file
+4. Run `apm link` in your terminal or command prompt from the atom-beautify folder
+5. Restart Atom
+
+Note that previous settings will not carry over to the new version as of now. Please try it out and submit feedback.
+
 ## Installation
 
 Settings/Preferences &rarr; Install &rarr; Search for `atom-beautify`
