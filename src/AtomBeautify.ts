@@ -131,8 +131,8 @@ export class AtomBeautify {
   }
 
   // Method that handles beautify entire file/editor
-  private beautifyEditor() {
-    const editor = atom.workspace.getActiveTextEditor();
+  private beautifyEditor(textEditor?: TextEditor) {
+    const editor = textEditor ? textEditor : atom.workspace.getActiveTextEditor();
     if (editor === undefined) {
       return this.showError(new Error("No active editor was found"));
     }
@@ -197,9 +197,15 @@ export class AtomBeautify {
   public provideFileCodeFormat() {
     return {
       // tslint:disable-next-line:no-empty
-      formatEntireFile: (editor: TextEditor, range: Range) => {},
+      formatEntireFile: (editor: TextEditor, range: Range) => {
+        const text = editor.getText();
+        return Promise.resolve({
+          formatted: `Testing purposes only\n${text}`,
+          newCursor: 0
+        });
+      },
       priority: 1,
-      grammarScopes: [],
+      grammarScopes: ["source.ts"],
     };
   }
 

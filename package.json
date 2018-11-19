@@ -190,5 +190,12 @@
   },
   "activationHooks": [
     "core:loaded-shell-environment"
-  ]
+  ],
+  "providedServices": {
+    "code-format.file": {
+      "versions": {
+        "0.1.0": "provideFileCodeFormat"
+      }
+    }
+  }
 }
