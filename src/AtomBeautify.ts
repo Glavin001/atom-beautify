@@ -101,8 +101,6 @@ export class AtomBeautify {
   ) {
     const {
       languageName,
-      atomGrammar,
-      fileExtension,
     } = this.languagesForEditor(editor, filePath);
     if (!languageName) {
       return this.showError(
@@ -110,28 +108,13 @@ export class AtomBeautify {
       );
     }
     if (this.isBeautifyOnSave(languageName)) {
-      const text = this.textInEditor(editor);
-      const [projectPath] = atom.project.relativizePath(filePath);
-      logger.info("Beautify file on save", { filePath, text, languageName });
-      return this.beautifyOptions(filePath).then(beautifyOptions => {
-        const beautifyData: BeautifyData = {
-          languageName,
-          fileExtension,
-          atomGrammar,
-          filePath,
-          projectPath: projectPath || undefined,
-          options: beautifyOptions,
-          text,
-        };
-        return this.beautify(beautifyData).then(result => {
-          editor.setText(result);
-        });
-      });
+      logger.info("Beautify file on save", { filePath, languageName });
+      return this.beautifyEditor(editor, filePath);
     }
   }
 
   // Method that handles beautify entire file/editor
-  private beautifyEditor(textEditor?: TextEditor) {
+  private beautifyEditor(textEditor?: TextEditor, filePath?: string) {
     const editor = textEditor ? textEditor : atom.workspace.getActiveTextEditor();
     if (editor === undefined) {
       return this.showError(new Error("No active editor was found"));
@@ -147,7 +130,7 @@ export class AtomBeautify {
       );
     }
     const text = this.textInEditor(editor);
-    const [projectPath] = atom.project.relativizePath(editor.getPath() || "");
+    const [projectPath] = atom.project.relativizePath(filePath || editor.getPath() || "");
     return this.beautifyOptions(editor.getPath() || "").then(
       beautifyOptions => {
         const beautifyData: BeautifyData = {
