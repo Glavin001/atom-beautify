@@ -115,7 +115,7 @@ export class AtomBeautify {
 
   // Method that handles beautify entire file/editor
   private beautifyEditor(textEditor?: TextEditor, filePath?: string) {
-    const editor = textEditor ? textEditor : atom.workspace.getActiveTextEditor();
+    const editor = textEditor instanceof TextEditor ? textEditor : atom.workspace.getActiveTextEditor();
     if (editor === undefined) {
       return this.showError(new Error("No active editor was found"));
     }
