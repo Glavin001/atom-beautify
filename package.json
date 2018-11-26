@@ -111,7 +111,6 @@
   "engines": {
     "atom": ">=1.21.0 <2.0.0"
   },
-  "atomTestRunner": "atom-test-runner-jest",
   "activationCommands": {
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
@@ -168,11 +167,11 @@
     "@types/jest": "23.3.9",
     "atom-test-runner-jest": "0.1.3",
     "@types/lodash": "4.14.118",
-    "@types/node": "10.12.9",
+    "@types/node": "10.12.10",
     "jest": "23.6.0",
     "jest-preset-atom": "0.2.3",
     "rimraf": "2.6.2",
-    "ts-jest": "23.10.4",
+    "ts-jest": "23.10.5",
     "ts-node": "7.0.1",
     "tslint-clean-code": "0.2.9",
     "tslint-microsoft-contrib": "5.2.1",
