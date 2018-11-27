@@ -12,14 +12,11 @@ describe("Atom Beautify", () => {
       const promise = atom.packages.activatePackage("atom-beautify");
       const AtomBeautify = atom.packages.getLoadedPackage("atom-beautify");
       AtomBeautify.activateNow();
+      atom.packages.activatePackage("language-javascript");
       return promise;
     });
 
     waitsForPromise(() => atom.workspace.open("test.js"));
-
-    runs(() => {
-      atom.config.set("atom-beautify.languages.JavaScript.quotes", ["single"]);
-    });
 
     runs(() => {
       editor = atom.workspace.getActiveTextEditor();
@@ -27,8 +24,6 @@ describe("Atom Beautify", () => {
   });
 
   it("atom-beautify package is activated", () => {
-    console.log(atom.packages.getLoadedPackages());
-    console.log(atom.packages.getActivePackages());
     expect(atom.packages.isPackageActive("atom-beautify")).toEqual(true);
   });
 
@@ -36,7 +31,6 @@ describe("Atom Beautify", () => {
     let isAvailable = false;
     atom.commands.findCommands({target: atom.views.getView(atom.workspace)})
     .forEach(command => {
-      console.log(command.name);
       if (command.name === 'atom-beautify:beautify-editor') {
         isAvailable = true;
       }
@@ -44,11 +38,17 @@ describe("Atom Beautify", () => {
     expect(isAvailable).toBeTruthy();
   });
 
-  // it("atom-beautify command beautifies text", () => {
-  //   editor.setText(`const test = "test"`);
-  //   const grammar = atom.grammars.selectGrammar("source.js");
-  //   editor.setGrammar(grammar);
-  //   waitsForPromise(() => atom.commands.dispatch(workspaceElement, "atom-beautify:beautify-editor"));
-  //   expect(editor.getText()).toEqual(`const test = 'test'`);
-  // });
+  it("atom-beautify command beautifies text", () => {
+    const originalText = `const test = 'test'`;
+    const expectedText = `const test = "test"`;
+    atom.config.set("atom-beautify.languages.JavaScript.quotes", "double");
+    editor.setText(originalText);
+    const grammar = atom.grammars.selectGrammar("source.js");
+    editor.setGrammar(grammar);
+    waitsForPromise(() =>
+      atom.commands
+        .dispatch(workspaceElement, "atom-beautify:beautify-editor")
+        .then(() => expect(editor.getText()).toEqual(expectedText))
+    );
+  });
 });
