@@ -219,11 +219,8 @@ export class AtomBeautify {
   // Check if a language is configured to beautify on save
   private isBeautifyOnSave(language: string): Boolean {
     const languageConfig = this.baseConfig.languages;
-    if (languageConfig.hasOwnProperty(language)) {
-      return Boolean(_.get(languageConfig, language).beautify_on_save);
+    return Boolean(_.get(languageConfig, [language, "beautify_on_save"]));
     }
-    return false;
-  }
 
   // Open Settings from the top menu
   private openSettings() {
@@ -288,10 +285,7 @@ export class AtomBeautify {
       atomGrammar,
       extension: fileExtension,
     });
-    let languageName;
-    if (languages.length > 0) {
-      languageName = languages[0].name;
-    }
+    const languageName = languages[0].name;
     return { languageName, atomGrammar, fileExtension };
   }
 

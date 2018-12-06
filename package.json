@@ -138,9 +138,11 @@
   ],
   "dependencies": {
     "@unibeautify/beautifier-black": "^0.1.1",
+    "@unibeautify/beautifier-brittany": "0.0.1",
     "@unibeautify/beautifier-clang-format": "^0.2.0",
     "@unibeautify/beautifier-csscomb": "^0.1.0",
     "@unibeautify/beautifier-eslint": "^0.6.0",
+    "@unibeautify/beautifier-file": "^0.1.0",
     "@unibeautify/beautifier-gofmt": "^0.1.0",
     "@unibeautify/beautifier-js-beautify": "^0.4.0",
     "@unibeautify/beautifier-php-codesniffer": "^0.1.1",
@@ -148,6 +150,7 @@
     "@unibeautify/beautifier-prettier": "^0.9.0",
     "@unibeautify/beautifier-prettydiff": "^0.6.0",
     "@unibeautify/beautifier-sqlformat": "0.0.1",
+    "@unibeautify/beautifier-stylelint": "0.0.1",
     "@unibeautify/beautifier-tslint": "^0.1.0",
     "@unibeautify/beautifier-yapf": "^0.3.0",
     "cosmiconfig": "^5.0.7",
@@ -157,7 +160,7 @@
     "prettier": "^1.15.3",
     "prettydiff2": "^2.2.7",
     "triple-beam": "^1.3.0",
-    "tslint": "5.11.0",
+    "tslint": "^5.11.0",
     "unibeautify": "^0.17.0",
     "winston": "^3.1.0"
   },

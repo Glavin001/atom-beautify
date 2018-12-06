@@ -132,14 +132,16 @@ function buildBeautifierOptions() {
 
 function buildOptionsForBeautifier(beautifier: Beautifier) {
   const beautifierOptions: AtomConfigRegistry = {};
-  beautifierOptions.prefer_beautifier_config = {
-    title: `Prefer ${beautifier.name} Config`,
-    type: "boolean",
-    description: `Use ${
-      beautifier.name
-    } config file in place of Atom or Unibeautify settings`,
-    default: false,
-  };
+  if (!!beautifier.resolveConfig) {
+    beautifierOptions.prefer_beautifier_config = {
+      title: `Prefer ${beautifier.name} Config`,
+      type: "boolean",
+      description: `Use ${
+        beautifier.name
+      } config file in place of Atom or Unibeautify settings`,
+      default: false,
+    };
+  }
   const dependencies = beautifier.dependencies;
   if (dependencies && dependencies.length !== 0) {
     dependencies.forEach(dependency => {
