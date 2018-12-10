@@ -132,7 +132,7 @@ function buildBeautifierOptions() {
 
 function buildOptionsForBeautifier(beautifier: Beautifier) {
   const beautifierOptions: AtomConfigRegistry = {};
-  if (!!beautifier.resolveConfig) {
+  if (beautifier.resolveConfig) {
     beautifierOptions.prefer_beautifier_config = {
       title: `Prefer ${beautifier.name} Config`,
       type: "boolean",

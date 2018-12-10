@@ -3,7 +3,6 @@ import black from "@unibeautify/beautifier-black";
 import brittany from "@unibeautify/beautifier-brittany";
 import clangFormat from "@unibeautify/beautifier-clang-format";
 import cssComb from "@unibeautify/beautifier-csscomb";
-import fileFmt from "@unibeautify/beautifier-file";
 import goFmt from "@unibeautify/beautifier-gofmt";
 import prettyDiff from "@unibeautify/beautifier-prettydiff";
 import prettier from "@unibeautify/beautifier-prettier";
@@ -20,7 +19,6 @@ const beautifiers: Beautifier[] = <any[]>[
   brittany,
   clangFormat,
   cssComb,
-  fileFmt,
   goFmt,
   prettier,
   jsBeautify,

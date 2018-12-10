@@ -1,7 +1,7 @@
 import { format, TransformableInfo } from "logform";
 import * as path from "path";
 import * as winston from "winston";
-const { LEVEL, MESSAGE } = require("triple-beam");
+import { LEVEL, MESSAGE } from "triple-beam";
 
 export const Logger = (file: string) => {
   return winston.createLogger({
