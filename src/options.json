@@ -6476,6 +6476,7 @@
         "title": "Max line length",
         "beautifiers": [
           "autopep8",
+          "black",
           "pybeautifier"
         ],
         "key": "max_line_length",
