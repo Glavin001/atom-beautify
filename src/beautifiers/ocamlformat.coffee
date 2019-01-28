@@ -29,10 +29,8 @@ module.exports = class OCamlFormat extends Beautifier
   }
 
   beautify: (text, language, options, context) ->
-    fileExtension = context.fileExtension
-    @run("ocamlformat", [
-      @tempFile("input", text, fileExtension and ".#{fileExtension}")
-      ], {
+    args = if context.filePath then ["--name", context.filePath] else []
+    @run("ocamlformat", args.concat([@tempFile("input", text)]), {
         help: {
           link: "https://github.com/ocaml-ppx/ocamlformat"
         }
