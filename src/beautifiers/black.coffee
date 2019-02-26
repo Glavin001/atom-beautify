@@ -23,17 +23,32 @@ module.exports = class Black extends Beautifier
             text.match(/black, version (\d+\.\d+)/)[1] + ".0"
       }
     }
+    {
+      name: "isort"
+      cmd: "isort"
+      optional: true
+      homepage: "https://github.com/timothycrosley/isort"
+      installation: "https://github.com/timothycrosley/isort#installing-isort"
+      version: {
+        parse: (text) -> text.match(/VERSION (\d+\.\d+\.\d+)/)[1]
+      }
+    }
   ]
 
   options: {
-    Python: false
+    Python: true
   }
 
   beautify: (text, language, options, context) ->
-    cwd = context.filePath and path.dirname context.filePath
-    # `-` as filename reads from stdin
-    @exe("black").run(["-"], {
-      cwd: cwd
-      onStdin: (stdin) ->
-        stdin.end text
-    })
+    @exe("black").run([
+        tempFile = @tempFile("input", text)
+    ])
+    .then(=>
+        console.log tempFile
+        if options.sort_imports
+          console.log "sort imports"
+          filePath = context.filePath
+          projectPath = atom?.project.relativizePath(filePath)[0]
+          @exe("isort").run(["-sp", projectPath, tempFile])
+      )
+    .then(=> @readFile(tempFile))
