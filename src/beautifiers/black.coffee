@@ -40,15 +40,20 @@ module.exports = class Black extends Beautifier
   }
 
   beautify: (text, language, options, context) ->
-    @exe("black").run([
-        tempFile = @tempFile("input", text)
-    ])
-    .then(=>
-        console.log tempFile
-        if options.sort_imports
-          console.log "sort imports"
-          filePath = context.filePath
-          projectPath = atom?.project.relativizePath(filePath)[0]
-          @exe("isort").run(["-sp", projectPath, tempFile])
-      )
-    .then(=> @readFile(tempFile))
+    cwd = context.filePath and path.dirname context.filePath
+    @exe("black").run(["-"], {
+      cwd: cwd
+      onStdin: (stdin) ->
+        stdin.end text
+    })
+    .then((formattedText) =>
+      if options.sort_imports
+        projectPath = atom?.project.relativizePath(context.filePath)[0]
+        @exe("isort").run(
+          ["-sp", projectPath, tempFile = @tempFile("formatted", formattedText)]
+        ).then(=>
+          @readFile(tempFile)
+        )
+      else
+        return formattedText
+    )
