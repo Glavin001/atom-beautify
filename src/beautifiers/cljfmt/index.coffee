@@ -8,12 +8,13 @@ module.exports = class Cljfmt extends Beautifier
   link: "https://github.com/snoe/node-cljfmt"
 
   options: {
-    Clojure: false
+    Clojure:
+      executable_path: true
   }
 
   beautify: (text, language, options) ->
     formatPath = path.resolve(__dirname, "fmt.edn")
-    cljfmt = path.resolve(__dirname, "..", "..", "..", "node_modules/.bin/cljfmt")
+    cljfmt = options.executable_path
     @tempFile("input", text).then((filePath) =>
       @run(cljfmt, [
         filePath,

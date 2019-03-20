@@ -1642,6 +1642,7 @@ Maximum characters per line (0 disables) (Supported by Pretty Diff)
 | `disabled` | :white_check_mark: |
 | `default_beautifier` | :white_check_mark: |
 | `beautify_on_save` | :white_check_mark: |
+| `executable_path` | :white_check_mark: |
 
 **Description**:
 
@@ -1701,6 +1702,32 @@ Automatically beautify Clojure files on save
 *Edit > Preferences (Linux)*, *Atom > Preferences (OS X)*, or *File > Preferences (Windows)*.
 2. Go into *Packages* and search for "*Atom Beautify*" package.
 3. Find the option "*Beautify On Save*" and change it to your desired configuration.
+
+#####  [Executable path](#executable-path) 
+
+**Namespace**: `clj`
+
+**Key**: `executable_path`
+
+**Default**: `C:\Users\david\Documents\GitHub\node_modules\.bin\cljfmt`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`cljfmt`](#cljfmt) 
+
+**Description**:
+
+The path to the cljfmt executable to use (Supported by cljfmt)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "clj": {
+        "executable_path": "C:\\Users\\david\\Documents\\GitHub\\node_modules\\.bin\\cljfmt"
+    }
+}
+```
 
 ####  [CoffeeScript](#coffeescript) 
 
@@ -20371,6 +20398,35 @@ Path to clang-format config file. i.e. clang-format.cfg (Supported by clang-form
 {
     "glsl": {
         "configPath": ""
+    }
+}
+```
+
+
+### cljfmt
+
+#####  [Executable path](#executable-path) 
+
+**Namespace**: `clj`
+
+**Key**: `executable_path`
+
+**Default**: `C:\Users\david\Documents\GitHub\node_modules\.bin\cljfmt`
+
+**Type**: `string`
+
+**Supported Beautifiers**:  [`cljfmt`](#cljfmt) 
+
+**Description**:
+
+The path to the cljfmt executable to use (Supported by cljfmt)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "clj": {
+        "executable_path": "C:\\Users\\david\\Documents\\GitHub\\node_modules\\.bin\\cljfmt"
     }
 }
 ```
