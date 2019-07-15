@@ -206,7 +206,7 @@
     "nginxbeautify": "^2.0.1",
     "node-cljfmt": "0.5.3",
     "node-dir": "0.1.17",
-    "open": "0.0.5",
+    "open": "6.0.0",
     "prettier": "^1.11.1",
     "prettydiff2": "^2.2.7",
     "pug-beautify": "^0.1.1",
