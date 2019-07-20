@@ -1,203 +1,328 @@
-import {newUnibeautify, Unibeautify, Beautifier, Language, LanguageOptionValues, BeautifyData} from "unibeautify";
-import * as Atom from "atom";
+import {
+  newUnibeautify,
+  Unibeautify,
+  Language,
+  LanguageOptionValues,
+  BeautifyData,
+} from "unibeautify";
 import beautifiers from "./beautifiers";
-import { CompositeDisposable, Disposable } from "atom";
+import {
+  TextEditor,
+  Cursor,
+  Point,
+  Range,
+  Notification,
+  CompositeDisposable,
+} from "atom";
 import Config from "./config";
 import * as path from "path";
 import * as _ from "lodash";
 import * as cosmiconfig from "cosmiconfig";
+import { Logger } from "./logger";
+const logger = Logger(__filename);
 
 export class AtomBeautify {
-    private unibeautify: Unibeautify;
-    private subscriptions: CompositeDisposable;
+  private unibeautify: Unibeautify;
+  private subscriptions: CompositeDisposable;
 
-    public activate(state: any): void {
-        console.log("activated!!");
-        this.unibeautify = newUnibeautify();
-        this.unibeautify.loadBeautifiers(beautifiers);
-        this.subscriptions = new CompositeDisposable();
-        this.subscriptions.add(this.handleSaveEvent());
-        this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:beautify-editor", this.beautifyEditor.bind(this)));
-        this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:help-debug-editor", this.debug.bind(this)));
-        this.subscriptions.add(atom.commands.add("atom-workspace", "atom-beautify:open-settings", this.openSettings.bind(this)));
-        this.subscriptions.add(atom.commands.add(".tree-view .file .name", "atom-beautify:beautify-file", this.beautifyFile.bind(this)));
-        this.subscriptions.add(atom.commands.add(".tree-view .directory .name", "atom-beautify:beautify-directory", this.beautifyDirectory.bind(this)));
+  // Activates the Atom Beautify package
+  public activate(): void {
+    logger.info("Atom Beautify activated with beautifiers", { beautifiers });
+    this.unibeautify = newUnibeautify();
+    this.unibeautify.loadBeautifiers(beautifiers);
+    this.subscriptions = new CompositeDisposable();
+    this.subscriptions.add(
+      this.handleSaveEvent(),
+      atom.commands.add(
+        "atom-workspace",
+        "atom-beautify:beautify-editor",
+        this.beautifyEditor.bind(this)
+      ),
+      atom.commands.add(
+        "atom-workspace",
+        "atom-beautify:help-debug-editor",
+        this.debug.bind(this)
+      ),
+      atom.commands.add(
+        "atom-workspace",
+        "atom-beautify:open-settings",
+        this.openSettings.bind(this)
+      ),
+      atom.commands.add(
+        ".tree-view .file .name",
+        "atom-beautify:beautify-file",
+        this.beautifyFile.bind(this)
+      ),
+      atom.commands.add(
+        ".tree-view .directory .name",
+        "atom-beautify:beautify-directory",
+        this.beautifyDirectory.bind(this)
+      ),
+      atom.config.onDidChange(
+        "atom-beautify.general.loggerLevel",
+        (values: {oldValue: string; newValue: string}) => {
+          logger.level = values.newValue;
+          logger.info(`Logger level changed from ${values.oldValue} to ${values.newValue}`);
+        },
+      ),
+    );
+  }
+
+  // Deactivates the Atom Beautify package
+  public deactivate(): void {
+    return this.subscriptions.dispose();
+  }
+
+  // Retrieve the configuration options for Atom Beautify to display in Atom Settings
+  public get config() {
+    return Object.assign(Config, require("./options.json"));
+  }
+
+  // Register the handleSaveEvent to add as a subscription
+  private handleSaveEvent() {
+    return atom.workspace.observeTextEditors((editor: TextEditor) => {
+      const onWillSaveHandler = ({ path: filePath }: { path: string }) =>
+        this.beautifyOnSaveHandler(
+          {
+            filePath: filePath,
+          },
+          editor
+        );
+      return this.subscriptions.add(
+        editor.getBuffer().onWillSave(onWillSaveHandler as any)
+      );
+    });
+  }
+
+  // Method that handles beautify on save
+  private beautifyOnSaveHandler(
+    { filePath }: { filePath: string },
+    editor: TextEditor
+  ) {
+    const {
+      languageName,
+    } = this.languagesForEditor(editor, filePath);
+    if (!languageName) {
+      return this.showError(
+        new Error("Language could not be found or is not supported")
+      );
     }
-
-    public deactivate(): void {
-        return this.subscriptions.dispose();
+    if (this.isBeautifyOnSave(languageName)) {
+      logger.info("Beautify file on save", { filePath, languageName });
+      return this.beautifyEditor(editor, filePath);
     }
+  }
 
-    public get config() {
-        return _.merge(Config, require("./options.json"));
+  // Method that handles beautify entire file/editor
+  private beautifyEditor(textEditor?: TextEditor, filePath?: string) {
+    const editor = textEditor instanceof TextEditor ? textEditor : atom.workspace.getActiveTextEditor();
+    if (editor === undefined) {
+      return this.showError(new Error("No active editor was found"));
     }
-
-    private handleSaveEvent() {
-      return atom.workspace.observeTextEditors((editor: Atom.TextEditor) => {
-        const onWillSaveHandler = ({path: filePath}: {
-          path: string
-        }) => this.beautifyOnSaveHandler({
-          filePath: filePath
-        }, editor);
-        return this.subscriptions.add(editor.getBuffer().onWillSave(onWillSaveHandler as any));
-      });
+    const {
+      languageName,
+      atomGrammar,
+      fileExtension,
+    } = this.languagesForEditor(editor);
+    if (!languageName) {
+      return this.showError(
+        new Error("Language could not be found or is not supported")
+      );
     }
-
-    private async beautifyOnSaveHandler({ filePath }: { filePath: string }, editor: Atom.TextEditor) {
-      const languageInfo = this.languageInEditor(editor, filePath);
-      if (!languageInfo.language) {
-        this.showError(`${languageInfo.language} is not supported`);
-      }
-      const config = this.configFromSettings(languageInfo.language);
-      const beautifyOnSave = Boolean(config && config.beautify_on_save);
-      if (beautifyOnSave) {
-        if (editor.getPath() === undefined) {
-          editor.getBuffer().setPath(filePath);
-        }
-        let text: string = null;
-        if (!this.configFromSettings().general.beautifyEntireFileOnSave &&  !!editor.getSelectedText()) {
-          text = editor.getSelectedText();
-        } else {
-          text = editor.getText();
-        }
-        console.log("Beautify file on save", {filePath, text, languageInfo});
-        const beautifySettings = await this.unibeautifyConfiguration(filePath, languageInfo.language);
+    const text = this.textInEditor(editor);
+    const [projectPath] = atom.project.relativizePath(filePath || editor.getPath() || "");
+    return this.beautifyOptions(editor.getPath() || "").then(
+      beautifyOptions => {
         const beautifyData: BeautifyData = {
-          languageName: languageInfo.language.name,
-          fileExtension: languageInfo.fileExtension,
-          filePath: filePath,
-          options: beautifySettings,
-          text
+          languageName,
+          fileExtension,
+          atomGrammar,
+          filePath: editor.getPath() || undefined,
+          projectPath: projectPath || undefined,
+          options: beautifyOptions,
+          text,
         };
-        return this.beautify(editor, beautifyData);
-      }
-    }
-
-    private async beautifyEditor() {
-      const editor: Atom.TextEditor = atom.workspace.getActiveTextEditor();
-      const languageInfo = this.languageInEditor(editor);
-      let text: string = null;
-      if (!!editor.getSelectedText()) {
-        text = editor.getSelectedText();
-      } else {
-        text = editor.getText();
-      }
-      const beautifySettings = await this.unibeautifyConfiguration(editor.getPath(), languageInfo.language);
-      const beautifyData: BeautifyData = {
-        languageName: languageInfo.language.name,
-        fileExtension: languageInfo.fileExtension,
-        filePath: editor.getPath(),
-        options: beautifySettings,
-        text
-      };
-      return this.beautify(editor, beautifyData);
-    }
-
-    private beautify(editor: Atom.TextEditor, data: BeautifyData) {
-      return this.unibeautify.beautify(data).then((result) => {
-        editor.setText(result);
-      }).catch(error => {
-        this.showError(error);
-      });
-    }
-
-    private beautifyFile() {
-      // TODO
-    }
-
-    private beautifyDirectory() {
-      // TODO
-    }
-
-    private debug() {
-      // TODO
-    }
-
-    private configFromSettings(language?: Language) {
-      const config = atom.config.get("atom-beautify");
-      return language ? _.get(config, language.name) : config;
-    }
-
-    private openSettings() {
-      atom.workspace.open("atom://config/packages/atom-beautify");
-    }
-
-    // ===== Helpers =====
-    private getScrollTop(editor: any): any {
-      const view = atom.views.getView(editor);
-      return view && view.getScrollTop();
-    }
-
-    private setScrollTop(editor: any, value: any): void {
-      const view = atom.views.getView(editor);
-      view.setScrollTop(value);
-    }
-
-    private getCursors(editor: Atom.TextEditor) {
-      const cursors: Atom.Cursor[] = editor.getCursors();
-      return cursors.map(cursor => {
-        const bufferPosition: Atom.Point = cursor.getBufferPosition();
-        return [bufferPosition.row, bufferPosition.column];
-      });
-    }
-
-    // private setCursors(editor: any, posArray: any[]) {
-    //   for (let i = 0, j = 0, len = posArray.length; j < len; i = ++j) {
-    //     const bufferPosition = posArray[i];
-    //     if (i === 0) {
-    //       editor.setCursorBufferPosition(bufferPosition);
-    //       continue;
-    //     }
-    //     editor.addCursorAtBufferPosition(bufferPosition);
-    //   }
-    // }
-
-    private showError(error: any, show: boolean = false): Atom.Notification {
-      if (show || !this.configFromSettings().general.muteAllErrors) {
-        const stack: any = error.stack;
-        const detail: string = error.description || error.message;
-        return atom.notifications.addError(error.message, {
-          stack: stack,
-          detail: detail,
-          dismissable: true
+        return this.beautify(beautifyData).then(result => {
+          editor.setText(result);
         });
       }
+    );
+  }
+
+  private textInEditor(editor: TextEditor) {
+    if (!!editor.getSelectedText()) {
+      return editor.getSelectedText();
+    } else {
+      return editor.getText();
+    }
+  }
+
+  // Calls Unibeautify's beautify method
+  private beautify(data: BeautifyData): Promise<string> {
+    logger.info("Beautifying with", { data });
+    return this.unibeautify.beautify(data).catch(error => {
+      this.showError(error);
+      return Promise.reject(error);
+    });
+  }
+
+  // On save format service provider
+  public provideOnSaveCodeFormat() {
+    return {
+      // tslint:disable-next-line:no-empty
+      formatOnSave: (editor: TextEditor) => {},
+      priority: 1,
+      grammarScopes: [],
+    };
+  }
+
+  // Manual trigger format service provider
+  public provideFileCodeFormat() {
+    return {
+      // tslint:disable-next-line:no-empty
+      formatEntireFile: (editor: TextEditor, range: Range) => {
+        const text = editor.getText();
+        return Promise.resolve({
+          formatted: `Testing purposes only\n${text}`,
+          newCursor: 0
+        });
+      },
+      priority: 1,
+      grammarScopes: ["source.ts"],
+    };
+  }
+
+  // Range format service provider
+  public provideRangeCodeFormat() {
+    return {
+      // tslint:disable-next-line:no-empty
+      formatCode: (editor: TextEditor, range: Range) => {},
+      priority: 1,
+      grammarScopes: [],
+    };
+  }
+
+  private beautifyFile({ target }: { target: any }) {
+    logger.info(target.dataset.path);
+    const filePath = target.dataset.path;
+    return this.showError(new Error("Could not beautify file"));
+  }
+
+  private beautifyDirectory() {
+    // TODO
+  }
+
+  private debug() {
+    // TODO
+  }
+
+  // Check if a language is configured to beautify on save
+  private isBeautifyOnSave(language: string): Boolean {
+    const languageConfig = this.baseConfig.languages;
+    return Boolean(_.get(languageConfig, [language, "beautify_on_save"]));
     }
 
-    private async unibeautifyConfiguration(filePath: string, language: Language): Promise<LanguageOptionValues> {
-      try {
-        const explorerOptions: Cosmiconfig.Options = {
-          rcExtensions: true,
-        };
-        const configExplorer = cosmiconfig("unibeautify", explorerOptions);
-        const fileConfig = await configExplorer
-              .load(filePath)
-              .then(result => (result ? result.config : undefined));
-        if (fileConfig) {
-          return fileConfig;
-        } else {
-          const atomConfig = this.configFromSettings();
-          return _.unset(atomConfig, "general") ? atomConfig : {};
-        }
-      } catch (error) {
-        return Promise.reject(error);
-      }
-    }
+  // Open Settings from the top menu
+  private openSettings() {
+    atom.workspace.open("atom://config/packages/atom-beautify");
+  }
 
-    public languageInEditor(editor: Atom.TextEditor, filePath?: string) {
-      const grammarName = editor.getGrammar().name;
-      let fileExtension;
-      if (!filePath) {
-        filePath = editor.getPath();
-      } else {
-        fileExtension = path.extname(filePath).substr(1);
-      }
-      const langs: Language[] = this.unibeautify.findLanguages({
-        atomGrammar: grammarName,
-        extension: fileExtension
+  // Show error in the Atom notification area
+  private showError(error: Error): Notification | undefined {
+    logger.error(error);
+    if (!this.baseConfig.general.muteAllErrors) {
+      const stack = error.stack;
+      const detail = `${error.name}: ${error.message}`;
+      return atom.notifications.addError(error.message, {
+        stack: stack,
+        detail: detail,
+        dismissable: true,
       });
-      const language = langs.length > 0 ? langs[0] : null;
-      return {language, grammarName, fileExtension};
     }
+  }
 
+  // Retrieve the settings from Unibeautify config, or from Atom Settings if can't be found
+  private beautifyOptions(filePath: string): Promise<LanguageOptionValues> {
+    const configExplorer = cosmiconfig("unibeautify", {});
+    return configExplorer
+      .search(filePath)
+      .then(result => (result ? result.config : this.atomSettings))
+      .catch(error => {
+        this.showError(error);
+        Promise.reject(error);
+      });
+  }
+
+  // Retrieve config for Atom Beautify from Atom settings
+  private get atomSettings() {
+    const languageConfig = this.baseConfig.languages;
+    const beautifierConfig = this.baseConfig.beautifiers;
+    Object.keys(languageConfig).forEach(language => {
+      const beautifiers = languageConfig[language].beautifiers;
+      beautifiers.forEach((beautifier: any) => {
+        languageConfig[language][beautifier] = {
+          prefer_beautifier_config:
+            beautifierConfig[beautifier].prefer_beautifier_config,
+          [beautifier]: {
+            path: beautifierConfig[beautifier].executable_path,
+          },
+        };
+      });
+    });
+    return languageConfig;
+  }
+
+  // Get language information from the editor
+  private languagesForEditor(editor: TextEditor, filePath?: string) {
+    const atomGrammar = editor.getGrammar().name;
+    if (!filePath) {
+      filePath = editor.getPath();
+    }
+    const fileExtension = filePath
+      ? path.extname(filePath).slice(1)
+      : undefined;
+    const languages: Language[] = this.unibeautify.findLanguages({
+      atomGrammar,
+      extension: fileExtension,
+    });
+    const languageName = languages[0].name;
+    return { languageName, atomGrammar, fileExtension };
+  }
+
+  // ===== Helpers =====
+  private get baseConfig() {
+    return atom.config.get("atom-beautify");
+  }
+
+  private getScrollTop(editor: any): any {
+    const view = atom.views.getView(editor);
+    return view && view.getScrollTop();
+  }
+
+  private setScrollTop(editor: any, value: any): void {
+    const view = atom.views.getView(editor);
+    view.setScrollTop(value);
+  }
+
+  private getCursors(editor: TextEditor) {
+    const cursors: Cursor[] = editor.getCursors();
+    return cursors.map(cursor => {
+      const bufferPosition: Point = cursor.getBufferPosition();
+      return [bufferPosition.row, bufferPosition.column];
+    });
+  }
+
+  private setCursors(editor: any, posArray: any[]) {
+    // tslint:disable-next-line
+    for (let i = 0, j = 0, len = posArray.length; j < len; i = ++j) {
+    // tslint:disable-next-line:id-length
+      const bufferPosition = posArray[i];
+      // tslint:disable-next-line:id-length
+      if (i === 0) {
+        editor.setCursorBufferPosition(bufferPosition);
+        continue;
+      }
+      editor.addCursorAtBufferPosition(bufferPosition);
+    }
+  }
 }

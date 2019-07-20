@@ -109,9 +109,9 @@
     }
   ],
   "engines": {
-    "atom": ">=1.21.0 <2.0.0"
+    "atom": ">=1.21.0 <2.0.0",
+    "node": "*"
   },
-  "atomTestRunner": "atom-test-runner-jest",
   "activationCommands": {
     "atom-workspace": [
       "atom-beautify:help-debug-editor",
@@ -137,45 +137,66 @@
     "clean"
   ],
   "dependencies": {
-    "@unibeautify/beautifier-eslint": "^0.4.1",
-    "@unibeautify/beautifier-js-beautify": "^0.3.2",
-    "@unibeautify/beautifier-prettier": "^0.7.5",
-    "@unibeautify/beautifier-prettydiff": "^0.5.3",
-    "bluebird": "^3.5.1",
-    "cosmiconfig": "^4.0.0",
-    "eslint": "^4.19.1",
-    "js-beautify": "^1.7.5",
-    "prettier": "^1.11.1",
+    "@unibeautify/beautifier-black": "^0.1.1",
+    "@unibeautify/beautifier-brittany": "0.0.1",
+    "@unibeautify/beautifier-clang-format": "^0.2.0",
+    "@unibeautify/beautifier-csscomb": "^0.1.0",
+    "@unibeautify/beautifier-eslint": "^0.6.0",
+    "@unibeautify/beautifier-file": "^0.1.0",
+    "@unibeautify/beautifier-gofmt": "^0.1.0",
+    "@unibeautify/beautifier-js-beautify": "^0.4.0",
+    "@unibeautify/beautifier-php-codesniffer": "^0.1.1",
+    "@unibeautify/beautifier-php-cs-fixer": "^0.4.0",
+    "@unibeautify/beautifier-prettier": "^0.9.0",
+    "@unibeautify/beautifier-prettydiff": "^0.6.0",
+    "@unibeautify/beautifier-sqlformat": "0.0.1",
+    "@unibeautify/beautifier-stylelint": "0.0.1",
+    "@unibeautify/beautifier-tslint": "^0.1.0",
+    "@unibeautify/beautifier-yapf": "^0.3.0",
+    "cosmiconfig": "^5.2.1",
+    "csscomb": "^4.2.0",
+    "eslint": "^5.9.0",
+    "js-beautify": "^1.8.8",
+    "prettier": "^1.15.3",
     "prettydiff2": "^2.2.7",
-    "unibeautify": "^0.10.1"
+    "stylelint": "^9.9.0",
+    "triple-beam": "^1.3.0",
+    "tslint": "^5.11.0",
+    "unibeautify": "^0.17.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@types/atom": "^1.25.0",
-    "@types/bluebird": "^3.5.20",
-    "@types/cosmiconfig": "^4.0.0",
-    "@types/event-kit": "^2.4.0",
-    "@types/jest": "^22.2.2",
-    "@types/lodash": "^4.14.106",
-    "@types/node": "^9.6.1",
-    "atom-test-runner-jest": "^0.1.3",
-    "jest": "^22.4.3",
-    "jest-preset-atom": "^0.1.9",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^22.4.2",
-    "ts-node": "^5.0.1",
-    "tslint": "^5.9.1",
-    "tslint-clean-code": "^0.2.6",
-    "tslint-microsoft-contrib": "^5.0.3",
-    "typescript": "^2.8.1"
+    "@types/cosmiconfig": "5.0.3",
+    "@types/atom": "1.36.1",
+    "@types/event-kit": "2.4.0",
+    "@types/lodash": "4.14.132",
+    "@types/node": "12.0.3",
+    "@types/triple-beam": "1.3.0",
+    "jasmine-fix": "1.3.1",
+    "rimraf": "2.6.3",
+    "ts-node": "8.2.0",
+    "tslint-clean-code": "0.2.9",
+    "tslint-microsoft-contrib": "6.2.0",
+    "typescript": "3.4.5"
   },
   "scripts": {
     "build": "npm run lint && npm run clean && npm run compile && npm run docs",
     "clean": "rimraf dist",
     "compile": "tsc",
     "docs": "ts-node script/index",
-    "lint": "tslint {src,spec}/**/*.ts",
+    "lint": "tslint '{src,spec,script}/**/*.ts'",
     "prepublishOnly": "npm run build",
     "start": "tsc --watch",
     "test": "atom --test spec"
+  },
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ],
+  "providedServices": {
+    "code-format.file": {
+      "versions": {
+        "0.1.0": "provideFileCodeFormat"
+      }
+    }
   }
 }
