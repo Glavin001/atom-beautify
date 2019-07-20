@@ -1,3 +1,4 @@
+path = require('path')
 module.exports = {
 
   name: "Clojure"
@@ -18,4 +19,11 @@ module.exports = {
   ]
 
   defaultBeautifier: "cljfmt"
+
+  options: {
+    executable_path:
+      type: 'string'
+      default: path.resolve(__dirname, "..", "..", "..", "node_modules/.bin/cljfmt")
+      description: "The path to the cljfmt executable to use"
+  }
 }

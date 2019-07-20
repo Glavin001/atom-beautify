@@ -669,6 +669,20 @@
       "edn"
     ],
     "properties": {
+      "executable_path": {
+        "type": "string",
+        "default": "C:\\Users\\david\\Documents\\GitHub\\node_modules\\.bin\\cljfmt",
+        "description": "The path to the cljfmt executable to use (Supported by cljfmt)",
+        "title": "Executable path",
+        "beautifiers": [
+          "cljfmt"
+        ],
+        "key": "executable_path",
+        "language": {
+          "name": "Clojure",
+          "namespace": "clj"
+        }
+      },
       "disabled": {
         "title": "Disable Beautifying Language",
         "order": -3,
