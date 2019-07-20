@@ -8,6 +8,9 @@ You can clean up old Docker containers by running:
 docker ps --all | grep "unibeautify/" | awk '{ print $1 }' | xargs docker rm
 ```
 
+# Next
+- Added support for `sort imports` when using the `black` as the Python beautifier.
+
 # v0.33.2 (2018-09-26)
 - (BREAKING CHANGE) Added `inline` and `content_unformatted` options from `js-beautify` html settings and cleared `unformatted`.  Breaking change but generally improves the behavior to more accurately beautify html. ([#2210](https://github.com/Glavin001/atom-beautify/issues/2210), [#2215](https://github.com/Glavin001/atom-beautify/pull/2215), [js-beautify#1407](https://github.com/beautify-web/js-beautify/pull/1407))
 - ocamlformat formatter added for OCaml [#2207](https://github.com/Glavin001/atom-beautify/pull/2207)
