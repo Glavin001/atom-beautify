@@ -25,7 +25,7 @@ module.exports = class ESLintFixer extends Beautifier
         importPath = Path.join(projectPath, 'node_modules', 'eslint')
         eslint = null
         try
-          eslint = requireg('eslint')
+          eslint = requireg('eslint', true)
         catch
           try
             eslint = require(importPath)
