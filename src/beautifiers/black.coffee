@@ -33,7 +33,7 @@ module.exports = class Black extends Beautifier
     cwd = context.filePath and path.dirname context.filePath
     # `-` as filename reads from stdin
     @exe("black").run([
-      ["-l", "#{options.max_line_length}"] if options.max_line_length?
+      ["--line-length", "#{options.max_line_length}"] if options.max_line_length?
       "-"
     ], {
       cwd: cwd
