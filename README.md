@@ -14,6 +14,8 @@
 **Sign up for Unibeautify CI: [https://goo.gl/jmM4QN](https://goo.gl/jmM4QN)**
 -->
 
+:point_right: Sign up for [**CodePass**, *the Quickest Way To Solve Your Coding Errors*](https://codepass.ca/)! :boom:
+
 [:tada: **Install Unibeautify CI for GitHub** :tada:](https://github.com/apps/unibeautify-ci)
 
 **Help improve Atom-Beautify by completing the quick questionnaire: [https://goo.gl/iEHBNr](https://goo.gl/iEHBNr)**
