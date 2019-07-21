@@ -25,9 +25,9 @@ module.exports = class Black extends Beautifier
     }
   ]
 
-  options: {
-    Python: false
-  }
+  options:
+    Python:
+      max_line_length: true
 
   beautify: (text, language, options, context) ->
     cwd = context.filePath and path.dirname context.filePath

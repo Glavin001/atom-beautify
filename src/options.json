@@ -6472,7 +6472,7 @@
       "max_line_length": {
         "type": "integer",
         "default": 79,
-        "description": "set maximum allowed line length (Supported by autopep8, pybeautifier)",
+        "description": "set maximum allowed line length (Supported by autopep8, black, pybeautifier)",
         "title": "Max line length",
         "beautifiers": [
           "autopep8",
