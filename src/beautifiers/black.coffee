@@ -41,20 +41,20 @@ module.exports = class Black extends Beautifier
 
   beautify: (text, language, options, context) ->
     cwd = context.filePath and path.dirname context.filePath
-    # `-` as filename reads from stdin
     @exe("black").run(["-"], {
       cwd: cwd
       onStdin: (stdin) ->
         stdin.end text
     })
-    .then((stdout) =>
-        if options.sort_imports
-            filePath = context.filePath
-            projectPath = atom?.project.relativizePath(filePath)[0]
-            @exe("isort").run(["-sp", projectPath, "-"], {
-                cwd: cwd
-                onStdin: (stdin) ->
-                    stdin.end stdout
-            })
+    .then((formattedText) =>
+      if options.sort_imports
+        projectPath = atom?.project.relativizePath(context.filePath)[0]
+        @exe("isort").run(
+          ["-sp", projectPath, tempFile = @tempFile("formatted", formattedText)]
+        ).then(=>
+          @readFile(tempFile)
+        )
+      else
+        return formattedText
     )
 
