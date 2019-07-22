@@ -48,7 +48,6 @@ module.exports = class Black extends Beautifier
         stdin.end text
     })
     .then((stdout) =>
-        console.log stdout
         if options.sort_imports
             filePath = context.filePath
             projectPath = atom?.project.relativizePath(filePath)[0]
