@@ -31,7 +31,7 @@ module.exports = class Terraformfmt extends Beautifier
   beautify: (text, language, options) ->
     @exe("terraform").run([
       "fmt"
-      tempFile = @tempFile("input", text)
+      tempFile = @tempFile("input", text, ".tf")
       ])
       .then(=>
         @readFile(tempFile)

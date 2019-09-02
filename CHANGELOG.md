@@ -1,3 +1,7 @@
+# Next
+
+- Fix [#2348](https://github.com/Glavin001/atom-beautify/issues/2348) Terraform Fmt failing on .tf files
+
 # v0.33.4 (2018-09-28)
 
 - Fix [#2204](https://github.com/Glavin001/atom-beautify/issues/2204). Auto-remove docker containers after run.
