@@ -75,10 +75,35 @@ Thank you.
 | ![image](https://cloud.githubusercontent.com/assets/1885333/25234140/947b1b50-25b7-11e7-8ebc-0ae37420f13e.png) | ![image](https://cloud.githubusercontent.com/assets/1885333/25234184/b41b4192-25b7-11e7-8185-a83829b48078.png) |
 
 
-### Next Version: [Unibeautify](https://github.com/Unibeautify/unibeautify)
+## Next Version: [Unibeautify](https://github.com/Unibeautify/unibeautify)
 
 Atom-Beautify is going to be completely rewritten with [Unibeautify](https://github.com/Unibeautify/unibeautify) at its core!
 See [`unibeautify` branch](../../tree/unibeautify) for work in progress and [Issue #1174](https://github.com/Glavin001/atom-beautify/issues/1174).
+
+### Try the Unibeautify Version
+
+To test out atom-beautify with Unibeautify at its core, follow these steps:
+
+Cloning
+
+1. Clone the repository
+2. Switch to the `unibeautify` branch
+3. Open your terminal/command prompt to the downloaded atom-beautify folder and run `npm install`
+4. Run `npm run build`
+5. Run `apm link` in your terminal or command prompt from the atom-beautify folder
+6. Restart Atom
+
+Downloading
+
+1. Switch to the unibeautify branch in GitHub
+2. Use the Download Zip button to download
+3. Un-zip the file
+4. Open your terminal/command prompt to the downloaded atom-beautify folder and run `npm install`
+5. Run `npm run build`
+6. Run `apm link`
+7. Restart Atom
+
+Note that previous settings will not carry over to the new version as of now. Please try it out and submit feedback.
 
 [:tada: **Install Unibeautify CI for GitHub** :tada:](https://github.com/apps/unibeautify-ci)
 
