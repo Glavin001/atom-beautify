@@ -1,7 +1,6 @@
 language-html-swig
 language-svg
 language-d
-mavensmate-atom
 language-lua
 language-elm
 language-puppet
