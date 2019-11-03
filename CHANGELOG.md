@@ -1,6 +1,7 @@
 # New
 
 - Fix [#2405](https://github.com/Glavin001/atom-beautify/issues/2405). Removes mavensmate-atom dependency.
+- Use JavaScript Sass over deprecated Ruby Sass
 
 # v0.33.4 (2018-09-28)
 

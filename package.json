@@ -211,6 +211,7 @@
     "prettydiff2": "^2.2.7",
     "pug-beautify": "^0.1.1",
     "remark": "6.0.1",
+    "sass": "^1.23.3",
     "season": "^6.0.2",
     "semver": "^5.5.0",
     "shell-env": "^0.3.0",
