@@ -42,6 +42,7 @@ build_script:
 
   # Install languages to Atom
   - apm install --packages-file atom-packages.txt
+  - apm list
   # Run tests on package
   #- "%LOCALAPPDATA%\\atom\\bin\\atom.cmd --test spec"
   - apm test --path %LOCALAPPDATA%/atom/bin/atom.cmd
