@@ -60,8 +60,7 @@ describe "BeautifyLanguages", ->
   ]
   # Add language packages to dependentPackages
   for lang in allLanguages
-    do (lang) ->
-      dependentPackages.push("language-#{lang}")
+    dependentPackages.push("language-#{lang}")
 
   # Debugging - print info about packages
   console.log("Showing DirPaths")
@@ -76,9 +75,8 @@ describe "BeautifyLanguages", ->
   beforeEach ->
     # Install all of the languages
     for packageName in dependentPackages
-      do (packageName) ->
-        waitsForPromise ->
-          atom.packages.activatePackage(packageName)
+      waitsForPromise ->
+        atom.packages.activatePackage(packageName)
 
     # Activate package
     waitsForPromise ->
