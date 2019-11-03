@@ -63,6 +63,16 @@ describe "BeautifyLanguages", ->
     do (lang) ->
       dependentPackages.push("language-#{lang}")
 
+  # Debugging - print info about packages
+  console.log("Showing DirPaths")
+  console.log(atom.packages.getPackageDirPaths())
+  console.log("Showing Available")
+  console.log(atom.packages.getAvailablePackageNames())
+  console.log("Showing Loaded")
+  console.log(atom.packages.getLoadedPackages())
+  console.log("Showing Active")
+  console.log(atom.packages.getActivePackages())
+
   beforeEach ->
     # Install all of the languages
     for packageName in dependentPackages
