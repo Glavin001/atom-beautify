@@ -6,7 +6,6 @@
 <script type="text/javascript">
   document.write("@" );
 </script>
-
 <body>
   @section('sidebar')
   This is the {{ $mater }} sidebar.
