@@ -3,6 +3,9 @@
 <head>
   <title>App Name - @yield('title')</title>
 </head>
+<script type="text/javascript">
+  document.write("@" );
+</script>
 
 <body>
   @section('sidebar')
