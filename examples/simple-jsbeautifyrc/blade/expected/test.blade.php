@@ -4,7 +4,7 @@
   <title>App Name - @yield('title')</title>
 </head>
 <script type="text/javascript">
-  document.write("@" );
+  document.write("<blade " / > );
 </script>
 
 <body>
@@ -15,8 +15,7 @@
   <div class="container">
     @yield('content')
   </div>
-  <p><span>
-      @lang('Hi')</span></p>
+  <p><span>@lang('Hi')</span></p>
 
   @component('alert')
   @slot('title')
