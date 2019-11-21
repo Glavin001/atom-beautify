@@ -58,7 +58,8 @@ module.exports = class JSBeautify extends Beautifier
             text = text.replace(/\@(?!(?:yield|lang))([^\n\s]*)/ig, "<blade $1 />")
             text = beautifyHTML(text, options)
             # post script (Workaround)
-            text = text.replace(/<blade ([^\n\s]*)\s*\/\s*>/ig, "@$1")
+            # possible whitespaces are added in `script` tag
+            text = text.replace(/<\s*blade ([^\n\s]*)\s*\/\s*>/ig, "@$1")
             text = text.replace(/\(\ \'/ig, "('")
             @debug("Beautified HTML: #{text}")
             resolve text
