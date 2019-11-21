@@ -55,7 +55,7 @@ module.exports = class JSBeautify extends Beautifier
           when "Blade"
             beautifyHTML = require("js-beautify").html
             # pre script (Workaround)
-            text = text.replace(/\@(?!(?:yield|lang))([^\n\s\<]*)/ig, "<blade $1 />")
+            text = text.replace(/\@(?!(?:yield|lang))([^\n\s]*)/ig, "<blade $1 />")
             text = beautifyHTML(text, options)
             # post script (Workaround)
             text = text.replace(/<blade ([^\n\s]*)\s*\/\s*>/ig, "@$1")
