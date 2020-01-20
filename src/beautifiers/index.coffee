@@ -355,6 +355,7 @@ module.exports = class Beautifiers extends EventEmitter
             context =
               filePath: filePath
               fileExtension: fileExtension
+              projectPath: atom.project.getPaths()[0]
 
             startTime = new Date()
             beautifier.loadExecutables()
