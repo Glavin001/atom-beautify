@@ -41,7 +41,7 @@ module.exports = class PHPCBF extends Beautifier
       standard: true
   }
 
-  beautify: (text, language, options) ->
+  beautify: (text, language, options, context) ->
     @debug('phpcbf', options)
     standardFiles = ['phpcs.xml', 'phpcs.xml.dist', 'phpcs.ruleset.xml', 'ruleset.xml']
     standardFile = @findFile(context.projectPath, standardFiles)
