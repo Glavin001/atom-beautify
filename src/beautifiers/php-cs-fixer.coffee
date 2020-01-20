@@ -61,8 +61,8 @@ module.exports = class PHPCSFixer extends Beautifier
       options.cs_fixer_config_file = if context? and context.filePath? then @findFile(path.dirname(context.filePath), configFiles)
 
     # Try again to find a config file in the project root
-    if not options.cs_fixer_config_file
-      options.cs_fixer_config_file = @findFile(atom.project.getPaths()[0], configFiles)
+    if not options.cs_fixer_config_file and context.projectPath?
+      options.cs_fixer_config_file = @findFile(context.projectPath, configFiles)
 
     phpCsFixerOptions = [
       "fix"

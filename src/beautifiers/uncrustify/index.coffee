@@ -63,7 +63,7 @@ module.exports = class Uncrustify extends Beautifier
         editor = atom.workspace.getActiveTextEditor()
         if editor?
           basePath = path.dirname(editor.getPath())
-          projectPath = atom.workspace.project.getPaths()[0]
+          projectPath = context.projectPath
           # console.log(basePath);
           # Expand Home Directory in Config Path
           expandedConfigPath = expandHomeDir(configPath)

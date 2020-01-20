@@ -1,3 +1,8 @@
+# Next
+- Added projectPath value to the context variable in index.coffee
+- Used the context.projectPath value inside phpcbf.coffee, php-cs-fixer.coffee, and uncrustify/index.coffee
+- Conditionally call findFile in phpcbf.coffee only projectPath has a value (by being open in project mode)
+
 # v0.33.4 (2018-09-28)
 
 - Fix [#2204](https://github.com/Glavin001/atom-beautify/issues/2204). Auto-remove docker containers after run.
