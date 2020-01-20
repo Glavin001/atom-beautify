@@ -44,8 +44,10 @@ module.exports = class PHPCBF extends Beautifier
   beautify: (text, language, options, context) ->
     @debug('phpcbf', options)
     standardFiles = ['phpcs.xml', 'phpcs.xml.dist', 'phpcs.ruleset.xml', 'ruleset.xml']
-    standardFile = @findFile(context.projectPath, standardFiles)
-
+    if context.projectPath
+        standardFile = @findFile(context.projectPath, standardFiles)
+    else
+        standardFile = false
     options.standard = standardFile if standardFile
 
     php = @exe('php')
