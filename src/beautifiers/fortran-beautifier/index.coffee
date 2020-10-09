@@ -16,7 +16,7 @@ module.exports = class FortranBeautifier extends Beautifier
       homepage: "https://www.gnu.org/software/emacs/"
       installation: "https://www.gnu.org/software/emacs/"
       version: {
-        parse: (text) -> text.match(/Emacs (\d+\.\d+\.\d+)/)[1]
+        parse: (text) -> text.match(/Emacs (\d+\.\d+)/)[1].concat ".0"
       }
     }
   ]
