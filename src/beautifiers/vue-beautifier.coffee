@@ -23,7 +23,7 @@ module.exports = class VueBeautifier extends Beautifier
             switch lang
               when "pug", "jade"
                 require("pug-beautify")(text, options)
-              when undefined
+              when "html", undefined
                 require("js-beautify").html(text, options)
               else
                 undefined
@@ -45,7 +45,7 @@ module.exports = class VueBeautifier extends Beautifier
                   mode: "beautify"
                 )
                 prettydiff(options)
-              when undefined
+              when "css", undefined
                 require("js-beautify").css(text, options)
               else
                 undefined
