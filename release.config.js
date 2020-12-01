@@ -1,3 +1,3 @@
 module.exports = {
-	"extends": "@semantic-release/apm-config",
+  "extends": "@semantic-release/apm-config"
 };
