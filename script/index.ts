@@ -1,20 +1,17 @@
 import Unibeautify, {
   Option,
   Language,
-  Beautifier,
-  BeautifierOptionName,
-  OptionsRegistry,
+  OptionsRegistry
 } from "unibeautify";
 import * as _ from "lodash";
-let path = require('path');
-let fs = require('fs');
-import beautifiers from "../src/beautifiers";
+import * as path from "path";
+import * as fs from "fs";
+import { beautifiers } from "../src/beautifiers";
 
 Unibeautify.loadBeautifiers(beautifiers);
-writeOptionsJson();
 
-function buildOptions() {
-  let options: AtomConfigRegistry = {};
+const buildOptions = () => {
+  const options: AtomConfigRegistry = {};
   const languages = Unibeautify.supportedLanguages;
   languages.forEach(lang => {
     const langName: string = lang.name;
@@ -23,7 +20,7 @@ function buildOptions() {
       const languageOptions = buildOptionsForLanguage(lang, beautifiers);
       options[langName] = {
         title: lang.name,
-        type: 'object',
+        type: "object",
         description: `Options for language ${lang.name}`,
         collapsed: true,
         scope: lang.textMateScope,
@@ -33,14 +30,13 @@ function buildOptions() {
         properties: languageOptions
       };
     }
-  })
+  });
   return options;
-}
+};
 
-function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
-  let languageOptions: AtomConfigRegistry = {};
-  let optionsForLanguage: OptionsRegistry = Unibeautify.getOptionsSupportedForLanguage(language);
-  const options: OptionsRegistry[] = (Unibeautify as any).options;
+const buildOptionsForLanguage = (language: Language, beautifiers: String[]) => {
+  const languageOptions: AtomConfigRegistry = {};
+  const optionsForLanguage: OptionsRegistry = Unibeautify.getOptionsSupportedForLanguage(language);
   Object.keys(optionsForLanguage).forEach(key => {
     const option: Option = optionsForLanguage[key];
     const title = option.title ? option.title : key.split("_").map(_.capitalize).join(" ");
@@ -54,7 +50,7 @@ function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
       maximum: option.maximum,
       items: option.items
     };
-  })
+  });
   languageOptions["beautifiers"] = {
     title: "Beautifiers",
     type: "array",
@@ -63,27 +59,28 @@ function buildOptionsForLanguage(language: Language, beautifiers: String[]) {
     items: {
       type: "string"
     }
-  }
+  };
   languageOptions["beautify_on_save"] = {
     title: `Beautify ${language.name} On Save`,
     type: "boolean",
     default: false,
     description: `Automatically beautify ${language.name} files on save`,
     order: -1
-  }
+  };
   return languageOptions;
-}
+};
 
-function writeOptionsJson() {
+const writeOptionsJson = () => {
   const languageOptions = buildOptions();
-  let optionsString = JSON.stringify(languageOptions, null, 2);
-  let outputFile = path.resolve(__dirname, '../dist/options.json');
+  const optionsString = JSON.stringify(languageOptions, null, 2);
+  const outputFile = path.resolve(__dirname, "../dist/options.json");
   fs.writeFile(outputFile, optionsString, (error: Error) => {
     if (error) {
       throw error;
     }
   });
-}
+};
+writeOptionsJson();
 
 interface AtomConfig {
   title: string;
@@ -94,7 +91,7 @@ interface AtomConfig {
   minimum?: number;
   maximum?: number;
   items?: {
-    type: string
+    type: string;
   };
   collapsed?: boolean;
   scope?: string;

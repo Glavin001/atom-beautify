@@ -5,17 +5,17 @@
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "target": "ES2017",
+        "target": "ES2018",
         "declaration": true,
         "moduleResolution": "node",
         "outDir": "dist"
     },
     "include": [
-        "./declarations.d.ts",
         "./src/**/*.ts"
     ],
     "exclude": [
         "./node_modules",
-        "./dist/"
+        "./dist/",
+        "./script/"
     ]
 }
