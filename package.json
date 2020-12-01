@@ -157,6 +157,7 @@
     "cosmiconfig": "^7.0.0",
     "csscomb": "^4.3.0",
     "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.11.1",
     "js-beautify": "^1.13.0",
     "prettier": "^2.2.1",
     "prettydiff2": "^2.2.8",
