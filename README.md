@@ -1,6 +1,6 @@
 # :lipstick: [atom-beautify](https://github.com/Glavin001/atom-beautify)
 
-[![Build Status](https://travis-ci.org/Glavin001/atom-beautify.svg?branch=master)](https://travis-ci.org/Glavin001/atom-beautify) [![Build status](https://ci.appveyor.com/api/projects/status/himnq7tjxl2fdc8u/branch/master?svg=true)](https://ci.appveyor.com/project/Glavin001/atom-beautify/branch/master)
+[![Build Status](https://github.com/Glavin001/atom-beautify/workflows/CI/badge.svg)](https://github.com/Glavin001/atom-beautify/actions)
 [![apm](https://img.shields.io/apm/dm/atom-beautify.svg)](https://atom.io/packages/atom-beautify)
 [![GitHub issues](https://img.shields.io/github/issues/Glavin001/atom-beautify.svg?style=flat-square)](https://github.com/Glavin001/atom-beautify/issues)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Glavin001/atom-beautify.svg)](https://greenkeeper.io/)
