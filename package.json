@@ -165,6 +165,7 @@
     "unibeautify": "^0.17.1"
   },
   "devDependencies": {
+    "@semantic-release/apm-config": "^8.0.0",
     "@types/atom": "^1.40.5",
     "@types/bluebird": "^3.5.33",
     "@types/event-kit": "^2.4.0",
@@ -182,6 +183,7 @@
     "jest": "^26.6.3",
     "jest-preset-atom": "^0.2.3",
     "rimraf": "^3.0.2",
+    "semantic-release": "^17.3.0",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2"
   },
