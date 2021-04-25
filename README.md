@@ -313,7 +313,8 @@ See [examples/simple-jsbeautifyrc/.jsbeautifyrc](examples/simple-jsbeautifyrc/.j
   "preserve_newlines": true,
   "max_preserve_newlines": 2,
   "jslint_happy": true,
-  "indent_handlebars": true
+  "indent_handlebars": true,
+  "comma_first": true
 }
 ```
 
@@ -344,7 +345,8 @@ See [examples/nested-jsbeautifyrc/.jsbeautifyrc](examples/nested-jsbeautifyrc/.j
     "indent_with_tabs": false,
     "preserve_newlines": true,
     "max_preserve_newlines": 2,
-    "jslint_happy": true
+    "jslint_happy": true,
+    "comma_first": true
   },
   "sql": {
     "indent_size": 4,
