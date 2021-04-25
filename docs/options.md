@@ -2854,6 +2854,45 @@ Break chained method calls across subsequent lines (Supported by JS Beautify, Pr
     }
 }
 ```
+#####  [Comma First](#comma-first) 
+
+**Namespace**: `js`
+
+**Key**: `comma_first`
+
+**Type**: `boolean`
+
+**Supported Beautifiers**:  [`JS Beautify`](#js-beautify)
+
+**Description**:
+
+Allow comma first formatting (Supported by JS Beautify, Pretty Diff)
+
+**Example `.jsbeautifyrc` Configuration**
+
+```json
+{
+    "js": {
+        "comma_first": true
+    }
+}
+```
+
+```javascript
+// will transform this:
+const obj = {
+    foo: 1,
+    bar: 2
+}
+
+// into this:
+const obj = {
+	foo: 1
+	, bar: 2
+}
+
+```
+
 
 #####  [Content unformatted](#content-unformatted) 
 
