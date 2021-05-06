@@ -198,7 +198,7 @@
     "expand-home-dir": "0.0.3",
     "extend": "^3.0.2",
     "gherkin": "^2.12.2",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "js-beautify": "^1.8.1",
     "jscs": "^3.0.7",
     "lodash": "^4.17.13",
