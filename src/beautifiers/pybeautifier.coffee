@@ -23,6 +23,7 @@ format = (data, formatters) ->
     client.connect PORT, HOST, ->
       client.setEncoding('utf8')
       client.write(JSON.stringify({'data': data, 'formatters': formatters}))
+      client.end()
       response = ''
       client.on 'data', (chunk) ->
         response += chunk
