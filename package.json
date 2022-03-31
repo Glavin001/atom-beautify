@@ -199,7 +199,7 @@
     "extend": "^3.0.2",
     "gherkin": "^2.12.2",
     "handlebars": "^4.1.2",
-    "js-beautify": "^1.8.1",
+    "js-beautify": "^1.14.1",
     "jscs": "^3.0.7",
     "lodash": "^4.17.13",
     "loophole": "^1.1.0",
