@@ -20,7 +20,10 @@ module.exports = class Black extends Beautifier
           try
             text.match(/black, version (\d+\.\d+)/)[1] + "." + text.match(/b(\d+)$/)[1]
           catch
-            text.match(/black, version (\d+\.\d+)/)[1] + ".0"
+            try
+              text.match(/black, version (\d+\.\d+)/)[1] + ".0"
+            catch
+              text.match(/black, (\d+\.\d+\.\d+)/)[1]
       }
     }
   ]
