@@ -190,7 +190,7 @@
     "coffee-fmt": "^0.12.0",
     "coffee-formatter": "^0.1.2",
     "coffeescript": "^1.12.6",
-    "csscomb": "^4.2.0",
+    "csscomb": "^4.3.0",
     "diff": "^3.4.0",
     "editorconfig": "^0.15.0",
     "eslint": "^4.16.0",
