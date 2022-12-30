@@ -81,6 +81,6 @@ module.exports = class ClangFormat extends Beautifier
         @dumpToFile(dumpFile, text)
         ["--style=file"]
         ]).finally( ->
-          fs.unlink(dumpFile)
+          fs.unlink(dumpFile, ->)
         )
     )
