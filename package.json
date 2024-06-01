@@ -193,7 +193,7 @@
     "csscomb": "^4.2.0",
     "diff": "^3.4.0",
     "editorconfig": "^0.15.0",
-    "eslint": "^4.16.0",
+    "eslint": "^6.0.0",
     "event-kit": "^2.4.0",
     "expand-home-dir": "0.0.3",
     "extend": "^3.0.2",
